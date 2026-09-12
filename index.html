@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>회의 정리 도우미</title>
+<style>
+  :root {
+    --color-bg: #f7f7f8;
+    --color-surface: #ffffff;
+    --color-border: #e2e2e5;
+    --color-text: #1f2124;
+    --color-text-sub: #6b6f76;
+    --color-primary: #2f6fed;
+    --color-primary-hover: #2559c7;
+    --color-primary-text: #ffffff;
+    --radius: 10px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "Apple SD Gothic Neo",
+      "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+  }
+
+  header {
+    text-align: center;
+    padding: 12px 0 28px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    margin: 0 0 8px;
+    color: var(--color-text);
+  }
+
+  header p {
+    margin: 0;
+    color: var(--color-text-sub);
+    font-size: 15px;
+  }
+
+  section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .guide-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    color: var(--color-text-sub);
+  }
+
+  .guide-list li {
+    margin-bottom: 6px;
+  }
+
+  .guide-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 220px;
+    padding: 14px;
+    font-size: 15px;
+    font-family: inherit;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    resize: vertical;
+    color: var(--color-text);
+    background: var(--color-bg);
+  }
+
+  textarea:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+    background: var(--color-surface);
+  }
+
+  .char-count {
+    text-align: right;
+    font-size: 12px;
+    color: var(--color-text-sub);
+    margin-top: 6px;
+  }
+
+  .input-hint {
+    margin: 0 0 14px;
+    font-size: 13.5px;
+    color: var(--color-text-sub);
+  }
+
+  .example-box {
+    margin-top: 14px;
+    padding: 14px;
+    background: var(--color-bg);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .example-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .example-header span {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--color-text-sub);
+  }
+
+  .example-box p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--color-text-sub);
+  }
+
+  button#useExampleBtn {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  button#useExampleBtn:hover {
+    border-color: var(--color-primary);
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  button#summarizeBtn {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary-text);
+    background: var(--color-primary);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  button#summarizeBtn:hover {
+    background: var(--color-primary-hover);
+  }
+
+  button#summarizeBtn:disabled {
+    background: #b7c4dc;
+    cursor: not-allowed;
+  }
+
+  #resultSection h2 {
+    font-size: 17px;
+    margin: 0 0 14px;
+  }
+
+  .result-placeholder {
+    color: var(--color-text-sub);
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .result-block {
+    margin-bottom: 18px;
+  }
+
+  .result-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .result-block h3 {
+    font-size: 14px;
+    color: var(--color-primary);
+    margin: 0 0 8px;
+  }
+
+  .result-block ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14.5px;
+  }
+
+  .result-block ul li {
+    margin-bottom: 6px;
+  }
+
+  .result-block p.empty {
+    font-size: 14px;
+    color: var(--color-text-sub);
+    margin: 0;
+  }
+
+  .notice {
+    font-size: 12px;
+    color: var(--color-text-sub);
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 21px;
+    }
+    section {
+      padding: 16px;
+    }
+    textarea {
+      min-height: 180px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>회의 정리 도우미</h1>
+      <p>회의 내용을 붙여넣기만 하면, 핵심 내용과 할 일을 정리해 드려요.</p>
+    </header>
+
+    <section aria-labelledby="guide-title">
+      <label id="guide-title" style="margin-bottom: 12px;">사용 방법</label>
+      <ol class="guide-list">
+        <li>회의록, 녹취록, 메모 등 회의 내용을 아래 입력창에 붙여넣으세요.</li>
+        <li>'회의 내용 정리하기' 버튼을 누르세요.</li>
+        <li>핵심 내용과 할 일이 정리되어 아래에 나타납니다.</li>
+      </ol>
+    </section>
+
+    <section>
+      <label for="meetingInput">회의 내용 입력</label>
+      <p class="input-hint">
+        회의록, 녹취를 풀어쓴 글, 회의 중 메모 등 형식에 상관없이 그대로 붙여넣으면 됩니다.
+      </p>
+      <textarea
+        id="meetingInput"
+        placeholder="예) 오늘 회의에서는 3분기 마케팅 예산안을 논의했습니다. 김대리가 다음 주 화요일까지 경쟁사 분석 자료를 준비하기로 했고..."
+      ></textarea>
+      <div class="char-count"><span id="charCount">0</span>자 입력됨</div>
+
+      <div class="example-box">
+        <div class="example-header">
+          <span>입력 예시</span>
+          <button id="useExampleBtn" type="button">이 예시로 채워보기</button>
+        </div>
+        <p id="exampleText">
+          오늘 회의에서는 3분기 마케팅 예산안을 논의했습니다. 온라인 광고 예산을 20% 늘리기로
+          결정했습니다. 김대리가 다음 주 화요일까지 경쟁사 분석 자료를 준비하기로 했고, 박과장은
+          이번 주 안에 협력사에 견적을 요청하기로 했습니다. 다음 회의는 2주 뒤 같은 시간에
+          진행하기로 합의했습니다.
+        </p>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="summarizeBtn" type="button">회의 내용 정리하기</button>
+    </div>
+
+    <section id="resultSection">
+      <h2>정리 결과</h2>
+      <div id="resultContent">
+        <p class="result-placeholder">아직 정리된 내용이 없습니다. 위에 회의 내용을 입력하고 버튼을 눌러보세요.</p>
+      </div>
+    </section>
+
+    <p class="notice">※ 지금 화면은 서비스의 모습을 보여주기 위한 예시이며, 정리 결과는 실제 AI 분석이 아닌 간단한 규칙 기반 예시입니다.</p>
+  </div>
+
+  <script>
+    const meetingInput = document.getElementById("meetingInput");
+    const charCount = document.getElementById("charCount");
+    const summarizeBtn = document.getElementById("summarizeBtn");
+    const resultContent = document.getElementById("resultContent");
+    const useExampleBtn = document.getElementById("useExampleBtn");
+    const exampleText = document.getElementById("exampleText");
+
+    meetingInput.addEventListener("input", () => {
+      charCount.textContent = meetingInput.value.length;
+    });
+
+    useExampleBtn.addEventListener("click", () => {
+      meetingInput.value = exampleText.textContent.trim().replace(/\s+/g, " ");
+      charCount.textContent = meetingInput.value.length;
+      meetingInput.focus();
+    });
+
+    const ACTION_KEYWORDS = [
+      "해야", "할 예정", "하기로", "예정입니다", "부탁", "액션", "todo", "TODO",
+      "까지", "완료", "진행하기로", "담당"
+    ];
+
+    const DECISION_KEYWORDS = [
+      "결정", "확정", "합의", "채택", "승인", "하기로 했", "가결"
+    ];
+
+    function splitIntoSentences(text) {
+      return text
+        .replace(/\r\n/g, "\n")
+        .split(/(?<=[.!?。\n])\s*/)
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0);
+    }
+
+    function containsAny(sentence, keywords) {
+      return keywords.some((kw) => sentence.includes(kw));
+    }
+
+    function buildSummary(text) {
+      const sentences = splitIntoSentences(text);
+
+      const decisions = sentences.filter((s) => containsAny(s, DECISION_KEYWORDS));
+      const actions = sentences.filter((s) => containsAny(s, ACTION_KEYWORDS));
+
+      const usedSet = new Set([...decisions, ...actions]);
+      const remaining = sentences.filter((s) => !usedSet.has(s));
+
+      const keyPoints = remaining.length > 0 ? remaining.slice(0, 3) : sentences.slice(0, 3);
+
+      return { keyPoints, decisions, actions };
+    }
+
+    function renderResultBlock(title, items, emptyMessage) {
+      const block = document.createElement("div");
+      block.className = "result-block";
+
+      const heading = document.createElement("h3");
+      heading.textContent = title;
+      block.appendChild(heading);
+
+      if (items.length === 0) {
+        const empty = document.createElement("p");
+        empty.className = "empty";
+        empty.textContent = emptyMessage;
+        block.appendChild(empty);
+      } else {
+        const list = document.createElement("ul");
+        items.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          list.appendChild(li);
+        });
+        block.appendChild(list);
+      }
+
+      return block;
+    }
+
+    summarizeBtn.addEventListener("click", () => {
+      const text = meetingInput.value.trim();
+
+      if (!text) {
+        resultContent.innerHTML =
+          '<p class="result-placeholder">먼저 회의 내용을 입력해 주세요.</p>';
+        meetingInput.focus();
+        return;
+      }
+
+      summarizeBtn.disabled = true;
+      summarizeBtn.textContent = "정리 중...";
+
+      setTimeout(() => {
+        const { keyPoints, decisions, actions } = buildSummary(text);
+
+        resultContent.innerHTML = "";
+        resultContent.appendChild(
+          renderResultBlock("핵심 내용", keyPoints, "핵심 내용을 찾지 못했습니다.")
+        );
+        resultContent.appendChild(
+          renderResultBlock("결정 사항", decisions, "결정된 사항이 없습니다.")
+        );
+        resultContent.appendChild(
+          renderResultBlock("할 일 (액션 아이템)", actions, "할 일이 없습니다.")
+        );
+
+        summarizeBtn.disabled = false;
+        summarizeBtn.textContent = "회의 내용 정리하기";
+      }, 400);
+    });
+  </script>
+</body>
+</html>
