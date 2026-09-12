@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>카탈로그 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#org-chart">조직도</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <section class="page-section" id="catalog-list" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Catalog</p>
+        <h2>카탈로그</h2>
+        <p>제품 카탈로그와 규격 자료집을 다운로드하실 수 있습니다.</p>
+      </div>
+
+      <ul class="notice-items">
+        <li class="notice-item">
+          <span class="notice-title">[회사명] 종합 제품 카탈로그 (전체)</span>
+          <a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a>
+        </li>
+        <li class="notice-item">
+          <span class="notice-title">베어링 규격표 (볼/롤러/니들/스러스트)</span>
+          <a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a>
+        </li>
+        <li class="notice-item">
+          <span class="notice-title">로드엔드 / 스페리칼 조인트 카탈로그</span>
+          <a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a>
+        </li>
+        <li class="notice-item">
+          <span class="notice-title">부속 부품 카탈로그 (오일씰·오링·스냅링·너트)</span>
+          <a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a>
+        </li>
+      </ul>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin: 16px 0 40px;">※ 예시 카탈로그 목록이며, 실제 파일을 연결해서 사용하시면 됩니다.</p>
+
+      <div class="subgroup" style="margin-bottom: 0;">
+        <h3 class="subgroup-title">브랜드별 규격집</h3>
+        <p style="font-size: 13.5px; color: var(--text-sub); margin: -8px 0 16px;">취급 브랜드별 규격집(치수표)을 다운로드하실 수 있습니다. 브랜드 목록은 <a href="brands.html" style="color: var(--accent);">취급 브랜드</a> 페이지에서도 확인하실 수 있습니다.</p>
+        <ul class="notice-items">
+          <li class="notice-item"><span class="notice-title">WBC 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">JMC 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">IBC 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">TYB 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">JIB 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">NACHI 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">NSK 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">NTN 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">ISC 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">NMB 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">KYK 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">EZO 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">KBC 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+          <li class="notice-item"><span class="notice-title">FAG 규격집</span><a href="#" class="btn btn-outline btn-sm" onclick="return false;">다운로드</a></li>
+        </ul>
+        <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 예시 규격집 목록이며, 실제 파일을 연결해서 사용하시면 됩니다.</p>
+      </div>
+    </div>
+  </section>
+
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          [시/도] [구/군] [상세주소]
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>

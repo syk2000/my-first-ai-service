@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>회사소개 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#org-chart">조직도</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2>회사 소개</h2>
+        <p>
+          [회사명]은 국내외 베어링 브랜드를 안정적으로 수급하여, 제조 현장에 필요한 규격을
+          빠르고 정확하게 공급하는 것을 목표로 하는 베어링 전문 유통업체입니다.
+        </p>
+      </div>
+
+      <div class="subgroup" id="greeting">
+        <h3 class="subgroup-title">인사말</h3>
+        <p>
+          안녕하십니까, [회사명] 홈페이지를 찾아주신 여러분께 진심으로 감사드립니다.<br />
+          저희 [회사명]은 20XX년 설립 이래 국내외 우수 베어링 브랜드를 안정적으로 공급하며
+          제조 현장의 신뢰를 쌓아온 베어링 전문 유통기업입니다. 앞으로도 정확한 규격 공급과
+          빠른 납기로 고객 여러분과 함께 성장해 나가겠습니다. 감사합니다.
+        </p>
+        <p style="margin-top: 10px; font-weight: 600; color: var(--text);">대표이사 홍길동</p>
+        <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 12px;">※ 예시 문구이며, 실제 인사말로 교체해서 사용하시면 됩니다.</p>
+      </div>
+
+      <div class="subgroup" id="org-chart">
+        <h3 class="subgroup-title">조직도</h3>
+        <div class="org-chart">
+          <div class="org-node">대표이사</div>
+          <div class="org-connector"></div>
+          <div class="org-row">
+            <div class="org-node">영업팀</div>
+            <div class="org-node">물류·재고관리팀</div>
+            <div class="org-node">기술지원팀</div>
+          </div>
+        </div>
+        <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px; text-align: center;">※ 예시 조직도이며, 실제 조직 구성으로 교체해서 사용하시면 됩니다.</p>
+      </div>
+
+      <div class="subgroup" id="history">
+        <h3 class="subgroup-title">연혁</h3>
+        <ul class="timeline">
+          <li>
+            <div class="year">20XX</div>
+            <div class="event">[회사명] 설립, 베어링 유통 사업 시작</div>
+          </li>
+          <li>
+            <div class="year">20XX</div>
+            <div class="event">물류창고 확장, 상시 재고 규격 5,000종 확보</div>
+          </li>
+          <li>
+            <div class="year">20XX</div>
+            <div class="event">온라인 규격 검색 시스템 도입</div>
+          </li>
+          <li>
+            <div class="year">20XX</div>
+            <div class="event">취급 브랜드 40개, 거래처 800곳 돌파</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subgroup" id="directions" style="margin-bottom: 0;">
+        <h3 class="subgroup-title">찾아오시는 길</h3>
+        <div class="directions-map">지도 영역 (실제 주소 입력 시 지도 연동)</div>
+        <ul class="contact-list" style="margin-top: 0;">
+          <li><span class="c-label">주소</span><span>[시/도] [구/군] [상세주소] (예시 주소)</span></li>
+          <li><span class="c-label">전화</span><span>02-000-0000</span></li>
+          <li><span class="c-label">대중교통</span><span>지하철 O호선 OO역 O번 출구 도보 O분</span></li>
+          <li><span class="c-label">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          [시/도] [구/군] [상세주소]
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+<script src="common.js"></script>
+</body>
+</html>

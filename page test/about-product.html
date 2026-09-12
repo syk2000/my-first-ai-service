@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>취급제품 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#org-chart">조직도</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="products" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Products</p>
+        <h2>취급 제품군</h2>
+        <p>산업 현장에 맞는 베어링을 규격별로 상시 재고 보유하고 있습니다.</p>
+      </div>
+
+      <div class="product-subgroup" id="bearing-group">
+        <h3 class="product-subgroup-title">베어링</h3>
+        <div class="product-grid">
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.5"/></svg>
+            <h4>볼 베어링</h4>
+            <p>일반 산업기계, 모터, 컨베이어 라인에 폭넓게 쓰이는 표준 볼 베어링.</p>
+          </article>
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="6" y="14" width="28" height="12" rx="6" stroke="currentColor" stroke-width="2.5"/></svg>
+            <h4>롤러 베어링</h4>
+            <p>고하중·고속 회전 구간에 적합한 원통/원추 롤러 베어링.</p>
+          </article>
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="14" cy="20" r="8" stroke="currentColor" stroke-width="2.5"/><line x1="22" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="2.5"/><circle cx="34" cy="20" r="3" fill="currentColor"/></svg>
+            <h4>로드엔드 / 스페리칼 조인트</h4>
+            <p>각도 변위가 있는 구조물, 실린더 연결부에 쓰이는 관절형 베어링.</p>
+          </article>
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M8 26 L20 8 L32 26 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+            <h4>스러스트 베어링</h4>
+            <p>축 방향 하중을 지지해야 하는 수직 구동축, 펌프 설비용.</p>
+          </article>
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="9" x2="20" y2="14" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="26" x2="20" y2="31" stroke="currentColor" stroke-width="2.5"/><line x1="9" y1="20" x2="14" y2="20" stroke="currentColor" stroke-width="2.5"/><line x1="26" y1="20" x2="31" y2="20" stroke="currentColor" stroke-width="2.5"/></svg>
+            <h4>니들 베어링</h4>
+            <p>좁은 설치 공간에서 높은 하중을 견뎌야 하는 부위에 적합.</p>
+          </article>
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2" stroke-dasharray="3 5"/><circle cx="20" cy="20" r="5" fill="currentColor"/></svg>
+            <h4>특수 / 맞춤 규격</h4>
+            <p>단종품, 비규격 사이즈 등 도면 기반 맞춤 소싱 지원.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="product-subgroup" id="accessory-group">
+        <h3 class="product-subgroup-title">부속 부품</h3>
+        <div class="product-grid">
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="9" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="2.5" fill="currentColor"/></svg>
+            <h4>오일씰 (리데나)</h4>
+            <p>축과 하우징 사이 오일 누유를 막는 리데나(오일씰), 규격별 상시 재고 보유.</p>
+          </article>
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="6"/></svg>
+            <h4>오링 (O-Ring)</h4>
+            <p>유압·공압 실린더, 배관 접합부의 기밀 유지를 위한 실링용 오링.</p>
+          </article>
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="3" stroke-dasharray="70 18"/></svg>
+            <h4>스냅링 (리테이너 링)</h4>
+            <p>축이나 홀에 부품을 고정하는 C형 스냅링(리테이너 링).</p>
+          </article>
+          <article class="product-card">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><polygon points="34,20 27,32.1 13,32.1 6,20 13,7.9 27,7.9" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="2.5"/></svg>
+            <h4>너트 / 와셔</h4>
+            <p>베어링 고정용 락너트와 와셔 세트, 각종 규격 취급.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  
+      </section>
+
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          [시/도] [구/군] [상세주소]
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+<script src="common.js"></script>
+</body>
+</html>

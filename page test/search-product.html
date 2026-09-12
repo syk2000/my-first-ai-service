@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>규격검색 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#org-chart">조직도</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="finder">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Spec Finder</p>
+        <h2>규격으로 제품 찾기</h2>
+        <p>형번을 몰라도 괜찮습니다. 알고 있는 치수만 입력해서 재고를 바로 확인해보세요.</p>
+      </div>
+
+      <div class="finder-panel">
+        <div class="finder-head">
+          <div>
+            <h3>찾으시는 규격이 있나요?</h3>
+            <p>내경(d) · 외경(D) · 두께(H) 중 아는 값만 입력해도 검색됩니다.</p>
+          </div>
+          <div class="finder-count">
+            <div class="n" id="resultCount">3</div>
+            <div class="label">보유 규격(예시)</div>
+          </div>
+        </div>
+
+        <div class="finder-body">
+          <div class="finder-fields">
+            <div class="field">
+              <label for="fType">제품 유형</label>
+              <select id="fType">
+                <option value="">전체</option>
+                <option value="볼베어링">볼베어링</option>
+                <option value="롤러베어링">롤러베어링</option>
+                <option value="로드엔드">로드엔드</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fD">내경 d (mm)</label>
+              <input id="fD" type="number" placeholder="예: 20" min="0" />
+            </div>
+            <div class="field">
+              <label for="fOD">외경 D (mm)</label>
+              <input id="fOD" type="number" placeholder="예: 47" min="0" />
+            </div>
+            <div class="field">
+              <label for="fH">두께 H (mm)</label>
+              <input id="fH" type="number" placeholder="예: 14" min="0" />
+            </div>
+          </div>
+          <p class="finder-tip">검색 TIP · 항목을 전부 채우지 않아도 됩니다. 지금 화면은 예시 재고 3건으로 동작하는 시안입니다.</p>
+
+          <div class="finder-results" id="finderResults"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          [시/도] [구/군] [상세주소]
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+<script src="common.js"></script>
+<script>
+    // 예시 재고 데이터 (실제 서비스에서는 서버/DB 데이터로 교체)
+    const SAMPLE_STOCK = [
+      { type: "볼베어링", model: "6204", d: 20, od: 47, h: 14, qty: 320 },
+      { type: "롤러베어링", model: "NU204", d: 20, od: 47, h: 14, qty: 96 },
+      { type: "로드엔드", model: "POS12", d: 12, od: 30, h: 12, qty: 88 },
+    ];
+
+    const fType = document.getElementById("fType");
+    const fD = document.getElementById("fD");
+    const fOD = document.getElementById("fOD");
+    const fH = document.getElementById("fH");
+    const finderResults = document.getElementById("finderResults");
+    const resultCount = document.getElementById("resultCount");
+
+    function renderResults() {
+      const type = fType.value;
+      const d = fD.value ? Number(fD.value) : null;
+      const od = fOD.value ? Number(fOD.value) : null;
+      const h = fH.value ? Number(fH.value) : null;
+
+      const rows = SAMPLE_STOCK.filter((item) => {
+        if (type && item.type !== type) return false;
+        if (d !== null && item.d !== d) return false;
+        if (od !== null && item.od !== od) return false;
+        if (h !== null && item.h !== h) return false;
+        return true;
+      });
+
+      resultCount.textContent = rows.length;
+
+      if (rows.length === 0) {
+        finderResults.innerHTML = '<p class="no-result">조건에 맞는 예시 재고가 없습니다. 실제 서비스에서는 담당자에게 별도 문의가 연결됩니다.</p>';
+        return;
+      }
+
+      const tableRows = rows
+        .map(
+          (item) => `
+            <tr>
+              <td class="type-cell">${item.type}</td>
+              <td>${item.model}</td>
+              <td>${item.d}</td>
+              <td>${item.od}</td>
+              <td>${item.h}</td>
+            </tr>`
+        )
+        .join("");
+
+      finderResults.innerHTML = `
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>유형</th>
+              <th>형번</th>
+              <th>d (mm)</th>
+              <th>D (mm)</th>
+              <th>H (mm)</th>
+            </tr>
+          </thead>
+          <tbody>${tableRows}</tbody>
+        </table>
+      `;
+    }
+
+    [fType, fD, fOD, fH].forEach((el) => el.addEventListener("input", renderResults));
+    renderResults();
+
+
+</script>
+</body>
+</html>
