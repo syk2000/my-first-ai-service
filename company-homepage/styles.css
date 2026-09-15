@@ -1099,6 +1099,8 @@
   }
 
   .notice-item .notice-title {
+    flex: 1;
+    min-width: 0;
     font-size: 14.5px;
     color: var(--text);
   }
@@ -1109,6 +1111,11 @@
     font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
     flex-shrink: 0;
+  }
+
+  .notice-item > a.btn {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .contact-list li {
@@ -1305,7 +1312,7 @@
     }
 
     .hero-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
 
     .hero-art {
