@@ -649,6 +649,13 @@
     margin: 0;
   }
 
+  .product-card .p-catalog-ref {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--text-faint);
+    margin-top: -2px;
+  }
+
   /* ---------- Spec finder ---------- */
 
   .finder-panel {
