@@ -190,7 +190,16 @@
 
       <div class="subgroup" id="directions" style="margin-bottom: 0;">
         <h3 class="subgroup-title">찾아오시는 길</h3>
-        <div class="directions-map">네이버 및 구글 지도 이용</div>
+        <div class="directions-map" style="height: 260px; padding: 0; overflow: hidden;">
+          <iframe
+            src="https://www.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B5%AC%EB%A1%9C%EA%B5%AC%20%EA%B5%AC%EB%A1%9C%EB%8F%99%20%EC%A4%91%EC%95%99%EC%9C%A0%ED%86%B5%EB%8B%A8%EC%A7%80&output=embed"
+            width="100%" height="100%" style="border:0; display:block;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="구로동 중앙유통단지 위치 지도"></iframe>
+        </div>
+        <div class="map-link-row" style="display: flex; gap: 8px; margin: -8px 0 18px; flex-wrap: wrap;">
+          <a class="btn btn-outline btn-sm" href="https://map.naver.com/p/search/%EA%B5%AC%EB%A1%9C%EB%8F%99%20%EC%A4%91%EC%95%99%EC%9C%A0%ED%86%B5%EB%8B%A8%EC%A7%80" target="_blank" rel="noopener noreferrer">네이버 지도로 길찾기</a>
+          <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/search/?api=1&query=%EA%B5%AC%EB%A1%9C%EB%8F%99%20%EC%A4%91%EC%95%99%EC%9C%A0%ED%86%B5%EB%8B%A8%EC%A7%80" target="_blank" rel="noopener noreferrer">구글 지도로 길찾기</a>
+        </div>
         <ul class="contact-list" style="margin-top: 0;">
           <li><span class="c-label">주소</span><span>서울특별시 구로구 경인로 53길 32 지하 1층 102호</span></li>
           <li><span class="c-label">전화</span><span>02-000-0000</span></li>
