@@ -112,6 +112,8 @@
             <circle cx="100" cy="100" r="46" fill="none" stroke="var(--border)" stroke-width="1.5" />
             <circle cx="100" cy="100" r="62" fill="none" stroke="var(--steel)" stroke-width="1.2" stroke-dasharray="3 4" />
             <path d="M 110.76 38.94 A 62 62 0 1 1 89.24 38.94" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" />
+            <circle cx="110.76" cy="38.94" r="4" fill="none" stroke="var(--accent)" stroke-width="2" />
+            <circle cx="89.24" cy="38.94" r="4" fill="none" stroke="var(--accent)" stroke-width="2" />
             <line x1="100" y1="100" x2="132.5" y2="132.5" stroke="var(--text-sub)" stroke-width="1" stroke-dasharray="2 2" />
             <circle cx="132.5" cy="132.5" r="2.2" fill="var(--border)" />
             <text x="139" y="139" font-size="12" font-weight="700" fill="var(--text)">d1</text>
@@ -121,6 +123,7 @@
             <circle cx="100" cy="100" r="2" fill="var(--text-faint)" />
           </svg>
           <p style="font-size: 12px; color: var(--text-sub); margin-top: 4px;">정면도 (Front View)</p>
+          <p style="font-size: 11px; color: var(--text-faint); margin-top: 2px;">※ 구멍(집게 걸이)은 Size No.170 이상부터 적용</p>
         </div>
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-sub); min-width: 180px;">
           <div style="display: flex; align-items: center; gap: 8px;"><span style="display:inline-block; width:14px; height:14px; border-radius:50%; border:1.5px solid var(--border);"></span> d1 — 구멍(하우징) 지름</div>
@@ -136,6 +139,28 @@
             <text x="60" y="12" text-anchor="middle" font-size="11" fill="var(--text-sub)">t</text>
           </svg>
           <p style="font-size: 12px; color: var(--text-sub); margin-top: 4px;">측면도 (Side View · 두께)</p>
+        </div>
+
+        <div style="width: 100%; height: 1px; background: var(--border); margin: 4px 0;"></div>
+
+        <div style="text-align: center;">
+          <svg viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="구멍에 적용된 단면도">
+            <defs>
+              <pattern id="ringHatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="6" stroke="var(--border)" stroke-width="1.2" />
+              </pattern>
+            </defs>
+            <rect x="14" y="14" width="172" height="172" fill="url(#ringHatch)" stroke="var(--border)" stroke-width="1.2" />
+            <circle cx="100" cy="100" r="66" fill="var(--surface)" stroke="var(--text-faint)" stroke-width="1.2" />
+            <path d="M 110.76 40.7 A 66 66 0 1 1 89.24 40.7" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" />
+            <line x1="100" y1="100" x2="100" y2="34" stroke="var(--text-sub)" stroke-width="1" stroke-dasharray="2 2" />
+            <text x="104" y="24" font-size="12" font-weight="700" fill="var(--text)">d1 (구멍)</text>
+          </svg>
+          <p style="font-size: 12px; color: var(--text-sub); margin-top: 4px;">적용하는 구멍 (설치 단면도)</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12.5px; color: var(--text-sub); max-width: 260px;">
+          <p style="margin: 0;">해칭된 부분은 하우징(구멍) 소재 단면입니다. 링은 하우징 벽면 안쪽 홈(d2)에 앉아, 구멍 벽면(d1)과 거의 나란한 높이에서 걸림턱 역할을 합니다.</p>
+          <p style="margin: 0; font-size: 11.5px; color: var(--text-faint);">※ d4는 구멍에 끼울 때 링을 오므린 상태의 최소 안둘레 지름(클리어런스 내경)입니다.</p>
         </div>
       </div>
 
