@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>E형 멈춤링 (E링) | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="snapring-e" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Retaining Ring · E-Type</p>
+        <h2>E형 멈춤링 (E링)</h2>
+        <p>
+          축에 가공된 좁은 홈에 <strong style="color: var(--accent);">라디얼 방향(축과 수직 방향)</strong>으로 끼워 넣는 멈춤링입니다.
+          C형과 달리 전용 플라이어 없이도 손이나 간단한 지그로 눌러 끼울 수 있어, 소형·저비용 부품 고정에 널리 쓰입니다.
+          규격 기호는 <strong style="color: var(--accent);">ETW</strong>로 표기하며, KS B 1337, JIS B 2805 규격을 따릅니다.
+        </p>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <svg viewBox="0 0 0 0" width="0" height="0" style="position:absolute;">
+          <defs>
+            <marker id="eArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9 Z" fill="#333" />
+            </marker>
+            <marker id="eArrowGreen" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,1 L9,5 L0,9 Z" fill="#2f8f5b" />
+            </marker>
+            <pattern id="eHatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="6" stroke="#333" stroke-width="1" />
+            </pattern>
+          </defs>
+        </svg>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
+          <div style="text-align: center;">
+            <svg viewBox="0 0 200 200" width="150" height="150" role="img" aria-label="E형 정면도 — D, d">
+              <path d="M100 20
+                       C 60 20 30 50 30 90
+                       C 30 108 40 122 52 130
+                       L 62 108
+                       C 56 102 52 96 52 88
+                       C 52 62 74 44 100 44
+                       C 108 44 116 46 122 50
+                       L 132 30
+                       C 122 24 111 20 100 20 Z
+                       M 100 156
+                       C 74 156 52 138 52 112
+                       L 62 108
+                       C 62 128 78 144 100 144
+                       C 108 144 116 141 122 137
+                       L 132 158
+                       C 122 164 111 168 100 168
+                       L 100 156 Z"
+                    fill="#f4f4f2" stroke="#222" stroke-width="1.6" stroke-linejoin="round" />
+              <line x1="30" y1="94" x2="132" y2="94" stroke="#333" stroke-width="0.9" marker-start="url(#eArrow)" marker-end="url(#eArrow)" />
+              <text x="80" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#111">D</text>
+              <line x1="52" y1="94" x2="100" y2="94" stroke="#2f8f5b" stroke-width="1" stroke-dasharray="2 2" />
+              <text x="66" y="106" text-anchor="middle" font-size="11" font-weight="700" fill="#2f8f5b">d</text>
+            </svg>
+            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 — 3개의 발톱(claw)이 축 홈을 붙잡는 구조</p>
+          </div>
+
+          <div style="text-align: center;">
+            <svg viewBox="0 0 100 200" width="44" height="88" role="img" aria-label="측면도 — t">
+              <rect x="42" y="20" width="16" height="160" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
+              <line x1="34" y1="20" x2="34" y2="180" stroke="#333" stroke-width="0.9" marker-start="url(#eArrow)" marker-end="url(#eArrow)" />
+              <text x="20" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#111" transform="rotate(-90 20 100)">t</text>
+            </svg>
+            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (두께 t)</p>
+          </div>
+
+          <div style="text-align: center;">
+            <svg viewBox="0 0 160 160" width="130" height="130" role="img" aria-label="적용하는 축 — 홈 단면도">
+              <rect x="10" y="10" width="140" height="140" fill="url(#eHatch)" stroke="#333" stroke-width="1.2" />
+              <circle cx="80" cy="80" r="55" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
+              <rect x="66" y="6" width="28" height="16" fill="#fff" stroke="#a6423a" stroke-width="1.3" />
+              <line x1="30" y1="80" x2="130" y2="80" stroke="#2f8f5b" stroke-width="1.3" marker-start="url(#eArrowGreen)" marker-end="url(#eArrowGreen)" />
+              <text x="80" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#2f8f5b">d (축 지름)</text>
+            </svg>
+            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">적용하는 축 — 붉은 선은 링이 앉는 홈</p>
+          </div>
+        </div>
+        <p style="text-align: center; font-size: 11.5px; color: #777; margin: 14px 0 0;">C형과 달리 홈이 얕고 좁아 축 강도 저하가 적으며, 전용 플라이어 없이도 조립할 수 있습니다.</p>
+      </div>
+
+      <div class="finder-results" style="margin-top: 0;">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>호칭 번호 (Size No.)</th>
+              <th>축 지름 d (mm)</th>
+              <th>d 허용차</th>
+              <th>두께 t (mm)</th>
+              <th>t 허용차</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="type-cell">ETW-0.6</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>0.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.02</td></tr>
+            <tr><td class="type-cell">ETW-0.7</td><td>0.67</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.06</td><td>0.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.02</td></tr>
+            <tr><td class="type-cell">ETW-0.8</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.06</td><td>0.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.02</td></tr>
+            <tr><td class="type-cell">ETW-1</td><td>0.98</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.09</td><td>0.3</td><td style="font-size:11px; color:var(--text-faint);">± 0.025</td></tr>
+            <tr><td class="type-cell">ETW-1.2</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.09</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td></tr>
+            <tr><td class="type-cell">ETW-1.5</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.09</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td></tr>
+            <tr><td class="type-cell">ETW-1.9</td><td>1.9</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.09</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td></tr>
+            <tr><td class="type-cell">ETW-2</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.09</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td></tr>
+            <tr><td class="type-cell">ETW-2.3</td><td>2.3</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.09</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td></tr>
+            <tr><td class="type-cell">ETW-2.5</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.09</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td></tr>
+            <tr><td class="type-cell">ETW-3</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.12</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">ETW-3.2</td><td>3.2</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.12</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">ETW-4</td><td>4</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.12</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">ETW-5</td><td>5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.12</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">ETW-6</td><td>6</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.15</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">ETW-7</td><td>7</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.15</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">ETW-8</td><td>8</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.15</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">ETW-9</td><td>9</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.15</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">ETW-10</td><td>10</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.18</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">ETW-12</td><td>12</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.18</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">ETW-15</td><td>15</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.18</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td></tr>
+            <tr><td class="type-cell">ETW-19</td><td>19</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.21</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td></tr>
+            <tr><td class="type-cell">ETW-24</td><td>24</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.21</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 축 지름(d) 호칭 목록은 보내주신 원본 사진과 오치아이(Ochiai)가 공개한 E形止め輪(ETW) 정식 규격 PDF를 교차 대조했으며, <strong style="color: var(--text-sub);">0.6~24mm 전 구간의 호칭 번호·d 기준치수가 정확히 일치</strong>함을 확인했습니다. 다만 오치아이 문서의 "t" 열은 본 사진의 "t"(두께)와 정의가 달라(오치아이 쪽 수치가 훨씬 큼 — 아마 핀 삽입 깊이 등 다른 치수로 추정) 직접 대조가 불가능했고, <strong style="color: var(--text-sub);">두께(t)·허용차는 보내주신 사진의 그룹 구간을 기준으로 옮겼습니다.</strong> 정밀 가공·발주 전에는 반드시 정식 KS B 1337 규격서 원본 또는 실제 구매처 카탈로그로 최종 확인하시기 바랍니다.</p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>
