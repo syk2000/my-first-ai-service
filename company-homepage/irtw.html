@@ -131,30 +131,48 @@
           </defs>
         </svg>
 
-        <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: center;">
+        <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: center;">
           <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="190" height="190" role="img" aria-label="IRTW 정면도 — 자유 외경과 클리어런스 내경">
-              <path d="M 111.12 36.98 A 64 64 0 1 1 88.88 36.98 L 90.62 46.83 A 54 54 0 1 0 109.38 46.83 Z" fill="#f4f4f2" stroke="#222" stroke-width="1.6" stroke-linejoin="round" />
-              <circle cx="112.5" cy="34" r="3.2" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <circle cx="87.5" cy="34" r="3.2" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <circle cx="100" cy="100" r="40" fill="none" stroke="#a6423a" stroke-width="1.3" stroke-dasharray="4 3" />
-              <line x1="30" y1="100" x2="170" y2="100" stroke="#b8791f" stroke-width="1.3" marker-start="url(#iArrowGold)" marker-end="url(#iArrowGold)" />
-              <text x="100" y="94" text-anchor="middle" font-size="13" font-weight="700" fill="#b8791f">d3 (자유 외경)</text>
-              <line x1="100" y1="100" x2="100" y2="60" stroke="#a6423a" stroke-width="1.2" marker-end="url(#iArrowRed)" />
-              <text x="118" y="70" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a6423a">d5</text>
+            <svg viewBox="0 0 200 200" width="180" height="180" role="img" aria-label="IRTW 정면도 — d3, b, d0">
+              <circle cx="100" cy="100" r="60" fill="none" stroke="#222" stroke-width="1.3" />
+              <circle cx="100" cy="100" r="52" fill="none" stroke="#222" stroke-width="1.3" />
+              <line x1="100" y1="100" x2="100" y2="34" stroke="#333" stroke-width="1" marker-end="url(#iArrow)" />
+              <text x="112" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#111">d3</text>
+              <g transform="rotate(38 100 100)">
+                <rect x="90" y="150" width="20" height="16" fill="url(#iHatch)" stroke="#222" stroke-width="1.3" />
+                <circle cx="100" cy="158" r="3" fill="#f4f4f2" stroke="#222" stroke-width="1.2" />
+              </g>
+              <line x1="100" y1="100" x2="126" y2="148" stroke="#333" stroke-width="0.9" stroke-dasharray="2 2" />
+              <line x1="115" y1="163" x2="132" y2="163" stroke="#333" stroke-width="1" marker-start="url(#iArrow)" marker-end="url(#iArrow)" />
+              <text x="123" y="176" text-anchor="middle" font-size="11.5" font-weight="700" fill="#111">b</text>
+              <line x1="132" y1="158" x2="152" y2="158" stroke="#333" stroke-width="0.8" />
+              <text x="164" y="161" text-anchor="middle" font-size="11.5" font-weight="700" fill="#111">d0</text>
             </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 (Front View) — 점선은 IRTW 고유의 좁은 클리어런스(d5)</p>
+            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 (Front View)</p>
           </div>
 
           <div style="text-align: center;">
-            <svg viewBox="0 0 100 190" width="60" height="114" role="img" aria-label="링 두께 측면도">
-              <rect x="42" y="30" width="16" height="130" fill="#f4f4f2" stroke="#222" stroke-width="1.6" />
-              <line x1="42" y1="14" x2="58" y2="14" stroke="#333" stroke-width="1" marker-start="url(#iArrow)" marker-end="url(#iArrow)" />
-              <text x="50" y="10" text-anchor="middle" font-size="12" font-weight="700" fill="#111">t</text>
-              <circle cx="50" cy="95" r="3" fill="none" stroke="#666" stroke-width="1.1" />
-              <text x="66" y="99" text-anchor="middle" font-size="10.5" fill="#666">d0</text>
+            <svg viewBox="0 0 100 190" width="58" height="110" role="img" aria-label="측면도 — t, b">
+              <rect x="42" y="20" width="16" height="140" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
+              <line x1="42" y1="8" x2="58" y2="8" stroke="#333" stroke-width="1" marker-start="url(#iArrow)" marker-end="url(#iArrow)" />
+              <text x="50" y="4" text-anchor="middle" font-size="12" font-weight="700" fill="#111">t</text>
+              <rect x="58" y="140" width="8" height="12" fill="url(#iHatch)" stroke="#222" stroke-width="1.1" />
+              <line x1="42" y1="176" x2="66" y2="176" stroke="#333" stroke-width="0.9" marker-start="url(#iArrow)" marker-end="url(#iArrow)" />
+              <text x="54" y="188" text-anchor="middle" font-size="11.5" font-weight="700" fill="#111">b</text>
             </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (두께 t · 러그 구멍 d0)</p>
+            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (두께 t)</p>
+          </div>
+
+          <div style="text-align: center;">
+            <svg viewBox="0 0 200 200" width="150" height="150" role="img" aria-label="Size No.12 이하 전용 형상">
+              <circle cx="100" cy="100" r="52" fill="none" stroke="#222" stroke-width="1.2" />
+              <circle cx="100" cy="100" r="45" fill="none" stroke="#222" stroke-width="1.2" />
+              <path d="M 85 145 L 92 165 L 108 165 L 115 145 Z" fill="url(#iHatch)" stroke="#222" stroke-width="1.2" stroke-linejoin="round" />
+              <circle cx="100" cy="156" r="2.6" fill="#f4f4f2" stroke="#222" stroke-width="1" />
+              <line x1="88" y1="174" x2="112" y2="174" stroke="#333" stroke-width="0.9" marker-start="url(#iArrow)" marker-end="url(#iArrow)" />
+              <text x="100" y="186" text-anchor="middle" font-size="11.5" font-weight="700" fill="#111">L</text>
+            </svg>
+            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">Size No.12 이하 전용 형상</p>
           </div>
         </div>
 
