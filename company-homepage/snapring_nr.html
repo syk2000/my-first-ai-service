@@ -107,46 +107,10 @@
         </p>
       </div>
 
-      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
-        <svg viewBox="0 0 0 0" width="0" height="0" style="position:absolute;">
-          <defs>
-            <marker id="nrArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#333" />
-            </marker>
-          </defs>
-        </svg>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="170" height="170" role="img" aria-label="NR 정면도 — db">
-              <path d="M 111.12 36.98 A 64 64 0 1 1 88.88 36.98" fill="none" stroke="#222" stroke-width="1.6" stroke-linecap="round" />
-              <line x1="35" y1="100" x2="165" y2="100" stroke="#333" stroke-width="0.9" marker-start="url(#nrArrow)" marker-end="url(#nrArrow)" />
-              <text x="100" y="94" text-anchor="middle" font-size="13" font-weight="700" fill="#111">db</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 (자유 내경 db)</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 100 200" width="46" height="92" role="img" aria-label="측면도 — t">
-              <rect x="42" y="20" width="16" height="160" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <line x1="34" y1="20" x2="34" y2="180" stroke="#333" stroke-width="0.9" marker-start="url(#nrArrow)" marker-end="url(#nrArrow)" />
-              <text x="20" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#111" transform="rotate(-90 20 100)">t</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (두께 t)</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 120 120" width="80" height="80" role="img" aria-label="A부 상세 단면">
-              <g transform="rotate(45 60 60)">
-                <rect x="40" y="40" width="40" height="40" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-                <line x1="40" y1="30" x2="80" y2="30" stroke="#333" stroke-width="0.8" marker-start="url(#nrArrow)" marker-end="url(#nrArrow)" />
-                <line x1="30" y1="40" x2="30" y2="80" stroke="#333" stroke-width="0.8" marker-start="url(#nrArrow)" marker-end="url(#nrArrow)" />
-              </g>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">A부 상세 (단면 형상)</p>
-          </div>
-        </div>
-        <p style="text-align: center; font-size: 11.5px; color: #777; margin: 14px 0 0;">베어링 외륜 홈에 장착 시, 링의 자유 내경(db)이 홈 지름보다 작아 벌려서 조립합니다.</p>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">KS B 1337 · JIS B 2805 규격 도면</p>
+        <img src="assets/nr_diagram.png" alt="NR 정면도·측면도·A부 상세 — d3 자유내경, g 절개 간격, r 라운드, t 두께, e 폭, R1 코너 라운드" style="display: block; max-width: 560px; width: 100%; margin: 0 auto; image-rendering: -webkit-optimize-contrast;" />
+        <p style="text-align: center; font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 정면도(d3·g·r) · 측면도(d1) · A부 상세(t=두께, e=폭, R1=코너 라운드)</p>
       </div>
 
       <div class="finder-results" style="margin-top: 0;">
@@ -155,8 +119,8 @@
             <tr>
               <th>호칭 번호 (Size No.)</th>
               <th>적용 베어링 외경 (mm)</th>
-              <th>자유 내경 db (mm)</th>
-              <th>db 허용차</th>
+              <th>자유 내경 d3 (mm)</th>
+              <th>d3 허용차</th>
               <th>두께 t (mm)</th>
               <th>t 허용차</th>
             </tr>
@@ -201,7 +165,7 @@
           </tbody>
         </table>
       </div>
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ NR형은 웹서치로 KS B 1337·JIS B 2805 표준 자체는 확인했지만, 공개된 제조사(NTN·NSK 등) 단독 규격 PDF는 찾지 못했습니다 — 베어링 제조사들은 NR 스냅링 치수를 보통 개별 베어링 카탈로그 페이지 안에 부속 정보로만 싣고, 별도 스냅링 전용 카탈로그로는 공개하지 않는 것으로 확인됩니다. 따라서 <strong style="color: var(--text-sub);">보내주신 원본 표 사진을 1차 자료로 직접 옮겨 작성</strong>했습니다. 사진을 4배 확대해 호칭 번호·자유 내경(db)은 한 행씩 개별 숫자로 재확인했으나, 두께(t)와 허용차는 사진의 그룹 구간 경계(호칭 30~44 / 47~90 / 95~115 / 120~150 / 160~200)를 기준으로 재구성한 값이라 일부 경계가 실제와 다를 수 있습니다. 호칭 11~29 구간은 사진에서 자유 내경·두께 값이 비어 있어(별도 표기 없음) 표에 포함하지 못했습니다 — 필요하시면 정식 KS B 1337 규격서로 확인해주세요. 정밀 발주 전에는 반드시 사용 중인 베어링 제조사의 카탈로그로 최종 대조하시기 바랍니다.</p>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 위 도면과 표는 R형·S형과 같은 방식으로 <strong style="color: var(--text-sub);">당사 정식 규격표 원본 PDF를 600dpi로 직접 렌더링</strong>해서 다시 대조했습니다. 이전 버전은 제조사 단독 규격 PDF를 찾지 못해 사진을 1차 자료로 작성했었는데, 원본과 대조해보니 <strong style="color: var(--text-sub);">호칭 번호·자유 내경(d3)·두께(t)·허용차 모두 기존에 옮겨둔 값과 정확히 일치</strong>했습니다. 다만 표의 기호가 "db"로 잘못 적혀 있어 원본 도면과 같은 <strong style="color: var(--text-sub);">"d3"로 수정</strong>했습니다. 원본에도 <strong style="color: var(--text-sub);">호칭 11~29 구간은 치수가 비어 있어(별도 규격 없음)</strong> 30부터 시작하는 것이 맞다는 점을 재확인했습니다. 정밀 발주 전에는 반드시 사용 중인 베어링 제조사의 카탈로그로 최종 대조하시기 바랍니다.</p>
     </div>
   </section>
 
