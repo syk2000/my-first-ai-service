@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>스프링 핀 (평행형) | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="spring-pin" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Spring Pin · Parallel Type</p>
+        <h2>스프링 핀 (평행형)</h2>
+        <p>
+          말린 강판을 원통형으로 성형해 <strong style="color: var(--accent);">자체 탄성으로 구멍 벽면을 압박</strong>해 고정되는 핀입니다.
+          평행형은 전체 길이에 걸쳐 지름이 일정해, 노크 핀·힌지 핀 대용으로 널리 사용합니다. 규격은
+          <strong style="color: var(--accent);">KS B 1339, JIS B 2808</strong>을 따릅니다.
+        </p>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/spring_pin_front.png" alt="스프링 핀 평행형 정면도 — ℓ 전체 길이, D 바깥지름" style="display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 정면도 — 원통형 몸체에 슬릿(이음매)이 있는 구조<br /><span style="color: var(--text-faint);">ℓ=전체 길이 · D=바깥지름 · 모따기(C)는 구멍에 걸리지 않는 범위에서 임의 가공</span></p>
+          </div>
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/spring_pin_end.png" alt="끝단 단면도 — D1·D2·D3, 45˚ 모따기" style="display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 끝단 45° 모따기 단면<br /><span style="color: var(--text-faint);">D1·D2·D3=단계별 지름(평균값이 D 최소) · C=구멍과의 틈새</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 900px;">
+          <thead>
+            <tr>
+              <th>호칭지름</th>
+              <th>D 최대</th>
+              <th>D 최소</th>
+              <th>t 기준치수</th>
+              <th>E 최대</th>
+              <th>2중전단하중 (kgf)</th>
+              <th>2중전단하중 (KN)</th>
+              <th>적용 구멍경</th>
+              <th>적용 구멍 허용차</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="type-cell">1</td><td>1.2</td><td>1.1</td><td>0.2</td><td>0.9</td><td>70</td><td>0.69</td><td>1</td><td rowspan="4" style="font-size:11px; color:var(--text-faint);">+0.08 / 0</td></tr>
+            <tr><td class="type-cell">1.2</td><td>1.4</td><td>1.3</td><td>0.25</td><td>1.1</td><td>104</td><td>1.02</td><td>1.2</td></tr>
+            <tr><td class="type-cell">1.5</td><td>1.7</td><td>1.6</td><td>0.3</td><td>1.4</td><td>158</td><td>1.55</td><td>1.5</td></tr>
+            <tr><td class="type-cell">1.6</td><td>1.8</td><td>1.7</td><td>0.3</td><td>1.5</td><td>171</td><td>1.68</td><td>1.6</td></tr>
+            <tr><td class="type-cell">2</td><td>2.25</td><td>2.15</td><td>0.4</td><td>1.9</td><td>281</td><td>2.76</td><td>2</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">+0.09 / 0</td></tr>
+            <tr><td class="type-cell">2.5</td><td>2.75</td><td>2.65</td><td>0.5</td><td>2.4</td><td>440</td><td>4.3</td><td>2.5</td></tr>
+            <tr><td class="type-cell">3</td><td>3.25</td><td>3.15</td><td>0.6</td><td>2.9</td><td>633</td><td>6.2</td><td>3</td></tr>
+            <tr><td class="type-cell">3.5*</td><td>3.84</td><td>3.7</td><td>0.7</td><td>3.4</td><td>861</td><td>8.44</td><td>3.5</td><td rowspan="5" style="font-size:11px; color:var(--text-faint);">+0.12 / 0</td></tr>
+            <tr><td class="type-cell">4</td><td>4.4</td><td>4.2</td><td>0.8</td><td>3.9</td><td>1130</td><td>11.08</td><td>4</td></tr>
+            <tr><td class="type-cell">4.5*</td><td>4.84</td><td>4.7</td><td>0.9</td><td>4.3</td><td>1425</td><td>13.97</td><td>4.5</td></tr>
+            <tr><td class="type-cell">5</td><td>5.4</td><td>5.2</td><td>1</td><td>4.8</td><td>1760</td><td>17.25</td><td>5</td></tr>
+            <tr><td class="type-cell">6</td><td>6.4</td><td>6.2</td><td>1.2</td><td>5.8</td><td>2532</td><td>24.83</td><td>6</td></tr>
+            <tr><td class="type-cell">8</td><td>8.6</td><td>8.3</td><td>1.6</td><td>7.8</td><td>4500</td><td>44.13</td><td>8</td><td rowspan="2" style="font-size:11px; color:var(--text-faint);">+0.15 / 0</td></tr>
+            <tr><td class="type-cell">10</td><td>10.6</td><td>10.3</td><td>2</td><td>9.8</td><td>7030</td><td>68.94</td><td>10</td></tr>
+            <tr><td class="type-cell">12*</td><td>12.5</td><td>12.3</td><td>2</td><td>11.7</td><td>8790</td><td>86.2</td><td>12</td><td rowspan="2" style="font-size:11px; color:var(--text-faint);">+0.2 / 0</td></tr>
+            <tr><td class="type-cell">13</td><td>13.7</td><td>13.4</td><td>2.5</td><td>12.7</td><td>11500</td><td>112.78</td><td>13</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 11.5px; color: var(--text-faint); margin-top: 8px;">* 표시 호칭지름은 KS/JIS 표준 계열이 아닌 참고 규격입니다.</p>
+
+      <h3 style="font-size: 16px; margin: 28px 0 10px;">길이(ℓ) × 호칭지름(D) 생산 규격표</h3>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; text-align: center;">
+        <img src="assets/spring_pin_matrix.png" alt="길이 x 호칭지름별 생산 가능 규격 매트릭스" style="display:block; max-width: 100%; margin: 0 auto; image-rendering: -webkit-optimize-contrast;" />
+        <p style="font-size: 11.5px; color: var(--text-sub); margin: 10px 0 0;">↑ ○ 표시 = 해당 길이(ℓ)·지름(D) 조합이 표준 생산 규격임 · 같은 굵은 계단선 구간은 길이(ℓ) 허용차가 동일한 그룹</p>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; margin-top: 20px; font-size: 12.5px; color: var(--text-sub);">
+        <strong>재질</strong><br />
+        스프링강, 스프링용 스텐레스강(주문 생산)
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 도면과 표는 당사 정식 규격표 원본을 직접 옮겨 작성했습니다. D 최대는 핀 원둘레 위에서의 최댓값, D 최소는 D1·D2·D3의 평균값입니다.
+        길이×지름 생산 규격표는 원본 매트릭스를 그대로 옮긴 이미지입니다. 정밀 가공·발주 전에는 반드시 정식 카탈로그 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>
