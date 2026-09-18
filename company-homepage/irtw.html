@@ -107,120 +107,18 @@
         </p>
       </div>
 
-      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
-        <svg viewBox="0 0 0 0" width="0" height="0" style="position:absolute;">
-          <defs>
-            <marker id="iArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#333" />
-            </marker>
-            <marker id="iArrowGold" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#b8791f" />
-            </marker>
-            <marker id="iArrowBlue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#3a6ea5" />
-            </marker>
-            <marker id="iArrowGreen" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#2f8f5b" />
-            </marker>
-            <marker id="iArrowRed" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#a6423a" />
-            </marker>
-            <pattern id="iHatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#333" stroke-width="1" />
-            </pattern>
-          </defs>
-        </svg>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="180" height="180" role="img" aria-label="IRTW 정면도 — d3, b, d0">
-              <line x1="100" y1="10" x2="100" y2="190" stroke="#999" stroke-width="0.7" stroke-dasharray="10 3 2 3" />
-              <line x1="10" y1="100" x2="190" y2="100" stroke="#999" stroke-width="0.7" stroke-dasharray="10 3 2 3" />
-              <circle cx="100" cy="100" r="58" fill="none" stroke="#222" stroke-width="1.2" />
-              <circle cx="100" cy="100" r="53" fill="none" stroke="#222" stroke-width="1.2" />
-              <line x1="35" y1="34" x2="165" y2="34" stroke="#333" stroke-width="0.9" marker-start="url(#iArrow)" marker-end="url(#iArrow)" />
-              <line x1="35" y1="34" x2="42" y2="45" stroke="#333" stroke-width="0.6" />
-              <line x1="165" y1="34" x2="158" y2="45" stroke="#333" stroke-width="0.6" />
-              <text x="100" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#111">d3</text>
-              <line x1="100" y1="100" x2="51" y2="141" stroke="#333" stroke-width="0.8" marker-end="url(#iArrow)" />
-              <g transform="translate(51 141) rotate(140)">
-                <rect x="-13" y="-8" width="26" height="16" fill="url(#iHatch)" stroke="#222" stroke-width="1.2" />
-                <circle cx="0" cy="0" r="3" fill="#f4f4f2" stroke="#222" stroke-width="1.1" />
-              </g>
-              <line x1="58" y1="158" x2="72" y2="167" stroke="#333" stroke-width="0.9" marker-start="url(#iArrow)" marker-end="url(#iArrow)" />
-              <text x="70" y="180" text-anchor="middle" font-size="11.5" font-weight="700" fill="#111">b</text>
-              <line x1="40" y1="152" x2="24" y2="170" stroke="#333" stroke-width="0.7" />
-              <text x="18" y="180" text-anchor="middle" font-size="11.5" font-weight="700" fill="#111">d0</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 (Front View)</p>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">KS B 1336 · JIS B 2804 규격 도면</p>
+        <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 45 45 380px; text-align: center;">
+            <img src="assets/irtw_diagram_front.png" alt="링 정면도·측면도 — d3 자유외경, t 두께, Size No.12 이하 전용 형상" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 자유 외경 d3 · 두께 t<br /><span style="color: var(--text-faint);">d0=집게구멍 · Size No.12 이하는 별도 형상(우측)</span></p>
           </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 100 200" width="54" height="108" role="img" aria-label="측면도 — t">
-              <line x1="50" y1="6" x2="50" y2="190" stroke="#999" stroke-width="0.6" stroke-dasharray="8 2 2 2" />
-              <rect x="42" y="26" width="16" height="148" fill="#f4f4f2" stroke="#222" stroke-width="1.3" />
-              <path d="M58 26 L66 22" stroke="#333" stroke-width="0.8" marker-end="url(#iArrow)" />
-              <line x1="42" y1="188" x2="58" y2="188" stroke="#333" stroke-width="0.9" marker-start="url(#iArrow)" marker-end="url(#iArrow)" />
-              <text x="50" y="200" text-anchor="middle" font-size="12" font-weight="700" fill="#111">t</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (두께 t)</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="150" height="150" role="img" aria-label="Size No.12 이하 전용 형상">
-              <line x1="100" y1="14" x2="100" y2="186" stroke="#999" stroke-width="0.7" stroke-dasharray="9 3 2 3" />
-              <line x1="14" y1="100" x2="186" y2="100" stroke="#999" stroke-width="0.7" stroke-dasharray="9 3 2 3" />
-              <circle cx="100" cy="100" r="55" fill="none" stroke="#222" stroke-width="1.2" />
-              <circle cx="100" cy="100" r="50" fill="none" stroke="#222" stroke-width="1.2" />
-              <path d="M 84 145 Q 100 165 116 145 L 108 138 Q 100 148 92 138 Z" fill="url(#iHatch)" stroke="#222" stroke-width="1.2" stroke-linejoin="round" />
-              <line x1="86" y1="176" x2="114" y2="176" stroke="#333" stroke-width="0.9" marker-start="url(#iArrow)" marker-end="url(#iArrow)" />
-              <text x="100" y="190" text-anchor="middle" font-size="12" font-weight="700" fill="#111">L</text>
-              <text x="150" y="30" text-anchor="middle" font-size="11.5" fill="#333">Size No.12 이하</text>
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">Size No.12 이하 전용 형상</p>
+          <div style="flex: 40 40 340px; text-align: center;">
+            <img src="assets/irtw_diagram_hole.png" alt="적용하는 구멍 단면도 — d1 구멍지름, d2 홈지름, d5 클리어런스 내경, m·n 홈폭" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 적용하는 구멍 단면 — d1 구멍지름 · d2 홈지름<br /><span style="color: var(--text-faint);">d5=삽입 시 최소지름(클리어런스 내경, 일반 R형보다 작음) · m=홈폭 · n=여유</span></p>
           </div>
         </div>
-
-        <div style="width: 100%; height: 1px; background: #d8d8d4; margin: 20px 0;"></div>
-
-        <p style="text-align: center; font-size: 13px; font-weight: 700; color: #222; margin: 0 0 14px;">적용하는 구멍</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="180" height="180" role="img" aria-label="구멍 정면 단면도">
-              <rect x="10" y="10" width="180" height="180" fill="url(#iHatch)" stroke="#333" stroke-width="1.2" />
-              <circle cx="100" cy="100" r="70" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <circle cx="100" cy="100" r="76" fill="none" stroke="#3a6ea5" stroke-width="1.2" stroke-dasharray="3 3" />
-              <circle cx="100" cy="100" r="46" fill="none" stroke="#a6423a" stroke-width="1.2" stroke-dasharray="4 3" />
-              <path d="M 100 30 A 70 70 0 1 1 99.4 30.01" fill="none" stroke="#222" stroke-width="4" />
-              <line x1="30" y1="115" x2="30" y2="85" stroke="#2f8f5b" stroke-width="1" />
-              <line x1="170" y1="115" x2="170" y2="85" stroke="#2f8f5b" stroke-width="1" />
-              <line x1="30" y1="100" x2="170" y2="100" stroke="#2f8f5b" stroke-width="1.3" marker-start="url(#iArrowGreen)" marker-end="url(#iArrowGreen)" />
-              <text x="100" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#2f8f5b">d1 (구멍 벽면 지름)</text>
-              <line x1="100" y1="24" x2="100" y2="176" stroke="#3a6ea5" stroke-width="1.3" marker-start="url(#iArrowBlue)" marker-end="url(#iArrowBlue)" />
-              <text x="130" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#3a6ea5">d2 (홈 지름)</text>
-              <line x1="100" y1="100" x2="100" y2="54" stroke="#a6423a" stroke-width="1.2" marker-end="url(#iArrowRed)" />
-              <text x="120" y="60" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a6423a">d5</text>
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">정면 단면도 — 빨간 점선(d5)이 좁을수록 상대 부품과의 간섭이 적음</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 160 150" width="150" height="141" role="img" aria-label="홈 바닥 라운드 r 상세도">
-              <rect x="20" y="10" width="60" height="60" fill="url(#iHatch)" stroke="#333" stroke-width="1.2" />
-              <path d="M 80 70 L 80 40 Q 80 30 90 30 L 130 30" fill="none" stroke="#222" stroke-width="2.4" stroke-linejoin="round" />
-              <path d="M 80 40 Q 80 30 90 30" fill="none" stroke="#a6423a" stroke-width="2.4" />
-              <text x="98" y="24" font-size="12" font-weight="700" fill="#a6423a">r</text>
-              <line x1="20" y1="90" x2="130" y2="90" stroke="#666" stroke-width="1" />
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">홈 바닥 라운드 r</p>
-            <table style="margin: 4px auto 0; font-size: 11px; color: #444; border-collapse: collapse;">
-              <tr><td style="padding:2px 8px; border:1px solid #ccc;">사이즈 No.</td><td style="padding:2px 8px; border:1px solid #ccc;">r (최대)</td></tr>
-              <tr><td style="padding:2px 8px; border:1px solid #ccc;">26 미만</td><td style="padding:2px 8px; border:1px solid #ccc;">0.13</td></tr>
-              <tr><td style="padding:2px 8px; border:1px solid #ccc;">26 이상</td><td style="padding:2px 8px; border:1px solid #ccc;">0.25</td></tr>
-            </table>
-          </div>
-        </div>
-        <p style="text-align: center; font-size: 11.5px; color: #777; margin: 14px 0 0;">d5는 링을 구멍(d1)에 끼울 때의 원주 최소 지름(클리어런스 내경)으로, 일반 R형보다 작게 설계되어 상대 부품과의 간섭이 적습니다.</p>
       </div>
 
       <div class="finder-results" style="margin-top: 0;">
@@ -230,6 +128,7 @@
               <th>호칭 번호 (Size No.)</th>
               <th>구멍 지름 d1 (mm)</th>
               <th>자유 외경 d3 (mm)</th>
+              <th>d3 공차</th>
               <th>두께 t (mm)</th>
               <th>t 공차</th>
               <th>홈지름 d2 (mm)</th>
@@ -238,55 +137,67 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td class="type-cell">IRTW-10</td><td>10</td><td>11.1</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>10.4</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>5.9</td></tr>
-            <tr><td class="type-cell">IRTW-11</td><td>11</td><td>12.2</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>11.4</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>6.6</td></tr>
-            <tr><td class="type-cell">IRTW-12</td><td>12</td><td>13.3</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>12.5</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>7.6</td></tr>
-            <tr><td class="type-cell">IRTW-13</td><td>13</td><td>14.1</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>13.6</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>9</td></tr>
-            <tr><td class="type-cell">IRTW-14</td><td>14</td><td>15.1</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>14.6</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>9.8</td></tr>
-            <tr><td class="type-cell">IRTW-15</td><td>15</td><td>16.2</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>15.7</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>10.6</td></tr>
-            <tr><td class="type-cell">IRTW-16</td><td>16</td><td>17.3</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>16.8</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>11.4</td></tr>
-            <tr><td class="type-cell">IRTW-17</td><td>17</td><td>18.3</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>17.8</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>12.2</td></tr>
-            <tr><td class="type-cell">IRTW-18</td><td>18</td><td>19.5</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>19</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>13</td></tr>
-            <tr><td class="type-cell">IRTW-19</td><td>19</td><td>20.5</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>20</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>13.8</td></tr>
-            <tr><td class="type-cell">IRTW-20</td><td>20</td><td>21.5</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>21</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>14.5</td></tr>
-            <tr><td class="type-cell">IRTW-21</td><td>21</td><td>22.5</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>22</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>15</td></tr>
-            <tr><td class="type-cell">IRTW-22</td><td>22</td><td>23.5</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>23</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>16</td></tr>
-            <tr><td class="type-cell">IRTW-24</td><td>24</td><td>25.9</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>25.2</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>17.5</td></tr>
-            <tr><td class="type-cell">IRTW-25</td><td>25</td><td>26.9</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>26.2</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>18.5</td></tr>
-            <tr><td class="type-cell">IRTW-26</td><td>26</td><td>27.9</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>27.2</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>19</td></tr>
-            <tr><td class="type-cell">IRTW-28</td><td>28</td><td>30.1</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>29.4</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>20.5</td></tr>
-            <tr><td class="type-cell">IRTW-30</td><td>30</td><td>32.1</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>31.4</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>22.5</td></tr>
-            <tr><td class="type-cell">IRTW-32</td><td>32</td><td>34.4</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>33.7</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>23.5</td></tr>
-            <tr><td class="type-cell">IRTW-34</td><td>34</td><td>36.5</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>35.7</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>25</td></tr>
-            <tr><td class="type-cell">IRTW-35</td><td>35</td><td>37.8</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>37</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>26</td></tr>
-            <tr><td class="type-cell">IRTW-36</td><td>36</td><td>38.8</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>38</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>26.5</td></tr>
-            <tr><td class="type-cell">IRTW-37</td><td>37</td><td>39.8</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>39</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>27.5</td></tr>
-            <tr><td class="type-cell">IRTW-38</td><td>38</td><td>40.8</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>40</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>28</td></tr>
-            <tr><td class="type-cell">IRTW-40</td><td>40</td><td>43.5</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>42.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>30</td></tr>
-            <tr><td class="type-cell">IRTW-42</td><td>42</td><td>45.5</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>44.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>31</td></tr>
-            <tr><td class="type-cell">IRTW-45</td><td>45</td><td>48.5</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>47.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>33</td></tr>
-            <tr><td class="type-cell">IRTW-47</td><td>47</td><td>50.5</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>49.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>35</td></tr>
-            <tr><td class="type-cell">IRTW-48</td><td>48</td><td>51.5</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>50.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>36</td></tr>
-            <tr><td class="type-cell">IRTW-50</td><td>50</td><td>54.2</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>53</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>38</td></tr>
-            <tr><td class="type-cell">IRTW-52</td><td>52</td><td>56.2</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>55</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>40</td></tr>
-            <tr><td class="type-cell">IRTW-55</td><td>55</td><td>59.2</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>58</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>42</td></tr>
-            <tr><td class="type-cell">IRTW-56</td><td>56</td><td>60.2</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>59</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>43</td></tr>
-            <tr><td class="type-cell">IRTW-58</td><td>58</td><td>62.2</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>61</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>44</td></tr>
-            <tr><td class="type-cell">IRTW-60</td><td>60</td><td>64.2</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>63</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>46</td></tr>
-            <tr><td class="type-cell">IRTW-62</td><td>62</td><td>66.2</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>65</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>47</td></tr>
-            <tr><td class="type-cell">IRTW-65</td><td>65</td><td>69.2</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>68</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>49</td></tr>
-            <tr><td class="type-cell">IRTW-68</td><td>68</td><td>72.5</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>71</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>52</td></tr>
-            <tr><td class="type-cell">IRTW-72</td><td>72</td><td>76.5</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>75</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>55</td></tr>
-            <tr><td class="type-cell">IRTW-75</td><td>75</td><td>79.5</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>78</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>57</td></tr>
-            <tr><td class="type-cell">IRTW-78</td><td>78</td><td>82.5</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>81</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>59</td></tr>
-            <tr><td class="type-cell">IRTW-80</td><td>80</td><td>85.5</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>83.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>61</td></tr>
-            <tr><td class="type-cell">IRTW-85</td><td>85</td><td>90.5</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">± 0.09</td><td>88.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>64</td></tr>
-            <tr><td class="type-cell">IRTW-90</td><td>90</td><td>95.5</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">± 0.09</td><td>93.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>68</td></tr>
-            <tr><td class="type-cell">IRTW-100</td><td>100</td><td>105.5</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">± 0.09</td><td>103.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>76</td></tr>
+            <tr><td class="type-cell">IRTW-10</td><td>10</td><td>11.1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.18</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>10.4</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>5.9</td></tr>
+            <tr><td class="type-cell">IRTW-11</td><td>11</td><td>12.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.18</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>11.4</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>6.6</td></tr>
+            <tr><td class="type-cell">IRTW-12</td><td>12</td><td>13.3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.18</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>12.5</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>7.6</td></tr>
+            <tr><td class="type-cell">IRTW-13</td><td>13</td><td>14.1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.18</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>13.6</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>9</td></tr>
+            <tr><td class="type-cell">IRTW-14</td><td>14</td><td>15.1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.18</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>14.6</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>9.8</td></tr>
+            <tr><td class="type-cell">IRTW-15</td><td>15</td><td>16.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.18</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>15.7</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>10.6</td></tr>
+            <tr><td class="type-cell">IRTW-16</td><td>16</td><td>17.3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.18</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>16.8</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>11.4</td></tr>
+            <tr><td class="type-cell">IRTW-17</td><td>17</td><td>18.3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.2</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>17.8</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>12.2</td></tr>
+            <tr><td class="type-cell">IRTW-18</td><td>18</td><td>19.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.2</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>19</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>13</td></tr>
+            <tr><td class="type-cell">IRTW-19</td><td>19</td><td>20.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.2</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>20</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>13.8</td></tr>
+            <tr><td class="type-cell">IRTW-20</td><td>20</td><td>21.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.2</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>21</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>14.5</td></tr>
+            <tr><td class="type-cell">IRTW-21</td><td>21</td><td>22.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.2</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>22</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>15</td></tr>
+            <tr><td class="type-cell">IRTW-22</td><td>22</td><td>23.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.2</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.05</td><td>23</td><td style="font-size:11px; color:var(--text-faint);">+0.11 / 0</td><td>16</td></tr>
+            <tr><td class="type-cell">IRTW-24</td><td>24</td><td>25.9</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>25.2</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>17.5</td></tr>
+            <tr><td class="type-cell">IRTW-25</td><td>25</td><td>26.9</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>26.2</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>18.5</td></tr>
+            <tr><td class="type-cell">IRTW-26</td><td>26</td><td>27.9</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>27.2</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>19</td></tr>
+            <tr><td class="type-cell">IRTW-28</td><td>28</td><td>30.1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>29.4</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>20.5</td></tr>
+            <tr><td class="type-cell">IRTW-30</td><td>30</td><td>32.1</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>31.4</td><td style="font-size:11px; color:var(--text-faint);">+0.21 / 0</td><td>22.5</td></tr>
+            <tr><td class="type-cell">IRTW-32</td><td>32</td><td>34.4</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>33.7</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>23.5</td></tr>
+            <tr><td class="type-cell">IRTW-34</td><td>34</td><td>36.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>35.7</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>25</td></tr>
+            <tr><td class="type-cell">IRTW-35</td><td>35</td><td>37.8</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>37</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>26</td></tr>
+            <tr><td class="type-cell">IRTW-36</td><td>36</td><td>38.8</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>38</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>26.5</td></tr>
+            <tr><td class="type-cell">IRTW-37</td><td>37</td><td>39.8</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>39</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>27.5</td></tr>
+            <tr><td class="type-cell">IRTW-38</td><td>38</td><td>40.8</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.06</td><td>40</td><td style="font-size:11px; color:var(--text-faint);">+0.25 / 0</td><td>28</td></tr>
+            <tr><td class="type-cell">IRTW-40</td><td>40</td><td>43.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.4</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>42.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>30</td></tr>
+            <tr><td class="type-cell">IRTW-42</td><td>42</td><td>45.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.4</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>44.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>31</td></tr>
+            <tr><td class="type-cell">IRTW-45</td><td>45</td><td>48.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.4</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>47.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>33</td></tr>
+            <tr><td class="type-cell">IRTW-47</td><td>47</td><td>50.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.4</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>49.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>35</td></tr>
+            <tr><td class="type-cell">IRTW-48</td><td>48</td><td>51.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.4</td><td>1.75</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>50.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>36</td></tr>
+            <tr><td class="type-cell">IRTW-50</td><td>50</td><td>54.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>53</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>38</td></tr>
+            <tr><td class="type-cell">IRTW-52</td><td>52</td><td>56.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>55</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>40</td></tr>
+            <tr><td class="type-cell">IRTW-55</td><td>55</td><td>59.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>58</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>42</td></tr>
+            <tr><td class="type-cell">IRTW-56</td><td>56</td><td>60.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>59</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>43</td></tr>
+            <tr><td class="type-cell">IRTW-58</td><td>58</td><td>62.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>61</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>44</td></tr>
+            <tr><td class="type-cell">IRTW-60</td><td>60</td><td>64.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>63</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>46</td></tr>
+            <tr><td class="type-cell">IRTW-62</td><td>62</td><td>66.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>65</td><td style="font-size:11px; color:var(--text-faint);">+0.30 / 0</td><td>47</td></tr>
+            <tr><td class="type-cell">IRTW-63</td><td>63</td><td>67.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>&mdash;</td><td style="font-size:11px; color:var(--text-faint);">&mdash;</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">IRTW-65</td><td>65</td><td>69.2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.07</td><td>68</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>49</td></tr>
+            <tr><td class="type-cell">IRTW-68</td><td>68</td><td>72.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.08</td><td>71</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>52</td></tr>
+            <tr><td class="type-cell">IRTW-70</td><td>70</td><td>74.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.08</td><td>&mdash;</td><td style="font-size:11px; color:var(--text-faint);">&mdash;</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">IRTW-72</td><td>72</td><td>76.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.08</td><td>75</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>55</td></tr>
+            <tr><td class="type-cell">IRTW-75</td><td>75</td><td>79.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.08</td><td>78</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>57</td></tr>
+            <tr><td class="type-cell">IRTW-78</td><td>78</td><td>82.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.08</td><td>81</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>59</td></tr>
+            <tr><td class="type-cell">IRTW-80</td><td>80</td><td>85.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.45</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.08</td><td>83.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>61</td></tr>
+            <tr><td class="type-cell">IRTW-82 &#9679;</td><td>82</td><td>87.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.55</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.09</td><td>&mdash;</td><td style="font-size:11px; color:var(--text-faint);">&mdash;</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">IRTW-85</td><td>85</td><td>90.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.55</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.09</td><td>88.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>64</td></tr>
+            <tr><td class="type-cell">IRTW-88 &#9679;</td><td>88</td><td>93.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.55</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.09</td><td>&mdash;</td><td style="font-size:11px; color:var(--text-faint);">&mdash;</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">IRTW-90</td><td>90</td><td>95.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.55</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.09</td><td>93.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>68</td></tr>
+            <tr><td class="type-cell">IRTW-92 &#9679;</td><td>92</td><td>97.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.55</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.09</td><td>&mdash;</td><td style="font-size:11px; color:var(--text-faint);">&mdash;</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">IRTW-95 &#9679;</td><td>95</td><td>100.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.55</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.09</td><td>&mdash;</td><td style="font-size:11px; color:var(--text-faint);">&mdash;</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">IRTW-98 &#9679;</td><td>98</td><td>103.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.55</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.09</td><td>&mdash;</td><td style="font-size:11px; color:var(--text-faint);">&mdash;</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">IRTW-100</td><td>100</td><td>105.5</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.55</td><td>3</td><td style="font-size:11px; color:var(--text-faint);">&plusmn; 0.09</td><td>103.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35 / 0</td><td>76</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 치수·공차는 제조사(오치아이/Ochiai)가 공개한 IRTW(丸R形止め輪) 정식 규격표 원본을 기준으로, 10~100mm 전 구간(45개 호칭)을 그대로 옮겼습니다. 재질은 <strong style="color: var(--text-sub);">스프링용 강(ばね用鋼), 경도 44~52HRC, 표면처리 ACP(인산염 피막)</strong>로 명시되어 있습니다. <strong style="color: var(--text-sub);">두께(t)·홈지름(d2) 공차는 원본의 그룹 구간(호칭 10~22 / 24~30 / 32~38 / 40~62 / 65~100)을 기준으로 재구성</strong>했으며, 40~62mm 구간과 65~100mm 구간은 두 개의 세부 치수 그룹이 하나의 공차값을 공유하는 것으로 판단해 병합했습니다 — 이 병합 경계는 원본 표의 인쇄 상태상 100% 픽셀 대조는 아니므로, 정밀 가공 발주 전에는 제조사 정식 카탈로그로 재확인하시기 바랍니다. 자유 외경(d3)의 개별 허용오차는 옮기지 않았습니다. <strong style="color: var(--text-sub);">참고:</strong> IRTW-56 이상 사이즈는 제조사 기준 주문 생산(受注生産) 품목입니다.</p>
+      <div style="margin-top: 20px; padding: 16px 18px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md);">
+        <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 6px; font-weight: 700;">재질 · 경도 · 표면처리</p>
+        <p style="font-size: 12.5px; color: var(--text-faint); margin: 0;">재질은 스프링강이 기본이며, 스프링용 스텐레스강은 주문 생산으로 대응합니다. 경도는 HRC 44~52, 표면처리는 인산피막처리(A.C.P)가 표준이며 요청 시 Zn 도금도 가능합니다.</p>
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 위 도면과 표의 <strong style="color: var(--text-sub);">구멍 지름 d1 · 자유외경 d3 · d3공차 · 두께 t · t공차</strong> 값은 R형·S형 페이지와 똑같은 방식으로 <strong style="color: var(--text-sub);">당사 정식 규격표 원본 PDF를 600dpi로 직접 렌더링</strong>해서 한 줄씩 대조해 다시 작성했습니다. 기존에는 제조사(오치아이/Ochiai)가 공개한 IRTW 규격표를 기준으로 45개 호칭만 실려 있었는데, 원본 PDF와 대조해보니 <strong style="color: var(--text-sub);">누락됐던 Size No.63·70·82·88·92·95·98 일곱 행이 빠져 있어</strong> 추가했습니다. <strong style="color: var(--text-sub);">홈지름(d2)·d2 허용공차·클리어런스 내경(d5)</strong> 세 열은 이 규격표에는 없는 항목이라 기존 오치아이 기준 값을 그대로 유지했고, 새로 추가한 일곱 행은 그 값이 없어 "—"로 남겼습니다. Size No. 앞의 <strong style="color: var(--text-sub);">●(82, 88, 92, 95, 98)</strong>은 원본 카탈로그에 표시된 대로, 이용 전 문의가 필요한 사이즈임을 나타냅니다. 정밀 가공·발주 전에는 반드시 정식 KS B 1336 규격서 원본으로 최종 확인하시기 바랍니다.</p>
     </div>
   </section>
 
