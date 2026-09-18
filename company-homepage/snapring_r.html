@@ -106,93 +106,17 @@
         </p>
       </div>
 
-      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
-        <svg viewBox="0 0 0 0" width="0" height="0" style="position:absolute;">
-          <defs>
-            <marker id="dimArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#333" />
-            </marker>
-            <marker id="dimArrowD" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#b8791f" />
-            </marker>
-            <marker id="dimArrowD2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#3a6ea5" />
-            </marker>
-            <marker id="dimArrowD1" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#2f8f5b" />
-            </marker>
-            <pattern id="matHatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#333" stroke-width="1" />
-            </pattern>
-          </defs>
-        </svg>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin-bottom: 24px;">
+        <img src="assets/rtw_diagram_ref.png" alt="구멍용 C형 멈춤링(RTW) 규격 도면 — 정면도, 적용하는 구멍 단면도, R팩 포장 그림" style="display: block; max-width: 460px; width: 100%; margin: 0 auto; image-rendering: -webkit-optimize-contrast;" />
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 6px 0 0;">원본 KS B 1336 · JIS B 2804 규격표 도면 발췌</p>
 
-        <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="190" height="190" role="img" aria-label="구멍형 C형 멈춤링 정면도">
-              <path d="M 111.12 36.98 A 64 64 0 1 1 88.88 36.98 L 90.62 46.83 A 54 54 0 1 0 109.38 46.83 Z" fill="#f4f4f2" stroke="#222" stroke-width="1.6" stroke-linejoin="round" />
-              <circle cx="112.5" cy="34" r="3.2" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <circle cx="87.5" cy="34" r="3.2" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <line x1="30" y1="100" x2="170" y2="100" stroke="#b8791f" stroke-width="1.3" marker-start="url(#dimArrowD)" marker-end="url(#dimArrowD)" />
-              <text x="100" y="94" text-anchor="middle" font-size="13" font-weight="700" fill="#b8791f">D2</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 (Front View) — 링 자체의 자유 외경</p>
-            <p style="font-size: 10.5px; color: #777; margin-top: 2px;">※ 구멍(집게 걸이)은 Size No.170 이상부터 적용</p>
-          </div>
+        <div style="width: 100%; height: 1px; background: #d8d8d4; margin: 18px 0 14px;"></div>
 
-          <div style="text-align: center;">
-            <svg viewBox="0 0 100 190" width="60" height="114" role="img" aria-label="링 두께 측면도">
-              <rect x="42" y="30" width="16" height="130" fill="#f4f4f2" stroke="#222" stroke-width="1.6" />
-              <line x1="42" y1="14" x2="58" y2="14" stroke="#333" stroke-width="1" marker-start="url(#dimArrow)" marker-end="url(#dimArrow)" />
-              <text x="50" y="10" text-anchor="middle" font-size="12" font-weight="700" fill="#111">t</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (두께 t)</p>
-          </div>
+        <div style="display: grid; gap: 10px; font-size: 12.5px; color: var(--text-sub); max-width: 620px; margin: 0 auto;">
+          <p style="margin: 0;"><strong>정면도</strong> — 링 자체의 자유 외경(위 도면의 d1)을 보여줍니다. 링 끝의 작은 구멍(집게 걸이)은 <strong>Size No.170 이상</strong>부터만 있어, 그 이하 사이즈는 전용 플라이어 끝을 링 자체에 직접 걸어 탈부착합니다.</p>
+          <p style="margin: 0;"><strong>적용하는 구멍</strong> — 왼쪽 단면도는 하우징 홈에 링이 끼워진 모습이며, <strong>d4는 구멍에 끼울 때 안둘레의 최소 지름(클리어런스 내경)</strong>입니다. 오른쪽 단면도는 홈 폭(m)과 링과 홈 사이의 여유(n)를 보여줍니다.</p>
+          <p style="margin: 0;"><strong>R팩</strong> — 이 부분은 링의 치수가 아니라 <strong>출고 포장 방식</strong>을 보여주는 그림입니다. 여러 개의 링을 정렬해 묶은 것으로, <strong>Size No.10~48은 테이프로만 팩</strong>하고 <strong>Size No.50~125는 테이프 + 밴드로 팩</strong>합니다.</p>
         </div>
-
-        <div style="width: 100%; height: 1px; background: #d8d8d4; margin: 20px 0;"></div>
-
-        <p style="text-align: center; font-size: 13px; font-weight: 700; color: #222; margin: 0 0 14px;">적용하는 구멍</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="180" height="180" role="img" aria-label="구멍 정면 단면도">
-              <rect x="10" y="10" width="180" height="180" fill="url(#matHatch)" stroke="#333" stroke-width="1.2" />
-              <circle cx="100" cy="100" r="70" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <circle cx="100" cy="100" r="76" fill="none" stroke="#3a6ea5" stroke-width="1.2" stroke-dasharray="3 3" />
-              <path d="M 100 30 A 70 70 0 1 1 99.4 30.01" fill="none" stroke="#222" stroke-width="4" />
-              <line x1="30" y1="115" x2="30" y2="85" stroke="#2f8f5b" stroke-width="1" />
-              <line x1="170" y1="115" x2="170" y2="85" stroke="#2f8f5b" stroke-width="1" />
-              <line x1="30" y1="100" x2="170" y2="100" stroke="#2f8f5b" stroke-width="1.3" marker-start="url(#dimArrowD1)" marker-end="url(#dimArrowD1)" />
-              <text x="100" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#2f8f5b">d1 (구멍 벽면 지름)</text>
-              <line x1="100" y1="24" x2="100" y2="176" stroke="#3a6ea5" stroke-width="1.3" marker-start="url(#dimArrowD2)" marker-end="url(#dimArrowD2)" />
-              <text x="130" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#3a6ea5">d2 (홈 지름)</text>
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">정면 단면도</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 160 200" width="128" height="160" role="img" aria-label="구멍 측면 단면도, 홈 폭과 여유">
-              <rect x="30" y="10" width="60" height="180" fill="url(#matHatch)" stroke="#333" stroke-width="1.2" />
-              <rect x="90" y="80" width="16" height="40" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <line x1="90" y1="66" x2="106" y2="66" stroke="#333" stroke-width="1" marker-start="url(#dimArrow)" marker-end="url(#dimArrow)" />
-              <text x="98" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#111">m</text>
-              <line x1="122" y1="10" x2="122" y2="80" stroke="#333" stroke-width="1" marker-start="url(#dimArrow)" marker-end="url(#dimArrow)" />
-              <text x="132" y="48" text-anchor="middle" font-size="12" font-weight="700" fill="#111">n</text>
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">측면 단면도 (홈 폭 m · 여유 n)</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 160 200" width="128" height="160" role="img" aria-label="구멍 입구 모따기 R 단면도">
-              <rect x="30" y="10" width="60" height="180" fill="url(#matHatch)" stroke="#333" stroke-width="1.2" />
-              <path d="M 90 24 L 90 62 L 104 62 L 104 38 A 14 14 0 0 0 90 24 Z" fill="#f4f4f2" stroke="#222" stroke-width="1.4" stroke-linejoin="round" />
-              <path d="M 91 25 A 13 13 0 0 1 103 37" fill="none" stroke="#b8791f" stroke-width="1.3" marker-end="url(#dimArrowD)" />
-              <text x="118" y="30" font-size="12" font-weight="700" fill="#b8791f">R</text>
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">구멍 입구 모따기(R) — 조립 시 링 삽입을 돕는 라운드</p>
-          </div>
-        </div>
-        <p style="text-align: center; font-size: 11.5px; color: #777; margin: 14px 0 0;">d4는 구멍에 끼울 때의 안둘레의 최소 지름 (클리어런스 내경)</p>
       </div>
 
       <div class="finder-results" style="margin-top: 0;">
@@ -212,17 +136,17 @@
           <tbody>
             <tr><td class="type-cell">R-6*</td><td>6</td><td>6.7</td><td style="font-size:11px; color:var(--text-faint);">—</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">—</td><td>6.3</td><td style="font-size:11px; color:var(--text-faint);">—</td></tr>
             <tr><td class="type-cell">R-7*</td><td>7</td><td>7.7</td><td style="font-size:11px; color:var(--text-faint);">—</td><td>0.5</td><td style="font-size:11px; color:var(--text-faint);">—</td><td>7.3</td><td style="font-size:11px; color:var(--text-faint);">—</td></tr>
-            <tr><td class="type-cell">R-8</td><td>8</td><td>8.7</td><td style="font-size:11px; color:var(--text-faint);">—</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td><td>8.4</td><td style="font-size:11px; color:var(--text-faint);">+0.09/0 (H10)</td></tr>
-            <tr><td class="type-cell">R-9</td><td>9</td><td>9.8</td><td style="font-size:11px; color:var(--text-faint);">—</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td><td>9.4</td><td style="font-size:11px; color:var(--text-faint);">+0.09/0 (H10)</td></tr>
-            <tr><td class="type-cell">R-10</td><td>10</td><td>10.8</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>10.4</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
-            <tr><td class="type-cell">R-11</td><td>11</td><td>11.8</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>11.4</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
-            <tr><td class="type-cell">R-12</td><td>12</td><td>13.0</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>12.5</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
-            <tr><td class="type-cell">R-13</td><td>13</td><td>14.1</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>13.6</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
-            <tr><td class="type-cell">R-14</td><td>14</td><td>15.1</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>14.6</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
-            <tr><td class="type-cell">R-15</td><td>15</td><td>16.2</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>15.7</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
-            <tr><td class="type-cell">R-16</td><td>16</td><td>17.3</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>16.8</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
-            <tr><td class="type-cell">R-17</td><td>17</td><td>18.3</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>17.8</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
-            <tr><td class="type-cell">R-18</td><td>18</td><td>19.5</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.13</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>19.0</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
+            <tr><td class="type-cell">R-8*</td><td>8</td><td>8.7</td><td style="font-size:11px; color:var(--text-faint);">—</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td><td>8.4</td><td style="font-size:11px; color:var(--text-faint);">+0.09/0 (H10)</td></tr>
+            <tr><td class="type-cell">R-9*</td><td>9</td><td>9.8</td><td style="font-size:11px; color:var(--text-faint);">—</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td><td>9.4</td><td style="font-size:11px; color:var(--text-faint);">+0.09/0 (H10)</td></tr>
+            <tr><td class="type-cell">R-10*</td><td>10</td><td>10.8</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>10.4</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
+            <tr><td class="type-cell">R-11*</td><td>11</td><td>11.8</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>11.4</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
+            <tr><td class="type-cell">R-12*</td><td>12</td><td>13.0</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>12.5</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
+            <tr><td class="type-cell">R-13*</td><td>13</td><td>14.1</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>13.6</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
+            <tr><td class="type-cell">R-14*</td><td>14</td><td>15.1</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>14.6</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
+            <tr><td class="type-cell">R-15*</td><td>15</td><td>16.2</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>15.7</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
+            <tr><td class="type-cell">R-16*</td><td>16</td><td>17.3</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>16.8</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
+            <tr><td class="type-cell">R-17*</td><td>17</td><td>18.3</td><td style="font-size:11px; color:var(--text-faint);">+0.36/-0.10</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>17.8</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
+            <tr><td class="type-cell">R-18*</td><td>18</td><td>19.5</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.13</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>19.0</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
             <tr><td class="type-cell">R-19</td><td>19</td><td>20.5</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.13</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>20.0</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
             <tr><td class="type-cell">R-20</td><td>20</td><td>21.5</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.13</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>21.0</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
             <tr><td class="type-cell">R-21</td><td>21</td><td>22.5</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.13</td><td>1.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td><td>22.0</td><td style="font-size:11px; color:var(--text-faint);">+0.13/0 (H11)</td></tr>
@@ -232,18 +156,19 @@
             <tr><td class="type-cell">R-26</td><td>26</td><td>27.9</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.21</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>27.2</td><td style="font-size:11px; color:var(--text-faint);">+0.21/0 (H12)</td></tr>
             <tr><td class="type-cell">R-28</td><td>28</td><td>30.1</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.21</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>29.4</td><td style="font-size:11px; color:var(--text-faint);">+0.21/0 (H12)</td></tr>
             <tr><td class="type-cell">R-30</td><td>30</td><td>32.1</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.21</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>31.4</td><td style="font-size:11px; color:var(--text-faint);">+0.21/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-31</td><td>31</td><td>33.4</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.21</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>32.7</td><td style="font-size:11px; color:var(--text-faint);">+0.21/0 (H12)</td></tr>
             <tr><td class="type-cell">R-32</td><td>32</td><td>34.4</td><td style="font-size:11px; color:var(--text-faint);">+0.42/-0.21</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>33.7</td><td style="font-size:11px; color:var(--text-faint);">+0.21/0 (H12)</td></tr>
             <tr><td class="type-cell">R-34</td><td>34</td><td>36.5</td><td style="font-size:11px; color:var(--text-faint);">+0.50/-0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>35.7</td><td style="font-size:11px; color:var(--text-faint);">+0.25/0 (H12)</td></tr>
             <tr><td class="type-cell">R-35</td><td>35</td><td>37.8</td><td style="font-size:11px; color:var(--text-faint);">+0.50/-0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>37.0</td><td style="font-size:11px; color:var(--text-faint);">+0.25/0 (H12)</td></tr>
             <tr><td class="type-cell">R-36</td><td>36</td><td>38.8</td><td style="font-size:11px; color:var(--text-faint);">+0.50/-0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>38.0</td><td style="font-size:11px; color:var(--text-faint);">+0.25/0 (H12)</td></tr>
             <tr><td class="type-cell">R-37</td><td>37</td><td>39.8</td><td style="font-size:11px; color:var(--text-faint);">+0.50/-0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>39.0</td><td style="font-size:11px; color:var(--text-faint);">+0.25/0 (H12)</td></tr>
             <tr><td class="type-cell">R-38</td><td>38</td><td>40.8</td><td style="font-size:11px; color:var(--text-faint);">+0.50/-0.25</td><td>1.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>40.0</td><td style="font-size:11px; color:var(--text-faint);">+0.25/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-40</td><td>40</td><td>43.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>42.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-42</td><td>42</td><td>45.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>44.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-45</td><td>45</td><td>48.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>47.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-47</td><td>47</td><td>50.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>49.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-48</td><td>48</td><td>51.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>50.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-39*</td><td>39</td><td>42.0</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td style="font-size:11px; color:var(--text-faint);">—</td><td style="font-size:11px; color:var(--text-faint);">—</td></tr>
+            <tr><td class="type-cell">R-40○</td><td>40</td><td>43.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>42.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-42○</td><td>42</td><td>45.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>44.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-45○</td><td>45</td><td>48.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>47.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-46*</td><td>46</td><td>49.7</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td style="font-size:11px; color:var(--text-faint);">—</td><td style="font-size:11px; color:var(--text-faint);">—</td></tr>
+            <tr><td class="type-cell">R-47○</td><td>47</td><td>50.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>49.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-48○</td><td>48</td><td>51.5</td><td style="font-size:11px; color:var(--text-faint);">+0.90/-0.39</td><td>1.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td><td>50.5</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
             <tr><td class="type-cell">R-50</td><td>50</td><td>54.2</td><td style="font-size:11px; color:var(--text-faint);">+1.10/-0.46</td><td>2.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>53.0</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
             <tr><td class="type-cell">R-52</td><td>52</td><td>56.2</td><td style="font-size:11px; color:var(--text-faint);">+1.10/-0.46</td><td>2.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>55.0</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
             <tr><td class="type-cell">R-55</td><td>55</td><td>59.2</td><td style="font-size:11px; color:var(--text-faint);">+1.10/-0.46</td><td>2.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>58.0</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
@@ -255,18 +180,18 @@
             <tr><td class="type-cell">R-65</td><td>65</td><td>69.2</td><td style="font-size:11px; color:var(--text-faint);">+1.10/-0.46</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>68.0</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
             <tr><td class="type-cell">R-68</td><td>68</td><td>72.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10/-0.46</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>71.0</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
             <tr><td class="type-cell">R-70</td><td>70</td><td>74.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10/-0.46</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>73.0</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-72</td><td>72</td><td>76.6</td><td style="font-size:11px; color:var(--text-faint);">+1.10/-0.46</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>75.0</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-72</td><td>72</td><td>76.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10/-0.46</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>75.0</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
             <tr><td class="type-cell">R-75</td><td>75</td><td>79.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10/-0.46</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>78.0</td><td style="font-size:11px; color:var(--text-faint);">+0.30/0 (H12)</td></tr>
             <tr><td class="type-cell">R-78</td><td>78</td><td>82.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>81.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
             <tr><td class="type-cell">R-80</td><td>80</td><td>85.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>2.5</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>83.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
             <tr><td class="type-cell">R-82</td><td>82</td><td>87.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>85.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
             <tr><td class="type-cell">R-85</td><td>85</td><td>90.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>88.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
             <tr><td class="type-cell">R-88</td><td>88</td><td>93.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>91.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-90</td><td>90</td><td>95.6</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>93.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-90</td><td>90</td><td>95.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>93.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
             <tr><td class="type-cell">R-92</td><td>92</td><td>97.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>95.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-95</td><td>95</td><td>101.0</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>98.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-98</td><td>98</td><td>104.0</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>102.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
-            <tr><td class="type-cell">R-100</td><td>100</td><td>106.0</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>104.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-95</td><td>95</td><td>100.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>98.5</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-98</td><td>98</td><td>103.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>102.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
+            <tr><td class="type-cell">R-100</td><td>100</td><td>105.5</td><td style="font-size:11px; color:var(--text-faint);">+1.10~1.30/-0.46~0.54</td><td>3.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>104.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35/0 (H12)</td></tr>
             <tr><td class="type-cell">R-102</td><td>102</td><td>108.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>106.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
             <tr><td class="type-cell">R-105</td><td>105</td><td>112.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>109.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
             <tr><td class="type-cell">R-108</td><td>108</td><td>115.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>112.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
@@ -282,14 +207,14 @@
             <tr><td class="type-cell">R-150</td><td>150</td><td>158.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>155.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
             <tr><td class="type-cell">R-155</td><td>155</td><td>164.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>160.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
             <tr><td class="type-cell">R-160</td><td>160</td><td>169.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>165.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
-            <tr><td class="type-cell">R-165</td><td>165</td><td>175.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>170.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
-            <tr><td class="type-cell">R-170</td><td>170</td><td>180.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>175.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
-            <tr><td class="type-cell">R-175</td><td>175</td><td>185.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>180.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
-            <tr><td class="type-cell">R-180</td><td>180</td><td>190.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>185.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
-            <tr><td class="type-cell">R-185</td><td>185</td><td>195.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>190.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
-            <tr><td class="type-cell">R-190</td><td>190</td><td>200.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>195.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
-            <tr><td class="type-cell">R-195</td><td>195</td><td>205.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>200.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
-            <tr><td class="type-cell">R-200</td><td>200</td><td>210.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>205.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
+            <tr><td class="type-cell">R-165</td><td>165</td><td>174.5</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>170.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
+            <tr><td class="type-cell">R-170</td><td>170</td><td>179.5</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>175.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
+            <tr><td class="type-cell">R-175</td><td>175</td><td>184.5</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>180.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
+            <tr><td class="type-cell">R-180</td><td>180</td><td>189.5</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>185.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
+            <tr><td class="type-cell">R-185</td><td>185</td><td>194.5</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>190.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
+            <tr><td class="type-cell">R-190</td><td>190</td><td>199.5</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>195.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
+            <tr><td class="type-cell">R-195</td><td>195</td><td>204.5</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>200.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
+            <tr><td class="type-cell">R-200</td><td>200</td><td>209.5</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>4.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>205.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
             <tr><td class="type-cell">R-210</td><td>210</td><td>222.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>5.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>216.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
             <tr><td class="type-cell">R-220</td><td>220</td><td>232.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>5.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>226.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
             <tr><td class="type-cell">R-230</td><td>230</td><td>242.0</td><td style="font-size:11px; color:var(--text-faint);">+1.5~2.0/-0.63~0.81</td><td>5.0</td><td style="font-size:11px; color:var(--text-faint);">± 0.08~0.09</td><td>236.0</td><td style="font-size:11px; color:var(--text-faint);">+0.35~0.81/0 (H12~H13)</td></tr>
@@ -305,10 +230,10 @@
       </div>
       <div style="margin-top: 20px; padding: 16px 18px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md);">
         <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 6px; font-weight: 700;">재질 · 경도 · 표면처리</p>
-        <p style="font-size: 12.5px; color: var(--text-faint); margin: 0;">재질은 스프링강(냉간압연 강판)이 기본이며, 스테인리스강 사양도 있습니다. 경도는 HRC 44~50, 표면처리는 인산피막처리(흑색)가 표준이며 요청 시 다른 표면처리로도 대응 가능합니다.</p>
+        <p style="font-size: 12.5px; color: var(--text-faint); margin: 0;">재질은 스프링강이 기본이며, 스프링용 스텐레스강은 주문 생산으로 대응합니다. 경도는 HRC 44~52, 표면처리는 인산피막처리(A.C.P)가 표준이며 요청 시 Zn 도금도 가능합니다.</p>
       </div>
 
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 치수·공차는 <strong style="color: var(--text-sub);">3개의 공개 자료(DIN 472 규격표, JIS B 2804 발췌표, KS B 1336 계열 가공 가이드)를 교차 대조</strong>해 작성했고, 보내주신 <strong style="color: var(--text-sub);">KS B 1336 · JIS B 2804 원본 규격표 사진으로 다시 한 번 전체를 재확인</strong>했습니다. 호칭(Size No.) 목록·기준치수(d1·D2·t)·공차 구간 경계 모두 기존 표와 일치했습니다. <strong style="color: var(--text-sub);">R-6*·R-7*(*표시)</strong>처럼 별표가 붙은 몇몇 사이즈는 이번 원본 사진에도 별도 표기(⊛)로 구분되어 있었는데, 정확히 어떤 의미의 표기인지는 사진 하단 범례 글씨가 작아 확정하지 못했습니다 — 다만 앞서 DIN 472·Cathect 자료 대조로 "공식 규격 범위 밖의 사이즈"라는 점까지는 확인된 상태라, 그 해석을 그대로 유지합니다. 공차는 개별 사이즈가 아니라 <strong style="color: var(--text-sub);">구멍 지름(d1) 구간별로 그룹 지정</strong>되어 같은 구간 내 사이즈는 같은 공차값을 갖습니다 — <strong style="color: var(--text-sub);">8~75mm 구간은 명확히 확인했으나, 78mm 이상 구간의 외경(D2) 공차는 자료 간 경계가 정확히 일치하지 않아 범위(~)로 표기</strong>했습니다. 새로 추가한 <strong style="color: var(--text-sub);">구멍 입구 모따기(R)</strong> 도면은 원본 사진 우측의 라운드 가공 그림을 참고해 재구성한 것입니다 — 사진에는 이 R값이 결합되는 베어링 번호(예: No.10~48, No.50~125 등)에 따라 별도로 지정되어 있는 것으로 보이나, 해상도상 정확한 수치까지는 읽어내지 못해 표에는 반영하지 않았습니다. 실제 적용 시 필요한 모따기 값은 별도로 문의해주세요. 도면은 참고용 개념도로, 사진과 픽셀 단위로 대조된 것은 아닙니다. 정밀 가공·발주 전에는 반드시 정식 KS B 1336 규격서 원본으로 최종 확인하시기 바랍니다.</p>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 위 도면은 보내주신 <strong style="color: var(--text-sub);">KS B 1336 · JIS B 2804 원본 규격표 사진을 그대로 잘라 실은 것</strong>입니다 — 이전 버전에서 이 부분을 직접 그린 SVG 도면으로 대체했었는데, 그 과정에서 사진 우측의 "<strong style="color: var(--text-sub);">R팩</strong>" 그림을 "구멍 입구 모따기(R)"로 잘못 해석해 없는 치수를 새로 만들어 넣는 오류가 있었습니다. 다시 사진을 자세히 보니 R팩은 <strong style="color: var(--text-sub);">치수가 아니라 링을 여러 개 정렬해 테이프·밴드로 묶는 포장 방식</strong>이었고, 이번에 바로잡았습니다. 표 데이터도 사진과 다시 한 줄씩 대조해 <strong style="color: var(--text-sub);">누락됐던 Size No.39·46 두 행을 추가</strong>했고, <strong style="color: var(--text-sub);">존재하지 않는 Size No.31 행은 삭제</strong>했으며, <strong style="color: var(--text-sub);">외경(D2) 소수점이 잘못 적혀 있던 13개 사이즈(R-72, R-90, R-95, R-98, R-100, R-165~R-200 구간)</strong>를 사진 값으로 고쳤습니다. 새로 추가한 Size No.39·46 행은 홈지름(d2)·공차등급 자료가 사진에 없어 "—"로 남겨뒀습니다. Size No. 앞에 붙은 <strong style="color: var(--text-sub);">*(6~18, 39, 46)</strong>과 <strong style="color: var(--text-sub);">○(40, 42, 45, 47, 48)</strong> 표시는 사진 하단 범례를 옮긴 것으로, 사진에 따르면 <strong style="color: var(--text-sub);">*표시 및 Size No.130 이상은 SWS(유통사) 자체 규격</strong>이고 <strong style="color: var(--text-sub);">○표시는 구(舊) JIS 규격</strong>입니다 — 즉 공식 KS B 1336 문서 자체에는 없는 사이즈일 수 있다는 뜻입니다. 다만 d1·D2·t의 <strong style="color: var(--text-sub);">개별 공차(허용차) 값은 사진에 "±0.18 / ±0.2 / ±0.4"처럼 대칭 형식으로 그룹 지정</strong>되어 있는데, 이 표의 D2 공차 열은 다른 공개 자료(DIN 472, JIS B 2804 발췌표) 기준의 비대칭 형식("+0.36/-0.10" 등)을 그대로 쓰고 있어 — 두 표기가 같은 값을 다르게 표현한 것인지 서로 다른 기준인지 확실하지 않아 이번에는 고치지 않았습니다. 정밀 가공·발주 전에는 반드시 정식 KS B 1336 규격서 원본으로 최종 확인하시기 바랍니다.</p>
     </div>
   </section>
 
