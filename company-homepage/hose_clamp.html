@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>호스 클램프 (Hose Clamp) | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="hose-clamp" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Hose Clamp</p>
+        <h2>호스 클램프 (Hose Clamp)</h2>
+        <p>
+          스프링강 와이어를 원형으로 감아 만든 클램프로, 자체 탄성으로 <strong style="color: var(--accent);">호스를 니플·파이프에 고정</strong>합니다.
+          집게(플라이어)로 벌려서 끼운 뒤 놓으면 스스로 오므라들며 체결됩니다. 끝단 형태에 따라 A Type · B Type,
+          크기에 따라 A·B·C 세 계열로 구분됩니다.
+        </p>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/hose_clamp_front.png" alt="호스 클램프 정면도 — D 지름, H 손잡이 높이, B 폭" style="display: block; margin: 0 auto; height: 200px; width: auto; max-width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 정면도 · 측면도<br /><span style="color: var(--text-faint);">D=지름 · H=손잡이 높이 · B=폭</span></p>
+          </div>
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/hose_clamp_type.png" alt="D 지름 및 A Type · B Type 끝단 형태" style="display: block; margin: 0 auto; height: 200px; width: auto; max-width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 끝단 형태 — A Type(포크형) · B Type(구멍형)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 1000px;">
+          <thead>
+            <tr>
+              <th>Size No.</th>
+              <th>D 기준치수</th>
+              <th>T 기준치수</th>
+              <th>H</th>
+              <th>B</th>
+              <th>적용호스(약)</th>
+              <th>최소</th>
+              <th>최소체결력(kgf)</th>
+              <th>Finish Code</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="type-cell">DD08-00780</td><td rowspan="8" style="font-size:11px; color:var(--text-faint);">7.8~12.7<br/>(± 0.2)</td><td>0.6</td><td rowspan="8">6 (±1.0)</td><td rowspan="8">8 (±0.2)</td><td>8.5~9.2</td><td>9.5</td><td>7</td><td>C</td><td rowspan="8">A</td></tr>
+            <tr><td class="type-cell">00850</td><td>0.7</td><td>9.5~10.2</td><td>10.5</td><td>7</td><td>C</td></tr>
+            <tr><td class="type-cell">00980</td><td rowspan="6" style="font-size:11px; color:var(--text-faint);">0.8</td><td>10.5~11.2</td><td>11.5</td><td>7</td><td>E</td></tr>
+            <tr><td class="type-cell">01050</td><td>11.5~12.2</td><td>12.5</td><td>8</td><td>C</td></tr>
+            <tr><td class="type-cell">01100</td><td>12~12.5</td><td>13</td><td>8</td><td>C</td></tr>
+            <tr><td class="type-cell">01150</td><td>12.5~13.2</td><td>13.5</td><td>10</td><td>E</td></tr>
+            <tr><td class="type-cell">01200</td><td>13.5~14</td><td>14.2</td><td>10</td><td>D</td></tr>
+            <tr><td class="type-cell">01270</td><td>14.2~14.8</td><td>15</td><td>12</td><td>E</td></tr>
+            <tr><td class="type-cell">DD12-01480</td><td rowspan="8" style="font-size:11px; color:var(--text-faint);">14.8~28<br/>(± 0.3 ~ ± 0.7)</td><td rowspan="6">1.0 (±0.05)</td><td rowspan="8">8</td><td rowspan="8">12</td><td>15.5~16.2</td><td>16.5</td><td>15</td><td>C</td><td rowspan="8">B</td></tr>
+            <tr><td class="type-cell">01500</td><td>16.2~16.8</td><td>17</td><td>15</td><td>C</td></tr>
+            <tr><td class="type-cell">01550</td><td>17.0~17.8</td><td>18.2</td><td>15</td><td>E</td></tr>
+            <tr><td class="type-cell">01620</td><td>17.5~18.2</td><td>18.5</td><td>17</td><td>E</td></tr>
+            <tr><td class="type-cell">02080</td><td>23~24</td><td>25</td><td>20</td><td>D</td></tr>
+            <tr><td class="type-cell">02100</td><td>24~25</td><td>25.5</td><td>20</td><td>C</td></tr>
+            <tr><td class="type-cell">02450</td><td>1.5 (±0.06)</td><td>27~28</td><td>29</td><td>20</td><td>E</td></tr>
+            <tr><td class="type-cell">02800</td><td>1.73</td><td>31.5~32</td><td>34</td><td>22</td><td>E</td></tr>
+            <tr><td class="type-cell">DD15-01380</td><td rowspan="13" style="font-size:11px; color:var(--text-faint);">13.8~50<br/>(± 0.1 ~ ± 0.5)</td><td>0.8</td><td>11</td><td rowspan="13">15</td><td>15~15.5</td><td>16.8</td><td>15</td><td>E</td><td rowspan="13">C</td></tr>
+            <tr><td class="type-cell">01510</td><td rowspan="4" style="font-size:11px; color:var(--text-faint);">1.2 (±0.04)</td><td rowspan="4">8</td><td>18~18.5</td><td>19</td><td>20</td><td>E</td></tr>
+            <tr><td class="type-cell">01610</td><td>19~19.5</td><td>20.2</td><td>22</td><td>E</td></tr>
+            <tr><td class="type-cell">01830</td><td>20~20.5</td><td>21.5</td><td>24</td><td>E</td></tr>
+            <tr><td class="type-cell">01930</td><td>22~23</td><td>24.2</td><td>25</td><td>E</td></tr>
+            <tr><td class="type-cell">03150</td><td>1.73</td><td rowspan="8">14.9 (±0.07)</td><td>35~36</td><td>38</td><td>27.5</td><td>E</td></tr>
+            <tr><td class="type-cell">03600</td><td rowspan="4" style="font-size:11px; color:var(--text-faint);">1.9</td><td>41~42</td><td>43.5</td><td>31</td><td>E</td></tr>
+            <tr><td class="type-cell">03850</td><td>44~45</td><td>46.5</td><td>37</td><td>E</td></tr>
+            <tr><td class="type-cell">01000</td><td>46~47</td><td>48.5</td><td>37</td><td>E</td></tr>
+            <tr><td class="type-cell">04400</td><td>51~52</td><td>54</td><td>35</td><td>E</td></tr>
+            <tr><td class="type-cell">04600</td><td>1.9</td><td>53~54</td><td>55.5</td><td>43</td><td>E</td></tr>
+            <tr><td class="type-cell">04850</td><td>2</td><td>56~57</td><td>58</td><td>13</td><td>E</td></tr>
+            <tr><td class="type-cell">05000</td><td>2.2</td><td>58~60</td><td>61</td><td>35</td><td>E</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; margin-top: 20px; font-size: 12.5px; color: var(--text-sub);">
+        <strong>재질</strong><br />
+        스프링강
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 도면과 표는 당사 정식 규격표 원본을 직접 옮겨 작성했습니다. D는 클램프 지름, T는 소재(와이어) 두께, 적용호스(약)는 참고용 권장 호스 외경 범위이며,
+        상기 이외의 치수는 주문 제작이 가능합니다. 정밀 발주 전에는 반드시 정식 카탈로그 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>
