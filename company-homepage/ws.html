@@ -107,80 +107,18 @@
         </p>
       </div>
 
-      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
-        <svg viewBox="0 0 0 0" width="0" height="0" style="position:absolute;">
-          <defs>
-            <marker id="wsArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#333" />
-            </marker>
-            <marker id="wsArrowGreen" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#2f8f5b" />
-            </marker>
-            <marker id="wsArrowBlue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#3a6ea5" />
-            </marker>
-            <pattern id="wsHatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#333" stroke-width="1" />
-            </pattern>
-          </defs>
-        </svg>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="170" height="170" role="img" aria-label="WS 정면도 — 동심 이중원 구조">
-              <line x1="100" y1="10" x2="100" y2="190" stroke="#999" stroke-width="0.7" stroke-dasharray="10 3 2 3" />
-              <line x1="10" y1="100" x2="190" y2="100" stroke="#999" stroke-width="0.7" stroke-dasharray="10 3 2 3" />
-              <circle cx="100" cy="100" r="62" fill="none" stroke="#222" stroke-width="1.3" />
-              <circle cx="100" cy="100" r="52" fill="none" stroke="#222" stroke-width="1.3" />
-              <path d="M100 62 L88 40 L112 40 Z" fill="none" stroke="#333" stroke-width="1" />
-              <text x="100" y="34" text-anchor="middle" font-size="11" fill="#333">90°</text>
-              <line x1="35" y1="34" x2="165" y2="34" stroke="#333" stroke-width="0.9" marker-start="url(#wsArrow)" marker-end="url(#wsArrow)" />
-              <text x="100" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#111">d1</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 — 이음매가 없는 완전 동심 이중원</p>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">KS B 1338 계열 규격 도면</p>
+        <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 55 55 460px; text-align: center;">
+            <img src="assets/ws_diagram_front.png" alt="링 정면도·단면 형상 — d3 내경, t 두께, b 폭, 약 60도 절개부" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 완전 동심 이중원 · 절개부 약 60°<br /><span style="color: var(--text-faint);">d3=내경 · 단면 형상(t=두께, b=폭)</span></p>
           </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 100 200" width="40" height="108" role="img" aria-label="측면도 — L">
-              <line x1="50" y1="6" x2="50" y2="190" stroke="#999" stroke-width="0.6" stroke-dasharray="8 2 2 2" />
-              <rect x="46" y="26" width="8" height="148" fill="#f4f4f2" stroke="#222" stroke-width="1.3" />
-              <line x1="34" y1="26" x2="34" y2="174" stroke="#333" stroke-width="0.9" marker-start="url(#wsArrow)" marker-end="url(#wsArrow)" />
-              <text x="24" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#111" transform="rotate(-90 24 100)">L</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (전체 길이 L)</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 100 100" width="70" height="70" role="img" aria-label="단면 형상 — t, b">
-              <rect x="35" y="30" width="18" height="40" fill="url(#wsHatch)" stroke="#222" stroke-width="1.3" />
-              <line x1="35" y1="20" x2="53" y2="20" stroke="#333" stroke-width="0.9" marker-start="url(#wsArrow)" marker-end="url(#wsArrow)" />
-              <text x="44" y="14" text-anchor="middle" font-size="11" font-weight="700" fill="#111">b</text>
-              <line x1="62" y1="30" x2="62" y2="70" stroke="#333" stroke-width="0.9" marker-start="url(#wsArrow)" marker-end="url(#wsArrow)" />
-              <text x="76" y="52" text-anchor="middle" font-size="11" font-weight="700" fill="#111">t</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">단면 형상 (두께 t · 폭 b)</p>
+          <div style="flex: 30 30 260px; text-align: center;">
+            <img src="assets/ws_diagram_hole.png" alt="적용하는 축 단면도 — d1 축지름, d2 홈지름, m·n 홈폭 여유" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 적용하는 축 (참고)<br /><span style="color: var(--text-faint);">d1=축지름 · d2=홈지름 · m=홈폭 · n=여유</span></p>
           </div>
         </div>
-
-        <div style="width: 100%; height: 1px; background: #d8d8d4; margin: 20px 0;"></div>
-
-        <p style="text-align: center; font-size: 13px; font-weight: 700; color: #222; margin: 0 0 14px;">적용하는 축 (참고)</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 220 160" width="220" height="160" role="img" aria-label="축 적용 단면도 — m, n">
-              <rect x="20" y="20" width="180" height="120" fill="url(#wsHatch)" stroke="#333" stroke-width="1.2" />
-              <rect x="80" y="60" width="8" height="40" fill="#fff" stroke="#a6423a" stroke-width="1.3" />
-              <line x1="88" y1="52" x2="120" y2="52" stroke="#333" stroke-width="0.9" marker-start="url(#wsArrow)" marker-end="url(#wsArrow)" />
-              <text x="104" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#111">m</text>
-              <line x1="10" y1="60" x2="10" y2="100" stroke="#333" stroke-width="0.9" marker-start="url(#wsArrow)" marker-end="url(#wsArrow)" />
-              <text x="10" y="115" text-anchor="middle" font-size="12" font-weight="700" fill="#111">n</text>
-              <line x1="20" y1="150" x2="200" y2="150" stroke="#3a6ea5" stroke-width="1.3" marker-start="url(#wsArrowBlue)" marker-end="url(#wsArrowBlue)" />
-              <text x="110" y="158" text-anchor="middle" font-size="11.5" font-weight="700" fill="#3a6ea5">d1</text>
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">축 적용 단면도 — 붉은 선은 링이 앉는 홈, m(홈 폭)·n(모서리 여유)</p>
-          </div>
-        </div>
-        <p style="text-align: center; font-size: 11.5px; color: #777; margin: 14px 0 0;">일반 C형 멈춤링과 달리 동심 구조라 조립 후에도 상대 부품과 완전히 동심을 유지합니다.</p>
       </div>
 
       <div class="finder-results" style="margin-top: 0;">
@@ -188,59 +126,66 @@
           <thead>
             <tr>
               <th>호칭 번호 (Size No.)</th>
-              <th>축 지름 d1 (mm)</th>
-              <th>자유 내경 (mm)</th>
+              <th>내경 d3 (mm)</th>
               <th>두께 t (mm)</th>
-              <th>홈지름 d2 (mm)</th>
-              <th>d2 허용공차 (h11)</th>
+              <th>폭 b (mm)</th>
+              <th>모서리 r (mm)</th>
+              <th>축지름 d1 (참고)</th>
+              <th>홈지름 d2 (참고)</th>
+              <th>홈폭 m (참고)</th>
+              <th>여유 n (참고)</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="type-cell">WS-20</td><td>20</td><td>18.7</td><td>1.2</td><td>19</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.13</td></tr>
-            <tr><td class="type-cell">WS-22</td><td>22</td><td>20.7</td><td>1.2</td><td>21</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.13</td></tr>
-            <tr><td class="type-cell">WS-22.4</td><td>22.4</td><td>21.1</td><td>1.2</td><td>21.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.13</td></tr>
-            <tr><td class="type-cell">WS-25</td><td>25</td><td>23.4</td><td>1.6</td><td>23.9</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.13</td></tr>
-            <tr><td class="type-cell">WS-26</td><td>26</td><td>24.1</td><td>1.6</td><td>25.6</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.13</td></tr>
-            <tr><td class="type-cell">WS-28</td><td>28</td><td>26.1</td><td>1.6</td><td>26.6</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.13</td></tr>
-            <tr><td class="type-cell">WS-30</td><td>30</td><td>28.1</td><td>1.6</td><td>28.6</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.13</td></tr>
-            <tr><td class="type-cell">WS-31.5</td><td>31.5</td><td>29.3</td><td>1.6</td><td>29.8</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.16</td></tr>
-            <tr><td class="type-cell">WS-32</td><td>32</td><td>29.8</td><td>1.6</td><td>30.3</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.16</td></tr>
-            <tr><td class="type-cell">WS-35</td><td>35</td><td>32.5</td><td>1.6</td><td>33</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.16</td></tr>
-            <tr><td class="type-cell">WS-35.5</td><td>35.5</td><td>33</td><td>1.6</td><td>33.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.16</td></tr>
-            <tr><td class="type-cell">WS-40</td><td>40</td><td>37.4</td><td>1.75</td><td>38</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.16</td></tr>
-            <tr><td class="type-cell">WS-42</td><td>42</td><td>38.9</td><td>1.75</td><td>39.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.16</td></tr>
-            <tr><td class="type-cell">WS-45</td><td>45</td><td>41.9</td><td>1.75</td><td>42.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.16</td></tr>
-            <tr><td class="type-cell">WS-50</td><td>50</td><td>46.3</td><td>2</td><td>47</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.16</td></tr>
-            <tr><td class="type-cell">WS-55</td><td>55</td><td>51.3</td><td>2</td><td>52</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.19</td></tr>
-            <tr><td class="type-cell">WS-56</td><td>56</td><td>52.3</td><td>2</td><td>53</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.19</td></tr>
-            <tr><td class="type-cell">WS-60</td><td>60</td><td>56.3</td><td>2</td><td>57</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.19</td></tr>
-            <tr><td class="type-cell">WS-63</td><td>63</td><td>59.3</td><td>2</td><td>60</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.19</td></tr>
-            <tr><td class="type-cell">WS-65</td><td>65</td><td>61.3</td><td>2.5</td><td>62</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.19</td></tr>
-            <tr><td class="type-cell">WS-70</td><td>70</td><td>66</td><td>2.5</td><td>67</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.19</td></tr>
-            <tr><td class="type-cell">WS-71</td><td>71</td><td>67</td><td>2.5</td><td>68</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.19</td></tr>
-            <tr><td class="type-cell">WS-75</td><td>75</td><td>71</td><td>2.5</td><td>72</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.19</td></tr>
-            <tr><td class="type-cell">WS-80</td><td>80</td><td>75.1</td><td>3</td><td>79.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.19</td></tr>
-            <tr><td class="type-cell">WS-85</td><td>85</td><td>80.1</td><td>3</td><td>81.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.22</td></tr>
-            <tr><td class="type-cell">WS-90</td><td>90</td><td>85.1</td><td>3</td><td>86.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.22</td></tr>
-            <tr><td class="type-cell">WS-95</td><td>95</td><td>90.1</td><td>3</td><td>91.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.22</td></tr>
-            <tr><td class="type-cell">WS-100</td><td>100</td><td>95.1</td><td>4</td><td>96.5</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.22</td></tr>
-            <tr><td class="type-cell">WS-105</td><td>105</td><td>98.8</td><td>4</td><td>101</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.22</td></tr>
-            <tr><td class="type-cell">WS-110</td><td>110</td><td>103.8</td><td>4</td><td>106</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.22</td></tr>
-            <tr><td class="type-cell">WS-112</td><td>112</td><td>105.8</td><td>4</td><td>108</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.22</td></tr>
-            <tr><td class="type-cell">WS-120</td><td>120</td><td>113.8</td><td>4</td><td>116</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.22</td></tr>
-            <tr><td class="type-cell">WS-125</td><td>125</td><td>118.7</td><td>4</td><td>121</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.25</td></tr>
-            <tr><td class="type-cell">WS-130</td><td>130</td><td>123.7</td><td>4</td><td>126</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.25</td></tr>
-            <tr><td class="type-cell">WS-140</td><td>140</td><td>133.7</td><td>4</td><td>136</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.25</td></tr>
-            <tr><td class="type-cell">WS-150</td><td>150</td><td>142.7</td><td>4</td><td>145</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.25</td></tr>
-            <tr><td class="type-cell">WS-160</td><td>160</td><td>151.7</td><td>4</td><td>155</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.25</td></tr>
-            <tr><td class="type-cell">WS-170</td><td>170</td><td>161.2</td><td>4</td><td>165</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.25</td></tr>
-            <tr><td class="type-cell">WS-180</td><td>180</td><td>171.2</td><td>4</td><td>175</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.25</td></tr>
-            <tr><td class="type-cell">WS-190</td><td>190</td><td>181.1</td><td>4</td><td>185</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.29</td></tr>
-            <tr><td class="type-cell">WS-200</td><td>200</td><td>191.1</td><td>4</td><td>195</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.29</td></tr>
+            <tr><td class="type-cell">WS-20</td><td>18.7</td><td>1.2</td><td>2</td><td>0.3</td><td>20</td><td>19</td><td>1.35</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-22</td><td>20.7</td><td>1.2</td><td>2</td><td>0.3</td><td>22</td><td>21</td><td>1.35</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-22.4</td><td>21.1</td><td>1.2</td><td>2</td><td>0.3</td><td>22.4</td><td>21.5</td><td>1.35</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-25</td><td>23.4</td><td>1.2</td><td>2</td><td>0.3</td><td>25</td><td>23.9</td><td>1.35</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-28</td><td>26.1</td><td>1.6</td><td>2.8</td><td>0.5</td><td>28</td><td>26.6</td><td>1.75</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-30</td><td>28.1</td><td>1.6</td><td>2.8</td><td>0.5</td><td>30</td><td>28.6</td><td>1.75</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-31.5</td><td>29.3</td><td>1.6</td><td>2.8</td><td>0.5</td><td>31.5</td><td>29.8</td><td>1.75</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-32</td><td>29.8</td><td>1.6</td><td>2.8</td><td>0.5</td><td>32</td><td>30.3</td><td>1.75</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-35</td><td>32.5</td><td>1.6</td><td>2.8</td><td>0.5</td><td>35</td><td>33</td><td>1.75</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-35.5</td><td>33</td><td>1.6</td><td>2.8</td><td>0.5</td><td>35.5</td><td>33.5</td><td>1.75</td><td>1.5</td></tr>
+            <tr><td class="type-cell">WS-40</td><td>37.4</td><td>1.75</td><td>3.5</td><td>0.7</td><td>40</td><td>38</td><td>1.9</td><td>2</td></tr>
+            <tr><td class="type-cell">WS-42</td><td>38.9</td><td>1.75</td><td>3.5</td><td>0.7</td><td>42</td><td>39.5</td><td>1.9</td><td>2</td></tr>
+            <tr><td class="type-cell">WS-45</td><td>41.9</td><td>1.75</td><td>3.5</td><td>0.7</td><td>45</td><td>42.5</td><td>1.9</td><td>2</td></tr>
+            <tr><td class="type-cell">WS-50</td><td>46.3</td><td>2</td><td>4</td><td>0.7</td><td>50</td><td>47</td><td>2.2</td><td>2</td></tr>
+            <tr><td class="type-cell">WS-55</td><td>51.3</td><td>2</td><td>4</td><td>0.7</td><td>55</td><td>52</td><td>2.2</td><td>2</td></tr>
+            <tr><td class="type-cell">WS-56</td><td>52.3</td><td>2</td><td>4</td><td>0.7</td><td>56</td><td>53</td><td>2.2</td><td>2</td></tr>
+            <tr><td class="type-cell">WS-60</td><td>56.3</td><td>2</td><td>4</td><td>0.7</td><td>60</td><td>57</td><td>2.2</td><td>2</td></tr>
+            <tr><td class="type-cell">WS-63</td><td>59.3</td><td>2</td><td>4</td><td>0.7</td><td>63</td><td>60</td><td>2.2</td><td>2</td></tr>
+            <tr><td class="type-cell">WS-65</td><td>61.3</td><td>2.5</td><td>5</td><td>0.7</td><td>65</td><td>62</td><td>2.7</td><td>2.5</td></tr>
+            <tr><td class="type-cell">WS-70</td><td>66</td><td>2.5</td><td>5</td><td>0.7</td><td>70</td><td>67</td><td>2.7</td><td>2.5</td></tr>
+            <tr><td class="type-cell">WS-71</td><td>67</td><td>2.5</td><td>5</td><td>0.7</td><td>71</td><td>68</td><td>2.7</td><td>2.5</td></tr>
+            <tr><td class="type-cell">WS-75</td><td>71</td><td>2.5</td><td>5</td><td>0.7</td><td>75</td><td>72</td><td>2.7</td><td>2.5</td></tr>
+            <tr><td class="type-cell">WS-80</td><td>75.1</td><td>3</td><td>6</td><td>0.7</td><td>80</td><td>76.5</td><td>3.2</td><td>3</td></tr>
+            <tr><td class="type-cell">WS-85</td><td>80.1</td><td>3</td><td>6</td><td>0.7</td><td>85</td><td>81.5</td><td>3.2</td><td>3</td></tr>
+            <tr><td class="type-cell">WS-90</td><td>85.1</td><td>3</td><td>6</td><td>0.7</td><td>90</td><td>86.5</td><td>3.2</td><td>3</td></tr>
+            <tr><td class="type-cell">WS-95</td><td>90.1</td><td>3</td><td>6</td><td>0.7</td><td>95</td><td>91.5</td><td>3.2</td><td>3</td></tr>
+            <tr><td class="type-cell">WS-100</td><td>95.1</td><td>3</td><td>6</td><td>0.7</td><td>100</td><td>96.5</td><td>3.2</td><td>3</td></tr>
+            <tr><td class="type-cell">WS-105</td><td>98.8</td><td>4</td><td>8</td><td>1.2</td><td>105</td><td>101</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-110</td><td>103.8</td><td>4</td><td>8</td><td>1.2</td><td>110</td><td>106</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-112</td><td>105.8</td><td>4</td><td>8</td><td>1.2</td><td>112</td><td>108</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-120</td><td>113.8</td><td>4</td><td>8</td><td>1.2</td><td>120</td><td>116</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-125</td><td>118.7</td><td>4</td><td>8</td><td>1.2</td><td>125</td><td>121</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-130</td><td>123.7</td><td>4</td><td>8</td><td>1.2</td><td>130</td><td>126</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-140</td><td>133.7</td><td>4</td><td>10</td><td>1.2</td><td>140</td><td>136</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-150</td><td>142.7</td><td>4</td><td>10</td><td>1.2</td><td>150</td><td>145</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-160</td><td>151.7</td><td>4</td><td>10</td><td>1.2</td><td>160</td><td>155</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-170</td><td>161.2</td><td>4</td><td>10</td><td>1.2</td><td>170</td><td>165</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-180</td><td>171.2</td><td>4</td><td>10</td><td>1.2</td><td>180</td><td>175</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-190</td><td>181.1</td><td>4</td><td>10</td><td>1.2</td><td>190</td><td>185</td><td>4.2</td><td>4</td></tr>
+            <tr><td class="type-cell">WS-200</td><td>191.1</td><td>4</td><td>10</td><td>1.2</td><td>200</td><td>195</td><td>4.2</td><td>4</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 구멍용 WR과 마찬가지로 WS 동심형도 공개된 제조사 정식 규격 PDF를 찾지 못해, <strong style="color: var(--text-sub);">보내주신 원본 표 사진을 1차 자료로 직접 옮겨 작성</strong>했습니다. 사진을 4배 확대해 호칭 번호·자유 내경·홈지름(d2)은 한 행씩 개별 숫자로 재확인했지만, <strong style="color: var(--text-sub);">두께(t)는 사진의 그룹 구간 경계(호칭 20~22.4 / 25~35.5 / 40~45 / 50~63 / 65~75 / 80~95 / 100~200)를 기준으로 재구성</strong>한 값이라 일부 경계가 실제와 다를 수 있습니다. 폭(b)·모서리 라운드(r)·홈 폭(m)·여유(n) 등 보조 치수의 공차 값은 사진에서도 표기가 보이지 않아 옮기지 않았습니다. <strong style="color: var(--text-sub);">홈지름(d2) 허용공차는 사진에 공차 표기가 없어, 일반 C형 멈춤링(축용) 홈에 통용되는 국제표준 ISO 286-1의 h11 등급(축 기준 IT11)을 호칭 지름별로 직접 계산해 반영</strong>했습니다 — 이는 실측치가 아니라 표준 공식 기반 추정값이므로, 참고용으로만 사용하시고 정밀 가공 전에는 반드시 실제 구매처 사양으로 재확인하시기 바랍니다. <strong style="color: var(--text-sub);">웹서치 추가 확인:</strong> 일본 하시마(ハシマ)社의 공식 명명법상 축용 동심 멈춤링은 오히려 "WR"로 표기되며, 실제로 그 규격(WR-6~WR-240, 코에이/Kouei 공개 자료)까지 확인했지만 본 페이지의 "WS" 치수와는 값이 일치하지 않았습니다 — 즉 "WS"라는 표기 자체는 하시마 등 주요 제조사 공식 문서에서 확인되지 않았고, 보내주신 자료(유통사 자체 표기로 추정)를 그대로 따랐습니다. 정밀 가공·발주 전에는 반드시 정식 KS B 1338 규격서 원본 또는 실제 구매처 카탈로그로 최종 확인하시기 바랍니다.</p>
+      <div style="margin-top: 20px; padding: 16px 18px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md);">
+        <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 6px; font-weight: 700;">비고</p>
+        <p style="font-size: 12.5px; color: var(--text-faint); margin: 0;">두께 t=1.6mm는 당분간 1.5mm로 대체할 수 있으며, 이 경우 m은 1.65mm입니다. "적용하는 축(참고)" 열의 d1·d2·m·n은 권장 치수이며, 멈춤링 절단 끝 모양은 도면과 달라도 관계없습니다.</p>
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 이전 버전은 이 제품의 제조사 정식 규격 PDF를 찾지 못해 보내주신 사진을 1차 자료로 작성했고, 두께(t) 구간과 홈지름(d2) 허용공차(ISO 286-1 h11 추정치)를 모두 추정값으로 남겨뒀습니다. 이번에 WR형과 같은 방식으로 <strong style="color: var(--text-sub);">당사 정식 규격표 원본 PDF를 600dpi로 직접 렌더링</strong>해서 원본 표 그대로 다시 작성했습니다 — 내경(d3)·두께(t)뿐 아니라 이전에는 없던 <strong style="color: var(--text-sub);">폭(b)·모서리 라운드(r)</strong> 열, 그리고 "적용하는 축" 참고 치수(d1·d2·m·n)까지 원본에 있는 그대로 전부 추가했습니다. 원본과 대조하는 과정에서 <strong style="color: var(--text-sub);">존재하지 않는 Size No.26 행</strong>이 있었던 것도 확인해 삭제했습니다. 이 원본에는 어떤 열에도 허용공차(허용차) 표기가 없어 — 기존에 있던 "d2 허용공차(h11, ISO 286-1 계산값)"는 실측이 아닌 추정값이었으므로 이번에 삭제했습니다. 정밀 가공·발주 전에는 반드시 정식 KS B 1338 규격서 원본 또는 제조사 카탈로그로 최종 확인하시기 바랍니다.</p>
     </div>
   </section>
 
