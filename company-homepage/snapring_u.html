@@ -107,66 +107,18 @@
         </p>
       </div>
 
-      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
-        <svg viewBox="0 0 0 0" width="0" height="0" style="position:absolute;">
-          <defs>
-            <marker id="uArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#333" />
-            </marker>
-            <marker id="uArrowGreen" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#2f8f5b" />
-            </marker>
-            <pattern id="uHatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#333" stroke-width="1" />
-            </pattern>
-          </defs>
-        </svg>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="150" height="150" role="img" aria-label="U형 정면도 — D, d">
-              <path d="M70 30
-                       C 40 40 25 65 25 95
-                       C 25 130 50 155 85 160
-                       L 95 135
-                       C 72 130 55 114 55 92
-                       C 55 70 66 54 85 46 Z
-                       M 130 30
-                       C 160 40 175 65 175 95
-                       C 175 130 150 155 115 160
-                       L 105 135
-                       C 128 130 145 114 145 92
-                       C 145 70 134 54 115 46 Z"
-                    fill="#f4f4f2" stroke="#222" stroke-width="1.6" stroke-linejoin="round" />
-              <line x1="25" y1="95" x2="175" y2="95" stroke="#333" stroke-width="0.9" marker-start="url(#uArrow)" marker-end="url(#uArrow)" />
-              <text x="100" y="89" text-anchor="middle" font-size="12" font-weight="700" fill="#111">D</text>
-              <line x1="55" y1="95" x2="145" y2="95" stroke="#2f8f5b" stroke-width="1" stroke-dasharray="2 2" />
-              <text x="100" y="108" text-anchor="middle" font-size="11" font-weight="700" fill="#2f8f5b">d</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 — U자형 후크 구조</p>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 45 45 340px; text-align: center;">
+            <img src="assets/u_diagram_front.png" alt="U형 정면도 — D 외경, d 홈지름, A·B 높이, t 두께" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ U자형 후크 구조<br /><span style="color: var(--text-faint);">D=외경 · d=홈지름 · A·B=높이 · t=두께</span></p>
           </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 100 200" width="44" height="88" role="img" aria-label="측면도 — t">
-              <rect x="42" y="20" width="16" height="160" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <line x1="34" y1="20" x2="34" y2="180" stroke="#333" stroke-width="0.9" marker-start="url(#uArrow)" marker-end="url(#uArrow)" />
-              <text x="20" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#111" transform="rotate(-90 20 100)">t</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (두께 t)</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 160 160" width="130" height="130" role="img" aria-label="적용하는 축 — 홈 단면도">
-              <rect x="10" y="10" width="140" height="140" fill="url(#uHatch)" stroke="#333" stroke-width="1.2" />
-              <circle cx="80" cy="80" r="55" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <rect x="66" y="6" width="28" height="16" fill="#fff" stroke="#a6423a" stroke-width="1.3" />
-              <line x1="30" y1="80" x2="130" y2="80" stroke="#2f8f5b" stroke-width="1.3" marker-start="url(#uArrowGreen)" marker-end="url(#uArrowGreen)" />
-              <text x="80" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#2f8f5b">d (축 지름)</text>
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">적용하는 축 — 붉은 선은 링이 앉는 홈</p>
+          <div style="flex: 45 45 340px; text-align: center;">
+            <img src="assets/u_diagram_shaft.png" alt="적용하는 축 단면도 — d2 홈지름, m·n 홈폭 여유" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 적용하는 축<br /><span style="color: var(--text-faint);">d2=홈지름 · m=홈폭 · n=여유</span></p>
           </div>
         </div>
-        <p style="text-align: center; font-size: 11.5px; color: #777; margin: 14px 0 0;">E형보다 홈 접촉 면적이 넓어 스러스트 하중에 유리하며, 드라이버로 간단히 탈거할 수 있습니다.</p>
       </div>
 
       <div class="finder-results" style="margin-top: 0;">
@@ -181,16 +133,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td class="type-cell">UTW-3.2</td><td>3.2</td><td style="font-size:11px; color:var(--text-faint);">+0.05 / -0.2</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
-            <tr><td class="type-cell">UTW-4</td><td>4</td><td style="font-size:11px; color:var(--text-faint);">+0.05 / 0</td><td>0.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">UTW-3.2</td><td>3.2</td><td style="font-size:11px; color:var(--text-faint);">+0.03 / -0.1</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">UTW-4</td><td>4</td><td style="font-size:11px; color:var(--text-faint);">+0.03 / -0.1</td><td>0.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
             <tr><td class="type-cell">UTW-5</td><td>5</td><td style="font-size:11px; color:var(--text-faint);">+0.03 / -0.1</td><td>0.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
             <tr><td class="type-cell">UTW-6</td><td>6</td><td style="font-size:11px; color:var(--text-faint);">+0.05 / -0.15</td><td>0.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
-            <tr><td class="type-cell">UTW-7</td><td>7</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.2</td><td>0.9</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
-            <tr><td class="type-cell">UTW-8</td><td>8</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.3</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">UTW-7</td><td>7</td><td style="font-size:11px; color:var(--text-faint);">+0.05 / -0.15</td><td>0.9</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">UTW-8</td><td>8</td><td style="font-size:11px; color:var(--text-faint);">+0.05 / -0.2</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 웹서치로 오치아이(Ochiai)의 정식 종합 카탈로그(영문판 포함)에서 U-Ring(UTW) 규격표 원본을 찾아 대조했습니다. <strong style="color: var(--text-sub);">호칭 번호(3.2~8), 축 지름(d) 기준치수, d 허용차, 두께(t) 모두 오치아이 원본과 정확히 일치</strong>함을 직접 확인했습니다. 정밀 가공·발주 전에는 정식 카탈로그 원본으로 최종 확인하시기 바랍니다.</p>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 위 도면과 표는 R형·S형과 같은 방식으로 <strong style="color: var(--text-sub);">당사 정식 규격표 원본 PDF를 600dpi로 직접 렌더링</strong>해서 다시 대조했습니다. 이전 버전은 오치아이(Ochiai) 카탈로그와 대조해 각 사이즈마다 개별 공차값을 매겼는데, 당사 원본과 대조해보니 <strong style="color: var(--text-sub);">축 지름(d) 허용차가 3.2~5mm(+0.03/-0.1) · 6~8mm(+0.05/-0.15~-0.2) 두 구간으로 그룹 지정</strong>되어 있어 이 표기로 통일했습니다. 정밀 가공·발주 전에는 정식 카탈로그 원본으로 최종 확인하시기 바랍니다.</p>
     </div>
   </section>
 

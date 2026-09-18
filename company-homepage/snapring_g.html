@@ -107,62 +107,18 @@
         </p>
       </div>
 
-      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
-        <svg viewBox="0 0 0 0" width="0" height="0" style="position:absolute;">
-          <defs>
-            <marker id="gArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#333" />
-            </marker>
-            <marker id="gArrowGreen" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#2f8f5b" />
-            </marker>
-            <pattern id="gHatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#333" stroke-width="1" />
-            </pattern>
-          </defs>
-        </svg>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="150" height="150" role="img" aria-label="G형 정면도 — d">
-              <path d="M100 30
-                       C 65 30 40 55 38 88
-                       C 37 100 40 110 46 118
-                       L 60 104
-                       C 56 98 54 92 55 86
-                       C 57 66 76 50 100 50
-                       C 112 50 122 55 130 63
-                       L 144 48
-                       C 133 37 118 30 100 30 Z"
-                    fill="#f4f4f2" stroke="#222" stroke-width="1.6" stroke-linejoin="round" />
-              <path d="M60 104 C 66 118 82 128 100 128 C 112 128 122 124 130 117 L 143 132 C 131 143 116 149 100 149 C 76 149 55 135 47 116 Z"
-                    fill="#f4f4f2" stroke="#222" stroke-width="1.6" stroke-linejoin="round" />
-              <line x1="38" y1="90" x2="144" y2="90" stroke="#333" stroke-width="0.9" marker-start="url(#gArrow)" marker-end="url(#gArrow)" />
-              <text x="90" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="#111">d</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 — 이중 나선형 그립 구조</p>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 45 45 340px; text-align: center;">
+            <img src="assets/g_diagram_front.png" alt="G형 정면도 — d 홈지름, b 폭, l 전체 길이, t 두께" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 이중 나선형 그립 구조<br /><span style="color: var(--text-faint);">d=홈지름 · b=폭 · l=전체 길이 · t=두께</span></p>
           </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 100 200" width="44" height="88" role="img" aria-label="측면도 — t">
-              <rect x="42" y="20" width="16" height="160" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <line x1="34" y1="20" x2="34" y2="180" stroke="#333" stroke-width="0.9" marker-start="url(#gArrow)" marker-end="url(#gArrow)" />
-              <text x="20" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#111" transform="rotate(-90 20 100)">t</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (두께 t)</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 160 160" width="130" height="130" role="img" aria-label="적용하는 축 — 홈 없음">
-              <rect x="10" y="10" width="140" height="140" fill="url(#gHatch)" stroke="#333" stroke-width="1.2" />
-              <circle cx="80" cy="80" r="55" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <line x1="30" y1="80" x2="130" y2="80" stroke="#2f8f5b" stroke-width="1.3" marker-start="url(#gArrowGreen)" marker-end="url(#gArrowGreen)" />
-              <text x="80" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#2f8f5b">d (축 지름)</text>
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">적용하는 축 — 별도 홈 가공이 필요 없음</p>
+          <div style="flex: 45 45 340px; text-align: center;">
+            <img src="assets/g_diagram_shaft.png" alt="적용하는 축 단면도 — C 클리어런스 외경, S 축지름" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 적용하는 축 — 별도 홈 가공이 필요 없음<br /><span style="color: var(--text-faint);">C=클리어런스 외경 · S=축지름</span></p>
           </div>
         </div>
-        <p style="text-align: center; font-size: 11.5px; color: #777; margin: 14px 0 0;">홈이 없어 가공비를 줄일 수 있지만, 허용 축 방향 하중은 C형·E형보다 낮습니다.</p>
       </div>
 
       <div class="finder-results" style="margin-top: 0;">
@@ -177,21 +133,21 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td class="type-cell">GTW-1.5</td><td>1.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td></tr>
-            <tr><td class="type-cell">GTW-2</td><td>1.9</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td></tr>
-            <tr><td class="type-cell">GTW-2.5</td><td>2.35</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
-            <tr><td class="type-cell">GTW-3</td><td>2.85</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.06</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
-            <tr><td class="type-cell">GTW-4</td><td>3.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
-            <tr><td class="type-cell">GTW-5</td><td>4.75</td><td style="font-size:11px; color:var(--text-faint);">± 0.07</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
-            <tr><td class="type-cell">GTW-6</td><td>5.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.09</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
-            <tr><td class="type-cell">GTW-7</td><td>6.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.09</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
-            <tr><td class="type-cell">GTW-8</td><td>7.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.09</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">GTW-1.5</td><td>1.4</td><td style="font-size:11px; color:var(--text-faint);">+0.05 / -0.08</td><td>0.4</td><td style="font-size:11px; color:var(--text-faint);">± 0.03</td></tr>
+            <tr><td class="type-cell">GTW-2</td><td>1.9</td><td style="font-size:11px; color:var(--text-faint);">+0.03 / -0.1</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">GTW-2.5</td><td>2.35</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">GTW-3</td><td>2.85</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.08</td><td>0.6</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">GTW-4</td><td>3.8</td><td style="font-size:11px; color:var(--text-faint);">+0.05 / -0.1</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">GTW-5</td><td>4.75</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>0.8</td><td style="font-size:11px; color:var(--text-faint);">± 0.04</td></tr>
+            <tr><td class="type-cell">GTW-6</td><td>5.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.08</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">GTW-7</td><td>6.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.1</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
+            <tr><td class="type-cell">GTW-8</td><td>7.7</td><td style="font-size:11px; color:var(--text-faint);">± 0.1</td><td>1</td><td style="font-size:11px; color:var(--text-faint);">± 0.05</td></tr>
             <tr><td class="type-cell">GTW-9</td><td>8.65</td><td style="font-size:11px; color:var(--text-faint);">± 0.1</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td></tr>
             <tr><td class="type-cell">GTW-10</td><td>9.65</td><td style="font-size:11px; color:var(--text-faint);">± 0.1</td><td>1.2</td><td style="font-size:11px; color:var(--text-faint);">± 0.06</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 웹서치로 GTW(グリップ止め輪)가 오치아이(Ochiai)의 실제 제품군임을 확인했으나, IRTW·ISTW·E형(ETW)과 달리 GTW는 오치아이의 정식 종합 카탈로그(21페이지 全체)에도 실려 있지 않아 공개된 정식 규격 PDF는 찾지 못했습니다. 따라서 <strong style="color: var(--text-sub);">보내주신 원본 표 사진을 1차 자료로 직접 옮겨 작성</strong>했습니다. 정밀 발주 전에는 반드시 실제 구매처(오치아이 대리점 등) 카탈로그로 최종 확인하시기 바랍니다.</p>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 위 도면과 표는 R형·S형과 같은 방식으로 <strong style="color: var(--text-sub);">당사 정식 규격표 원본 PDF를 600dpi로 직접 렌더링</strong>해서 다시 대조했습니다. 이전 버전은 이 제품의 제조사 단독 규격 PDF를 찾지 못해 사진을 1차 자료로 작성했었는데, 원본과 대조해보니 <strong style="color: var(--text-sub);">두께(t) 값이 한 행씩 아래로 밀려 있던 오류와, 그에 따라 공차 구간 경계가 달랐던 부분을 원본 표 그대로 바로잡았습니다.</strong> 정밀 발주 전에는 반드시 실제 구매처 카탈로그로 최종 확인하시기 바랍니다.</p>
     </div>
   </section>
 
