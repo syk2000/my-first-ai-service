@@ -107,13 +107,20 @@
       </div>
 
       <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin-bottom: 24px;">
-        <img src="assets/rtw_diagram_ref.png" alt="구멍용 C형 멈춤링(RTW) 규격 도면 — 정면도, 적용하는 구멍 단면도, R팩 포장 그림" style="display: block; max-width: 100%; width: 100%; margin: 0 auto; image-rendering: -webkit-optimize-contrast;" />
-        <p style="text-align: center; font-size: 11px; color: #999; margin: 6px 0 14px;">원본 KS B 1336 · JIS B 2804 규격표 도면 발췌</p>
-
-        <div style="display: flex; gap: 12px;">
-          <div style="flex: 22; font-size: 11.5px; color: var(--text-sub); text-align: center;">↑ 자유 외경<br /><span style="color: var(--text-faint);">(170번↑만 집게구멍)</span></div>
-          <div style="flex: 38; font-size: 11.5px; color: var(--text-sub); text-align: center;">↑ 조립 구멍 단면<br /><span style="color: var(--text-faint);">d4=클리어런스 · m/n=홈</span></div>
-          <div style="flex: 30; font-size: 11.5px; color: var(--text-sub); text-align: center;">↑ R팩<br /><span style="color: var(--text-faint);">치수 아닌 포장 단위</span></div>
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">SWS TECH 종합 카탈로그(스냅링 편) 원본 도면</p>
+        <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 26 26 220px; text-align: center;">
+            <img src="assets/rtw_diagram_front.png" alt="링 정면도·측면도 — d3 자유외경, t 두께" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 자유 외경 d3 · 두께 t<br /><span style="color: var(--text-faint);">d0=집게구멍(Size No.170↑만 있음)</span></p>
+          </div>
+          <div style="flex: 45 45 380px; text-align: center;">
+            <img src="assets/rtw_diagram_hole.png" alt="적용하는 구멍 단면도 — d1 구멍지름, d2 홈지름, d4 클리어런스, m·n 홈폭" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ 적용하는 구멍 단면 — d1 구멍지름 · d2 홈지름<br /><span style="color: var(--text-faint);">d4=삽입 시 최소지름(클리어런스) · m=홈폭 · n=여유</span></p>
+          </div>
+          <div style="flex: 29 29 240px; text-align: center;">
+            <img src="assets/rtw_diagram_rpack.png" alt="R팩 — 링을 정렬해 묶은 포장 방식" style="display: block; max-width: 100%; width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 6px 0 0;">↑ R팩(포장 단위, 치수 아님)<br /><span style="color: var(--text-faint);">Size No.10~48=테이프 팩 · 50~125=테이프+밴드 팩</span></p>
+          </div>
         </div>
       </div>
 
@@ -123,8 +130,8 @@
             <tr>
               <th>호칭 번호 (Size No.)</th>
               <th>구멍 지름 d1 (mm)</th>
-              <th>외경 D2 (mm)</th>
-              <th>D2 공차</th>
+              <th>자유 외경 d3 (mm)</th>
+              <th>d3 공차</th>
               <th>두께 t (mm)</th>
               <th>t 공차</th>
               <th>홈지름 d2 (mm)</th>
@@ -231,7 +238,7 @@
         <p style="font-size: 12.5px; color: var(--text-faint); margin: 0;">재질은 스프링강이 기본이며, 스프링용 스텐레스강은 주문 생산으로 대응합니다. 경도는 HRC 44~52, 표면처리는 인산피막처리(A.C.P)가 표준이며 요청 시 Zn 도금도 가능합니다.</p>
       </div>
 
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 위 도면과 표는 <strong style="color: var(--text-sub);">SWS TECH 종합 카탈로그(스냅링 편, 12페이지)의 원본 PDF</strong>에서 직접 뽑은 것입니다 — 사진이 아니라 벡터 원본이라 해상도 제한이 없습니다. 처음에는 이 부분을 직접 그린 SVG 도면으로 대체했다가, 사진 속 "<strong style="color: var(--text-sub);">R팩</strong>" 그림을 "구멍 입구 모따기(R)"로 잘못 해석해 없는 치수를 만들어 넣는 오류가 있었는데, 원본 PDF로 다시 대조하며 바로잡았습니다 — R팩은 치수가 아니라 <strong style="color: var(--text-sub);">링을 여러 개 정렬해 테이프·밴드로 묶는 포장 방식</strong>입니다. 원본 PDF가 훨씬 선명해서 표 전체를 처음부터 다시 대조했고, <strong style="color: var(--text-sub);">외경(D2)이 잘못 적혀 있던 R-8·R-10을 포함해 15개 사이즈</strong>를 고쳤으며, <strong style="color: var(--text-sub);">누락된 Size No.39·46 행을 추가</strong>하고 <strong style="color: var(--text-sub);">존재하지 않는 Size No.31 행은 삭제</strong>했습니다. <strong style="color: var(--text-sub);">D2 공차와 두께(t)·t공차 열도 원본 표기 그대로 전부 다시 옮겼습니다</strong> — 기존에 다른 자료(DIN 472 등)에서 가져온 비대칭 형식("+0.36/-0.10")은 이 SWS 원본의 대칭 형식("±0.18" 등)과 값 자체가 달라, 자사 카탈로그 표기인 SWS 원본 값으로 통일했습니다. 홈지름(d2)·공차등급 두 열은 SWS 카탈로그에는 없는 항목이라 이전 자료값을 그대로 유지했고, 새로 추가한 Size No.39·46 행은 그 두 값이 없어 "—"로 남겼습니다. Size No. 앞의 <strong style="color: var(--text-sub);">*(6~18, 39, 46, Size No.130 이상)</strong>은 <strong style="color: var(--text-sub);">SWS(유통사) 자체 규격</strong>, <strong style="color: var(--text-sub);">○(40, 42, 45, 47, 48)</strong>은 <strong style="color: var(--text-sub);">구(舊) JIS 규격</strong>이라는 원본 카탈로그의 범례를 그대로 표기한 것입니다. 정밀 가공·발주 전에는 반드시 정식 KS B 1336 규격서 원본으로 최종 확인하시기 바랍니다.</p>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 위 도면과 표는 <strong style="color: var(--text-sub);">SWS TECH 종합 카탈로그(스냅링 편, 12페이지)의 원본 PDF</strong>에서 직접 뽑은 것입니다 — 사진이 아니라 벡터 원본이라 해상도 제한이 없습니다. 처음에는 이 부분을 직접 그린 SVG 도면으로 대체했다가, 사진 속 "<strong style="color: var(--text-sub);">R팩</strong>" 그림을 "구멍 입구 모따기(R)"로 잘못 해석해 없는 치수를 만들어 넣는 오류가 있었는데, 원본 PDF로 다시 대조하며 바로잡았습니다 — R팩은 치수가 아니라 <strong style="color: var(--text-sub);">링을 여러 개 정렬해 테이프·밴드로 묶는 포장 방식</strong>입니다. 원본 PDF가 훨씬 선명해서 표 전체를 처음부터 다시 대조했고, <strong style="color: var(--text-sub);">외경(d3)이 잘못 적혀 있던 R-8·R-10을 포함해 15개 사이즈</strong>를 고쳤으며, <strong style="color: var(--text-sub);">누락된 Size No.39·46 행을 추가</strong>하고 <strong style="color: var(--text-sub);">존재하지 않는 Size No.31 행은 삭제</strong>했습니다. <strong style="color: var(--text-sub);">d3 공차와 두께(t)·t공차 열도 원본 표기 그대로 전부 다시 옮겼습니다</strong> — 기존에 다른 자료(DIN 472 등)에서 가져온 비대칭 형식("+0.36/-0.10")은 이 SWS 원본의 대칭 형식("±0.18" 등)과 값 자체가 달라, 자사 카탈로그 표기인 SWS 원본 값으로 통일했습니다. 홈지름(d2)·공차등급 두 열은 SWS 카탈로그에는 없는 항목이라 이전 자료값을 그대로 유지했고, 새로 추가한 Size No.39·46 행은 그 두 값이 없어 "—"로 남겼습니다. Size No. 앞의 <strong style="color: var(--text-sub);">*(6~18, 39, 46, Size No.130 이상)</strong>은 <strong style="color: var(--text-sub);">SWS(유통사) 자체 규격</strong>, <strong style="color: var(--text-sub);">○(40, 42, 45, 47, 48)</strong>은 <strong style="color: var(--text-sub);">구(舊) JIS 규격</strong>이라는 원본 카탈로그의 범례를 그대로 표기한 것입니다. 정밀 가공·발주 전에는 반드시 정식 KS B 1336 규격서 원본으로 최종 확인하시기 바랍니다.</p>
     </div>
   </section>
 
