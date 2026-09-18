@@ -103,66 +103,15 @@
         <p>
           방사형으로 배치된 다수의 나선형 스프링 발톱이 축을 붙잡는 원형 스피드너트입니다. 일반 풋시너트보다
           <strong style="color: var(--accent);">발톱이 촘촘하고 개수가 많아</strong> 진동이 있는 환경에서도 잘 풀리지 않습니다.
-          규격 기호는 <strong style="color: var(--accent);">CSN</strong>으로 표기하며, 오치아이(Ochiai) 카탈로그 기준입니다.
+          규격 기호는 <strong style="color: var(--accent);">CSN</strong>으로 표기합니다.
         </p>
       </div>
 
       <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
-        <svg viewBox="0 0 0 0" width="0" height="0" style="position:absolute;">
-          <defs>
-            <marker id="csnArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#333" />
-            </marker>
-            <marker id="csnArrowGreen" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path d="M0,1 L9,5 L0,9 Z" fill="#2f8f5b" />
-            </marker>
-            <pattern id="csnHatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#333" stroke-width="1" />
-            </pattern>
-          </defs>
-        </svg>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: center;">
-          <div style="text-align: center;">
-            <svg viewBox="0 0 200 200" width="160" height="160" role="img" aria-label="CSN 정면도 — D, d">
-              <circle cx="100" cy="100" r="62" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <circle cx="100" cy="100" r="20" fill="#fff" stroke="#222" stroke-width="1.3" />
-              <g stroke="#222" stroke-width="0.8" fill="none">
-                <path d="M100 80 Q108 90 100 100" />
-                <path d="M120 100 Q110 108 100 100" />
-                <path d="M100 120 Q92 110 100 100" />
-                <path d="M80 100 Q90 92 100 100" />
-                <path d="M114 86 Q106 96 100 100" />
-                <path d="M114 114 Q104 106 100 100" />
-                <path d="M86 114 Q94 104 100 100" />
-                <path d="M86 86 Q96 94 100 100" />
-              </g>
-              <line x1="38" y1="100" x2="162" y2="100" stroke="#333" stroke-width="0.9" marker-start="url(#csnArrow)" marker-end="url(#csnArrow)" />
-              <text x="120" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#111">D</text>
-              <line x1="100" y1="100" x2="120" y2="100" stroke="#2f8f5b" stroke-width="1" stroke-dasharray="2 2" />
-              <text x="112" y="112" text-anchor="middle" font-size="11" font-weight="700" fill="#2f8f5b">d</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">정면도 — 촘촘한 방사형 스프링 발톱</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 100 200" width="44" height="88" role="img" aria-label="측면도 — t">
-              <rect x="42" y="60" width="16" height="80" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <line x1="34" y1="60" x2="34" y2="140" stroke="#333" stroke-width="0.9" marker-start="url(#csnArrow)" marker-end="url(#csnArrow)" />
-              <text x="20" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#111" transform="rotate(-90 20 100)">t</text>
-            </svg>
-            <p style="font-size: 12px; color: #444; margin-top: 2px;">측면도 (두께 t)</p>
-          </div>
-
-          <div style="text-align: center;">
-            <svg viewBox="0 0 160 160" width="130" height="130" role="img" aria-label="적용하는 축 — 홈 없음">
-              <rect x="10" y="10" width="140" height="140" fill="url(#csnHatch)" stroke="#333" stroke-width="1.2" />
-              <circle cx="80" cy="80" r="55" fill="#f4f4f2" stroke="#222" stroke-width="1.4" />
-              <line x1="30" y1="80" x2="130" y2="80" stroke="#2f8f5b" stroke-width="1.3" marker-start="url(#csnArrowGreen)" marker-end="url(#csnArrowGreen)" />
-              <text x="80" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#2f8f5b">S (축 지름)</text>
-            </svg>
-            <p style="font-size: 11.5px; color: #444; margin-top: 2px;">적용하는 축 — 별도 홈 가공이 필요 없음</p>
-          </div>
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="text-align: center;">
+          <img src="assets/csn_diagram.png" alt="둥근형 스피드너트 정면도 — D 외경, d 내접원, t 두께, 적용하는 축 S, A 삽입 여유" style="display: block; margin: 0 auto; max-width: 100%; height: auto; image-rendering: -webkit-optimize-contrast;" />
+          <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 촘촘한 방사형 스프링 발톱 구조 · 적용하는 축(홈 가공 불필요)<br /><span style="color: var(--text-faint);">D=외경 · d=내접원 지름 · t=두께 · S=적용 축지름 · A=삽입 여유</span></p>
         </div>
         <p style="text-align: center; font-size: 11.5px; color: #777; margin: 14px 0 0;">현재 3~5mm 소형 사이즈만 확인되었으며, 그보다 큰 사이즈가 필요하면 별도 문의 바랍니다.</p>
       </div>
@@ -172,20 +121,21 @@
           <thead>
             <tr>
               <th>호칭 번호 (Size No.)</th>
-              <th>내접원 지름 d (mm)</th>
-              <th>외경 D (mm)</th>
+              <th>d 기준치수 (mm)</th>
+              <th>d 허용차</th>
+              <th>D 기준치수 (mm)</th>
+              <th>D 허용차</th>
               <th>두께 t (mm)</th>
-              <th>최소 여유 n (mm)</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="type-cell">CSN-3</td><td>2.7</td><td>12</td><td>0.3</td><td>4.8</td></tr>
-            <tr><td class="type-cell">CSN-4</td><td>3.7</td><td>12</td><td>0.3</td><td>6</td></tr>
-            <tr><td class="type-cell">CSN-5</td><td>4.7</td><td>14</td><td>0.4</td><td>6.6</td></tr>
+            <tr><td class="type-cell">CSN-3</td><td>2.7</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">± 0.2</td><td>12</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">± 0.3</td><td>0.3</td></tr>
+            <tr><td class="type-cell">CSN-4</td><td>3.7</td><td>12</td><td>0.3</td></tr>
+            <tr><td class="type-cell">CSN-5</td><td>4.7</td><td>14</td><td>0.4</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 웹서치로 오치아이(Ochiai)의 정식 종합 카탈로그에서 <strong style="color: var(--text-sub);">丸形スピードナット(CSN) 규격표 원본을 찾아 대조</strong>했습니다. 호칭 번호(3~5), 내접원 지름(d)·외경(D)·두께(t) 기준치수가 오치아이 원본과 정확히 일치함을 확인했습니다. 재질은 스프링용 강(경도 40~50HRC)입니다. 정밀 발주 전에는 정식 카탈로그 원본으로 최종 확인하시기 바랍니다.</p>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 위 도면과 표는 <strong style="color: var(--text-sub);">당사 정식 규격표 원본을 600dpi로 직접 렌더링</strong>해서 다시 대조했습니다. 내접원 지름(d)·외경(D)·두께(t)는 <strong style="color: var(--text-sub);">기존 값과 정확히 일치</strong>함을 확인했으며, 당사 원본에 없는 "최소 여유(n)" 열은 제거하고 대신 d·D 허용차를 원본 그대로 추가했습니다. 재질은 스프링강이며 경도 HRC 40~50입니다. 정밀 발주 전에는 정식 카탈로그 원본으로 최종 확인하시기 바랍니다.</p>
     </div>
   </section>
 
