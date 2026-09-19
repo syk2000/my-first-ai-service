@@ -59,7 +59,7 @@
   .wrap {
     max-width: 1160px;
     margin: 0 auto;
-    padding-inline: 24px;
+    padding-inline: clamp(16px, 4vw, 24px);
   }
 
   .eyebrow {
@@ -515,7 +515,7 @@
   /* ---------- Section shell ---------- */
 
   section.page-section {
-    padding-block: 72px;
+    padding-block: clamp(52px, 8vw, 72px);
     border-bottom: 1px solid var(--border);
   }
 
@@ -1240,6 +1240,20 @@
 
   /* ---------- Responsive ---------- */
 
+  @media (max-width: 1024px) {
+    nav.main-nav {
+      gap: 18px;
+    }
+
+    .header-cta .btn {
+      padding-inline: 14px;
+    }
+
+    .lang-select-btn {
+      padding: 6px 9px;
+    }
+  }
+
   @media (max-width: 880px) {
     nav.main-nav {
       position: fixed;
@@ -1420,10 +1434,6 @@
 
     .stats-grid {
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    section.page-section {
-      padding-block: 52px;
     }
 
     .finder-fields {
