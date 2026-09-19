@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>로크 너트 (Lock Nut) | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="lock-nut" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Lock Nut</p>
+        <h2>로크 너트</h2>
+        <p>
+          어댑터 슬리브·베어링을 축에 고정할 때 함께 사용하는 너트입니다. 와셔를 함께 사용하는
+          <strong style="color: var(--accent);">너트 계열 AN</strong>과, 락 클립(toggle)을 사용하는
+          <strong style="color: var(--accent);">너트 계열 ANL</strong> 두 가지로 구분합니다.
+        </p>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <svg width="220" height="170" viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="70" cy="85" r="55" stroke="#222" stroke-width="2" fill="none" />
+              <circle cx="70" cy="85" r="40" stroke="#222" stroke-width="2" fill="none" />
+              <line x1="40" y1="45" x2="40" y2="30" stroke="#333" stroke-width="1" />
+              <text x="42" y="20" font-size="11" fill="#222">g</text>
+              <rect x="150" y="45" width="40" height="80" stroke="#222" stroke-width="2" fill="none" />
+              <line x1="150" y1="65" x2="190" y2="65" stroke="#333" stroke-width="1" />
+              <line x1="150" y1="105" x2="190" y2="105" stroke="#333" stroke-width="1" />
+              <text x="196" y="70" font-size="11" fill="#222">D&#8321;</text>
+              <text x="196" y="110" font-size="11" fill="#222">D&#8326;</text>
+              <text x="165" y="38" font-size="11" fill="#222">Bn</text>
+            </svg>
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 와셔를 사용하는 너트 (계열 AN)<br /><span style="color: var(--text-faint);">g=나사 물림 길이 · D1=바깥지름 · D6·D4=너트 폭</span></p>
+          </div>
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <svg width="220" height="170" viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="70" cy="85" r="55" stroke="#222" stroke-width="2" fill="none" />
+              <circle cx="70" cy="85" r="40" stroke="#222" stroke-width="2" fill="none" />
+              <circle cx="42" cy="55" r="4" stroke="#222" stroke-width="1.5" />
+              <circle cx="98" cy="55" r="4" stroke="#222" stroke-width="1.5" />
+              <text x="8" y="40" font-size="10" fill="#222">나사구멍</text>
+              <rect x="150" y="45" width="40" height="80" stroke="#222" stroke-width="2" fill="none" />
+              <path d="M150 50 L165 40 L180 50" stroke="#333" stroke-width="1" fill="none" />
+              <text x="196" y="45" font-size="10" fill="#222">30&deg;</text>
+              <text x="165" y="38" font-size="11" fill="#222">Bn</text>
+            </svg>
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ toggle을 사용하는 너트 (계열 ANL)<br /><span style="color: var(--text-faint);">나사구멍에 락 클립(AL/ALL)을 30&deg;로 삽입해 풀림을 방지</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+        <div style="flex: 1 1 420px;">
+          <p style="font-size: 14px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">너트 계열 AN</p>
+          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 380px;">
+              <thead><tr><th>호칭번호</th><th>나사의 호칭(D1)</th><th>D3</th><th>D6</th><th>Bn</th></tr></thead>
+              <tbody>
+                <tr><td class="type-cell">AN 00</td><td>M10&times;0.75</td><td>18</td><td>10</td><td>4</td></tr>
+                <tr><td class="type-cell">AN 01</td><td>M12&times;1</td><td>22</td><td>12</td><td>4</td></tr>
+                <tr><td class="type-cell">AN 02</td><td>M15&times;1</td><td>25</td><td>15.5</td><td>5</td></tr>
+                <tr><td class="type-cell">AN 03</td><td>M17&times;1</td><td>28</td><td>17.5</td><td>5</td></tr>
+                <tr><td class="type-cell">AN 04</td><td>M20&times;1</td><td>32</td><td>20.5</td><td>6</td></tr>
+                <tr><td class="type-cell">AN 05</td><td>M25&times;1.5</td><td>38</td><td>25.8</td><td>7</td></tr>
+                <tr><td class="type-cell">AN 06</td><td>M30&times;1.5</td><td>45</td><td>30.8</td><td>7</td></tr>
+                <tr><td class="type-cell">AN 07</td><td>M35&times;1.5</td><td>52</td><td>35.8</td><td>8</td></tr>
+                <tr><td class="type-cell">AN 08</td><td>M40&times;1.5</td><td>58</td><td>40.8</td><td>9</td></tr>
+                <tr><td class="type-cell">AN 09</td><td>M45&times;1.5</td><td>65</td><td>45.8</td><td>10</td></tr>
+                <tr><td class="type-cell">AN 10</td><td>M50&times;1.5</td><td>70</td><td>50.8</td><td>10</td></tr>
+                <tr><td class="type-cell">AN 11</td><td>M55&times;2</td><td>75</td><td>56</td><td>11</td></tr>
+                <tr><td class="type-cell">AN 12</td><td>M60&times;2</td><td>80</td><td>61</td><td>11</td></tr>
+                <tr><td class="type-cell">AN 13</td><td>M65&times;2</td><td>85</td><td>66</td><td>12</td></tr>
+                <tr><td class="type-cell">AN 14</td><td>M70&times;2</td><td>92</td><td>71</td><td>12</td></tr>
+                <tr><td class="type-cell">AN 15</td><td>M75&times;2</td><td>98</td><td>76</td><td>13</td></tr>
+                <tr><td class="type-cell">AN 16</td><td>M80&times;2</td><td>105</td><td>81</td><td>15</td></tr>
+                <tr><td class="type-cell">AN 17</td><td>M85&times;2</td><td>110</td><td>86</td><td>16</td></tr>
+                <tr><td class="type-cell">AN 18</td><td>M90&times;2</td><td>120</td><td>91</td><td>16</td></tr>
+                <tr><td class="type-cell">AN 19</td><td>M95&times;2</td><td>125</td><td>96</td><td>17</td></tr>
+                <tr><td class="type-cell">AN 20</td><td>M100&times;2</td><td>130</td><td>101</td><td>18</td></tr>
+                <tr><td class="type-cell">AN 21</td><td>M105&times;2</td><td>140</td><td>106</td><td>18</td></tr>
+                <tr><td class="type-cell">AN 22</td><td>M110&times;2</td><td>145</td><td>111</td><td>19</td></tr>
+                <tr><td class="type-cell">AN 23</td><td>M115&times;2</td><td>150</td><td>116</td><td>19</td></tr>
+                <tr><td class="type-cell">AN 24</td><td>M120&times;2</td><td>155</td><td>121</td><td>20</td></tr>
+                <tr><td class="type-cell">AN 25</td><td>M125&times;2</td><td>160</td><td>126</td><td>21</td></tr>
+                <tr><td class="type-cell">AN 26</td><td>M130&times;2</td><td>165</td><td>131</td><td>21</td></tr>
+                <tr><td class="type-cell">AN 27</td><td>M135&times;2</td><td>175</td><td>136</td><td>22</td></tr>
+                <tr><td class="type-cell">AN 28</td><td>M140&times;2</td><td>180</td><td>141</td><td>22</td></tr>
+                <tr><td class="type-cell">AN 29</td><td>M145&times;2</td><td>190</td><td>146</td><td>24</td></tr>
+                <tr><td class="type-cell">AN 30</td><td>M150&times;2</td><td>195</td><td>151</td><td>24</td></tr>
+                <tr><td class="type-cell">AN 31</td><td>M155&times;3</td><td>200</td><td>156.5</td><td>25</td></tr>
+                <tr><td class="type-cell">AN 32</td><td>M160&times;3</td><td>210</td><td>161.5</td><td>25</td></tr>
+                <tr><td class="type-cell">AN 33</td><td>M165&times;3</td><td>210</td><td>166.5</td><td>26</td></tr>
+                <tr><td class="type-cell">AN 34</td><td>M170&times;3</td><td>220</td><td>171.5</td><td>26</td></tr>
+                <tr><td class="type-cell">AN 36</td><td>M180&times;3</td><td>230</td><td>181.5</td><td>27</td></tr>
+                <tr><td class="type-cell">AN 38</td><td>M190&times;3</td><td>240</td><td>191.5</td><td>28</td></tr>
+                <tr><td class="type-cell">AN 40</td><td>M200&times;3</td><td>250</td><td>201.5</td><td>29</td></tr>
+                <tr><td class="type-cell">AN44</td><td>Tr220&times;4</td><td>280</td><td>222</td><td>32</td></tr>
+                <tr><td class="type-cell">AN48</td><td>Tr240&times;4</td><td>300</td><td>242</td><td>34</td></tr>
+                <tr><td class="type-cell">AN52</td><td>Tr260&times;4</td><td>330</td><td>262</td><td>34</td></tr>
+                <tr><td class="type-cell">AN56</td><td>Tr280&times;4</td><td>350</td><td>282</td><td>38</td></tr>
+                <tr><td class="type-cell">AN60</td><td>Tr300&times;4</td><td>380</td><td>302</td><td>40</td></tr>
+                <tr><td class="type-cell">AN64</td><td>Tr320&times;5</td><td>400</td><td>322.5</td><td>42</td></tr>
+                <tr><td class="type-cell">AN68</td><td>Tr340&times;5</td><td>440</td><td>342.5</td><td>55</td></tr>
+                <tr><td class="type-cell">AN72</td><td>Tr360&times;5</td><td>460</td><td>362.5</td><td>58</td></tr>
+                <tr><td class="type-cell">AN76</td><td>Tr380&times;5</td><td>490</td><td>382.5</td><td>60</td></tr>
+                <tr><td class="type-cell">AN80</td><td>Tr400&times;5</td><td>520</td><td>402.5</td><td>62</td></tr>
+                <tr><td class="type-cell">AN84</td><td>Tr420&times;5</td><td>540</td><td>422.5</td><td>70</td></tr>
+                <tr><td class="type-cell">AN88</td><td>Tr440&times;5</td><td>560</td><td>442.5</td><td>70</td></tr>
+                <tr><td class="type-cell">AN92</td><td>Tr460&times;5</td><td>580</td><td>462.5</td><td>75</td></tr>
+                <tr><td class="type-cell">AN96</td><td>Tr480&times;5</td><td>620</td><td>482.5</td><td>75</td></tr>
+                <tr><td class="type-cell">AN100</td><td>Tr500&times;5</td><td>630</td><td>502.5</td><td>80</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div style="flex: 1 1 320px;">
+          <p style="font-size: 14px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">너트 계열 ANL</p>
+          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 280px;">
+              <thead><tr><th>호칭번호</th><th>나사의 호칭(D1)</th><th>D3</th><th>D6</th><th>Bn</th></tr></thead>
+              <tbody>
+                <tr><td class="type-cell">ANL 24</td><td>M120&times;2</td><td>145</td><td>121</td><td>20</td></tr>
+                <tr><td class="type-cell">ANL 26</td><td>M130&times;2</td><td>155</td><td>131</td><td>21</td></tr>
+                <tr><td class="type-cell">ANL 28</td><td>M140&times;2</td><td>165</td><td>141</td><td>22</td></tr>
+                <tr><td class="type-cell">ANL 30</td><td>M150&times;2</td><td>180</td><td>151</td><td>24</td></tr>
+                <tr><td class="type-cell">ANL 32</td><td>M160&times;3</td><td>190</td><td>161.5</td><td>25</td></tr>
+                <tr><td class="type-cell">ANL 34</td><td>M170&times;3</td><td>200</td><td>171.5</td><td>26</td></tr>
+                <tr><td class="type-cell">ANL 36</td><td>M180&times;3</td><td>210</td><td>181.5</td><td>27</td></tr>
+                <tr><td class="type-cell">ANL 38</td><td>M190&times;3</td><td>220</td><td>191.5</td><td>28</td></tr>
+                <tr><td class="type-cell">ANL 40</td><td>M200&times;3a</td><td>240</td><td>201.5</td><td>29</td></tr>
+                <tr><td class="type-cell">ANL44</td><td>Tr220&times;4</td><td>260</td><td>222</td><td>30</td></tr>
+                <tr><td class="type-cell">ANL48</td><td>Tr240&times;4</td><td>290</td><td>242</td><td>34</td></tr>
+                <tr><td class="type-cell">ANL52</td><td>Tr260&times;4</td><td>310</td><td>262</td><td>34</td></tr>
+                <tr><td class="type-cell">ANL56</td><td>Tr280&times;4</td><td>330</td><td>282</td><td>38</td></tr>
+                <tr><td class="type-cell">ANL60</td><td>Tr300&times;4</td><td>360</td><td>302</td><td>42</td></tr>
+                <tr><td class="type-cell">ANL64</td><td>Tr320&times;5</td><td>380</td><td>322.5</td><td>42</td></tr>
+                <tr><td class="type-cell">ANL68</td><td>Tr340&times;5</td><td>400</td><td>342.5</td><td>45</td></tr>
+                <tr><td class="type-cell">ANL72</td><td>Tr360&times;5</td><td>420</td><td>362.5</td><td>45</td></tr>
+                <tr><td class="type-cell">ANL76</td><td>Tr380&times;5</td><td>450</td><td>382.5</td><td>48</td></tr>
+                <tr><td class="type-cell">ANL80</td><td>Tr400&times;5</td><td>470</td><td>402.5</td><td>52</td></tr>
+                <tr><td class="type-cell">ANL84</td><td>Tr420&times;5</td><td>490</td><td>422.5</td><td>52</td></tr>
+                <tr><td class="type-cell">ANL88</td><td>Tr440&times;5</td><td>520</td><td>442.5</td><td>60</td></tr>
+                <tr><td class="type-cell">ANL92</td><td>Tr460&times;5</td><td>540</td><td>462.5</td><td>60</td></tr>
+                <tr><td class="type-cell">ANL96</td><td>Tr480&times;5</td><td>560</td><td>482.5</td><td>60</td></tr>
+                <tr><td class="type-cell">ANL100</td><td>Tr500&times;5</td><td>580</td><td>502.5</td><td>68</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top: 32px;">
+        <h3 style="font-size: 18px; margin: 0 0 8px;">로크 너트 클립 (toggle 계열 AN·ANL)</h3>
+        <p style="font-size: 13.5px;">toggle을 사용하는 로크너트의 나사구멍에 끼워 풀림을 막는 클립입니다. 대응하는 너트 호칭번호를 참고해 선택합니다.</p>
+      </div>
+      <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+        <div style="flex: 1 1 420px;">
+          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 380px;">
+              <thead><tr><th>호칭번호</th><th>t1</th><th>S</th><th>L2</th><th>S1</th><th>i</th><th>L3</th><th>대응 너트</th></tr></thead>
+              <tbody>
+                <tr><td class="type-cell">AL44</td><td>4</td><td>20</td><td>12</td><td>9</td><td>22.5</td><td>30.5</td><td>AN44, AN48</td></tr>
+                <tr><td class="type-cell">AL52</td><td>4</td><td>24</td><td>12</td><td>12</td><td>25.5</td><td>33.5</td><td>AN52, AN56</td></tr>
+                <tr><td class="type-cell">AL60</td><td>4</td><td>24</td><td>12</td><td>12</td><td>30.5</td><td>38.5</td><td>AN60</td></tr>
+                <tr><td class="type-cell">AL64</td><td>5</td><td>24</td><td>15</td><td>12</td><td>31</td><td>41</td><td>AN64</td></tr>
+                <tr><td class="type-cell">AL68</td><td>5</td><td>28</td><td>15</td><td>14</td><td>38</td><td>48</td><td>AN68, AN72</td></tr>
+                <tr><td class="type-cell">AL76</td><td>5</td><td>32</td><td>15</td><td>14</td><td>40</td><td>50</td><td>AN76</td></tr>
+                <tr><td class="type-cell">AL80</td><td>5</td><td>32</td><td>15</td><td>18</td><td>45</td><td>55</td><td>AN80, AN84</td></tr>
+                <tr><td class="type-cell">AL88</td><td>5</td><td>36</td><td>15</td><td>18</td><td>43</td><td>53</td><td>AN88, AN92</td></tr>
+                <tr><td class="type-cell">AL96</td><td>5</td><td>36</td><td>15</td><td>18</td><td>53</td><td>63</td><td>AN96</td></tr>
+                <tr><td class="type-cell">AL100</td><td>5</td><td>40</td><td>15</td><td>18</td><td>45</td><td>55</td><td>AN100</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style="flex: 1 1 320px;">
+          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 280px;">
+              <thead><tr><th>호칭번호</th><th>t1</th><th>S</th><th>L2</th><th>S1</th><th>i</th><th>L3</th><th>대응 너트</th></tr></thead>
+              <tbody>
+                <tr><td class="type-cell">ALL44</td><td>4</td><td>20</td><td>12</td><td>7</td><td>13.5</td><td>21.5</td><td>ANL44</td></tr>
+                <tr><td class="type-cell">ALL48</td><td>4</td><td>20</td><td>12</td><td>9</td><td>17.5</td><td>25.5</td><td>ANL48, ANL52</td></tr>
+                <tr><td class="type-cell">ALL56</td><td>4</td><td>24</td><td>12</td><td>9</td><td>17.5</td><td>25.5</td><td>ANL56</td></tr>
+                <tr><td class="type-cell">ALL60</td><td>4</td><td>24</td><td>12</td><td>9</td><td>20.5</td><td>28.5</td><td>ANL60</td></tr>
+                <tr><td class="type-cell">ALL64</td><td>5</td><td>24</td><td>15</td><td>9</td><td>21</td><td>31</td><td>ANL64, ANL68</td></tr>
+                <tr><td class="type-cell">ALL72</td><td>5</td><td>28</td><td>15</td><td>9</td><td>20</td><td>30</td><td>ANL72</td></tr>
+                <tr><td class="type-cell">ALL76</td><td>5</td><td>28</td><td>15</td><td>12</td><td>24</td><td>34</td><td>ANL76, ANL80</td></tr>
+                <tr><td class="type-cell">ALL84</td><td>5</td><td>32</td><td>15</td><td>12</td><td>24</td><td>34</td><td>ANL84</td></tr>
+                <tr><td class="type-cell">ALL88</td><td>5</td><td>32</td><td>15</td><td>14</td><td>28</td><td>38</td><td>ANL88, ANL92</td></tr>
+                <tr><td class="type-cell">ALL96</td><td>5</td><td>36</td><td>15</td><td>14</td><td>28</td><td>38</td><td>ANL96, ANL100</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; margin-top: 20px; font-size: 12.5px; color: var(--text-sub);">
+        AN 계열은 어댑터슬리브 계열 A31·A2·A3·A23에, ANL 계열은 어댑터슬리브 계열 A30에 적용합니다.
+        나사의 기준산형 및 나사산의 치수는 JIS B 0207에 의합니다.
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 표는 당사 정식 규격표 원본을 기준으로 작성했습니다.
+        정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>

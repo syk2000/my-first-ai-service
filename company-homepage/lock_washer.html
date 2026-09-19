@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>로크 와샤 (Lock Washer) | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="lock-washer" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Lock Washer</p>
+        <h2>로크 와샤</h2>
+        <p>
+          로크너트와 어댑터슬리브 사이에 끼워 너트가 풀리지 않도록 잡아주는 와셔입니다.
+          안쪽 텅(tang)을 축의 홈에 맞춰 끼운 뒤, 끝부분을 너트 홈에 구부려 넣는
+          <strong style="color: var(--accent);">끝부분을 구부린 형식</strong>과, 그대로 사용하는
+          <strong style="color: var(--accent);">구부리지 않는 형식</strong>이 있습니다.
+        </p>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <svg width="230" height="150" viewBox="0 0 230 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="75" r="55" stroke="#222" stroke-width="2" fill="none" />
+              <circle cx="80" cy="75" r="35" stroke="#222" stroke-width="2" fill="none" />
+              <rect x="70" y="16" width="20" height="14" fill="#fff" stroke="#222" stroke-width="1.5" />
+              <text x="60" y="10" font-size="11" fill="#222">S</text>
+              <path d="M170 30 L185 45 L185 100 L172 110" stroke="#222" stroke-width="2" fill="none" />
+              <text x="195" y="30" font-size="11" fill="#222">25&deg;</text>
+            </svg>
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 끝부분을 구부린 형식<br /><span style="color: var(--text-faint);">D1=안지름 · D4·D5=바깥지름 · E·k·S=텅 치수 · t·r·v=구부림부 상세</span></p>
+          </div>
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <svg width="230" height="150" viewBox="0 0 230 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="75" r="55" stroke="#222" stroke-width="2" fill="none" />
+              <circle cx="80" cy="75" r="35" stroke="#222" stroke-width="2" fill="none" />
+              <rect x="70" y="16" width="20" height="14" fill="#fff" stroke="#222" stroke-width="1.5" />
+              <text x="60" y="10" font-size="11" fill="#222">S</text>
+              <path d="M170 30 L185 45 L185 100 L170 115" stroke="#222" stroke-width="2" fill="none" />
+              <text x="195" y="30" font-size="11" fill="#222">25&deg;</text>
+            </svg>
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 끝부분을 구부리지 않는 형식<br /><span style="color: var(--text-faint);">D1=안지름 · D4·D5=바깥지름 · E·k·S=텅 치수 · t=두께</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 620px;">
+          <thead><tr><th>호칭번호</th><th>D1</th><th>E</th><th>t</th><th>S</th><th>D5</th></tr></thead>
+          <tbody>
+            <tr><td class="type-cell">AW 00</td><td>10</td><td>3</td><td>1</td><td>3</td><td>21</td></tr>
+            <tr><td class="type-cell">AW 01</td><td>12</td><td>3</td><td>1</td><td>3</td><td>25</td></tr>
+            <tr><td class="type-cell">AW 02</td><td>15</td><td>4</td><td>1</td><td>4</td><td>28</td></tr>
+            <tr><td class="type-cell">AW 03</td><td>17</td><td>4</td><td>1</td><td>4</td><td>32</td></tr>
+            <tr><td class="type-cell">AW 04</td><td>20</td><td>4</td><td>1</td><td>4</td><td>36</td></tr>
+            <tr><td class="type-cell">AW 05</td><td>25</td><td>5</td><td>1.2</td><td>5</td><td>42</td></tr>
+            <tr><td class="type-cell">AW 06</td><td>30</td><td>5</td><td>1.2</td><td>5</td><td>49</td></tr>
+            <tr><td class="type-cell">AW 07</td><td>35</td><td>6</td><td>1.2</td><td>5</td><td>57</td></tr>
+            <tr><td class="type-cell">AW 08</td><td>40</td><td>6</td><td>1.2</td><td>6</td><td>62</td></tr>
+            <tr><td class="type-cell">AW 09</td><td>45</td><td>6</td><td>1.2</td><td>6</td><td>69</td></tr>
+            <tr><td class="type-cell">AW 10</td><td>50</td><td>6</td><td>1.2</td><td>6</td><td>74</td></tr>
+            <tr><td class="type-cell">AW 11</td><td>55</td><td>8</td><td>1.2</td><td>7</td><td>81</td></tr>
+            <tr><td class="type-cell">AW 12</td><td>60</td><td>8</td><td>1.5</td><td>7</td><td>86</td></tr>
+            <tr><td class="type-cell">AW 13</td><td>65</td><td>8</td><td>1.5</td><td>7</td><td>92</td></tr>
+            <tr><td class="type-cell">AW 14</td><td>70</td><td>8</td><td>1.5</td><td>8</td><td>98</td></tr>
+            <tr><td class="type-cell">AW 15</td><td>75</td><td>8</td><td>1.5</td><td>8</td><td>104</td></tr>
+            <tr><td class="type-cell">AW 16</td><td>80</td><td>10</td><td>1.8</td><td>8</td><td>112</td></tr>
+            <tr><td class="type-cell">AW 17</td><td>85</td><td>10</td><td>1.8</td><td>8</td><td>119</td></tr>
+            <tr><td class="type-cell">AW 18</td><td>90</td><td>10</td><td>1.8</td><td>10</td><td>126</td></tr>
+            <tr><td class="type-cell">AW 19</td><td>95</td><td>10</td><td>1.8</td><td>10</td><td>133</td></tr>
+            <tr><td class="type-cell">AW 20</td><td>100</td><td>12</td><td>1.8</td><td>10</td><td>142</td></tr>
+            <tr><td class="type-cell">AW 21</td><td>105</td><td>12</td><td>1.8</td><td>12</td><td>145</td></tr>
+            <tr><td class="type-cell">AW 22</td><td>110</td><td>12</td><td>1.8</td><td>12</td><td>154</td></tr>
+            <tr><td class="type-cell">AW 23</td><td>115</td><td>12</td><td>2</td><td>12</td><td>159</td></tr>
+            <tr><td class="type-cell">AW 24</td><td>120</td><td>14</td><td>2</td><td>12</td><td>164</td></tr>
+            <tr><td class="type-cell">AW 25</td><td>125</td><td>14</td><td>2</td><td>12</td><td>170</td></tr>
+            <tr><td class="type-cell">AW 26</td><td>130</td><td>14</td><td>2</td><td>12</td><td>175</td></tr>
+            <tr><td class="type-cell">AW 27</td><td>135</td><td>14</td><td>2</td><td>14</td><td>185</td></tr>
+            <tr><td class="type-cell">AW 28</td><td>140</td><td>16</td><td>2</td><td>14</td><td>192</td></tr>
+            <tr><td class="type-cell">AW 29</td><td>145</td><td>16</td><td>2</td><td>14</td><td>202</td></tr>
+            <tr><td class="type-cell">AW 30</td><td>150</td><td>16</td><td>2</td><td>14</td><td>205</td></tr>
+            <tr><td class="type-cell">AW 31</td><td>155</td><td>16</td><td>2.5</td><td>16</td><td>212</td></tr>
+            <tr><td class="type-cell">AW 32</td><td>160</td><td>18</td><td>2.5</td><td>16</td><td>217</td></tr>
+            <tr><td class="type-cell">AW 33</td><td>165</td><td>18</td><td>2.5</td><td>16</td><td>222</td></tr>
+            <tr><td class="type-cell">AW 34</td><td>170</td><td>18</td><td>2.5</td><td>16</td><td>232</td></tr>
+            <tr><td class="type-cell">AW 36</td><td>180</td><td>20</td><td>2.5</td><td>18</td><td>242</td></tr>
+            <tr><td class="type-cell">AW 38</td><td>190</td><td>20</td><td>2.5</td><td>18</td><td>252</td></tr>
+            <tr><td class="type-cell">AW 40</td><td>200</td><td>20</td><td>2.5</td><td>18</td><td>262</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 위 치수는 너트 계열 AN용 기준치수입니다 (D1이 대응 너트 호칭번호와 짝을 이룹니다).</p>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; margin-top: 20px; font-size: 12.5px; color: var(--text-sub);">
+        어댑터슬리브 계열 A31·A2·A3·A23에 적용합니다. 폭이 좁은 형식의 어댑터슬리브에는
+        끝부분을 구부리지 않은 형식의 와셔를 쓰고, 폭이 넓은 형식의 어댑터슬리브에는 어느 형식의 와셔를 써도 좋습니다.
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 표는 당사 정식 규격표 원본을 기준으로 작성했습니다.
+        정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>

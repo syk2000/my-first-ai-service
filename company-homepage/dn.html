@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DN | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="dn" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Precision Lock Nut</p>
+        <h2>DN</h2>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; margin-bottom: 24px; font-size: 12.5px; color: var(--text-sub);">
+        <strong>사양</strong><br />
+        재질: DIN C45, JIS S45C, KS S45C &nbsp;·&nbsp; 경도: HRC22~26<br />
+        나사 정도: Presision class &nbsp;·&nbsp; 나사직각도: &perp;0.007
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <svg width="170" height="180" viewBox="0 0 170 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="55" y="20" width="45" height="130" stroke="#222" stroke-width="2" fill="none" />
+              <rect x="60" y="10" width="15" height="14" stroke="#222" stroke-width="1.4" fill="none" />
+              <text x="4" y="18" font-size="9" fill="#222">SET SCREW</text>
+              <text x="4" y="42" font-size="9" fill="#222">SET PIN</text>
+              <text x="4" y="66" font-size="9" fill="#222">LOCK NUT</text>
+              <line x1="45" y1="55" x2="45" y2="140" stroke="#333" stroke-width="1" />
+              <text x="34" y="100" font-size="11" fill="#222">&#8960;d</text>
+              <line x1="110" y1="55" x2="110" y2="140" stroke="#333" stroke-width="1" />
+              <text x="116" y="100" font-size="11" fill="#222">&#8960;D</text>
+            </svg>
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 단면도 — 셋트스크류·셋트핀 고정<br /><span style="color: var(--text-faint);">d=나사 안지름 · D=바깥지름</span></p>
+          </div>
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="90,20 150,55 150,125 90,160 30,125 30,55" stroke="#222" stroke-width="2" fill="none" />
+              <circle cx="90" cy="90" r="45" stroke="#222" stroke-width="2" fill="none" />
+              <text x="96" y="30" font-size="11" fill="#222">m</text>
+              <text x="150" y="90" font-size="11" fill="#222">M</text>
+            </svg>
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 정면도 — 6각 렌치 체결부<br /><span style="color: var(--text-faint);">M=대변 폭</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 460px;">
+          <thead><tr><th>호칭번호</th><th>M</th><th>D</th><th>L</th></tr></thead>
+          <tbody>
+            <tr><td class="type-cell">DN 6</td><td>M6&times;0.75</td><td>14.5</td><td>5</td></tr>
+            <tr><td class="type-cell">DN 8</td><td>M8&times;1</td><td>17</td><td>6.5</td></tr>
+            <tr><td class="type-cell">DN 8</td><td>M8&times;0.75</td><td>17</td><td>6.5</td></tr>
+            <tr><td class="type-cell">DN10</td><td>M10&times;1</td><td>20</td><td>8</td></tr>
+            <tr><td class="type-cell">DN10</td><td>M10&times;0.75</td><td>20</td><td>8</td></tr>
+            <tr><td class="type-cell">DN12</td><td>M12&times;1</td><td>22</td><td>8</td></tr>
+            <tr><td class="type-cell">DN15</td><td>M15&times;1</td><td>25</td><td>8</td></tr>
+            <tr><td class="type-cell">DN17</td><td>M17&times;1</td><td>30</td><td>13</td></tr>
+            <tr><td class="type-cell">DN20</td><td>M20&times;1</td><td>35</td><td>11</td></tr>
+            <tr><td class="type-cell">DN25</td><td>M25&times;1.5</td><td>43</td><td>15</td></tr>
+            <tr><td class="type-cell">DN30</td><td>M30&times;1.5</td><td>48</td><td>20</td></tr>
+            <tr><td class="type-cell">DN35</td><td>M35&times;1.5</td><td>60</td><td>21</td></tr>
+            <tr><td class="type-cell">DN40</td><td>M40&times;1.5</td><td>63</td><td>25</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 표는 당사 정식 규격표 원본을 기준으로 작성했습니다.
+        정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>
