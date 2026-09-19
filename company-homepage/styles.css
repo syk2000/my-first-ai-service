@@ -1396,7 +1396,22 @@
     }
 
     .product-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .product-card {
+      padding: 14px;
+      gap: 8px;
+    }
+
+    .product-card .p-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .product-card h4 {
+      font-size: 14.5px;
     }
 
     .brand-grid {
