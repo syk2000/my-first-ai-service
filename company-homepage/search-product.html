@@ -182,6 +182,13 @@
       fType.appendChild(opt);
     }
 
+    // 메인 페이지 등 다른 화면에서 ?d=20&D=47&h=14&type=... 형태로 넘어온 값을 채워준다.
+    const params = new URLSearchParams(location.search);
+    if (params.has("d")) fD.value = params.get("d");
+    if (params.has("D")) fOD.value = params.get("D");
+    if (params.has("h")) fH.value = params.get("h");
+    if (params.has("type") && categories.includes(params.get("type"))) fType.value = params.get("type");
+
     function matchNum(value, input) {
       if (input === null) return true;
       if (value === null || value === undefined) return false;

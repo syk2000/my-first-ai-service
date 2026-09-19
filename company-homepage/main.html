@@ -206,8 +206,8 @@
             <p>내경(d) · 외경(D) · 두께(H) 중 아는 값만 입력해도 검색됩니다.</p>
           </div>
           <div class="finder-count">
-            <div class="n" id="resultCount">3</div>
-            <div class="label">보유 규격(예시)</div>
+            <div class="n" id="resultCount">0</div>
+            <div class="label">등록된 규격</div>
           </div>
         </div>
 
@@ -217,27 +217,23 @@
               <label for="fType">제품 유형</label>
               <select id="fType">
                 <option value="">전체</option>
-                <option value="볼베어링">볼베어링</option>
-                <option value="롤러베어링">롤러베어링</option>
-                <option value="로드엔드">로드엔드</option>
               </select>
             </div>
             <div class="field">
               <label for="fD">내경 d (mm)</label>
-              <input id="fD" type="number" placeholder="예: 20" min="0" />
+              <input id="fD" type="number" placeholder="예: 20" min="0" step="0.1" />
             </div>
             <div class="field">
               <label for="fOD">외경 D (mm)</label>
-              <input id="fOD" type="number" placeholder="예: 47" min="0" />
+              <input id="fOD" type="number" placeholder="예: 47" min="0" step="0.1" />
             </div>
             <div class="field">
               <label for="fH">두께 H (mm)</label>
-              <input id="fH" type="number" placeholder="예: 14" min="0" />
+              <input id="fH" type="number" placeholder="예: 14" min="0" step="0.1" />
             </div>
           </div>
-          <p class="finder-tip">검색 TIP · 항목을 전부 채우지 않아도 됩니다. 지금 화면은 예시 재고 3건으로 동작하는 시안입니다.</p>
-
-          <div class="finder-results" id="finderResults"></div>
+          <p class="finder-tip">검색 TIP · 항목을 전부 채우지 않아도 됩니다. 내경·외경만 입력해도 검색됩니다.</p>
+          <button type="button" class="btn btn-accent" id="finderGoBtn" style="margin-top: 4px;">규격 검색하기 →</button>
         </div>
       </div>
     </div>
@@ -458,74 +454,42 @@
     </div>
   </footer>
 
+<script src="assets/spec-data.js"></script>
 <script src="common.js"></script>
 <script>
-// 예시 재고 데이터 (실제 서비스에서는 서버/DB 데이터로 교체)
-    const SAMPLE_STOCK = [
-      { type: "볼베어링", model: "6204", d: 20, od: 47, h: 14, qty: 320 },
-      { type: "롤러베어링", model: "NU204", d: 20, od: 47, h: 14, qty: 96 },
-      { type: "로드엔드", model: "POS12", d: 12, od: 30, h: 12, qty: 88 },
-    ];
-
     const fType = document.getElementById("fType");
     const fD = document.getElementById("fD");
     const fOD = document.getElementById("fOD");
     const fH = document.getElementById("fH");
-    const finderResults = document.getElementById("finderResults");
     const resultCount = document.getElementById("resultCount");
+    const finderGoBtn = document.getElementById("finderGoBtn");
 
-    function renderResults() {
-      const type = fType.value;
-      const d = fD.value ? Number(fD.value) : null;
-      const od = fOD.value ? Number(fOD.value) : null;
-      const h = fH.value ? Number(fH.value) : null;
+    resultCount.textContent = SPEC_DATA.length;
 
-      const rows = SAMPLE_STOCK.filter((item) => {
-        if (type && item.type !== type) return false;
-        if (d !== null && item.d !== d) return false;
-        if (od !== null && item.od !== od) return false;
-        if (h !== null && item.h !== h) return false;
-        return true;
-      });
-
-      resultCount.textContent = rows.length;
-
-      if (rows.length === 0) {
-        finderResults.innerHTML = '<p class="no-result">조건에 맞는 예시 재고가 없습니다. 실제 서비스에서는 담당자에게 별도 문의가 연결됩니다.</p>';
-        return;
-      }
-
-      const tableRows = rows
-        .map(
-          (item) => `
-            <tr>
-              <td class="type-cell">${item.type}</td>
-              <td>${item.model}</td>
-              <td>${item.d}</td>
-              <td>${item.od}</td>
-              <td>${item.h}</td>
-            </tr>`
-        )
-        .join("");
-
-      finderResults.innerHTML = `
-        <table class="spec-table">
-          <thead>
-            <tr>
-              <th>유형</th>
-              <th>형번</th>
-              <th>d (mm)</th>
-              <th>D (mm)</th>
-              <th>H (mm)</th>
-            </tr>
-          </thead>
-          <tbody>${tableRows}</tbody>
-        </table>
-      `;
+    const categories = [...new Set(SPEC_DATA.map((r) => r.c))].sort((a, b) => a.localeCompare(b, "ko"));
+    for (const c of categories) {
+      const opt = document.createElement("option");
+      opt.value = c;
+      opt.textContent = c;
+      fType.appendChild(opt);
     }
 
-    [fType, fD, fOD, fH].forEach((el) => el.addEventListener("input", renderResults));
-    renderResults();
+    function goToSearch() {
+      const params = new URLSearchParams();
+      if (fType.value) params.set("type", fType.value);
+      if (fD.value !== "") params.set("d", fD.value);
+      if (fOD.value !== "") params.set("D", fOD.value);
+      if (fH.value !== "") params.set("h", fH.value);
+      const query = params.toString();
+      location.href = "search-product.html" + (query ? "?" + query : "");
+    }
+
+    finderGoBtn.addEventListener("click", goToSearch);
+    [fD, fOD, fH].forEach((el) =>
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") goToSearch();
+      })
+    );
 
 // 문의 폼 (실제 전송 없이 클라이언트에서만 확인 메시지 표시)
     const inquiryForm = document.getElementById("inquiryForm");
