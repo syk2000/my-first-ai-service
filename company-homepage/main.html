@@ -163,32 +163,6 @@
     </div>
   </section>
 
-<section class="stats-strip">
-    <div class="wrap">
-    <div class="stats-grid">
-      <div class="stat-tile">
-        <div class="stat-value">12,000<span class="unit">+</span></div>
-        <div class="stat-label">보유 재고 규격(SKU)</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-value">40<span class="unit">개</span></div>
-        <div class="stat-label">취급 브랜드</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-value">95<span class="unit">%</span></div>
-        <div class="stat-label">당일 출고 비율</div>
-      </div>
-      <div class="stat-tile">
-        <div class="stat-value">800<span class="unit">+</span></div>
-        <div class="stat-label">거래처</div>
-      </div>
-    </div>
-    <div class="stats-cta">
-      <a href="search-product.html" class="btn btn-outline btn-sm">규격으로 찾기</a>
-    </div>
-    </div>
-  </section>
-
 
 
 <section class="page-section" id="finder">
@@ -466,11 +440,10 @@
 
     resultCount.textContent = SPEC_DATA.length;
 
-    const categories = [...new Set(SPEC_DATA.map((r) => r.c))].sort((a, b) => a.localeCompare(b, "ko"));
-    for (const c of categories) {
+    for (const g of GROUP_ORDER) {
       const opt = document.createElement("option");
-      opt.value = c;
-      opt.textContent = c;
+      opt.value = g;
+      opt.textContent = g;
       fType.appendChild(opt);
     }
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>규격검색 | [회사명] 베어링</title>
+<title>패킹 PCS형 (DWI) | [회사명] 베어링</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -94,53 +94,56 @@
       </button>
     </div>
   </header>
-
-<section class="page-section" id="finder">
+<section class="page-section" id="packing-pcs" style="border-bottom: none;">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Spec Finder</p>
-        <h2>규격으로 제품 찾기</h2>
-        <p>형번을 몰라도 괜찮습니다. 알고 있는 치수만 입력해서 재고를 바로 확인해보세요.</p>
+        <p class="eyebrow">Dust Seal / Packing PCS(DWI) Type</p>
+        <h2>더스트씰 &middot; 패킹 PCS형 (DWI)</h2>
+        <p>이물질 유입을 막는 <strong style="color: var(--accent);">더스트 씰</strong>로 사용하는 패킹 PCS형(DWI)입니다.</p>
       </div>
 
-      <div class="finder-panel">
-        <div class="finder-head">
-          <div>
-            <h3>찾으시는 규격이 있나요?</h3>
-            <p>내경(d) · 외경(D) · 두께(H) 중 아는 값만 입력해도 검색됩니다.</p>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/packing_pcs_diagram.png" alt="패킹 PCS형(DWI) 도면" style="height: 220px; width: auto; max-width: 100%; object-fit: contain;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 단면도<br /><span style="color: var(--text-faint);">d=내경 · D=외경 · H=높이</span></p>
           </div>
-          <div class="finder-count">
-            <div class="n" id="resultCount">0</div>
-            <div class="label">등록된 규격</div>
-          </div>
-        </div>
-
-        <div class="finder-body">
-          <div class="finder-fields">
-            <div class="field">
-              <label for="fType">제품 유형</label>
-              <select id="fType">
-                <option value="">전체</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="fD">내경 d (mm)</label>
-              <input id="fD" type="number" placeholder="예: 20" min="0" step="0.1" />
-            </div>
-            <div class="field">
-              <label for="fOD">외경 D (mm)</label>
-              <input id="fOD" type="number" placeholder="예: 47" min="0" step="0.1" />
-            </div>
-            <div class="field">
-              <label for="fH">두께/길이 H (mm)</label>
-              <input id="fH" type="number" placeholder="예: 14" min="0" step="0.1" />
-            </div>
-          </div>
-          <p class="finder-tip">검색 TIP · 항목을 전부 채우지 않아도 됩니다. 내경·외경만 입력해도 기존에 등록된 규격 안에서 바로 확인됩니다.</p>
-
-          <div class="finder-results" id="finderResults"></div>
         </div>
       </div>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 220px; max-width: 380px;">
+          <thead><tr><th>NO.</th><th>d</th><th>D</th><th>H</th></tr></thead>
+          <tbody>
+            <tr><td class="type-cell">PCS-14</td><td>14</td><td>22</td><td>5</td></tr>
+            <tr><td class="type-cell">PCS-16</td><td>16</td><td>24</td><td>5</td></tr>
+            <tr><td class="type-cell">PCS-18</td><td>18</td><td>26</td><td>5</td></tr>
+            <tr><td class="type-cell">PCS-20</td><td>20</td><td>28</td><td>5</td></tr>
+            <tr><td class="type-cell">PCS-22</td><td>22</td><td>30</td><td>5</td></tr>
+            <tr><td class="type-cell">PCS-24</td><td>24</td><td>32</td><td>5</td></tr>
+            <tr><td class="type-cell">PCS-25</td><td>25</td><td>33</td><td>5</td></tr>
+            <tr><td class="type-cell">PCS-28</td><td>28</td><td>36</td><td>5</td></tr>
+            <tr><td class="type-cell">PCS-30</td><td>30</td><td>40</td><td>6</td></tr>
+            <tr><td class="type-cell">PCS-35</td><td>35</td><td>45</td><td>6</td></tr>
+            <tr><td class="type-cell">PCS-38</td><td>38</td><td>48</td><td>6</td></tr>
+            <tr><td class="type-cell">PCS-40</td><td>40</td><td>50</td><td>6</td></tr>
+            <tr><td class="type-cell">PCS-45</td><td>45</td><td>55</td><td>6</td></tr>
+            <tr><td class="type-cell">PCS-50</td><td>50</td><td>62</td><td>7</td></tr>
+            <tr><td class="type-cell">PCS-55</td><td>55</td><td>67</td><td>7</td></tr>
+            <tr><td class="type-cell">PCS-60</td><td>60</td><td>72</td><td>7</td></tr>
+            <tr><td class="type-cell">PCS-65</td><td>65</td><td>77</td><td>7</td></tr>
+            <tr><td class="type-cell">PCS-75N</td><td>75</td><td>87</td><td>7</td></tr>
+            <tr><td class="type-cell">PCS-80</td><td>80</td><td>92</td><td>7</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · NO.=형번 · d=내경 · D=외경 · H=높이</p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 표는 당사 정식 규격표 원본을 기준으로 작성했습니다.
+        정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
     </div>
   </section>
 <footer class="site-footer">
@@ -159,103 +162,7 @@
       </nav>
     </div>
   </footer>
-<script src="assets/spec-data.js"></script>
+
 <script src="common.js"></script>
-<script>
-    const MAX_RESULTS = 200;
-    const TOLERANCE = 0.51; // mm — absorbs typing an integer against an x.5 nominal value
-
-    const fType = document.getElementById("fType");
-    const fD = document.getElementById("fD");
-    const fOD = document.getElementById("fOD");
-    const fH = document.getElementById("fH");
-    const finderResults = document.getElementById("finderResults");
-    const resultCount = document.getElementById("resultCount");
-
-    resultCount.textContent = SPEC_DATA.length;
-
-    for (const g of GROUP_ORDER) {
-      const opt = document.createElement("option");
-      opt.value = g;
-      opt.textContent = g;
-      fType.appendChild(opt);
-    }
-
-    // 메인 페이지 등 다른 화면에서 ?d=20&D=47&h=14&type=... 형태로 넘어온 값을 채워준다.
-    const params = new URLSearchParams(location.search);
-    if (params.has("d")) fD.value = params.get("d");
-    if (params.has("D")) fOD.value = params.get("D");
-    if (params.has("h")) fH.value = params.get("h");
-    if (params.has("type") && GROUP_ORDER.includes(params.get("type"))) fType.value = params.get("type");
-
-    function matchNum(value, input) {
-      if (input === null) return true;
-      if (value === null || value === undefined) return false;
-      return Math.abs(value - input) < TOLERANCE;
-    }
-
-    function renderResults() {
-      const type = fType.value;
-      const d = fD.value !== "" ? Number(fD.value) : null;
-      const od = fOD.value !== "" ? Number(fOD.value) : null;
-      const h = fH.value !== "" ? Number(fH.value) : null;
-
-      if (type === "" && d === null && od === null && h === null) {
-        finderResults.innerHTML = '<p class="no-result">내경·외경·두께 중 하나 이상을 입력하면 등록된 규격에서 바로 찾아드립니다.</p>';
-        return;
-      }
-
-      const rows = SPEC_DATA.filter((item) => {
-        if (type && PAGE_GROUP[item.p] !== type) return false;
-        if (!matchNum(item.d, d)) return false;
-        if (!matchNum(item.D, od)) return false;
-        if (!matchNum(item.h, h)) return false;
-        return true;
-      });
-
-      if (rows.length === 0) {
-        finderResults.innerHTML = '<p class="no-result">조건에 맞는 규격을 찾지 못했습니다. 담당자에게 견적 문의를 남겨주시면 확인해드립니다.</p>';
-        return;
-      }
-
-      const shown = rows.slice(0, MAX_RESULTS);
-      const tableRows = shown
-        .map(
-          (item) => `
-            <tr>
-              <td class="type-cell">${item.c}</td>
-              <td>${item.m}</td>
-              <td>${item.d ?? "-"}</td>
-              <td>${item.D ?? "-"}</td>
-              <td>${item.h ?? "-"}</td>
-            </tr>`
-        )
-        .join("");
-
-      const moreNote =
-        rows.length > MAX_RESULTS
-          ? `<p class="finder-tip">검색된 ${rows.length}건 중 ${MAX_RESULTS}건만 표시했습니다. 조건을 좁혀보세요.</p>`
-          : "";
-
-      finderResults.innerHTML = `
-        <table class="spec-table">
-          <thead>
-            <tr>
-              <th>유형</th>
-              <th>형번</th>
-              <th>d(내경) mm</th>
-              <th>D(외경) mm</th>
-              <th>H(두께) mm</th>
-            </tr>
-          </thead>
-          <tbody>${tableRows}</tbody>
-        </table>
-        ${moreNote}
-      `;
-    }
-
-    [fType, fD, fOD, fH].forEach((el) => el.addEventListener("input", renderResults));
-    renderResults();
-</script>
 </body>
 </html>
