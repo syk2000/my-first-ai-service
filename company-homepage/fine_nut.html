@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FINE U-NUT | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+<section class="page-section" id="fine-nut" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Fine U-Nut</p>
+        <h2>FINE U-NUT</h2>
+        <p>
+          키 가공이나 별도 와셔 없이도 <strong style="color: var(--accent);">완전한 로킹 효과</strong>를 내는 정밀 너트입니다.
+          축 나사부 중간 어느 위치에서든 로킹이 가능하고, 조립·해체를 반복해도 재사용할 수 있습니다.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 24px;">
+        <div style="flex: 1 1 260px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; font-size: 12.5px; color: var(--text-sub);">
+          <strong>특징</strong><br />
+          키 가공이 필요하지 않음 &nbsp;·&nbsp; 별도 와셔가 필요하지 않음<br />
+          샤프트의 강성 증대 &nbsp;·&nbsp; 정밀도 향상
+        </div>
+        <div style="flex: 1 1 260px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; font-size: 12.5px; color: var(--text-sub);">
+          <strong>기능</strong><br />
+          로킹 효과가 완전함 &nbsp;·&nbsp; 나사부 중간 위치에서도 로킹 가능<br />
+          미조정으로 토크 관리 가능 &nbsp;·&nbsp; 재사용 가능
+        </div>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/finenut_diagram.png" alt="FINE U-NUT 도면" style="height: 260px; width: auto; max-width: 100%; object-fit: contain;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 정면도 · 단면도<br /><span style="color: var(--text-faint);">D1=나사 호칭 · D3=기본 바깥지름 · H=전고 · S=마찰링 폭</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 700px;">
+          <thead>
+            <tr>
+              <th>형번<br />(SC / SS / SUS304)</th>
+              <th>d&times;Pitch<br />D1</th>
+              <th>D3</th><th>H</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="type-cell">FU00SC · FU00SS · FU00SUS</td><td>M10&times;0.75</td><td>18</td><td>5.2</td></tr>
+            <tr><td class="type-cell">FU01SC · FU01SS · FU01SUS</td><td>M12&times;1</td><td>22</td><td>5.4</td></tr>
+            <tr><td class="type-cell">FU02SC · FU02SS · FU02SUS</td><td>M15&times;1</td><td>25</td><td>6.5</td></tr>
+            <tr><td class="type-cell">FU03SC · FU03SS · FU03SUS</td><td>M17&times;1</td><td>28</td><td>6.4</td></tr>
+            <tr><td class="type-cell">FU04SC · FU04SS · FU04SUS</td><td>M20&times;1</td><td>32</td><td>7.7</td></tr>
+            <tr><td class="type-cell">FU05SC · FU05SS · FU05SUS</td><td>M25&times;1.5</td><td>38</td><td>9.1</td></tr>
+            <tr><td class="type-cell">FU06SC · FU06SS · FU06SUS</td><td>M30&times;1.5</td><td>45</td><td>10.2</td></tr>
+            <tr><td class="type-cell">FU07SC · FU07SS · FU07SUS</td><td>M35&times;1.5</td><td>52</td><td>11.2</td></tr>
+            <tr><td class="type-cell">FU08SC · FU08SS · FU08SUS</td><td>M40&times;1.5</td><td>58</td><td>12.6</td></tr>
+            <tr><td class="type-cell">FU09SC · FU09SS · FU09SUS</td><td>M45&times;1.5</td><td>65</td><td>13.5</td></tr>
+            <tr><td class="type-cell">FU10SC · FU10SS · FU10SUS</td><td>M50&times;1.5</td><td>70</td><td>13.5</td></tr>
+            <tr><td class="type-cell">FU11SC · FU11SS · FU11SUS</td><td>M55&times;2</td><td>80</td><td>15</td></tr>
+            <tr><td class="type-cell">FU12SC · FU12SS · FU12SUS</td><td>M60&times;2</td><td>85</td><td>15</td></tr>
+            <tr><td class="type-cell">FU13SC · FU13SS · FU13SUS</td><td>M65&times;2</td><td>92</td><td>15.8</td></tr>
+            <tr><td class="type-cell">FU14SC · FU14SS · FU14SUS</td><td>M70&times;2</td><td>98</td><td>16.6</td></tr>
+            <tr><td class="type-cell">FU15SC · FU15SS · FU15SUS</td><td>M75&times;2</td><td>105</td><td>18.6</td></tr>
+            <tr><td class="type-cell">FU16SC · FU16SS · FU16SUS</td><td>M80&times;2</td><td>110</td><td>19.2</td></tr>
+            <tr><td class="type-cell">FU17SC · FU17SS · FU17SUS</td><td>M85&times;2</td><td>120</td><td>20.3</td></tr>
+            <tr><td class="type-cell">FU18SC · FU18SS · FU18SUS</td><td>M90&times;2</td><td>125</td><td>21.3</td></tr>
+            <tr><td class="type-cell">FU19SC · FU19SS · FU19SUS</td><td>M95&times;2</td><td>130</td><td>22.3</td></tr>
+            <tr><td class="type-cell">FU20SC · FU20SS · FU20SUS</td><td>M100&times;2</td><td>130</td><td>22.3</td></tr>
+            <tr><td class="type-cell">FU21SC</td><td>M105&times;2</td><td>140</td><td>23.3</td></tr>
+            <tr><td class="type-cell">FU22SC</td><td>M110&times;2</td><td>145</td><td>23.3</td></tr>
+            <tr><td class="type-cell">FU23SC</td><td>M115&times;2</td><td>150</td><td>24.4</td></tr>
+            <tr><td class="type-cell">FU24SC</td><td>M120&times;2</td><td>160</td><td>24.4</td></tr>
+            <tr><td class="type-cell">FU25SC</td><td>M125&times;2</td><td>165</td><td>25.6</td></tr>
+            <tr><td class="type-cell">FU26SC</td><td>M130&times;2</td><td>165</td><td>25.6</td></tr>
+            <tr><td class="type-cell">FU27SC</td><td>M135&times;2</td><td>175</td><td>26.6</td></tr>
+            <tr><td class="type-cell">FU28SC</td><td>M140&times;2</td><td>180</td><td>26.6</td></tr>
+            <tr><td class="type-cell">FU29SC</td><td>M145&times;2</td><td>190</td><td>28.3</td></tr>
+            <tr><td class="type-cell">FU30SC</td><td>M150&times;2</td><td>195</td><td>28.3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · FU21 이상 사이즈는 SC(S45C) 재질로만 생산됩니다.</p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 도면과 표는 당사 정식 규격표 원본을 기준으로 작성했습니다.
+        정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>

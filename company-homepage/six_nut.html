@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>6각 U-NUT | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+<section class="page-section" id="six-nut" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Hex U-Nut</p>
+        <h2>6각 U-NUT</h2>
+        <p>
+          범용 6각 로크너트입니다. 나사 안쪽에 90&deg;~120&deg;로 파인 홈을 두어 조립 시 축 나사부를 살짝 눌러 변형시켜
+          풀림을 방지합니다. 표준형(1종·2종·3종), 소형, 캡형, 후렌지형, 용접형 등 형태별로 취급합니다.
+        </p>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면 — 표준형(1종&middot;2종&middot;3종)</p>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/sixnut_hex_diagram.png" alt="6각 U-NUT 표준형 도면" style="height: 260px; width: auto; max-width: 100%; object-fit: contain;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 정면도(s,e) · 1종(h,l,m) · 2종<br /><span style="color: var(--text-faint);">d&times;p=나사 호칭 · 90&deg;~120&deg;로 홈을 눌러 변형시켜 풀림 방지</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top: 8px;">
+        <h3 style="font-size: 18px; margin: 0 0 8px;">1종&middot;2종&middot;3종 치수표</h3>
+        <p style="font-size: 13.5px;">이면폭(S)&middot;전고(h)는 1종&middot;2종&middot;3종 공통 치수이며, 형식별 차이는 내부 나사 깊이(m&middot;l)에 있습니다.</p>
+      </div>
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 620px;">
+          <thead><tr><th>호칭</th><th>pitch</th><th>이면폭(S)</th><th>전고(h)</th></tr></thead>
+          <tbody>
+            <tr><td class="type-cell">M4</td><td>0.7</td><td>7</td><td>3.8</td></tr>
+            <tr><td class="type-cell">M5</td><td>0.8</td><td>8</td><td>4.6</td></tr>
+            <tr><td class="type-cell">M6</td><td>1</td><td>10</td><td>5.1</td></tr>
+            <tr><td class="type-cell">M8</td><td>1.25 / 1</td><td>13</td><td>7.3</td></tr>
+            <tr><td class="type-cell">M10</td><td>1.5 / 1.25</td><td>17</td><td>8.3</td></tr>
+            <tr><td class="type-cell">M12</td><td>1.75 / 1.5 / 1.25</td><td>19</td><td>10.5</td></tr>
+            <tr><td class="type-cell">M14</td><td>2 / 1.5</td><td>22</td><td>12.5</td></tr>
+            <tr><td class="type-cell">M16</td><td>2 / 1.5</td><td>24</td><td>14.5</td></tr>
+            <tr><td class="type-cell">M18</td><td>2.5 / 1.5</td><td>27</td><td>16</td></tr>
+            <tr><td class="type-cell">M20</td><td>2.5 / 1.5</td><td>30</td><td>17.5</td></tr>
+            <tr><td class="type-cell">M22</td><td>2.5 / 1.5</td><td>32</td><td>19</td></tr>
+            <tr><td class="type-cell">M24</td><td>3 / 2</td><td>36</td><td>21.5</td></tr>
+            <tr><td class="type-cell">M27</td><td>3</td><td>41</td><td>24</td></tr>
+            <tr><td class="type-cell">M30</td><td>3.5 / 3</td><td>46</td><td>27</td></tr>
+            <tr><td class="type-cell">M33</td><td>3.5 / 3</td><td>50</td><td>29.5</td></tr>
+            <tr><td class="type-cell">M36</td><td>4 / 3</td><td>55</td><td>32.5</td></tr>
+            <tr><td class="type-cell">M39</td><td>4 / 3</td><td>60</td><td>35</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 이면폭 허용차 0/&minus;0.2~&minus;0.4, 전고 허용차 &plusmn;0.3~&plusmn;1 (사이즈가 커질수록 확대). M39 이상 대형 사이즈도 생산되며 세부 규격은 견적 문의 시 정식 규격표로 안내드립니다.</p>
+
+      <div class="section-head" style="margin-top: 28px;">
+        <h3 style="font-size: 18px; margin: 0 0 8px;">캡 U-너트 치수표</h3>
+        <p style="font-size: 13.5px;">외부에 캡이 덮여 나사 끝이 노출되지 않는 형식입니다. 1종&middot;2종 두 형태가 있습니다.</p>
+      </div>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/sixnut_cap_diagram.png" alt="캡 U-너트 도면" style="height: 240px; width: auto; max-width: 100%; object-fit: contain;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 정면도 · 1종 · 2종 단면도</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top: 28px;">
+        <h3 style="font-size: 18px; margin: 0 0 8px;">6각 U-NUT 후렌지형</h3>
+        <p style="font-size: 13.5px;">바닥면에 후렌지가 붙어 있어 별도 와셔 없이도 접촉면적을 넓게 확보하는 형식입니다.</p>
+      </div>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/sixnut_flange_diagram.png" alt="6각 U-NUT 후렌지형 도면" style="height: 240px; width: auto; max-width: 100%; object-fit: contain;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ M6 이하 · M8 이상(정면도) · M12 이하 · M14 이상(단면도)<br /><span style="color: var(--text-faint);">&phi;dc=후렌지 바깥지름 · h·m·b=나사부 치수 · c=후렌지 두께</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top: 28px;">
+        <h3 style="font-size: 18px; margin: 0 0 8px;">용접 U-너트</h3>
+        <p style="font-size: 13.5px;">패널 등에 용접으로 직접 고정하는 형식으로, 4개의 돌기가 있는 M6 이하 사이즈와 링 형태의 M8 이상 사이즈로 구분됩니다.</p>
+      </div>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/sixnut_weld_diagram.png" alt="용접 U-너트 도면" style="height: 240px; width: auto; max-width: 100%; object-fit: contain;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ M6 이하 · M8 이상(정면도) · 단면도(90&deg;~120&deg;)<br /><span style="color: var(--text-faint);">S1&middot;S=이면폭 · h&middot;m&middot;c=나사부 치수</span></p>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 도면과 표는 당사 정식 규격표 원본을 기준으로 작성했습니다. 세부 사이즈별 치수는 견적 문의 시 정식 규격표로 안내드립니다.
+        정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>
