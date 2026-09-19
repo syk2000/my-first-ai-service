@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>노드 록 (Nord-Lock) | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="nod-lock" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Nord-Lock Washer</p>
+        <h2>노드 록 (Nord-Lock)</h2>
+        <p>
+          마찰력 대신 <strong style="color: var(--accent);">볼트 자체의 장력</strong>을 이용해 풀림을 막는 볼트 풀림 방지 와셔 시스템입니다.
+          와셔 한 쪽 면은 볼트 나사산 각도보다 큰 각도의 캠(cam)으로, 반대쪽 면은 톱니로 되어 있어, 2개가 1세트로 캠 면끼리 마주보게 조립됩니다.
+          체결 시 톱니가 접촉면을 고정 안착시키고, 캠 면은 서로 맞물려 볼트의 장력으로 셀프 록킹(Self-Locking)됩니다.
+        </p>
+      </div>
+
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/nod_lock_diagram.png" alt="노드 록 단면도 — 캠 각도 α가 나사산 각도 β보다 큼" style="display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 체결 단면도<br /><span style="color: var(--text-faint);">α(캠 각도) &gt; β(나사산 각도) — 이 차이가 셀프 록킹을 만듦</span></p>
+          </div>
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/nod_lock_photo.png" alt="노드 록 와셔 2개 세트 제품 사진" style="display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 2개 1세트로 캠 면끼리 마주보게 조립</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 24px;">
+        <div style="flex: 1 1 300px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 20px;">
+          <strong style="font-size: 14px; color: var(--text-sub);">노드 록의 장점</strong>
+          <ul style="font-size: 12.5px; color: var(--text-sub); margin: 10px 0 0; padding-left: 18px; line-height: 1.7;">
+            <li>볼트·너트 체결 시 최대의 안정성 확보(풀림 방지)</li>
+            <li>진동에 의한 볼트 풀림 방지</li>
+            <li>체결 및 분리가 간단</li>
+            <li>윤활 상태에서도 체결력 불변</li>
+            <li>작용부하의 강약에 관계없이 확실한 록킹</li>
+            <li>온도변화에 관계없이 체결력 불변</li>
+            <li>표면 훼손이나 긁힘 최소화</li>
+            <li>재사용 가능</li>
+          </ul>
+        </div>
+        <div style="flex: 1 1 300px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 20px;">
+          <strong style="font-size: 14px; color: var(--text-sub);">다양한 규격 · 공급의 다양성</strong>
+          <ul style="font-size: 12.5px; color: var(--text-sub); margin: 10px 0 0; padding-left: 18px; line-height: 1.7;">
+            <li>스틸: M3 ~ M130</li>
+            <li>스텐레스 스틸: M3 ~ M80</li>
+            <li>노란색 아연 크롬도금(chromate) 처리(표준)</li>
+            <li>다크로메이트(dacromate) 코팅</li>
+            <li>스테인레스(SS2343)</li>
+            <li>외경 사이즈 다양</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="font-size: 16px; margin: 28px 0 10px;">노드 록 치수 (합금강, mm)</h3>
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+          <table class="spec-table" style="min-width: 320px; flex: 1;">
+            <thead><tr><th>Order No.</th><th>U1</th><th>U2</th><th>Thickness T</th></tr></thead>
+            <tbody>
+              <tr><td class="type-cell">VB3 (NL3)</td><td>3.4</td><td>7.0</td><td>1.8</td></tr>
+              <tr><td class="type-cell">VB3.5 (NL3.5)</td><td>3.9</td><td>7.6</td><td>1.8</td></tr>
+              <tr><td class="type-cell">VB4 (NL4)</td><td>4.4</td><td>7.6</td><td>1.8</td></tr>
+              <tr><td class="type-cell">VB4 sp (NL4 sp)</td><td>4.4</td><td>9.0</td><td>1.8</td></tr>
+              <tr><td class="type-cell">VB5 (NL5)</td><td>5.4</td><td>9.0</td><td>1.8</td></tr>
+              <tr><td class="type-cell">VB5 sp (NL5 sp)</td><td>5.4</td><td>10.8</td><td>1.8</td></tr>
+              <tr><td class="type-cell">VB6 (NL6)</td><td>6.5</td><td>10.8</td><td>2.5</td></tr>
+              <tr><td class="type-cell">VB6 sp (NL6 sp)</td><td>6.5</td><td>13.5</td><td>2.5</td></tr>
+              <tr><td class="type-cell">VB1/4" (NL1/4")</td><td>7.2</td><td>11.5</td><td>2.5</td></tr>
+              <tr><td class="type-cell">VB1/4" sp (NL1/4" sp)</td><td>7.2</td><td>13.5</td><td>2.5</td></tr>
+              <tr><td class="type-cell">VB8 (NL8)</td><td>8.7</td><td>16.6</td><td>2.5</td></tr>
+              <tr><td class="type-cell">VB3/8" (NL3/8")</td><td>10.3</td><td>16.6</td><td>2.5</td></tr>
+              <tr><td class="type-cell">VB3/8" sp (NL3/8" sp)</td><td>10.3</td><td>21.0</td><td>2.5</td></tr>
+              <tr><td class="type-cell">VB10 (NL10)</td><td>10.7</td><td>16.6</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB10 sp (NL10 sp)</td><td>10.7</td><td>20.7</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB11 (NL11)</td><td>11.4</td><td>18.5</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB12 (NL12)</td><td>13.0</td><td>19.5</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB1/2" (NL1/2")</td><td>13.5</td><td>19.5</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB1/2" sp (NL1/2" sp)</td><td>13.5</td><td>25.4</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB14 (NL14)</td><td>15.2</td><td>23.0</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB14 sp (NL14 sp)</td><td>15.2</td><td>30.7</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB16 (NL16)</td><td>17.0</td><td>25.4</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB16 sp (NL16 sp)</td><td>17.0</td><td>30.7</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB18 (NL18)</td><td>19.5</td><td>29.0</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB18 sp (NL18 sp)</td><td>19.5</td><td>34.5</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB3/4" (NL3/4")</td><td>20.3</td><td>30.7</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB3/4" sp (NL3/4" sp)</td><td>20.3</td><td>39.0</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB20 (NL20)</td><td>21.4</td><td>30.7</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB20 sp (NL20 sp)</td><td>21.4</td><td>39.0</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB22 (NL22)</td><td>23.4</td><td>34.5</td><td>4.6</td></tr>
+              <tr><td class="type-cell">VB22 sp (NL22 sp)</td><td>23.4</td><td>42.0</td><td>4.6</td></tr>
+              <tr><td class="type-cell">VB24 (NL24)</td><td>25.3</td><td>39.0</td><td>4.6</td></tr>
+              <tr><td class="type-cell">VB24 sp (NL24 sp)</td><td>25.3</td><td>48.5</td><td>4.6</td></tr>
+            </tbody>
+          </table>
+          <table class="spec-table" style="min-width: 320px; flex: 1;">
+            <thead><tr><th>Order No.</th><th>U1</th><th>U2</th><th>Thickness T</th></tr></thead>
+            <tbody>
+              <tr><td class="type-cell">VB1" (NL1")</td><td>27.9</td><td>39.0</td><td>3.4</td></tr>
+              <tr><td class="type-cell">VB1" sp (NL1" sp)</td><td>27.9</td><td>48.5</td><td>4.6</td></tr>
+              <tr><td class="type-cell">VB27 (NL27)</td><td>28.4</td><td>42.0</td><td>6.6</td></tr>
+              <tr><td class="type-cell">VB27 sp (NL27 sp)</td><td>28.4</td><td>42.0</td><td>6.6</td></tr>
+              <tr><td class="type-cell">VB30 (NL30)</td><td>31.4</td><td>47.0</td><td>6.6</td></tr>
+              <tr><td class="type-cell">VB33 (NL33)</td><td>34.4</td><td>48.5</td><td>6.6</td></tr>
+              <tr><td class="type-cell">VB36 (NL36)</td><td>37.4</td><td>55.0</td><td>6.6</td></tr>
+              <tr><td class="type-cell">VB39 (NL39)</td><td>40.4</td><td>58.5</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB42 (NL42)</td><td>43.2</td><td>63.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB45 (NL45)</td><td>46.2</td><td>70.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB48 (NL48)</td><td>49.6</td><td>75.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB52 (NL52)</td><td>53.6</td><td>80.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB56 (NL56)</td><td>59.1</td><td>85.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB60 (NL60)</td><td>63.1</td><td>90.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB64 (NL64)</td><td>67.1</td><td>95.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB68 (NL68)</td><td>71.1</td><td>100.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB72 (NL72)</td><td>75.1</td><td>105.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB76 (NL76)</td><td>79.1</td><td>110.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB80 (NL80)</td><td>83.1</td><td>115.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB85 (NL85)</td><td>88.1</td><td>120.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB90 (NL90)</td><td>92.4</td><td>130.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB95 (NL95)</td><td>97.4</td><td>135.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB100 (NL100)</td><td>103.4</td><td>145.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB105 (NL105)</td><td>108.4</td><td>150.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB110 (NL110)</td><td>113.4</td><td>155.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB115 (NL115)</td><td>118.4</td><td>165.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB120 (NL120)</td><td>123.4</td><td>170.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB125 (NL125)</td><td>128.4</td><td>173.0</td><td>9.5</td></tr>
+              <tr><td class="type-cell">VB130 (NL130)</td><td>133.4</td><td>178.0</td><td>9.5</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="font-size: 11.5px; color: var(--text-faint); margin-top: 8px;">노드 록 와샤는 양면이 조립된 상태로 공급됩니다.</p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 도면과 표는 당사 정식 규격표 원본을 직접 옮겨 작성했습니다. U1·U2는 와셔의 내경·외경, T는 두께입니다.
+        정밀 발주 전에는 반드시 정식 카탈로그 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+</body>
+</html>
