@@ -103,59 +103,246 @@
         <p>[회사명]이 취급하는 베어링 종류입니다. 규격·수량 문의는 언제든 견적 문의를 통해 안내드립니다.</p>
       </div>
 
-      <div class="product-grid">
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="ball">볼 베어링</button>
+        <button type="button" class="cat-tab-btn" data-tab="roller">롤러 베어링</button>
+        <button type="button" class="cat-tab-btn" data-tab="needle">니들 롤러 베어링</button>
+        <button type="button" class="cat-tab-btn" data-tab="thrust">스러스트 베어링</button>
+        <button type="button" class="cat-tab-btn" data-tab="linear">직선운동 베어링</button>
+        <button type="button" class="cat-tab-btn" data-tab="unit">베어링 유닛</button>
+        <button type="button" class="cat-tab-btn" data-tab="special">특수용도 베어링</button>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="ball">
+        <p class="cat-tab-panel-desc">전동체로 강구를 사용하는 레이디얼·스러스트 볼 베어링류입니다.</p>
+        <div class="product-grid">
         <article class="product-card">
           <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.5"/></svg>
           <h4>깊은 홈 볼 베어링</h4>
+          <p>가장 널리 쓰이는 범용 레이디얼 볼 베어링.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.5"/><line x1="12" y1="30" x2="28" y2="10" stroke="currentColor" stroke-width="2"/></svg>
+          <h4>앵귤러 콘택트 볼 베어링</h4>
+          <p>축·레이디얼 하중을 동시에 지지.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2" stroke-dasharray="3 5"/><circle cx="20" cy="20" r="5" fill="currentColor"/></svg>
+          <h4>자동조심 볼 베어링</h4>
+          <p>축 처짐·오조립을 흡수하는 조심형.</p>
         </article>
         <article class="product-card">
           <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="2.5"/></svg>
           <h4>미니어처 볼 베어링</h4>
+          <p>소형 정밀 기기용 초소형 베어링.</p>
         </article>
         <article class="product-card">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.5"/><line x1="12" y1="30" x2="28" y2="10" stroke="currentColor" stroke-width="2"/></svg>
-          <h4>앵귤러 볼 베어링</h4>
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5"/><circle cx="14" cy="14" r="2.3" fill="currentColor"/><circle cx="26" cy="14" r="2.3" fill="currentColor"/><circle cx="14" cy="26" r="2.3" fill="currentColor"/><circle cx="26" cy="26" r="2.3" fill="currentColor"/></svg>
+          <h4>4점 접촉 볼 베어링</h4>
+          <p>단열로 양방향 축하중 지지 가능.</p>
         </article>
         <article class="product-card">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2" stroke-dasharray="3 5"/><circle cx="20" cy="20" r="5" fill="currentColor"/></svg>
-          <h4>스페리컬 볼 베어링</h4>
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M6 30 V17 A14 14 0 0 1 34 17 V30 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="2.5"/><line x1="6" y1="30" x2="6" y2="34" stroke="currentColor" stroke-width="2.5"/><line x1="34" y1="30" x2="34" y2="34" stroke="currentColor" stroke-width="2.5"/></svg>
+          <h4>필로우 블록형 볼 베어링</h4>
+          <p>하우징 일체형, 축 정렬이 쉬움.</p>
         </article>
+        </div>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="roller" hidden>
+        <p class="cat-tab-panel-desc">원통·원추 형상의 롤러를 전동체로 사용해 중하중을 지지하는 베어링류입니다.</p>
+        <div class="product-grid">
         <article class="product-card">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="9" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="2.5" fill="currentColor"/></svg>
-          <h4>실드 타입 볼 베어링</h4>
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="6" y="14" width="28" height="12" rx="6" stroke="currentColor" stroke-width="2.5"/><line x1="14" y1="14" x2="14" y2="26" stroke="currentColor" stroke-width="1.6"/><line x1="20" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.6"/><line x1="26" y1="14" x2="26" y2="26" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h4>원통 롤러 베어링</h4>
+          
         </article>
         <article class="product-card">
           <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M9 26 L14 14 H26 L31 26 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
           <h4>테이퍼 롤러 베어링</h4>
+          
         </article>
         <article class="product-card">
           <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="6" y="14" width="28" height="12" rx="8" stroke="currentColor" stroke-width="2.5"/></svg>
-          <h4>스페리컬 롤러 베어링</h4>
+          <h4>구면(스페리컬) 롤러 베어링</h4>
+          <p>조심성이 뛰어나 중하중·충격에 강함.</p>
         </article>
         <article class="product-card">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M8 26 L20 8 L32 26 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
-          <h4>스러스트 베어링</h4>
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2" stroke-dasharray="3 5"/><circle cx="20" cy="20" r="5" fill="currentColor"/></svg>
+          <h4>자동조심 롤러 베어링</h4>
+          
+        </article>
+        </div>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="needle" hidden>
+        <p class="cat-tab-panel-desc">가늘고 긴 니들 롤러를 사용해 단면 높이가 낮으면서도 큰 하중을 지지합니다. (IKO 니들 시리즈 종합 카탈로그 기준)</p>
+        <div class="product-grid">
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="7" y="9" width="26" height="22" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2"/></svg>
+          <h4>쉘형 니들 베어링</h4>
+          <p>드로잉 가공한 경량 외륜, 압입 고정형.</p>
         </article>
         <article class="product-card">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2.5"/><rect x="16" y="16" width="8" height="8" stroke="currentColor" stroke-width="2"/></svg>
-          <h4>특수 규격 베어링</h4>
-        </article>
-        <article class="product-card">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><polygon points="34,20 27,32.1 13,32.1 6,20 13,7.9 27,7.9" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="2.5"/></svg>
-          <h4>로크 너트 · 로크 와셔 · 로크 플레이트</h4>
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2" stroke-dasharray="2 4"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.5"/></svg>
+          <h4>니들 케이지 (범용·커넥팅로드용)</h4>
+          <p>니들 롤러를 유지기로 조립한 형식.</p>
         </article>
         <article class="product-card">
           <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="9" x2="20" y2="14" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="26" x2="20" y2="31" stroke="currentColor" stroke-width="2.5"/><line x1="9" y1="20" x2="14" y2="20" stroke="currentColor" stroke-width="2.5"/><line x1="26" y1="20" x2="31" y2="20" stroke="currentColor" stroke-width="2.5"/></svg>
-          <h4>니들 롤러 베어링</h4>
+          <h4>선삭형 니들 베어링</h4>
+          <p>절삭 가공 외륜, 중하중·범용에 적합.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="24" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/><line x1="8" y1="20" x2="32" y2="20" stroke="currentColor" stroke-width="1.8"/><line x1="20" y1="8" x2="20" y2="32" stroke="currentColor" stroke-width="1.8"/></svg>
+          <h4>복합형 니들 베어링</h4>
+          <p>레이디얼+스러스트 하중을 동시 지지.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="18" cy="20" r="11" stroke="currentColor" stroke-width="2.5"/><rect x="27" y="15" width="7" height="10" rx="2" stroke="currentColor" stroke-width="2.2"/></svg>
+          <h4>캠 플로워</h4>
+          <p>캠·직선운동 기구의 종동절용.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="18" cy="20" r="11" stroke="currentColor" stroke-width="2.5"/><rect x="27" y="15" width="7" height="10" rx="2" stroke="currentColor" stroke-width="2.2"/></svg>
+          <h4>롤러 플로워</h4>
+          <p>캠 가이드면과 직접 접촉하는 외륜 회전형.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="24" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/><line x1="8" y1="20" x2="32" y2="20" stroke="currentColor" stroke-width="1.8"/><line x1="20" y1="8" x2="20" y2="32" stroke="currentColor" stroke-width="1.8"/></svg>
+          <h4>크로스 롤러 베어링</h4>
+          <p>전방향 하중·모멘트를 1개로 지지.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="18" r="9" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="27" x2="20" y2="35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <h4>구면 미끄럼 베어링 (필로볼·L볼)</h4>
+          <p>링크 기구용 자동조심 구면 베어링.</p>
+        </article>
+        </div>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="thrust" hidden>
+        <p class="cat-tab-panel-desc">축 방향(스러스트) 하중을 전담으로 지지하는 베어링류입니다.</p>
+        <div class="product-grid">
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M8 26 L20 8 L32 26 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          <h4>스러스트 볼 베어링</h4>
+          
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M8 26 L20 8 L32 26 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          <h4>스러스트 원통 롤러 베어링</h4>
+          
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M8 26 L20 8 L32 26 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          <h4>스러스트 테이퍼 롤러 베어링</h4>
+          
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M8 26 L20 8 L32 26 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          <h4>스러스트 니들 베어링</h4>
+          
+        </article>
+        </div>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="linear" hidden>
+        <p class="cat-tab-panel-desc">직선 왕복운동·요동운동에 사용하는 리니어 부시 및 관련 부품입니다. (IKO 515 시리즈 카탈로그 기준)</p>
+        <div class="product-grid">
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="10" y="6" width="20" height="28" rx="6" stroke="currentColor" stroke-width="2.5"/><line x1="10" y1="20" x2="30" y2="20" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 3"/></svg>
+          <h4>리니어 부시</h4>
+          <p>축과 조합해 직선 왕복운동을 지지.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="4" y="17" width="32" height="7" rx="2" stroke="currentColor" stroke-width="2.2"/><rect x="13" y="9" width="14" height="10" rx="3" stroke="currentColor" stroke-width="2.2"/></svg>
+          <h4>LM 스트로크 (LM 가이드)</h4>
+          <p>레일 위를 직선 이동하는 고강성 가이드.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="18" r="9" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="27" x2="20" y2="35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <h4>구면 베어링 (로드엔드용)</h4>
+          
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="18" r="9" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="27" x2="20" y2="35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <h4>링크 볼</h4>
+          
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="14" cy="20" r="8" stroke="currentColor" stroke-width="2.5"/><line x1="22" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <h4>로드 엔드</h4>
+          <p>링크 기구의 끝단 연결용 관절 베어링.</p>
+        </article>
+        </div>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="unit" hidden>
+        <p class="cat-tab-panel-desc">하우징과 베어링이 일체화되어 설치·정렬이 간편한 유닛 제품입니다.</p>
+        <div class="product-grid">
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M6 30 V17 A14 14 0 0 1 34 17 V30 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="2.5"/><line x1="6" y1="30" x2="6" y2="34" stroke="currentColor" stroke-width="2.5"/><line x1="34" y1="30" x2="34" y2="34" stroke="currentColor" stroke-width="2.5"/></svg>
+          <h4>필로우 블록형 유닛</h4>
+          
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.2"/><circle cx="11" cy="11" r="1.6" fill="currentColor"/><circle cx="29" cy="11" r="1.6" fill="currentColor"/><circle cx="11" cy="29" r="1.6" fill="currentColor"/><circle cx="29" cy="29" r="1.6" fill="currentColor"/></svg>
+          <h4>플랜지형 유닛</h4>
+          
         </article>
         <article class="product-card">
           <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="5" y="15" width="30" height="10" rx="5" stroke="currentColor" stroke-width="2.5"/><circle cx="14" cy="20" r="2.5" fill="currentColor"/><circle cx="26" cy="20" r="2.5" fill="currentColor"/></svg>
           <h4>베어링 유니트</h4>
+          
         </article>
         <article class="product-card">
           <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M6 30 V17 A14 14 0 0 1 34 17 V30 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="2.5"/><line x1="6" y1="30" x2="6" y2="34" stroke="currentColor" stroke-width="2.5"/><line x1="34" y1="30" x2="34" y2="34" stroke="currentColor" stroke-width="2.5"/></svg>
           <h4>플러머 블럭</h4>
+          
         </article>
+        </div>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="special" hidden>
+        <p class="cat-tab-panel-desc">정밀·고온·진공 등 특수 환경이나 용도에 맞춰 설계된 베어링류입니다.</p>
+        <div class="product-grid">
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="2.5" fill="currentColor"/><line x1="20" y1="7" x2="20" y2="11" stroke="currentColor" stroke-width="2"/><line x1="20" y1="29" x2="20" y2="33" stroke="currentColor" stroke-width="2"/><line x1="7" y1="20" x2="11" y2="20" stroke="currentColor" stroke-width="2"/><line x1="29" y1="20" x2="33" y2="20" stroke="currentColor" stroke-width="2"/></svg>
+          <h4>초정밀 베어링</h4>
+          <p>공작기계 주축 등 고정밀 회전에 사용.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5"/><path d="M20 20 L20 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 20 L28 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <h4>진공 메카용 베어링</h4>
+          
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="2.5"/><path d="M20 9 A11 11 0 0 1 31 20" stroke="currentColor" stroke-width="2" stroke-dasharray="1.5 3.5"/></svg>
+          <h4>볼 스크류 지지 베어링</h4>
+          
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="9" fill="var(--accent-soft)" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="2.5" fill="currentColor"/></svg>
+          <h4>실드·씰 타입 베어링</h4>
+          <p>이물·수분 유입을 막는 밀봉형.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="2.5"/><path d="M20 12 C16 18 16 20 20 24 C24 20 24 18 20 12 Z" stroke="currentColor" stroke-width="1.8"/></svg>
+          <h4>고온용 베어링</h4>
+          
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.6"/></svg>
+          <h4>박형 베어링</h4>
+          <p>단면이 얇아 공간 절약이 필요한 곳에 사용.</p>
+        </article>
+        <article class="product-card">
+          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2.5"/><path d="M20 20 L27 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13 26 A10 10 0 0 1 13 14" stroke="currentColor" stroke-width="2"/></svg>
+          <h4>롤러 클러치 (일방향 클러치) 베어링</h4>
+          <p>한쪽 방향으로만 회전을 전달.</p>
+        </article>
+        </div>
       </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">※ 실제 취급 규격표는 <a href="catalog.html" style="color: var(--accent);">카탈로그</a> 페이지 또는 견적 문의를 통해 안내해드립니다.</p>
@@ -180,5 +367,21 @@
   </footer>
 
 <script src="common.js"></script>
+
+<script>
+  (function () {
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+        panels.forEach(function (p) {
+          p.hidden = p.getAttribute('data-panel') !== target;
+        });
+      });
+    });
+  })();
+</script>
 </body>
 </html>
