@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>스페리컬 플레인 베어링 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="spherical-plain" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Spherical Plain Bearings</p>
+        <h2>스페리컬 플레인 베어링</h2>
+        <p>볼 역할을 하는 내륜과 하우징 역할을 하는 외륜의 구면에서 미끄럼 작용을 이용하는 베어링입니다. 저속에서 고하중의 경방향 하중을 받는 곳, 조심성이 불량한 곳, 회전 또는 요동이 발생하는 곳에 적합합니다. GE/SB(무급유)·GS(급유형)·PB(작은 하중)·SBB(대형) 계열로 공급됩니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
+      </div>
+
+      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+        <label for="spbFilter">형번 / 규격 검색</label>
+        <input id="spbFilter" type="text" placeholder="예: GE20ES 또는 20*35" autocomplete="off" />
+      </div>
+      <p class="finder-tip" id="spbCount" style="margin-bottom: 10px;"></p>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" id="spbTable" style="min-width: 420px; max-width: 600px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th>
+              <th>B(폭)</th>
+            </tr>
+          </thead>
+          <tbody id="spbBody"><tr><td class="type-cell">SB12</td><td>12</td><td>22</td><td>11</td></tr><tr><td class="type-cell">SB15</td><td>15</td><td>26</td><td>13</td></tr><tr><td class="type-cell">SB20</td><td>20</td><td>32</td><td>16</td></tr><tr><td class="type-cell">SB22</td><td>22</td><td>37</td><td>19</td></tr><tr><td class="type-cell">SB25</td><td>25</td><td>42</td><td>21</td></tr><tr><td class="type-cell">SB30</td><td>30</td><td>50</td><td>27</td></tr><tr><td class="type-cell">SB35</td><td>35</td><td>55</td><td>30</td></tr><tr><td class="type-cell">SB40</td><td>40</td><td>62</td><td>33</td></tr><tr><td class="type-cell">SB45</td><td>45</td><td>72</td><td>36</td></tr><tr><td class="type-cell">SB50</td><td>50</td><td>80</td><td>42</td></tr><tr><td class="type-cell">SB55</td><td>55</td><td>90</td><td>47</td></tr><tr><td class="type-cell">SB60</td><td>60</td><td>100</td><td>53</td></tr><tr><td class="type-cell">SB65</td><td>65</td><td>105</td><td>55</td></tr><tr><td class="type-cell">SB70</td><td>70</td><td>110</td><td>58</td></tr><tr><td class="type-cell">SB75</td><td>75</td><td>120</td><td>64</td></tr><tr><td class="type-cell">SB80</td><td>80</td><td>130</td><td>70</td></tr><tr><td class="type-cell">SB85</td><td>85</td><td>135</td><td>74</td></tr><tr><td class="type-cell">SB90</td><td>90</td><td>140</td><td>76</td></tr><tr><td class="type-cell">SB95</td><td>95</td><td>150</td><td>82</td></tr><tr><td class="type-cell">SB100</td><td>100</td><td>160</td><td>88</td></tr><tr><td class="type-cell">SB110</td><td>110</td><td>170</td><td>93</td></tr><tr><td class="type-cell">SB115</td><td>115</td><td>180</td><td>98</td></tr><tr><td class="type-cell">SB120</td><td>120</td><td>190</td><td>105</td></tr><tr><td class="type-cell">SB130</td><td>130</td><td>200</td><td>110</td></tr><tr><td class="type-cell">SB150</td><td>150</td><td>220</td><td>120</td></tr><tr><td class="type-cell">GE4E</td><td>4</td><td>12</td><td>5</td></tr><tr><td class="type-cell">GE5E</td><td>5</td><td>14</td><td>6</td></tr><tr><td class="type-cell">GE6E</td><td>6</td><td>14</td><td>6</td></tr><tr><td class="type-cell">GE8E</td><td>8</td><td>16</td><td>8</td></tr><tr><td class="type-cell">GE10ES</td><td>10</td><td>19</td><td>9</td></tr><tr><td class="type-cell">GE12ES</td><td>12</td><td>22</td><td>10</td></tr><tr><td class="type-cell">GE15ES</td><td>15</td><td>26</td><td>12</td></tr><tr><td class="type-cell">GE17ES</td><td>17</td><td>30</td><td>14</td></tr><tr><td class="type-cell">GE20ES</td><td>20</td><td>35</td><td>16</td></tr><tr><td class="type-cell">GE25ES</td><td>25</td><td>42</td><td>20</td></tr><tr><td class="type-cell">GE30ES</td><td>30</td><td>47</td><td>22</td></tr><tr><td class="type-cell">GE35ES</td><td>35</td><td>55</td><td>25</td></tr><tr><td class="type-cell">GE40ES</td><td>40</td><td>62</td><td>28</td></tr><tr><td class="type-cell">GE45ES</td><td>45</td><td>68</td><td>32</td></tr><tr><td class="type-cell">GE50ES</td><td>50</td><td>75</td><td>35</td></tr><tr><td class="type-cell">GE60ES</td><td>60</td><td>90</td><td>44</td></tr><tr><td class="type-cell">GE70ES</td><td>70</td><td>105</td><td>49</td></tr><tr><td class="type-cell">GE80ES</td><td>80</td><td>120</td><td>55</td></tr><tr><td class="type-cell">GE90ES</td><td>90</td><td>130</td><td>60</td></tr><tr><td class="type-cell">GE100ES</td><td>100</td><td>150</td><td>70</td></tr><tr><td class="type-cell">GE110ES</td><td>110</td><td>160</td><td>70</td></tr><tr><td class="type-cell">GE120ES</td><td>120</td><td>180</td><td>85</td></tr><tr><td class="type-cell">GE140ES</td><td>140</td><td>210</td><td>90</td></tr><tr><td class="type-cell">GE160ES</td><td>160</td><td>230</td><td>105</td></tr><tr><td class="type-cell">GE180ES</td><td>180</td><td>260</td><td>105</td></tr><tr><td class="type-cell">GE200ES</td><td>200</td><td>290</td><td>130</td></tr><tr><td class="type-cell">GE220ES</td><td>220</td><td>320</td><td>135</td></tr><tr><td class="type-cell">GE240ES</td><td>240</td><td>340</td><td>140</td></tr><tr><td class="type-cell">GE260ES</td><td>260</td><td>370</td><td>150</td></tr><tr><td class="type-cell">GE280ES</td><td>280</td><td>400</td><td>155</td></tr><tr><td class="type-cell">GE300ES</td><td>300</td><td>430</td><td>165</td></tr><tr><td class="type-cell">GE10GS</td><td>6</td><td>16</td><td>9</td></tr><tr><td class="type-cell">GE12GS</td><td>8</td><td>19</td><td>11</td></tr><tr><td class="type-cell">GE15GS</td><td>10</td><td>22</td><td>12</td></tr><tr><td class="type-cell">GE17GS</td><td>12</td><td>26</td><td>15</td></tr><tr><td class="type-cell">GE20GS</td><td>15</td><td>30</td><td>16</td></tr><tr><td class="type-cell">GE25GS</td><td>17</td><td>35</td><td>20</td></tr><tr><td class="type-cell">GE30GS</td><td>20</td><td>42</td><td>25</td></tr><tr><td class="type-cell">GE35GS</td><td>25</td><td>47</td><td>28</td></tr><tr><td class="type-cell">GE40GS</td><td>30</td><td>55</td><td>32</td></tr><tr><td class="type-cell">GE45GS</td><td>35</td><td>62</td><td>35</td></tr><tr><td class="type-cell">GE50GS</td><td>40</td><td>68</td><td>40</td></tr><tr><td class="type-cell">GE60GS</td><td>45</td><td>75</td><td>43</td></tr><tr><td class="type-cell">GE70GS</td><td>50</td><td>90</td><td>56</td></tr><tr><td class="type-cell">GE80GS</td><td>60</td><td>105</td><td>63</td></tr><tr><td class="type-cell">GE90GS</td><td>70</td><td>120</td><td>70</td></tr><tr><td class="type-cell">GE100GS</td><td>80</td><td>130</td><td>75</td></tr><tr><td class="type-cell">GE110GS</td><td>90</td><td>150</td><td>85</td></tr><tr><td class="type-cell">GE120GS</td><td>100</td><td>160</td><td>85</td></tr><tr><td class="type-cell">GE140GS</td><td>110</td><td>180</td><td>100</td></tr><tr><td class="type-cell">GE160GS</td><td>120</td><td>210</td><td>115</td></tr><tr><td class="type-cell">GE180GS</td><td>140</td><td>230</td><td>130</td></tr><tr><td class="type-cell">GE200GS</td><td>160</td><td>260</td><td>135</td></tr><tr><td class="type-cell">GE220GS</td><td>180</td><td>290</td><td>155</td></tr><tr><td class="type-cell">GE240GS</td><td>200</td><td>320</td><td>165</td></tr><tr><td class="type-cell">GE260GS</td><td>220</td><td>340</td><td>175</td></tr><tr><td class="type-cell">GE280GS</td><td>240</td><td>370</td><td>190</td></tr><tr><td class="type-cell">PB(JS)5</td><td>5</td><td>16</td><td>8</td></tr><tr><td class="type-cell">PB(JS)6</td><td>6</td><td>18</td><td>9</td></tr><tr><td class="type-cell">PB(JS)8</td><td>8</td><td>22</td><td>12</td></tr><tr><td class="type-cell">PB(JS)10</td><td>10</td><td>26</td><td>14</td></tr><tr><td class="type-cell">PB(JS)12</td><td>12</td><td>30</td><td>16</td></tr><tr><td class="type-cell">PB(JS)14</td><td>14</td><td>34</td><td>19</td></tr><tr><td class="type-cell">PB(JS)16</td><td>16</td><td>38</td><td>21</td></tr><tr><td class="type-cell">PB(JS)18</td><td>18</td><td>42</td><td>23</td></tr><tr><td class="type-cell">PB(JS)20</td><td>20</td><td>46</td><td>25</td></tr><tr><td class="type-cell">PB(JS)22</td><td>22</td><td>50</td><td>28</td></tr><tr><td class="type-cell">PB(JS)25</td><td>25</td><td>56</td><td>31</td></tr><tr><td class="type-cell">PB(JS)28</td><td>28</td><td>62</td><td>35</td></tr><tr><td class="type-cell">PB(JS)30</td><td>30</td><td>66</td><td>37</td></tr><tr><td class="type-cell">SBB8</td><td>12.7</td><td>22.2</td><td>11.1</td></tr><tr><td class="type-cell">SBB10</td><td>15.8</td><td>26.9</td><td>13.9</td></tr><tr><td class="type-cell">SBB12</td><td>19.1</td><td>31.7</td><td>16.7</td></tr><tr><td class="type-cell">SBB14</td><td>22.2</td><td>36.5</td><td>19.4</td></tr><tr><td class="type-cell">SBB16</td><td>25.4</td><td>41.3</td><td>22.2</td></tr><tr><td class="type-cell">SBB20</td><td>31.7</td><td>50.8</td><td>27.7</td></tr><tr><td class="type-cell">SBB22</td><td>34.9</td><td>55.5</td><td>30.1</td></tr><tr><td class="type-cell">SBB24</td><td>38.1</td><td>61.9</td><td>33.3</td></tr><tr><td class="type-cell">SBB28</td><td>44.4</td><td>71.4</td><td>38.9</td></tr><tr><td class="type-cell">SBB32</td><td>50.8</td><td>80.9</td><td>44.4</td></tr><tr><td class="type-cell">SBB36</td><td>57.1</td><td>90.5</td><td>50</td></tr><tr><td class="type-cell">SBB40</td><td>63.5</td><td>100</td><td>55.5</td></tr><tr><td class="type-cell">SBB44</td><td>69.8</td><td>111.1</td><td>61.1</td></tr><tr><td class="type-cell">SBB48</td><td>76.2</td><td>120.6</td><td>66.6</td></tr><tr><td class="type-cell">SBB52</td><td>82.5</td><td>130.2</td><td>72.2</td></tr><tr><td class="type-cell">SBB56</td><td>88.9</td><td>139.7</td><td>77.7</td></tr><tr><td class="type-cell">SBB60</td><td>95.2</td><td>149.2</td><td>83.3</td></tr><tr><td class="type-cell">SBB64</td><td>101.6</td><td>158.7</td><td>88.9</td></tr><tr><td class="type-cell">SBB68</td><td>107.9</td><td>168.2</td><td>94.4</td></tr><tr><td class="type-cell">SBB72</td><td>114.3</td><td>177.8</td><td>100</td></tr><tr><td class="type-cell">SBB76</td><td>120.6</td><td>187.3</td><td>105.6</td></tr><tr><td class="type-cell">SBB80</td><td>127</td><td>196.8</td><td>111.1</td></tr><tr><td class="type-cell">SBB96</td><td>152.4</td><td>222.2</td><td>120.6</td></tr></tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+<script>
+  (function () {
+    var input = document.getElementById('spbFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#spbBody tr'));
+    var countEl = document.getElementById('spbCount');
+
+    function updateCount(shown) {
+      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
+    }
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      updateCount(shown);
+    }
+
+    input.addEventListener('input', applyFilter);
+    updateCount(rows.length);
+  })();
+</script>
+</body>
+</html>
