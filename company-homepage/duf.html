@@ -115,6 +115,16 @@
       <div class="section-head" style="margin-top: 8px;">
         <h3 style="font-size: 18px; margin: 0 0 8px;">기본 규격 조견표 (내경 &times; 외경)</h3>
       </div>
+      <div class="field" style="max-width: 260px; margin-bottom: 12px;">
+        <label for="dufFilter">d&times;D 검색</label>
+        <input id="dufFilter" type="text" placeholder="예: 20" autocomplete="off" />
+      </div>
+      <div class="spec-toolbar">
+        <p class="finder-tip" id="dufCount" style="margin: 0;"></p>
+        <button type="button" class="spec-toolbar-btn" id="dufToggleAll">전체 펼치기</button>
+      </div>
+      <details class="series-group" id="dufGroup">
+      <summary>기본 규격 조견표<span class="series-count">23건</span></summary>
       <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px;">
         <div style="flex: 1 1 160px;">
           <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
@@ -176,6 +186,7 @@
           </div>
         </div>
       </div>
+      </details>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: -8px; margin-bottom: 20px;">단위: mm · 플랜지 타입 부쉬 길이(L)별 정확한 형번은 아래 원본 규격표를 확인해 주세요.</p>
 
       <div class="section-head" style="margin-top: 8px;">
@@ -211,5 +222,37 @@
   </footer>
 
 <script src="common.js"></script>
+<script>
+  (function () {
+    var input = document.getElementById('dufFilter');
+    var grp = document.getElementById('dufGroup');
+    var rows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+    var countEl = document.getElementById('dufCount');
+    var toggleBtn = document.getElementById('dufToggleAll');
+    var totalRows = 23;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      if (q !== '') { grp.open = shown > 0; }
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      grp.open = allOpen;
+      toggleBtn.textContent = allOpen ? '접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + '건';
+  })();
+</script>
 </body>
 </html>

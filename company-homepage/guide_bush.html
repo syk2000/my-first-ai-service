@@ -119,6 +119,16 @@
         사이즈별로 견적 문의 시 정식 규격표로 안내드립니다.
       </div>
 
+      <div class="field" style="max-width: 260px; margin-bottom: 12px;">
+        <label for="gdbFilter">형번 검색</label>
+        <input id="gdbFilter" type="text" placeholder="예: 500B-60" autocomplete="off" />
+      </div>
+      <div class="spec-toolbar">
+        <p class="finder-tip" id="gdbCount" style="margin: 0;"></p>
+        <button type="button" class="spec-toolbar-btn" id="gdbToggleAll">전체 펼치기</button>
+      </div>
+      <details class="series-group" id="gdbGroup">
+      <summary>전체 규격<span class="series-count">8건</span></summary>
       <div style="display: flex; gap: 24px; flex-wrap: wrap;">
         <div style="flex: 1 1 220px;">
           <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
@@ -147,6 +157,7 @@
           </div>
         </div>
       </div>
+      </details>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
@@ -173,5 +184,37 @@
   </footer>
 
 <script src="common.js"></script>
+<script>
+  (function () {
+    var input = document.getElementById('gdbFilter');
+    var grp = document.getElementById('gdbGroup');
+    var rows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+    var countEl = document.getElementById('gdbCount');
+    var toggleBtn = document.getElementById('gdbToggleAll');
+    var totalRows = 8;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      if (q !== '') { grp.open = shown > 0; }
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      grp.open = allOpen;
+      toggleBtn.textContent = allOpen ? '접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + '건';
+  })();
+</script>
 </body>
 </html>

@@ -116,6 +116,16 @@
         <h3 style="font-size: 18px; margin: 0 0 8px;">기본 규격 조견표 (내경 &times; 외경)</h3>
         <p style="font-size: 13.5px;">d(내경)마다 생산 가능한 길이(L)는 아래 표를 참고해 주세요. DU 형번은 &ldquo;DU + 내경 2자리 + 길이 2자리&rdquo;로 구성됩니다(예: DU1006 = d10 &middot; L6).</p>
       </div>
+      <div class="field" style="max-width: 260px; margin-bottom: 12px;">
+        <label for="duFilter">d&times;D 검색</label>
+        <input id="duFilter" type="text" placeholder="예: 20" autocomplete="off" />
+      </div>
+      <div class="spec-toolbar">
+        <p class="finder-tip" id="duCount" style="margin: 0;"></p>
+        <button type="button" class="spec-toolbar-btn" id="duToggleAll">전체 펼치기</button>
+      </div>
+      <details class="series-group" id="duGroup">
+      <summary>기본 규격 조견표<span class="series-count">45건</span></summary>
       <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px;">
         <div style="flex: 1 1 160px;">
           <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
@@ -199,6 +209,7 @@
           </div>
         </div>
       </div>
+      </details>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: -8px; margin-bottom: 20px;">단위: mm · 30&times;24 행은 원본 규격표에 인쇄된 그대로입니다(다른 행과 비교 시 D&lt;d로 예외적으로 보이나 원문 확인 결과 동일합니다).</p>
 
       <div class="section-head" style="margin-top: 8px;">
@@ -247,5 +258,37 @@
   </footer>
 
 <script src="common.js"></script>
+<script>
+  (function () {
+    var input = document.getElementById('duFilter');
+    var grp = document.getElementById('duGroup');
+    var rows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+    var countEl = document.getElementById('duCount');
+    var toggleBtn = document.getElementById('duToggleAll');
+    var totalRows = 45;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      if (q !== '') { grp.open = shown > 0; }
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      grp.open = allOpen;
+      toggleBtn.textContent = allOpen ? '접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + '건';
+  })();
+</script>
 </body>
 </html>
