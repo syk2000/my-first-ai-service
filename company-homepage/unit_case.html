@@ -119,6 +119,14 @@
         <button type="button" class="cat-tab-btn" data-tab="fs">FS형 (사각 피벗 플랜지)</button>
         <button type="button" class="cat-tab-btn" data-tab="fc">FC형 (원형 플랜지)</button>
         <button type="button" class="cat-tab-btn" data-tab="c">카트리지형 (C)</button>
+        <button type="button" class="cat-tab-btn" data-tab="hcp">HCP형 (편심고정링 필로우)</button>
+        <button type="button" class="cat-tab-btn" data-tab="salp">SALP&middot;SBLP (경량 필로우)</button>
+        <button type="button" class="cat-tab-btn" data-tab="sapp">SAPP&middot;SBPP (프레스강판 필로우)</button>
+        <button type="button" class="cat-tab-btn" data-tab="ucha">행거형 (HA)</button>
+        <button type="button" class="cat-tab-btn" data-tab="salf">SALF&middot;SBLF (경량 오벌 플랜지)</button>
+        <button type="button" class="cat-tab-btn" data-tab="sapfl">SAPFL&middot;SBPFL (프레스강판 오벌 플랜지)</button>
+        <button type="button" class="cat-tab-btn" data-tab="safcc">SAFCC&middot;SBFCC (경량 원형 플랜지)</button>
+        <button type="button" class="cat-tab-btn" data-tab="sapf">SAPF&middot;SBPF (프레스강판 원형 플랜지)</button>
         <button type="button" class="cat-tab-btn" data-tab="t">테이크업형 (T)</button>
       </div>
 
@@ -478,6 +486,230 @@
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)</p>
       </div>
 
+      <div class="cat-tab-panel" data-panel="hcp" hidden>
+        <p class="cat-tab-panel-desc">필로우 블록 하우징에 편심고정링(HC 베어링)이 일체화된 유닛입니다. P/PH/PA와 달리 UC/UK 인서트가 아닌 전용 HC 베어링을 사용합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/uchcp_diagram.png" alt="HCP형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ HCP 편심고정링 필로우 하우징 단면도 · H(중심높이)&middot;L(전장)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="hcpFilter">형번 / 축경 검색</label>
+          <input id="hcpFilter" type="text" placeholder="예: HCP206 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H(중심높이)</th><th>L(전장)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="hcpBody">
+              <tr><td class="type-cell">HCP201</td><td>12~20</td><td>33.3</td><td>127</td><td>0.73~0.79</td></tr>
+              <tr><td class="type-cell">HCP205</td><td>20.6~25.4</td><td>36.5</td><td>140</td><td>0.87</td></tr>
+              <tr><td class="type-cell">HCP206</td><td>27~31.75</td><td>42.9</td><td>165</td><td>1.4</td></tr>
+              <tr><td class="type-cell">HCP207</td><td>31.75~36.5</td><td>47.6</td><td>167</td><td>1.8</td></tr>
+              <tr><td class="type-cell">HCP208</td><td>38.1~40</td><td>49.2</td><td>184</td><td>2.1</td></tr>
+              <tr><td class="type-cell">HCP209</td><td>41.3~45</td><td>54</td><td>190</td><td>2.4</td></tr>
+              <tr><td class="type-cell">HCP210</td><td>47.6~50</td><td>57.2</td><td>206</td><td>3.1</td></tr>
+              <tr><td class="type-cell">HCP211</td><td>50.8~55.6</td><td>63.5</td><td>219</td><td>3.9</td></tr>
+              <tr><td class="type-cell">HCP212</td><td>57.2~61.9</td><td>69.8</td><td>241</td><td>5.2</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · JIB 공식 카탈로그(B07 섹션) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="salp" hidden>
+        <p class="cat-tab-panel-desc">경량&middot;소형 필로우 하우징(L타입)으로, SA(편심고정링)&middot;SB(세트스크류) 인서트 베어링과 조합합니다. P형보다 작고 가벼워 소형 기계에 적합합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/salp_diagram.png" alt="SALP·SBLP형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ SALP&middot;SBLP 경량 필로우 하우징 단면도 · H(중심높이)&middot;L(전장)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="salpFilter">형번 / 축경 검색</label>
+          <input id="salpFilter" type="text" placeholder="예: SALP206 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H(중심높이)</th><th>L(전장)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="salpBody">
+              <tr><td class="type-cell">SALP201&middot;SBLP201</td><td>12~17</td><td>30.2</td><td>114</td><td>0.36~0.39</td></tr>
+              <tr><td class="type-cell">SALP204&middot;SBLP204</td><td>20</td><td>33.3</td><td>125</td><td>0.51</td></tr>
+              <tr><td class="type-cell">SALP205&middot;SBLP205</td><td>20.6~25.4</td><td>36.5</td><td>130</td><td>0.57~0.61</td></tr>
+              <tr><td class="type-cell">SALP206&middot;SBLP206</td><td>27~31.75</td><td>42.9</td><td>156</td><td>0.69~0.72</td></tr>
+              <tr><td class="type-cell">SALP207&middot;SBLP207</td><td>31.75~36.5</td><td>47.6</td><td>165</td><td>0.94~1.02</td></tr>
+              <tr><td class="type-cell">SALP208&middot;SBLP208</td><td>38.1~40</td><td>50.8</td><td>184</td><td>1.80~1.87</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 중량 범위는 SA(편심고정링)형/SB(세트스크류)형의 차이입니다. JIB 공식 카탈로그(B10 섹션) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="sapp" hidden>
+        <p class="cat-tab-panel-desc">프레스 강판으로 제작한 경량 필로우 하우징입니다. 주철 대비 가볍고 저렴하며, SA&middot;SB 인서트 베어링과 조합합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/sapp_diagram.png" alt="SAPP·SBPP형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ SAPP&middot;SBPP 프레스강판 필로우 하우징 단면도 · H(중심높이)&middot;L(전장)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="sappFilter">형번 / 축경 검색</label>
+          <input id="sappFilter" type="text" placeholder="예: SAPP206 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H(중심높이)</th><th>L(전장)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="sappBody">
+              <tr><td class="type-cell">SAPP201&middot;SBPP201</td><td>12~17</td><td>22.2</td><td>86</td><td>0.16~0.19</td></tr>
+              <tr><td class="type-cell">SAPP204&middot;SBPP204</td><td>20</td><td>25.4</td><td>98</td><td>0.23</td></tr>
+              <tr><td class="type-cell">SAPP205&middot;SBPP205</td><td>20.6~25.4</td><td>28.6</td><td>108</td><td>0.28~0.32</td></tr>
+              <tr><td class="type-cell">SAPP206&middot;SBPP206</td><td>27~31.75</td><td>33.3</td><td>117</td><td>0.47~0.50</td></tr>
+              <tr><td class="type-cell">SAPP207&middot;SBPP207</td><td>31.75~36.5</td><td>39.7</td><td>129</td><td>0.57~0.71</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 중량 범위는 SA(편심고정링)형/SB(세트스크류)형의 차이입니다. JIB 공식 카탈로그(B47 섹션) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="ucha" hidden>
+        <p class="cat-tab-panel-desc">천장&middot;구조물에 매다는 행거(hanger) 타입 유닛입니다. 상단에 관용나사(PF) 로드 체결부가 있어 수직으로 매달아 사용합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/ucha_diagram.png" alt="행거형(HA) 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ UCHA 행거 하우징 단면도 · H1(전고)&middot;L(전장)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="uchaFilter">형번 / 축경 검색</label>
+          <input id="uchaFilter" type="text" placeholder="예: UCHA206 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H1(전고)</th><th>L(전장)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="uchaBody">
+              <tr><td class="type-cell">UCHA201</td><td>12~20</td><td>96</td><td>64</td><td>0.72~0.77</td></tr>
+              <tr><td class="type-cell">UCHA205</td><td>20.6~25.4</td><td>103</td><td>78</td><td>0.87</td></tr>
+              <tr><td class="type-cell">UCHA206</td><td>27~31.75</td><td>104</td><td>80</td><td>0.83</td></tr>
+              <tr><td class="type-cell">UCHA207</td><td>31.75~36.5</td><td>116</td><td>92</td><td>1.2</td></tr>
+              <tr><td class="type-cell">UCHA208</td><td>38.1~40</td><td>123</td><td>100</td><td>1.3</td></tr>
+              <tr><td class="type-cell">UCHA209</td><td>41.3~45</td><td>136</td><td>108</td><td>1.7</td></tr>
+              <tr><td class="type-cell">UCHA210</td><td>47.6~50</td><td>142</td><td>118</td><td>2.1</td></tr>
+              <tr><td class="type-cell">UCHA211</td><td>50.8~55.6</td><td>150</td><td>126</td><td>2.8</td></tr>
+              <tr><td class="type-cell">UCHA212</td><td>57.2~61.9</td><td>173</td><td>142</td><td>3.9</td></tr>
+              <tr><td class="type-cell">UCHA213</td><td>63.5~65</td><td>200</td><td>166</td><td>5.8</td></tr>
+              <tr><td class="type-cell">UCHA214</td><td>69.8~70</td><td>200</td><td>166</td><td>5.9</td></tr>
+              <tr><td class="type-cell">UCHA215</td><td>73~76.2</td><td>200</td><td>166</td><td>5.6</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 체결 나사는 관용나사(PF), 축경 구간별로 PF3/4~PF1 1/2까지 다릅니다(견적 문의 시 정확한 규격 안내). JIB 공식 카탈로그(B46 섹션) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="salf" hidden>
+        <p class="cat-tab-panel-desc">경량&middot;소형 오벌(장원형) 플랜지 하우징(L타입)으로, SA&middot;SB 인서트 베어링과 조합합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/salf_diagram.png" alt="SALF·SBLF형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ SALF&middot;SBLF 경량 오벌 플랜지 하우징 단면도 · H(전장)&middot;L(폭)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="salfFilter">형번 / 축경 검색</label>
+          <input id="salfFilter" type="text" placeholder="예: SALF206 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H(전장)</th><th>L(폭)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="salfBody">
+              <tr><td class="type-cell">SALF201&middot;SBLF201</td><td>12~17</td><td>81</td><td>56.4</td><td>0.28~0.36</td></tr>
+              <tr><td class="type-cell">SALF204&middot;SBLF204</td><td>20</td><td>90</td><td>61</td><td>0.33</td></tr>
+              <tr><td class="type-cell">SALF205&middot;SBLF205</td><td>20.6~25.4</td><td>95</td><td>64</td><td>0.38~0.42</td></tr>
+              <tr><td class="type-cell">SALF206&middot;SBLF206</td><td>27~31.75</td><td>113</td><td>76</td><td>0.57~0.60</td></tr>
+              <tr><td class="type-cell">SALF207&middot;SBLF207</td><td>31.75~36.5</td><td>122</td><td>89</td><td>0.77~0.85</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 중량 범위는 SA(편심고정링)형/SB(세트스크류)형의 차이입니다. JIB 공식 카탈로그(B27 섹션) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="sapfl" hidden>
+        <p class="cat-tab-panel-desc">프레스 강판으로 제작한 경량 오벌 플랜지 하우징입니다. SA&middot;SB 인서트 베어링과 조합합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/sapfl_diagram.png" alt="SAPFL·SBPFL형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ SAPFL&middot;SBPFL 프레스강판 오벌 플랜지 하우징 단면도 · H(전장)&middot;L(폭)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="sapflFilter">형번 / 축경 검색</label>
+          <input id="sapflFilter" type="text" placeholder="예: SAPFL206 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H(전장)</th><th>L(폭)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="sapflBody">
+              <tr><td class="type-cell">SAPFL201&middot;SBPFL201</td><td>12~17</td><td>81</td><td>59</td><td>0.19~0.22</td></tr>
+              <tr><td class="type-cell">SAPFL204&middot;SBPFL204</td><td>20</td><td>90</td><td>67</td><td>0.24</td></tr>
+              <tr><td class="type-cell">SAPFL205&middot;SBPFL205</td><td>20.6~25.4</td><td>95</td><td>71</td><td>0.28~0.32</td></tr>
+              <tr><td class="type-cell">SAPFL206&middot;SBPFL206</td><td>27~31.75</td><td>113</td><td>84</td><td>0.38~0.41</td></tr>
+              <tr><td class="type-cell">SAPFL207&middot;SBPFL207</td><td>31.75~36.5</td><td>125</td><td>94</td><td>0.62~0.70</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 중량 범위는 SA(편심고정링)형/SB(세트스크류)형의 차이입니다. JIB 공식 카탈로그(B48 섹션) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="safcc" hidden>
+        <p class="cat-tab-panel-desc">경량&middot;소형 원형 플랜지 하우징(C타입)으로, SA 인서트 베어링(편심고정링)과 조합합니다. FC형보다 작고 가볍습니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/safcc_diagram.png" alt="SAFCC·SBFCC형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ SAFCC&middot;SBFCC 경량 원형 플랜지 하우징 단면도 · &phi;L(전장)&middot;&phi;H3(플랜지 외경)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="safccFilter">형번 / 축경 검색</label>
+          <input id="safccFilter" type="text" placeholder="예: SAFCC206 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>&phi;L(전장)</th><th>&phi;H3(플랜지 외경)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="safccBody">
+              <tr><td class="type-cell">SAFCC201</td><td>12~20</td><td>100</td><td>62</td><td>0.53</td></tr>
+              <tr><td class="type-cell">SAFCC205</td><td>20.6~25.4</td><td>115</td><td>70</td><td>0.80</td></tr>
+              <tr><td class="type-cell">SAFCC206</td><td>27~31.75</td><td>123</td><td>80</td><td>0.95</td></tr>
+              <tr><td class="type-cell">SAFCC207</td><td>31.75~36.5</td><td>135</td><td>90</td><td>1.25</td></tr>
+              <tr><td class="type-cell">SAFCC208</td><td>38.1~40</td><td>145</td><td>100</td><td>1.68</td></tr>
+              <tr><td class="type-cell">SAFCC209</td><td>41.3~45</td><td>155</td><td>105</td><td>2.05</td></tr>
+              <tr><td class="type-cell">SAFCC210</td><td>47.6~50</td><td>165</td><td>110</td><td>2.19</td></tr>
+              <tr><td class="type-cell">SAFCC211</td><td>50.8~55.6</td><td>185</td><td>125</td><td>3.14</td></tr>
+              <tr><td class="type-cell">SAFCC212</td><td>57.2~61.9</td><td>195</td><td>135</td><td>3.83</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 카탈로그 원본은 SA(편심고정링)형 치수만 수록되어 있습니다. JIB 공식 카탈로그(B32 섹션) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="sapf" hidden>
+        <p class="cat-tab-panel-desc">프레스 강판으로 제작한 경량 원형 플랜지 하우징입니다. SA&middot;SB 인서트 베어링과 조합합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/sapf_diagram.png" alt="SAPF·SBPF형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ SAPF&middot;SBPF 프레스강판 원형 플랜지 하우징 단면도 · &phi;H(전장)&middot;A(단차 폭)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="sapfFilter">형번 / 축경 검색</label>
+          <input id="sapfFilter" type="text" placeholder="예: SAPF206 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>&phi;H(전장)</th><th>A(단차 폭)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="sapfBody">
+              <tr><td class="type-cell">SAPF201&middot;SBPF201</td><td>12~17</td><td>81</td><td>14</td><td>0.27~0.30</td></tr>
+              <tr><td class="type-cell">SAPF204&middot;SBPF204</td><td>20</td><td>90</td><td>17</td><td>0.33</td></tr>
+              <tr><td class="type-cell">SAPF205&middot;SBPF205</td><td>20.6~25.4</td><td>95</td><td>18</td><td>0.38~0.42</td></tr>
+              <tr><td class="type-cell">SAPF206&middot;SBPF206</td><td>27~31.75</td><td>113</td><td>19</td><td>0.62~0.65</td></tr>
+              <tr><td class="type-cell">SAPF207&middot;SBPF207</td><td>31.75~36.5</td><td>122</td><td>21</td><td>0.82~0.90</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 중량 범위는 SA(편심고정링)형/SB(세트스크류)형의 차이입니다. JIB 공식 카탈로그(B49 섹션) 기준</p>
+      </div>
+
       <div class="cat-tab-panel" data-panel="t" hidden>
         <p class="cat-tab-panel-desc">UC(내경 표준)&middot;UK(테이퍼 내경) 베어링을 원통형 테이크업 하우징에 일체화한 유닛입니다. 레일을 따라 위치 조정이 가능해 체인&middot;벨트 장력 조절 등에 사용됩니다.</p>
         <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
@@ -518,7 +750,7 @@
       </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">
-        &#8251; 위 표는 SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그(하우징 치수표, B01/B08/B09/B11/B17/B19/B25/B26/B28/B34/B40/B42 섹션)를 기준으로 작성했습니다. 하우징은 여러 축경을 하나의 규격으로 겸용하는 경우가 많아, 겸용되는 축경 범위를 &ldquo;적용 축경&rdquo;으로 표시했습니다. H&middot;L 외의 세부 치수(J&middot;F&middot;볼트 규격 등)는 정식 도면으로 별도 안내드리며, 베어링 인서트(UC/UK) 자체 규격은 <a href="ball_bearing_unit.html">베어링 유니트</a> 페이지를 참고해 주세요. 구면 롤러 베어링용 SN 하우징은 <a href="plummer_block.html">플러머 블럭</a> 페이지를 참고해 주세요. 정밀 가공&middot;발주 전에는 반드시 견적 문의로 최종 확인하시기 바랍니다.
+        &#8251; 위 표는 SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그(하우징 치수표, B01/B07/B08/B09/B10/B11/B17/B19/B25/B26/B27/B28/B32/B34/B40/B42/B46/B47/B48/B49 섹션)를 기준으로 작성했습니다. 하우징은 여러 축경을 하나의 규격으로 겸용하는 경우가 많아, 겸용되는 축경 범위를 &ldquo;적용 축경&rdquo;으로 표시했습니다. H&middot;L 외의 세부 치수(J&middot;F&middot;볼트 규격 등)는 정식 도면으로 별도 안내드리며, 베어링 인서트(UC/UK) 자체 규격은 <a href="ball_bearing_unit.html">베어링 유니트</a> 페이지를 참고해 주세요. 구면 롤러 베어링용 SN 하우징은 <a href="plummer_block.html">플러머 블럭</a> 페이지를 참고해 주세요. 정밀 가공&middot;발주 전에는 반드시 견적 문의로 최종 확인하시기 바랍니다.
       </p>
     </div>
   </section>
@@ -857,6 +1089,22 @@
 
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+  })();
+</script>
+
+<script>
+  (function () {
+    ['hcp', 'salp', 'sapp', 'ucha', 'salf', 'sapfl', 'safcc', 'sapf'].forEach(function (prefix) {
+      var input = document.getElementById(prefix + 'Filter');
+      var rows = Array.prototype.slice.call(document.querySelectorAll('#' + prefix + 'Body tr'));
+      if (!input) return;
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toUpperCase();
+        rows.forEach(function (row) {
+          row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1) ? '' : 'none';
+        });
+      });
+    });
   })();
 </script>
 </body>
