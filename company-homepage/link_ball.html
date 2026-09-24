@@ -101,9 +101,12 @@
         <p class="eyebrow">Link Ball</p>
         <h2>링크 볼</h2>
         <p>볼 스터드와 소켓형 시트가 결합된 구면 조인트로, 직선&middot;요동 운동이 함께 발생하는 링크 기구의 연결부에 사용됩니다.</p>
-        <p>ZBL(RBL) 계열로 공급되며, 국내 유통 시장에서는 ZBL(잘만정공/JMC)과 RBL(일성테크/IBC) 두 형번이 동일 규격으로 상호 호환됩니다.</p>
+        <p>당사 SWS 카탈로그의 로드 엔드 페이지에 함께 수록된 ZBL(RBL) 계열과 RBI 계열, 두 형번으로 공급됩니다.</p>
         <p class="section-head-tip">형번을 입력하면 검색됩니다.</p>
       </div>
+
+      <h3 style="margin: 0 0 6px; font-size: 17px;">ZBL(RBL) 시리즈</h3>
+      <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 10px;">국내 유통 시장에서는 ZBL(잘만정공/JMC)과 RBL(일성테크/IBC) 두 형번이 동일 규격으로 상호 호환됩니다.</p>
       <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
         <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">구조 단면도 (개념도)</p>
         <svg viewBox="0 0 360 220" style="display: block; margin: 0 auto; max-width: 320px; width: 100%; height: auto;" aria-label="링크 볼 단면도">
@@ -172,11 +175,53 @@
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (중량은 g)</p>
 
+      <h3 style="margin: 28px 0 6px; font-size: 17px;">RBI 시리즈</h3>
+      <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 10px;">ZBL(RBL)과 달리 양쪽 모두 축 방향으로 나사가 나오는 구조로, 당사 SWS 카탈로그에는 &ldquo;수주 대응품&rdquo;(주문 제작)으로 별도 수록되어 있습니다.</p>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">당사 SWS 카탈로그 규격 도면</p>
+        <img src="img/rbi_link_ball.png" alt="RBI 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+        <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">S&middot;S1=나사 &middot; L=전장 &middot; D=하우징 외경 &middot; W=폭</p>
+      </div>
+
+      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+        <label for="rbiFilter">형번 검색</label>
+        <input id="rbiFilter" type="text" placeholder="예: RBI10 또는 M12" autocomplete="off" />
+      </div>
+      <p class="finder-tip" id="rbiCount" style="margin-bottom: 10px;"></p>
+
+      <div class="finder-results" style="overflow-x: auto;">
+        <table class="spec-table" style="min-width: 480px; max-width: 640px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>나사(S)</th>
+              <th>L(전장)</th>
+              <th>D(하우징 외경)</th>
+              <th>W(폭)</th>
+            </tr>
+          </thead>
+          <tbody id="rbiBody">
+            <tr><td class="type-cell">RBI 5D</td><td>M5&times;0.8</td><td>46</td><td>17</td><td>9</td></tr>
+            <tr><td class="type-cell">RBI 6D</td><td>M6&times;1.0</td><td>55.2</td><td>20</td><td>11</td></tr>
+            <tr><td class="type-cell">RBI 8D</td><td>M8&times;1.25</td><td>65</td><td>24</td><td>14</td></tr>
+            <tr><td class="type-cell">RBI 10D</td><td>M10&times;1.25</td><td>74.5</td><td>28</td><td>17</td></tr>
+            <tr><td class="type-cell">RBI 10BD</td><td>M10&times;1.5</td><td>80.5</td><td>28</td><td>17</td></tr>
+            <tr><td class="type-cell">RBI 12D</td><td>M12&times;1.25</td><td>84</td><td>32</td><td>19</td></tr>
+            <tr><td class="type-cell">RBI 12BD</td><td>M12&times;1.75</td><td>91</td><td>32</td><td>19</td></tr>
+            <tr><td class="type-cell">RBI 14D</td><td>M14&times;1.5</td><td>103</td><td>36</td><td>22</td></tr>
+            <tr><td class="type-cell">RBI 14BD</td><td>M14&times;2.0</td><td>109</td><td>36</td><td>22</td></tr>
+            <tr><td class="type-cell">RBI 16D</td><td>M16&times;1.5</td><td>112</td><td>40</td><td>22</td></tr>
+            <tr><td class="type-cell">RBI 18D</td><td>M18&times;1.5</td><td>118</td><td>40</td><td>22</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
+
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        &#8251; 위 표는 SWS 자체 카탈로그에 없어 잘만정밀(JMC, jalman.com) 공식 카탈로그의 &ldquo;ZBL(RBL)&rdquo; 규격표를 기준으로 작성했습니다.
-        &ldquo;R/L&rdquo;은 나사 방향(우&middot;좌)을 나타내며 형번 끝에 별도 표기됩니다. 일부 유통 자료에서 이 규격을 &ldquo;THK RBL&rdquo;로 표기하는 경우가 있으나,
-        THK의 실제 정식 형번은 BL/BL-A(경방향) 또는 RBI(축방향)이며 치수도 서로 다릅니다 &mdash; 본 표는 THK 제품이 아닌 국산 ZBL(RBL) 규격입니다.
-        정밀 가공&middot;발주 전에는 반드시 견적 문의로 최종 확인하시기 바랍니다.
+        &#8251; ZBL(RBL) 규격은 당사 SWS 카탈로그의 로드 엔드 페이지에 &ldquo;ZBL(RBL)&rdquo;로 함께 수록되어 있으며, 국내 유통 자료(잘만정밀 등)와도 동일 규격입니다.
+        &ldquo;R/L&rdquo;은 나사 방향(우&middot;좌)을 나타내며 형번 끝에 별도 표기됩니다.
+        RBI 규격 역시 같은 카탈로그 페이지에 &ldquo;수주 대응품&rdquo;으로 함께 수록되어 있으나, 주문 제작 품목인 만큼 리드타임&middot;최소 수량은 발주 전 견적 문의로 확인하시기 바랍니다.
+        일부 유통 자료에서 유사 형번을 다른 제조사(예: THK) 제품으로 표기하는 경우가 있으니, 정밀 가공&middot;발주 전에는 반드시 형번과 도면을 대조해 최종 확인하시기 바랍니다.
       </p>
     </div>
   </section>
@@ -204,6 +249,30 @@
     var input = document.getElementById('lbFilter');
     var rows = Array.prototype.slice.call(document.querySelectorAll('#lbBody tr'));
     var countEl = document.getElementById('lbCount');
+
+    function updateCount(shown) {
+      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
+    }
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      updateCount(shown);
+    }
+
+    input.addEventListener('input', applyFilter);
+    updateCount(rows.length);
+  })();
+
+  (function () {
+    var input = document.getElementById('rbiFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#rbiBody tr'));
+    var countEl = document.getElementById('rbiCount');
 
     function updateCount(shown) {
       countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
