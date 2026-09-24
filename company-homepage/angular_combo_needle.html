@@ -102,6 +102,7 @@
         <h2>앵귤러 복합형 니들 베어링</h2>
         <p>레이디얼 니들 베어링과 앵귤러 콘택트 볼 베어링을 조합한 형식으로, 고속 회전을 유지하면서 경방향 하중의 약 25% 수준까지 축방향 하중을 함께 지지할 수 있습니다. 공작기계, 섬유기계 등에 사용됩니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
+      <div class="spec-diagram" style="margin: 4px 0 18px;"><img src="img/angular_combo_needle.png" alt="구조 단면도" style="max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius-md);" loading="lazy"></div>
 
       <div class="field" style="max-width: 360px; margin-bottom: 16px;">
         <label for="acnFilter">형번 / 규격 검색</label>
@@ -109,23 +110,38 @@
       </div>
       <p class="finder-tip" id="acnCount" style="margin-bottom: 10px;"></p>
 
-      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-        <table class="spec-table" id="acnTable" style="min-width: 420px; max-width: 600px;">
+      <div class="finder-results two-col" style="margin-top: 0; display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
           <thead>
             <tr>
               <th>형번</th>
               <th>d(내경)</th>
-              <th>D(외경)</th>
+              <th>D(외경)</th><th>공차(d/D)</th>
               <th>C</th>
             </tr>
           </thead>
-          <tbody id="acnBody"><tr><td class="type-cell">NATA5902</td><td>15</td><td>28</td><td>18</td></tr><tr><td class="type-cell">NATB5902</td><td>15</td><td>28</td><td>18</td></tr><tr><td class="type-cell">NATA5903</td><td>17</td><td>30</td><td>18</td></tr><tr><td class="type-cell">NATB5903</td><td>17</td><td>30</td><td>18</td></tr><tr><td class="type-cell">NATA5904</td><td>20</td><td>37</td><td>23</td></tr><tr><td class="type-cell">NATB5904</td><td>20</td><td>37</td><td>23</td></tr><tr><td class="type-cell">NATA5905</td><td>25</td><td>42</td><td>23</td></tr><tr><td class="type-cell">NATB5905</td><td>25</td><td>42</td><td>23</td></tr><tr><td class="type-cell">NATA5906</td><td>30</td><td>47</td><td>23</td></tr><tr><td class="type-cell">NATB5906</td><td>30</td><td>47</td><td>23</td></tr><tr><td class="type-cell">NATA5907</td><td>35</td><td>55</td><td>27</td></tr><tr><td class="type-cell">NATB5907</td><td>35</td><td>55</td><td>27</td></tr><tr><td class="type-cell">NATA5908</td><td>40</td><td>62</td><td>30</td></tr><tr><td class="type-cell">NATB5908</td><td>40</td><td>62</td><td>30</td></tr><tr><td class="type-cell">NATA5909</td><td>45</td><td>68</td><td>30</td></tr><tr><td class="type-cell">NATB5909</td><td>45</td><td>68</td><td>30</td></tr><tr><td class="type-cell">NATA5910</td><td>50</td><td>72</td><td>30</td></tr><tr><td class="type-cell">NATB5910</td><td>50</td><td>72</td><td>30</td></tr><tr><td class="type-cell">NATA5911</td><td>55</td><td>80</td><td>34</td></tr><tr><td class="type-cell">NATB5911</td><td>55</td><td>80</td><td>34</td></tr><tr><td class="type-cell">NATA5912</td><td>60</td><td>85</td><td>34</td></tr><tr><td class="type-cell">NATB5912</td><td>60</td><td>85</td><td>34</td></tr><tr><td class="type-cell">NATA5913</td><td>65</td><td>90</td><td>34</td></tr><tr><td class="type-cell">NATB5913</td><td>65</td><td>90</td><td>34</td></tr><tr><td class="type-cell">NATA5914</td><td>70</td><td>100</td><td>40</td></tr><tr><td class="type-cell">NATB5914</td><td>70</td><td>100</td><td>40</td></tr></tbody>
+          <tbody id="acnBody"><tr><td class="type-cell">NATA5902</td><td>15</td><td>28</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATB5902</td><td>15</td><td>28</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATA5903</td><td>17</td><td>30</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATB5903</td><td>17</td><td>30</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATA5904</td><td>20</td><td>37</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATB5904</td><td>20</td><td>37</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATA5905</td><td>25</td><td>42</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATB5905</td><td>25</td><td>42</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATA5906</td><td>30</td><td>47</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATB5906</td><td>30</td><td>47</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATA5907</td><td>35</td><td>55</td><td>-0.012/-0.013</td><td>27</td></tr><tr><td class="type-cell">NATB5907</td><td>35</td><td>55</td><td>-0.012/-0.013</td><td>27</td></tr><tr><td class="type-cell">NATA5908</td><td>40</td><td>62</td><td>-0.012/-0.013</td><td>30</td></tr></tbody>
         </table>
+        </div>
+        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th><th>공차(d/D)</th>
+              <th>C</th>
+            </tr>
+          </thead>
+          <tbody id="acnBody2"><tr><td class="type-cell">NATB5908</td><td>40</td><td>62</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATA5909</td><td>45</td><td>68</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATB5909</td><td>45</td><td>68</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATA5910</td><td>50</td><td>72</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATB5910</td><td>50</td><td>72</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATA5911</td><td>55</td><td>80</td><td>-0.015/-0.013</td><td>34</td></tr><tr><td class="type-cell">NATB5911</td><td>55</td><td>80</td><td>-0.015/-0.013</td><td>34</td></tr><tr><td class="type-cell">NATA5912</td><td>60</td><td>85</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATB5912</td><td>60</td><td>85</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATA5913</td><td>65</td><td>90</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATB5913</td><td>65</td><td>90</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATA5914</td><td>70</td><td>100</td><td>-0.015/-0.015</td><td>40</td></tr><tr><td class="type-cell">NATB5914</td><td>70</td><td>100</td><td>-0.015/-0.015</td><td>40</td></tr></tbody>
+        </table>
+        </div>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br> 표의 "공차(d/D)" 열은 ISO 492 일반급(Normal, P0)의 내경(d)·외경(D) 허용 편차(상한 0, 하한 표시값, 단위 mm)를 적용한 참고값이며 SWS 카탈로그 자체 수치가 아닙니다. 정밀등급(P6/P5/P4 등) 지정 시 별도 공차가 적용되므로 발주 전 확인하시기 바랍니다.
       </p>
     </div>
   </section>
@@ -151,7 +167,7 @@
 <script>
   (function () {
     var input = document.getElementById('acnFilter');
-    var rows = Array.prototype.slice.call(document.querySelectorAll('#acnBody tr'));
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#acnBody tr, #acnBody2 tr'));
     var countEl = document.getElementById('acnCount');
 
     function updateCount(shown) {

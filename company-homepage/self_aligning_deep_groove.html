@@ -102,6 +102,7 @@
         <h2>자동조심 깊은 홈 볼 베어링</h2>
         <p>깊은 홈 볼 베어링에 자동조심 기능을 결합한 소형 베어링으로, 축의 편심을 보정하면서도 깊은 홈 구조 특유의 낮은 마찰과 높은 회전 정밀도를 유지합니다. 소형 모터, 정밀 기구부 등에 사용됩니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
+      <div class="spec-diagram" style="margin: 4px 0 18px;"><img src="img/self_aligning_deep_groove.png" alt="구조 단면도" style="max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius-md);" loading="lazy"></div>
 
       <div class="field" style="max-width: 360px; margin-bottom: 16px;">
         <label for="sadgFilter">형번 / 규격 검색</label>
@@ -109,24 +110,40 @@
       </div>
       <p class="finder-tip" id="sadgCount" style="margin-bottom: 10px;"></p>
 
-      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-        <table class="spec-table" id="sadgTable" style="min-width: 460px; max-width: 640px;">
+      <div class="finder-results two-col" style="margin-top: 0; display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 460px; max-width: 640px;">
           <thead>
             <tr>
               <th>형번</th>
               <th>d(내경)</th>
-              <th>D(외경)</th>
+              <th>D(외경)</th><th>공차(d/D)</th>
               <th>B</th>
               <th>d2</th>
             </tr>
           </thead>
-          <tbody id="sadgBody"><tr><td class="type-cell">201-NPP-B</td><td>12</td><td>32</td><td>10</td><td>17.1</td></tr><tr><td class="type-cell">203-NPP-B</td><td>17</td><td>40</td><td>12</td><td>22.5</td></tr><tr><td class="type-cell">204-NPP-B</td><td>20</td><td>47</td><td>14</td><td>26.5</td></tr><tr><td class="type-cell">205-NPP-B</td><td>25</td><td>52</td><td>15</td><td>30.3</td></tr><tr><td class="type-cell">206-NPP-B</td><td>30</td><td>62</td><td>16</td><td>37.4</td></tr><tr><td class="type-cell">207-NPP-B</td><td>35</td><td>72</td><td>17</td><td>42.4</td></tr><tr><td class="type-cell">208-NPP-B</td><td>40</td><td>80</td><td>18</td><td>48.4</td></tr><tr><td class="type-cell">209-NPP-B</td><td>45</td><td>85</td><td>19</td><td>53.2</td></tr><tr><td class="type-cell">210-NPP-B</td><td>50</td><td>90</td><td>20</td><td>58.2</td></tr></tbody>
+          <tbody id="sadgBody"><tr><td class="type-cell">201-NPP-B</td><td>12</td><td>32</td><td>-0.008/-0.011</td><td>10</td><td>17.1</td></tr><tr><td class="type-cell">203-NPP-B</td><td>17</td><td>40</td><td>-0.008/-0.011</td><td>12</td><td>22.5</td></tr><tr><td class="type-cell">204-NPP-B</td><td>20</td><td>47</td><td>-0.01/-0.011</td><td>14</td><td>26.5</td></tr><tr><td class="type-cell">205-NPP-B</td><td>25</td><td>52</td><td>-0.01/-0.013</td><td>15</td><td>30.3</td></tr><tr><td class="type-cell">206-NPP-B</td><td>30</td><td>62</td><td>-0.01/-0.013</td><td>16</td><td>37.4</td></tr></tbody>
         </table>
+        </div>
+        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 460px; max-width: 640px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th><th>공차(d/D)</th>
+              <th>B</th>
+              <th>d2</th>
+            </tr>
+          </thead>
+          <tbody id="sadgBody2"><tr><td class="type-cell">207-NPP-B</td><td>35</td><td>72</td><td>-0.012/-0.013</td><td>17</td><td>42.4</td></tr><tr><td class="type-cell">208-NPP-B</td><td>40</td><td>80</td><td>-0.012/-0.013</td><td>18</td><td>48.4</td></tr><tr><td class="type-cell">209-NPP-B</td><td>45</td><td>85</td><td>-0.012/-0.015</td><td>19</td><td>53.2</td></tr><tr><td class="type-cell">210-NPP-B</td><td>50</td><td>90</td><td>-0.012/-0.015</td><td>20</td><td>58.2</td></tr></tbody>
+        </table>
+        </div>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br> 표의 "공차(d/D)" 열은 ISO 492 일반급(Normal, P0)의 내경(d)·외경(D) 허용 편차(상한 0, 하한 표시값, 단위 mm)를 적용한 참고값이며 SWS 카탈로그 자체 수치가 아닙니다. 정밀등급(P6/P5/P4 등) 지정 시 별도 공차가 적용되므로 발주 전 확인하시기 바랍니다.
       </p>
     </div>
   </section>
@@ -152,7 +169,7 @@
 <script>
   (function () {
     var input = document.getElementById('sadgFilter');
-    var rows = Array.prototype.slice.call(document.querySelectorAll('#sadgBody tr'));
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#sadgBody tr, #sadgBody2 tr'));
     var countEl = document.getElementById('sadgCount');
 
     function updateCount(shown) {

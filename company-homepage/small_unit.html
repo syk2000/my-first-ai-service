@@ -102,6 +102,7 @@
         <h2>소형유니트 (USCP/USBP/USAP, USCFL/USBFL/USAFL)</h2>
         <p>소형 축경(10~30mm)에 특화된 미니어처 베어링 유닛입니다. 필로우 블록형(USCP 볼베어링형·USBP UC베어링형·USAP UC베어링 편심칼라형)과 플랜지형(USCFL·USBFL·USAFL)으로 공급되며, 하우징 규격은 세 타입이 공통입니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
+      <div class="spec-diagram" style="margin: 4px 0 18px;"><img src="img/small_unit.png" alt="구조 단면도" style="max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius-md);" loading="lazy"></div>
 
       <div class="field" style="max-width: 360px; margin-bottom: 16px;">
         <label for="smuFilter">형번 / 규격 검색</label>
@@ -109,8 +110,9 @@
       </div>
       <p class="finder-tip" id="smuCount" style="margin-bottom: 10px;"></p>
 
-      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-        <table class="spec-table" id="smuTable" style="min-width: 420px; max-width: 600px;">
+      <div class="finder-results two-col" style="margin-top: 0; display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
           <thead>
             <tr>
               <th>형번</th>
@@ -119,13 +121,27 @@
               <th>B(폭)</th>
             </tr>
           </thead>
-          <tbody id="smuBody"><tr><td class="type-cell">P-000</td><td>10</td><td>67</td><td>18</td></tr><tr><td class="type-cell">P-001</td><td>12</td><td>71</td><td>19</td></tr><tr><td class="type-cell">P-002</td><td>15</td><td>80</td><td>22</td></tr><tr><td class="type-cell">P-003</td><td>17</td><td>85</td><td>24</td></tr><tr><td class="type-cell">P-004</td><td>20</td><td>100</td><td>28</td></tr><tr><td class="type-cell">P-005</td><td>25</td><td>112</td><td>32</td></tr><tr><td class="type-cell">P-006</td><td>30</td><td>132</td><td>36</td></tr><tr><td class="type-cell">FL-000</td><td>10</td><td>36</td><td>60</td></tr><tr><td class="type-cell">FL-001</td><td>12</td><td>38</td><td>63</td></tr><tr><td class="type-cell">FL-002</td><td>15</td><td>42</td><td>67</td></tr><tr><td class="type-cell">FL-003</td><td>17</td><td>46</td><td>71</td></tr><tr><td class="type-cell">FL-004</td><td>20</td><td>55</td><td>90</td></tr><tr><td class="type-cell">FL-005</td><td>25</td><td>60</td><td>95</td></tr><tr><td class="type-cell">FL-006</td><td>30</td><td>70</td><td>112</td></tr></tbody>
+          <tbody id="smuBody"><tr><td class="type-cell">P-000</td><td>10</td><td>67</td><td>18</td></tr><tr><td class="type-cell">P-001</td><td>12</td><td>71</td><td>19</td></tr><tr><td class="type-cell">P-002</td><td>15</td><td>80</td><td>22</td></tr><tr><td class="type-cell">P-003</td><td>17</td><td>85</td><td>24</td></tr><tr><td class="type-cell">P-004</td><td>20</td><td>100</td><td>28</td></tr><tr><td class="type-cell">P-005</td><td>25</td><td>112</td><td>32</td></tr><tr><td class="type-cell">P-006</td><td>30</td><td>132</td><td>36</td></tr></tbody>
         </table>
+        </div>
+        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th>
+              <th>B(폭)</th>
+            </tr>
+          </thead>
+          <tbody id="smuBody2"><tr><td class="type-cell">FL-000</td><td>10</td><td>36</td><td>60</td></tr><tr><td class="type-cell">FL-001</td><td>12</td><td>38</td><td>63</td></tr><tr><td class="type-cell">FL-002</td><td>15</td><td>42</td><td>67</td></tr><tr><td class="type-cell">FL-003</td><td>17</td><td>46</td><td>71</td></tr><tr><td class="type-cell">FL-004</td><td>20</td><td>55</td><td>90</td></tr><tr><td class="type-cell">FL-005</td><td>25</td><td>60</td><td>95</td></tr><tr><td class="type-cell">FL-006</td><td>30</td><td>70</td><td>112</td></tr></tbody>
+        </table>
+        </div>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br> 이 제품군은 ISO 492 일반 허용공차 규격이 적용되지 않는(또는 별도 정밀등급이 적용되는) 품목으로, 공차는 제조사 자체 규격을 따릅니다. 정확한 공차는 발주 전 문의 바랍니다.
       </p>
     </div>
   </section>
@@ -151,7 +167,7 @@
 <script>
   (function () {
     var input = document.getElementById('smuFilter');
-    var rows = Array.prototype.slice.call(document.querySelectorAll('#smuBody tr'));
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#smuBody tr, #smuBody2 tr'));
     var countEl = document.getElementById('smuCount');
 
     function updateCount(shown) {

@@ -102,6 +102,7 @@
         <h2>축하중용 구름 볼 베어링 (인서트 베어링)</h2>
         <p>베어링 유니트의 하우징 없이 내륜만 축에 고정하는 인서트 베어링입니다. 세트 스크류(그럽 스크류)형(AY/GYE/GAY)과 편심 로킹 칼라형(GRAE/RAE/GE)으로 나뉩니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
+      <div class="spec-diagram" style="margin: 4px 0 18px;"><img src="img/radial_insert.png" alt="구조 단면도" style="max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius-md);" loading="lazy"></div>
 
       <div class="field" style="max-width: 360px; margin-bottom: 16px;">
         <label for="ribFilter">형번 / 규격 검색</label>
@@ -109,24 +110,40 @@
       </div>
       <p class="finder-tip" id="ribCount" style="margin-bottom: 10px;"></p>
 
-      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-        <table class="spec-table" id="ribTable" style="min-width: 480px; max-width: 680px;">
+      <div class="finder-results two-col" style="margin-top: 0; display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 480px; max-width: 680px;">
           <thead>
             <tr>
               <th>형번</th>
               <th>d(내경)</th>
-              <th>D(외경)</th>
+              <th>D(외경)</th><th>공차(d/D)</th>
               <th>C</th>
               <th>B</th>
             </tr>
           </thead>
-          <tbody id="ribBody"><tr><td class="type-cell">AY,GYE,GAY12-NPP-B</td><td>12</td><td>40</td><td>12</td><td>22</td></tr><tr><td class="type-cell">AY,GYE,GAY15-NPP-B</td><td>15</td><td>40</td><td>12</td><td>22</td></tr><tr><td class="type-cell">GYE16-KRR-B</td><td>16</td><td>40</td><td>12</td><td>27.4</td></tr><tr><td class="type-cell">AY,GYE,GAY17-NPP-B</td><td>17</td><td>40</td><td>12</td><td>22</td></tr><tr><td class="type-cell">AY,GYE,GAY20-NPP-B</td><td>20</td><td>47</td><td>14</td><td>25</td></tr><tr><td class="type-cell">AY,GYE,GAY25-NPP-B</td><td>25</td><td>52</td><td>15</td><td>27</td></tr><tr><td class="type-cell">AY,GYE,GAY30-NPP-B</td><td>30</td><td>62</td><td>18</td><td>30</td></tr><tr><td class="type-cell">AY,GYE,GAY35-NPP-B</td><td>35</td><td>72</td><td>19</td><td>35</td></tr><tr><td class="type-cell">GYE,GAY40-NPP-B</td><td>40</td><td>80</td><td>21</td><td>10.5</td></tr><tr><td class="type-cell">GYE,GAY45-NPP-B</td><td>45</td><td>85</td><td>22</td><td>11</td></tr><tr><td class="type-cell">GYE,GAY50-NPP-B</td><td>50</td><td>90</td><td>22</td><td>11</td></tr><tr><td class="type-cell">GYE55-KRR-B</td><td>55</td><td>100</td><td>25</td><td>22.2</td></tr><tr><td class="type-cell">GYE,GAY60-NPP-B</td><td>60</td><td>110</td><td>24</td><td>13</td></tr><tr><td class="type-cell">GYE65-214-KRR-B</td><td>65</td><td>125</td><td>28</td><td>30.2</td></tr><tr><td class="type-cell">GYE70-KRR-B</td><td>70</td><td>125</td><td>28</td><td>30.2</td></tr><tr><td class="type-cell">GYE75-KRR-B</td><td>75</td><td>130</td><td>28</td><td>33.3</td></tr><tr><td class="type-cell">GYE80-KRR-B</td><td>80</td><td>140</td><td>30</td><td>33.3</td></tr><tr><td class="type-cell">GYE90-KRR-B</td><td>90</td><td>160</td><td>32</td><td>39.7</td></tr><tr><td class="type-cell">GRAE,RAE12-NPP-B</td><td>12</td><td>40</td><td>12</td><td>19</td></tr><tr><td class="type-cell">RAE15-NPP-B</td><td>15</td><td>40</td><td>12</td><td>19</td></tr><tr><td class="type-cell">GRAE,RAE17-NPP-B</td><td>17</td><td>40</td><td>12</td><td>19</td></tr><tr><td class="type-cell">GRAE,RAE20-NPP-B</td><td>20</td><td>47</td><td>14</td><td>21.4</td></tr><tr><td class="type-cell">GRAE,RAE25-NPP-B</td><td>25</td><td>52</td><td>15</td><td>21.4</td></tr><tr><td class="type-cell">GRAE,GE45-KRR-B</td><td>45</td><td>85</td><td>22</td><td>26.4</td></tr><tr><td class="type-cell">GRAE,GE60-KRR-B</td><td>60</td><td>110</td><td>24</td><td>61.9</td></tr><tr><td class="type-cell">GE65-214-KRR-B</td><td>65</td><td>125</td><td>28</td><td>48.5</td></tr><tr><td class="type-cell">GNE,GE70-KRR-B</td><td>70</td><td>125</td><td>28</td><td>48.5</td></tr><tr><td class="type-cell">GE75-KRR-B</td><td>75</td><td>130</td><td>28</td><td>49.5</td></tr><tr><td class="type-cell">GE80-KRR-B</td><td>80</td><td>140</td><td>30</td><td>53.2</td></tr><tr><td class="type-cell">GE90-KRR-B</td><td>90</td><td>160</td><td>32</td><td>52</td></tr><tr><td class="type-cell">GE100-KRR-B</td><td>100</td><td>180</td><td>36</td><td>57.5</td></tr><tr><td class="type-cell">GE120-KRR-B</td><td>120</td><td>215</td><td>40</td><td>63.5</td></tr></tbody>
+          <tbody id="ribBody"><tr><td class="type-cell">AY,GYE,GAY12-NPP-B</td><td>12</td><td>40</td><td>-0.008/-0.011</td><td>12</td><td>22</td></tr><tr><td class="type-cell">AY,GYE,GAY15-NPP-B</td><td>15</td><td>40</td><td>-0.008/-0.011</td><td>12</td><td>22</td></tr><tr><td class="type-cell">GYE16-KRR-B</td><td>16</td><td>40</td><td>-0.008/-0.011</td><td>12</td><td>27.4</td></tr><tr><td class="type-cell">AY,GYE,GAY17-NPP-B</td><td>17</td><td>40</td><td>-0.008/-0.011</td><td>12</td><td>22</td></tr><tr><td class="type-cell">AY,GYE,GAY20-NPP-B</td><td>20</td><td>47</td><td>-0.01/-0.011</td><td>14</td><td>25</td></tr><tr><td class="type-cell">AY,GYE,GAY25-NPP-B</td><td>25</td><td>52</td><td>-0.01/-0.013</td><td>15</td><td>27</td></tr><tr><td class="type-cell">AY,GYE,GAY30-NPP-B</td><td>30</td><td>62</td><td>-0.01/-0.013</td><td>18</td><td>30</td></tr><tr><td class="type-cell">AY,GYE,GAY35-NPP-B</td><td>35</td><td>72</td><td>-0.012/-0.013</td><td>19</td><td>35</td></tr><tr><td class="type-cell">GYE,GAY40-NPP-B</td><td>40</td><td>80</td><td>-0.012/-0.013</td><td>21</td><td>10.5</td></tr><tr><td class="type-cell">GYE,GAY45-NPP-B</td><td>45</td><td>85</td><td>-0.012/-0.015</td><td>22</td><td>11</td></tr><tr><td class="type-cell">GYE,GAY50-NPP-B</td><td>50</td><td>90</td><td>-0.012/-0.015</td><td>22</td><td>11</td></tr><tr><td class="type-cell">GYE55-KRR-B</td><td>55</td><td>100</td><td>-0.015/-0.015</td><td>25</td><td>22.2</td></tr><tr><td class="type-cell">GYE,GAY60-NPP-B</td><td>60</td><td>110</td><td>-0.015/-0.015</td><td>24</td><td>13</td></tr><tr><td class="type-cell">GYE65-214-KRR-B</td><td>65</td><td>125</td><td>-0.015/-0.018</td><td>28</td><td>30.2</td></tr><tr><td class="type-cell">GYE70-KRR-B</td><td>70</td><td>125</td><td>-0.015/-0.018</td><td>28</td><td>30.2</td></tr><tr><td class="type-cell">GYE75-KRR-B</td><td>75</td><td>130</td><td>-0.015/-0.018</td><td>28</td><td>33.3</td></tr></tbody>
         </table>
+        </div>
+        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 480px; max-width: 680px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th><th>공차(d/D)</th>
+              <th>C</th>
+              <th>B</th>
+            </tr>
+          </thead>
+          <tbody id="ribBody2"><tr><td class="type-cell">GYE80-KRR-B</td><td>80</td><td>140</td><td>-0.015/-0.018</td><td>30</td><td>33.3</td></tr><tr><td class="type-cell">GYE90-KRR-B</td><td>90</td><td>160</td><td>-0.02/-0.025</td><td>32</td><td>39.7</td></tr><tr><td class="type-cell">GRAE,RAE12-NPP-B</td><td>12</td><td>40</td><td>-0.008/-0.011</td><td>12</td><td>19</td></tr><tr><td class="type-cell">RAE15-NPP-B</td><td>15</td><td>40</td><td>-0.008/-0.011</td><td>12</td><td>19</td></tr><tr><td class="type-cell">GRAE,RAE17-NPP-B</td><td>17</td><td>40</td><td>-0.008/-0.011</td><td>12</td><td>19</td></tr><tr><td class="type-cell">GRAE,RAE20-NPP-B</td><td>20</td><td>47</td><td>-0.01/-0.011</td><td>14</td><td>21.4</td></tr><tr><td class="type-cell">GRAE,RAE25-NPP-B</td><td>25</td><td>52</td><td>-0.01/-0.013</td><td>15</td><td>21.4</td></tr><tr><td class="type-cell">GRAE,GE45-KRR-B</td><td>45</td><td>85</td><td>-0.012/-0.015</td><td>22</td><td>26.4</td></tr><tr><td class="type-cell">GRAE,GE60-KRR-B</td><td>60</td><td>110</td><td>-0.015/-0.015</td><td>24</td><td>61.9</td></tr><tr><td class="type-cell">GE65-214-KRR-B</td><td>65</td><td>125</td><td>-0.015/-0.018</td><td>28</td><td>48.5</td></tr><tr><td class="type-cell">GNE,GE70-KRR-B</td><td>70</td><td>125</td><td>-0.015/-0.018</td><td>28</td><td>48.5</td></tr><tr><td class="type-cell">GE75-KRR-B</td><td>75</td><td>130</td><td>-0.015/-0.018</td><td>28</td><td>49.5</td></tr><tr><td class="type-cell">GE80-KRR-B</td><td>80</td><td>140</td><td>-0.015/-0.018</td><td>30</td><td>53.2</td></tr><tr><td class="type-cell">GE90-KRR-B</td><td>90</td><td>160</td><td>-0.02/-0.025</td><td>32</td><td>52</td></tr><tr><td class="type-cell">GE100-KRR-B</td><td>100</td><td>180</td><td>-0.02/-0.025</td><td>36</td><td>57.5</td></tr><tr><td class="type-cell">GE120-KRR-B</td><td>120</td><td>215</td><td>-0.02/-0.03</td><td>40</td><td>63.5</td></tr></tbody>
+        </table>
+        </div>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br> 표의 "공차(d/D)" 열은 ISO 492 일반급(Normal, P0)의 내경(d)·외경(D) 허용 편차(상한 0, 하한 표시값, 단위 mm)를 적용한 참고값이며 SWS 카탈로그 자체 수치가 아닙니다. 정밀등급(P6/P5/P4 등) 지정 시 별도 공차가 적용되므로 발주 전 확인하시기 바랍니다.
       </p>
     </div>
   </section>
@@ -152,7 +169,7 @@
 <script>
   (function () {
     var input = document.getElementById('ribFilter');
-    var rows = Array.prototype.slice.call(document.querySelectorAll('#ribBody tr'));
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#ribBody tr, #ribBody2 tr'));
     var countEl = document.getElementById('ribCount');
 
     function updateCount(shown) {
