@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>스러스트 볼 베어링 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="thrust-ball" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Single Row Thrust Ball Bearings</p>
+        <h2>스러스트 볼 베어링</h2>
+        <p>축과 하우징 시트의 궤도반 사이에 케이지에 조립된 볼이 들어 있으며, 90&deg;의 접촉각이 있어 축방향 하중만을 받을 수 있고 고속회전에는 부적당합니다. 평면자리형(51000/29000/900 등)과 조심자리형(53000), 조심자리와셔형(53000U) 등이 공급됩니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
+      </div>
+
+      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+        <label for="tbaFilter">형번 / 규격 검색</label>
+        <input id="tbaFilter" type="text" placeholder="예: 51205 또는 25*47" autocomplete="off" />
+      </div>
+      <p class="finder-tip" id="tbaCount" style="margin-bottom: 10px;"></p>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" id="tbaTable" style="min-width: 420px; max-width: 600px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th>
+              <th>T(높이)</th>
+            </tr>
+          </thead>
+          <tbody id="tbaBody"><tr><td class="type-cell">51100</td><td>10</td><td>24</td><td>9</td></tr><tr><td class="type-cell">51200</td><td>10</td><td>26</td><td>11</td></tr><tr><td class="type-cell">53200</td><td>10</td><td>26</td><td>11</td></tr><tr><td class="type-cell">53200U</td><td>10</td><td>26</td><td>11</td></tr><tr><td class="type-cell">2900</td><td>10</td><td>26</td><td>12</td></tr><tr><td class="type-cell">900</td><td>10</td><td>25</td><td>12</td></tr><tr><td class="type-cell">51101</td><td>12</td><td>26</td><td>9</td></tr><tr><td class="type-cell">51201</td><td>12</td><td>28</td><td>11</td></tr><tr><td class="type-cell">53201</td><td>12</td><td>28</td><td>11</td></tr><tr><td class="type-cell">53201U</td><td>12</td><td>28</td><td>11</td></tr><tr><td class="type-cell">2901</td><td>12</td><td>28</td><td>12</td></tr><tr><td class="type-cell">51102</td><td>15</td><td>28</td><td>9</td></tr><tr><td class="type-cell">51202</td><td>15</td><td>32</td><td>12</td></tr><tr><td class="type-cell">53202</td><td>15</td><td>32</td><td>12</td></tr><tr><td class="type-cell">53202U</td><td>15</td><td>32</td><td>12</td></tr><tr><td class="type-cell">2902</td><td>15</td><td>31</td><td>12</td></tr><tr><td class="type-cell">51103</td><td>17</td><td>30</td><td>9</td></tr><tr><td class="type-cell">51203</td><td>17</td><td>35</td><td>12</td></tr><tr><td class="type-cell">53203</td><td>17</td><td>35</td><td>12</td></tr><tr><td class="type-cell">53203U</td><td>17</td><td>35</td><td>12</td></tr><tr><td class="type-cell">2903</td><td>18</td><td>35</td><td>12</td></tr><tr><td class="type-cell">51104</td><td>20</td><td>35</td><td>10</td></tr><tr><td class="type-cell">51204</td><td>20</td><td>40</td><td>14</td></tr><tr><td class="type-cell">53204</td><td>20</td><td>40</td><td>14</td></tr><tr><td class="type-cell">53204U</td><td>20</td><td>40</td><td>14</td></tr><tr><td class="type-cell">2904</td><td>20</td><td>37</td><td>12</td></tr><tr><td class="type-cell">904</td><td>20</td><td>40</td><td>14</td></tr><tr><td class="type-cell">2904 1/2</td><td>22</td><td>42</td><td>14</td></tr><tr><td class="type-cell">51105</td><td>25</td><td>42</td><td>11</td></tr><tr><td class="type-cell">51205</td><td>25</td><td>47</td><td>15</td></tr><tr><td class="type-cell">53205</td><td>25</td><td>47</td><td>15</td></tr><tr><td class="type-cell">53205U</td><td>25</td><td>47</td><td>15</td></tr><tr><td class="type-cell">51305</td><td>25</td><td>52</td><td>18</td></tr><tr><td class="type-cell">53305</td><td>25</td><td>52</td><td>18</td></tr><tr><td class="type-cell">53305U</td><td>25</td><td>52</td><td>18</td></tr><tr><td class="type-cell">51405</td><td>25</td><td>60</td><td>24</td></tr><tr><td class="type-cell">53405</td><td>25</td><td>60</td><td>24</td></tr><tr><td class="type-cell">53405U</td><td>25</td><td>60</td><td>24</td></tr><tr><td class="type-cell">3905</td><td>25</td><td>52</td><td>16</td></tr><tr><td class="type-cell">2905</td><td>25</td><td>45</td><td>14</td></tr><tr><td class="type-cell">905</td><td>25</td><td>48</td><td>15.5</td></tr><tr><td class="type-cell">51106</td><td>30</td><td>47</td><td>11</td></tr><tr><td class="type-cell">51206</td><td>30</td><td>52</td><td>16</td></tr><tr><td class="type-cell">53206</td><td>30</td><td>52</td><td>16</td></tr><tr><td class="type-cell">53206U</td><td>30</td><td>52</td><td>16</td></tr><tr><td class="type-cell">51306</td><td>30</td><td>60</td><td>21</td></tr><tr><td class="type-cell">53306</td><td>30</td><td>60</td><td>21</td></tr><tr><td class="type-cell">53306U</td><td>30</td><td>60</td><td>21</td></tr><tr><td class="type-cell">51406</td><td>30</td><td>70</td><td>28</td></tr><tr><td class="type-cell">53406</td><td>30</td><td>70</td><td>28</td></tr><tr><td class="type-cell">53406U</td><td>30</td><td>70</td><td>28</td></tr><tr><td class="type-cell">3906</td><td>30</td><td>60</td><td>19</td></tr><tr><td class="type-cell">2906</td><td>30</td><td>50</td><td>14</td></tr><tr><td class="type-cell">906</td><td>30</td><td>53</td><td>15.5</td></tr><tr><td class="type-cell">51107</td><td>35</td><td>52</td><td>12</td></tr><tr><td class="type-cell">51207</td><td>35</td><td>62</td><td>18</td></tr><tr><td class="type-cell">53207</td><td>35</td><td>62</td><td>18</td></tr><tr><td class="type-cell">53207U</td><td>35</td><td>62</td><td>18</td></tr><tr><td class="type-cell">51307</td><td>35</td><td>68</td><td>24</td></tr><tr><td class="type-cell">53307</td><td>35</td><td>68</td><td>24</td></tr><tr><td class="type-cell">53307U</td><td>35</td><td>68</td><td>24</td></tr><tr><td class="type-cell">51407</td><td>35</td><td>80</td><td>32</td></tr><tr><td class="type-cell">53407</td><td>35</td><td>80</td><td>32</td></tr><tr><td class="type-cell">53407U</td><td>35</td><td>80</td><td>32</td></tr><tr><td class="type-cell">3907</td><td>35</td><td>68</td><td>22</td></tr><tr><td class="type-cell">2907</td><td>35</td><td>55</td><td>16</td></tr><tr><td class="type-cell">907</td><td>35</td><td>62</td><td>18</td></tr><tr><td class="type-cell">51108</td><td>40</td><td>60</td><td>13</td></tr><tr><td class="type-cell">51208</td><td>40</td><td>68</td><td>19</td></tr><tr><td class="type-cell">53208</td><td>40</td><td>68</td><td>19</td></tr><tr><td class="type-cell">53208U</td><td>40</td><td>68</td><td>19</td></tr><tr><td class="type-cell">51308</td><td>40</td><td>78</td><td>26</td></tr><tr><td class="type-cell">53308</td><td>40</td><td>78</td><td>26</td></tr><tr><td class="type-cell">53308U</td><td>40</td><td>78</td><td>26</td></tr><tr><td class="type-cell">51408</td><td>40</td><td>90</td><td>36</td></tr><tr><td class="type-cell">53408</td><td>40</td><td>90</td><td>36</td></tr><tr><td class="type-cell">53408U</td><td>40</td><td>90</td><td>36</td></tr><tr><td class="type-cell">2908</td><td>40</td><td>60</td><td>16</td></tr><tr><td class="type-cell">3908</td><td>40</td><td>76</td><td>25</td></tr><tr><td class="type-cell">908</td><td>40</td><td>64</td><td>18</td></tr><tr><td class="type-cell">51109</td><td>45</td><td>65</td><td>14</td></tr><tr><td class="type-cell">51209</td><td>45</td><td>73</td><td>20</td></tr><tr><td class="type-cell">53209</td><td>45</td><td>73</td><td>20</td></tr><tr><td class="type-cell">53209U</td><td>45</td><td>73</td><td>20</td></tr><tr><td class="type-cell">51309</td><td>45</td><td>85</td><td>28</td></tr><tr><td class="type-cell">53309</td><td>45</td><td>85</td><td>28</td></tr><tr><td class="type-cell">53309U</td><td>45</td><td>85</td><td>28</td></tr><tr><td class="type-cell">51409</td><td>45</td><td>100</td><td>39</td></tr><tr><td class="type-cell">53409</td><td>45</td><td>100</td><td>39</td></tr><tr><td class="type-cell">53409U</td><td>45</td><td>100</td><td>39</td></tr><tr><td class="type-cell">2909</td><td>45</td><td>68</td><td>16</td></tr><tr><td class="type-cell">3909</td><td>45</td><td>85</td><td>28</td></tr><tr><td class="type-cell">909</td><td>45</td><td>73</td><td>22</td></tr><tr><td class="type-cell">51110</td><td>50</td><td>70</td><td>14</td></tr><tr><td class="type-cell">51210</td><td>50</td><td>78</td><td>22</td></tr><tr><td class="type-cell">53210</td><td>50</td><td>78</td><td>22</td></tr><tr><td class="type-cell">53210U</td><td>50</td><td>78</td><td>22</td></tr><tr><td class="type-cell">51310</td><td>50</td><td>95</td><td>31</td></tr><tr><td class="type-cell">53310</td><td>50</td><td>95</td><td>31</td></tr><tr><td class="type-cell">53310U</td><td>50</td><td>95</td><td>31</td></tr><tr><td class="type-cell">51410</td><td>50</td><td>110</td><td>43</td></tr><tr><td class="type-cell">53410</td><td>50</td><td>110</td><td>43</td></tr><tr><td class="type-cell">53410U</td><td>50</td><td>110</td><td>43</td></tr><tr><td class="type-cell">2910</td><td>50</td><td>74</td><td>18</td></tr><tr><td class="type-cell">3910</td><td>50</td><td>92</td><td>31</td></tr><tr><td class="type-cell">910</td><td>50</td><td>78</td><td>22</td></tr><tr><td class="type-cell">51111</td><td>55</td><td>78</td><td>16</td></tr><tr><td class="type-cell">51211</td><td>55</td><td>90</td><td>25</td></tr><tr><td class="type-cell">53211</td><td>55</td><td>90</td><td>25</td></tr><tr><td class="type-cell">53211U</td><td>55</td><td>90</td><td>25</td></tr><tr><td class="type-cell">51311</td><td>55</td><td>105</td><td>35</td></tr><tr><td class="type-cell">53311</td><td>55</td><td>105</td><td>35</td></tr><tr><td class="type-cell">53311U</td><td>55</td><td>105</td><td>35</td></tr><tr><td class="type-cell">51411</td><td>55</td><td>120</td><td>48</td></tr><tr><td class="type-cell">53411</td><td>55</td><td>120</td><td>48</td></tr><tr><td class="type-cell">53411U</td><td>55</td><td>120</td><td>48</td></tr><tr><td class="type-cell">2911</td><td>55</td><td>78</td><td>18</td></tr><tr><td class="type-cell">3911</td><td>55</td><td>100</td><td>33</td></tr><tr><td class="type-cell">911</td><td>55</td><td>88</td><td>24.5</td></tr><tr><td class="type-cell">51112</td><td>60</td><td>85</td><td>17</td></tr><tr><td class="type-cell">51212</td><td>60</td><td>95</td><td>26</td></tr><tr><td class="type-cell">53212</td><td>60</td><td>95</td><td>26</td></tr><tr><td class="type-cell">53212U</td><td>60</td><td>95</td><td>26</td></tr><tr><td class="type-cell">51312</td><td>60</td><td>110</td><td>35</td></tr><tr><td class="type-cell">53312</td><td>60</td><td>110</td><td>35</td></tr><tr><td class="type-cell">53312U</td><td>60</td><td>110</td><td>35</td></tr><tr><td class="type-cell">51412</td><td>60</td><td>130</td><td>51</td></tr><tr><td class="type-cell">53412</td><td>60</td><td>130</td><td>51</td></tr><tr><td class="type-cell">53412U</td><td>60</td><td>130</td><td>51</td></tr><tr><td class="type-cell">2912</td><td>60</td><td>82</td><td>18</td></tr><tr><td class="type-cell">3912</td><td>60</td><td>106</td><td>35</td></tr><tr><td class="type-cell">912</td><td>60</td><td>90</td><td>24.5</td></tr><tr><td class="type-cell">51113</td><td>65</td><td>90</td><td>18</td></tr><tr><td class="type-cell">51213</td><td>65</td><td>100</td><td>27</td></tr><tr><td class="type-cell">53213</td><td>65</td><td>100</td><td>27</td></tr><tr><td class="type-cell">53213U</td><td>65</td><td>100</td><td>27</td></tr><tr><td class="type-cell">51313</td><td>65</td><td>115</td><td>26</td></tr><tr><td class="type-cell">53313</td><td>65</td><td>115</td><td>26</td></tr><tr><td class="type-cell">53313U</td><td>65</td><td>115</td><td>26</td></tr><tr><td class="type-cell">51413</td><td>65</td><td>140</td><td>56</td></tr><tr><td class="type-cell">53413</td><td>65</td><td>140</td><td>56</td></tr><tr><td class="type-cell">53413U</td><td>65</td><td>140</td><td>56</td></tr><tr><td class="type-cell">2913</td><td>65</td><td>90</td><td>20</td></tr><tr><td class="type-cell">3913</td><td>65</td><td>112</td><td>36</td></tr><tr><td class="type-cell">913</td><td>65</td><td>100</td><td>27</td></tr><tr><td class="type-cell">51114</td><td>70</td><td>95</td><td>18</td></tr><tr><td class="type-cell">51214</td><td>70</td><td>105</td><td>27</td></tr><tr><td class="type-cell">53214</td><td>70</td><td>105</td><td>27</td></tr><tr><td class="type-cell">53214U</td><td>70</td><td>105</td><td>27</td></tr><tr><td class="type-cell">51314</td><td>70</td><td>125</td><td>40</td></tr><tr><td class="type-cell">53314</td><td>70</td><td>125</td><td>40</td></tr><tr><td class="type-cell">53314U</td><td>70</td><td>125</td><td>40</td></tr><tr><td class="type-cell">51414</td><td>70</td><td>150</td><td>60</td></tr><tr><td class="type-cell">53414</td><td>70</td><td>150</td><td>60</td></tr><tr><td class="type-cell">53414U</td><td>70</td><td>150</td><td>60</td></tr><tr><td class="type-cell">2914</td><td>70</td><td>95</td><td>20</td></tr><tr><td class="type-cell">3914</td><td>70</td><td>120</td><td>38</td></tr><tr><td class="type-cell">914</td><td>70</td><td>103</td><td>27</td></tr><tr><td class="type-cell">51115</td><td>75</td><td>100</td><td>19</td></tr><tr><td class="type-cell">51215</td><td>75</td><td>110</td><td>27</td></tr><tr><td class="type-cell">53215</td><td>75</td><td>110</td><td>27</td></tr><tr><td class="type-cell">53215U</td><td>75</td><td>110</td><td>27</td></tr><tr><td class="type-cell">51315</td><td>75</td><td>135</td><td>44</td></tr><tr><td class="type-cell">53315</td><td>75</td><td>135</td><td>44</td></tr><tr><td class="type-cell">53315U</td><td>75</td><td>135</td><td>44</td></tr><tr><td class="type-cell">51415</td><td>75</td><td>160</td><td>65</td></tr><tr><td class="type-cell">53415</td><td>75</td><td>160</td><td>65</td></tr><tr><td class="type-cell">53415U</td><td>75</td><td>160</td><td>65</td></tr><tr><td class="type-cell">2915</td><td>75</td><td>100</td><td>20</td></tr><tr><td class="type-cell">3915</td><td>75</td><td>128</td><td>41</td></tr><tr><td class="type-cell">915</td><td>75</td><td>110</td><td>27</td></tr><tr><td class="type-cell">51116</td><td>80</td><td>105</td><td>19</td></tr><tr><td class="type-cell">51216</td><td>80</td><td>115</td><td>28</td></tr><tr><td class="type-cell">53216</td><td>80</td><td>115</td><td>28</td></tr><tr><td class="type-cell">53216U</td><td>80</td><td>115</td><td>28</td></tr><tr><td class="type-cell">51316</td><td>80</td><td>140</td><td>44</td></tr><tr><td class="type-cell">53316</td><td>80</td><td>140</td><td>44</td></tr><tr><td class="type-cell">53316U</td><td>80</td><td>140</td><td>44</td></tr><tr><td class="type-cell">51416</td><td>80</td><td>170</td><td>68</td></tr><tr><td class="type-cell">53416</td><td>80</td><td>170</td><td>68</td></tr><tr><td class="type-cell">53416U</td><td>80</td><td>170</td><td>68</td></tr><tr><td class="type-cell">2916</td><td>80</td><td>110</td><td>22</td></tr><tr><td class="type-cell">3916</td><td>80</td><td>136</td><td>44</td></tr><tr><td class="type-cell">916</td><td>80</td><td>115</td><td>29</td></tr><tr><td class="type-cell">51117</td><td>85</td><td>110</td><td>19</td></tr><tr><td class="type-cell">51217</td><td>85</td><td>125</td><td>31</td></tr><tr><td class="type-cell">53217</td><td>85</td><td>125</td><td>31</td></tr><tr><td class="type-cell">53217U</td><td>85</td><td>125</td><td>31</td></tr><tr><td class="type-cell">51317</td><td>85</td><td>150</td><td>49</td></tr><tr><td class="type-cell">53317</td><td>85</td><td>150</td><td>49</td></tr><tr><td class="type-cell">53317U</td><td>85</td><td>150</td><td>49</td></tr><tr><td class="type-cell">51417</td><td>85</td><td>180</td><td>72</td></tr><tr><td class="type-cell">53417</td><td>85</td><td>180</td><td>72</td></tr><tr><td class="type-cell">53417U</td><td>85</td><td>180</td><td>72</td></tr><tr><td class="type-cell">2917</td><td>85</td><td>115</td><td>22</td></tr><tr><td class="type-cell">3917</td><td>85</td><td>145</td><td>47</td></tr><tr><td class="type-cell">917</td><td>85</td><td>125</td><td>30.5</td></tr><tr><td class="type-cell">51118</td><td>90</td><td>120</td><td>22</td></tr><tr><td class="type-cell">51218</td><td>90</td><td>135</td><td>35</td></tr><tr><td class="type-cell">53218</td><td>90</td><td>135</td><td>35</td></tr><tr><td class="type-cell">53218U</td><td>90</td><td>135</td><td>35</td></tr><tr><td class="type-cell">51318</td><td>90</td><td>155</td><td>50</td></tr><tr><td class="type-cell">53318</td><td>90</td><td>155</td><td>50</td></tr><tr><td class="type-cell">53318U</td><td>90</td><td>155</td><td>50</td></tr><tr><td class="type-cell">51418</td><td>90</td><td>190</td><td>77</td></tr><tr><td class="type-cell">53418</td><td>90</td><td>190</td><td>77</td></tr><tr><td class="type-cell">53418U</td><td>90</td><td>190</td><td>77</td></tr><tr><td class="type-cell">2918</td><td>90</td><td>120</td><td>22</td></tr><tr><td class="type-cell">3918</td><td>90</td><td>155</td><td>50</td></tr><tr><td class="type-cell">918</td><td>90</td><td>135</td><td>30.5</td></tr><tr><td class="type-cell">51120</td><td>100</td><td>135</td><td>25</td></tr><tr><td class="type-cell">51220</td><td>100</td><td>150</td><td>38</td></tr><tr><td class="type-cell">53220</td><td>100</td><td>150</td><td>38</td></tr><tr><td class="type-cell">53220U</td><td>100</td><td>150</td><td>38</td></tr><tr><td class="type-cell">51320</td><td>100</td><td>170</td><td>55</td></tr><tr><td class="type-cell">53320</td><td>100</td><td>170</td><td>55</td></tr><tr><td class="type-cell">53320U</td><td>100</td><td>170</td><td>55</td></tr><tr><td class="type-cell">51420</td><td>100</td><td>210</td><td>85</td></tr><tr><td class="type-cell">53420</td><td>100</td><td>210</td><td>85</td></tr><tr><td class="type-cell">53420U</td><td>100</td><td>210</td><td>85</td></tr><tr><td class="type-cell">2920</td><td>100</td><td>135</td><td>25</td></tr><tr><td class="type-cell">3920</td><td>100</td><td>172</td><td>57</td></tr><tr><td class="type-cell">920</td><td>100</td><td>150</td><td>32.5</td></tr><tr><td class="type-cell">51122</td><td>110</td><td>145</td><td>25</td></tr><tr><td class="type-cell">51222</td><td>110</td><td>160</td><td>38</td></tr><tr><td class="type-cell">53222</td><td>110</td><td>160</td><td>38</td></tr><tr><td class="type-cell">53222U</td><td>110</td><td>160</td><td>38</td></tr><tr><td class="type-cell">51322</td><td>110</td><td>190</td><td>63</td></tr><tr><td class="type-cell">53322</td><td>110</td><td>190</td><td>63</td></tr><tr><td class="type-cell">53322U</td><td>110</td><td>190</td><td>63</td></tr><tr><td class="type-cell">51422</td><td>110</td><td>230</td><td>95</td></tr><tr><td class="type-cell">2922</td><td>110</td><td>145</td><td>25</td></tr><tr><td class="type-cell">922</td><td>110</td><td>160</td><td>40</td></tr><tr><td class="type-cell">51124</td><td>120</td><td>155</td><td>25</td></tr><tr><td class="type-cell">51224</td><td>120</td><td>170</td><td>39</td></tr><tr><td class="type-cell">53224</td><td>120</td><td>170</td><td>39</td></tr><tr><td class="type-cell">53224U</td><td>120</td><td>170</td><td>39</td></tr><tr><td class="type-cell">51324</td><td>120</td><td>210</td><td>70</td></tr><tr><td class="type-cell">53324</td><td>120</td><td>210</td><td>70</td></tr><tr><td class="type-cell">53324U</td><td>120</td><td>210</td><td>70</td></tr><tr><td class="type-cell">51424</td><td>120</td><td>250</td><td>102</td></tr><tr><td class="type-cell">2924</td><td>120</td><td>160</td><td>27</td></tr><tr><td class="type-cell">924</td><td>120</td><td>170</td><td>43</td></tr><tr><td class="type-cell">51126</td><td>130</td><td>170</td><td>30</td></tr><tr><td class="type-cell">51226</td><td>130</td><td>190</td><td>45</td></tr><tr><td class="type-cell">53226</td><td>130</td><td>190</td><td>45</td></tr><tr><td class="type-cell">53226U</td><td>130</td><td>190</td><td>45</td></tr><tr><td class="type-cell">51326</td><td>130</td><td>225</td><td>75</td></tr><tr><td class="type-cell">53326</td><td>130</td><td>225</td><td>75</td></tr><tr><td class="type-cell">53326U</td><td>130</td><td>225</td><td>75</td></tr><tr><td class="type-cell">51426</td><td>130</td><td>270</td><td>110</td></tr><tr><td class="type-cell">51128</td><td>140</td><td>180</td><td>31</td></tr><tr><td class="type-cell">51228</td><td>140</td><td>200</td><td>46</td></tr><tr><td class="type-cell">53228</td><td>140</td><td>200</td><td>46</td></tr><tr><td class="type-cell">53228U</td><td>140</td><td>200</td><td>46</td></tr><tr><td class="type-cell">51328</td><td>140</td><td>240</td><td>80</td></tr><tr><td class="type-cell">53328</td><td>140</td><td>240</td><td>80</td></tr><tr><td class="type-cell">53328U</td><td>140</td><td>240</td><td>80</td></tr><tr><td class="type-cell">51428</td><td>140</td><td>280</td><td>112</td></tr><tr><td class="type-cell">51130</td><td>150</td><td>190</td><td>31</td></tr><tr><td class="type-cell">51230</td><td>150</td><td>215</td><td>50</td></tr><tr><td class="type-cell">53230</td><td>150</td><td>215</td><td>50</td></tr><tr><td class="type-cell">53230U</td><td>150</td><td>215</td><td>50</td></tr><tr><td class="type-cell">51330</td><td>150</td><td>250</td><td>80</td></tr><tr><td class="type-cell">53330</td><td>150</td><td>250</td><td>80</td></tr><tr><td class="type-cell">53330U</td><td>150</td><td>250</td><td>80</td></tr><tr><td class="type-cell">51430</td><td>150</td><td>300</td><td>120</td></tr><tr><td class="type-cell">51132</td><td>160</td><td>200</td><td>31</td></tr><tr><td class="type-cell">51232</td><td>160</td><td>225</td><td>51</td></tr><tr><td class="type-cell">53232</td><td>160</td><td>225</td><td>51</td></tr><tr><td class="type-cell">53232U</td><td>160</td><td>225</td><td>51</td></tr><tr><td class="type-cell">51332</td><td>160</td><td>270</td><td>87</td></tr><tr><td class="type-cell">53332</td><td>160</td><td>270</td><td>87</td></tr><tr><td class="type-cell">53332U</td><td>160</td><td>270</td><td>87</td></tr><tr><td class="type-cell">51432</td><td>160</td><td>320</td><td>130</td></tr><tr><td class="type-cell">51134</td><td>170</td><td>215</td><td>34</td></tr><tr><td class="type-cell">51234</td><td>170</td><td>240</td><td>55</td></tr><tr><td class="type-cell">53234</td><td>170</td><td>240</td><td>55</td></tr><tr><td class="type-cell">53234U</td><td>170</td><td>240</td><td>55</td></tr><tr><td class="type-cell">51334</td><td>170</td><td>280</td><td>87</td></tr><tr><td class="type-cell">53334</td><td>170</td><td>280</td><td>87</td></tr><tr><td class="type-cell">53334U</td><td>170</td><td>280</td><td>87</td></tr><tr><td class="type-cell">51434</td><td>170</td><td>340</td><td>135</td></tr><tr><td class="type-cell">53434</td><td>170</td><td>340</td><td>135</td></tr><tr><td class="type-cell">53434U</td><td>170</td><td>340</td><td>135</td></tr><tr><td class="type-cell">51136</td><td>180</td><td>225</td><td>34</td></tr><tr><td class="type-cell">51236</td><td>180</td><td>250</td><td>56</td></tr><tr><td class="type-cell">53236</td><td>180</td><td>250</td><td>56</td></tr><tr><td class="type-cell">53236U</td><td>180</td><td>250</td><td>56</td></tr><tr><td class="type-cell">52336</td><td>180</td><td>300</td><td>95</td></tr><tr><td class="type-cell">53336</td><td>180</td><td>300</td><td>95</td></tr><tr><td class="type-cell">53336U</td><td>180</td><td>300</td><td>95</td></tr><tr><td class="type-cell">51436</td><td>180</td><td>360</td><td>140</td></tr><tr><td class="type-cell">53436</td><td>180</td><td>360</td><td>140</td></tr><tr><td class="type-cell">53436U</td><td>180</td><td>360</td><td>140</td></tr><tr><td class="type-cell">51138</td><td>190</td><td>240</td><td>37</td></tr><tr><td class="type-cell">51238</td><td>190</td><td>270</td><td>62</td></tr><tr><td class="type-cell">53238</td><td>190</td><td>270</td><td>62</td></tr><tr><td class="type-cell">53238U</td><td>190</td><td>270</td><td>62</td></tr><tr><td class="type-cell">52338</td><td>190</td><td>320</td><td>105</td></tr><tr><td class="type-cell">53338</td><td>190</td><td>320</td><td>105</td></tr><tr><td class="type-cell">53338U</td><td>190</td><td>320</td><td>105</td></tr><tr><td class="type-cell">51140</td><td>200</td><td>250</td><td>37</td></tr><tr><td class="type-cell">51240</td><td>200</td><td>280</td><td>62</td></tr><tr><td class="type-cell">53240</td><td>200</td><td>280</td><td>62</td></tr><tr><td class="type-cell">53240U</td><td>200</td><td>280</td><td>62</td></tr><tr><td class="type-cell">52340</td><td>200</td><td>340</td><td>110</td></tr><tr><td class="type-cell">53340</td><td>200</td><td>340</td><td>110</td></tr><tr><td class="type-cell">53340U</td><td>200</td><td>340</td><td>110</td></tr><tr><td class="type-cell">51144</td><td>220</td><td>270</td><td>37</td></tr><tr><td class="type-cell">51244</td><td>220</td><td>300</td><td>63</td></tr><tr><td class="type-cell">53244</td><td>220</td><td>300</td><td>63</td></tr><tr><td class="type-cell">53244U</td><td>220</td><td>300</td><td>63</td></tr><tr><td class="type-cell">51148</td><td>240</td><td>300</td><td>45</td></tr><tr><td class="type-cell">51248</td><td>240</td><td>340</td><td>78</td></tr><tr><td class="type-cell">53248</td><td>240</td><td>340</td><td>78</td></tr><tr><td class="type-cell">53248U</td><td>240</td><td>340</td><td>78</td></tr><tr><td class="type-cell">51152</td><td>260</td><td>320</td><td>45</td></tr><tr><td class="type-cell">51252</td><td>260</td><td>360</td><td>79</td></tr><tr><td class="type-cell">53252</td><td>260</td><td>360</td><td>79</td></tr><tr><td class="type-cell">53252U</td><td>260</td><td>360</td><td>79</td></tr><tr><td class="type-cell">51156</td><td>280</td><td>350</td><td>53</td></tr><tr><td class="type-cell">51256</td><td>280</td><td>380</td><td>80</td></tr><tr><td class="type-cell">53256</td><td>280</td><td>380</td><td>80</td></tr><tr><td class="type-cell">53256U</td><td>280</td><td>380</td><td>80</td></tr><tr><td class="type-cell">51160</td><td>300</td><td>380</td><td>62</td></tr><tr><td class="type-cell">51260</td><td>300</td><td>420</td><td>95</td></tr><tr><td class="type-cell">53260</td><td>300</td><td>420</td><td>95</td></tr><tr><td class="type-cell">53260U</td><td>300</td><td>420</td><td>95</td></tr><tr><td class="type-cell">51164</td><td>320</td><td>400</td><td>63</td></tr><tr><td class="type-cell">51264</td><td>320</td><td>440</td><td>95</td></tr><tr><td class="type-cell">53264</td><td>320</td><td>440</td><td>95</td></tr><tr><td class="type-cell">53264U</td><td>320</td><td>440</td><td>95</td></tr><tr><td class="type-cell">51168</td><td>340</td><td>420</td><td>64</td></tr><tr><td class="type-cell">51268</td><td>340</td><td>460</td><td>96</td></tr><tr><td class="type-cell">53268</td><td>340</td><td>460</td><td>96</td></tr><tr><td class="type-cell">53268U</td><td>340</td><td>460</td><td>96</td></tr><tr><td class="type-cell">51172</td><td>360</td><td>440</td><td>65</td></tr><tr><td class="type-cell">51272</td><td>360</td><td>500</td><td>110</td></tr><tr><td class="type-cell">53272</td><td>360</td><td>500</td><td>110</td></tr><tr><td class="type-cell">53272U</td><td>360</td><td>500</td><td>110</td></tr><tr><td class="type-cell">1/2"</td><td>12.7</td><td>28</td><td>12</td></tr><tr><td class="type-cell">5/8"</td><td>15.875</td><td>32</td><td>12</td></tr><tr><td class="type-cell">3/4"</td><td>19.05</td><td>35</td><td>12</td></tr><tr><td class="type-cell">7/8"</td><td>22.225</td><td>42</td><td>14</td></tr><tr><td class="type-cell">1"</td><td>25.4</td><td>45</td><td>14</td></tr><tr><td class="type-cell">1-1/4"</td><td>31.75</td><td>53</td><td>16</td></tr><tr><td class="type-cell">1-1/2"</td><td>38.1</td><td>60</td><td>16</td></tr><tr><td class="type-cell">2"</td><td>50.8</td><td>74</td><td>18</td></tr></tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+<script>
+  (function () {
+    var input = document.getElementById('tbaFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#tbaBody tr'));
+    var countEl = document.getElementById('tbaCount');
+
+    function updateCount(shown) {
+      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
+    }
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      updateCount(shown);
+    }
+
+    input.addEventListener('input', applyFilter);
+    updateCount(rows.length);
+  })();
+</script>
+</body>
+</html>
