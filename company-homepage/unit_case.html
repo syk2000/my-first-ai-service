@@ -110,10 +110,15 @@
 
       <div class="cat-tabs" role="tablist">
         <button type="button" class="cat-tab-btn active" data-tab="p">필로우 블록형 (P)</button>
+        <button type="button" class="cat-tab-btn" data-tab="ph">PH형 (하이센터)</button>
+        <button type="button" class="cat-tab-btn" data-tab="pa">PA형 (내로우베이스)</button>
         <button type="button" class="cat-tab-btn" data-tab="f">플랜지형 (F)</button>
+        <button type="button" class="cat-tab-btn" data-tab="fl">FL형 (오벌 플랜지)</button>
         <button type="button" class="cat-tab-btn" data-tab="fa">FA형 (오벌 플랜지 A)</button>
         <button type="button" class="cat-tab-btn" data-tab="fb">FB형 (오벌 플랜지 B)</button>
+        <button type="button" class="cat-tab-btn" data-tab="fs">FS형 (사각 피벗 플랜지)</button>
         <button type="button" class="cat-tab-btn" data-tab="fc">FC형 (원형 플랜지)</button>
+        <button type="button" class="cat-tab-btn" data-tab="c">카트리지형 (C)</button>
         <button type="button" class="cat-tab-btn" data-tab="t">테이크업형 (T)</button>
       </div>
 
@@ -156,6 +161,67 @@
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)</p>
       </div>
 
+      <div class="cat-tab-panel" data-panel="ph" hidden>
+        <p class="cat-tab-panel-desc">필로우 블록형(P)보다 중심 높이가 높은 하이센터 타입입니다. 축 중심선을 설치면에서 더 높이 띄워야 할 때(배관·구조물 간섭 회피 등) 사용합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/ucph_diagram.png" alt="PH형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ UCPH 하이센터 필로우 하우징 단면도 · H(중심높이)&middot;L(전장)&middot;A(설치폭)</p>
+        </div>
+
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="phFilter">형번 / 축경 검색</label>
+          <input id="phFilter" type="text" placeholder="예: UCPH204 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 460px; max-width: 640px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H(중심높이)</th><th>L(전장)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="phBody">
+              <tr><td class="type-cell">UCPH204</td><td>12~20</td><td>70</td><td>127</td><td>0.91~0.96</td></tr>
+              <tr><td class="type-cell">UCPH205</td><td>20.6~25.4</td><td>80</td><td>140</td><td>1.2</td></tr>
+              <tr><td class="type-cell">UCPH206</td><td>27~31.75</td><td>90</td><td>165</td><td>1.6</td></tr>
+              <tr><td class="type-cell">UCPH207</td><td>31.75~36.5</td><td>95</td><td>167</td><td>2.0</td></tr>
+              <tr><td class="type-cell">UCPH208</td><td>38.1~40</td><td>100</td><td>184</td><td>2.7</td></tr>
+              <tr><td class="type-cell">UCPH209</td><td>41.3~45</td><td>105</td><td>190</td><td>3.0</td></tr>
+              <tr><td class="type-cell">UCPH210</td><td>47.6~50</td><td>110</td><td>206</td><td>3.5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 중량이 범위로 표시된 행은 원본 표에서도 같은 하우징 내 축경별로 값이 조금씩 다릅니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="pa" hidden>
+        <p class="cat-tab-panel-desc">필로우 블록형(P)보다 폭이 좁은 내로우베이스 타입입니다. 설치 공간이 좁을 때 사용합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/ucpa_diagram.png" alt="PA형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ UCPA 내로우베이스 필로우 하우징 단면도 · H(중심높이)&middot;L(전장)&middot;A(설치폭)</p>
+        </div>
+
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="paFilter">형번 / 축경 검색</label>
+          <input id="paFilter" type="text" placeholder="예: UCPA204 또는 30" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 460px; max-width: 640px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H(중심높이)</th><th>L(전장)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="paBody">
+              <tr><td class="type-cell">UCPA204</td><td>12~20</td><td>30.2</td><td>76</td><td>0.59~0.64</td></tr>
+              <tr><td class="type-cell">UCPA205</td><td>20.6~25.4</td><td>36.5</td><td>80</td><td>0.83</td></tr>
+              <tr><td class="type-cell">UCPA206</td><td>27~31.75</td><td>42.9</td><td>94</td><td>1.2</td></tr>
+              <tr><td class="type-cell">UCPA207</td><td>31.75~36.5</td><td>47.6</td><td>110</td><td>1.7</td></tr>
+              <tr><td class="type-cell">UCPA208</td><td>38.1~40</td><td>49.2</td><td>116</td><td>2.0</td></tr>
+              <tr><td class="type-cell">UCPA209</td><td>41.3~45</td><td>54.2</td><td>120</td><td>2.2</td></tr>
+              <tr><td class="type-cell">UCPA210</td><td>47.6~50</td><td>57.2</td><td>130</td><td>2.8</td></tr>
+              <tr><td class="type-cell">UCPA211</td><td>50.8~55.6</td><td>63.5</td><td>140</td><td>3.4</td></tr>
+              <tr><td class="type-cell">UCPA212</td><td>57.2~61.9</td><td>69.9</td><td>150</td><td>4.4</td></tr>
+              <tr><td class="type-cell">UCPA213</td><td>63.5~65</td><td>76.2</td><td>160</td><td>5.4</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 중량이 범위로 표시된 행은 원본 표에서도 같은 하우징 내 축경별로 값이 조금씩 다릅니다.</p>
+      </div>
+
       <div class="cat-tab-panel" data-panel="f" hidden>
         <p class="cat-tab-panel-desc">UC(내경 표준)&middot;UK(테이퍼 내경) 베어링을 사각 플랜지 하우징에 일체화한 유닛입니다. 벽면&middot;수직면에 볼트로 고정하는 설치 방식입니다.</p>
         <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
@@ -193,6 +259,45 @@
           </details>
         </div>
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="fl" hidden>
+        <p class="cat-tab-panel-desc">UC 베어링을 장원형(타원형) 플랜지 하우징에 일체화한 일반형 유닛입니다. 볼트 구멍 2개로 고정하는 소형&middot;경량 설치 방식입니다. JIB 카탈로그에서는 이를 세부적으로 FA/FB 두 타입으로도 구분합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/ucfl_diagram.png" alt="FL형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ UCFL 장원형 플랜지 하우징 단면도 · H(전장)&middot;L(폭)&middot;J(볼트 간격)</p>
+        </div>
+
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="flFilter">형번 / 축경 검색</label>
+          <input id="flFilter" type="text" placeholder="예: UCFL204 또는 30" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="flCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="flToggleAll">전체 펼치기</button>
+        </div>
+        <div id="flGroups">
+          <details class="series-group">
+            <summary>UCFL2 시리즈 (소형)<span class="series-count">16건</span></summary>
+            <div class="finder-results" style="overflow-x: auto;">
+              <table class="spec-table" style="min-width: 460px; max-width: 640px;">
+                <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H(전장)</th><th>L(폭)</th><th>중량(kg)</th></tr></thead>
+                <tbody><tr><td class="type-cell">UCFL203</td><td>12~17</td><td>99</td><td>57</td><td>0.47~0.50</td></tr><tr><td class="type-cell">UCFL204</td><td>19.1~20</td><td>113</td><td>60</td><td>0.45</td></tr><tr><td class="type-cell">UCFL205</td><td>20.6~25.4</td><td>130</td><td>68</td><td>0.64</td></tr><tr><td class="type-cell">UCFL206</td><td>27~31.75</td><td>148</td><td>80</td><td>0.93</td></tr><tr><td class="type-cell">UCFL207</td><td>31.75~36.5</td><td>161</td><td>90</td><td>1.2</td></tr><tr><td class="type-cell">UCFL208</td><td>38.1~40</td><td>175</td><td>100</td><td>1.6</td></tr><tr><td class="type-cell">UCFL209</td><td>41.3~45</td><td>188</td><td>108</td><td>1.9</td></tr><tr><td class="type-cell">UCFL210</td><td>47.6~50</td><td>197</td><td>115</td><td>2.2</td></tr><tr><td class="type-cell">UCFL211</td><td>50.8~55.6</td><td>224</td><td>130</td><td>3.3</td></tr><tr><td class="type-cell">UCFL212</td><td>57.2~61.9</td><td>250</td><td>140</td><td>4.2</td></tr><tr><td class="type-cell">UCFL213</td><td>63.5~65</td><td>258</td><td>155</td><td>5.1</td></tr><tr><td class="type-cell">UCFL214</td><td>69.8~70</td><td>265</td><td>160</td><td>5.7</td></tr><tr><td class="type-cell">UCFL215</td><td>73~76.2</td><td>275</td><td>165</td><td>6.4</td></tr><tr><td class="type-cell">UCFL216</td><td>80</td><td>290</td><td>180</td><td>7.8</td></tr><tr><td class="type-cell">UCFL217</td><td>82.5~85</td><td>305</td><td>190</td><td>9.8</td></tr><tr><td class="type-cell">UCFL218</td><td>88.9~90</td><td>320</td><td>205</td><td>12.3</td></tr></tbody>
+              </table>
+            </div>
+          </details>
+          <details class="series-group">
+            <summary>UCFL3 시리즈 (중형)<span class="series-count">21건</span></summary>
+            <div class="finder-results" style="overflow-x: auto;">
+              <table class="spec-table" style="min-width: 460px; max-width: 640px;">
+                <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>H(전장)</th><th>L(폭)</th><th>중량(kg)</th></tr></thead>
+                <tbody><tr><td class="type-cell">UCFL305</td><td>25</td><td>150</td><td>80</td><td>1.1</td></tr><tr><td class="type-cell">UCFL306</td><td>28.6~30</td><td>180</td><td>90</td><td>1.5</td></tr><tr><td class="type-cell">UCFL307</td><td>31.7~36.5</td><td>185</td><td>100</td><td>1.8</td></tr><tr><td class="type-cell">UCFL308</td><td>38.1~40</td><td>200</td><td>112</td><td>2.5</td></tr><tr><td class="type-cell">UCFL309</td><td>44.4~45</td><td>230</td><td>125</td><td>3.5</td></tr><tr><td class="type-cell">UCFL310</td><td>49.2~50</td><td>240</td><td>140</td><td>4.4</td></tr><tr><td class="type-cell">UCFL311</td><td>50.8~55</td><td>250</td><td>150</td><td>5.3</td></tr><tr><td class="type-cell">UCFL312</td><td>60</td><td>270</td><td>160</td><td>6.5</td></tr><tr><td class="type-cell">UCFL313</td><td>63.5~65</td><td>295</td><td>175</td><td>8.5</td></tr><tr><td class="type-cell">UCFL314</td><td>69.8~70</td><td>315</td><td>185</td><td>9.7</td></tr><tr><td class="type-cell">UCFL315</td><td>75~76.2</td><td>320</td><td>195</td><td>11.3</td></tr><tr><td class="type-cell">UCFL316</td><td>80</td><td>355</td><td>210</td><td>14.4</td></tr><tr><td class="type-cell">UCFL317</td><td>85</td><td>370</td><td>220</td><td>16.0</td></tr><tr><td class="type-cell">UCFL318</td><td>88.9~90</td><td>385</td><td>235</td><td>19.0</td></tr><tr><td class="type-cell">UCFL319</td><td>95</td><td>405</td><td>250</td><td>29.4</td></tr><tr><td class="type-cell">UCFL320</td><td>100</td><td>440</td><td>270</td><td>29.4</td></tr><tr><td class="type-cell">UCFL321</td><td>105</td><td>440</td><td>270</td><td>30.2</td></tr><tr><td class="type-cell">UCFL322</td><td>110</td><td>470</td><td>300</td><td>36.2</td></tr><tr><td class="type-cell">UCFL324</td><td>120</td><td>520</td><td>330</td><td>51.6</td></tr><tr><td class="type-cell">UCFL326</td><td>127~130</td><td>550</td><td>360</td><td>61.6</td></tr><tr><td class="type-cell">UCFL328</td><td>133.35~140</td><td>600</td><td>400</td><td>68.4</td></tr></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기) &middot; UCFL319&middot;320 두 행의 H&middot;L값은 원본 표에도 동일하게 인쇄되어 있습니다.</p>
       </div>
 
       <div class="cat-tab-panel" data-panel="fa" hidden>
@@ -254,6 +359,49 @@
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 중량이 범위로 표시된 행은 원본 표에서도 같은 하우징 내 축경별로 값이 조금씩 다릅니다.</p>
       </div>
 
+      <div class="cat-tab-panel" data-panel="fs" hidden>
+        <p class="cat-tab-panel-desc">UC 베어링을 사각 피벗(단차) 플랜지 하우징에 일체화한 유닛입니다. 사각 플랜지(F)와 비슷하지만 플랜지 단차가 설치면에 파고들어 위치를 잡아주는 구조입니다. 중형(3 시리즈)만 공급됩니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/ucfs_diagram.png" alt="FS형 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ UCFS 사각 피벗 플랜지 하우징 단면도 · L(사각변)&middot;H3(피벗 외경)&middot;J(볼트 간격)</p>
+        </div>
+
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="fsFilter">형번 / 축경 검색</label>
+          <input id="fsFilter" type="text" placeholder="예: UCFS306 또는 60" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 460px; max-width: 640px;">
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>L(사각변)</th><th>H3(피벗 외경)</th><th>중량(kg)</th></tr></thead>
+            <tbody id="fsBody">
+              <tr><td class="type-cell">UCFS305</td><td>25</td><td>110</td><td>80</td><td>1.4</td></tr>
+              <tr><td class="type-cell">UCFS306</td><td>28.6~30</td><td>125</td><td>90</td><td>1.9</td></tr>
+              <tr><td class="type-cell">UCFS307</td><td>31.7~36.5</td><td>135</td><td>100</td><td>2.3</td></tr>
+              <tr><td class="type-cell">UCFS308</td><td>38.1~40</td><td>150</td><td>115</td><td>3.4</td></tr>
+              <tr><td class="type-cell">UCFS309</td><td>44.4~45</td><td>160</td><td>125</td><td>4.4</td></tr>
+              <tr><td class="type-cell">UCFS310</td><td>49.2~50</td><td>175</td><td>140</td><td>5.3</td></tr>
+              <tr><td class="type-cell">UCFS311</td><td>50.8~55</td><td>185</td><td>150</td><td>6.1</td></tr>
+              <tr><td class="type-cell">UCFS312</td><td>60</td><td>195</td><td>160</td><td>7.4</td></tr>
+              <tr><td class="type-cell">UCFS313</td><td>63.5~65</td><td>208</td><td>175</td><td>8.8</td></tr>
+              <tr><td class="type-cell">UCFS314</td><td>69.8~70</td><td>226</td><td>185</td><td>11.2</td></tr>
+              <tr><td class="type-cell">UCFS315</td><td>75~76.2</td><td>236</td><td>200</td><td>13.7</td></tr>
+              <tr><td class="type-cell">UCFS316</td><td>80</td><td>250</td><td>210</td><td>15.1</td></tr>
+              <tr><td class="type-cell">UCFS317</td><td>85</td><td>260</td><td>220</td><td>17.3</td></tr>
+              <tr><td class="type-cell">UCFS318</td><td>88.9~90</td><td>280</td><td>216</td><td>21.3</td></tr>
+              <tr><td class="type-cell">UCFS319</td><td>95</td><td>290</td><td>250</td><td>24.5</td></tr>
+              <tr><td class="type-cell">UCFS320</td><td>100</td><td>310</td><td>260</td><td>29.5</td></tr>
+              <tr><td class="type-cell">UCFS321</td><td>105</td><td>310</td><td>260</td><td>32.7</td></tr>
+              <tr><td class="type-cell">UCFS322</td><td>110</td><td>340</td><td>300</td><td>39.0</td></tr>
+              <tr><td class="type-cell">UCFS324</td><td>120</td><td>370</td><td>330</td><td>50.6</td></tr>
+              <tr><td class="type-cell">UCFS326</td><td>127~130</td><td>410</td><td>360</td><td>67.7</td></tr>
+              <tr><td class="type-cell">UCFS328</td><td>133.35~140</td><td>450</td><td>400</td><td>94.0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)</p>
+      </div>
+
       <div class="cat-tab-panel" data-panel="fc" hidden>
         <p class="cat-tab-panel-desc">UC 베어링을 원형 플랜지 하우징에 일체화한 유닛입니다. 사각(F)&middot;장원형(FA/FB) 플랜지와 달리 볼트 구멍 4개가 원형으로 배치되어 축 중심을 기준으로 방향에 상관없이 설치할 수 있습니다.</p>
         <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
@@ -287,6 +435,45 @@
               <tr><td class="type-cell">UCFC218</td><td>88.9~90</td><td>265</td><td>190</td><td>13.3</td></tr>
             </tbody>
           </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="c" hidden>
+        <p class="cat-tab-panel-desc">플랜지나 받침대 없이 원통형 슬리브(카트리지) 형태로만 된 하우징입니다. 별도 설계된 지지 구조물에 끼워 넣어 사용하며, 기계 프레임에 직접 인서트하는 방식에 적합합니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 카탈로그 규격 도면</p>
+          <img src="img/ucc_diagram.png" alt="카트리지형(C) 유닛 구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ UCC 카트리지 하우징 단면도 · &phi;H(외경)&middot;A(전장)</p>
+        </div>
+
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="cFilter">형번 / 축경 검색</label>
+          <input id="cFilter" type="text" placeholder="예: UCC206 또는 30" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="cCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="cToggleAll">전체 펼치기</button>
+        </div>
+        <div id="cGroups">
+          <details class="series-group">
+            <summary>UCC2 시리즈 (소형)<span class="series-count">10건</span></summary>
+            <div class="finder-results" style="overflow-x: auto;">
+              <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+                <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>&phi;H(외경)</th><th>A(전장)</th><th>중량(kg)</th></tr></thead>
+                <tbody><tr><td class="type-cell">UCC204</td><td>12~20</td><td>72</td><td>20</td><td>0.47~0.52</td></tr><tr><td class="type-cell">UCC205</td><td>20.6~25.4</td><td>80</td><td>22</td><td>0.64</td></tr><tr><td class="type-cell">UCC206</td><td>27~31.75</td><td>85</td><td>27</td><td>0.81</td></tr><tr><td class="type-cell">UCC207</td><td>31.75~36.5</td><td>90</td><td>28</td><td>0.93</td></tr><tr><td class="type-cell">UCC208</td><td>38.1~40</td><td>100</td><td>30</td><td>1.2</td></tr><tr><td class="type-cell">UCC209</td><td>41.3~45</td><td>110</td><td>31</td><td>1.5</td></tr><tr><td class="type-cell">UCC210</td><td>47.6~50</td><td>120</td><td>33</td><td>2.0</td></tr><tr><td class="type-cell">UCC211</td><td>50.8~55.6</td><td>125</td><td>35</td><td>2.2</td></tr><tr><td class="type-cell">UCC212</td><td>57.2~61.9</td><td>130</td><td>38</td><td>2.6</td></tr><tr><td class="type-cell">UCC213</td><td>63.5~65</td><td>140</td><td>40</td><td>3.0</td></tr></tbody>
+              </table>
+            </div>
+          </details>
+          <details class="series-group">
+            <summary>UCC3 시리즈 (중형)<span class="series-count">21건</span></summary>
+            <div class="finder-results" style="overflow-x: auto;">
+              <table class="spec-table" style="min-width: 400px; max-width: 520px;">
+                <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>&phi;H(외경)</th><th>A(전장)</th><th>중량(kg)</th></tr></thead>
+                <tbody><tr><td class="type-cell">UCC305</td><td>25</td><td>90</td><td>26</td><td>1.5</td></tr><tr><td class="type-cell">UCC306</td><td>28.6~30</td><td>100</td><td>28</td><td>1.7</td></tr><tr><td class="type-cell">UCC307</td><td>31.7~36.5</td><td>110</td><td>32</td><td>2.2</td></tr><tr><td class="type-cell">UCC308</td><td>38.1~40</td><td>120</td><td>34</td><td>2.2</td></tr><tr><td class="type-cell">UCC309</td><td>44.4~45</td><td>130</td><td>38</td><td>2.8</td></tr><tr><td class="type-cell">UCC310</td><td>49.2~50</td><td>140</td><td>40</td><td>3.2</td></tr><tr><td class="type-cell">UCC311</td><td>50.8~55</td><td>150</td><td>44</td><td>3.9</td></tr><tr><td class="type-cell">UCC312</td><td>60</td><td>160</td><td>46</td><td>4.8</td></tr><tr><td class="type-cell">UCC313</td><td>63.5~65</td><td>170</td><td>50</td><td>5.7</td></tr><tr><td class="type-cell">UCC314</td><td>69.8~70</td><td>180</td><td>52</td><td>6.7</td></tr><tr><td class="type-cell">UCC315</td><td>75~76.2</td><td>190</td><td>55</td><td>7.8</td></tr><tr><td class="type-cell">UCC316</td><td>80</td><td>200</td><td>60</td><td>9.2</td></tr><tr><td class="type-cell">UCC317</td><td>85</td><td>215</td><td>64</td><td>11.7</td></tr><tr><td class="type-cell">UCC318</td><td>88.9~90</td><td>225</td><td>66</td><td>13.1</td></tr><tr><td class="type-cell">UCC319</td><td>95</td><td>240</td><td>72</td><td>15.8</td></tr><tr><td class="type-cell">UCC320</td><td>100</td><td>260</td><td>75</td><td>19.6</td></tr><tr><td class="type-cell">UCC321</td><td>105</td><td>260</td><td>75</td><td>27.0</td></tr><tr><td class="type-cell">UCC322</td><td>110</td><td>300</td><td>80</td><td>29.2</td></tr><tr><td class="type-cell">UCC324</td><td>120</td><td>320</td><td>90</td><td>35.9</td></tr><tr><td class="type-cell">UCC326</td><td>127~130</td><td>340</td><td>100</td><td>43.0</td></tr><tr><td class="type-cell">UCC328</td><td>133.35~140</td><td>360</td><td>100</td><td>52.9</td></tr></tbody>
+              </table>
+            </div>
+          </details>
         </div>
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)</p>
       </div>
@@ -331,7 +518,7 @@
       </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">
-        &#8251; 위 표는 SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그(하우징 치수표, B01/B11/B25/B26/B28/B34 섹션)를 기준으로 작성했습니다. 하우징은 여러 축경을 하나의 규격으로 겸용하는 경우가 많아, 겸용되는 축경 범위를 &ldquo;적용 축경&rdquo;으로 표시했습니다. H&middot;L 외의 세부 치수(J&middot;F&middot;볼트 규격 등)는 정식 도면으로 별도 안내드리며, 베어링 인서트(UC/UK) 자체 규격은 <a href="ball_bearing_unit.html">베어링 유니트</a> 페이지를 참고해 주세요. 구면 롤러 베어링용 SN 하우징은 <a href="plummer_block.html">플러머 블럭</a> 페이지를 참고해 주세요. 정밀 가공&middot;발주 전에는 반드시 견적 문의로 최종 확인하시기 바랍니다.
+        &#8251; 위 표는 SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그(하우징 치수표, B01/B08/B09/B11/B17/B19/B25/B26/B28/B34/B40/B42 섹션)를 기준으로 작성했습니다. 하우징은 여러 축경을 하나의 규격으로 겸용하는 경우가 많아, 겸용되는 축경 범위를 &ldquo;적용 축경&rdquo;으로 표시했습니다. H&middot;L 외의 세부 치수(J&middot;F&middot;볼트 규격 등)는 정식 도면으로 별도 안내드리며, 베어링 인서트(UC/UK) 자체 규격은 <a href="ball_bearing_unit.html">베어링 유니트</a> 페이지를 참고해 주세요. 구면 롤러 베어링용 SN 하우징은 <a href="plummer_block.html">플러머 블럭</a> 페이지를 참고해 주세요. 정밀 가공&middot;발주 전에는 반드시 견적 문의로 최종 확인하시기 바랍니다.
       </p>
     </div>
   </section>
@@ -541,6 +728,135 @@
         row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1) ? '' : 'none';
       });
     });
+  })();
+</script>
+
+<script>
+  (function () {
+    var input = document.getElementById('phFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#phBody tr'));
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toUpperCase();
+      rows.forEach(function (row) {
+        row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1) ? '' : 'none';
+      });
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var input = document.getElementById('paFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#paBody tr'));
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toUpperCase();
+      rows.forEach(function (row) {
+        row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1) ? '' : 'none';
+      });
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var input = document.getElementById('fsFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#fsBody tr'));
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toUpperCase();
+      rows.forEach(function (row) {
+        row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1) ? '' : 'none';
+      });
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var input = document.getElementById('flFilter');
+    var groupsWrap = document.getElementById('flGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('flCount');
+    var toggleBtn = document.getElementById('flToggleAll');
+    var totalRows = 37;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        if (q !== '') { grp.open = grpShown > 0; } else { grp.open = false; }
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      if (allOpen) {
+        input.value = '';
+        groups.forEach(function (grp) {
+          Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) { row.style.display = ''; });
+        });
+        countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+      }
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+  })();
+</script>
+
+<script>
+  (function () {
+    var input = document.getElementById('cFilter');
+    var groupsWrap = document.getElementById('cGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('cCount');
+    var toggleBtn = document.getElementById('cToggleAll');
+    var totalRows = 31;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        if (q !== '') { grp.open = grpShown > 0; } else { grp.open = false; }
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      if (allOpen) {
+        input.value = '';
+        groups.forEach(function (grp) {
+          Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) { row.style.display = ''; });
+        });
+        countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+      }
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
   })();
 </script>
 </body>
