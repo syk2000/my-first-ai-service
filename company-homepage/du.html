@@ -282,6 +282,11 @@
     var allOpen = false;
     toggleBtn.addEventListener('click', function () {
       allOpen = !allOpen;
+      if (allOpen) {
+        input.value = '';
+        rows.forEach(function (row) { row.style.display = ''; });
+        countEl.textContent = totalRows + '건';
+      }
       grp.open = allOpen;
       toggleBtn.textContent = allOpen ? '접기' : '전체 펼치기';
     });
