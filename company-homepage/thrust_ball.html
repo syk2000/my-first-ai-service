@@ -446,7 +446,7 @@
           </div>
         </details>
         <details class="series-group">
-          <summary>1 시리즈<span class="series-count">4건</span></summary>
+          <summary>인치 규격<span class="series-count">8건</span></summary>
           <div class="finder-results" style="overflow-x: auto;">
             <table class="spec-table" style="min-width: 420px; max-width: 600px;">
               <thead>
@@ -457,74 +457,14 @@
               <th>T(높이)</th>
             </tr>
           </thead>
-              <tbody><tr><td class="type-cell">1/2"</td><td>12.7</td><td>28</td><td>-0.008/-0.009</td><td>12</td></tr><tr><td class="type-cell">1"</td><td>25.4</td><td>45</td><td>-0.01/-0.011</td><td>14</td></tr><tr><td class="type-cell">1-1/4"</td><td>31.75</td><td>53</td><td>-0.012/-0.013</td><td>16</td></tr><tr><td class="type-cell">1-1/2"</td><td>38.1</td><td>60</td><td>-0.012/-0.013</td><td>16</td></tr></tbody>
+              <tbody><tr><td class="type-cell">1/2"</td><td>12.7</td><td>28</td><td>-0.008/-0.009</td><td>12</td></tr><tr><td class="type-cell">5/8"</td><td>15.875</td><td>32</td><td>-0.008/-0.011</td><td>12</td></tr><tr><td class="type-cell">3/4"</td><td>19.05</td><td>35</td><td>-0.01/-0.011</td><td>12</td></tr><tr><td class="type-cell">7/8"</td><td>22.225</td><td>42</td><td>-0.01/-0.011</td><td>14</td></tr><tr><td class="type-cell">1"</td><td>25.4</td><td>45</td><td>-0.01/-0.011</td><td>14</td></tr><tr><td class="type-cell">1-1/4"</td><td>31.75</td><td>53</td><td>-0.012/-0.013</td><td>16</td></tr><tr><td class="type-cell">1-1/2"</td><td>38.1</td><td>60</td><td>-0.012/-0.013</td><td>16</td></tr><tr><td class="type-cell">2"</td><td>50.8</td><td>74</td><td>-0.015/-0.013</td><td>18</td></tr></tbody>
             </table>
           </div>
         </details>
-        <details class="series-group">
-          <summary>5 시리즈<span class="series-count">1건</span></summary>
-          <div class="finder-results" style="overflow-x: auto;">
-            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th><th>공차(d/D)</th>
-              <th>T(높이)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">5/8"</td><td>15.875</td><td>32</td><td>-0.008/-0.011</td><td>12</td></tr></tbody>
-            </table>
-          </div>
-        </details>
-        <details class="series-group">
-          <summary>3 시리즈<span class="series-count">1건</span></summary>
-          <div class="finder-results" style="overflow-x: auto;">
-            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th><th>공차(d/D)</th>
-              <th>T(높이)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">3/4"</td><td>19.05</td><td>35</td><td>-0.01/-0.011</td><td>12</td></tr></tbody>
-            </table>
-          </div>
-        </details>
-        <details class="series-group">
-          <summary>7 시리즈<span class="series-count">1건</span></summary>
-          <div class="finder-results" style="overflow-x: auto;">
-            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th><th>공차(d/D)</th>
-              <th>T(높이)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">7/8"</td><td>22.225</td><td>42</td><td>-0.01/-0.011</td><td>14</td></tr></tbody>
-            </table>
-          </div>
-        </details>
-        <details class="series-group">
-          <summary>2 시리즈<span class="series-count">1건</span></summary>
-          <div class="finder-results" style="overflow-x: auto;">
-            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th><th>공차(d/D)</th>
-              <th>T(높이)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">2"</td><td>50.8</td><td>74</td><td>-0.015/-0.013</td><td>18</td></tr></tbody>
-            </table>
-          </div>
-        </details>
+        
+        
+        
+        
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
@@ -579,7 +519,7 @@
           grp.open = false;
         }
       });
-      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 16 + '개 시리즈';
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 12 + '개 시리즈';
     }
 
     var allOpen = false;
@@ -590,7 +530,7 @@
     });
 
     input.addEventListener('input', applyFilter);
-    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 16 + '개 시리즈';
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 12 + '개 시리즈';
   })();
 </script>
 </body>
