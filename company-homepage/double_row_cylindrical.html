@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>원통 롤러 베어링 (복렬) | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="double-row-cylindrical" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Double Row Cylindrical Roller Bearings</p>
+        <h2>원통 롤러 베어링 (복렬)</h2>
+        <p>단열 원통 롤러 베어링보다 궤도륜을 얇게 설계해 동일 외경에서 더 큰 부하능력을 낼 수 있는 복렬 구조입니다. 압연기계의 롤, 공작기계 주축 등 고강성·고정밀 회전부에 사용됩니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
+      </div>
+
+      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+        <label for="drcFilter">형번 / 규격 검색</label>
+        <input id="drcFilter" type="text" placeholder="예: NN3010 또는 50*80" autocomplete="off" />
+      </div>
+      <p class="finder-tip" id="drcCount" style="margin-bottom: 10px;"></p>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" id="drcTable" style="min-width: 420px; max-width: 600px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th>
+              <th>B(폭)</th>
+            </tr>
+          </thead>
+          <tbody id="drcBody"><tr><td class="type-cell">NN3005</td><td>25</td><td>47</td><td>16</td></tr><tr><td class="type-cell">NN3005K</td><td>25</td><td>47</td><td>16</td></tr><tr><td class="type-cell">NN3006</td><td>30</td><td>55</td><td>19</td></tr><tr><td class="type-cell">NN3006K</td><td>30</td><td>55</td><td>19</td></tr><tr><td class="type-cell">NN3007</td><td>35</td><td>62</td><td>20</td></tr><tr><td class="type-cell">NN3007K</td><td>35</td><td>62</td><td>20</td></tr><tr><td class="type-cell">NN3008</td><td>40</td><td>68</td><td>21</td></tr><tr><td class="type-cell">NN3008K</td><td>40</td><td>68</td><td>21</td></tr><tr><td class="type-cell">NN3009</td><td>45</td><td>75</td><td>23</td></tr><tr><td class="type-cell">NN3009K</td><td>45</td><td>75</td><td>23</td></tr><tr><td class="type-cell">NN3010</td><td>50</td><td>80</td><td>23</td></tr><tr><td class="type-cell">NN3010K</td><td>50</td><td>80</td><td>23</td></tr><tr><td class="type-cell">NN3011</td><td>55</td><td>90</td><td>26</td></tr><tr><td class="type-cell">NN3011K</td><td>55</td><td>90</td><td>26</td></tr><tr><td class="type-cell">NN3012</td><td>60</td><td>95</td><td>26</td></tr><tr><td class="type-cell">NN3012K</td><td>60</td><td>95</td><td>26</td></tr><tr><td class="type-cell">NN3013</td><td>65</td><td>100</td><td>26</td></tr><tr><td class="type-cell">NN3013K</td><td>65</td><td>100</td><td>26</td></tr><tr><td class="type-cell">NN3014</td><td>70</td><td>110</td><td>30</td></tr><tr><td class="type-cell">NN3014K</td><td>70</td><td>110</td><td>30</td></tr><tr><td class="type-cell">NN3015</td><td>75</td><td>115</td><td>30</td></tr><tr><td class="type-cell">NN3015K</td><td>75</td><td>115</td><td>30</td></tr><tr><td class="type-cell">NN3016</td><td>80</td><td>125</td><td>34</td></tr><tr><td class="type-cell">NN3016K</td><td>80</td><td>125</td><td>34</td></tr><tr><td class="type-cell">NN3017</td><td>85</td><td>130</td><td>34</td></tr><tr><td class="type-cell">NN3017K</td><td>85</td><td>130</td><td>34</td></tr><tr><td class="type-cell">NN3018</td><td>90</td><td>140</td><td>37</td></tr><tr><td class="type-cell">NN3019</td><td>95</td><td>145</td><td>37</td></tr><tr><td class="type-cell">NNU4920</td><td>100</td><td>140</td><td>40</td></tr><tr><td class="type-cell">NNU4920K</td><td>100</td><td>140</td><td>40</td></tr><tr><td class="type-cell">NN3020</td><td>100</td><td>150</td><td>37</td></tr><tr><td class="type-cell">NN3020K</td><td>100</td><td>150</td><td>37</td></tr><tr><td class="type-cell">NNU4921</td><td>105</td><td>145</td><td>40</td></tr><tr><td class="type-cell">NNU4921K</td><td>105</td><td>145</td><td>40</td></tr><tr><td class="type-cell">NN3021</td><td>105</td><td>160</td><td>41</td></tr><tr><td class="type-cell">NN3021K</td><td>105</td><td>160</td><td>41</td></tr><tr><td class="type-cell">NNU4922</td><td>110</td><td>150</td><td>40</td></tr><tr><td class="type-cell">NNU4922K</td><td>110</td><td>150</td><td>40</td></tr><tr><td class="type-cell">NN3022</td><td>110</td><td>170</td><td>45</td></tr><tr><td class="type-cell">NN3022K</td><td>110</td><td>170</td><td>45</td></tr><tr><td class="type-cell">NNU4924</td><td>120</td><td>165</td><td>45</td></tr><tr><td class="type-cell">NNU4924K</td><td>120</td><td>165</td><td>45</td></tr><tr><td class="type-cell">NN3024</td><td>120</td><td>180</td><td>46</td></tr><tr><td class="type-cell">NN3024K</td><td>120</td><td>180</td><td>46</td></tr><tr><td class="type-cell">NNU4926</td><td>130</td><td>180</td><td>50</td></tr><tr><td class="type-cell">NNU4926K</td><td>130</td><td>180</td><td>50</td></tr><tr><td class="type-cell">NN3026</td><td>130</td><td>200</td><td>52</td></tr><tr><td class="type-cell">NN3026K</td><td>130</td><td>200</td><td>52</td></tr><tr><td class="type-cell">NNU4928</td><td>140</td><td>190</td><td>50</td></tr><tr><td class="type-cell">NNU4928K</td><td>140</td><td>190</td><td>50</td></tr><tr><td class="type-cell">NN3028</td><td>140</td><td>210</td><td>53</td></tr><tr><td class="type-cell">NN3028K</td><td>140</td><td>210</td><td>53</td></tr><tr><td class="type-cell">NNU4930</td><td>150</td><td>210</td><td>60</td></tr><tr><td class="type-cell">NNU4930K</td><td>150</td><td>210</td><td>60</td></tr><tr><td class="type-cell">NN3030</td><td>150</td><td>225</td><td>56</td></tr><tr><td class="type-cell">NN3030K</td><td>150</td><td>225</td><td>56</td></tr><tr><td class="type-cell">NNU4932</td><td>160</td><td>220</td><td>60</td></tr><tr><td class="type-cell">NNU4932K</td><td>160</td><td>220</td><td>60</td></tr><tr><td class="type-cell">NN3032</td><td>160</td><td>240</td><td>60</td></tr><tr><td class="type-cell">NN3032K</td><td>160</td><td>240</td><td>60</td></tr><tr><td class="type-cell">NNU4934</td><td>170</td><td>230</td><td>60</td></tr><tr><td class="type-cell">NNU4934K</td><td>170</td><td>230</td><td>60</td></tr><tr><td class="type-cell">NN3034</td><td>170</td><td>260</td><td>67</td></tr><tr><td class="type-cell">NN3034K</td><td>170</td><td>260</td><td>67</td></tr><tr><td class="type-cell">NNU4936</td><td>180</td><td>250</td><td>69</td></tr><tr><td class="type-cell">NNU4936K</td><td>180</td><td>250</td><td>69</td></tr><tr><td class="type-cell">NN3036</td><td>180</td><td>280</td><td>74</td></tr><tr><td class="type-cell">NN3036K</td><td>180</td><td>280</td><td>74</td></tr><tr><td class="type-cell">NNU4938</td><td>190</td><td>260</td><td>69</td></tr><tr><td class="type-cell">NNU4938K</td><td>190</td><td>260</td><td>69</td></tr><tr><td class="type-cell">NN3038</td><td>190</td><td>290</td><td>75</td></tr><tr><td class="type-cell">NN3038K</td><td>190</td><td>290</td><td>75</td></tr><tr><td class="type-cell">NNU4940</td><td>200</td><td>280</td><td>80</td></tr><tr><td class="type-cell">NNU4940K</td><td>200</td><td>280</td><td>80</td></tr><tr><td class="type-cell">NN3040</td><td>200</td><td>310</td><td>82</td></tr><tr><td class="type-cell">NN3040K</td><td>200</td><td>310</td><td>82</td></tr><tr><td class="type-cell">NNU4944</td><td>220</td><td>300</td><td>80</td></tr><tr><td class="type-cell">NNU4944K</td><td>220</td><td>300</td><td>80</td></tr><tr><td class="type-cell">NN3044</td><td>220</td><td>340</td><td>90</td></tr><tr><td class="type-cell">NN3044K</td><td>220</td><td>340</td><td>90</td></tr><tr><td class="type-cell">NNU4948</td><td>240</td><td>320</td><td>80</td></tr><tr><td class="type-cell">NNU4948K</td><td>240</td><td>320</td><td>80</td></tr><tr><td class="type-cell">NN3048</td><td>240</td><td>360</td><td>92</td></tr><tr><td class="type-cell">NN3048K</td><td>240</td><td>360</td><td>92</td></tr><tr><td class="type-cell">NNU4952</td><td>260</td><td>360</td><td>100</td></tr><tr><td class="type-cell">NNU4952K</td><td>260</td><td>360</td><td>100</td></tr><tr><td class="type-cell">NN3052</td><td>260</td><td>400</td><td>104</td></tr><tr><td class="type-cell">NN3052K</td><td>260</td><td>400</td><td>104</td></tr><tr><td class="type-cell">NNU4956</td><td>280</td><td>380</td><td>100</td></tr><tr><td class="type-cell">NNU4956K</td><td>280</td><td>380</td><td>100</td></tr><tr><td class="type-cell">NN3056</td><td>280</td><td>420</td><td>106</td></tr><tr><td class="type-cell">NN3056K</td><td>280</td><td>420</td><td>106</td></tr><tr><td class="type-cell">NNU4960</td><td>300</td><td>420</td><td>118</td></tr><tr><td class="type-cell">NNU4960K</td><td>300</td><td>420</td><td>118</td></tr><tr><td class="type-cell">NN3060</td><td>300</td><td>460</td><td>118</td></tr><tr><td class="type-cell">NN3060K</td><td>300</td><td>460</td><td>118</td></tr><tr><td class="type-cell">NNU4964</td><td>320</td><td>440</td><td>118</td></tr><tr><td class="type-cell">NNU4964K</td><td>320</td><td>440</td><td>118</td></tr><tr><td class="type-cell">NN3064</td><td>320</td><td>480</td><td>121</td></tr><tr><td class="type-cell">NN3064K</td><td>320</td><td>480</td><td>121</td></tr><tr><td class="type-cell">NNU4968</td><td>340</td><td>460</td><td>118</td></tr><tr><td class="type-cell">NNU4968K</td><td>340</td><td>460</td><td>118</td></tr><tr><td class="type-cell">NN3068</td><td>340</td><td>520</td><td>133</td></tr><tr><td class="type-cell">NN3068K</td><td>340</td><td>520</td><td>133</td></tr><tr><td class="type-cell">NN3072</td><td>360</td><td>540</td><td>134</td></tr><tr><td class="type-cell">NN3072K</td><td>360</td><td>540</td><td>134</td></tr><tr><td class="type-cell">NN3076</td><td>380</td><td>560</td><td>135</td></tr><tr><td class="type-cell">NN3076K</td><td>380</td><td>560</td><td>135</td></tr><tr><td class="type-cell">NN3080</td><td>400</td><td>600</td><td>148</td></tr><tr><td class="type-cell">NN3080K</td><td>400</td><td>600</td><td>148</td></tr><tr><td class="type-cell">NN3084</td><td>420</td><td>620</td><td>150</td></tr><tr><td class="type-cell">NN3084K</td><td>420</td><td>620</td><td>150</td></tr><tr><td class="type-cell">NN3088</td><td>440</td><td>650</td><td>157</td></tr><tr><td class="type-cell">NN3088K</td><td>440</td><td>650</td><td>157</td></tr><tr><td class="type-cell">NN3092</td><td>460</td><td>680</td><td>163</td></tr><tr><td class="type-cell">NN3092K</td><td>460</td><td>680</td><td>163</td></tr><tr><td class="type-cell">NN3096</td><td>480</td><td>700</td><td>165</td></tr><tr><td class="type-cell">NN3096K</td><td>480</td><td>700</td><td>165</td></tr></tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+<script>
+  (function () {
+    var input = document.getElementById('drcFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#drcBody tr'));
+    var countEl = document.getElementById('drcCount');
+
+    function updateCount(shown) {
+      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
+    }
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      updateCount(shown);
+    }
+
+    input.addEventListener('input', applyFilter);
+    updateCount(rows.length);
+  })();
+</script>
+</body>
+</html>
