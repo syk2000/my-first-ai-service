@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>볼 베어링 유니트 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="ball-bearing-unit" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Ball Bearing Units</p>
+        <h2>볼 베어링 유니트</h2>
+        <p>구름 볼 베어링과 하우징을 일체화한 유닛으로, 필로우 블록(P)·플랜지형(F/FL/FC)·카트리지형(C)·테이크업(T) 등 다양한 하우징 형태에 조합됩니다. UC(내경 표준)·UK(테이퍼 내경, 어댑터 슬리브 사용) 계열로 공급됩니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
+      </div>
+
+      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+        <label for="bbuFilter">형번 / 규격 검색</label>
+        <input id="bbuFilter" type="text" placeholder="예: UC206 또는 30*62" autocomplete="off" />
+      </div>
+      <p class="finder-tip" id="bbuCount" style="margin-bottom: 10px;"></p>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" id="bbuTable" style="min-width: 420px; max-width: 600px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th>
+              <th>B(폭)</th>
+            </tr>
+          </thead>
+          <tbody id="bbuBody"><tr><td class="type-cell">UC201</td><td>12</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC201-8</td><td>12.7</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC202</td><td>15</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC202-10</td><td>15.8</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC203</td><td>17</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC204-12</td><td>19.1</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC204</td><td>20</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC205-14</td><td>22.2</td><td>52</td><td>34.1</td></tr><tr><td class="type-cell">UC205-15</td><td>23.8</td><td>52</td><td>34.1</td></tr><tr><td class="type-cell">UC205</td><td>25</td><td>52</td><td>34.1</td></tr><tr><td class="type-cell">UC205-16</td><td>25.4</td><td>52</td><td>34.1</td></tr><tr><td class="type-cell">UC206-18</td><td>28.6</td><td>62</td><td>38.1</td></tr><tr><td class="type-cell">UC206</td><td>30</td><td>62</td><td>38.1</td></tr><tr><td class="type-cell">UC206-19</td><td>30.2</td><td>62</td><td>38.1</td></tr><tr><td class="type-cell">UC207-20</td><td>31.7</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC207-21</td><td>33.3</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC207-22</td><td>34.9</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC207</td><td>35</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC207-23</td><td>36.5</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC208-24</td><td>38.1</td><td>80</td><td>49.2</td></tr><tr><td class="type-cell">UC208-25</td><td>39.7</td><td>80</td><td>49.2</td></tr><tr><td class="type-cell">UC208</td><td>40</td><td>80</td><td>49.2</td></tr><tr><td class="type-cell">UC209-26</td><td>41.3</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">UC209-27</td><td>42.8</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">UC209-28</td><td>44.4</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">UC209</td><td>45</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">UC210-30</td><td>47.6</td><td>90</td><td>51.6</td></tr><tr><td class="type-cell">UC210-31</td><td>49.2</td><td>90</td><td>51.6</td></tr><tr><td class="type-cell">UC210</td><td>50</td><td>90</td><td>51.6</td></tr><tr><td class="type-cell">UC211-32</td><td>50.8</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">UC211-34</td><td>53.9</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">UC211</td><td>55</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">UC211-35</td><td>55.6</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">UC212-36</td><td>57.2</td><td>110</td><td>65.1</td></tr><tr><td class="type-cell">UC212</td><td>60</td><td>110</td><td>65.1</td></tr><tr><td class="type-cell">UC212-38</td><td>60.3</td><td>110</td><td>65.1</td></tr><tr><td class="type-cell">UC212-39</td><td>61.9</td><td>110</td><td>65.1</td></tr><tr><td class="type-cell">UC213-40</td><td>63.5</td><td>120</td><td>65.1</td></tr><tr><td class="type-cell">UC213</td><td>65</td><td>120</td><td>65.1</td></tr><tr><td class="type-cell">UC214-44</td><td>69.8</td><td>125</td><td>74.6</td></tr><tr><td class="type-cell">UC214</td><td>70</td><td>125</td><td>74.6</td></tr><tr><td class="type-cell">UC215</td><td>75</td><td>130</td><td>77.8</td></tr><tr><td class="type-cell">UC215-48</td><td>76.2</td><td>130</td><td>77.8</td></tr><tr><td class="type-cell">UC216</td><td>80</td><td>140</td><td>82.6</td></tr><tr><td class="type-cell">UC217-52</td><td>82.5</td><td>150</td><td>85.7</td></tr><tr><td class="type-cell">UC217</td><td>85</td><td>150</td><td>85.7</td></tr><tr><td class="type-cell">UC218</td><td>90</td><td>160</td><td>96</td></tr><tr><td class="type-cell">UC305</td><td>25</td><td>62</td><td>38</td></tr><tr><td class="type-cell">UC305-16</td><td>25.4</td><td>62</td><td>38</td></tr><tr><td class="type-cell">UC306-18</td><td>28.6</td><td>72</td><td>43</td></tr><tr><td class="type-cell">UC306</td><td>30</td><td>72</td><td>43</td></tr><tr><td class="type-cell">UC307-20</td><td>31.7</td><td>80</td><td>48</td></tr><tr><td class="type-cell">UC307-22</td><td>34.9</td><td>80</td><td>48</td></tr><tr><td class="type-cell">UC307</td><td>35</td><td>80</td><td>48</td></tr><tr><td class="type-cell">UC308-24</td><td>38.1</td><td>90</td><td>52</td></tr><tr><td class="type-cell">UC308</td><td>40</td><td>90</td><td>52</td></tr><tr><td class="type-cell">UC309-28</td><td>44.4</td><td>100</td><td>57</td></tr><tr><td class="type-cell">UC309</td><td>45</td><td>100</td><td>57</td></tr><tr><td class="type-cell">UC310-31</td><td>49.2</td><td>110</td><td>61</td></tr><tr><td class="type-cell">UC310</td><td>50</td><td>110</td><td>61</td></tr><tr><td class="type-cell">UC311-32</td><td>50.8</td><td>120</td><td>66</td></tr><tr><td class="type-cell">UC311</td><td>55</td><td>120</td><td>66</td></tr><tr><td class="type-cell">UC312</td><td>60</td><td>130</td><td>71</td></tr><tr><td class="type-cell">UC313-40</td><td>63.5</td><td>140</td><td>75</td></tr><tr><td class="type-cell">UC313</td><td>65</td><td>140</td><td>75</td></tr><tr><td class="type-cell">UC314-44</td><td>69.8</td><td>150</td><td>78</td></tr><tr><td class="type-cell">UC314</td><td>70</td><td>150</td><td>78</td></tr><tr><td class="type-cell">UC315</td><td>75</td><td>160</td><td>82</td></tr><tr><td class="type-cell">UC315-48</td><td>76.2</td><td>160</td><td>82</td></tr><tr><td class="type-cell">UC316</td><td>80</td><td>170</td><td>86</td></tr><tr><td class="type-cell">UC317</td><td>85</td><td>180</td><td>96</td></tr><tr><td class="type-cell">UC318-56</td><td>88.9</td><td>190</td><td>96</td></tr><tr><td class="type-cell">UC318</td><td>90</td><td>190</td><td>96</td></tr><tr><td class="type-cell">UC319</td><td>95</td><td>200</td><td>103</td></tr><tr><td class="type-cell">UC320</td><td>100</td><td>215</td><td>108</td></tr><tr><td class="type-cell">UC320-64</td><td>101.6</td><td>215</td><td>108</td></tr><tr><td class="type-cell">UC321</td><td>105</td><td>225</td><td>112</td></tr><tr><td class="type-cell">UC322</td><td>110</td><td>240</td><td>117</td></tr><tr><td class="type-cell">UC324</td><td>120</td><td>260</td><td>126</td></tr><tr><td class="type-cell">UC326</td><td>130</td><td>280</td><td>135</td></tr><tr><td class="type-cell">UC328</td><td>140</td><td>300</td><td>145</td></tr><tr><td class="type-cell">UK205</td><td>25</td><td>52</td><td>22</td></tr><tr><td class="type-cell">UK206</td><td>30</td><td>62</td><td>24</td></tr><tr><td class="type-cell">UK207</td><td>35</td><td>72</td><td>26</td></tr><tr><td class="type-cell">UK208</td><td>40</td><td>80</td><td>27</td></tr><tr><td class="type-cell">UK209</td><td>45</td><td>85</td><td>28</td></tr><tr><td class="type-cell">UK210</td><td>50</td><td>90</td><td>30</td></tr><tr><td class="type-cell">UK211</td><td>55</td><td>100</td><td>32</td></tr><tr><td class="type-cell">UK212</td><td>60</td><td>110</td><td>34</td></tr><tr><td class="type-cell">UK213</td><td>65</td><td>120</td><td>37</td></tr><tr><td class="type-cell">UK215</td><td>75</td><td>130</td><td>38</td></tr><tr><td class="type-cell">UK216</td><td>80</td><td>140</td><td>40</td></tr><tr><td class="type-cell">UK217</td><td>85</td><td>150</td><td>43</td></tr><tr><td class="type-cell">UK218</td><td>90</td><td>160</td><td>46</td></tr><tr><td class="type-cell">UK305</td><td>25</td><td>62</td><td>27</td></tr><tr><td class="type-cell">UK306</td><td>30</td><td>72</td><td>30</td></tr><tr><td class="type-cell">UK307</td><td>35</td><td>80</td><td>33</td></tr><tr><td class="type-cell">UK308</td><td>40</td><td>90</td><td>35</td></tr><tr><td class="type-cell">UK309</td><td>45</td><td>100</td><td>38</td></tr><tr><td class="type-cell">UK310</td><td>50</td><td>110</td><td>40</td></tr><tr><td class="type-cell">UK311</td><td>55</td><td>120</td><td>43</td></tr><tr><td class="type-cell">UK312</td><td>60</td><td>130</td><td>46</td></tr><tr><td class="type-cell">UK313</td><td>65</td><td>140</td><td>48</td></tr><tr><td class="type-cell">UK315</td><td>75</td><td>160</td><td>54</td></tr><tr><td class="type-cell">UK316</td><td>80</td><td>170</td><td>57</td></tr><tr><td class="type-cell">UK317</td><td>85</td><td>180</td><td>60</td></tr><tr><td class="type-cell">UK318</td><td>90</td><td>190</td><td>63</td></tr><tr><td class="type-cell">UK319</td><td>95</td><td>200</td><td>66</td></tr><tr><td class="type-cell">UK320</td><td>100</td><td>215</td><td>70</td></tr><tr><td class="type-cell">UK322</td><td>110</td><td>240</td><td>80</td></tr><tr><td class="type-cell">UK324</td><td>120</td><td>260</td><td>86</td></tr><tr><td class="type-cell">UK326</td><td>130</td><td>280</td><td>92</td></tr><tr><td class="type-cell">UK328</td><td>140</td><td>300</td><td>98</td></tr></tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+<script>
+  (function () {
+    var input = document.getElementById('bbuFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#bbuBody tr'));
+    var countEl = document.getElementById('bbuCount');
+
+    function updateCount(shown) {
+      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
+    }
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      updateCount(shown);
+    }
+
+    input.addEventListener('input', applyFilter);
+    updateCount(rows.length);
+  })();
+</script>
+</body>
+</html>
