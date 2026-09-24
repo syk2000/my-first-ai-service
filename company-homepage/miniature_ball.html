@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>미니어처 볼 베어링 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="miniature-ball" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Miniature Ball Bearings</p>
+        <h2>미니어처 볼 베어링</h2>
+        <p>일반적으로 외경 9mm 미만의 베어링을 미니어처 베어링, 외경 9mm 이상&middot;내경 10mm 미만의 베어링을 소경 베어링으로 분류합니다.</p>
+        <p>개방형(Open Type)&middot;플랜지형(Flanged Type)&middot;시일드형(Sealed Type)이 공급됩니다.</p>
+        <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다. 크기가 같은 베어링을 IJK&middot;NTN&middot;NMB&middot;NSK&middot;KOYO 등 제조사별 형번으로 함께 안내합니다.</p>
+      </div>
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">당사 SWS 카탈로그 규격 도면</p>
+        <img src="img/miniature_ball.png" alt="구조 단면도" style="display: block; margin: 0 auto; max-width: 100%; height: auto;" loading="lazy">
+        <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">d(내경) &middot; D(외경) &middot; B/B1(폭) &middot; FD(플랜지 외경)</p>
+      </div>
+
+      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+        <label for="mbFilter">형번 / 규격 검색</label>
+        <input id="mbFilter" type="text" placeholder="예: 681 또는 3*8" autocomplete="off" />
+      </div>
+      <p class="finder-tip" id="mbCount" style="margin-bottom: 10px;"></p>
+
+      <h3 class="product-subgroup-title" style="margin-top: 28px;">인치 규격 (IJK 계열) &middot; 내경 1.016~38.1mm</h3>
+      <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1 1 320px; min-width: 300px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 480px;" id="mbA">
+            <thead><tr><th>d</th><th>D</th><th>B(ZZ)</th><th>B1(OPEN)</th><th>IJK</th><th>NTN</th><th>NMB</th></tr></thead>
+            <tbody><tr><td class="type-cell">1.016</td><td>3.1750</td><td></td><td>1.1913</td><td>R09</td><td>R09</td><td>RI-2</td></tr><tr><td class="type-cell">1.1913</td><td>3.9675</td><td>2.3800</td><td>1.5879</td><td>R0ZZ</td><td>RA0ZZ</td><td>RI-2½ZZ</td></tr><tr><td class="type-cell">1.3970</td><td>4.7625</td><td>2.7788</td><td>1.9837</td><td>R1ZZ</td><td>RA1ZZA</td><td>RI-3ZZ</td></tr><tr><td class="type-cell">1.9837</td><td>6.3500</td><td>3.5712</td><td>2.3800</td><td>R1-4ZZ</td><td>RA1-4ZZA</td><td>RI-4ZZ</td></tr><tr><td class="type-cell">2.3800</td><td>4.7625</td><td>2.3800</td><td>1.5879</td><td>R133ZZ</td><td>RA133ZZA</td><td>RI-3332ZZ</td></tr><tr><td class="type-cell">2.3800</td><td>7.9375</td><td>3.5712</td><td>2.7788</td><td>R1-5ZZ</td><td>RA1-5ZZA</td><td>RI-5ZZ</td></tr><tr><td class="type-cell">3.1750</td><td>6.3500</td><td>2.7788</td><td>2.3800</td><td>R144ZZ</td><td>RA144ZZA</td><td>RI-418ZZ</td></tr><tr><td class="type-cell">3.1750</td><td>7.9375</td><td>3.5712</td><td>2.7788</td><td>R2-5ZZ</td><td>RA2-5ZZA</td><td>RI-518ZZ</td></tr><tr><td class="type-cell">3.1750</td><td>9.5250</td><td>3.5712</td><td>2.7788</td><td>R2-6ZZ</td><td>RA2-6ZZA</td><td>RI-618ZZ</td></tr><tr><td class="type-cell">3.1750</td><td>9.5250</td><td>3.9675</td><td>3.9675</td><td>R2ZZ</td><td>R2ZZA</td><td>R2ZZ</td></tr><tr><td class="type-cell">3.1750</td><td>12.7000</td><td>4.366</td><td>4.366</td><td>R2AZZ</td><td>RA2ZZ</td><td></td></tr><tr><td class="type-cell">3.9675</td><td>7.9375</td><td>3.1750</td><td>2.7788</td><td>R155ZZ</td><td>RA155ZZA</td><td>RI-5532ZZ</td></tr><tr><td class="type-cell">4.7625</td><td>7.9375</td><td>3.1750</td><td>2.7788</td><td>R156ZZ</td><td>RA156ZZA</td><td>RI-5632ZZ</td></tr><tr><td class="type-cell">4.7625</td><td>9.5250</td><td>3.1750</td><td>3.1750</td><td>R166ZZ</td><td>R166ZZA</td><td>RI-6632ZZ</td></tr><tr><td class="type-cell">4.7625</td><td>12.7000</td><td>4.9784</td><td>3.9675</td><td>R3ZZ</td><td>RA3ZZ</td><td>R3ZZ</td></tr></tbody>
+          </table>
+        </div>
+        <div style="flex: 1 1 320px; min-width: 300px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 480px;" id="mbAb">
+            <thead><tr><th>d</th><th>D</th><th>B(ZZ)</th><th>B1(OPEN)</th><th>IJK</th><th>NTN</th><th>NMB</th></tr></thead>
+            <tbody><tr><td class="type-cell">6.3500</td><td>9.5250</td><td>3.1750</td><td>3.1750</td><td>R168ZZ</td><td>R168ZZA</td><td>RI-614ZZ</td></tr><tr><td class="type-cell">6.3500</td><td>12.7000</td><td>4.7625</td><td>3.1750</td><td>R188ZZ</td><td>RA188ZZA</td><td>RI-814X3ZZ</td></tr><tr><td class="type-cell">6.3500</td><td>15.875</td><td>4.9784</td><td>4.9784</td><td>R4ZZ</td><td>R4ZZ</td><td>R4ZZ</td></tr><tr><td class="type-cell">6.3500</td><td>19.0500</td><td>7.1425</td><td>5.556</td><td>R4AZZ</td><td>RA4ZZ</td><td>RI-1214ZZ</td></tr><tr><td class="type-cell">7.9375</td><td>12.7000</td><td>3.9675</td><td>3.9675</td><td>R1810ZZ</td><td></td><td>RI-8516ZZ</td></tr><tr><td class="type-cell">9.5250</td><td>22.2250</td><td>7.1425</td><td>5.556</td><td>R6ZZ</td><td>R6ZZ</td><td>RI-1438ZZ</td></tr><tr><td class="type-cell">12.7000</td><td>28.5750</td><td>7.9375</td><td>6.350</td><td>R8ZZ</td><td>R8ZZ</td><td>RI-1812ZZ</td></tr><tr><td class="type-cell">15.875</td><td>34.925</td><td>8.7310</td><td>7.144</td><td></td><td>R10ZZ</td><td></td></tr><tr><td class="type-cell">19.050</td><td>41.275</td><td>11.112</td><td>7.938</td><td></td><td>R12ZZ</td><td></td></tr><tr><td class="type-cell">22.225</td><td>47.625</td><td>12.700</td><td>9.525</td><td></td><td>R14ZZ</td><td></td></tr><tr><td class="type-cell">25.400</td><td>50.800</td><td>12.700</td><td>9.525</td><td></td><td>R16ZZ</td><td></td></tr><tr><td class="type-cell">28.575</td><td>53.975</td><td>12.700</td><td>9.525</td><td></td><td>R18ZZ</td><td></td></tr><tr><td class="type-cell">31.750</td><td>57.150</td><td>12.700</td><td>9.525</td><td></td><td>R20ZZ</td><td></td></tr><tr><td class="type-cell">34.925</td><td>63.500</td><td>14.288</td><td>11.113</td><td></td><td>R22ZZ</td><td></td></tr><tr><td class="type-cell">38.100</td><td>66.675</td><td>14.288</td><td>11.113</td><td></td><td>R24ZZ</td><td></td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="product-subgroup-title" style="margin-top: 28px;">메트릭 표준형 &middot; 내경 1~15mm</h3>
+      <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1 1 320px; min-width: 300px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 480px;" id="mbB">
+            <thead><tr><th>d</th><th>D</th><th>B</th><th>B1</th><th>FD</th><th>NSK</th><th>NTN</th><th>NMB</th><th>KOYO</th></tr></thead>
+            <tbody><tr><td class="type-cell">1</td><td>3</td><td>1</td><td>1.5</td><td>3.8</td><td>681</td><td>681</td><td>L-310</td><td>681</td></tr><tr><td class="type-cell">1</td><td>3</td><td>1.5</td><td></td><td>3.8</td><td>MR31</td><td></td><td>L-310W51</td><td>OB03</td></tr><tr><td class="type-cell">1</td><td>4</td><td>1.6</td><td>2.3</td><td>5</td><td>691</td><td>691</td><td>R-410</td><td>691</td></tr><tr><td class="type-cell">1.2</td><td>4</td><td>1.8</td><td></td><td>4.8</td><td>MR41X</td><td>BC1.2-4</td><td>R-412</td><td>OB05</td></tr><tr><td class="type-cell">1.5</td><td>4</td><td>1.2</td><td>2</td><td>5</td><td>681X</td><td>68/1.5</td><td>L-415</td><td>68/1.5</td></tr><tr><td class="type-cell">1.5</td><td>4</td><td>1.8</td><td></td><td></td><td></td><td></td><td>L-415W81</td><td></td></tr><tr><td class="type-cell">1.5</td><td>4</td><td></td><td>2.5</td><td></td><td></td><td></td><td>L-415W52</td><td></td></tr><tr><td class="type-cell">1.5</td><td>4</td><td></td><td>2.3</td><td></td><td></td><td></td><td>L-415W32</td><td></td></tr><tr><td class="type-cell">1.5</td><td>5</td><td>2</td><td>2.6</td><td>6.5</td><td>691X</td><td>69/1.5</td><td>R-515</td><td>69/1.5</td></tr><tr><td class="type-cell">1.5</td><td>6</td><td>2.5</td><td>3</td><td>7.5</td><td>601X</td><td>60/1.5</td><td>R-615</td><td>OB08</td></tr><tr><td class="type-cell">2</td><td>4</td><td>1.2</td><td>2</td><td></td><td></td><td>672</td><td></td><td></td></tr><tr><td class="type-cell">2</td><td>5</td><td>1.5</td><td>2.3</td><td>6.1</td><td>682</td><td>682</td><td>L-520</td><td>682</td></tr><tr><td class="type-cell">2</td><td>5</td><td>2</td><td>2.5</td><td>6.2</td><td>MR52</td><td>BC-2-5</td><td>L-520W02</td><td>OB11</td></tr><tr><td class="type-cell">2</td><td>6</td><td></td><td>2.3</td><td></td><td></td><td></td><td>R-620Y32</td><td></td></tr><tr><td class="type-cell">2</td><td>6</td><td>2.3</td><td>3</td><td>7.5</td><td>692</td><td>692</td><td>R-620</td><td>692</td></tr><tr><td class="type-cell">2</td><td>6</td><td>2.5</td><td></td><td>7.2</td><td>MR62</td><td>BC2-6</td><td>R-620Y25</td><td>OB13</td></tr><tr><td class="type-cell">2</td><td>7</td><td>2.5</td><td>3</td><td>8.2</td><td>MR72</td><td>BC2-7</td><td>R-720</td><td>OB14</td></tr><tr><td class="type-cell">2</td><td>7</td><td>2.8</td><td>3.5</td><td>8.5</td><td>602</td><td>602</td><td>R-720X</td><td>602</td></tr><tr><td class="type-cell">2.5</td><td>5</td><td>1.5</td><td>2.3</td><td></td><td></td><td>682X</td><td>67/2.5</td><td></td></tr><tr><td class="type-cell">2.5</td><td>6</td><td>1.8</td><td>2.6</td><td>7.1</td><td></td><td>68/2.5</td><td>L-625</td><td>68/2.5</td></tr><tr><td class="type-cell">2.5</td><td>7</td><td></td><td>3</td><td>8.2</td><td>692X</td><td>BC2.5-7</td><td>R-725Y03</td><td></td></tr><tr><td class="type-cell">2.5</td><td>7</td><td>2.5</td><td>2.5</td><td>8.5</td><td></td><td>69/2.5</td><td>R-725</td><td>69/2.5</td></tr><tr><td class="type-cell">2.5</td><td>8</td><td>2.5</td><td></td><td>9.2</td><td>MR82X</td><td>BC2.5-8</td><td>R-825</td><td>OB16</td></tr><tr><td class="type-cell">2.5</td><td>8</td><td>2.8</td><td>4</td><td>9.5</td><td>602X</td><td>60/2.5</td><td>R-825X</td><td>OB17</td></tr><tr><td class="type-cell">3</td><td>6</td><td>2</td><td>2.5</td><td>7.2</td><td>MR63</td><td>673</td><td>L-630</td><td>ML3006</td></tr><tr><td class="type-cell">3</td><td>7</td><td>2</td><td>3</td><td>8.1</td><td>683</td><td>683</td><td>L-730</td><td>683</td></tr><tr><td class="type-cell">3</td><td>8</td><td>2.5</td><td>3.5</td><td>9.2</td><td>MR83</td><td>BC3-8</td><td>R-830</td><td>ML3008</td></tr><tr><td class="type-cell">3</td><td>8</td><td></td><td>3</td><td></td><td></td><td></td><td></td><td>693ZZW3</td></tr><tr><td class="type-cell">3</td><td>8</td><td>3</td><td>4</td><td>9.5</td><td>693</td><td>693</td><td>R-830X</td><td>693</td></tr><tr><td class="type-cell">3</td><td>9</td><td>2.5</td><td>4</td><td>10.6</td><td>MR93</td><td>BC3-9</td><td>R-930Y04</td><td></td></tr><tr><td class="type-cell">3</td><td>9</td><td>3</td><td>5</td><td>10.5</td><td>603</td><td>603</td><td>R-930X</td><td>603</td></tr><tr><td class="type-cell">3</td><td>10</td><td>4</td><td>4</td><td>11.5</td><td>623</td><td>623</td><td>R-1030</td><td>623</td></tr><tr><td class="type-cell">3</td><td>10</td><td>3.5</td><td></td><td></td><td></td><td></td><td>4-1030Y53</td><td></td></tr><tr><td class="type-cell">3</td><td>13</td><td>5</td><td>5</td><td></td><td>633</td><td>633</td><td></td><td>633</td></tr><tr><td class="type-cell">4</td><td>7</td><td>2</td><td>2.5</td><td>8.2</td><td>MR74</td><td>674</td><td>L-740</td><td>ML4007</td></tr><tr><td class="type-cell">4</td><td>8</td><td>2</td><td>3</td><td>9.2</td><td>MR84</td><td>BC4-8</td><td>L-840</td><td>ML4008</td></tr><tr><td class="type-cell">4</td><td>9</td><td>2.5</td><td>4</td><td>10.3</td><td>684</td><td>684</td><td>L-940</td><td>684</td></tr><tr><td class="type-cell">4</td><td>10</td><td>3</td><td>4</td><td>11.6</td><td>MR104</td><td>BC4-10</td><td>L-1040</td><td>ML4010</td></tr><tr><td class="type-cell">4</td><td>10</td><td>3.5</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">4</td><td>11</td><td>3.5</td><td></td><td></td><td></td><td></td><td>L-1140Y53</td><td></td></tr><tr><td class="type-cell">4</td><td>11</td><td>4</td><td>4</td><td>12.5</td><td>694</td><td>694</td><td>R-1140</td><td>694</td></tr><tr><td class="type-cell">4</td><td>12</td><td>4</td><td>4</td><td>13.5</td><td>604</td><td>604</td><td>R-1240</td><td>604</td></tr><tr><td class="type-cell">4</td><td>13</td><td>5</td><td>5</td><td>15</td><td>624</td><td>624</td><td>R-1340</td><td>624</td></tr><tr><td class="type-cell">4</td><td>16</td><td>5</td><td>5</td><td>18</td><td>634</td><td>634</td><td>R-1640</td><td>634</td></tr><tr><td class="type-cell">5</td><td>8</td><td>2</td><td>2.5</td><td>9.2</td><td>MR85</td><td>675</td><td>L-850</td><td>ML50008</td></tr><tr><td class="type-cell">5</td><td>9</td><td>2.5</td><td>3</td><td>10.2</td><td>MR95</td><td>BC5-9</td><td>L-950</td><td>ML5009</td></tr><tr><td class="type-cell">5</td><td>10</td><td>3</td><td>4</td><td>11.6</td><td>MR105</td><td>BC5-10</td><td>L-1050</td><td>ML5010</td></tr><tr><td class="type-cell">5</td><td>11</td><td></td><td>4</td><td>12.6</td><td>MR115ZZ</td><td>BC5-11</td><td>L-1150Y04</td><td></td></tr><tr><td class="type-cell">5</td><td>11</td><td>3</td><td>5</td><td>12.5</td><td>685</td><td>685</td><td>L-1150</td><td>685</td></tr><tr><td class="type-cell">5</td><td>13</td><td>4</td><td>4</td><td>15</td><td>695</td><td>695</td><td>R-1350</td><td>695</td></tr><tr><td class="type-cell">5</td><td>13</td><td></td><td>5</td><td>15</td><td>695XZZ</td><td>BC5-13</td><td>R-1350W05</td><td></td></tr></tbody>
+          </table>
+        </div>
+        <div style="flex: 1 1 320px; min-width: 300px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 480px;" id="mbBb">
+            <thead><tr><th>d</th><th>D</th><th>B</th><th>B1</th><th>FD</th><th>NSK</th><th>NTN</th><th>NMB</th><th>KOYO</th></tr></thead>
+            <tbody><tr><td class="type-cell">5</td><td>14</td><td>5</td><td>5</td><td>16</td><td>605</td><td>605</td><td>R-1450</td><td>605</td></tr><tr><td class="type-cell">5</td><td>16</td><td>5</td><td>5</td><td>18</td><td>625</td><td>625</td><td>R-1650</td><td>625</td></tr><tr><td class="type-cell">5</td><td>19</td><td>6</td><td>6</td><td>22</td><td>635</td><td>635</td><td>R-1950</td><td>635</td></tr><tr><td class="type-cell">6</td><td>10</td><td>2.5</td><td>3</td><td>11.2</td><td>MR106</td><td>676</td><td>L-1060</td><td>ML6010</td></tr><tr><td class="type-cell">6</td><td>12</td><td>3</td><td>4</td><td>13.6</td><td>MR126</td><td>BC6-12</td><td>L-1260</td><td>ML6012</td></tr><tr><td class="type-cell">6</td><td>13</td><td>3.5</td><td>5</td><td>15</td><td>686</td><td>686</td><td>L-1360</td><td>686</td></tr><tr><td class="type-cell">6</td><td>15</td><td>5</td><td>5</td><td>17</td><td>696</td><td>696</td><td>R-1560</td><td>696</td></tr><tr><td class="type-cell">6</td><td>16</td><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">6</td><td>16</td><td>6</td><td>6</td><td></td><td></td><td>BC6-16</td><td></td><td>DGO616</td></tr><tr><td class="type-cell">6</td><td>17</td><td>6</td><td>6</td><td>19</td><td>606</td><td>606</td><td>R-1760</td><td>606</td></tr><tr><td class="type-cell">6</td><td>19</td><td>6</td><td>6</td><td>22</td><td>626</td><td>626</td><td>R-1960</td><td>626</td></tr><tr><td class="type-cell">6</td><td>22</td><td>7</td><td>7</td><td></td><td>636</td><td>636</td><td></td><td>636</td></tr><tr><td class="type-cell">7</td><td>11</td><td>2.5</td><td>3</td><td>12.2</td><td>MR117</td><td></td><td>L-1170</td><td>ML7011</td></tr><tr><td class="type-cell">7</td><td>13</td><td>3</td><td>4</td><td>14.6</td><td>MR137</td><td></td><td>L-1370</td><td>ML7013</td></tr><tr><td class="type-cell">7</td><td>14</td><td>3.5</td><td>5</td><td>16</td><td>687</td><td></td><td>L-1470</td><td>687</td></tr><tr><td class="type-cell">7</td><td>14</td><td></td><td>6</td><td></td><td></td><td></td><td></td><td>687/IBZZ</td></tr><tr><td class="type-cell">7</td><td>17</td><td>5</td><td>5</td><td>19</td><td>697</td><td></td><td></td><td>697</td></tr><tr><td class="type-cell">7</td><td>19</td><td>6</td><td>6</td><td>22</td><td>607</td><td></td><td>R-1970</td><td>607</td></tr><tr><td class="type-cell">7</td><td>22</td><td>7</td><td>7</td><td>25</td><td>627</td><td></td><td>R-2270</td><td>627</td></tr><tr><td class="type-cell">7</td><td>26</td><td>9</td><td>9</td><td></td><td>637</td><td></td><td></td><td>637</td></tr><tr><td class="type-cell">8</td><td>12</td><td>2.5</td><td>3.5</td><td>13.6</td><td>MR128</td><td></td><td>L-1280</td><td>ML-8012</td></tr><tr><td class="type-cell">8</td><td>14</td><td>3.5</td><td>4</td><td>15.6</td><td>MR148</td><td></td><td>L-1480</td><td>MR-8014</td></tr><tr><td class="type-cell">8</td><td>16</td><td>4</td><td>5</td><td>18</td><td>688</td><td></td><td>L-1680</td><td>688</td></tr><tr><td class="type-cell">8</td><td>18</td><td>5</td><td></td><td></td><td></td><td></td><td></td><td>DG-0818</td></tr><tr><td class="type-cell">8</td><td>19</td><td>6</td><td>6</td><td>22</td><td>698</td><td></td><td>R-1980</td><td>698</td></tr><tr><td class="type-cell">8</td><td>22</td><td>7</td><td>7</td><td>25</td><td>608</td><td></td><td>R-2280</td><td>608</td></tr><tr><td class="type-cell">8</td><td>24</td><td>8</td><td>8</td><td></td><td>628</td><td></td><td></td><td>628</td></tr><tr><td class="type-cell">8</td><td>28</td><td>9</td><td>9</td><td></td><td>638</td><td></td><td></td><td>638</td></tr><tr><td class="type-cell">9</td><td>14</td><td>3</td><td>4.5</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">9</td><td>17</td><td>4</td><td>5</td><td>19</td><td>689</td><td></td><td>L-1790</td><td>689</td></tr><tr><td class="type-cell">9</td><td>19.5</td><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">9</td><td>20</td><td>6</td><td>6</td><td>23</td><td>699</td><td></td><td>L-2090</td><td>699</td></tr><tr><td class="type-cell">9</td><td>24</td><td>7</td><td>7</td><td></td><td>609</td><td></td><td></td><td>609</td></tr><tr><td class="type-cell">9</td><td>26</td><td>8</td><td>8</td><td></td><td>629</td><td></td><td></td><td>629</td></tr><tr><td class="type-cell">9</td><td>30</td><td>10</td><td>10</td><td></td><td>639</td><td></td><td></td><td>639</td></tr><tr><td class="type-cell">10</td><td>19</td><td>5</td><td>5/7</td><td>22</td><td>6800/63800</td><td></td><td>L-1910</td><td>6800</td></tr><tr><td class="type-cell">10</td><td>22</td><td>6</td><td>6</td><td></td><td>6900</td><td></td><td></td><td>6900</td></tr><tr><td class="type-cell">10</td><td>26</td><td>8</td><td>8</td><td></td><td>6000</td><td></td><td>R-2610</td><td>6000</td></tr><tr><td class="type-cell">10</td><td>30</td><td>9</td><td>9</td><td></td><td>6200</td><td></td><td></td><td>6200</td></tr><tr><td class="type-cell">10</td><td>35</td><td>11</td><td>11</td><td></td><td>6300</td><td></td><td></td><td>6300</td></tr><tr><td class="type-cell">12</td><td>21</td><td>5</td><td>5</td><td></td><td>6801</td><td></td><td></td><td>6801</td></tr><tr><td class="type-cell">12</td><td>24</td><td>6</td><td>6</td><td></td><td>6901</td><td></td><td></td><td>6901</td></tr><tr><td class="type-cell">12</td><td>28</td><td>8</td><td>8</td><td></td><td>6001</td><td></td><td></td><td>6001</td></tr><tr><td class="type-cell">12</td><td>32</td><td>10</td><td>10</td><td></td><td>6201</td><td></td><td></td><td>6201</td></tr><tr><td class="type-cell">12</td><td>37</td><td>12</td><td>12</td><td></td><td>6301</td><td></td><td></td><td>6301</td></tr><tr><td class="type-cell">15</td><td>24</td><td>5</td><td>5</td><td></td><td>6802</td><td></td><td></td><td>6802</td></tr><tr><td class="type-cell">15</td><td>28</td><td>7</td><td>7</td><td></td><td>6902</td><td></td><td></td><td>6902</td></tr><tr><td class="type-cell">15</td><td>32</td><td>9</td><td>9</td><td></td><td>6002</td><td></td><td></td><td>6002</td></tr><tr><td class="type-cell">15</td><td>35</td><td>11</td><td>11</td><td></td><td>6202</td><td></td><td></td><td>6202</td></tr><tr><td class="type-cell">15</td><td>42</td><td>13</td><td>13</td><td></td><td>6302</td><td></td><td></td><td>6302</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="product-subgroup-title" style="margin-top: 28px;">인치 오픈형 (EE 시리즈)</h3>
+      <div class="finder-results" style="overflow-x: auto;">
+        <table class="spec-table" style="min-width: 480px;" id="mbC">
+          <thead><tr><th>형번</th><th>내경(inch)</th><th>내경(mm)</th><th>외경(inch)</th><th>외경(mm)</th><th>두께(inch)</th><th>두께(mm)</th></tr></thead>
+          <tbody><tr><td class="type-cell">EE 2</td><td>1/4</td><td>6.350</td><td>3/4</td><td>19.050</td><td>7/32</td><td>5.556</td></tr><tr><td class="type-cell">EE 3</td><td>3/8</td><td>9.525</td><td>7/8</td><td>22.225</td><td>7/32</td><td>5.556</td></tr><tr><td class="type-cell">EE 4</td><td>1/2</td><td>12.700</td><td>1 1/8</td><td>28.575</td><td>1/4</td><td>6.350</td></tr><tr><td class="type-cell">EE 5</td><td>5/8</td><td>15.875</td><td>1 3/8</td><td>34.925</td><td>9/32</td><td>7.144</td></tr><tr><td class="type-cell">EE 6</td><td>3/4</td><td>19.050</td><td>1 5/8</td><td>41.275</td><td>5/16</td><td>7.938</td></tr><tr><td class="type-cell">EE 7</td><td>3/4</td><td>19.050</td><td>1 3/4</td><td>44.450</td><td>3/8</td><td>9.525</td></tr><tr><td class="type-cell">EE 8</td><td>7/8</td><td>22.225</td><td>1 7/8</td><td>47.625</td><td>3/8</td><td>9.525</td></tr><tr><td class="type-cell">EE 9</td><td>1</td><td>25.400</td><td>2</td><td>50.800</td><td>3/8</td><td>9.525</td></tr><tr><td class="type-cell">EE 10</td><td>1 1/8</td><td>28.575</td><td>2 1/8</td><td>53.975</td><td>3/8</td><td>9.525</td></tr><tr><td class="type-cell">EE 11</td><td>1 1/4</td><td>31.750</td><td>2 1/4</td><td>57.150</td><td>3/8</td><td>9.525</td></tr></tbody>
+        </table>
+      </div>
+
+      <h3 class="product-subgroup-title" style="margin-top: 28px;">매그니토 볼 베어링 &middot; 내경 4~20mm</h3>
+      <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 1 1 320px; min-width: 300px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 480px;" id="mbD">
+            <thead><tr><th>Bearing</th><th>d</th><th>D</th><th>B</th></tr></thead>
+            <tbody><tr><td class="type-cell">EN 4</td><td>4</td><td>16</td><td>5</td></tr><tr><td class="type-cell">EN 5</td><td>5</td><td>16</td><td>5</td></tr><tr><td class="type-cell">EN 6</td><td>6</td><td>21</td><td>7</td></tr><tr><td class="type-cell">EN 7</td><td>7</td><td>22</td><td>7</td></tr><tr><td class="type-cell">EN 8</td><td>8</td><td>24</td><td>7</td></tr><tr><td class="type-cell">EN 9</td><td>9</td><td>28</td><td>8</td></tr><tr><td class="type-cell">EN 10</td><td>10</td><td>28</td><td>8</td></tr><tr><td class="type-cell">EN 11</td><td>11</td><td>32</td><td>7</td></tr><tr><td class="type-cell">EN 12</td><td>12</td><td>32</td><td>7</td></tr><tr><td class="type-cell">EN 13</td><td>13</td><td>30</td><td>7</td></tr></tbody>
+          </table>
+        </div>
+        <div style="flex: 1 1 320px; min-width: 300px; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 480px;" id="mbDb">
+            <thead><tr><th>Bearing</th><th>d</th><th>D</th><th>B</th></tr></thead>
+            <tbody><tr><td class="type-cell">EN 14</td><td>14</td><td>35</td><td>8</td></tr><tr><td class="type-cell">EN 15</td><td>15</td><td>35</td><td>8</td></tr><tr><td class="type-cell">EN 15</td><td>15</td><td>40</td><td>10</td></tr><tr><td class="type-cell">EN 16</td><td>16</td><td>38</td><td>10</td></tr><tr><td class="type-cell">EN 16</td><td>16</td><td>40</td><td>10</td></tr><tr><td class="type-cell">EN 17</td><td>17</td><td>44</td><td>11</td></tr><tr><td class="type-cell">EN 18</td><td>18</td><td>40</td><td>9</td></tr><tr><td class="type-cell">EN 19</td><td>19</td><td>40</td><td>9</td></tr><tr><td class="type-cell">EN 20</td><td>20</td><td>47</td><td>12</td></tr><tr><td class="type-cell">EN 20</td><td>20</td><td>47</td><td>14</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="product-subgroup-title" style="margin-top: 28px;">엷은 A형</h3>
+      <div class="finder-results" style="overflow-x: auto;">
+        <table class="spec-table" style="min-width: 480px;" id="mbE">
+          <thead><tr><th>d</th><th>D</th><th>B</th><th>B1</th><th>FD</th><th>NSK</th><th>NTN</th><th>NMB</th><th>하중C</th><th>하중CO</th></tr></thead>
+          <tbody><tr><td class="type-cell">10</td><td>15</td><td>3</td><td>4</td><td>16.5</td><td>SMT-1510</td><td>BA10-15</td><td>A-1510</td><td>48</td><td>24</td></tr><tr><td class="type-cell">15</td><td>20</td><td>3.5</td><td></td><td></td><td>SMT-2015</td><td>BA15-20</td><td>A-2015</td><td>52</td><td>30</td></tr><tr><td class="type-cell">15</td><td>21</td><td>3.5</td><td></td><td></td><td>SMT-2115</td><td>BA15-21</td><td>A-2115</td><td>52</td><td>30</td></tr><tr><td class="type-cell">16</td><td>22</td><td>4</td><td></td><td></td><td>SMT-2216</td><td>BA16-22</td><td>A-2216</td><td>53</td><td>33</td></tr><tr><td class="type-cell">16</td><td>22.5</td><td>4</td><td></td><td></td><td></td><td></td><td>A-2216A</td><td>53</td><td>33</td></tr><tr><td class="type-cell">18</td><td>24</td><td>4</td><td></td><td></td><td>SMT-2418</td><td>BA18-24</td><td>A-2418</td><td>54</td><td>35</td></tr><tr><td class="type-cell">20</td><td>25</td><td>4</td><td></td><td></td><td>SMT-2520</td><td>BA20-25</td><td>A-2520</td><td>54</td><td>37</td></tr><tr><td class="type-cell">9.525</td><td>15.875</td><td>3.9675</td><td>3.9675</td><td></td><td></td><td></td><td>RI-1038</td><td>44</td><td>21</td></tr><tr><td class="type-cell">12.700</td><td>19.050</td><td>3.9675</td><td>3.9675</td><td></td><td></td><td></td><td>RI-1212</td><td>51</td><td>28</td></tr><tr><td class="type-cell">15.875</td><td>22.225</td><td>3.9675</td><td>3.9675</td><td></td><td></td><td></td><td>RI-1458</td><td>53</td><td>31</td></tr><tr><td class="type-cell">19.050</td><td>22.400</td><td>3.9675</td><td>3.9675</td><td></td><td></td><td></td><td>RI-1634</td><td>58</td><td>38</td></tr></tbody>
+        </table>
+      </div>
+
+      <h3 class="product-subgroup-title" style="margin-top: 28px;">스러스트형 (미니어처)</h3>
+      <div class="finder-results" style="overflow-x: auto;">
+        <table class="spec-table" style="min-width: 480px;" id="mbF">
+          <thead><tr><th>d</th><th>D</th><th>B</th><th>NSK</th><th>NTN</th><th>NMB</th><th>하중(T)c</th><th>하중c(홈)c</th><th>홈</th></tr></thead>
+          <tbody><tr><td class="type-cell">2</td><td>6</td><td>3</td><td>F2-6</td><td>BT2-6</td><td>T-820</td><td>5kg</td><td></td><td>×</td></tr><tr><td class="type-cell">2.5</td><td>7</td><td>3.5</td><td>F2X-7</td><td>BT2.5-/</td><td>T-725</td><td>7.5</td><td></td><td>×</td></tr><tr><td class="type-cell">3</td><td>8</td><td>3.5</td><td>F3-8</td><td>BT3-8</td><td>T-830</td><td>8</td><td>140/140</td><td>○</td></tr><tr><td class="type-cell">4</td><td>9</td><td>4</td><td>F4-9</td><td>BT4-9</td><td>T-940</td><td>8</td><td></td><td>×</td></tr><tr><td class="type-cell">4</td><td>10</td><td>4.5</td><td>F4-10</td><td>BT4-10</td><td>T-1040</td><td>12</td><td>143/160</td><td>○</td></tr><tr><td class="type-cell">5</td><td>10</td><td>4</td><td>F5-10M</td><td>BT5-10M</td><td>T-1050DSG</td><td></td><td>151/180</td><td>○</td></tr><tr><td class="type-cell">5</td><td>11</td><td>4.5</td><td>F5-11</td><td>BT5-11</td><td>T-1150</td><td>13</td><td></td><td>×</td></tr><tr><td class="type-cell">6</td><td>12</td><td>4.5</td><td>F6-12</td><td>BT6-12</td><td>T-1260</td><td>13</td><td>151/180</td><td>○</td></tr><tr><td class="type-cell">7</td><td>15</td><td>5/5.5</td><td>F7-15</td><td>BT7-15</td><td>T-1570</td><td>17</td><td>194/255</td><td>○</td></tr><tr><td class="type-cell">8</td><td>16</td><td>5</td><td>F8-16</td><td>BT8-16</td><td>T-168C</td><td>18</td><td>189/255</td><td>○</td></tr><tr><td class="type-cell">8</td><td>18</td><td>5</td><td>TH-8</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">9</td><td>17</td><td>5</td><td>F9-17</td><td>BT9-17</td><td>T-1790</td><td>18</td><td>300/405</td><td>○</td></tr><tr><td class="type-cell">10</td><td>18</td><td>5.5</td><td>F10-18</td><td>BT10-18</td><td>T-1810</td><td>27</td><td>321/605</td><td>○</td></tr></tbody>
+        </table>
+      </div>
+
+      <h3 class="product-subgroup-title" style="margin-top: 28px;">소형 복렬형</h3>
+      <div class="finder-results" style="overflow-x: auto;">
+        <table class="spec-table" style="min-width: 480px;" id="mbG">
+          <thead><tr><th>Bearing No.</th><th>d</th><th>D</th><th>B</th><th>하중C</th><th>하중CO</th></tr></thead>
+          <tbody><tr><td class="type-cell">135</td><td>5</td><td>19</td><td>5</td><td>203</td><td>56</td></tr><tr><td class="type-cell">12306(696)</td><td>6</td><td>15</td><td>5</td><td>135</td><td>56</td></tr><tr><td class="type-cell">126</td><td>6</td><td>19</td><td>6</td><td>203</td><td>56</td></tr><tr><td class="type-cell">127</td><td>7</td><td>22</td><td>7</td><td>216</td><td>74</td></tr><tr><td class="type-cell">12308</td><td>8</td><td>18</td><td>5</td><td>147</td><td>50</td></tr><tr><td class="type-cell">108</td><td>8</td><td>22</td><td>7</td><td>216</td><td>74</td></tr><tr><td class="type-cell">129</td><td>9</td><td>26</td><td>8</td><td>320</td><td>105</td></tr><tr><td class="type-cell">12310</td><td>10</td><td>23</td><td>7</td><td>216</td><td>74</td></tr></tbody>
+        </table>
+      </div>
+
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 14px;">단위: mm (인치 표기 항목은 별도 표시)</p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다.
+        정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br>
+        미니어처 베어링은 SWS 자체 형번 없이 IJK&middot;NTN&middot;NMB&middot;NSK&middot;KOYO 등 제조사 형번으로 교차 안내되며, ISO 492 공차표는 별도 적용되지 않는 소형 규격으로 공차는 제조사 자체 규격을 따릅니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+<script>
+  (function () {
+    var input = document.getElementById('mbFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#mbA tbody tr, #mbAb tbody tr, #mbB tbody tr, #mbBb tbody tr, #mbC tbody tr, #mbD tbody tr, #mbDb tbody tr, #mbE tbody tr, #mbF tbody tr, #mbG tbody tr'));
+    var countEl = document.getElementById('mbCount');
+    var totalRows = 193;
+
+    function updateCount(shown) {
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중';
+    }
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      updateCount(shown);
+    }
+
+    input.addEventListener('input', applyFilter);
+    updateCount(totalRows);
+  })();
+</script>
+</body>
+</html>
