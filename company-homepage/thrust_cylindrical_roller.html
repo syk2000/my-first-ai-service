@@ -100,7 +100,9 @@
       <div class="section-head">
         <p class="eyebrow">Thrust Cylindrical Roller Bearings</p>
         <h2>스러스트 원통 로울러 베어링</h2>
-        <p>원통 롤러와 케이지를 조합한 스러스트 베어링으로, 축방향 하중 지지능력이 크고 강성이 높습니다. 스러스트 볼 베어링보다 큰 축방향 하중이 필요한 공작기계 주축, 유압기기 등에 사용됩니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
+        <p>원통 롤러와 케이지를 조합한 스러스트 베어링으로, 축방향 하중 지지능력이 크고 강성이 높습니다.</p>
+        <p>스러스트 볼 베어링보다 큰 축방향 하중이 필요한 공작기계 주축, 유압기기 등에 사용됩니다.</p>
+        <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
       <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
         <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">당사 SWS 카탈로그 규격 도면</p>
@@ -112,12 +114,17 @@
         <label for="tcrFilter">형번 / 규격 검색</label>
         <input id="tcrFilter" type="text" placeholder="예: 60TMP12 또는 60*95" autocomplete="off" />
       </div>
-      <p class="finder-tip" id="tcrCount" style="margin-bottom: 10px;"></p>
-
-      <div class="finder-results two-col" style="margin-top: 0; display: flex; gap: 20px; flex-wrap: wrap;">
-        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-          <thead>
+      <div class="spec-toolbar">
+        <p class="finder-tip" id="tcrCount" style="margin: 0;"></p>
+        <button type="button" class="spec-toolbar-btn" id="tcrToggleAll">전체 펼치기</button>
+      </div>
+      <div id="tcrGroups">
+        <details class="series-group">
+          <summary>TMP 시리즈<span class="series-count">57건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead>
             <tr>
               <th>형번</th>
               <th>d(내경)</th>
@@ -125,12 +132,12 @@
               <th>T(높이)</th>
             </tr>
           </thead>
-          <tbody id="tcrBody"><tr><td class="type-cell">35TMP14</td><td>35</td><td>80</td><td>-0.012/-0.013</td><td>32</td></tr><tr><td class="type-cell">40TMP93</td><td>40</td><td>78</td><td>-0.012/-0.013</td><td>22</td></tr><tr><td class="type-cell">45TMP11</td><td>45</td><td>65</td><td>-0.012/-0.013</td><td>14</td></tr><tr><td class="type-cell">45TMP93</td><td>45</td><td>85</td><td>-0.012/-0.015</td><td>24</td></tr><tr><td class="type-cell">50TMP74</td><td>50</td><td>110</td><td>-0.012/-0.015</td><td>27</td></tr><tr><td class="type-cell">50TMP93</td><td>50</td><td>95</td><td>-0.012/-0.015</td><td>27</td></tr><tr><td class="type-cell">55TMP93</td><td>55</td><td>105</td><td>-0.015/-0.015</td><td>30</td></tr><tr><td class="type-cell">60TMP12</td><td>60</td><td>95</td><td>-0.015/-0.015</td><td>26</td></tr><tr><td class="type-cell">60TMP93</td><td>60</td><td>110</td><td>-0.015/-0.015</td><td>30</td></tr><tr><td class="type-cell">65TMP12</td><td>65</td><td>100</td><td>-0.015/-0.015</td><td>27</td></tr><tr><td class="type-cell">65TMP93</td><td>65</td><td>115</td><td>-0.015/-0.015</td><td>30</td></tr><tr><td class="type-cell">70TMP74</td><td>70</td><td>150</td><td>-0.015/-0.018</td><td>36</td></tr><tr><td class="type-cell">70TMP93</td><td>70</td><td>125</td><td>-0.015/-0.018</td><td>34</td></tr><tr><td class="type-cell">75TMP11</td><td>75</td><td>100</td><td>-0.015/-0.015</td><td>19</td></tr><tr><td class="type-cell">75TMP93</td><td>75</td><td>135</td><td>-0.015/-0.018</td><td>36</td></tr><tr><td class="type-cell">80TMP12</td><td>80</td><td>115</td><td>-0.015/-0.015</td><td>28</td></tr><tr><td class="type-cell">80TMP93</td><td>80</td><td>140</td><td>-0.015/-0.018</td><td>36</td></tr><tr><td class="type-cell">85TMP11</td><td>85</td><td>110</td><td>-0.02/-0.015</td><td>19</td></tr><tr><td class="type-cell">85TMP12</td><td>85</td><td>125</td><td>-0.02/-0.018</td><td>31</td></tr><tr><td class="type-cell">85TMP93</td><td>85</td><td>150</td><td>-0.02/-0.018</td><td>39</td></tr><tr><td class="type-cell">90TMP11</td><td>90</td><td>120</td><td>-0.02/-0.015</td><td>22</td></tr><tr><td class="type-cell">90TMP93</td><td>90</td><td>155</td><td>-0.02/-0.025</td><td>39</td></tr><tr><td class="type-cell">100TMP93</td><td>100</td><td>170</td><td>-0.02/-0.025</td><td>42</td></tr><tr><td class="type-cell">110TMP12</td><td>110</td><td>160</td><td>-0.02/-0.025</td><td>38</td></tr><tr><td class="type-cell">110TMP93</td><td>110</td><td>190</td><td>-0.02/-0.03</td><td>48</td></tr><tr><td class="type-cell">120TMP12</td><td>120</td><td>170</td><td>-0.02/-0.025</td><td>39</td></tr><tr><td class="type-cell">120TMP93</td><td>120</td><td>210</td><td>-0.02/-0.03</td><td>54</td></tr><tr><td class="type-cell">130TMP12</td><td>130</td><td>190</td><td>-0.025/-0.03</td><td>45</td></tr><tr><td class="type-cell">130TMP93</td><td>130</td><td>225</td><td>-0.025/-0.03</td><td>58</td></tr></tbody>
-        </table>
-        </div>
-        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-          <thead>
+              <tbody><tr><td class="type-cell">35TMP14</td><td>35</td><td>80</td><td>-0.012/-0.013</td><td>32</td></tr><tr><td class="type-cell">40TMP93</td><td>40</td><td>78</td><td>-0.012/-0.013</td><td>22</td></tr><tr><td class="type-cell">45TMP11</td><td>45</td><td>65</td><td>-0.012/-0.013</td><td>14</td></tr><tr><td class="type-cell">45TMP93</td><td>45</td><td>85</td><td>-0.012/-0.015</td><td>24</td></tr><tr><td class="type-cell">50TMP74</td><td>50</td><td>110</td><td>-0.012/-0.015</td><td>27</td></tr><tr><td class="type-cell">50TMP93</td><td>50</td><td>95</td><td>-0.012/-0.015</td><td>27</td></tr><tr><td class="type-cell">55TMP93</td><td>55</td><td>105</td><td>-0.015/-0.015</td><td>30</td></tr><tr><td class="type-cell">60TMP12</td><td>60</td><td>95</td><td>-0.015/-0.015</td><td>26</td></tr><tr><td class="type-cell">60TMP93</td><td>60</td><td>110</td><td>-0.015/-0.015</td><td>30</td></tr><tr><td class="type-cell">65TMP12</td><td>65</td><td>100</td><td>-0.015/-0.015</td><td>27</td></tr><tr><td class="type-cell">65TMP93</td><td>65</td><td>115</td><td>-0.015/-0.015</td><td>30</td></tr><tr><td class="type-cell">70TMP74</td><td>70</td><td>150</td><td>-0.015/-0.018</td><td>36</td></tr><tr><td class="type-cell">70TMP93</td><td>70</td><td>125</td><td>-0.015/-0.018</td><td>34</td></tr><tr><td class="type-cell">75TMP11</td><td>75</td><td>100</td><td>-0.015/-0.015</td><td>19</td></tr><tr><td class="type-cell">75TMP93</td><td>75</td><td>135</td><td>-0.015/-0.018</td><td>36</td></tr><tr><td class="type-cell">80TMP12</td><td>80</td><td>115</td><td>-0.015/-0.015</td><td>28</td></tr><tr><td class="type-cell">80TMP93</td><td>80</td><td>140</td><td>-0.015/-0.018</td><td>36</td></tr><tr><td class="type-cell">85TMP11</td><td>85</td><td>110</td><td>-0.02/-0.015</td><td>19</td></tr><tr><td class="type-cell">85TMP12</td><td>85</td><td>125</td><td>-0.02/-0.018</td><td>31</td></tr><tr><td class="type-cell">85TMP93</td><td>85</td><td>150</td><td>-0.02/-0.018</td><td>39</td></tr><tr><td class="type-cell">90TMP11</td><td>90</td><td>120</td><td>-0.02/-0.015</td><td>22</td></tr><tr><td class="type-cell">90TMP93</td><td>90</td><td>155</td><td>-0.02/-0.025</td><td>39</td></tr><tr><td class="type-cell">100TMP93</td><td>100</td><td>170</td><td>-0.02/-0.025</td><td>42</td></tr><tr><td class="type-cell">110TMP12</td><td>110</td><td>160</td><td>-0.02/-0.025</td><td>38</td></tr><tr><td class="type-cell">110TMP93</td><td>110</td><td>190</td><td>-0.02/-0.03</td><td>48</td></tr><tr><td class="type-cell">120TMP12</td><td>120</td><td>170</td><td>-0.02/-0.025</td><td>39</td></tr><tr><td class="type-cell">120TMP93</td><td>120</td><td>210</td><td>-0.02/-0.03</td><td>54</td></tr><tr><td class="type-cell">130TMP12</td><td>130</td><td>190</td><td>-0.025/-0.03</td><td>45</td></tr><tr><td class="type-cell">130TMP93</td><td>130</td><td>225</td><td>-0.025/-0.03</td><td>58</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead>
             <tr>
               <th>형번</th>
               <th>d(내경)</th>
@@ -138,9 +145,11 @@
               <th>T(높이)</th>
             </tr>
           </thead>
-          <tbody id="tcrBody2"><tr><td class="type-cell">130TMP94</td><td>130</td><td>270</td><td>-0.025/-0.035</td><td>85</td></tr><tr><td class="type-cell">140TMP12</td><td>140</td><td>200</td><td>-0.025/-0.03</td><td>46</td></tr><tr><td class="type-cell">150TMP93</td><td>140</td><td>240</td><td>-0.025/-0.03</td><td>60</td></tr><tr><td class="type-cell">150TMP94</td><td>140</td><td>280</td><td>-0.025/-0.035</td><td>85</td></tr><tr><td class="type-cell">160TMP12</td><td>150</td><td>215</td><td>-0.025/-0.03</td><td>50</td></tr><tr><td class="type-cell">160TMP93</td><td>150</td><td>250</td><td>-0.025/-0.03</td><td>60</td></tr><tr><td class="type-cell">170TMP11</td><td>160</td><td>200</td><td>-0.025/-0.03</td><td>31</td></tr><tr><td class="type-cell">170TMP93</td><td>160</td><td>270</td><td>-0.025/-0.035</td><td>67</td></tr><tr><td class="type-cell">180TMP12</td><td>170</td><td>240</td><td>-0.025/-0.03</td><td>55</td></tr><tr><td class="type-cell">180TMP93</td><td>170</td><td>280</td><td>-0.025/-0.035</td><td>67</td></tr><tr><td class="type-cell">190TMP93</td><td>180</td><td>300</td><td>-0.025/-0.035</td><td>73</td></tr><tr><td class="type-cell">190TMP94</td><td>180</td><td>360</td><td>-0.025/-0.04</td><td>109</td></tr><tr><td class="type-cell">200TMP12</td><td>190</td><td>270</td><td>-0.03/-0.035</td><td>62</td></tr><tr><td class="type-cell">200TMP93</td><td>190</td><td>320</td><td>-0.03/-0.04</td><td>78</td></tr><tr><td class="type-cell">220TMP11</td><td>200</td><td>250</td><td>-0.03/-0.03</td><td>37</td></tr><tr><td class="type-cell">220TMP93</td><td>200</td><td>340</td><td>-0.03/-0.04</td><td>85</td></tr><tr><td class="type-cell">240TMP11</td><td>220</td><td>270</td><td>-0.03/-0.035</td><td>37</td></tr><tr><td class="type-cell">240TMP12</td><td>220</td><td>300</td><td>-0.03/-0.035</td><td>63</td></tr><tr><td class="type-cell">260TMP11</td><td>240</td><td>300</td><td>-0.03/-0.035</td><td>45</td></tr><tr><td class="type-cell">260TMP12</td><td>240</td><td>340</td><td>-0.03/-0.04</td><td>78</td></tr><tr><td class="type-cell">280TMP11</td><td>260</td><td>320</td><td>-0.035/-0.04</td><td>45</td></tr><tr><td class="type-cell">280TMP12</td><td>260</td><td>360</td><td>-0.035/-0.04</td><td>79</td></tr><tr><td class="type-cell">300TMP11</td><td>280</td><td>350</td><td>-0.035/-0.04</td><td>53</td></tr><tr><td class="type-cell">300TMP12</td><td>280</td><td>380</td><td>-0.035/-0.04</td><td>80</td></tr><tr><td class="type-cell">320TMP11</td><td>300</td><td>380</td><td>-0.035/-0.04</td><td>62</td></tr><tr><td class="type-cell">320TMP12</td><td>300</td><td>420</td><td>-0.035/-0.045</td><td>95</td></tr><tr><td class="type-cell">340TMP11</td><td>320</td><td>400</td><td>-0.04/-0.04</td><td>63</td></tr><tr><td class="type-cell">340TMP12</td><td>320</td><td>440</td><td>-0.04/-0.045</td><td>95</td></tr></tbody>
-        </table>
-        </div>
+              <tbody><tr><td class="type-cell">130TMP94</td><td>130</td><td>270</td><td>-0.025/-0.035</td><td>85</td></tr><tr><td class="type-cell">140TMP12</td><td>140</td><td>200</td><td>-0.025/-0.03</td><td>46</td></tr><tr><td class="type-cell">150TMP93</td><td>140</td><td>240</td><td>-0.025/-0.03</td><td>60</td></tr><tr><td class="type-cell">150TMP94</td><td>140</td><td>280</td><td>-0.025/-0.035</td><td>85</td></tr><tr><td class="type-cell">160TMP12</td><td>150</td><td>215</td><td>-0.025/-0.03</td><td>50</td></tr><tr><td class="type-cell">160TMP93</td><td>150</td><td>250</td><td>-0.025/-0.03</td><td>60</td></tr><tr><td class="type-cell">170TMP11</td><td>160</td><td>200</td><td>-0.025/-0.03</td><td>31</td></tr><tr><td class="type-cell">170TMP93</td><td>160</td><td>270</td><td>-0.025/-0.035</td><td>67</td></tr><tr><td class="type-cell">180TMP12</td><td>170</td><td>240</td><td>-0.025/-0.03</td><td>55</td></tr><tr><td class="type-cell">180TMP93</td><td>170</td><td>280</td><td>-0.025/-0.035</td><td>67</td></tr><tr><td class="type-cell">190TMP93</td><td>180</td><td>300</td><td>-0.025/-0.035</td><td>73</td></tr><tr><td class="type-cell">190TMP94</td><td>180</td><td>360</td><td>-0.025/-0.04</td><td>109</td></tr><tr><td class="type-cell">200TMP12</td><td>190</td><td>270</td><td>-0.03/-0.035</td><td>62</td></tr><tr><td class="type-cell">200TMP93</td><td>190</td><td>320</td><td>-0.03/-0.04</td><td>78</td></tr><tr><td class="type-cell">220TMP11</td><td>200</td><td>250</td><td>-0.03/-0.03</td><td>37</td></tr><tr><td class="type-cell">220TMP93</td><td>200</td><td>340</td><td>-0.03/-0.04</td><td>85</td></tr><tr><td class="type-cell">240TMP11</td><td>220</td><td>270</td><td>-0.03/-0.035</td><td>37</td></tr><tr><td class="type-cell">240TMP12</td><td>220</td><td>300</td><td>-0.03/-0.035</td><td>63</td></tr><tr><td class="type-cell">260TMP11</td><td>240</td><td>300</td><td>-0.03/-0.035</td><td>45</td></tr><tr><td class="type-cell">260TMP12</td><td>240</td><td>340</td><td>-0.03/-0.04</td><td>78</td></tr><tr><td class="type-cell">280TMP11</td><td>260</td><td>320</td><td>-0.035/-0.04</td><td>45</td></tr><tr><td class="type-cell">280TMP12</td><td>260</td><td>360</td><td>-0.035/-0.04</td><td>79</td></tr><tr><td class="type-cell">300TMP11</td><td>280</td><td>350</td><td>-0.035/-0.04</td><td>53</td></tr><tr><td class="type-cell">300TMP12</td><td>280</td><td>380</td><td>-0.035/-0.04</td><td>80</td></tr><tr><td class="type-cell">320TMP11</td><td>300</td><td>380</td><td>-0.035/-0.04</td><td>62</td></tr><tr><td class="type-cell">320TMP12</td><td>300</td><td>420</td><td>-0.035/-0.045</td><td>95</td></tr><tr><td class="type-cell">340TMP11</td><td>320</td><td>400</td><td>-0.04/-0.04</td><td>63</td></tr><tr><td class="type-cell">340TMP12</td><td>320</td><td>440</td><td>-0.04/-0.045</td><td>95</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
@@ -171,26 +180,42 @@
 <script>
   (function () {
     var input = document.getElementById('tcrFilter');
-    var rows = Array.prototype.slice.call(document.querySelectorAll('#tcrBody tr, #tcrBody2 tr'));
+    var groupsWrap = document.getElementById('tcrGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
     var countEl = document.getElementById('tcrCount');
-
-    function updateCount(shown) {
-      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
-    }
+    var toggleBtn = document.getElementById('tcrToggleAll');
+    var totalRows = 57;
 
     function applyFilter() {
       var q = input.value.trim().toUpperCase();
       var shown = 0;
-      rows.forEach(function (row) {
-        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
-        row.style.display = match ? '' : 'none';
-        if (match) shown++;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        if (q !== '') {
+          grp.open = grpShown > 0;
+        } else {
+          grp.open = false;
+        }
       });
-      updateCount(shown);
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
     }
 
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
     input.addEventListener('input', applyFilter);
-    updateCount(rows.length);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
   })();
 </script>
 </body>

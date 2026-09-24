@@ -537,6 +537,16 @@
     font-size: 15px;
   }
 
+  .section-head p + p {
+    margin-top: 7px;
+  }
+
+  .section-head-tip {
+    margin-top: 12px !important;
+    font-size: 12.5px !important;
+    color: var(--text-faint) !important;
+  }
+
   /* ---------- Product categories ---------- */
 
   .product-subgroup,
@@ -839,6 +849,95 @@
 
   table.spec-table tr:last-child td {
     border-bottom: none;
+  }
+
+  .spec-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .spec-toolbar-btn {
+    flex: 0 0 auto;
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-sub);
+    font-size: 12.5px;
+    padding: 7px 14px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .spec-toolbar-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .series-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .series-group > summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 13px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .series-group > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .series-group > summary::before {
+    content: '▸';
+    display: inline-block;
+    margin-right: 10px;
+    color: var(--accent);
+    transition: transform 0.15s ease;
+    font-size: 12px;
+  }
+
+  .series-group[open] > summary::before {
+    transform: rotate(90deg);
+  }
+
+  .series-group > summary:hover {
+    background: var(--surface-raised);
+  }
+
+  .series-count {
+    color: var(--text-faint);
+    font-size: 12.5px;
+    font-weight: 400;
+    font-family: var(--font-body);
+    margin-left: auto;
+    padding-right: 4px;
+  }
+
+  .series-group[open] > summary {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .series-group .finder-results {
+    margin-top: 0;
+    border-top: none;
+    padding: 16px 18px;
   }
 
   .brand-grid {

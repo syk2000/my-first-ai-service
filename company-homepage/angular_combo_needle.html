@@ -100,7 +100,9 @@
       <div class="section-head">
         <p class="eyebrow">Needle Bearings Combined with Angular Contact Bearings</p>
         <h2>앵귤러 복합형 니들 베어링</h2>
-        <p>레이디얼 니들 베어링과 앵귤러 콘택트 볼 베어링을 조합한 형식으로, 고속 회전을 유지하면서 경방향 하중의 약 25% 수준까지 축방향 하중을 함께 지지할 수 있습니다. 공작기계, 섬유기계 등에 사용됩니다. 형번 또는 치수 일부만 입력해도 검색됩니다.</p>
+        <p>레이디얼 니들 베어링과 앵귤러 콘택트 볼 베어링을 조합한 형식으로, 고속 회전을 유지하면서 경방향 하중의 약 25% 수준까지 축방향 하중을 함께 지지할 수 있습니다.</p>
+        <p>공작기계, 섬유기계 등에 사용됩니다.</p>
+        <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
       <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
         <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">당사 SWS 카탈로그 규격 도면</p>
@@ -112,12 +114,17 @@
         <label for="acnFilter">형번 / 규격 검색</label>
         <input id="acnFilter" type="text" placeholder="예: NATA5905 또는 25*42" autocomplete="off" />
       </div>
-      <p class="finder-tip" id="acnCount" style="margin-bottom: 10px;"></p>
-
-      <div class="finder-results two-col" style="margin-top: 0; display: flex; gap: 20px; flex-wrap: wrap;">
-        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-          <thead>
+      <div class="spec-toolbar">
+        <p class="finder-tip" id="acnCount" style="margin: 0;"></p>
+        <button type="button" class="spec-toolbar-btn" id="acnToggleAll">전체 펼치기</button>
+      </div>
+      <div id="acnGroups">
+        <details class="series-group">
+          <summary>NATA 시리즈<span class="series-count">13건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead>
             <tr>
               <th>형번</th>
               <th>d(내경)</th>
@@ -125,12 +132,12 @@
               <th>C</th>
             </tr>
           </thead>
-          <tbody id="acnBody"><tr><td class="type-cell">NATA5902</td><td>15</td><td>28</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATB5902</td><td>15</td><td>28</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATA5903</td><td>17</td><td>30</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATB5903</td><td>17</td><td>30</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATA5904</td><td>20</td><td>37</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATB5904</td><td>20</td><td>37</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATA5905</td><td>25</td><td>42</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATB5905</td><td>25</td><td>42</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATA5906</td><td>30</td><td>47</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATB5906</td><td>30</td><td>47</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATA5907</td><td>35</td><td>55</td><td>-0.012/-0.013</td><td>27</td></tr><tr><td class="type-cell">NATB5907</td><td>35</td><td>55</td><td>-0.012/-0.013</td><td>27</td></tr><tr><td class="type-cell">NATA5908</td><td>40</td><td>62</td><td>-0.012/-0.013</td><td>30</td></tr></tbody>
-        </table>
-        </div>
-        <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-          <thead>
+              <tbody><tr><td class="type-cell">NATA5902</td><td>15</td><td>28</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATA5903</td><td>17</td><td>30</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATA5904</td><td>20</td><td>37</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATA5905</td><td>25</td><td>42</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATA5906</td><td>30</td><td>47</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATA5907</td><td>35</td><td>55</td><td>-0.012/-0.013</td><td>27</td></tr><tr><td class="type-cell">NATA5908</td><td>40</td><td>62</td><td>-0.012/-0.013</td><td>30</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead>
             <tr>
               <th>형번</th>
               <th>d(내경)</th>
@@ -138,9 +145,42 @@
               <th>C</th>
             </tr>
           </thead>
-          <tbody id="acnBody2"><tr><td class="type-cell">NATB5908</td><td>40</td><td>62</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATA5909</td><td>45</td><td>68</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATB5909</td><td>45</td><td>68</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATA5910</td><td>50</td><td>72</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATB5910</td><td>50</td><td>72</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATA5911</td><td>55</td><td>80</td><td>-0.015/-0.013</td><td>34</td></tr><tr><td class="type-cell">NATB5911</td><td>55</td><td>80</td><td>-0.015/-0.013</td><td>34</td></tr><tr><td class="type-cell">NATA5912</td><td>60</td><td>85</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATB5912</td><td>60</td><td>85</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATA5913</td><td>65</td><td>90</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATB5913</td><td>65</td><td>90</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATA5914</td><td>70</td><td>100</td><td>-0.015/-0.015</td><td>40</td></tr><tr><td class="type-cell">NATB5914</td><td>70</td><td>100</td><td>-0.015/-0.015</td><td>40</td></tr></tbody>
-        </table>
-        </div>
+              <tbody><tr><td class="type-cell">NATA5909</td><td>45</td><td>68</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATA5910</td><td>50</td><td>72</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATA5911</td><td>55</td><td>80</td><td>-0.015/-0.013</td><td>34</td></tr><tr><td class="type-cell">NATA5912</td><td>60</td><td>85</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATA5913</td><td>65</td><td>90</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATA5914</td><td>70</td><td>100</td><td>-0.015/-0.015</td><td>40</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
+        <details class="series-group">
+          <summary>NATB 시리즈<span class="series-count">13건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th><th>공차(d/D)</th>
+              <th>C</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">NATB5902</td><td>15</td><td>28</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATB5903</td><td>17</td><td>30</td><td>-0.008/-0.009</td><td>18</td></tr><tr><td class="type-cell">NATB5904</td><td>20</td><td>37</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATB5905</td><td>25</td><td>42</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATB5906</td><td>30</td><td>47</td><td>-0.01/-0.011</td><td>23</td></tr><tr><td class="type-cell">NATB5907</td><td>35</td><td>55</td><td>-0.012/-0.013</td><td>27</td></tr><tr><td class="type-cell">NATB5908</td><td>40</td><td>62</td><td>-0.012/-0.013</td><td>30</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d(내경)</th>
+              <th>D(외경)</th><th>공차(d/D)</th>
+              <th>C</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">NATB5909</td><td>45</td><td>68</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATB5910</td><td>50</td><td>72</td><td>-0.012/-0.013</td><td>30</td></tr><tr><td class="type-cell">NATB5911</td><td>55</td><td>80</td><td>-0.015/-0.013</td><td>34</td></tr><tr><td class="type-cell">NATB5912</td><td>60</td><td>85</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATB5913</td><td>65</td><td>90</td><td>-0.015/-0.015</td><td>34</td></tr><tr><td class="type-cell">NATB5914</td><td>70</td><td>100</td><td>-0.015/-0.015</td><td>40</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
@@ -171,26 +211,42 @@
 <script>
   (function () {
     var input = document.getElementById('acnFilter');
-    var rows = Array.prototype.slice.call(document.querySelectorAll('#acnBody tr, #acnBody2 tr'));
+    var groupsWrap = document.getElementById('acnGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
     var countEl = document.getElementById('acnCount');
-
-    function updateCount(shown) {
-      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
-    }
+    var toggleBtn = document.getElementById('acnToggleAll');
+    var totalRows = 26;
 
     function applyFilter() {
       var q = input.value.trim().toUpperCase();
       var shown = 0;
-      rows.forEach(function (row) {
-        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
-        row.style.display = match ? '' : 'none';
-        if (match) shown++;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        if (q !== '') {
+          grp.open = grpShown > 0;
+        } else {
+          grp.open = false;
+        }
       });
-      updateCount(shown);
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
     }
 
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
     input.addEventListener('input', applyFilter);
-    updateCount(rows.length);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
   })();
 </script>
 </body>
