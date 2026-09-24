@@ -110,134 +110,116 @@
         <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">d(내경) · D(외경) · B(폭)</p>
       </div>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: -8px 0 20px;">
-        아래 UC&middot;UK&middot;SA&middot;SB&middot;SC 표는 인서트 베어링 자체의 규격(d&middot;D&middot;B)입니다. 하우징 바깥 치수(H&middot;A&middot;N&middot;L 등)는 하우징 종류별로 <a href="unit_case.html">유니트 케이스</a> 페이지에 별도 정리되어 있습니다.
+        아래 UC&middot;UK&middot;SB&middot;SA&middot;SC 표는 인서트 베어링 자체의 규격(d&middot;D&middot;B)입니다. 하우징 바깥 치수(H&middot;A&middot;N&middot;L 등)는 하우징 종류별로 <a href="unit_case.html">유니트 케이스</a> 페이지에 별도 정리되어 있습니다.
       </p>
 
-      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
-        <label for="bbuFilter">형번 / 규격 검색</label>
-        <input id="bbuFilter" type="text" placeholder="예: UC206 또는 30*62" autocomplete="off" />
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="uc">UC 시리즈</button>
+        <button type="button" class="cat-tab-btn" data-tab="uk">UK 시리즈</button>
+        <button type="button" class="cat-tab-btn" data-tab="sb">SB(CSB) · 세트스크류형</button>
+        <button type="button" class="cat-tab-btn" data-tab="sa">SA(CSA) · 편심고정링형</button>
+        <button type="button" class="cat-tab-btn" data-tab="sc">SC · 압입고정형</button>
       </div>
-      <div class="spec-toolbar">
-        <p class="finder-tip" id="bbuCount" style="margin: 0;"></p>
-        <button type="button" class="spec-toolbar-btn" id="bbuToggleAll">전체 펼치기</button>
-      </div>
-      <div id="bbuGroups">
-        <details class="series-group">
-          <summary>UC 시리즈<span class="series-count">81건</span></summary>
-          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
+
+      <div class="cat-tab-panel" data-panel="uc">
+        <p class="cat-tab-panel-desc">UC(내경 표준, 세트스크류 고정) 인서트 베어링입니다. 소형(UC2xx)&middot;중형(UC3xx) 규격을 모두 포함합니다.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="ucFilter">형번 / 규격 검색</label>
+          <input id="ucFilter" type="text" placeholder="예: UC206 또는 30*62" autocomplete="off" />
+        </div>
+        <div class="finder-results two-col" id="ucWrap" style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>B(폭)</th></tr></thead>
               <tbody><tr><td class="type-cell">UC201</td><td>12</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC201-8</td><td>12.7</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC202</td><td>15</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC202-10</td><td>15.8</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC203</td><td>17</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC204-12</td><td>19.1</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC204</td><td>20</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UC205-14</td><td>22.2</td><td>52</td><td>34.1</td></tr><tr><td class="type-cell">UC205-15</td><td>23.8</td><td>52</td><td>34.1</td></tr><tr><td class="type-cell">UC205</td><td>25</td><td>52</td><td>34.1</td></tr><tr><td class="type-cell">UC205-16</td><td>25.4</td><td>52</td><td>34.1</td></tr><tr><td class="type-cell">UC206-18</td><td>28.6</td><td>62</td><td>38.1</td></tr><tr><td class="type-cell">UC206</td><td>30</td><td>62</td><td>38.1</td></tr><tr><td class="type-cell">UC206-19</td><td>30.2</td><td>62</td><td>38.1</td></tr><tr><td class="type-cell">UC207-20</td><td>31.7</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC207-21</td><td>33.3</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC207-22</td><td>34.9</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC207</td><td>35</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC207-23</td><td>36.5</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UC208-24</td><td>38.1</td><td>80</td><td>49.2</td></tr><tr><td class="type-cell">UC208-25</td><td>39.7</td><td>80</td><td>49.2</td></tr><tr><td class="type-cell">UC208</td><td>40</td><td>80</td><td>49.2</td></tr><tr><td class="type-cell">UC209-26</td><td>41.3</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">UC209-27</td><td>42.8</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">UC209-28</td><td>44.4</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">UC209</td><td>45</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">UC210-30</td><td>47.6</td><td>90</td><td>51.6</td></tr><tr><td class="type-cell">UC210-31</td><td>49.2</td><td>90</td><td>51.6</td></tr><tr><td class="type-cell">UC210</td><td>50</td><td>90</td><td>51.6</td></tr><tr><td class="type-cell">UC211-32</td><td>50.8</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">UC211-34</td><td>53.9</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">UC211</td><td>55</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">UC211-35</td><td>55.6</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">UC212-36</td><td>57.2</td><td>110</td><td>65.1</td></tr><tr><td class="type-cell">UC212</td><td>60</td><td>110</td><td>65.1</td></tr><tr><td class="type-cell">UC212-38</td><td>60.3</td><td>110</td><td>65.1</td></tr><tr><td class="type-cell">UC212-39</td><td>61.9</td><td>110</td><td>65.1</td></tr><tr><td class="type-cell">UC213-40</td><td>63.5</td><td>120</td><td>65.1</td></tr><tr><td class="type-cell">UC213</td><td>65</td><td>120</td><td>65.1</td></tr><tr><td class="type-cell">UC214-44</td><td>69.8</td><td>125</td><td>74.6</td></tr><tr><td class="type-cell">UC214</td><td>70</td><td>125</td><td>74.6</td></tr></tbody>
             </table>
-            </div>
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
+          </div>
+          <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>B(폭)</th></tr></thead>
               <tbody><tr><td class="type-cell">UC215</td><td>75</td><td>130</td><td>77.8</td></tr><tr><td class="type-cell">UC215-48</td><td>76.2</td><td>130</td><td>77.8</td></tr><tr><td class="type-cell">UC216</td><td>80</td><td>140</td><td>82.6</td></tr><tr><td class="type-cell">UC217-52</td><td>82.5</td><td>150</td><td>85.7</td></tr><tr><td class="type-cell">UC217</td><td>85</td><td>150</td><td>85.7</td></tr><tr><td class="type-cell">UC218</td><td>90</td><td>160</td><td>96</td></tr><tr><td class="type-cell">UC305</td><td>25</td><td>62</td><td>38</td></tr><tr><td class="type-cell">UC305-16</td><td>25.4</td><td>62</td><td>38</td></tr><tr><td class="type-cell">UC306-18</td><td>28.6</td><td>72</td><td>43</td></tr><tr><td class="type-cell">UC306</td><td>30</td><td>72</td><td>43</td></tr><tr><td class="type-cell">UC307-20</td><td>31.7</td><td>80</td><td>48</td></tr><tr><td class="type-cell">UC307-22</td><td>34.9</td><td>80</td><td>48</td></tr><tr><td class="type-cell">UC307</td><td>35</td><td>80</td><td>48</td></tr><tr><td class="type-cell">UC308-24</td><td>38.1</td><td>90</td><td>52</td></tr><tr><td class="type-cell">UC308</td><td>40</td><td>90</td><td>52</td></tr><tr><td class="type-cell">UC309-28</td><td>44.4</td><td>100</td><td>57</td></tr><tr><td class="type-cell">UC309</td><td>45</td><td>100</td><td>57</td></tr><tr><td class="type-cell">UC310-31</td><td>49.2</td><td>110</td><td>61</td></tr><tr><td class="type-cell">UC310</td><td>50</td><td>110</td><td>61</td></tr><tr><td class="type-cell">UC311-32</td><td>50.8</td><td>120</td><td>66</td></tr><tr><td class="type-cell">UC311</td><td>55</td><td>120</td><td>66</td></tr><tr><td class="type-cell">UC312</td><td>60</td><td>130</td><td>71</td></tr><tr><td class="type-cell">UC313-40</td><td>63.5</td><td>140</td><td>75</td></tr><tr><td class="type-cell">UC313</td><td>65</td><td>140</td><td>75</td></tr><tr><td class="type-cell">UC314-44</td><td>69.8</td><td>150</td><td>78</td></tr><tr><td class="type-cell">UC314</td><td>70</td><td>150</td><td>78</td></tr><tr><td class="type-cell">UC315</td><td>75</td><td>160</td><td>82</td></tr><tr><td class="type-cell">UC315-48</td><td>76.2</td><td>160</td><td>82</td></tr><tr><td class="type-cell">UC316</td><td>80</td><td>170</td><td>86</td></tr><tr><td class="type-cell">UC317</td><td>85</td><td>180</td><td>96</td></tr><tr><td class="type-cell">UC318-56</td><td>88.9</td><td>190</td><td>96</td></tr><tr><td class="type-cell">UC318</td><td>90</td><td>190</td><td>96</td></tr><tr><td class="type-cell">UC319</td><td>95</td><td>200</td><td>103</td></tr><tr><td class="type-cell">UC320</td><td>100</td><td>215</td><td>108</td></tr><tr><td class="type-cell">UC320-64</td><td>101.6</td><td>215</td><td>108</td></tr><tr><td class="type-cell">UC321</td><td>105</td><td>225</td><td>112</td></tr><tr><td class="type-cell">UC322</td><td>110</td><td>240</td><td>117</td></tr><tr><td class="type-cell">UC324</td><td>120</td><td>260</td><td>126</td></tr><tr><td class="type-cell">UC326</td><td>130</td><td>280</td><td>135</td></tr><tr><td class="type-cell">UC328</td><td>140</td><td>300</td><td>145</td></tr></tbody>
             </table>
-            </div>
           </div>
-        </details>
-        <details class="series-group">
-          <summary>UK 시리즈<span class="series-count">32건</span></summary>
-          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 당사 SWS 카탈로그(베어링 치수표) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="uk" hidden>
+        <p class="cat-tab-panel-desc">UK(테이퍼 내경, 어댑터 슬리브 사용) 인서트 베어링입니다. 소형(UK2xx)&middot;중형(UK3xx) 규격을 모두 포함합니다.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="ukFilter">형번 / 규격 검색</label>
+          <input id="ukFilter" type="text" placeholder="예: UK208 또는 40*80" autocomplete="off" />
+        </div>
+        <div class="finder-results two-col" id="ukWrap" style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>B(폭)</th></tr></thead>
               <tbody><tr><td class="type-cell">UK205</td><td>25</td><td>52</td><td>22</td></tr><tr><td class="type-cell">UK206</td><td>30</td><td>62</td><td>24</td></tr><tr><td class="type-cell">UK207</td><td>35</td><td>72</td><td>26</td></tr><tr><td class="type-cell">UK208</td><td>40</td><td>80</td><td>27</td></tr><tr><td class="type-cell">UK209</td><td>45</td><td>85</td><td>28</td></tr><tr><td class="type-cell">UK210</td><td>50</td><td>90</td><td>30</td></tr><tr><td class="type-cell">UK211</td><td>55</td><td>100</td><td>32</td></tr><tr><td class="type-cell">UK212</td><td>60</td><td>110</td><td>34</td></tr><tr><td class="type-cell">UK213</td><td>65</td><td>120</td><td>37</td></tr><tr><td class="type-cell">UK215</td><td>75</td><td>130</td><td>38</td></tr><tr><td class="type-cell">UK216</td><td>80</td><td>140</td><td>40</td></tr><tr><td class="type-cell">UK217</td><td>85</td><td>150</td><td>43</td></tr><tr><td class="type-cell">UK218</td><td>90</td><td>160</td><td>46</td></tr><tr><td class="type-cell">UK305</td><td>25</td><td>62</td><td>27</td></tr><tr><td class="type-cell">UK306</td><td>30</td><td>72</td><td>30</td></tr><tr><td class="type-cell">UK307</td><td>35</td><td>80</td><td>33</td></tr></tbody>
             </table>
-            </div>
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
+          </div>
+          <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>B(폭)</th></tr></thead>
               <tbody><tr><td class="type-cell">UK308</td><td>40</td><td>90</td><td>35</td></tr><tr><td class="type-cell">UK309</td><td>45</td><td>100</td><td>38</td></tr><tr><td class="type-cell">UK310</td><td>50</td><td>110</td><td>40</td></tr><tr><td class="type-cell">UK311</td><td>55</td><td>120</td><td>43</td></tr><tr><td class="type-cell">UK312</td><td>60</td><td>130</td><td>46</td></tr><tr><td class="type-cell">UK313</td><td>65</td><td>140</td><td>48</td></tr><tr><td class="type-cell">UK315</td><td>75</td><td>160</td><td>54</td></tr><tr><td class="type-cell">UK316</td><td>80</td><td>170</td><td>57</td></tr><tr><td class="type-cell">UK317</td><td>85</td><td>180</td><td>60</td></tr><tr><td class="type-cell">UK318</td><td>90</td><td>190</td><td>63</td></tr><tr><td class="type-cell">UK319</td><td>95</td><td>200</td><td>66</td></tr><tr><td class="type-cell">UK320</td><td>100</td><td>215</td><td>70</td></tr><tr><td class="type-cell">UK322</td><td>110</td><td>240</td><td>80</td></tr><tr><td class="type-cell">UK324</td><td>120</td><td>260</td><td>86</td></tr><tr><td class="type-cell">UK326</td><td>130</td><td>280</td><td>92</td></tr><tr><td class="type-cell">UK328</td><td>140</td><td>300</td><td>98</td></tr></tbody>
             </table>
-            </div>
           </div>
-        </details>
-        <details class="series-group">
-          <summary>SB(CSB) 시리즈 · 세트스크류형<span class="series-count">12건</span></summary>
-          <div class="finder-results" style="overflow-x: auto;">
-            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-                <tr>
-                  <th>형번</th>
-                  <th>d(내경)</th>
-                  <th>D(외경)</th>
-                  <th>B(폭)</th>
-                </tr>
-              </thead>
-              <tbody><tr><td class="type-cell">SB201</td><td>12</td><td>40</td><td>22.5</td></tr><tr><td class="type-cell">SB202</td><td>15</td><td>40</td><td>22.5</td></tr><tr><td class="type-cell">SB203</td><td>17</td><td>40</td><td>22.5</td></tr><tr><td class="type-cell">SB204</td><td>20</td><td>47</td><td>25.5</td></tr><tr><td class="type-cell">SB205</td><td>25</td><td>52</td><td>27</td></tr><tr><td class="type-cell">SB206</td><td>30</td><td>62</td><td>30</td></tr><tr><td class="type-cell">SB207</td><td>35</td><td>72</td><td>35</td></tr><tr><td class="type-cell">SB208</td><td>40</td><td>80</td><td>40</td></tr><tr><td class="type-cell">SB209</td><td>45</td><td>85</td><td>41.2</td></tr><tr><td class="type-cell">SB210</td><td>50</td><td>90</td><td>43.6</td></tr><tr><td class="type-cell">SB211</td><td>55</td><td>100</td><td>45.4</td></tr><tr><td class="type-cell">SB212</td><td>60</td><td>110</td><td>53.2</td></tr></tbody>
-            </table>
-          </div>
-        </details>
-        <details class="series-group">
-          <summary>SA(CSA) 시리즈 · 편심고정링형<span class="series-count">12건</span></summary>
-          <div class="finder-results" style="overflow-x: auto;">
-            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-                <tr>
-                  <th>형번</th>
-                  <th>d(내경)</th>
-                  <th>D(외경)</th>
-                  <th>B1(폭)</th>
-                </tr>
-              </thead>
-              <tbody><tr><td class="type-cell">SA201</td><td>12</td><td>40</td><td>28.6</td></tr><tr><td class="type-cell">SA202</td><td>15</td><td>40</td><td>28.6</td></tr><tr><td class="type-cell">SA203</td><td>17</td><td>40</td><td>28.6</td></tr><tr><td class="type-cell">SA204</td><td>20</td><td>47</td><td>31</td></tr><tr><td class="type-cell">SA205</td><td>25</td><td>52</td><td>31</td></tr><tr><td class="type-cell">SA206</td><td>30</td><td>62</td><td>35.7</td></tr><tr><td class="type-cell">SA207</td><td>35</td><td>72</td><td>38.9</td></tr><tr><td class="type-cell">SA208</td><td>40</td><td>80</td><td>43.7</td></tr><tr><td class="type-cell">SA209</td><td>45</td><td>85</td><td>43.7</td></tr><tr><td class="type-cell">SA210</td><td>50</td><td>90</td><td>43.7</td></tr><tr><td class="type-cell">SA211</td><td>55</td><td>100</td><td>48.4</td></tr><tr><td class="type-cell">SA212</td><td>60</td><td>110</td><td>53.1</td></tr></tbody>
-            </table>
-          </div>
-        </details>
-        <details class="series-group">
-          <summary>SC 시리즈 · 압입고정형<span class="series-count">12건</span></summary>
-          <div class="finder-results" style="overflow-x: auto;">
-            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-                <tr>
-                  <th>형번</th>
-                  <th>d(내경)</th>
-                  <th>D(외경)</th>
-                  <th>C(폭)</th>
-                </tr>
-              </thead>
-              <tbody><tr><td class="type-cell">SC201</td><td>12</td><td>32</td><td>10</td></tr><tr><td class="type-cell">SC202</td><td>15</td><td>35</td><td>11</td></tr><tr><td class="type-cell">SC203</td><td>17</td><td>40</td><td>12</td></tr><tr><td class="type-cell">SC204</td><td>20</td><td>47</td><td>14</td></tr><tr><td class="type-cell">SC205</td><td>25</td><td>52</td><td>15</td></tr><tr><td class="type-cell">SC206</td><td>30</td><td>62</td><td>16</td></tr><tr><td class="type-cell">SC207</td><td>35</td><td>72</td><td>17</td></tr><tr><td class="type-cell">SC208</td><td>40</td><td>80</td><td>18</td></tr><tr><td class="type-cell">SC209</td><td>45</td><td>85</td><td>19</td></tr><tr><td class="type-cell">SC210</td><td>50</td><td>90</td><td>20</td></tr><tr><td class="type-cell">SC211</td><td>55</td><td>100</td><td>21</td></tr><tr><td class="type-cell">SC212</td><td>60</td><td>110</td><td>22</td></tr></tbody>
-            </table>
-          </div>
-        </details>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 당사 SWS 카탈로그(베어링 치수표) 기준</p>
       </div>
-      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
+
+      <div class="cat-tab-panel" data-panel="sb" hidden>
+        <p class="cat-tab-panel-desc">세트스크류(고정나사)로 축에 고정하는 SB(CSB) 인서트 베어링입니다.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="sbFilter">형번 / 규격 검색</label>
+          <input id="sbFilter" type="text" placeholder="예: SB206 또는 30*62" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+            <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>B(폭)</th></tr></thead>
+            <tbody id="sbBody">
+              <tr><td class="type-cell">SB201</td><td>12</td><td>40</td><td>22.5</td></tr><tr><td class="type-cell">SB202</td><td>15</td><td>40</td><td>22.5</td></tr><tr><td class="type-cell">SB203</td><td>17</td><td>40</td><td>22.5</td></tr><tr><td class="type-cell">SB204</td><td>20</td><td>47</td><td>25.5</td></tr><tr><td class="type-cell">SB205</td><td>25</td><td>52</td><td>27</td></tr><tr><td class="type-cell">SB206</td><td>30</td><td>62</td><td>30</td></tr><tr><td class="type-cell">SB207</td><td>35</td><td>72</td><td>35</td></tr><tr><td class="type-cell">SB208</td><td>40</td><td>80</td><td>40</td></tr><tr><td class="type-cell">SB209</td><td>45</td><td>85</td><td>41.2</td></tr><tr><td class="type-cell">SB210</td><td>50</td><td>90</td><td>43.6</td></tr><tr><td class="type-cell">SB211</td><td>55</td><td>100</td><td>45.4</td></tr><tr><td class="type-cell">SB212</td><td>60</td><td>110</td><td>53.2</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그를 기준으로 작성했습니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="sa" hidden>
+        <p class="cat-tab-panel-desc">편심고정링으로 축에 고정하는 SA(CSA) 인서트 베어링입니다.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="saFilter">형번 / 규격 검색</label>
+          <input id="saFilter" type="text" placeholder="예: SA206 또는 30*62" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+            <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>B1(폭)</th></tr></thead>
+            <tbody id="saBody">
+              <tr><td class="type-cell">SA201</td><td>12</td><td>40</td><td>28.6</td></tr><tr><td class="type-cell">SA202</td><td>15</td><td>40</td><td>28.6</td></tr><tr><td class="type-cell">SA203</td><td>17</td><td>40</td><td>28.6</td></tr><tr><td class="type-cell">SA204</td><td>20</td><td>47</td><td>31</td></tr><tr><td class="type-cell">SA205</td><td>25</td><td>52</td><td>31</td></tr><tr><td class="type-cell">SA206</td><td>30</td><td>62</td><td>35.7</td></tr><tr><td class="type-cell">SA207</td><td>35</td><td>72</td><td>38.9</td></tr><tr><td class="type-cell">SA208</td><td>40</td><td>80</td><td>43.7</td></tr><tr><td class="type-cell">SA209</td><td>45</td><td>85</td><td>43.7</td></tr><tr><td class="type-cell">SA210</td><td>50</td><td>90</td><td>43.7</td></tr><tr><td class="type-cell">SA211</td><td>55</td><td>100</td><td>48.4</td></tr><tr><td class="type-cell">SA212</td><td>60</td><td>110</td><td>53.1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그를 기준으로 작성했습니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="sc" hidden>
+        <p class="cat-tab-panel-desc">압입 고정형 SC 인서트 베어링입니다.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="scFilter">형번 / 규격 검색</label>
+          <input id="scFilter" type="text" placeholder="예: SC206 또는 30*62" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+            <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>C(폭)</th></tr></thead>
+            <tbody id="scBody">
+              <tr><td class="type-cell">SC201</td><td>12</td><td>32</td><td>10</td></tr><tr><td class="type-cell">SC202</td><td>15</td><td>35</td><td>11</td></tr><tr><td class="type-cell">SC203</td><td>17</td><td>40</td><td>12</td></tr><tr><td class="type-cell">SC204</td><td>20</td><td>47</td><td>14</td></tr><tr><td class="type-cell">SC205</td><td>25</td><td>52</td><td>15</td></tr><tr><td class="type-cell">SC206</td><td>30</td><td>62</td><td>16</td></tr><tr><td class="type-cell">SC207</td><td>35</td><td>72</td><td>17</td></tr><tr><td class="type-cell">SC208</td><td>40</td><td>80</td><td>18</td></tr><tr><td class="type-cell">SC209</td><td>45</td><td>85</td><td>19</td></tr><tr><td class="type-cell">SC210</td><td>50</td><td>90</td><td>20</td></tr><tr><td class="type-cell">SC211</td><td>55</td><td>100</td><td>21</td></tr><tr><td class="type-cell">SC212</td><td>60</td><td>110</td><td>22</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그를 기준으로 작성했습니다.</p>
+      </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        &#8251; UC&middot;UK 시리즈는 당사 SWS 카탈로그(베어링 치수표)를 기준으로 작성했습니다. SB(CSB)&middot;SA(CSA)&middot;SC 시리즈는 SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그를 기준으로 추가했으며,
-        형번별 인치 보어(-8, -10 등) 세부 규격은 표에 넣지 않고 대표 미터 보어 규격만 실었습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br>
+        &#8251; 형번별 인치 보어(-8, -10 등) 세부 규격은 표에 넣지 않고 대표 미터 보어 규격만 실었습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br>
         이 제품군은 ISO 492 일반 허용공차 규격이 적용되지 않는(또는 별도 정밀등급이 적용되는) 품목으로, 공차는 제조사 자체 규격을 따릅니다. 정확한 공차는 발주 전 문의 바랍니다.
       </p>
     </div>
@@ -263,43 +245,41 @@
 <script src="common.js"></script>
 <script>
   (function () {
-    var input = document.getElementById('bbuFilter');
-    var groupsWrap = document.getElementById('bbuGroups');
-    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
-    var countEl = document.getElementById('bbuCount');
-    var toggleBtn = document.getElementById('bbuToggleAll');
-    var totalRows = 149;
-
-    function applyFilter() {
-      var q = input.value.trim().toUpperCase();
-      var shown = 0;
-      groups.forEach(function (grp) {
-        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
-        var grpShown = 0;
-        grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
-          row.style.display = match ? '' : 'none';
-          if (match) grpShown++;
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+        panels.forEach(function (p) {
+          p.hidden = p.getAttribute('data-panel') !== target;
         });
-        shown += grpShown;
-        if (q !== '') {
-          grp.open = grpShown > 0;
-        } else {
-          grp.open = false;
-        }
       });
-      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 5 + '개 시리즈';
-    }
-
-    var allOpen = false;
-    toggleBtn.addEventListener('click', function () {
-      allOpen = !allOpen;
-      groups.forEach(function (grp) { grp.open = allOpen; });
-      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
     });
-
-    input.addEventListener('input', applyFilter);
-    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 5 + '개 시리즈';
+  })();
+</script>
+<script>
+  (function () {
+    ['uc', 'uk'].forEach(function (prefix) {
+      var input = document.getElementById(prefix + 'Filter');
+      var rows = Array.prototype.slice.call(document.querySelectorAll('#' + prefix + 'Wrap tbody tr'));
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toUpperCase();
+        rows.forEach(function (row) {
+          row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1) ? '' : 'none';
+        });
+      });
+    });
+    ['sb', 'sa', 'sc'].forEach(function (prefix) {
+      var input = document.getElementById(prefix + 'Filter');
+      var rows = Array.prototype.slice.call(document.querySelectorAll('#' + prefix + 'Body tr'));
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toUpperCase();
+        rows.forEach(function (row) {
+          row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1) ? '' : 'none';
+        });
+      });
+    });
   })();
 </script>
 </body>
