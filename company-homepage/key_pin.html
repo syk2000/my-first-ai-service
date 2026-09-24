@@ -95,52 +95,637 @@
     </div>
   </header>
 
-<section class="page-section" id="key-pin-types">
+<section class="page-section" id="key-pin-types" style="border-bottom: none;">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Key &amp; Pin Types</p>
         <h2>키 &amp; 핀</h2>
-        <p>[회사명]이 취급하는 키 · 핀 종류입니다. 규격·수량 문의는 언제든 견적 문의를 통해 안내드립니다.</p>
+        <p>[회사명]이 취급하는 키 · 핀 종류입니다. 아래 탭에서 종류별 규격을 확인하세요.</p>
       </div>
 
-      <div class="product-subgroup">
-        <h3 class="product-subgroup-title">키</h3>
-        <div class="product-grid">
-          <a class="product-card" href="key_normal.html">
-            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="8" y="15" width="24" height="10" rx="2" stroke="currentColor" stroke-width="2.5"/></svg>
-            <h4>사각키 및 키홈</h4>
-            <span class="p-card-cta">규격 보기 →</span>
-          </a>
-          <a class="product-card" href="half_key.html">
-            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M8 22 A12 12 0 0 1 32 22 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
-            <h4>반달키</h4>
-            <span class="p-card-cta">규격 보기 →</span>
-          </a>
-          <a class="product-card" href="round_key.html">
-            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="8" y="15" width="24" height="10" rx="5" stroke="currentColor" stroke-width="2.5"/></svg>
-            <h4>라운드 키 (1R, 2R)</h4>
-            <span class="p-card-cta">규격 보기 →</span>
-          </a>
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="knormal">사각키</button>
+        <button type="button" class="cat-tab-btn" data-tab="khalf">반달키</button>
+        <button type="button" class="cat-tab-btn" data-tab="kround">라운드키</button>
+        <button type="button" class="cat-tab-btn" data-tab="ptaper">테이퍼핀</button>
+        <button type="button" class="cat-tab-btn" data-tab="pparallel">평행핀</button>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="knormal">
+        <p class="cat-tab-panel-desc">
+          축과 보스를 회전 방향으로 고정하는 가장 기본적인 사각형 키입니다. 일반 탄소강(SM45C) 소재가 기본이며,
+          부식 환경이나 식품·화학 설비용으로 <strong style="color: var(--accent);">STS304 스테인리스 사각키</strong>도 함께 취급합니다.
+        </p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+          <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="220" height="140" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="50" width="140" height="26" stroke="#222" stroke-width="2" fill="none" />
+                <line x1="30" y1="30" x2="170" y2="30" stroke="#333" stroke-width="1" />
+                <line x1="30" y1="24" x2="30" y2="36" stroke="#333" stroke-width="1" />
+                <line x1="170" y1="24" x2="170" y2="36" stroke="#333" stroke-width="1" />
+                <text x="94" y="26" font-size="13" fill="#222">L</text>
+                <line x1="12" y1="50" x2="12" y2="76" stroke="#333" stroke-width="1" />
+                <text x="0" y="66" font-size="13" fill="#222">h</text>
+                <line x1="30" y1="90" x2="170" y2="90" stroke="#333" stroke-width="1" />
+                <line x1="30" y1="84" x2="30" y2="96" stroke="#333" stroke-width="1" />
+                <line x1="170" y1="84" x2="170" y2="96" stroke="#333" stroke-width="1" />
+                <text x="94" y="106" font-size="13" fill="#222">b</text>
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 키 형상<br /><span style="color: var(--text-faint);">L=전체 길이 · b=나비 · h=높이</span></p>
+            </div>
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="150" height="140" viewBox="0 0 150 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 60 A60 60 0 0 1 135 60" stroke="#222" stroke-width="2" fill="none" />
+                <rect x="55" y="45" width="40" height="18" stroke="#222" stroke-width="2" fill="none" />
+                <line x1="55" y1="63" x2="55" y2="100" stroke="#333" stroke-width="1" stroke-dasharray="3,3" />
+                <line x1="95" y1="63" x2="95" y2="100" stroke="#333" stroke-width="1" stroke-dasharray="3,3" />
+                <line x1="55" y1="96" x2="95" y2="96" stroke="#333" stroke-width="1" />
+                <text x="70" y="112" font-size="13" fill="#222">b1</text>
+                <line x1="15" y1="63" x2="55" y2="63" stroke="#333" stroke-width="1.4" />
+                <line x1="95" y1="63" x2="135" y2="63" stroke="#333" stroke-width="1.4" />
+                <line x1="20" y1="55" x2="20" y2="70" stroke="#333" stroke-width="1" />
+                <text x="6" y="52" font-size="12" fill="#222">t1</text>
+                <line x1="55" y1="45" x2="55" y2="20" stroke="#333" stroke-width="1" stroke-dasharray="3,3" />
+                <text x="30" y="18" font-size="12" fill="#222">t2</text>
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 키홈 단면<br /><span style="color: var(--text-faint);">b1=축 키홈 나비 · b2=보스 키홈 나비(=b1) · t1=축 키홈 깊이 · t2=보스 키홈 깊이</span></p>
+            </div>
+          </div>
         </div>
+
+        <details class="series-group">
+          <summary>일반강(SM45C) 규격표<span class="series-count">30건</span></summary>
+          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 1300px;">
+              <thead>
+                <tr>
+                  <th>호칭치수<br />b&times;h</th>
+                  <th>b 허용차<br />(h9)</th>
+                  <th>h 허용차<br />(자체)</th>
+                  <th>c<br />(모따기)</th>
+                  <th>b1 허용차<br />(N9, 축홈)</th>
+                  <th>b2 허용차<br />(Js9, 보스홈)</th>
+                  <th>t1<br />(축 키홈 깊이)</th>
+                  <th>t2<br />(보스 키홈 깊이)</th>
+                  <th>t1&middot;t2<br />허용차</th>
+                  <th>적용 축지름 d</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="type-cell">2&times;2</td><td>0/-0.025</td><td>0/-0.025</td><td>0.16~0.25</td><td>-0.004/-0.029</td><td>&plusmn;0.0125</td><td>1.2</td><td>1.0</td><td>+0.10/0</td><td>6~8</td></tr>
+                <tr><td class="type-cell">3&times;3</td><td>0/-0.025</td><td>0/-0.025</td><td>0.16~0.25</td><td>-0.004/-0.029</td><td>&plusmn;0.0125</td><td>1.8</td><td>1.4</td><td>+0.10/0</td><td>8~10</td></tr>
+                <tr><td class="type-cell">4&times;4</td><td>0/-0.030</td><td>0/-0.030</td><td>0.25~0.40</td><td>0/-0.030</td><td>&plusmn;0.0150</td><td>2.5</td><td>1.8</td><td>+0.10/0</td><td>10~12</td></tr>
+                <tr><td class="type-cell">5&times;5</td><td>0/-0.030</td><td>0/-0.030</td><td>0.25~0.40</td><td>0/-0.030</td><td>&plusmn;0.0150</td><td>3.0</td><td>2.3</td><td>+0.10/0</td><td>12~17</td></tr>
+                <tr><td class="type-cell">6&times;6</td><td>0/-0.030</td><td>0/-0.030</td><td>0.25~0.40</td><td>0/-0.030</td><td>&plusmn;0.0150</td><td>3.5</td><td>2.8</td><td>+0.10/0</td><td>17~22</td></tr>
+                <tr><td class="type-cell">7&times;7</td><td>0/-0.036</td><td>0/-0.036</td><td>0.25~0.40</td><td>0/-0.036</td><td>&plusmn;0.0180</td><td>4.0</td><td>3.0</td><td>+0.20/0</td><td>20~25</td></tr>
+                <tr><td class="type-cell">8&times;7</td><td>0/-0.036</td><td>0/-0.036</td><td>0.25~0.40</td><td>0/-0.036</td><td>&plusmn;0.0180</td><td>4.0</td><td>3.3</td><td>+0.20/0</td><td>22~30</td></tr>
+                <tr><td class="type-cell">10&times;8</td><td>0/-0.036</td><td>0/-0.090</td><td>0.25~0.40</td><td>0/-0.036</td><td>&plusmn;0.0180</td><td>5.0</td><td>3.3</td><td>+0.20/0</td><td>30~38</td></tr>
+                <tr><td class="type-cell">12&times;8</td><td>0/-0.036</td><td>0/-0.090</td><td>0.25~0.40</td><td>0/-0.036</td><td>&plusmn;0.0180</td><td>5.0</td><td>3.3</td><td>+0.20/0</td><td>38~44</td></tr>
+                <tr><td class="type-cell">14&times;9</td><td>0/-0.043</td><td>0/-0.090</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>5.5</td><td>3.8</td><td>+0.20/0</td><td>44~50</td></tr>
+                <tr><td class="type-cell">15&times;10</td><td>0/-0.043</td><td>0/-0.043</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>5.0</td><td>5.0</td><td>+0.20/0</td><td>50~55</td></tr>
+                <tr><td class="type-cell">16&times;10</td><td>0/-0.043</td><td>0/-0.043</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>6.0</td><td>4.3</td><td>+0.20/0</td><td>50~58</td></tr>
+                <tr><td class="type-cell">18&times;11</td><td>0/-0.043</td><td>0/-0.043</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>7.0</td><td>4.4</td><td>+0.20/0</td><td>58~65</td></tr>
+                <tr><td class="type-cell">20&times;12</td><td>0/-0.043</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>7.5</td><td>4.9</td><td>+0.20/0</td><td>65~75</td></tr>
+                <tr><td class="type-cell">22&times;14</td><td>0/-0.052</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.052</td><td>&plusmn;0.0260</td><td>9.0</td><td>5.4</td><td>+0.20/0</td><td>75~85</td></tr>
+                <tr><td class="type-cell">24&times;16</td><td>0/-0.052</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.052</td><td>&plusmn;0.0260</td><td>8.0</td><td>8.0</td><td>+0.20/0</td><td>80~90</td></tr>
+                <tr><td class="type-cell">25&times;14</td><td>0/-0.052</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.052</td><td>&plusmn;0.0260</td><td>9.0</td><td>5.4</td><td>+0.20/0</td><td>85~95</td></tr>
+                <tr><td class="type-cell">28&times;16</td><td>0/-0.052</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.052</td><td>&plusmn;0.0260</td><td>10.0</td><td>6.4</td><td>+0.20/0</td><td>95~110</td></tr>
+                <tr><td class="type-cell">32&times;18</td><td>0/-0.062</td><td>0/-0.130</td><td>1.00~1.20</td><td>0/-0.062</td><td>&plusmn;0.0310</td><td>11.0</td><td>7.4</td><td>+0.20/0</td><td>110~130</td></tr>
+                <tr><td class="type-cell">35&times;22</td><td>0/-0.062</td><td>0/-0.130</td><td>1.00~1.20</td><td>0/-0.062</td><td>&plusmn;0.0310</td><td>11.0</td><td>11.0</td><td>+0.20/0</td><td>125~140</td></tr>
+                <tr><td class="type-cell">36&times;20</td><td>0/-0.062</td><td>0/-0.130</td><td>1.00~1.20</td><td>0/-0.062</td><td>&plusmn;0.0310</td><td>12.0</td><td>8.4</td><td>+0.30/0</td><td>130~150</td></tr>
+                <tr><td class="type-cell">38&times;24</td><td>0/-0.062</td><td>0/-0.130</td><td>1.00~1.20</td><td>0/-0.062</td><td>&plusmn;0.0310</td><td>12.0</td><td>12.0</td><td>+0.30/0</td><td>140~160</td></tr>
+                <tr><td class="type-cell">40&times;22</td><td>0/-0.062</td><td>0/-0.130</td><td>1.00~1.20</td><td>0/-0.062</td><td>&plusmn;0.0310</td><td>13.0</td><td>9.4</td><td>+0.30/0</td><td>150~170</td></tr>
+                <tr><td class="type-cell">42&times;26</td><td>0/-0.062</td><td>0/-0.130</td><td>1.00~1.20</td><td>0/-0.062</td><td>&plusmn;0.0310</td><td>13.0</td><td>13.0</td><td>+0.30/0</td><td>160~180</td></tr>
+                <tr><td class="type-cell">45&times;25</td><td>0/-0.062</td><td>0/-0.130</td><td>1.00~1.20</td><td>0/-0.062</td><td>&plusmn;0.0310</td><td>15.0</td><td>10.4</td><td>+0.30/0</td><td>170~200</td></tr>
+                <tr><td class="type-cell">50&times;28</td><td>0/-0.062</td><td>0/-0.130</td><td>1.00~1.20</td><td>0/-0.062</td><td>&plusmn;0.0310</td><td>17.0</td><td>11.4</td><td>+0.30/0</td><td>200~230</td></tr>
+                <tr><td class="type-cell">56&times;32</td><td>0/-0.074</td><td>0/-0.160</td><td>1.60~2.00</td><td>0/-0.074</td><td>&plusmn;0.0370</td><td>20.0</td><td>12.4</td><td>+0.30/0</td><td>230~260</td></tr>
+                <tr><td class="type-cell">63&times;32</td><td>0/-0.074</td><td>0/-0.160</td><td>1.60~2.00</td><td>0/-0.074</td><td>&plusmn;0.0370</td><td>20.0</td><td>12.4</td><td>+0.30/0</td><td>260~290</td></tr>
+                <tr><td class="type-cell">70&times;36</td><td>0/-0.074</td><td>0/-0.160</td><td>1.60~2.00</td><td>0/-0.074</td><td>&plusmn;0.0370</td><td>22.0</td><td>14.4</td><td>+0.30/0</td><td>290~330</td></tr>
+                <tr><td class="type-cell">80&times;40</td><td>0/-0.087</td><td>0/-0.160</td><td>2.50~3.00</td><td>0/-0.087</td><td>&plusmn;0.0435</td><td>25.0</td><td>15.4</td><td>+0.30/0</td><td>330~380</td></tr>
+                <tr><td class="type-cell">90&times;45</td><td>0/-0.087</td><td>0/-0.160</td><td>2.50~3.00</td><td>0/-0.087</td><td>&plusmn;0.0435</td><td>28.0</td><td>17.4</td><td>+0.30/0</td><td>380~440</td></tr>
+                <tr><td class="type-cell">100&times;50</td><td>0/-0.087</td><td>0/-0.160</td><td>2.50~3.00</td><td>0/-0.087</td><td>&plusmn;0.0435</td><td>31.0</td><td>19.5</td><td>+0.30/0</td><td>440~500</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 11.5px; color: var(--text-faint); margin: 8px 16px 0;">단위: mm · 길이(일반 시판품)는 전 사이즈 300mm 고정입니다. b1(축 키홈)=b2(보스 키홈)=b 기준치수와 동일합니다. 재질: SM45C</p>
+        </details>
+
+        <details class="series-group">
+          <summary>STS304 스텐 사각키 규격표<span class="series-count">23건</span></summary>
+          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+            <table class="spec-table" style="min-width: 700px;">
+              <thead>
+                <tr>
+                  <th>b&times;h&times;L</th><th>b&times;h&times;L</th><th>b&times;h&times;L</th><th>b&times;h&times;L</th><th>b&times;h&times;L</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>4&times;4&times;300</td><td>8&times;8&times;300</td><td>12&times;12&times;300</td><td>18&times;11&times;300</td><td>25&times;14&times;300</td></tr>
+                <tr><td>5&times;5&times;300</td><td>10&times;9&times;300</td><td>14&times;9&times;300</td><td>18&times;12&times;300</td><td>28&times;16&times;300</td></tr>
+                <tr><td>6&times;6&times;300</td><td>10&times;10&times;300</td><td>15&times;10&times;300</td><td>20&times;12&times;300</td><td>32&times;18&times;300</td></tr>
+                <tr><td>7&times;7&times;300</td><td>12&times;8&times;300</td><td>16&times;10&times;300</td><td>22&times;14&times;300</td><td>&nbsp;</td></tr>
+                <tr><td>8&times;7&times;300</td><td>12&times;10&times;300</td><td>16&times;12&times;300</td><td>24&times;16&times;300</td><td>&nbsp;</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: 11.5px; color: var(--text-faint); margin: 8px 16px 0;">재질: STS304 &nbsp;·&nbsp; 용도: 축 고정용 &nbsp;·&nbsp; 공급 길이: 300mm 고정</p>
+        </details>
+
+        <details class="series-group">
+          <summary>KS 규격외 생산품 (일반강 · 스텐)<span class="series-count">25건</span></summary>
+          <p style="font-size: 13px; margin: 4px 16px 12px;">
+            KS 표준 호칭에 없는 <strong style="color: var(--accent);">특수 치수</strong>도 별도 생산품으로 취급합니다.
+            일반강(SM45C)용과 스텐(STS304)용을 구분해서 안내하며, 재고·발주는 별도 문의가 필요합니다.
+          </p>
+          <div style="display: flex; gap: 24px; flex-wrap: wrap; padding: 0 16px 16px;">
+            <div style="flex: 1 1 320px;">
+              <p style="font-size: 13px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">일반강(SM45C) 규격외 b&times;h</p>
+              <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+                <table class="spec-table" style="min-width: 260px;">
+                  <tbody>
+                    <tr><td>4&times;3</td><td>9&times;9</td><td>16&times;9</td></tr>
+                    <tr><td>5&times;4</td><td>10&times;4</td><td>16&times;11</td></tr>
+                    <tr><td>6&times;4</td><td>10&times;6</td><td>16&times;14</td></tr>
+                    <tr><td>6&times;5</td><td>10&times;7</td><td>20&times;10</td></tr>
+                    <tr><td>7&times;4</td><td>10&times;9</td><td>22&times;12</td></tr>
+                    <tr><td>7&times;5</td><td>10&times;10</td><td>24&times;14</td></tr>
+                    <tr><td>7&times;6</td><td>12&times;6</td><td>25&times;12</td></tr>
+                    <tr><td>8&times;4</td><td>12&times;7</td><td>28&times;14</td></tr>
+                    <tr><td>8&times;5</td><td>12&times;9</td><td>32&times;20</td></tr>
+                    <tr><td>8&times;6</td><td>13&times;10</td><td>36&times;22</td></tr>
+                    <tr><td>9&times;5</td><td>14&times;8</td><td>40&times;20</td></tr>
+                    <tr><td>9&times;7</td><td>15&times;8</td><td>45&times;20</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 위는 규격외 생산품 중 대표 예시이며, 전체 목록은 훨씬 더 많습니다. 필요한 사이즈는 견적 문의로 확인해 주세요.</p>
+            </div>
+            <div style="flex: 1 1 320px;">
+              <p style="font-size: 13px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">
+                <span style="display: inline-flex; align-items: center; gap: 4px; background: linear-gradient(135deg, #4f7fb3, #2f5d8a); color: #fff; font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-right: 4px;">STS304</span>
+                스텐 규격외 b&times;h&times;L
+              </p>
+              <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+                <table class="spec-table" style="min-width: 260px;">
+                  <tbody>
+                    <tr><td>2&times;2&times;300</td><td>10&times;5&times;300</td><td>20&times;20&times;300</td></tr>
+                    <tr><td>3&times;3&times;300</td><td>10&times;6&times;300</td><td>22&times;5&times;300</td></tr>
+                    <tr><td>5&times;3&times;300</td><td>10&times;7&times;300</td><td>22&times;12&times;300</td></tr>
+                    <tr><td>5&times;4&times;300</td><td>10&times;8&times;300</td><td>22&times;16&times;300</td></tr>
+                    <tr><td>5.9&times;5.9&times;300</td><td>12&times;6&times;300</td><td>24&times;14&times;300</td></tr>
+                    <tr><td>6&times;4&times;300</td><td>12&times;9&times;300</td><td>25&times;16&times;300</td></tr>
+                    <tr><td>6&times;5&times;300</td><td>14&times;8&times;300</td><td>30&times;30&times;300</td></tr>
+                    <tr><td>7&times;5&times;300</td><td>14&times;10&times;300</td><td>32&times;32&times;300</td></tr>
+                    <tr><td>7&times;6&times;300</td><td>14&times;11&times;300</td><td>36&times;20&times;300</td></tr>
+                    <tr><td>8&times;5&times;300</td><td>15&times;9&times;300</td><td>40&times;10&times;300</td></tr>
+                    <tr><td>8&times;6&times;300</td><td>18&times;10&times;300</td><td>40&times;22&times;300</td></tr>
+                    <tr><td>9&times;7&times;300</td><td>19&times;12&times;300</td><td>40&times;24&times;300</td></tr>
+                    <tr><td>9&times;8&times;300</td><td>20&times;10&times;300</td><td>45&times;25&times;300</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 대표 예시이며, 6.35&times;6.35 · 7.92&times;7.92 · 12.7&times;12.7 등 인치 환산 사이즈를 포함해 전체 목록은 더 많습니다. 필요한 사이즈는 견적 문의로 확인해 주세요.</p>
+            </div>
+          </div>
+        </details>
+
+        <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+          ※ 위 표는 당사 정식 규격표 원본을 기준으로 작성했습니다. 스텐(STS304) 사각키는 파란 배지로 구분해 표기했습니다.
+          규격외 사이즈는 재고 보유량이 사이즈별로 다르므로, 발주 전 반드시 견적 문의를 통해 재고와 최종 치수를 확인하시기 바랍니다.
+        </p>
       </div>
 
-      <div class="product-subgroup" style="margin-bottom: 0;">
-        <h3 class="product-subgroup-title">핀</h3>
-        <div class="product-grid">
-          <a class="product-card" href="taper_pin.html">
-            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M17 34 L20 6 L23 34 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
-            <h4>테이퍼 핀</h4>
-            <span class="p-card-cta">규격 보기 →</span>
-          </a>
-          <a class="product-card" href="parallel_pin.html">
-            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="17" y="6" width="6" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/></svg>
-            <h4>평행 핀</h4>
-            <span class="p-card-cta">규격 보기 →</span>
-          </a>
+      <div class="cat-tab-panel" data-panel="khalf" hidden>
+        <p class="cat-tab-panel-desc">
+          축 구멍을 반달 모양으로 가공해 끼우는 키로, 키 자체가 <strong style="color: var(--accent);">축의 테이퍼 홈에서 자유롭게 기울어질 수 있어</strong>
+          축과 보스의 키홈 가공 오차를 흡수합니다. 소형 축&middot;테이퍼 축 고정에 주로 사용됩니다.
+        </p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+          <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="220" height="150" viewBox="0 0 220 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="20" y1="30" x2="20" y2="120" stroke="#333" stroke-width="1" stroke-dasharray="2,2" />
+                <path d="M20 40 A55 55 0 0 1 130 40 L130 100 A55 40 0 0 1 20 100 Z" stroke="#222" stroke-width="2" fill="none" />
+                <line x1="20" y1="70" x2="130" y2="70" stroke="#999" stroke-width="0.8" stroke-dasharray="4,3" />
+                <line x1="55" y1="30" x2="130" y2="70" stroke="#333" stroke-width="1" marker-end="url(#arrow)" />
+                <text x="80" y="52" font-size="13" fill="#222" font-style="italic">d3</text>
+                <line x1="20" y1="16" x2="130" y2="16" stroke="#333" stroke-width="1" />
+                <line x1="20" y1="10" x2="20" y2="22" stroke="#333" stroke-width="1" />
+                <line x1="130" y1="10" x2="130" y2="22" stroke="#333" stroke-width="1" />
+                <text x="68" y="12" font-size="13" fill="#222">L</text>
+                <line x1="8" y1="40" x2="8" y2="70" stroke="#333" stroke-width="1" />
+                <text x="0" y="58" font-size="13" fill="#222" transform="rotate(-90 8 55)">h</text>
+                <defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#333" /></marker></defs>
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 정면도 — 반달(半月) 형상<br /><span style="color: var(--text-faint);">L=전체 길이 · h=높이 · d0=적용 축 지름</span></p>
+            </div>
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="90" height="150" viewBox="0 0 90 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="40" width="30" height="70" stroke="#222" stroke-width="2" fill="none" />
+                <line x1="20" y1="40" x2="20" y2="110" stroke="#333" stroke-width="1" />
+                <line x1="14" y1="40" x2="26" y2="40" stroke="#333" stroke-width="1" />
+                <line x1="14" y1="110" x2="26" y2="110" stroke="#333" stroke-width="1" />
+                <text x="4" y="80" font-size="13" fill="#222">h</text>
+                <line x1="30" y1="120" x2="60" y2="120" stroke="#333" stroke-width="1" />
+                <line x1="30" y1="114" x2="30" y2="126" stroke="#333" stroke-width="1" />
+                <line x1="60" y1="114" x2="60" y2="126" stroke="#333" stroke-width="1" />
+                <text x="40" y="138" font-size="13" fill="#222">b</text>
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 측면도<br /><span style="color: var(--text-faint);">b=키 폭 · h=키 높이</span></p>
+            </div>
+          </div>
         </div>
+
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <div style="flex: 1 1 220px;">
+            <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 200px;">
+                <thead><tr><th>호칭(b&times;d0)</th><th>b</th><th>d0</th><th>h</th><th>L</th></tr></thead>
+                <tbody>
+                  <tr><td class="type-cell">3&times;10</td><td>3</td><td>10</td><td>3.7</td><td>9.6</td></tr>
+                  <tr><td class="type-cell">3&times;13</td><td>3</td><td>13</td><td>5.0</td><td>12.6</td></tr>
+                  <tr><td class="type-cell">3&times;16</td><td>3</td><td>16</td><td>6.5</td><td>15.7</td></tr>
+                  <tr><td class="type-cell">4&times;13</td><td>4</td><td>13</td><td>5</td><td>12.6</td></tr>
+                  <tr><td class="type-cell">4&times;16</td><td>4</td><td>16</td><td>6.5</td><td>15.7</td></tr>
+                  <tr><td class="type-cell">4&times;19</td><td>4</td><td>19</td><td>7.5</td><td>18.5</td></tr>
+                  <tr><td class="type-cell">5&times;16</td><td>5</td><td>16</td><td>6.5</td><td>15.7</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="flex: 1 1 220px;">
+            <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 200px;">
+                <thead><tr><th>호칭(b&times;d0)</th><th>b</th><th>d0</th><th>h</th><th>L</th></tr></thead>
+                <tbody>
+                  <tr><td class="type-cell">5&times;19</td><td>5</td><td>19</td><td>7.5</td><td>18.5</td></tr>
+                  <tr><td class="type-cell">5&times;22</td><td>5</td><td>22</td><td>9.0</td><td>21.6</td></tr>
+                  <tr><td class="type-cell">6&times;22</td><td>6</td><td>22</td><td>9.0</td><td>21.6</td></tr>
+                  <tr><td class="type-cell">6&times;25</td><td>6</td><td>25</td><td>10</td><td>24.4</td></tr>
+                  <tr><td class="type-cell">7&times;25</td><td>7</td><td>25</td><td>10</td><td>24.4</td></tr>
+                  <tr><td class="type-cell">8&times;28</td><td>8</td><td>28</td><td>11</td><td>27.3</td></tr>
+                  <tr><td class="type-cell">8&times;32</td><td>8</td><td>32</td><td>13</td><td>31.4</td></tr>
+                  <tr><td class="type-cell">10&times;32</td><td>10</td><td>32</td><td>13</td><td>31.4</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 10px;">단위: mm · b=키 폭 · d0=적용 축지름 · h=키 높이 · L=전체 길이</p>
+
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; margin-top: 20px; font-size: 12.5px; color: var(--text-sub);">
+          <strong>재질 · 용도</strong><br />
+          용도: 축 테이퍼 부분 고정 &nbsp;·&nbsp; 재질: SM45C, STS 304
+        </div>
+        <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+          ※ 위 표는 당사 정식 규격표 원본을 직접 옮겨 작성했습니다. 호칭지름은 b&times;d0(키 폭&times;적용 축지름 근사)로 표기합니다.
+          정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+        </p>
       </div>
 
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">※ 실제 취급 규격표는 <a href="catalog.html" style="color: var(--accent);">카탈로그</a> 페이지 또는 견적 문의를 통해 안내해드립니다.</p>
+      <div class="cat-tab-panel" data-panel="kround" hidden>
+        <p class="cat-tab-panel-desc">
+          양 끝을 반원형으로 가공한 사각키로, 축의 <strong style="color: var(--accent);">둥근 홈(라운드 홈)</strong>에 그대로 맞물려 별도의
+          모따기 없이 안정적으로 고정됩니다. 한쪽 끝만 둥글게 가공한 <strong style="color: var(--accent);">1R</strong>과
+          양쪽 끝을 모두 둥글게 가공한 <strong style="color: var(--accent);">2R</strong> 두 가지로 구분합니다.
+        </p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+          <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="230" height="120" viewBox="0 0 230 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40 45 L170 45 A15 15 0 0 1 170 75 L40 75 Z" stroke="#222" stroke-width="2" fill="none" />
+                <line x1="40" y1="30" x2="170" y2="30" stroke="#333" stroke-width="1" />
+                <line x1="40" y1="24" x2="40" y2="36" stroke="#333" stroke-width="1" />
+                <line x1="170" y1="24" x2="170" y2="36" stroke="#333" stroke-width="1" />
+                <text x="98" y="26" font-size="13" fill="#222">L</text>
+                <line x1="24" y1="45" x2="24" y2="75" stroke="#333" stroke-width="1" />
+                <text x="10" y="63" font-size="13" fill="#222">b</text>
+                <line x1="185" y1="45" x2="205" y2="60" stroke="#333" stroke-width="1" />
+                <text x="192" y="38" font-size="12" fill="#222" font-style="italic">b/2</text>
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 1R — 한쪽 끝만 반원형<br /><span style="color: var(--text-faint);">b=나비 · L=전체 길이</span></p>
+            </div>
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="230" height="120" viewBox="0 0 230 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M55 45 A15 15 0 0 0 55 75 L155 75 A15 15 0 0 0 155 45 Z" stroke="#222" stroke-width="2" fill="none" />
+                <line x1="40" y1="30" x2="170" y2="30" stroke="#333" stroke-width="1" />
+                <line x1="40" y1="24" x2="40" y2="36" stroke="#333" stroke-width="1" />
+                <line x1="170" y1="24" x2="170" y2="36" stroke="#333" stroke-width="1" />
+                <text x="98" y="26" font-size="13" fill="#222">L</text>
+                <line x1="24" y1="45" x2="24" y2="75" stroke="#333" stroke-width="1" />
+                <text x="10" y="63" font-size="13" fill="#222">b</text>
+                <line x1="170" y1="45" x2="190" y2="60" stroke="#333" stroke-width="1" />
+                <text x="177" y="38" font-size="12" fill="#222" font-style="italic">b/2</text>
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 2R — 양쪽 끝 모두 반원형<br /><span style="color: var(--text-faint);">b=나비 · L=전체 길이</span></p>
+            </div>
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="80" height="120" viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="25" y="45" width="30" height="30" stroke="#222" stroke-width="2" fill="none" />
+                <line x1="14" y1="45" x2="14" y2="75" stroke="#333" stroke-width="1" />
+                <text x="2" y="63" font-size="13" fill="#222">h</text>
+                <line x1="25" y1="86" x2="55" y2="86" stroke="#333" stroke-width="1" />
+                <text x="36" y="102" font-size="13" fill="#222">b</text>
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 단면<br /><span style="color: var(--text-faint);">b=나비 · h=높이</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+          <div style="flex: 1 1 380px;">
+            <p style="font-size: 14px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">1R</p>
+            <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 340px;">
+                <thead>
+                  <tr>
+                    <th>호칭치수<br />b&times;h</th>
+                    <th>b 허용차<br />(h9)</th>
+                    <th>h 허용차<br />(h9)</th>
+                    <th>길이 L</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="type-cell">4&times;4</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">0 / -0.030</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">0 / -0.030</td><td>8~40</td></tr>
+                  <tr><td class="type-cell">5&times;5</td><td>8~50</td></tr>
+                  <tr><td class="type-cell">6&times;6</td><td>10~50</td></tr>
+                  <tr><td class="type-cell">7&times;7</td><td rowspan="4" style="font-size:11px; color:var(--text-faint);">0 / -0.036</td><td rowspan="2" style="font-size:11px; color:var(--text-faint);">0 / -0.036</td><td>10~50</td></tr>
+                  <tr><td class="type-cell">8&times;7</td><td>15~50</td></tr>
+                  <tr><td class="type-cell">8&times;8</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">0 / -0.090</td><td>15~50</td></tr>
+                  <tr><td class="type-cell">10&times;8</td><td>20~90</td></tr>
+                  <tr><td class="type-cell">12&times;8</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.043</td><td>20~90</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="flex: 1 1 380px;">
+            <p style="font-size: 14px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">2R</p>
+            <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 340px;">
+                <thead>
+                  <tr>
+                    <th>호칭치수<br />b&times;h</th>
+                    <th>b 허용차<br />(h9)</th>
+                    <th>h 허용차<br />(h9)</th>
+                    <th>길이 L</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="type-cell">4&times;4</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">0 / -0.030</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">0 / -0.030</td><td>8~40</td></tr>
+                  <tr><td class="type-cell">5&times;5</td><td>8~50</td></tr>
+                  <tr><td class="type-cell">6&times;6</td><td>10~50</td></tr>
+                  <tr><td class="type-cell">7&times;7</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">0 / -0.036</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">0 / -0.036</td><td>15~50</td></tr>
+                  <tr><td class="type-cell">8&times;7</td><td>15~50</td></tr>
+                  <tr><td class="type-cell">8&times;8</td><td>15~50</td></tr>
+                  <tr><td class="type-cell">10&times;8</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.036</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.090</td><td>20~90</td></tr>
+                  <tr><td class="type-cell">12&times;8</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.043</td><td style="font-size:11px; color:var(--text-faint);">0 / -0.090</td><td>20~90</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; margin-top: 20px; font-size: 12.5px; color: var(--text-sub);">
+          <strong>재질 · 용도</strong><br />
+          용도: 축 테이퍼 부분 고정 &nbsp;·&nbsp; 재질: SM45C, STS304 &nbsp;·&nbsp; 주문 제작 가능
+        </div>
+
+        <div class="section-head" style="margin-top: 28px;">
+          <h3 style="font-size: 16px; margin: 0 0 8px;">라운드키(1R&middot;2R) 생산 가능 규격 &amp; 길이</h3>
+          <p style="font-size: 13px;">
+            위의 4&times;4~12&times;8 소형 규격 외에도, <strong style="color: var(--accent);">일반 사각키와 같은 호칭치수(b&times;h)</strong>를
+            그대로 라운드(1R&middot;2R) 가공으로 생산합니다. 편환키(1R)&middot;양환키(2R)의 생산 가능 길이는 같은 규격의 평행키(사각키)와 동일합니다.
+          </p>
+        </div>
+        <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 560px;">
+            <thead><tr><th>규격(b&times;h)</th><th>생산 가능 길이(L)</th></tr></thead>
+            <tbody>
+              <tr><td class="type-cell">2&times;2 ~ 5&times;5</td><td>10~50</td></tr>
+              <tr><td class="type-cell">6&times;6 ~ 12&times;10</td><td>10~150 (일부 사이즈는 250&middot;300까지)</td></tr>
+              <tr><td class="type-cell">14&times;9, 15&times;10, 16&times;10, 18&times;11, 18&times;12, 20&times;12, 20&times;13, 22&times;14</td><td>20~300</td></tr>
+              <tr><td class="type-cell">24&times;16, 25&times;14, 25&times;25, 28&times;16, 30&times;20, 32&times;18, 36&times;20, 40&times;22, 45&times;25, 50&times;28, 63&times;32</td><td>40~300</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">위 길이 범위는 5~10mm 단위 사이즈별 생산 현황을 요약한 것으로, 범위 내 모든 길이가 상시 재고인 것은 아닙니다. 정확한 재고 길이는 견적 문의로 확인해 주세요.</p>
+
+        <details class="series-group" style="margin-top: 20px;">
+          <summary>라운드키 생산 치수표 (1R&middot;2R 공용, 호칭별 생산 가능 길이)<span class="series-count">27건</span></summary>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap; padding: 0 16px 16px;">
+            <div style="flex: 1 1 220px;">
+              <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+                <table class="spec-table" style="min-width: 200px;">
+                  <thead><tr><th>호칭(b&times;h)</th><th>b</th><th>h</th><th>생산 가능 길이(mm)</th></tr></thead>
+                  <tbody>
+                    <tr><td class="type-cell">4&times;4</td><td>4</td><td>4</td><td>10,15,20,25,30,35,40</td></tr>
+                    <tr><td class="type-cell">5&times;5</td><td>5</td><td>5</td><td>10,15,20,25,30,35,40,45,50</td></tr>
+                    <tr><td class="type-cell">6&times;6</td><td>6</td><td>6</td><td>10,15,20,25,30,35,40,45,50</td></tr>
+                    <tr><td class="type-cell">7&times;7</td><td>7</td><td>7</td><td>10,15,20,25,30,35,40,45,50</td></tr>
+                    <tr><td class="type-cell">8&times;7</td><td>8</td><td>7</td><td>15,20,25,30,35,40,45,50</td></tr>
+                    <tr><td class="type-cell">8&times;8</td><td>8</td><td>8</td><td>15,20,25,30,35,40,45,50</td></tr>
+                    <tr><td class="type-cell">10&times;8</td><td>10</td><td>8</td><td>20,25,30,35,40,45,50,55,60,65,70,80,90</td></tr>
+                    <tr><td class="type-cell">12&times;8</td><td>12</td><td>8</td><td>20,25,30,35,40,45,50,55,60,65,70,80,90</td></tr>
+                    <tr><td class="type-cell">14&times;9</td><td>14</td><td>9</td><td>20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">15&times;10</td><td>15</td><td>10</td><td>20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">16&times;10</td><td>16</td><td>10</td><td>20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">18&times;11</td><td>18</td><td>11</td><td>20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">18&times;12</td><td>18</td><td>12</td><td>20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,250,300</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div style="flex: 1 1 220px;">
+              <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+                <table class="spec-table" style="min-width: 200px;">
+                  <thead><tr><th>호칭(b&times;h)</th><th>b</th><th>h</th><th>생산 가능 길이(mm)</th></tr></thead>
+                  <tbody>
+                    <tr><td class="type-cell">20&times;12</td><td>20</td><td>12</td><td>20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">20&times;13</td><td>20</td><td>13</td><td>20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">22&times;14</td><td>22</td><td>14</td><td>20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">24&times;16</td><td>24</td><td>16</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">25&times;14</td><td>25</td><td>14</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">25&times;25</td><td>25</td><td>25</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">28&times;16</td><td>28</td><td>16</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">30&times;20</td><td>30</td><td>20</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">32&times;18</td><td>32</td><td>18</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">36&times;20</td><td>36</td><td>20</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">40&times;22</td><td>40</td><td>22</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">45&times;25</td><td>45</td><td>25</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">50&times;28</td><td>50</td><td>28</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                    <tr><td class="type-cell">63&times;32</td><td>63</td><td>32</td><td>50,60,70,80,90,100,110,120,130,150,160,180,200,250,300</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 11px; color: var(--text-faint); margin: 0 16px 12px;">단위: mm · 편환키=1R, 양환키=2R 공용 규격입니다. 재질: SM45C, STS304 &middot; 주문제작 가능.</p>
+        </details>
+
+        <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+          ※ 위 표는 당사 정식 규격표 원본을 기준으로 작성했습니다. 사이즈별 실제 생산&middot;재고 보유 길이는 규격 사이즈마다 달라
+          발주 전 반드시 견적 문의를 통해 재고와 최종 치수를 확인하시기 바랍니다.
+        </p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="ptaper" hidden>
+        <p class="cat-tab-panel-desc">
+          지름이 길이 방향으로 <strong style="color: var(--accent);">1/50 비율로 가늘어지는</strong> 원뿔형 핀으로, 축과 하우징을
+          정확한 위치에 고정합니다. 기본형(TP) 외에 끝단에 볼트를 낸 <strong style="color: var(--accent);">볼트형(BT/P)</strong>, 암나사를 낸
+          <strong style="color: var(--accent);">너트형(NT/P)</strong>도 함께 취급합니다.
+        </p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+          <div style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap; justify-content: center;">
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="240" height="110" viewBox="0 0 240 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40 35 L200 45 L200 55 L40 65 A15 15 0 0 1 40 35 Z" stroke="#222" stroke-width="2" fill="none" />
+                <line x1="55" y1="50" x2="200" y2="50" stroke="#333" stroke-width="0.8" stroke-dasharray="4,3" />
+                <line x1="24" y1="35" x2="24" y2="65" stroke="#333" stroke-width="1" />
+                <text x="12" y="53" font-size="13" fill="#222">d</text>
+                <line x1="40" y1="80" x2="200" y2="80" stroke="#333" stroke-width="1" />
+                <line x1="40" y1="74" x2="40" y2="86" stroke="#333" stroke-width="1" />
+                <line x1="200" y1="74" x2="200" y2="86" stroke="#333" stroke-width="1" />
+                <text x="112" y="96" font-size="13" fill="#222">L</text>
+                <text x="80" y="16" font-size="11" fill="#222">TAPER 1/50</text>
+                <line x1="90" y1="20" x2="60" y2="34" stroke="#333" stroke-width="0.8" />
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 기본형(TP)<br /><span style="color: var(--text-faint);">d=지름 · L=전체 길이</span></p>
+            </div>
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="150" height="110" viewBox="0 0 150 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 40 L90 46 L90 54 L20 60 A12 12 0 0 1 20 40 Z" stroke="#222" stroke-width="2" fill="none" />
+                <path d="M90 44 L120 44 L120 56 L90 56" stroke="#222" stroke-width="1.6" fill="none" />
+                <path d="M92 44 Q96 47 92 50 Q96 53 92 56" stroke="#333" stroke-width="1" fill="none" />
+                <path d="M98 44 Q102 47 98 50 Q102 53 98 56" stroke="#333" stroke-width="1" fill="none" />
+                <path d="M104 44 Q108 47 104 50 Q108 53 104 56" stroke="#333" stroke-width="1" fill="none" />
+                <path d="M110 44 Q114 47 110 50 Q114 53 110 56" stroke="#333" stroke-width="1" fill="none" />
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 볼트형(B<sup>T</sup>&frasl;<sub>P</sub>)</p>
+            </div>
+            <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+              <svg width="150" height="110" viewBox="0 0 150 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 40 L90 46 L90 54 L20 60 A12 12 0 0 1 20 40 Z" stroke="#222" stroke-width="2" fill="none" />
+                <rect x="90" y="46" width="30" height="8" stroke="#222" stroke-width="1.6" fill="none" />
+                <line x1="94" y1="46" x2="94" y2="54" stroke="#333" stroke-width="0.8" stroke-dasharray="2,2" />
+                <line x1="100" y1="46" x2="100" y2="54" stroke="#333" stroke-width="0.8" stroke-dasharray="2,2" />
+                <line x1="106" y1="46" x2="106" y2="54" stroke="#333" stroke-width="0.8" stroke-dasharray="2,2" />
+                <line x1="112" y1="46" x2="112" y2="54" stroke="#333" stroke-width="0.8" stroke-dasharray="2,2" />
+              </svg>
+              <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 너트형(N<sup>T</sup>&frasl;<sub>P</sub>)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 900px;">
+            <thead>
+              <tr>
+                <th>호칭지름</th>
+                <th>2.5</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th>
+                <th>10</th><th>13</th><th>16</th><th>20</th><th>25</th><th>30</th><th>40</th><th>50</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="type-cell">d</td><td>2.5</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>10</td><td>13</td><td>16</td><td>20</td><td>25</td><td>30</td><td>40</td><td>50</td></tr>
+              <tr><td class="type-cell">L</td><td>&#9651;</td><td>20~40</td><td>25~60</td><td>25~70</td><td>30~80</td><td>40~90</td><td>35~100</td><td>50~120</td><td>50~120</td><td>&#9651;</td><td>&#9651;</td><td>&#9651;</td><td>&#9651;</td><td>&#9651;</td><td>&#9651;</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">△ 표시 사이즈, 볼트형(BT/P)&middot;너트형(NT/P)은 주문제작</p>
+
+        <div class="section-head" style="margin-top: 28px;">
+          <h3 style="font-size: 16px; margin: 0 0 8px;">테이퍼핀 생산 길이 범위</h3>
+          <p style="font-size: 13px;">
+            규격(호칭지름)별로 기본형(TP)&middot;암TP(테이퍼 홀 가공용)&middot;숫TP 세 종류의 생산 가능 길이 범위입니다.
+            동일 범위 내에서도 5mm 단위로 세분화된 사이즈가 빠질 수 있어, 정확한 재고 길이는 발주 전 문의 바랍니다.
+          </p>
+        </div>
+        <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 560px;">
+            <thead>
+              <tr><th>규격(d)</th><th>TP</th><th>암TP</th><th>숫TP</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="type-cell">3</td><td>10~60</td><td>&mdash;</td><td>20~50</td></tr>
+              <tr><td class="type-cell">4</td><td>10~70</td><td>&mdash;</td><td>20~50</td></tr>
+              <tr><td class="type-cell">5, 6</td><td>10~95</td><td>10~70</td><td>20~50</td></tr>
+              <tr><td class="type-cell">7, 8</td><td>10~90</td><td>10~90</td><td>20~50</td></tr>
+              <tr><td class="type-cell">9, 10</td><td>10~105</td><td>10~110</td><td>10~110</td></tr>
+              <tr><td class="type-cell">12, 13</td><td>10~150</td><td>10~150</td><td>10~150</td></tr>
+              <tr><td class="type-cell">14, 15</td><td>35~150</td><td>35~150</td><td>35~150</td></tr>
+              <tr><td class="type-cell">16, 17, 18</td><td>40~150</td><td>40~150</td><td>40~150</td></tr>
+              <tr><td class="type-cell">19, 20</td><td>40~150</td><td>40~150</td><td>90~150</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; margin-top: 20px; font-size: 12.5px; color: var(--text-sub);">
+          <strong>재질 · 용도</strong><br />
+          용도: 축과 하우징 고정용 &nbsp;·&nbsp; 재질: SM45C
+        </div>
+        <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+          ※ 위 도면과 표는 당사 정식 규격표 원본을 기준으로 작성했습니다. 길이 범위 내에서도 규격별로 생산되지 않는
+          중간 사이즈가 있을 수 있으므로, 정밀 가공&middot;발주 전에는 반드시 견적 문의를 통해 재고와 최종 치수를 확인하시기 바랍니다.
+        </p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="pparallel" hidden>
+        <p class="cat-tab-panel-desc">
+          지름이 전체 길이에 걸쳐 <strong style="color: var(--accent);">일정한(평행한) 원통형 핀</strong>으로, 두 부품의 위치를
+          정확히 맞추는 위치결정용 및 연결핀으로 사용합니다. 한쪽 끝은 45&deg;로 모따기 처리됩니다.
+        </p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px 24px 20px; margin-bottom: 24px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+          <div style="text-align: center;">
+            <svg width="320" height="110" viewBox="0 0 320 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="35" width="220" height="30" stroke="#222" stroke-width="2" fill="none" />
+              <line x1="260" y1="35" x2="280" y2="50" stroke="#222" stroke-width="2" />
+              <line x1="260" y1="65" x2="280" y2="50" stroke="#222" stroke-width="2" />
+              <path d="M255 30 A15 8 0 0 1 255 22" stroke="#333" stroke-width="1" fill="none" />
+              <text x="248" y="16" font-size="11" fill="#222">45&deg;</text>
+              <line x1="24" y1="35" x2="24" y2="65" stroke="#333" stroke-width="1" />
+              <text x="12" y="53" font-size="13" fill="#222">d</text>
+              <line x1="40" y1="80" x2="260" y2="80" stroke="#333" stroke-width="1" />
+              <line x1="40" y1="74" x2="40" y2="86" stroke="#333" stroke-width="1" />
+              <line x1="260" y1="74" x2="260" y2="86" stroke="#333" stroke-width="1" />
+              <text x="145" y="96" font-size="13" fill="#222">L</text>
+            </svg>
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 정면도<br /><span style="color: var(--text-faint);">d=지름 · L=전체 길이</span></p>
+          </div>
+        </div>
+
+        <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+          <table class="spec-table" style="min-width: 760px;">
+            <thead>
+              <tr>
+                <th>호칭지름</th>
+                <th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                <th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16~25</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="type-cell">d</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16~25</td></tr>
+              <tr><td class="type-cell">L</td><td>300</td><td>300</td><td>300</td><td>300</td><td>300</td><td>300</td><td>300</td><td>500</td><td>500</td><td>500</td><td>500</td><td>500</td><td>500</td><td>500~</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 18px; margin-top: 20px; font-size: 12.5px; color: var(--text-sub);">
+          <strong>재질 · 용도</strong><br />
+          용도: 연결핀 &nbsp;·&nbsp; 재질: SM45C
+        </div>
+        <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+          ※ 위 도면과 표는 당사 정식 규격표 원본을 기준으로 작성했습니다. 필요한 길이로 절단해 사용하며,
+          정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+        </p>
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">※ 개별 형번 검색은 <a href="search-product.html" style="color: var(--accent);">규격검색</a> 페이지 또는 견적 문의를 통해 안내해드립니다.</p>
     </div>
   </section>
 
@@ -149,7 +734,7 @@
       <div>
         <div class="f-name">[회사명] BEARING CO.</div>
         <div class="f-meta">
-          사업자등록번호 000-00-00000 · 대표 홍길동<br />
+          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
           비공개 (문의 시 안내드립니다)
         </div>
       </div>
@@ -162,5 +747,20 @@
   </footer>
 
 <script src="common.js"></script>
+<script>
+  (function () {
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+        panels.forEach(function (p) {
+          p.hidden = p.getAttribute('data-panel') !== target;
+        });
+      });
+    });
+  })();
+</script>
 </body>
 </html>
