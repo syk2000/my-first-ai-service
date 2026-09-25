@@ -43,10 +43,21 @@
     -webkit-font-smoothing: antialiased;
     word-break: keep-all;
     overflow-wrap: break-word;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  input, textarea, select,
+  .spec-table, .spec-table * {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
   }
 
   img, svg {
     max-width: 100%;
+    -webkit-user-drag: none;
   }
 
   h1, h2, h3 {

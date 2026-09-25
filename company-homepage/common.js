@@ -60,3 +60,9 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeLangMenu();
     });
+
+    // 우클릭 / 드래그 방지 (참고: 규격 검색 결과표·입력창은 CSS에서 선택·복사 예외 처리됨)
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+    document.addEventListener("dragstart", (e) => {
+      if (!e.target.closest("input, textarea, .spec-table")) e.preventDefault();
+    });
