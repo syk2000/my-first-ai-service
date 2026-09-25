@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>롤러베어링 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="roller-bearing" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Roller Bearings</p>
+        <h2>롤러베어링</h2>
+        <p>롤러를 복렬로 조립한 정격 하중이 큰 <strong>비분리형(내외륜이 분리되지 않는 구조)</strong> 베어링입니다. 레이디얼 하중뿐 아니라 내외륜의 플랜지와 롤러의 단면에 의해 <strong>축방향 하중도 일부 부하</strong>될 수 있으므로 고정측 베어링으로 최적이며, 니들 베어링과 마찬가지로 콤팩트합니다. 유지기부착·총 롤러·시브용 세 가지 방식이 있어 사용 조건에 맞게 선정할 수 있으며, 특히 중(重)하중이 작용하는 건설기계·산업기계 등에 사용됩니다.</p>
+        <ul style="font-size: 14px; color: var(--text-sub); line-height: 1.8; margin: 0 0 8px; padding-left: 20px;">
+          <li><strong style="color: var(--text);">유지기부착 (NAU49 · TRU)</strong> — 고속 회전과 변동 하중이 작용하는 곳에 적합합니다. 복렬로 조립된 롤러의 간격이 비교적 크므로 모멘트에 대해서도 유리한 구조입니다.</li>
+          <li><strong style="color: var(--text);">총 롤러 (NAG49)</strong> — 저속 회전, 요동 운동이고 중(重)하중이 작용하는 부분에 적합하며 유지기부착 형식과 마찬가지로 모멘트에 대해 유리한 구조입니다.</li>
+          <li><strong style="color: var(--text);">시브용 (NAS50)</strong> — 단면 높이가 작은 복렬 총 롤러 형식으로, 씰 부착 밀봉형과 실드 부착 방진형의 2형식이 있으며, 비교적 저속 회전에서 큰 레이디얼 하중과 충격 하중을 견디는 동시에 축방향 하중도 부하 가능합니다. 외륜을 스냅 링으로 시브에 쉽게 고정할 수 있습니다.</li>
+        </ul>
+        <p style="font-size: 13px; color: var(--text-faint); margin: 0;">※ 유지기부착·총 롤러 롤러베어링에는 무봉입(표준형)·밀봉형(그리스 봉입, UU)이 있으며, 시브용 롤러베어링에는 밀봉형(UUNR)·방진형(ZZNR, 그리스 봉입)이 있습니다. 사용 온도 범위는 -20℃~120℃(시브용은 최고 110℃)입니다.</p>
+      </div>
+
+      <div class="diagram-box">
+        <p class="diagram-caption">당사 IKO 카탈로그 규격 도면 · 롤러베어링의 구조</p>
+        <img src="img/roller_bearing_structure.png" alt="롤러베어링 구조 단면도(NAU49, NAG49, NAG49UU, NAS50ZZNR)" style="display: block; margin: 0 auto; height: 420px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+        <p class="diagram-legend">외륜 · 롤러 · 단붙이 스프링 · 내륜용 측판 · 내륜 · 유지기(유지기부착형) · 씰(밀봉형) · 실드 · 스냅 링(시브용)</p>
+      </div>
+
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 20px; margin: 4px 0 28px;">
+        <p style="font-weight: 700; color: var(--text); margin: 0 0 10px; font-size: 14.5px;">호칭번호 구성 (예: NAG 49 10 UU P6 / NAS 50 10 ZZ NR)</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0 0 6px; line-height: 1.7;"><strong style="color: var(--text);">형식기호</strong> — NAG(총 롤러)·NAU·TRU(유지기부착)·NAS(시브용) 계열 구분</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0 0 6px; line-height: 1.7;"><strong style="color: var(--text);">치수계열 · 내경번호</strong> — 베어링의 치수 계열과 내경 번호를 나타냅니다.</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0 0 6px; line-height: 1.7;"><strong style="color: var(--text);">보조기호</strong> — 무기호(표준형, 그리스 미봉입) · UU(밀봉형) · ZZ(방진형, 시브용 전용) · NR(스냅 링 부착, 시브용 전용)</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0; line-height: 1.7;"><strong style="color: var(--text);">등급기호</strong> — 무기호(0급) · P6 등 JIS 정밀도 등급</p>
+      </div>
+
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="nag">NAG49 · 총롤러형</button>
+        <button type="button" class="cat-tab-btn" data-tab="nau">NAU49 · 유지기부착형</button>
+        <button type="button" class="cat-tab-btn" data-tab="tru">TRU · 유지기부착형</button>
+        <button type="button" class="cat-tab-btn" data-tab="nas">NAS50 · 시브용</button>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="nag">
+        <p class="cat-tab-panel-desc">저속 회전·요동 운동이고 중(重)하중이 작용하는 부분에 적합한 총 롤러(유지기 없음) 방식입니다. 축경 10~140mm.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="nagFilter">형번 / 규격 검색</label>
+          <input id="nagFilter" type="text" placeholder="예: NAG4910 또는 50*72" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="nagFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 860px;">
+            <thead><tr><th>축경(mm)</th><th>호칭번호(개방형)</th><th>호칭번호(밀봉형)</th><th>질량(g)</th><th>d</th><th>D</th><th>C</th><th>rs(min)</th><th>J</th><th>Ew</th></tr></thead>
+            <tbody id="nagFilterBody"><tr><td class="type-cell">10</td><td>NAG 4900</td><td>NAG 4900UU</td><td>25.5</td><td>10</td><td>22</td><td>13</td><td>0.3</td><td>15.5</td><td>18.5</td></tr><tr><td class="type-cell">12</td><td>NAG 4901</td><td>NAG 4901UU</td><td>28.5</td><td>12</td><td>24</td><td>13</td><td>0.3</td><td>17</td><td>20</td></tr><tr><td class="type-cell">15</td><td>NAG 4902</td><td>NAG 4902UU</td><td>38</td><td>15</td><td>28</td><td>13</td><td>0.3</td><td>21</td><td>24</td></tr><tr><td class="type-cell">17</td><td>NAG 4903</td><td>NAG 4903UU</td><td>41</td><td>17</td><td>30</td><td>13</td><td>0.3</td><td>22.5</td><td>25.5</td></tr><tr><td class="type-cell">20</td><td>NAG 4904</td><td>NAG 4904UU</td><td>76.5</td><td>20</td><td>37</td><td>17</td><td>0.3</td><td>24</td><td>31.5</td></tr><tr><td class="type-cell">25</td><td>NAG 4905</td><td>NAG 4905UU</td><td>89.5</td><td>25</td><td>42</td><td>17</td><td>0.3</td><td>29.5</td><td>37</td></tr><tr><td class="type-cell">30</td><td>NAG 4906</td><td>NAG 4906UU</td><td>103</td><td>30</td><td>47</td><td>17</td><td>0.3</td><td>34</td><td>41.5</td></tr><tr><td class="type-cell">35</td><td>NAG 4907</td><td>NAG 4907UU</td><td>172</td><td>35</td><td>55</td><td>20</td><td>0.6</td><td>40</td><td>49</td></tr><tr><td class="type-cell">40</td><td>NAG 4908</td><td>NAG 4908UU</td><td>225</td><td>40</td><td>62</td><td>22</td><td>0.6</td><td>46</td><td>56</td></tr><tr><td class="type-cell">45</td><td>NAG 4909</td><td>NAG 4909UU</td><td>265</td><td>45</td><td>68</td><td>22</td><td>0.6</td><td>51</td><td>61</td></tr><tr><td class="type-cell">50</td><td>NAG 4910</td><td>NAG 4910UU</td><td>270</td><td>50</td><td>72</td><td>22</td><td>0.6</td><td>55.5</td><td>65.5</td></tr><tr><td class="type-cell">55</td><td>NAG 4911</td><td>NAG 4911UU</td><td>395</td><td>55</td><td>80</td><td>25</td><td>1</td><td>61.5</td><td>72.5</td></tr><tr><td class="type-cell">60</td><td>NAG 4912</td><td>NAG 4912UU</td><td>425</td><td>60</td><td>85</td><td>25</td><td>1</td><td>67</td><td>77.5</td></tr><tr><td class="type-cell">65</td><td>NAG 4913</td><td>NAG 4913UU</td><td>455</td><td>65</td><td>90</td><td>25</td><td>1</td><td>72</td><td>83</td></tr><tr><td class="type-cell">70</td><td>NAG 4914</td><td>NAG 4914UU</td><td>725</td><td>70</td><td>100</td><td>30</td><td>1</td><td>79</td><td>91.5</td></tr><tr><td class="type-cell">75</td><td>NAG 4915</td><td>NAG 4915UU</td><td>775</td><td>75</td><td>105</td><td>30</td><td>1</td><td>83.5</td><td>95.5</td></tr><tr><td class="type-cell">80</td><td>NAG 4916</td><td>NAG 4916UU</td><td>815</td><td>80</td><td>110</td><td>30</td><td>1</td><td>89.5</td><td>102</td></tr><tr><td class="type-cell">85</td><td>NAG 4917</td><td>NAG 4917UU</td><td>1190</td><td>85</td><td>120</td><td>35</td><td>1.5</td><td>96</td><td>110</td></tr><tr><td class="type-cell">90</td><td>NAG 4918</td><td>NAG 4918UU</td><td>1250</td><td>90</td><td>125</td><td>35</td><td>1.5</td><td>101</td><td>115.5</td></tr><tr><td class="type-cell">95</td><td>NAG 4919</td><td>NAG 4919UU</td><td>1300</td><td>95</td><td>130</td><td>35</td><td>1.5</td><td>106</td><td>120.5</td></tr><tr><td class="type-cell">100</td><td>NAG 4920</td><td>NAG 4920UU</td><td>1850</td><td>100</td><td>140</td><td>40</td><td>1.5</td><td>114.5</td><td>129.5</td></tr><tr><td class="type-cell">110</td><td>NAG 4922</td><td>NAG 4922UU</td><td>2010</td><td>110</td><td>150</td><td>40</td><td>1.5</td><td>123</td><td>138.5</td></tr><tr><td class="type-cell">120</td><td>NAG 4924</td><td>NAG 4924UU</td><td>2780</td><td>120</td><td>165</td><td>45</td><td>1.5</td><td>136</td><td>153.5</td></tr><tr><td class="type-cell">130</td><td>NAG 4926</td><td>NAG 4926UU</td><td>3750</td><td>130</td><td>180</td><td>50</td><td>2</td><td>147</td><td>165.5</td></tr><tr><td class="type-cell">140</td><td>NAG 4928</td><td>NAG 4928UU</td><td>3990</td><td>140</td><td>190</td><td>50</td><td>2</td><td>157.5</td><td>176</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 g) · 당사 IKO 카탈로그(롤러베어링 치수표) 기준 · 밀봉형(UU)은 그리스가 봉입되어 있습니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="nau" hidden>
+        <p class="cat-tab-panel-desc">고속 회전과 변동 하중이 작용하는 곳에 적합한 유지기부착 방식입니다. NAG49와 동일한 축경·외경 계열을 사용합니다. 축경 10~140mm.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="nauFilter">형번 / 규격 검색</label>
+          <input id="nauFilter" type="text" placeholder="예: NAU4910 또는 50*72" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="nauFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 860px;">
+            <thead><tr><th>축경(mm)</th><th>호칭번호(개방형)</th><th>호칭번호(밀봉형)</th><th>질량(g)</th><th>d</th><th>D</th><th>C</th><th>rs(min)</th><th>J</th><th>Ew</th></tr></thead>
+            <tbody id="nauFilterBody"><tr><td class="type-cell">10</td><td>NAU 4900</td><td>NAU 4900UU</td><td>24.5</td><td>10</td><td>22</td><td>13</td><td>0.3</td><td>15.5</td><td>18.5</td></tr><tr><td class="type-cell">12</td><td>NAU 4901</td><td>NAU 4901UU</td><td>27.5</td><td>12</td><td>24</td><td>13</td><td>0.3</td><td>17</td><td>20</td></tr><tr><td class="type-cell">15</td><td>NAU 4902</td><td>NAU 4902UU</td><td>36.5</td><td>15</td><td>28</td><td>13</td><td>0.3</td><td>21</td><td>24</td></tr><tr><td class="type-cell">17</td><td>NAU 4903</td><td>NAU 4903UU</td><td>39.5</td><td>17</td><td>30</td><td>13</td><td>0.3</td><td>22.5</td><td>25.5</td></tr><tr><td class="type-cell">20</td><td>NAU 4904</td><td>NAU 4904UU</td><td>76</td><td>20</td><td>37</td><td>17</td><td>0.3</td><td>24</td><td>31.5</td></tr><tr><td class="type-cell">25</td><td>NAU 4905</td><td>NAU 4905UU</td><td>89</td><td>25</td><td>42</td><td>17</td><td>0.3</td><td>29.5</td><td>37</td></tr><tr><td class="type-cell">30</td><td>NAU 4906</td><td>NAU 4906UU</td><td>102</td><td>30</td><td>47</td><td>17</td><td>0.3</td><td>34</td><td>41.5</td></tr><tr><td class="type-cell">35</td><td>NAU 4907</td><td>NAU 4907UU</td><td>168</td><td>35</td><td>55</td><td>20</td><td>0.6</td><td>40</td><td>49</td></tr><tr><td class="type-cell">40</td><td>NAU 4908</td><td>NAU 4908UU</td><td>220</td><td>40</td><td>62</td><td>22</td><td>0.6</td><td>46</td><td>56</td></tr><tr><td class="type-cell">45</td><td>NAU 4909</td><td>NAU 4909UU</td><td>260</td><td>45</td><td>68</td><td>22</td><td>0.6</td><td>51</td><td>61</td></tr><tr><td class="type-cell">50</td><td>NAU 4910</td><td>NAU 4910UU</td><td>265</td><td>50</td><td>72</td><td>22</td><td>0.6</td><td>55.5</td><td>65.5</td></tr><tr><td class="type-cell">55</td><td>NAU 4911</td><td>NAU 4911UU</td><td>385</td><td>55</td><td>80</td><td>25</td><td>1</td><td>61.5</td><td>72.5</td></tr><tr><td class="type-cell">60</td><td>NAU 4912</td><td>NAU 4912UU</td><td>415</td><td>60</td><td>85</td><td>25</td><td>1</td><td>67</td><td>77.5</td></tr><tr><td class="type-cell">65</td><td>NAU 4913</td><td>NAU 4913UU</td><td>440</td><td>65</td><td>90</td><td>25</td><td>1</td><td>72</td><td>83</td></tr><tr><td class="type-cell">70</td><td>NAU 4914</td><td>NAU 4914UU</td><td>705</td><td>70</td><td>100</td><td>30</td><td>1</td><td>79</td><td>91.5</td></tr><tr><td class="type-cell">75</td><td>NAU 4915</td><td>NAU 4915UU</td><td>750</td><td>75</td><td>105</td><td>30</td><td>1</td><td>83.5</td><td>95.5</td></tr><tr><td class="type-cell">80</td><td>NAU 4916</td><td>NAU 4916UU</td><td>790</td><td>80</td><td>110</td><td>30</td><td>1</td><td>89.5</td><td>102</td></tr><tr><td class="type-cell">85</td><td>NAU 4917</td><td>NAU 4917UU</td><td>1150</td><td>85</td><td>120</td><td>35</td><td>1.5</td><td>96</td><td>110</td></tr><tr><td class="type-cell">90</td><td>NAU 4918</td><td>NAU 4918UU</td><td>1210</td><td>90</td><td>125</td><td>35</td><td>1.5</td><td>101</td><td>115.5</td></tr><tr><td class="type-cell">95</td><td>NAU 4919</td><td>NAU 4919UU</td><td>1270</td><td>95</td><td>130</td><td>35</td><td>1.5</td><td>106</td><td>120.5</td></tr><tr><td class="type-cell">100</td><td>NAU 4920</td><td>NAU 4920UU</td><td>1770</td><td>100</td><td>140</td><td>40</td><td>1.5</td><td>114.5</td><td>129.5</td></tr><tr><td class="type-cell">110</td><td>NAU 4922</td><td>NAU 4922UU</td><td>1930</td><td>110</td><td>150</td><td>40</td><td>1.5</td><td>123</td><td>138.5</td></tr><tr><td class="type-cell">120</td><td>NAU 4924</td><td>NAU 4924UU</td><td>2680</td><td>120</td><td>165</td><td>45</td><td>1.5</td><td>136</td><td>153.5</td></tr><tr><td class="type-cell">130</td><td>NAU 4926</td><td>NAU 4926UU</td><td>3610</td><td>130</td><td>180</td><td>50</td><td>2</td><td>147</td><td>165.5</td></tr><tr><td class="type-cell">140</td><td>NAU 4928</td><td>NAU 4928UU</td><td>3840</td><td>140</td><td>190</td><td>50</td><td>2</td><td>157.5</td><td>176</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 g) · 당사 IKO 카탈로그(롤러베어링 치수표) 기준 · 밀봉형(UU)은 그리스가 봉입되어 있습니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="tru" hidden>
+        <p class="cat-tab-panel-desc">유지기부착 방식이지만 NAU49와 외경·폭 치수 계열이 다른 별도 규격입니다(일부 축경은 폭(C)이 다른 2종이 공급됩니다). 축경 15~135mm.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="truFilter">형번 / 규격 검색</label>
+          <input id="truFilter" type="text" placeholder="예: TRU304830 또는 30*48" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="truFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 860px;">
+            <thead><tr><th>축경(mm)</th><th>호칭번호(개방형)</th><th>호칭번호(밀봉형)</th><th>질량(g)</th><th>d</th><th>D</th><th>C</th><th>rs(min)</th><th>J</th><th>Ew</th></tr></thead>
+            <tbody id="truFilterBody"><tr><td class="type-cell">15</td><td>TRU 153320</td><td>TRU 153320UU</td><td>80.5</td><td>15</td><td>33</td><td>20</td><td>0.3</td><td>19.5</td><td>27</td></tr><tr><td class="type-cell">17</td><td>TRU 173425</td><td>TRU 173425UU</td><td>100</td><td>17</td><td>34</td><td>25</td><td>0.3</td><td>21.5</td><td>29.5</td></tr><tr><td class="type-cell">20</td><td>TRU 203820</td><td>TRU 203820UU</td><td>96.5</td><td>20</td><td>38</td><td>20</td><td>0.3</td><td>25</td><td>32.5</td></tr><tr><td class="type-cell">20</td><td>TRU 203825</td><td>TRU 203825UU</td><td>122</td><td>20</td><td>38</td><td>25</td><td>0.3</td><td>25</td><td>32.5</td></tr><tr><td class="type-cell">25</td><td>TRU 254425</td><td>TRU 254425UU</td><td>154</td><td>25</td><td>44</td><td>25</td><td>0.3</td><td>30.5</td><td>38</td></tr><tr><td class="type-cell">28</td><td>TRU 284530</td><td>TRU 284530UU</td><td>173</td><td>28</td><td>45</td><td>30</td><td>0.3</td><td>31.5</td><td>39.5</td></tr><tr><td class="type-cell">30</td><td>TRU 304830</td><td>TRU 304830UU</td><td>197</td><td>30</td><td>48</td><td>30</td><td>0.3</td><td>35</td><td>42.5</td></tr><tr><td class="type-cell">32</td><td>TRU 325230</td><td>TRU 325230UU</td><td>260</td><td>32</td><td>52</td><td>30</td><td>0.6</td><td>38</td><td>46</td></tr><tr><td class="type-cell">35</td><td>TRU 355630</td><td>TRU 355630UU</td><td>270</td><td>35</td><td>56</td><td>30</td><td>0.6</td><td>40</td><td>49</td></tr><tr><td class="type-cell">40</td><td>TRU 405930</td><td>TRU 405930UU</td><td>265</td><td>40</td><td>59</td><td>30</td><td>0.6</td><td>45</td><td>52.5</td></tr><tr><td class="type-cell">42</td><td>TRU 426230</td><td>TRU 426230UU</td><td>290</td><td>42</td><td>62</td><td>30</td><td>0.6</td><td>48</td><td>56.5</td></tr><tr><td class="type-cell">45</td><td>TRU 456430</td><td>TRU 456430UU</td><td>295</td><td>45</td><td>64</td><td>30</td><td>0.6</td><td>50.5</td><td>58.5</td></tr><tr><td class="type-cell">50</td><td>TRU 507745</td><td>TRU 507745UU</td><td>710</td><td>50</td><td>77</td><td>45</td><td>1</td><td>58</td><td>69</td></tr><tr><td class="type-cell">55</td><td>TRU 558138</td><td>TRU 558138UU</td><td>615</td><td>55</td><td>81</td><td>38</td><td>1</td><td>61.5</td><td>72.5</td></tr><tr><td class="type-cell">60</td><td>TRU 608945</td><td>TRU 608945UU</td><td>880</td><td>60</td><td>89</td><td>45</td><td>1</td><td>69.5</td><td>81.5</td></tr><tr><td class="type-cell">75</td><td>TRU 7510845</td><td>TRU 7510845UU</td><td>1240</td><td>75</td><td>108</td><td>45</td><td>1</td><td>85.5</td><td>98.5</td></tr><tr><td class="type-cell">85</td><td>TRU 8511850</td><td>TRU 8511850UU</td><td>1530</td><td>85</td><td>118</td><td>50</td><td>1</td><td>94.5</td><td>107.5</td></tr><tr><td class="type-cell">85</td><td>TRU 8512045</td><td>TRU 8512045UU</td><td>1500</td><td>85</td><td>120</td><td>45</td><td>1.5</td><td>96.5</td><td>110</td></tr><tr><td class="type-cell">90</td><td>TRU 9012550</td><td>TRU 9012550UU</td><td>1740</td><td>90</td><td>125</td><td>50</td><td>1.5</td><td>101</td><td>114</td></tr><tr><td class="type-cell">100</td><td>TRU 10013550</td><td>TRU 10013550UU</td><td>1900</td><td>100</td><td>135</td><td>50</td><td>1.5</td><td>112</td><td>125.5</td></tr><tr><td class="type-cell">105</td><td>TRU 10515350</td><td>TRU 10515350UU</td><td>2890</td><td>105</td><td>153</td><td>50</td><td>1.5</td><td>120</td><td>138</td></tr><tr><td class="type-cell">125</td><td>TRU 12517860</td><td>TRU 12517860UU</td><td>4490</td><td>125</td><td>178</td><td>60</td><td>1.5</td><td>143.5</td><td>162</td></tr><tr><td class="type-cell">135</td><td>TRU 13518860</td><td>TRU 13518860UU</td><td>4790</td><td>135</td><td>188</td><td>60</td><td>1.5</td><td>154</td><td>172.5</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 g) · 당사 IKO 카탈로그(롤러베어링 치수표) 기준 · 밀봉형(UU)은 그리스가 봉입되어 있습니다. · 축경 20mm·85mm는 폭(C)이 다른 2종(TRU203820/203825, TRU8511850/8512045)이 공급됩니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="nas" hidden>
+        <p class="cat-tab-panel-desc">단면 높이가 작은 복렬 총 롤러 형식으로 시브(활차)에 사용됩니다. 밀봉형(UUNR)·방진형(ZZNR) 모두 그리스가 봉입되어 있으며, 외륜을 스냅 링으로 시브에 고정합니다. 축경 40~280mm.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="nasFilter">형번 / 규격 검색</label>
+          <input id="nasFilter" type="text" placeholder="예: NAS5016 또는 80*125" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="nasFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 980px;">
+            <thead><tr><th>축경(mm)</th><th>호칭번호(밀봉형 UUNR)</th><th>호칭번호(방진형 ZZNR)</th><th>질량(kg)</th><th>d</th><th>D</th><th>D2</th><th>B</th><th>C</th><th>C1</th><th>S</th></tr></thead>
+            <tbody id="nasFilterBody"><tr><td class="type-cell">40</td><td>NAS 5008UUNR</td><td>NAS 5008ZZNR</td><td>0.55</td><td>40</td><td>68</td><td>71.8</td><td>38</td><td>37</td><td>28</td><td>4.5</td></tr><tr><td class="type-cell">45</td><td>NAS 5009UUNR</td><td>NAS 5009ZZNR</td><td>0.7</td><td>45</td><td>75</td><td>78.8</td><td>40</td><td>39</td><td>30</td><td>4.5</td></tr><tr><td class="type-cell">50</td><td>NAS 5010UUNR</td><td>NAS 5010ZZNR</td><td>0.75</td><td>50</td><td>80</td><td>83.8</td><td>40</td><td>39</td><td>30</td><td>4.5</td></tr><tr><td class="type-cell">55</td><td>NAS 5011UUNR</td><td>NAS 5011ZZNR</td><td>1.15</td><td>55</td><td>90</td><td>94.8</td><td>46</td><td>45</td><td>34</td><td>5.5</td></tr><tr><td class="type-cell">60</td><td>NAS 5012UUNR</td><td>NAS 5012ZZNR</td><td>1.2</td><td>60</td><td>95</td><td>99.8</td><td>46</td><td>45</td><td>34</td><td>5.5</td></tr><tr><td class="type-cell">65</td><td>NAS 5013UUNR</td><td>NAS 5013ZZNR</td><td>1.3</td><td>65</td><td>100</td><td>104.8</td><td>46</td><td>45</td><td>34</td><td>5.5</td></tr><tr><td class="type-cell">70</td><td>NAS 5014UUNR</td><td>NAS 5014ZZNR</td><td>1.9</td><td>70</td><td>110</td><td>114.5</td><td>54</td><td>53</td><td>42</td><td>5.5</td></tr><tr><td class="type-cell">75</td><td>NAS 5015UUNR</td><td>NAS 5015ZZNR</td><td>2</td><td>75</td><td>115</td><td>119.5</td><td>54</td><td>53</td><td>42</td><td>5.5</td></tr><tr><td class="type-cell">80</td><td>NAS 5016UUNR</td><td>NAS 5016ZZNR</td><td>2.65</td><td>80</td><td>125</td><td>129.5</td><td>60</td><td>59</td><td>48</td><td>5.5</td></tr><tr><td class="type-cell">85</td><td>NAS 5017UUNR</td><td>NAS 5017ZZNR</td><td>2.8</td><td>85</td><td>130</td><td>134.5</td><td>60</td><td>59</td><td>48</td><td>5.5</td></tr><tr><td class="type-cell">90</td><td>NAS 5018UUNR</td><td>NAS 5018ZZNR</td><td>3.7</td><td>90</td><td>140</td><td>145.4</td><td>67</td><td>66</td><td>54</td><td>6</td></tr><tr><td class="type-cell">95</td><td>NAS 5019UUNR</td><td>NAS 5019ZZNR</td><td>3.9</td><td>95</td><td>145</td><td>150.4</td><td>67</td><td>66</td><td>54</td><td>6</td></tr><tr><td class="type-cell">100</td><td>NAS 5020UUNR</td><td>NAS 5020ZZNR</td><td>4.05</td><td>100</td><td>150</td><td>155.4</td><td>67</td><td>66</td><td>54</td><td>6</td></tr><tr><td class="type-cell">110</td><td>NAS 5022UUNR</td><td>NAS 5022ZZNR</td><td>6.5</td><td>110</td><td>170</td><td>175.4</td><td>80</td><td>79</td><td>65</td><td>7</td></tr><tr><td class="type-cell">120</td><td>NAS 5024UUNR</td><td>NAS 5024ZZNR</td><td>6.95</td><td>120</td><td>180</td><td>188.4</td><td>80</td><td>79</td><td>65</td><td>7</td></tr><tr><td class="type-cell">130</td><td>NAS 5026UUNR</td><td>NAS 5026ZZNR</td><td>10.5</td><td>130</td><td>200</td><td>208.4</td><td>95</td><td>94</td><td>77</td><td>8.5</td></tr><tr><td class="type-cell">140</td><td>NAS 5028UUNR</td><td>NAS 5028ZZNR</td><td>11</td><td>140</td><td>210</td><td>218.4</td><td>95</td><td>94</td><td>77</td><td>8.5</td></tr><tr><td class="type-cell">150</td><td>NAS 5030UUNR</td><td>NAS 5030ZZNR</td><td>13.5</td><td>150</td><td>225</td><td>233.4</td><td>100</td><td>99</td><td>81</td><td>9</td></tr><tr><td class="type-cell">160</td><td>NAS 5032UUNR</td><td>NAS 5032ZZNR</td><td>16.5</td><td>160</td><td>240</td><td>248.4</td><td>109</td><td>108</td><td>89</td><td>9.5</td></tr><tr><td class="type-cell">170</td><td>NAS 5034UUNR</td><td>NAS 5034ZZNR</td><td>22.5</td><td>170</td><td>260</td><td>270</td><td>122</td><td>121</td><td>99</td><td>11</td></tr><tr><td class="type-cell">180</td><td>NAS 5036UUNR</td><td>NAS 5036ZZNR</td><td>30</td><td>180</td><td>280</td><td>294</td><td>136</td><td>135</td><td>110</td><td>12.5</td></tr><tr><td class="type-cell">190</td><td>NAS 5038UUNR</td><td>NAS 5038ZZNR</td><td>31.5</td><td>190</td><td>290</td><td>306</td><td>136</td><td>135</td><td>110</td><td>12.5</td></tr><tr><td class="type-cell">200</td><td>NAS 5040UUNR</td><td>NAS 5040ZZNR</td><td>40.5</td><td>200</td><td>310</td><td>326</td><td>150</td><td>149</td><td>120</td><td>14.5</td></tr><tr><td class="type-cell">220</td><td>NAS 5044UUNR</td><td>NAS 5044ZZNR</td><td>52</td><td>220</td><td>340</td><td>356</td><td>160</td><td>159</td><td>130</td><td>14.5</td></tr><tr><td class="type-cell">240</td><td>NAS 5048UUNR</td><td>NAS 5048ZZNR</td><td>55.5</td><td>240</td><td>360</td><td>376</td><td>160</td><td>159</td><td>130</td><td>14.5</td></tr><tr><td class="type-cell">260</td><td>NAS 5052UUNR</td><td>NAS 5052ZZNR</td><td>85</td><td>260</td><td>400</td><td>416</td><td>190</td><td>189</td><td>154</td><td>17.5</td></tr><tr><td class="type-cell">280</td><td>NAS 5056UUNR</td><td>NAS 5056ZZNR</td><td>90.9</td><td>280</td><td>420</td><td>440</td><td>190</td><td>189</td><td>154</td><td>17.5</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 kg) · 당사 IKO 카탈로그(롤러베어링 치수표) 기준 · D2=외륜 스냅 링부 최대 외경, S=스냅 링 두께</p>
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        &#8251; 위 표는 당사 IKO 카탈로그(롤러베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+<script>
+  (function () {
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+        panels.forEach(function (p) {
+          p.hidden = p.getAttribute('data-panel') !== target;
+        });
+      });
+    });
+  })();
+  (function () {
+    ['nag', 'nau', 'tru', 'nas'].forEach(function (prefix) {
+      var input = document.getElementById(prefix + 'Filter');
+      var body = document.getElementById(prefix + 'FilterBody');
+      var countEl = document.getElementById(prefix + 'FilterCount');
+      if (!input || !body) return;
+      var rows = Array.prototype.slice.call(body.querySelectorAll('tr'));
+      var total = rows.length;
+      function apply() {
+        var q = input.value.trim().toUpperCase();
+        var shown = 0;
+        rows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) shown++;
+        });
+        if (countEl) countEl.textContent = shown + ' / ' + total + '건 표시 중';
+      }
+      input.addEventListener('input', apply);
+      if (countEl) countEl.textContent = total + ' / ' + total + '건 표시 중';
+    });
+  })();
+</script>
+</body>
+</html>
