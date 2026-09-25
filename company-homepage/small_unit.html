@@ -105,8 +105,14 @@
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
 
-      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 20px; margin: 0 0 20px;">
-        <p style="font-size: 13px; font-weight: 700; color: var(--text); margin: 0 0 10px;">내부 베어링(인서트) 방식 비교 — 하우징은 같아도 내부 구조는 3종이 서로 다릅니다</p>
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="p">필로우 블록형 (USCP/USBP/USAP)</button>
+        <button type="button" class="cat-tab-btn" data-tab="fl">플랜지형 (USCFL/USBFL/USAFL)</button>
+        <button type="button" class="cat-tab-btn" data-tab="compare">내부 베어링(인서트) 비교</button>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="compare" hidden>
+        <p class="cat-tab-panel-desc">하우징은 같아도 내부 구조는 3종이 서로 다릅니다.</p>
         <div class="finder-results" style="overflow-x: auto;">
           <table class="spec-table" style="min-width: 560px;">
             <thead><tr><th>접두어</th><th>내부 베어링</th><th>축 고정 방식</th><th>특징</th></tr></thead>
@@ -119,12 +125,13 @@
         </div>
         <p style="font-size: 11.5px; color: var(--text-faint); margin: 8px 0 10px;">내부 베어링 자체의 정확한 형번은 당사 SWS 카탈로그 원본에 하우징 치수표와 별도로 실려 있지 않아 &ldquo;문의&rdquo; 대상입니다. 아래는 각 방식의 실물 사진과, 국내&middot;해외 카탈로그에 공개된 동일 방식 인서트 베어링의 규격을 참고용으로 정리한 것입니다 — 실제 축경별 정확한 형번은 발주 전 문의 바랍니다.</p>
 
-        <div style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 6px;">
-          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px;">
+        <div style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 6px;">
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px;">
             <p style="font-size: 12.5px; font-weight: 700; color: var(--text); margin: 0 0 8px;">USC_ &middot; 볼베어링형</p>
             <img src="img/jib_sc.png" alt="볼베어링형(압입 고정) 인서트 베어링 참고 사진" style="display: block; margin: 0 auto; height: 90px; width: auto; max-width: 100%; object-fit: contain;" loading="lazy">
             <p style="font-size: 11px; color: var(--text-faint); text-align: center; margin: 6px 0 10px;">참고 사진: SC 압입고정형 인서트(JIB 카탈로그) — 외형이 6200계열 볼베어링과 동일한 방식</p>
-            <table class="spec-table" style="width: 100%; font-size: 12px;">
+            <div style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 260px; font-size: 12px;">
               <thead><tr><th>참고형번</th><th>d</th><th>D</th><th>B</th></tr></thead>
               <tbody>
                 <tr><td class="type-cell">SC201</td><td>12</td><td>32</td><td>10</td></tr>
@@ -135,38 +142,42 @@
                 <tr><td class="type-cell">SC206</td><td>30</td><td>62</td><td>16</td></tr>
               </tbody>
             </table>
+            </div>
             <p style="font-size: 10.5px; color: var(--text-faint); margin: 6px 0 0;">10mm(USC_-000)는 표준 SC 시리즈에 없어 문의 대상입니다. 단위: mm.</p>
           </div>
 
-          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px;">
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px;">
             <p style="font-size: 12.5px; font-weight: 700; color: var(--text); margin: 0 0 8px;">USB_ &middot; UC베어링형</p>
             <img src="img/ubu_uc_only.png" alt="UC형 인서트 베어링 참고 사진" style="display: block; margin: 0 auto; height: 90px; width: auto; max-width: 100%; object-fit: contain;" loading="lazy">
             <p style="font-size: 11px; color: var(--text-faint); text-align: center; margin: 6px 0 10px;">참고 사진: UC 세트스크류형 인서트(<a href="ball_bearing_unit.html">베어링 유니트</a> 페이지 UC 탭과 동일 계열)</p>
-            <table class="spec-table" style="width: 100%; font-size: 12px;">
+            <div style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 300px; font-size: 12px;">
               <thead><tr><th>참고형번</th><th>d</th><th>D</th><th>B</th></tr></thead>
               <tbody>
                 <tr><td class="type-cell">UC201</td><td>12</td><td>47</td><td>31</td></tr>
-                <tr><td class="type-cell">UC201-8</td><td>12.7 <span style="color: var(--accent);">(인치 1/2&Prime;)</span></td><td>47</td><td>31</td></tr>
+                <tr><td class="type-cell">UC201-8 <span style="color: var(--accent); font-weight: 700;">인치</span></td><td>12.7</td><td>47</td><td>31</td></tr>
                 <tr><td class="type-cell">UC202</td><td>15</td><td>47</td><td>31</td></tr>
-                <tr><td class="type-cell">UC202-10</td><td>15.8 <span style="color: var(--accent);">(인치 5/8&Prime;)</span></td><td>47</td><td>31</td></tr>
+                <tr><td class="type-cell">UC202-10 <span style="color: var(--accent); font-weight: 700;">인치</span></td><td>15.8</td><td>47</td><td>31</td></tr>
                 <tr><td class="type-cell">UC203</td><td>17</td><td>47</td><td>31</td></tr>
-                <tr><td class="type-cell">UC204-12</td><td>19.1 <span style="color: var(--accent);">(인치 3/4&Prime;)</span></td><td>47</td><td>31</td></tr>
+                <tr><td class="type-cell">UC204-12 <span style="color: var(--accent); font-weight: 700;">인치</span></td><td>19.1</td><td>47</td><td>31</td></tr>
                 <tr><td class="type-cell">UC204</td><td>20</td><td>47</td><td>31</td></tr>
-                <tr><td class="type-cell">UC205-14</td><td>22.2 <span style="color: var(--accent);">(인치 7/8&Prime;)</span></td><td>52</td><td>34.1</td></tr>
+                <tr><td class="type-cell">UC205-14 <span style="color: var(--accent); font-weight: 700;">인치</span></td><td>22.2</td><td>52</td><td>34.1</td></tr>
                 <tr><td class="type-cell">UC205</td><td>25</td><td>52</td><td>34.1</td></tr>
-                <tr><td class="type-cell">UC205-16</td><td>25.4 <span style="color: var(--accent);">(인치 1&Prime;)</span></td><td>52</td><td>34.1</td></tr>
-                <tr><td class="type-cell">UC206-18</td><td>28.6 <span style="color: var(--accent);">(인치 1-1/8&Prime;)</span></td><td>62</td><td>38.1</td></tr>
+                <tr><td class="type-cell">UC205-16 <span style="color: var(--accent); font-weight: 700;">인치</span></td><td>25.4</td><td>52</td><td>34.1</td></tr>
+                <tr><td class="type-cell">UC206-18 <span style="color: var(--accent); font-weight: 700;">인치</span></td><td>28.6</td><td>62</td><td>38.1</td></tr>
                 <tr><td class="type-cell">UC206</td><td>30</td><td>62</td><td>38.1</td></tr>
               </tbody>
             </table>
-            <p style="font-size: 10.5px; color: var(--text-faint); margin: 6px 0 0;">10mm(USB_-000)는 표준 UC200 시리즈에 없어 문의 대상입니다. 인치 표기 행은 인치 베어링입니다. 단위: mm.</p>
+            </div>
+            <p style="font-size: 10.5px; color: var(--text-faint); margin: 6px 0 0;">10mm(USB_-000)는 표준 UC200 시리즈에 없어 문의 대상입니다. &ldquo;인치&rdquo; 표시 행은 인치 베어링입니다(1/2&Prime;&middot;5/8&Prime;&middot;3/4&Prime;&middot;7/8&Prime;&middot;1&Prime;&middot;1-1/8&Prime; 순). 단위: mm.</p>
           </div>
 
-          <div style="background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px;">
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px;">
             <p style="font-size: 12.5px; font-weight: 700; color: var(--text); margin: 0 0 8px;">USA_ &middot; UC베어링 편심칼라형</p>
             <img src="img/hc_bearing.png" alt="UC형 편심칼라 인서트 베어링 참고 사진" style="display: block; margin: 0 auto; height: 90px; width: auto; max-width: 100%; object-fit: contain;" loading="lazy">
             <p style="font-size: 11px; color: var(--text-faint); text-align: center; margin: 6px 0 10px;">참고 사진: HC 편심칼라형 인서트(<a href="ball_bearing_unit.html">베어링 유니트</a> 페이지 HC 탭과 동일 계열)</p>
-            <table class="spec-table" style="width: 100%; font-size: 12px;">
+            <div style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 260px; font-size: 12px;">
               <thead><tr><th>참고형번</th><th>d</th><th>D</th><th>B</th></tr></thead>
               <tbody>
                 <tr><td class="type-cell">HC201</td><td>12</td><td>40</td><td>28.6</td></tr>
@@ -177,14 +188,10 @@
                 <tr><td class="type-cell">HC206</td><td>30</td><td>62</td><td>44.5</td></tr>
               </tbody>
             </table>
+            </div>
             <p style="font-size: 10.5px; color: var(--text-faint); margin: 6px 0 0;">10mm(USA_-000)는 표준 HC 시리즈에 없어 문의 대상입니다. 단위: mm.</p>
           </div>
         </div>
-      </div>
-
-      <div class="cat-tabs" role="tablist">
-        <button type="button" class="cat-tab-btn active" data-tab="p">필로우 블록형 (USCP/USBP/USAP)</button>
-        <button type="button" class="cat-tab-btn" data-tab="fl">플랜지형 (USCFL/USBFL/USAFL)</button>
       </div>
 
       <div class="cat-tab-panel" data-panel="p">
