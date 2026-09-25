@@ -940,6 +940,48 @@
     padding: 16px 18px;
   }
 
+  /* ---------- Product diagram box (photo/drawing + legend) ---------- */
+
+  .diagram-box {
+    background: #f4f4f2;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px 20px 16px;
+    margin: 4px 0 18px;
+  }
+
+  .diagram-caption {
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    margin: 0 0 14px;
+  }
+
+  .diagram-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .diagram-row.top-align {
+    align-items: flex-start;
+  }
+
+  .diagram-legend {
+    font-size: 11.5px;
+    color: var(--text-sub);
+    text-align: center;
+    margin: 10px 0 0;
+  }
+
+  .spec-note {
+    font-size: 11px;
+    color: var(--text-faint);
+    margin-top: 6px;
+  }
+
   .brand-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
