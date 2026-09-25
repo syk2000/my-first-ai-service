@@ -105,6 +105,39 @@
         <p class="section-head-tip">형번 또는 축경 일부만 입력해도 검색됩니다.</p>
       </div>
 
+      <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">구조 단면도 (개념도)</p>
+        <svg viewBox="0 0 360 220" style="display: block; margin: 0 auto; max-width: 340px; width: 100%; height: auto;" aria-label="플러머 블럭(SN 하우징) 단면도">
+          <path d="M60,150 h240 v20 h-240 z" fill="none" stroke="#333" stroke-width="2.2" />
+          <path d="M75,150 v-30 a15,15 0 0 1 15,-15 h180 a15,15 0 0 1 15,15 v30 z" fill="none" stroke="#333" stroke-width="2.2" />
+          <path d="M110,150 v-45 a70,55 0 0 1 140,0 v45 z" fill="none" stroke="#333" stroke-width="2.2" />
+          <circle cx="180" cy="120" r="30" fill="#e7e7e4" stroke="#333" stroke-width="2" />
+          <circle cx="180" cy="120" r="6" fill="#333" />
+          <rect x="85" y="160" width="16" height="18" rx="2" fill="none" stroke="#333" stroke-width="1.6" />
+          <rect x="259" y="160" width="16" height="18" rx="2" fill="none" stroke="#333" stroke-width="1.6" />
+          <g stroke="#666" stroke-width="1" fill="none">
+            <line x1="60" y1="185" x2="60" y2="200" /><line x1="300" y1="185" x2="300" y2="200" />
+            <line x1="60" y1="195" x2="300" y2="195" marker-start="url(#pbArrow)" marker-end="url(#pbArrow)" />
+          </g>
+          <text x="180" y="212" text-anchor="middle" font-size="14" fill="#333" font-weight="600">L (전장)</text>
+          <g stroke="#666" stroke-width="1" fill="none">
+            <line x1="45" y1="65" x2="35" y2="65" /><line x1="45" y1="170" x2="35" y2="170" />
+            <line x1="40" y1="65" x2="40" y2="170" marker-start="url(#pbArrow)" marker-end="url(#pbArrow)" />
+          </g>
+          <text x="20" y="120" text-anchor="middle" font-size="14" fill="#333" font-weight="600" transform="rotate(-90 20 120)">H (높이)</text>
+          <g stroke="#666" stroke-width="1" fill="none">
+            <line x1="93" y1="200" x2="93" y2="208" /><line x1="267" y1="200" x2="267" y2="208" />
+            <line x1="93" y1="205" x2="267" y2="205" marker-start="url(#pbArrow)" marker-end="url(#pbArrow)" />
+          </g>
+          <defs>
+            <marker id="pbArrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#666" />
+            </marker>
+          </defs>
+        </svg>
+        <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">↑ SN 하우징(2분할 플러머 블럭) 구조 개념도 · L(전장)&middot;H(높이)&middot;A(베이스 볼트 구멍 간격)<br /><span style="color: var(--text-faint);">SN2/3(실린더 보어)와 SN5/6(어댑터 슬리브)는 내부 베어링 장착 방식만 다르고, 하우징 외형과 치수 기준점은 동일합니다. 실제 형번별 비례와는 다를 수 있는 개념도이며, 치수값은 아래 표를 따릅니다.</span></p>
+      </div>
+
       <div style="background: #fff7e6; border: 1px solid #f0d9a6; border-radius: var(--radius-md); padding: 14px 18px; margin: 4px 0 18px; font-size: 12.5px; color: var(--text-sub); line-height: 1.6;">
         &#9888; 아래 SN 규격은 당사 SWS&middot;JIB 정식 카탈로그에는 없어, 업계에 공개된 SN 하우징 규격 자료(공개 도면 PDF)를 참고해 작성했습니다. SN 하우징은 제조사마다 같은 형번이라도 세부 치수가 조금씩 다를 수 있으므로, 정밀 가공&middot;발주 전에는 <strong style="color: var(--accent);">반드시 견적 문의로 당사 실제 재고 규격을 재확인</strong>해 주시기 바랍니다.
       </div>
