@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>크로스롤러베어링 | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="cross-roller-bearing" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Cross Roller Bearings</p>
+        <h2>크로스롤러베어링</h2>
+        <p>내륜과 외륜 사이에 롤러를 직교시켜 배열한 콤팩트한 구조의 베어링입니다. 구름면이 선접촉이므로 하중에 의한 탄성 변위가 매우 적으며, 레이디얼 하중·축방향 하중 및 모멘트 등 <strong>모든 방향의 복잡한 하중을 1개의 베어링으로 동시에 지지</strong>할 수 있습니다. 콤팩트하면서 높은 강성과 회전 정밀도가 필요한 산업용 로봇·공작기계·의료기기 등의 선회부에 널리 사용됩니다.</p>
+        <p>아래 6개 타입으로 나뉩니다.</p>
+        <ul style="font-size: 14px; color: var(--text-sub); line-height: 1.8; margin: 0 0 8px; padding-left: 20px;">
+          <li><strong style="color: var(--text);">고강성형 CRBHV</strong> — 내외륜 모두 일체형 구조(비분할)로 설치 오차가 적고 고정밀도·고강성이며, 롤러 사이 세퍼레이터로 회전이 원활해 비교적 고속 회전에도 적합합니다.</li>
+          <li><strong style="color: var(--text);">고강성 취부홀부착 CRBFV</strong> — 내외륜 모두 일체형 구조이고 내외륜에 취부 홀이 있어, 하우징이나 압착판 없이 볼트 온 방식으로 장치에 간단히 설치할 수 있는 고강성·고정밀도 타입입니다.</li>
+          <li><strong style="color: var(--text);">표준형 CRBC, CRB</strong> — 외륜이 2분할되어 있지만 운반·설치 중 분리되지 않도록 나사로 고정되어 있어 취급이 용이합니다. 유지기부착(CRBC)·총 롤러(CRB) 방식이 있습니다.</li>
+          <li><strong style="color: var(--text);">울트라 슬림형 CRBT</strong> — 롤러 타입 중 세계에서 가장 얇은 단면 높이 5.5mm·폭 5mm의 초저단면 베어링으로, 롤러 사이에 세퍼레이터가 조립되어 기계·장치의 소형화·경량화에 공헌합니다.</li>
+          <li><strong style="color: var(--text);">울트라 슬림 취부홀부착 CRBTF</strong> — 폭 치수 5mm로 매우 콤팩트하고 가벼운 베어링이면서 내외륜 모두 일체형 구조이고 내외륜에 취부 홀이 부착되어 있어 장치에 간단히 설치할 수 있습니다.</li>
+          <li><strong style="color: var(--text);">슬림형 CRBS</strong> — 내경에 비해 외경과 폭 치수가 작은 콤팩트한 베어링입니다. 유지기부착·세퍼레이터 부착·총 롤러 타입이 준비되어 있어 사용 용도에 따라 폭넓게 선정할 수 있습니다.</li>
+        </ul>
+      </div>
+
+      <div class="diagram-box">
+        <p class="diagram-caption">당사 IKO 카탈로그 규격 도면 · 크로스롤러베어링의 구조</p>
+        <img src="img/cross_roller_structure.png" alt="크로스롤러베어링 6개 타입 구조 단면도" style="display: block; margin: 0 auto; height: 320px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+        <p class="diagram-legend">외륜 · 롤러 · 세퍼레이터(또는 유지기) · 내륜 · 씰(밀봉형에만 있음)</p>
+      </div>
+
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 20px; margin: 4px 0 28px;">
+        <p style="font-weight: 700; color: var(--text); margin: 0 0 10px; font-size: 14.5px;">호칭번호 구성 (예: CRBHV 150 25 A UU C1 P6)</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0 0 6px; line-height: 1.7;"><strong style="color: var(--text);">형식기호</strong> — CRBHV·CRBFV(세퍼레이터 부착) / CRBC(유지기부착)·CRB(총 롤러, 표준형) / CRBT·CRBTF(울트라 슬림형) / CRBS(슬림형, 유지기부착) 등 계열 구분</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0 0 6px; line-height: 1.7;"><strong style="color: var(--text);">치수</strong> — 베어링 내경(mm) · 베어링 폭(mm) 순으로 표기</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0 0 6px; line-height: 1.7;"><strong style="color: var(--text);">보조기호-1</strong> — T(내륜 취부 홀 나사) · 무기호(내외륜 카운터보어 홀 동일 방향) · D(내외륜 카운터보어 홀 역방향). 취부 홀 부착형(CRBFV·CRBTF)에만 적용되며, 울트라 슬림형 취부 홀 부착(CRBTF)은 T에만 적용됩니다.</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0 0 6px; line-height: 1.7;"><strong style="color: var(--text);">보조기호-2</strong> — 무기호(개방형) · UU(밀봉형) · U(편측 밀봉형)</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0 0 6px; line-height: 1.7;"><strong style="color: var(--text);">보조기호-3</strong> — 무기호(보통 틈새) · T1 · C1 · C2(틈새 등급)</p>
+        <p style="font-size: 13px; color: var(--text-sub); margin: 0; line-height: 1.7;"><strong style="color: var(--text);">등급기호</strong> — 무기호(정밀도 0급) · P6/P5/P4/P2(정밀도 등급) · RP6/RP5/RP4/RP2(회전정밀도 등급)</p>
+      </div>
+
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="crbhv">CRBHV · 고강성형</button>
+        <button type="button" class="cat-tab-btn" data-tab="crbfv">CRBFV · 고강성 취부홀부착</button>
+        <button type="button" class="cat-tab-btn" data-tab="crbc">CRBC · CRB 표준형</button>
+        <button type="button" class="cat-tab-btn" data-tab="crbt">CRBT · 울트라 슬림형</button>
+        <button type="button" class="cat-tab-btn" data-tab="crbtf">CRBTF · 울트라 슬림 취부홀부착</button>
+        <button type="button" class="cat-tab-btn" data-tab="crbs">CRBS · 슬림형</button>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="crbhv">
+        <p class="cat-tab-panel-desc">내외륜 모두 일체형 구조(비분할)로 설치 오차가 적고 고정밀도·고강성이며, 롤러 사이 세퍼레이터로 회전이 원활해 비교적 고속 회전에도 적합합니다. 축경 20~300mm.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="crbhvFilter">형번 / 규격 검색</label>
+          <input id="crbhvFilter" type="text" placeholder="예: CRBHV5013A 또는 50*80" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="crbhvFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 640px;">
+            <thead><tr><th>축경(mm)</th><th>호칭번호(개방형)</th><th>호칭번호(밀봉형)</th><th>질량(kg)</th><th>d</th><th>D</th><th>B</th><th>r(min)</th></tr></thead>
+            <tbody id="crbhvFilterBody"><tr><td class="type-cell">20</td><td>CRBHV 208A</td><td>CRBHV 208AUU</td><td>0.04</td><td>20</td><td>36</td><td>8</td><td>0.3</td></tr><tr><td class="type-cell">25</td><td>CRBHV 258A</td><td>CRBHV 258AUU</td><td>0.05</td><td>25</td><td>41</td><td>8</td><td>0.3</td></tr><tr><td class="type-cell">30</td><td>CRBHV 3010A</td><td>CRBHV 3010AUU</td><td>0.12</td><td>30</td><td>55</td><td>10</td><td>0.3</td></tr><tr><td class="type-cell">35</td><td>CRBHV 3510A</td><td>CRBHV 3510AUU</td><td>0.13</td><td>35</td><td>60</td><td>10</td><td>0.3</td></tr><tr><td class="type-cell">40</td><td>CRBHV 4010A</td><td>CRBHV 4010AUU</td><td>0.15</td><td>40</td><td>65</td><td>10</td><td>0.3</td></tr><tr><td class="type-cell">45</td><td>CRBHV 4510A</td><td>CRBHV 4510AUU</td><td>0.16</td><td>45</td><td>70</td><td>10</td><td>0.3</td></tr><tr><td class="type-cell">50</td><td>CRBHV 5013A</td><td>CRBHV 5013AUU</td><td>0.29</td><td>50</td><td>80</td><td>13</td><td>0.6</td></tr><tr><td class="type-cell">60</td><td>CRBHV 6013A</td><td>CRBHV 6013AUU</td><td>0.33</td><td>60</td><td>90</td><td>13</td><td>0.6</td></tr><tr><td class="type-cell">70</td><td>CRBHV 7013A</td><td>CRBHV 7013AUU</td><td>0.38</td><td>70</td><td>100</td><td>13</td><td>0.6</td></tr><tr><td class="type-cell">80</td><td>CRBHV 8016A</td><td>CRBHV 8016AUU</td><td>0.74</td><td>80</td><td>120</td><td>16</td><td>0.6</td></tr><tr><td class="type-cell">90</td><td>CRBHV 9016A</td><td>CRBHV 9016AUU</td><td>0.81</td><td>90</td><td>130</td><td>16</td><td>0.6</td></tr><tr><td class="type-cell">100</td><td>CRBHV 10020A</td><td>CRBHV 10020AUU</td><td>1.45</td><td>100</td><td>150</td><td>20</td><td>0.6</td></tr><tr><td class="type-cell">110</td><td>CRBHV 11020A</td><td>CRBHV 11020AUU</td><td>1.56</td><td>110</td><td>160</td><td>20</td><td>0.6</td></tr><tr><td class="type-cell">120</td><td>CRBHV 12025A</td><td>CRBHV 12025AUU</td><td>2.62</td><td>120</td><td>180</td><td>25</td><td>1</td></tr><tr><td class="type-cell">130</td><td>CRBHV 13025A</td><td>CRBHV 13025AUU</td><td>2.82</td><td>130</td><td>190</td><td>25</td><td>1</td></tr><tr><td class="type-cell">140</td><td>CRBHV 14025A</td><td>CRBHV 14025AUU</td><td>2.96</td><td>140</td><td>200</td><td>25</td><td>1</td></tr><tr><td class="type-cell">150</td><td>CRBHV 15025A</td><td>CRBHV 15025AUU</td><td>3.16</td><td>150</td><td>210</td><td>25</td><td>1</td></tr><tr><td class="type-cell">200</td><td>CRBHV 20025A</td><td>CRBHV 20025AUU</td><td>4.00</td><td>200</td><td>260</td><td>25</td><td>1</td></tr><tr><td class="type-cell">250</td><td>CRBHV 25025A</td><td>CRBHV 25025AUU</td><td>4.97</td><td>250</td><td>310</td><td>25</td><td>1.5</td></tr><tr><td class="type-cell">300</td><td>CRBH 30025A</td><td>CRBH 30025AUU</td><td>5.29</td><td>300</td><td>360</td><td>25</td><td>1.5</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 kg) · 당사 IKO 카탈로그(크로스롤러베어링 치수표) 기준 · ※ 축경 300mm 규격은 카탈로그 원문에 다른 축경과 달리 &ldquo;CRBH 30025A&rdquo;(V 없음)로 표기되어 있습니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="crbfv" hidden>
+        <p class="cat-tab-panel-desc">내외륜 모두 일체형 구조이고 내외륜에 취부 홀이 있어, 하우징이나 압착판 없이 볼트 온 방식으로 장치에 간단히 설치할 수 있는 고강성·고정밀도 타입입니다. 축경 10~115mm.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="crbfvFilter">형번 / 규격 검색</label>
+          <input id="crbfvFilter" type="text" placeholder="예: CRBFV2012AT 또는 20*70" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="crbfvFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 1000px;">
+            <thead><tr><th>축경(mm)</th><th>호칭번호(개방형)</th><th>호칭번호(밀봉형)</th><th>질량(kg)</th><th>d</th><th>D</th><th>B</th><th>r1(min)</th><th>r2(min)</th><th>PCD1(내륜)</th><th>내륜 취부 홀</th><th>PCD2(외륜)</th><th>외륜 취부 홀</th></tr></thead>
+            <tbody id="crbfvFilterBody"><tr><td class="type-cell">10</td><td>CRBFV 108AT</td><td>CRBFV 108ATUU</td><td>0.12</td><td>10</td><td>52</td><td>8</td><td>0.3</td><td>0.3</td><td>16</td><td>4-M3 통과 등분</td><td>42</td><td>6-&phi;3.4 통과 등분, &phi;6.5 깊은 카운터보어 깊이 3.3</td></tr><tr><td class="type-cell">20</td><td>CRBFV 2012AT</td><td>CRBFV 2012ATUU</td><td>0.31</td><td>20</td><td>70</td><td>12</td><td>0.3</td><td>0.3</td><td>28</td><td>6-M3 통과 등분</td><td>57</td><td>6-&phi;3.4 통과 등분, &phi;6.5 깊은 카운터보어 깊이 3.3</td></tr><tr><td class="type-cell">25</td><td>CRBFV 2512AT</td><td>CRBFV 2512ATUU</td><td>0.40</td><td>25</td><td>80</td><td>12</td><td>0.6</td><td>0.6</td><td>35</td><td>6-M3 통과 등분</td><td>67</td><td>6-&phi;3.4 통과 등분, &phi;6.5 깊은 카운터보어 깊이 3.3</td></tr><tr><td class="type-cell">35</td><td>CRBFV 3515AT</td><td>CRBFV 3515ATUU</td><td>0.66</td><td>35</td><td>95</td><td>15</td><td>0.6</td><td>0.6</td><td>45</td><td>8-M4 통과 등분</td><td>83</td><td>8-&phi;4.5 통과 등분, &phi;8 깊은 카운터보어 깊이 4.4</td></tr><tr><td class="type-cell">55</td><td>CRBFV 5515AT</td><td>CRBFV 5515ATUU</td><td>0.96</td><td>55</td><td>120</td><td>15</td><td>0.6</td><td>0.6</td><td>65</td><td>8-M5 통과 등분</td><td>105</td><td>8-&phi;5.5 통과 등분, &phi;9.5 깊은 카운터보어 깊이 5.4</td></tr><tr><td class="type-cell">80</td><td>CRBFV 8022AT</td><td>CRBFV 8022ATUU</td><td>2.63</td><td>80</td><td>165</td><td>22</td><td>0.6</td><td>1</td><td>97</td><td>10-M5 통과 등분</td><td>148</td><td>10-&phi;5.5 통과 등분, &phi;9.5 깊은 카운터보어 깊이 5.4</td></tr><tr><td class="type-cell">80</td><td>CRBFV 8022A</td><td>CRBFV 8022AUU</td><td>2.60</td><td>80</td><td>165</td><td>22</td><td>0.6</td><td>1</td><td>97</td><td>10-M5 통과 등분</td><td>148</td><td>10-&phi;5.5 통과 등분, &phi;9.5 깊은 카운터보어 깊이 5.4</td></tr><tr><td class="type-cell">80</td><td>CRBFV 8022AD</td><td>CRBFV 8022ADUU</td><td>2.60</td><td>80</td><td>165</td><td>22</td><td>0.6</td><td>1</td><td>97</td><td>10-M5 통과 등분</td><td>148</td><td>10-&phi;5.5 통과 등분, &phi;9.5 깊은 카운터보어 깊이 5.4</td></tr><tr><td class="type-cell">90</td><td>CRBFV 9025AT</td><td>CRBFV 9025ATUU</td><td>4.83</td><td>90</td><td>210</td><td>25</td><td>1.5</td><td>1.5</td><td>112</td><td>12-M8 통과 등분</td><td>187</td><td>12-&phi;9 통과 등분, &phi;14 깊은 카운터보어 깊이 12</td></tr><tr><td class="type-cell">90</td><td>CRBFV 9025A</td><td>CRBFV 9025AUU</td><td>4.67</td><td>90</td><td>210</td><td>25</td><td>1.5</td><td>1.5</td><td>112</td><td>12-M8 통과 등분</td><td>187</td><td>12-&phi;9 통과 등분, &phi;14 깊은 카운터보어 깊이 12</td></tr><tr><td class="type-cell">90</td><td>CRBFV 9025AD</td><td>CRBFV 9025ADUU</td><td>4.67</td><td>90</td><td>210</td><td>25</td><td>1.5</td><td>1.5</td><td>112</td><td>12-M8 통과 등분</td><td>187</td><td>12-&phi;9 통과 등분, &phi;14 깊은 카운터보어 깊이 12</td></tr><tr><td class="type-cell">115</td><td>CRBFV 11528AT</td><td>CRBFV 11528ATUU</td><td>6.81</td><td>115</td><td>240</td><td>28</td><td>1.5</td><td>1.5</td><td>139</td><td>12-M8 통과 등분</td><td>217</td><td>12-&phi;9 통과 등분, &phi;14 깊은 카운터보어 깊이 13.5</td></tr><tr><td class="type-cell">115</td><td>CRBFV 11528A</td><td>CRBFV 11528AUU</td><td>6.63</td><td>115</td><td>240</td><td>28</td><td>1.5</td><td>1.5</td><td>139</td><td>12-M8 통과 등분</td><td>217</td><td>12-&phi;9 통과 등분, &phi;14 깊은 카운터보어 깊이 13.5</td></tr><tr><td class="type-cell">115</td><td>CRBFV 11528AD</td><td>CRBFV 11528ADUU</td><td>6.63</td><td>115</td><td>240</td><td>28</td><td>1.5</td><td>1.5</td><td>139</td><td>12-M8 통과 등분</td><td>217</td><td>12-&phi;9 통과 등분, &phi;14 깊은 카운터보어 깊이 13.5</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 kg) · 당사 IKO 카탈로그(크로스롤러베어링 치수표) 기준 · AT=내륜 취부 홀 나사형, A=내외륜 카운터보어 홀 동일 방향, AD=내외륜 카운터보어 홀 역방향(축경 80/90/115mm에만 3종 모두 제공)</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="crbc" hidden>
+        <p class="cat-tab-panel-desc">외륜이 2분할되어 있지만 운반·설치 중 분리되지 않도록 나사로 고정되어 있어 취급이 용이한 표준 타입입니다. 유지기부착(CRBC)·총 롤러(CRB) 두 방식이 있으며, 축경 30~800mm까지 폭넓게 공급됩니다.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="crbcFilter">형번 / 규격 검색</label>
+          <input id="crbcFilter" type="text" placeholder="예: CRBC6013 또는 60*90" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="crbcFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 900px;">
+            <thead><tr><th>축경(mm)</th><th>유지기부착·개방형(CRBC)</th><th>유지기부착·밀봉형(CRBC&hellip;UU)</th><th>총롤러·개방형(CRB)</th><th>총롤러·밀봉형(CRB&hellip;UU)</th><th>질량(kg)</th><th>d</th><th>D</th><th>B</th></tr></thead>
+            <tbody id="crbcFilterBody"><tr><td class="type-cell">30</td><td>CRBC 3010</td><td>CRBC 3010UU</td><td>CRB 3010</td><td>CRB 3010UU</td><td>0.12</td><td>30</td><td>55</td><td>10</td></tr><tr><td class="type-cell">40</td><td>CRBC 4010</td><td>CRBC 4010UU</td><td>CRB 4010</td><td>CRB 4010UU</td><td>0.15</td><td>40</td><td>65</td><td>10</td></tr><tr><td class="type-cell">50</td><td>CRBC 5013</td><td>CRBC 5013UU</td><td>CRB 5013</td><td>CRB 5013UU</td><td>0.29</td><td>50</td><td>80</td><td>13</td></tr><tr><td class="type-cell">60</td><td>CRBC 6013</td><td>CRBC 6013UU</td><td>CRB 6013</td><td>CRB 6013UU</td><td>0.33</td><td>60</td><td>90</td><td>13</td></tr><tr><td class="type-cell">70</td><td>CRBC 7013</td><td>CRBC 7013UU</td><td>CRB 7013</td><td>CRB 7013UU</td><td>0.38</td><td>70</td><td>100</td><td>13</td></tr><tr><td class="type-cell">80</td><td>CRBC 8016</td><td>CRBC 8016UU</td><td>CRB 8016</td><td>CRB 8016UU</td><td>0.74</td><td>80</td><td>120</td><td>16</td></tr><tr><td class="type-cell">90</td><td>CRBC 9016</td><td>CRBC 9016UU</td><td>CRB 9016</td><td>CRB 9016UU</td><td>0.81</td><td>90</td><td>130</td><td>16</td></tr><tr><td class="type-cell">100</td><td>CRBC 10020</td><td>CRBC 10020UU</td><td>CRB 10020</td><td>CRB 10020UU</td><td>1.45</td><td>100</td><td>150</td><td>20</td></tr><tr><td class="type-cell">110</td><td>CRBC 11020</td><td>CRBC 11020UU</td><td>CRB 11020</td><td>CRB 11020UU</td><td>1.56</td><td>110</td><td>160</td><td>20</td></tr><tr><td class="type-cell">120</td><td>CRBC 12025</td><td>CRBC 12025UU</td><td>CRB 12025</td><td>CRB 12025UU</td><td>2.62</td><td>120</td><td>180</td><td>25</td></tr><tr><td class="type-cell">130</td><td>CRBC 13025</td><td>CRBC 13025UU</td><td>CRB 13025</td><td>CRB 13025UU</td><td>2.82</td><td>130</td><td>190</td><td>25</td></tr><tr><td class="type-cell">140</td><td>CRBC 14025</td><td>CRBC 14025UU</td><td>CRB 14025</td><td>CRB 14025UU</td><td>2.96</td><td>140</td><td>200</td><td>25</td></tr><tr><td class="type-cell">150</td><td>CRBC 15025</td><td>CRBC 15025UU</td><td>CRB 15025</td><td>CRB 15025UU</td><td>3.16</td><td>150</td><td>210</td><td>25</td></tr><tr><td class="type-cell">150</td><td>CRBC 15030</td><td>CRBC 15030UU</td><td>CRB 15030</td><td>CRB 15030UU</td><td>5.30</td><td>150</td><td>230</td><td>30</td></tr><tr><td class="type-cell">200</td><td>CRBC 20025</td><td>CRBC 20025UU</td><td>CRB 20025</td><td>CRB 20025UU</td><td>4.00</td><td>200</td><td>260</td><td>25</td></tr><tr><td class="type-cell">200</td><td>CRBC 20030</td><td>&mdash;</td><td>CRB 20030</td><td>&mdash;</td><td>6.70</td><td>200</td><td>280</td><td>30</td></tr><tr><td class="type-cell">200</td><td>CRBC 20035</td><td>&mdash;</td><td>CRB 20035</td><td>&mdash;</td><td>9.58</td><td>200</td><td>295</td><td>35</td></tr><tr><td class="type-cell">250</td><td>CRBC 25025</td><td>CRBC 25025UU</td><td>CRB 25025</td><td>CRB 25025UU</td><td>4.97</td><td>250</td><td>310</td><td>25</td></tr><tr><td class="type-cell">250</td><td>CRBC 25030</td><td>&mdash;</td><td>CRB 25030</td><td>&mdash;</td><td>8.10</td><td>250</td><td>330</td><td>30</td></tr><tr><td class="type-cell">250</td><td>CRBC 25040</td><td>&mdash;</td><td>CRB 25040</td><td>&mdash;</td><td>14.8</td><td>250</td><td>355</td><td>40</td></tr><tr><td class="type-cell">300</td><td>CRBC 30025</td><td>CRBC 30025UU</td><td>CRB 30025</td><td>CRB 30025UU</td><td>5.88</td><td>300</td><td>360</td><td>25</td></tr><tr><td class="type-cell">300</td><td>CRBC 30035</td><td>&mdash;</td><td>CRB 30035</td><td>&mdash;</td><td>13.4</td><td>300</td><td>395</td><td>35</td></tr><tr><td class="type-cell">300</td><td>CRBC 30040</td><td>&mdash;</td><td>CRB 30040</td><td>&mdash;</td><td>17.2</td><td>300</td><td>405</td><td>40</td></tr><tr><td class="type-cell">400</td><td>CRBC 40035</td><td>&mdash;</td><td>CRB 40035</td><td>&mdash;</td><td>14.5</td><td>400</td><td>480</td><td>35</td></tr><tr><td class="type-cell">400</td><td>CRBC 40040</td><td>&mdash;</td><td>CRB 40040</td><td>&mdash;</td><td>23.5</td><td>400</td><td>510</td><td>40</td></tr><tr><td class="type-cell">400</td><td>CRBC 40070</td><td>&mdash;</td><td>CRB 40070</td><td>&mdash;</td><td>72.4</td><td>400</td><td>580</td><td>70</td></tr><tr><td class="type-cell">500</td><td>CRBC 50040</td><td>&mdash;</td><td>CRB 50040</td><td>&mdash;</td><td>26.0</td><td>500</td><td>600</td><td>40</td></tr><tr><td class="type-cell">500</td><td>CRBC 50050</td><td>&mdash;</td><td>CRB 50050</td><td>&mdash;</td><td>41.7</td><td>500</td><td>625</td><td>50</td></tr><tr><td class="type-cell">500</td><td>CRBC 50070</td><td>&mdash;</td><td>CRB 50070</td><td>&mdash;</td><td>86.1</td><td>500</td><td>680</td><td>70</td></tr><tr><td class="type-cell">600</td><td>CRBC 60040</td><td>&mdash;</td><td>CRB 60040</td><td>&mdash;</td><td>30.6</td><td>600</td><td>700</td><td>40</td></tr><tr><td class="type-cell">600</td><td>CRBC 60070</td><td>&mdash;</td><td>CRB 60070</td><td>&mdash;</td><td>102</td><td>600</td><td>780</td><td>70</td></tr><tr><td class="type-cell">600</td><td>CRBC 600120</td><td>&mdash;</td><td>CRB 600120</td><td>&mdash;</td><td>274</td><td>600</td><td>870</td><td>120</td></tr><tr><td class="type-cell">700</td><td>CRBC 70045</td><td>&mdash;</td><td>CRB 70045</td><td>&mdash;</td><td>46.5</td><td>700</td><td>815</td><td>45</td></tr><tr><td class="type-cell">700</td><td>CRBC 70070</td><td>&mdash;</td><td>CRB 70070</td><td>&mdash;</td><td>115</td><td>700</td><td>880</td><td>70</td></tr><tr><td class="type-cell">700</td><td>CRBC 700150</td><td>&mdash;</td><td>CRB 700150</td><td>&mdash;</td><td>478</td><td>700</td><td>1020</td><td>150</td></tr><tr><td class="type-cell">800</td><td>CRBC 80070</td><td>&mdash;</td><td>CRB 80070</td><td>&mdash;</td><td>109</td><td>800</td><td>950</td><td>70</td></tr><tr><td class="type-cell">800</td><td>CRBC 800100</td><td>&mdash;</td><td>CRB 800100</td><td>&mdash;</td><td>247</td><td>800</td><td>1030</td><td>100</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 kg) · 당사 IKO 카탈로그(크로스롤러베어링 치수표) 기준 · &ldquo;&mdash;&rdquo;는 해당 폭(B) 규격에 밀봉형(UU) 라인업이 없음을 뜻합니다(카탈로그 원문 표기).</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="crbt" hidden>
+        <p class="cat-tab-panel-desc">롤러 타입 중 세계에서 가장 얇은 단면 높이 5.5mm·폭 5mm의 초저단면 베어링으로, 롤러 사이에 세퍼레이터가 조립되어 있어 기계·장치의 소형화·경량화에 공헌합니다. 축경 10~50mm.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="crbtFilter">형번 / 규격 검색</label>
+          <input id="crbtFilter" type="text" placeholder="예: CRBT305A 또는 30*41" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="crbtFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 560px;">
+            <thead><tr><th>축경(mm)</th><th>호칭번호</th><th>질량(g)</th><th>d</th><th>D</th><th>B</th><th>r(min)</th></tr></thead>
+            <tbody id="crbtFilterBody"><tr><td class="type-cell">10</td><td>CRBT 105A</td><td>9.0</td><td>10</td><td>21</td><td>5</td><td>0.15</td></tr><tr><td class="type-cell">15</td><td>CRBT 155A</td><td>11.9</td><td>15</td><td>26</td><td>5</td><td>0.15</td></tr><tr><td class="type-cell">20</td><td>CRBT 205A</td><td>14.8</td><td>20</td><td>31</td><td>5</td><td>0.15</td></tr><tr><td class="type-cell">30</td><td>CRBT 305A</td><td>20.7</td><td>30</td><td>41</td><td>5</td><td>0.15</td></tr><tr><td class="type-cell">40</td><td>CRBT 405A</td><td>26.5</td><td>40</td><td>51</td><td>5</td><td>0.15</td></tr><tr><td class="type-cell">50</td><td>CRBT 505A</td><td>32.3</td><td>50</td><td>61</td><td>5</td><td>0.15</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 g) · 당사 IKO 카탈로그(크로스롤러베어링 치수표) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="crbtf" hidden>
+        <p class="cat-tab-panel-desc">폭 치수 5mm로 매우 콤팩트하고 가벼운 베어링이면서 내외륜 모두 일체형 구조이고 내외륜에 취부 홀이 부착되어 있어 장치에 간단히 설치할 수 있습니다. 축경 10~40mm.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="crbtfFilter">형번 / 규격 검색</label>
+          <input id="crbtfFilter" type="text" placeholder="예: CRBTF205AT 또는 20*53" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="crbtfFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 860px;">
+            <thead><tr><th>축경(mm)</th><th>호칭번호</th><th>질량(g)</th><th>d</th><th>D</th><th>B</th><th>r(min)</th><th>PCD1(내륜)</th><th>내륜 취부 홀</th><th>PCD2(외륜)</th><th>외륜 취부 홀</th></tr></thead>
+            <tbody id="crbtfFilterBody"><tr><td class="type-cell">10</td><td>CRBTF 105AT</td><td>46</td><td>10</td><td>43</td><td>5</td><td>0.15</td><td>16</td><td>6-M2.5 통과 등분</td><td>35</td><td>6-&phi;2.9 통과 등분, &phi;5.5 깊은 카운터보어 깊이 2.8</td></tr><tr><td class="type-cell">20</td><td>CRBTF 205AT</td><td>66</td><td>20</td><td>53</td><td>5</td><td>0.15</td><td>26</td><td>6-M2.5 통과 등분</td><td>45</td><td>6-&phi;2.9 통과 등분, &phi;5.5 깊은 카운터보어 깊이 2.8</td></tr><tr><td class="type-cell">30</td><td>CRBTF 305AT</td><td>83</td><td>30</td><td>63</td><td>5</td><td>0.15</td><td>36</td><td>8-M2.5 통과 등분</td><td>55</td><td>8-&phi;2.9 통과 등분, &phi;5.5 깊은 카운터보어 깊이 2.8</td></tr><tr><td class="type-cell">40</td><td>CRBTF 405AT</td><td>103</td><td>40</td><td>73</td><td>5</td><td>0.15</td><td>46</td><td>8-M2.5 통과 등분</td><td>65</td><td>8-&phi;2.9 통과 등분, &phi;5.5 깊은 카운터보어 깊이 2.8</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 g) · 당사 IKO 카탈로그(크로스롤러베어링 치수표) 기준</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="crbs" hidden>
+        <p class="cat-tab-panel-desc">내경에 비해 외경과 폭 치수가 작은 콤팩트한 베어링입니다. 유지기부착·세퍼레이터 부착·총 롤러 타입이 준비되어 있어 사용 용도에 따라 폭넓게 선정할 수 있습니다. 축경 50~200mm.</p>
+        <div class="field" style="max-width: 360px; margin-bottom: 12px;">
+          <label for="crbsFilter">형번 / 규격 검색</label>
+          <input id="crbsFilter" type="text" placeholder="예: CRBS908 또는 90*106" autocomplete="off" />
+        </div>
+        <p class="finder-tip" id="crbsFilterCount" style="margin: 0 0 6px;"></p>
+        <div style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 860px;">
+            <thead><tr><th>축경(mm)</th><th>유지기부착·개방형</th><th>세퍼레이터부착·밀봉형</th><th>총롤러·개방형</th><th>총롤러·밀봉형</th><th>질량(g)</th><th>D</th><th>B</th><th>r(min)</th></tr></thead>
+            <tbody id="crbsFilterBody"><tr><td class="type-cell">50</td><td>CRBS 508</td><td>CRBS 508AUU</td><td>CRBS 508V</td><td>CRBS 508VUU</td><td>84</td><td>66</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">60</td><td>CRBS 608</td><td>CRBS 608AUU</td><td>CRBS 608V</td><td>CRBS 608VUU</td><td>94</td><td>76</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">70</td><td>CRBS 708</td><td>CRBS 708AUU</td><td>CRBS 708V</td><td>CRBS 708VUU</td><td>108</td><td>86</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">80</td><td>CRBS 808</td><td>CRBS 808AUU</td><td>CRBS 808V</td><td>CRBS 808VUU</td><td>122</td><td>96</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">90</td><td>CRBS 908</td><td>CRBS 908AUU</td><td>CRBS 908V</td><td>CRBS 908VUU</td><td>135</td><td>106</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">100</td><td>CRBS 1008</td><td>CRBS 1008AUU</td><td>CRBS 1008V</td><td>CRBS 1008VUU</td><td>152</td><td>116</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">110</td><td>CRBS 1108</td><td>CRBS 1108AUU</td><td>CRBS 1108V</td><td>CRBS 1108VUU</td><td>163</td><td>126</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">120</td><td>CRBS 1208</td><td>CRBS 1208AUU</td><td>CRBS 1208V</td><td>CRBS 1208VUU</td><td>184</td><td>136</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">130</td><td>CRBS 1308</td><td>CRBS 1308AUU</td><td>CRBS 1308V</td><td>CRBS 1308VUU</td><td>199</td><td>146</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">140</td><td>CRBS 1408</td><td>CRBS 1408AUU</td><td>CRBS 1408V</td><td>CRBS 1408VUU</td><td>205</td><td>156</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">150</td><td>CRBS 1508</td><td>CRBS 1508AUU</td><td>CRBS 1508V</td><td>CRBS 1508VUU</td><td>220</td><td>166</td><td>8</td><td>0.4</td></tr><tr><td class="type-cell">160</td><td>CRBS 16013</td><td>CRBS 16013AUU</td><td>CRBS 16013V</td><td>CRBS 16013VUU</td><td>620</td><td>186</td><td>13</td><td>0.6</td></tr><tr><td class="type-cell">170</td><td>CRBS 17013</td><td>CRBS 17013AUU</td><td>CRBS 17013V</td><td>CRBS 17013VUU</td><td>675</td><td>196</td><td>13</td><td>0.6</td></tr><tr><td class="type-cell">180</td><td>CRBS 18013</td><td>CRBS 18013AUU</td><td>CRBS 18013V</td><td>CRBS 18013VUU</td><td>710</td><td>206</td><td>13</td><td>0.6</td></tr><tr><td class="type-cell">190</td><td>CRBS 19013</td><td>CRBS 19013AUU</td><td>CRBS 19013V</td><td>CRBS 19013VUU</td><td>740</td><td>216</td><td>13</td><td>0.6</td></tr><tr><td class="type-cell">200</td><td>CRBS 20013</td><td>CRBS 20013AUU</td><td>CRBS 20013V</td><td>CRBS 20013VUU</td><td>780</td><td>226</td><td>13</td><td>0.6</td></tr></tbody>
+          </table>
+        </div>
+        <p class="spec-note">단위: mm(질량은 g) · 당사 IKO 카탈로그(크로스롤러베어링 치수표) 기준 · d(내경)=축경 값과 동일</p>
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        &#8251; 위 표는 당사 IKO 카탈로그(크로스롤러베어링 치수표)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+<script>
+  (function () {
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+        panels.forEach(function (p) {
+          p.hidden = p.getAttribute('data-panel') !== target;
+        });
+      });
+    });
+  })();
+  (function () {
+    ['crbhv', 'crbfv', 'crbc', 'crbt', 'crbtf', 'crbs'].forEach(function (prefix) {
+      var input = document.getElementById(prefix + 'Filter');
+      var body = document.getElementById(prefix + 'FilterBody');
+      var countEl = document.getElementById(prefix + 'FilterCount');
+      if (!input || !body) return;
+      var rows = Array.prototype.slice.call(body.querySelectorAll('tr'));
+      var total = rows.length;
+      function apply() {
+        var q = input.value.trim().toUpperCase();
+        var shown = 0;
+        rows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) shown++;
+        });
+        if (countEl) countEl.textContent = shown + ' / ' + total + '건 표시 중';
+      }
+      input.addEventListener('input', apply);
+      if (countEl) countEl.textContent = total + ' / ' + total + '건 표시 중';
+    });
+  })();
+</script>
+</body>
+</html>
