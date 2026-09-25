@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>니들 케이지 (범용·커넥팅로드용) | [회사명] 베어링</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#c98a2b" stroke-width="2.5" />
+          <circle cx="20" cy="20" r="8.5" stroke="#4f7fb3" stroke-width="2.5" />
+          <circle cx="20" cy="7" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="14" r="2.6" fill="#eef2f6" />
+          <circle cx="30.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="20" cy="33" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="26" r="2.6" fill="#eef2f6" />
+          <circle cx="9.5" cy="14" r="2.6" fill="#eef2f6" />
+        </svg>
+        <span class="company-name">
+          [회사명] 베어링
+          <span class="sub">BEARING DISTRIBUTION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="lang-select" id="langSelect">
+        <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langSelectLabel">KOR</span>
+          <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+        </div>
+      </div>
+
+      <div class="header-cta">
+        <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="needle-cage" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Needle Roller & Cage Assemblies</p>
+        <h2>니들 케이지 (범용·커넥팅로드용)</h2>
+        <p>니들 롤러를 유지기(케이지)로 조립한 형식의 베어링입니다. 내륜·외륜 없이 열처리·연삭가공된 축과 하우징 구멍에 직접 조합하여 사용하므로, 작은 설치 공간에서 큰 하중을 지지할 수 있습니다.</p>
+        <p>범용 니들 케이지(KT/KT···N/KTW)와, 엔진 커넥팅로드의 대단부·소단부에 특화된 커넥팅로드용 니들 케이지(KT···EG/KTV···EG)로 구분됩니다.</p>
+        <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
+      </div>
+
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="general">범용 니들 케이지</button>
+        <button type="button" class="cat-tab-btn" data-tab="eg">커넥팅로드용 니들 케이지</button>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="general">
+        <p class="cat-tab-panel-desc">탄소강제 유지기 타입(KT), 병렬 2열형(KTW), 합성수지제 유지기 타입(KT···N)으로 구성됩니다. 직경 상호차가 매우 작은 니들 롤러를 유지기가 정확하게 안내하여 회전 성능이 우수하며, 고속 회전·충격 하중 등 가혹한 조건에도 사용됩니다.</p>
+
+        <div class="diagram-box">
+          <p class="diagram-caption">당사 IKO 카탈로그 규격 도면 — 범용 니들 케이지의 구조</p>
+          <img src="img/needle_cage_general.png" alt="범용 니들 케이지 구조 단면도 (KT · KTW · KT···N)" style="display: block; margin: 0 auto; height: 360px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+          <p class="diagram-legend">유지기(케이지) · 니들 롤러<br /><span style="color: var(--text-faint);">KT(탄소강제 유지기, 단열) · KTW(탄소강제 유지기, 병렬 2열) · KT···N(합성수지제 유지기)</span></p>
+        </div>
+
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="genFilter">형번 / 규격 검색</label>
+          <input id="genFilter" type="text" placeholder="예: KT304517 또는 30*45" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="genCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="genToggleAll">전체 펼치기</button>
+        </div>
+        <div id="genGroups">
+<details class="series-group">
+  <summary>축경 3~14mm (호칭번호 KT···N)<span class="series-count">26건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 367N</td><td>3</td><td>6</td><td>7</td><td>0.39</td><td>1480</td><td>990</td><td>140000</td></tr><tr><td class="type-cell">KT 477N</td><td>4</td><td>7</td><td>7</td><td>0.47</td><td>1800</td><td>1300</td><td>100000</td></tr><tr><td class="type-cell">KT 587N</td><td>5</td><td>8</td><td>7</td><td>0.53</td><td>2070</td><td>1600</td><td>85000</td></tr><tr><td class="type-cell">KT 588N</td><td>5</td><td>8</td><td>8</td><td>0.66</td><td>2420</td><td>1950</td><td>85000</td></tr><tr><td class="type-cell">KT 697N</td><td>6</td><td>9</td><td>7</td><td>0.63</td><td>2310</td><td>1900</td><td>75000</td></tr><tr><td class="type-cell">KT 698N</td><td>6</td><td>9</td><td>8</td><td>0.75</td><td>2700</td><td>2320</td><td>75000</td></tr><tr><td class="type-cell">KT 6910</td><td>6</td><td>9</td><td>10</td><td>1.45</td><td>3010</td><td>2660</td><td>75000</td></tr><tr><td class="type-cell">KT 61013</td><td>6</td><td>10</td><td>13</td><td>2.7</td><td>4410</td><td>3720</td><td>75000</td></tr><tr><td class="type-cell">KT 7108N</td><td>7</td><td>10</td><td>8</td><td>0.86</td><td>2960</td><td>2690</td><td>65000</td></tr><tr><td class="type-cell">KT 71010</td><td>7</td><td>10</td><td>10</td><td>1.69</td><td>3340</td><td>3130</td><td>65000</td></tr><tr><td class="type-cell">KT 8118N</td><td>8</td><td>11</td><td>8</td><td>0.96</td><td>3190</td><td>3060</td><td>60000</td></tr><tr><td class="type-cell">KT 81110</td><td>8</td><td>11</td><td>10</td><td>1.9</td><td>3630</td><td>3600</td><td>60000</td></tr><tr><td class="type-cell">KT 81110N</td><td>8</td><td>11</td><td>10</td><td>1.2</td><td>3630</td><td>3600</td><td>60000</td></tr><tr><td class="type-cell">KT 81113</td><td>8</td><td>11</td><td>13</td><td>2.5</td><td>4500</td><td>4750</td><td>60000</td></tr><tr><td class="type-cell">KT 8128</td><td>8</td><td>12</td><td>8</td><td>2.1</td><td>3630</td><td>3040</td><td>60000</td></tr><tr><td class="type-cell">KT 81211</td><td>8</td><td>12</td><td>11</td><td>3</td><td>4630</td><td>4170</td><td>60000</td></tr><tr><td class="type-cell">KT 91210</td><td>9</td><td>12</td><td>10</td><td>2.8</td><td>3900</td><td>4070</td><td>55000</td></tr><tr><td class="type-cell">KT 91213</td><td>9</td><td>12</td><td>13</td><td>1.9</td><td>4840</td><td>5370</td><td>55000</td></tr><tr><td class="type-cell">KT 10138</td><td>10</td><td>13</td><td>8</td><td>2.3</td><td>3370</td><td>3470</td><td>50000</td></tr><tr><td class="type-cell">KT 101310</td><td>10</td><td>13</td><td>10</td><td>3</td><td>4160</td><td>4550</td><td>50000</td></tr><tr><td class="type-cell">KT 101313</td><td>10</td><td>13</td><td>13</td><td>3.2</td><td>5160</td><td>6000</td><td>50000</td></tr><tr><td class="type-cell">KT 101410</td><td>10</td><td>14</td><td>10</td><td>3.8</td><td>4900</td><td>4680</td><td>50000</td></tr><tr><td class="type-cell">KT 101412</td><td>10</td><td>14</td><td>12</td><td>4.2</td><td>5940</td><td>6000</td><td>50000</td></tr><tr><td class="type-cell">KT 101413</td><td>10</td><td>14</td><td>13</td><td>4.8</td><td>6100</td><td>6200</td><td>50000</td></tr><tr><td class="type-cell">KT 101415</td><td>10</td><td>14</td><td>15</td><td>2.5</td><td>7080</td><td>7520</td><td>50000</td></tr><tr><td class="type-cell">KT 111410</td><td>11</td><td>14</td><td>10</td><td>문의</td><td>4400</td><td>5020</td><td>45000</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 12~14mm<span class="series-count">24건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 12158</td><td>12</td><td>15</td><td>8</td><td>2.2</td><td>3750</td><td>4200</td><td>40000</td></tr><tr><td class="type-cell">KT 121510</td><td>12</td><td>15</td><td>10</td><td>2.7</td><td>4620</td><td>5490</td><td>40000</td></tr><tr><td class="type-cell">KT 121512</td><td>12</td><td>15</td><td>12</td><td>3.2</td><td>5590</td><td>7020</td><td>40000</td></tr><tr><td class="type-cell">KT 121513</td><td>12</td><td>15</td><td>13</td><td>3.6</td><td>5730</td><td>7250</td><td>40000</td></tr><tr><td class="type-cell">KT 121514</td><td>12</td><td>15</td><td>14</td><td>3.8</td><td>6200</td><td>8010</td><td>40000</td></tr><tr><td class="type-cell">KT 121610</td><td>12</td><td>16</td><td>10</td><td>4</td><td>5650</td><td>5890</td><td>40000</td></tr><tr><td class="type-cell">KT 121613</td><td>12</td><td>16</td><td>13</td><td>5.2</td><td>7020</td><td>7800</td><td>40000</td></tr><tr><td class="type-cell">KT 121618</td><td>12</td><td>16</td><td>18</td><td>7</td><td>9790</td><td>11900</td><td>40000</td></tr><tr><td class="type-cell">KT 121710</td><td>12</td><td>17</td><td>10</td><td>5.1</td><td>6170</td><td>5740</td><td>40000</td></tr><tr><td class="type-cell">KT 121812</td><td>12</td><td>18</td><td>12</td><td>7.8</td><td>9030</td><td>8460</td><td>40000</td></tr><tr><td class="type-cell">KT 121820</td><td>12</td><td>18</td><td>20</td><td>13.2</td><td>13700</td><td>14400</td><td>40000</td></tr><tr><td class="type-cell">KT 131710</td><td>13</td><td>17</td><td>10</td><td>4.3</td><td>5990</td><td>6500</td><td>40000</td></tr><tr><td class="type-cell">KT 131815</td><td>13</td><td>18</td><td>15</td><td>8.2</td><td>9660</td><td>10400</td><td>40000</td></tr><tr><td class="type-cell">KT 131816</td><td>13</td><td>18</td><td>16</td><td>8.7</td><td>10300</td><td>11400</td><td>40000</td></tr><tr><td class="type-cell">KT 14188</td><td>14</td><td>18</td><td>8</td><td>3.7</td><td>5110</td><td>5410</td><td>35000</td></tr><tr><td class="type-cell">KT 141810</td><td>14</td><td>18</td><td>10</td><td>4.6</td><td>6320</td><td>7110</td><td>35000</td></tr><tr><td class="type-cell">KT 141811</td><td>14</td><td>18</td><td>11</td><td>5.2</td><td>6520</td><td>7410</td><td>35000</td></tr><tr><td class="type-cell">KT 141813</td><td>14</td><td>18</td><td>13</td><td>6</td><td>7860</td><td>9410</td><td>35000</td></tr><tr><td class="type-cell">KT 141816</td><td>14</td><td>18</td><td>16</td><td>7.3</td><td>9750</td><td>12400</td><td>35000</td></tr><tr><td class="type-cell">KT 141910</td><td>14</td><td>19</td><td>10</td><td>5.9</td><td>7130</td><td>7180</td><td>35000</td></tr><tr><td class="type-cell">KT 141916</td><td>14</td><td>19</td><td>16</td><td>9.4</td><td>11100</td><td>12600</td><td>35000</td></tr><tr><td class="type-cell">KT 141918</td><td>14</td><td>19</td><td>18</td><td>10.5</td><td>12400</td><td>14700</td><td>35000</td></tr><tr><td class="type-cell">KT 142012</td><td>14</td><td>20</td><td>12</td><td>8.7</td><td>9790</td><td>9680</td><td>35000</td></tr><tr><td class="type-cell">KT 142017</td><td>14</td><td>20</td><td>17</td><td>12.4</td><td>13300</td><td>14400</td><td>35000</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 15~18mm<span class="series-count">28건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 15199</td><td>15</td><td>19</td><td>9</td><td>4.4</td><td>6120</td><td>6950</td><td>35000</td></tr><tr><td class="type-cell">KT 151910</td><td>15</td><td>19</td><td>10</td><td>4.9</td><td>6630</td><td>7720</td><td>35000</td></tr><tr><td class="type-cell">KT 151911</td><td>15</td><td>19</td><td>11</td><td>5.5</td><td>6850</td><td>8040</td><td>35000</td></tr><tr><td class="type-cell">KT 151913</td><td>15</td><td>19</td><td>13</td><td>6.4</td><td>8250</td><td>10200</td><td>35000</td></tr><tr><td class="type-cell">KT 151917</td><td>15</td><td>19</td><td>17</td><td>8.2</td><td>10900</td><td>14600</td><td>35000</td></tr><tr><td class="type-cell">KT 151918</td><td>15</td><td>19</td><td>18</td><td>8.7</td><td>11500</td><td>15600</td><td>35000</td></tr><tr><td class="type-cell">KT 152010</td><td>15</td><td>20</td><td>10</td><td>6.3</td><td>7580</td><td>7920</td><td>35000</td></tr><tr><td class="type-cell">KT 152115</td><td>15</td><td>21</td><td>15</td><td>11.9</td><td>12600</td><td>13500</td><td>35000</td></tr><tr><td class="type-cell">KT 162010</td><td>16</td><td>20</td><td>10</td><td>5.2</td><td>6930</td><td>8330</td><td>30000</td></tr><tr><td class="type-cell">KT 162013</td><td>16</td><td>20</td><td>13</td><td>6.8</td><td>8620</td><td>11000</td><td>30000</td></tr><tr><td class="type-cell">KT 162016</td><td>16</td><td>20</td><td>16</td><td>8.3</td><td>10700</td><td>14600</td><td>30000</td></tr><tr><td class="type-cell">KT 162017</td><td>16</td><td>20</td><td>17</td><td>8.7</td><td>11400</td><td>15700</td><td>30000</td></tr><tr><td class="type-cell">KT 162118</td><td>16</td><td>21</td><td>18</td><td>12</td><td>14000</td><td>17700</td><td>30000</td></tr><tr><td class="type-cell">KT 162120</td><td>16</td><td>21</td><td>20</td><td>13.6</td><td>14700</td><td>18900</td><td>30000</td></tr><tr><td class="type-cell">KT 162125</td><td>16</td><td>21</td><td>25</td><td>16.6</td><td>18300</td><td>25100</td><td>30000</td></tr><tr><td class="type-cell">KT 162212</td><td>16</td><td>22</td><td>12</td><td>9.7</td><td>10500</td><td>10900</td><td>30000</td></tr><tr><td class="type-cell">KT 162214</td><td>16</td><td>22</td><td>14</td><td>11.5</td><td>11600</td><td>12500</td><td>30000</td></tr><tr><td class="type-cell">KT 162217</td><td>16</td><td>22</td><td>17</td><td>13.8</td><td>14200</td><td>16100</td><td>30000</td></tr><tr><td class="type-cell">KT 162220</td><td>16</td><td>22</td><td>20</td><td>16.5</td><td>15900</td><td>18600</td><td>30000</td></tr><tr><td class="type-cell">KT 162420</td><td>16</td><td>24</td><td>20</td><td>23.5</td><td>18500</td><td>19000</td><td>30000</td></tr><tr><td class="type-cell">KT 172110</td><td>17</td><td>21</td><td>10</td><td>5.5</td><td>7220</td><td>8950</td><td>30000</td></tr><tr><td class="type-cell">KT 172113</td><td>17</td><td>21</td><td>13</td><td>7.2</td><td>8980</td><td>11800</td><td>30000</td></tr><tr><td class="type-cell">KT 172115</td><td>17</td><td>21</td><td>15</td><td>8.2</td><td>10400</td><td>14400</td><td>30000</td></tr><tr><td class="type-cell">KT 172117</td><td>17</td><td>21</td><td>17</td><td>9.3</td><td>11800</td><td>16900</td><td>30000</td></tr><tr><td class="type-cell">KT 172220</td><td>17</td><td>22</td><td>20</td><td>14</td><td>15500</td><td>20500</td><td>30000</td></tr><tr><td class="type-cell">KT 172311</td><td>17</td><td>23</td><td>11</td><td>9.6</td><td>10100</td><td>10500</td><td>30000</td></tr><tr><td class="type-cell">KT 172315</td><td>17</td><td>23</td><td>15</td><td>13.1</td><td>13300</td><td>15100</td><td>30000</td></tr><tr><td class="type-cell">KT 172418</td><td>17</td><td>24</td><td>18</td><td>18.6</td><td>16500</td><td>18000</td><td>30000</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 18mm<span class="series-count">13건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 18228</td><td>18</td><td>22</td><td>8</td><td>4.7</td><td>6060</td><td>7270</td><td>30000</td></tr><tr><td class="type-cell">KT 182210</td><td>18</td><td>22</td><td>10</td><td>5.8</td><td>7500</td><td>9560</td><td>30000</td></tr><tr><td class="type-cell">KT 182213</td><td>18</td><td>22</td><td>13</td><td>7.6</td><td>9330</td><td>12700</td><td>30000</td></tr><tr><td class="type-cell">KT 182216</td><td>18</td><td>22</td><td>16</td><td>9.2</td><td>11600</td><td>16700</td><td>30000</td></tr><tr><td class="type-cell">KT 182412</td><td>18</td><td>24</td><td>12</td><td>11</td><td>11800</td><td>13100</td><td>30000</td></tr><tr><td class="type-cell">KT 182416</td><td>18</td><td>24</td><td>16</td><td>14.8</td><td>15100</td><td>17900</td><td>30000</td></tr><tr><td class="type-cell">KT 182417</td><td>18</td><td>24</td><td>17</td><td>15.7</td><td>16000</td><td>19400</td><td>30000</td></tr><tr><td class="type-cell">KT 182420</td><td>18</td><td>24</td><td>20</td><td>18.7</td><td>17900</td><td>22400</td><td>30000</td></tr><tr><td class="type-cell">KT 182517</td><td>18</td><td>25</td><td>17</td><td>18.8</td><td>16700</td><td>18600</td><td>30000</td></tr><tr><td class="type-cell">KT 182519</td><td>18</td><td>25</td><td>19</td><td>21</td><td>18700</td><td>21400</td><td>30000</td></tr><tr><td class="type-cell">KT 182522</td><td>18</td><td>25</td><td>22</td><td>24.5</td><td>20600</td><td>24200</td><td>30000</td></tr><tr><td class="type-cell">KT 182614</td><td>18</td><td>26</td><td>14</td><td>18.1</td><td>14600</td><td>14400</td><td>30000</td></tr><tr><td class="type-cell">KT 182620</td><td>18</td><td>26</td><td>20</td><td>26</td><td>20000</td><td>21600</td><td>30000</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 20~24mm<span class="series-count">43건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 202410</td><td>20</td><td>24</td><td>10</td><td>6.3</td><td>7710</td><td>10200</td><td>25000</td></tr><tr><td class="type-cell">KT 202413</td><td>20</td><td>24</td><td>13</td><td>8.3</td><td>9590</td><td>13500</td><td>25000</td></tr><tr><td class="type-cell">KT 202417</td><td>20</td><td>24</td><td>17</td><td>10.6</td><td>12600</td><td>19300</td><td>25000</td></tr><tr><td class="type-cell">KTW 202422</td><td>20</td><td>24</td><td>22</td><td>14.6</td><td>13700</td><td>21300</td><td>25000</td></tr><tr><td class="type-cell">KT 202525</td><td>20</td><td>25</td><td>25</td><td>19.7</td><td>19900</td><td>29800</td><td>25000</td></tr><tr><td class="type-cell">KTW 202531.6</td><td>20</td><td>25</td><td>31.6</td><td>26.5</td><td>21700</td><td>33200</td><td>25000</td></tr><tr><td class="type-cell">KTW 202540</td><td>20</td><td>25</td><td>40</td><td>32.5</td><td>27500</td><td>44900</td><td>25000</td></tr><tr><td class="type-cell">KT 202611</td><td>20</td><td>26</td><td>11</td><td>11.1</td><td>11200</td><td>12500</td><td>25000</td></tr><tr><td class="type-cell">KT 202612</td><td>20</td><td>26</td><td>12</td><td>12</td><td>12400</td><td>14300</td><td>25000</td></tr><tr><td class="type-cell">KT 202614</td><td>20</td><td>26</td><td>14</td><td>14.2</td><td>13700</td><td>16400</td><td>25000</td></tr><tr><td class="type-cell">KT 202617</td><td>20</td><td>26</td><td>17</td><td>17</td><td>16800</td><td>21200</td><td>25000</td></tr><tr><td class="type-cell">KT 202620</td><td>20</td><td>26</td><td>20</td><td>20.5</td><td>18700</td><td>24400</td><td>25000</td></tr><tr><td class="type-cell">KT 202624</td><td>20</td><td>26</td><td>24</td><td>24</td><td>22500</td><td>30900</td><td>25000</td></tr><tr><td class="type-cell">KT 202627</td><td>20</td><td>26</td><td>27</td><td>26.5</td><td>26000</td><td>37300</td><td>25000</td></tr><tr><td class="type-cell">KT 202814</td><td>20</td><td>28</td><td>14</td><td>20</td><td>15700</td><td>16100</td><td>25000</td></tr><tr><td class="type-cell">KT 202820</td><td>20</td><td>28</td><td>20</td><td>29</td><td>21500</td><td>24200</td><td>25000</td></tr><tr><td class="type-cell">KT 203225</td><td>20</td><td>32</td><td>25</td><td>49.5</td><td>30800</td><td>30500</td><td>25000</td></tr><tr><td class="type-cell">KT 212610</td><td>21</td><td>26</td><td>10</td><td>8.5</td><td>9090</td><td>11000</td><td>25000</td></tr><tr><td class="type-cell">KT 212611</td><td>21</td><td>26</td><td>11</td><td>9.6</td><td>9390</td><td>11500</td><td>25000</td></tr><tr><td class="type-cell">KT 222610</td><td>22</td><td>26</td><td>10</td><td>6.9</td><td>8220</td><td>11500</td><td>25000</td></tr><tr><td class="type-cell">KT 222613</td><td>22</td><td>26</td><td>13</td><td>9.1</td><td>10200</td><td>15200</td><td>25000</td></tr><tr><td class="type-cell">KT 222617</td><td>22</td><td>26</td><td>17</td><td>11.6</td><td>13500</td><td>21600</td><td>25000</td></tr><tr><td class="type-cell">KTW 222625</td><td>22</td><td>26</td><td>25</td><td>17.7</td><td>17100</td><td>29400</td><td>25000</td></tr><tr><td class="type-cell">KT 222720</td><td>22</td><td>27</td><td>20</td><td>17.9</td><td>17400</td><td>25700</td><td>25000</td></tr><tr><td class="type-cell">KT 222726</td><td>22</td><td>27</td><td>26</td><td>22.5</td><td>22500</td><td>35800</td><td>25000</td></tr><tr><td class="type-cell">KT 222817</td><td>22</td><td>28</td><td>17</td><td>18.4</td><td>17500</td><td>23000</td><td>25000</td></tr><tr><td class="type-cell">KT 222912</td><td>22</td><td>29</td><td>12</td><td>16.1</td><td>12900</td><td>14000</td><td>25000</td></tr><tr><td class="type-cell">KT 222916</td><td>22</td><td>29</td><td>16</td><td>21</td><td>17600</td><td>20900</td><td>25000</td></tr><tr><td class="type-cell">KT 222917</td><td>22</td><td>29</td><td>17</td><td>22.5</td><td>18700</td><td>22600</td><td>25000</td></tr><tr><td class="type-cell">KT 222918</td><td>22</td><td>29</td><td>18</td><td>23.5</td><td>19800</td><td>24400</td><td>25000</td></tr><tr><td class="type-cell">KT 222920</td><td>22</td><td>29</td><td>20</td><td>26.5</td><td>20900</td><td>26100</td><td>25000</td></tr><tr><td class="type-cell">KT 223015</td><td>22</td><td>30</td><td>15</td><td>23.5</td><td>17900</td><td>19700</td><td>25000</td></tr><tr><td class="type-cell">KT 223230</td><td>22</td><td>32</td><td>30</td><td>52.5</td><td>36400</td><td>42700</td><td>25000</td></tr><tr><td class="type-cell">KT 223232</td><td>22</td><td>32</td><td>32</td><td>56</td><td>38800</td><td>46300</td><td>25000</td></tr><tr><td class="type-cell">KT 232824</td><td>23</td><td>28</td><td>24</td><td>22</td><td>21600</td><td>34500</td><td>20000</td></tr><tr><td class="type-cell">KT 232913</td><td>23</td><td>29</td><td>13</td><td>15.1</td><td>13800</td><td>17200</td><td>20000</td></tr><tr><td class="type-cell">KT 233015</td><td>23</td><td>30</td><td>15</td><td>21</td><td>17300</td><td>20800</td><td>20000</td></tr><tr><td class="type-cell">KT 233016</td><td>23</td><td>30</td><td>16</td><td>22</td><td>18600</td><td>22600</td><td>20000</td></tr><tr><td class="type-cell">KT 242813</td><td>24</td><td>28</td><td>13</td><td>9.9</td><td>10800</td><td>16800</td><td>20000</td></tr><tr><td class="type-cell">KT 242816</td><td>24</td><td>28</td><td>16</td><td>12</td><td>13400</td><td>22200</td><td>20000</td></tr><tr><td class="type-cell">KTW 242834</td><td>24</td><td>28</td><td>34</td><td>27</td><td>21600</td><td>40700</td><td>20000</td></tr><tr><td class="type-cell">KT 242913</td><td>24</td><td>29</td><td>13</td><td>12.8</td><td>12700</td><td>17600</td><td>20000</td></tr><tr><td class="type-cell">KT 243020</td><td>24</td><td>30</td><td>20</td><td>23.5</td><td>20300</td><td>28500</td><td>20000</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 25~32mm<span class="series-count">26건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 252910</td><td>25</td><td>29</td><td>10</td><td>7.9</td><td>8940</td><td>13300</td><td>20000</td></tr><tr><td class="type-cell">KT 252913</td><td>25</td><td>29</td><td>13</td><td>10.3</td><td>11100</td><td>17600</td><td>20000</td></tr><tr><td class="type-cell">KT 253013</td><td>25</td><td>30</td><td>13</td><td>13.3</td><td>13100</td><td>18600</td><td>20000</td></tr><tr><td class="type-cell">KT 253016</td><td>25</td><td>30</td><td>16</td><td>16.2</td><td>16300</td><td>24600</td><td>20000</td></tr><tr><td class="type-cell">KT 253017</td><td>25</td><td>30</td><td>17</td><td>17.1</td><td>17300</td><td>26600</td><td>20000</td></tr><tr><td class="type-cell">KT 253020</td><td>25</td><td>30</td><td>20</td><td>20</td><td>18600</td><td>29100</td><td>20000</td></tr><tr><td class="type-cell">KT 253113</td><td>25</td><td>31</td><td>13</td><td>16.2</td><td>14300</td><td>18400</td><td>20000</td></tr><tr><td class="type-cell">KT 253116</td><td>25</td><td>31</td><td>16</td><td>19.6</td><td>17800</td><td>24400</td><td>20000</td></tr><tr><td class="type-cell">KT 253117</td><td>25</td><td>31</td><td>17</td><td>20.5</td><td>19000</td><td>26500</td><td>20000</td></tr><tr><td class="type-cell">KT 253120</td><td>25</td><td>31</td><td>20</td><td>25</td><td>21200</td><td>30500</td><td>20000</td></tr><tr><td class="type-cell">KT 253216</td><td>25</td><td>32</td><td>16</td><td>23.5</td><td>19400</td><td>24500</td><td>20000</td></tr><tr><td class="type-cell">KT 253224</td><td>25</td><td>32</td><td>24</td><td>35</td><td>27700</td><td>38700</td><td>20000</td></tr><tr><td class="type-cell">KT 253515</td><td>25</td><td>35</td><td>15</td><td>33</td><td>22600</td><td>23800</td><td>20000</td></tr><tr><td class="type-cell">KT 253525</td><td>25</td><td>35</td><td>25</td><td>48</td><td>32500</td><td>37900</td><td>20000</td></tr><tr><td class="type-cell">KT 253530</td><td>25</td><td>35</td><td>30</td><td>58</td><td>39100</td><td>48000</td><td>20000</td></tr><tr><td class="type-cell">KT 263013</td><td>26</td><td>30</td><td>13</td><td>10.7</td><td>11400</td><td>18400</td><td>19000</td></tr><tr><td class="type-cell">KT 263832</td><td>26</td><td>38</td><td>32</td><td>79.5</td><td>47200</td><td>55300</td><td>19000</td></tr><tr><td class="type-cell">KT 283313</td><td>28</td><td>33</td><td>13</td><td>14.8</td><td>13800</td><td>20700</td><td>18000</td></tr><tr><td class="type-cell">KT 283317</td><td>28</td><td>33</td><td>17</td><td>18.9</td><td>18300</td><td>29500</td><td>18000</td></tr><tr><td class="type-cell">KT 283327</td><td>28</td><td>33</td><td>27</td><td>29</td><td>26300</td><td>47300</td><td>18000</td></tr><tr><td class="type-cell">KT 283417</td><td>28</td><td>34</td><td>17</td><td>23</td><td>20300</td><td>29900</td><td>18000</td></tr><tr><td class="type-cell">KT 283516</td><td>28</td><td>35</td><td>16</td><td>26</td><td>20100</td><td>26500</td><td>18000</td></tr><tr><td class="type-cell">KT 283528</td><td>28</td><td>35</td><td>28</td><td>44.5</td><td>33200</td><td>50600</td><td>18000</td></tr><tr><td class="type-cell">KT 283620</td><td>28</td><td>36</td><td>20</td><td>38.5</td><td>26500</td><td>34700</td><td>18000</td></tr><tr><td class="type-cell">KT 284138</td><td>28</td><td>41</td><td>38</td><td>110</td><td>58700</td><td>71100</td><td>18000</td></tr><tr><td class="type-cell">KT 293825N</td><td>29</td><td>38</td><td>25</td><td>40.7</td><td>35800</td><td>47800</td><td>17500</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 30·32mm<span class="series-count">27건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 303513</td><td>30</td><td>35</td><td>13</td><td>15.6</td><td>14100</td><td>21700</td><td>17000</td></tr><tr><td class="type-cell">KT 303516</td><td>30</td><td>35</td><td>16</td><td>18.9</td><td>17500</td><td>28700</td><td>17000</td></tr><tr><td class="type-cell">KT 303517</td><td>30</td><td>35</td><td>17</td><td>20</td><td>18700</td><td>31100</td><td>17000</td></tr><tr><td class="type-cell">KT 303524</td><td>30</td><td>35</td><td>24</td><td>28.5</td><td>24900</td><td>45100</td><td>17000</td></tr><tr><td class="type-cell">KT 303527</td><td>30</td><td>35</td><td>27</td><td>31.5</td><td>27900</td><td>52100</td><td>17000</td></tr><tr><td class="type-cell">KT 303613</td><td>30</td><td>36</td><td>13</td><td>19.1</td><td>15800</td><td>22100</td><td>17000</td></tr><tr><td class="type-cell">KT 303620</td><td>30</td><td>36</td><td>20</td><td>29.5</td><td>23300</td><td>36500</td><td>17000</td></tr><tr><td class="type-cell">KT 303630</td><td>30</td><td>36</td><td>30</td><td>41.5</td><td>33200</td><td>57500</td><td>17000</td></tr><tr><td class="type-cell">KT 303715</td><td>30</td><td>37</td><td>15</td><td>26</td><td>19500</td><td>26000</td><td>17000</td></tr><tr><td class="type-cell">KT 303716</td><td>30</td><td>37</td><td>16</td><td>27.5</td><td>20800</td><td>28400</td><td>17000</td></tr><tr><td class="type-cell">KT 303720</td><td>30</td><td>37</td><td>20</td><td>35</td><td>24700</td><td>35400</td><td>17000</td></tr><tr><td class="type-cell">KT 303723</td><td>30</td><td>37</td><td>23</td><td>39.5</td><td>28500</td><td>42500</td><td>17000</td></tr><tr><td class="type-cell">KT 303818</td><td>30</td><td>38</td><td>18</td><td>36.5</td><td>26200</td><td>34800</td><td>17000</td></tr><tr><td class="type-cell">KT 303824</td><td>30</td><td>38</td><td>24</td><td>48.5</td><td>33200</td><td>47200</td><td>17000</td></tr><tr><td class="type-cell">KT 304232</td><td>30</td><td>42</td><td>32</td><td>93</td><td>54000</td><td>68100</td><td>17000</td></tr><tr><td class="type-cell">KTW 304237</td><td>30</td><td>42</td><td>37</td><td>117</td><td>55900</td><td>71300</td><td>17000</td></tr><tr><td class="type-cell">KT 323713</td><td>32</td><td>37</td><td>13</td><td>16.7</td><td>14900</td><td>23700</td><td>16000</td></tr><tr><td class="type-cell">KT 323717</td><td>32</td><td>37</td><td>17</td><td>21.5</td><td>19600</td><td>33900</td><td>16000</td></tr><tr><td class="type-cell">KT 323723</td><td>32</td><td>37</td><td>23</td><td>28.5</td><td>24400</td><td>44800</td><td>16000</td></tr><tr><td class="type-cell">KT 323813</td><td>32</td><td>38</td><td>13</td><td>20.5</td><td>16800</td><td>24400</td><td>16000</td></tr><tr><td class="type-cell">KT 323820</td><td>32</td><td>38</td><td>20</td><td>31.5</td><td>24800</td><td>40300</td><td>16000</td></tr><tr><td class="type-cell">KT 323916</td><td>32</td><td>39</td><td>16</td><td>29</td><td>21600</td><td>30200</td><td>16000</td></tr><tr><td class="type-cell">KT 323920</td><td>32</td><td>39</td><td>20</td><td>37</td><td>25600</td><td>37700</td><td>16000</td></tr><tr><td class="type-cell">KT 324519</td><td>32</td><td>45</td><td>19</td><td>63.5</td><td>33700</td><td>35900</td><td>16000</td></tr><tr><td class="type-cell">KT 324525</td><td>32</td><td>45</td><td>25</td><td>84.5</td><td>45600</td><td>53000</td><td>16000</td></tr><tr><td class="type-cell">KT 324532</td><td>32</td><td>45</td><td>32</td><td>109</td><td>58500</td><td>73000</td><td>16000</td></tr><tr><td class="type-cell">KT 324550</td><td>32</td><td>45</td><td>50</td><td>162</td><td>81500</td><td>111000</td><td>16000</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 35~40mm<span class="series-count">27건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 354013</td><td>35</td><td>40</td><td>13</td><td>18.1</td><td>15500</td><td>25800</td><td>14000</td></tr><tr><td class="type-cell">KT 354017</td><td>35</td><td>40</td><td>17</td><td>23</td><td>20500</td><td>36900</td><td>14000</td></tr><tr><td class="type-cell">KT 354026</td><td>35</td><td>40</td><td>26</td><td>34.5</td><td>28700</td><td>56800</td><td>14000</td></tr><tr><td class="type-cell">KT 354113</td><td>35</td><td>41</td><td>13</td><td>22.5</td><td>17700</td><td>26800</td><td>14000</td></tr><tr><td class="type-cell">KT 354216</td><td>35</td><td>42</td><td>16</td><td>32</td><td>23100</td><td>33900</td><td>14000</td></tr><tr><td class="type-cell">KT 354218</td><td>35</td><td>42</td><td>18</td><td>35.5</td><td>26000</td><td>39500</td><td>14000</td></tr><tr><td class="type-cell">KT 354220</td><td>35</td><td>42</td><td>20</td><td>40.5</td><td>27400</td><td>42300</td><td>14000</td></tr><tr><td class="type-cell">KT 354230</td><td>35</td><td>42</td><td>30</td><td>59</td><td>40600</td><td>70300</td><td>14000</td></tr><tr><td class="type-cell">KT 354525</td><td>35</td><td>45</td><td>25</td><td>68.5</td><td>42100</td><td>57900</td><td>14000</td></tr><tr><td class="type-cell">KT 364216</td><td>36</td><td>42</td><td>16</td><td>27.5</td><td>21900</td><td>35700</td><td>14000</td></tr><tr><td class="type-cell">KT 384417</td><td>38</td><td>44</td><td>17</td><td>30.5</td><td>23800</td><td>40400</td><td>13000</td></tr><tr><td class="type-cell">KT 384620</td><td>38</td><td>46</td><td>20</td><td>50</td><td>30500</td><td>45400</td><td>13000</td></tr><tr><td class="type-cell">KT 384632</td><td>38</td><td>46</td><td>32</td><td>80</td><td>45400</td><td>75700</td><td>13000</td></tr><tr><td class="type-cell">KT 404513</td><td>40</td><td>45</td><td>13</td><td>20.5</td><td>16800</td><td>29800</td><td>12000</td></tr><tr><td class="type-cell">KT 404517</td><td>40</td><td>45</td><td>17</td><td>26.5</td><td>22200</td><td>42700</td><td>12000</td></tr><tr><td class="type-cell">KT 404527</td><td>40</td><td>45</td><td>27</td><td>41</td><td>32400</td><td>69200</td><td>12000</td></tr><tr><td class="type-cell">KT 404817</td><td>40</td><td>48</td><td>17</td><td>44</td><td>28100</td><td>41600</td><td>12000</td></tr><tr><td class="type-cell">KT 404820</td><td>40</td><td>48</td><td>20</td><td>52.5</td><td>31400</td><td>48000</td><td>12000</td></tr><tr><td class="type-cell">KT 404825</td><td>40</td><td>48</td><td>25</td><td>64.5</td><td>39300</td><td>64000</td><td>12000</td></tr><tr><td class="type-cell">KT 404834</td><td>40</td><td>48</td><td>34</td><td>87.5</td><td>51100</td><td>89600</td><td>12000</td></tr><tr><td class="type-cell">KT 405015</td><td>40</td><td>50</td><td>15</td><td>48.5</td><td>28200</td><td>35900</td><td>12000</td></tr><tr><td class="type-cell">KT 405017</td><td>40</td><td>50</td><td>17</td><td>56.5</td><td>30200</td><td>39200</td><td>12000</td></tr><tr><td class="type-cell">KT 405020</td><td>40</td><td>50</td><td>20</td><td>61</td><td>35700</td><td>48600</td><td>12000</td></tr><tr><td class="type-cell">KTW 405238</td><td>40</td><td>52</td><td>38</td><td>158</td><td>65000</td><td>93000</td><td>12000</td></tr><tr><td class="type-cell">KT 405432</td><td>40</td><td>54</td><td>32</td><td>144</td><td>66800</td><td>87200</td><td>12000</td></tr><tr><td class="type-cell">KT 405450</td><td>40</td><td>54</td><td>50</td><td>215</td><td>93600</td><td>134000</td><td>12000</td></tr><tr><td class="type-cell">KT 405463</td><td>40</td><td>54</td><td>63</td><td>270</td><td>115000</td><td>175000</td><td>12000</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 41~52mm<span class="series-count">24건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 414835</td><td>41</td><td>48</td><td>35</td><td>78.5</td><td>47800</td><td>90800</td><td>12000</td></tr><tr><td class="type-cell">KT 424717</td><td>42</td><td>47</td><td>17</td><td>27.5</td><td>22500</td><td>44200</td><td>12000</td></tr><tr><td class="type-cell">KT 424815</td><td>42</td><td>48</td><td>15</td><td>30</td><td>22400</td><td>38600</td><td>12000</td></tr><tr><td class="type-cell">KT 424816</td><td>42</td><td>48</td><td>16</td><td>32</td><td>24000</td><td>42100</td><td>12000</td></tr><tr><td class="type-cell">KT 425020</td><td>42</td><td>50</td><td>20</td><td>55</td><td>32400</td><td>50600</td><td>12000</td></tr><tr><td class="type-cell">KT 425030</td><td>42</td><td>50</td><td>30</td><td>80.5</td><td>48200</td><td>84400</td><td>12000</td></tr><tr><td class="type-cell">KT 455017</td><td>45</td><td>50</td><td>17</td><td>29.5</td><td>23300</td><td>47100</td><td>11000</td></tr><tr><td class="type-cell">KT 455027</td><td>45</td><td>50</td><td>27</td><td>46</td><td>34800</td><td>79000</td><td>11000</td></tr><tr><td class="type-cell">KT 455320</td><td>45</td><td>53</td><td>20</td><td>58</td><td>33200</td><td>53300</td><td>11000</td></tr><tr><td class="type-cell">KT 455325</td><td>45</td><td>53</td><td>25</td><td>71.5</td><td>41500</td><td>71100</td><td>11000</td></tr><tr><td class="type-cell">KT 455330</td><td>45</td><td>53</td><td>30</td><td>86</td><td>47800</td><td>85300</td><td>11000</td></tr><tr><td class="type-cell">KT 455335</td><td>45</td><td>53</td><td>35</td><td>101</td><td>53900</td><td>99500</td><td>11000</td></tr><tr><td class="type-cell">KT 455527</td><td>45</td><td>55</td><td>27</td><td>90.5</td><td>50300</td><td>78200</td><td>11000</td></tr><tr><td class="type-cell">KT 485320</td><td>48</td><td>53</td><td>20</td><td>37</td><td>26800</td><td>57600</td><td>10000</td></tr><tr><td class="type-cell">KT 485420</td><td>48</td><td>54</td><td>20</td><td>46</td><td>30600</td><td>60400</td><td>10000</td></tr><tr><td class="type-cell">KT 505520</td><td>50</td><td>55</td><td>20</td><td>38.5</td><td>27100</td><td>59300</td><td>10000</td></tr><tr><td class="type-cell">KT 505527</td><td>50</td><td>55</td><td>27</td><td>50.5</td><td>35600</td><td>84100</td><td>10000</td></tr><tr><td class="type-cell">KT 505820</td><td>50</td><td>58</td><td>20</td><td>65</td><td>35900</td><td>61100</td><td>10000</td></tr><tr><td class="type-cell">KT 505825</td><td>50</td><td>58</td><td>25</td><td>80</td><td>44900</td><td>81500</td><td>10000</td></tr><tr><td class="type-cell">KT 505825N</td><td>50</td><td>58</td><td>25</td><td>66.3</td><td>51400</td><td>97800</td><td>10000</td></tr><tr><td class="type-cell">KT 505830</td><td>50</td><td>58</td><td>30</td><td>96.5</td><td>51700</td><td>97800</td><td>10000</td></tr><tr><td class="type-cell">KT 505835</td><td>50</td><td>58</td><td>35</td><td>113</td><td>58300</td><td>114000</td><td>10000</td></tr><tr><td class="type-cell">KT 525817</td><td>52</td><td>58</td><td>17</td><td>41</td><td>28300</td><td>56000</td><td>9500</td></tr><tr><td class="type-cell">KT 526024</td><td>52</td><td>60</td><td>24</td><td>80</td><td>44000</td><td>80800</td><td>9500</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 55~75mm<span class="series-count">24건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 556020</td><td>55</td><td>60</td><td>20</td><td>42.5</td><td>28600</td><td>66000</td><td>9000</td></tr><tr><td class="type-cell">KT 556027</td><td>55</td><td>60</td><td>27</td><td>55.5</td><td>37600</td><td>93900</td><td>9000</td></tr><tr><td class="type-cell">KT 556120</td><td>55</td><td>61</td><td>20</td><td>52</td><td>32600</td><td>68500</td><td>9000</td></tr><tr><td class="type-cell">KT 556315</td><td>55</td><td>63</td><td>15</td><td>52.5</td><td>29400</td><td>48700</td><td>9000</td></tr><tr><td class="type-cell">KT 556320</td><td>55</td><td>63</td><td>20</td><td>71</td><td>37400</td><td>66400</td><td>9000</td></tr><tr><td class="type-cell">KT 556325</td><td>55</td><td>63</td><td>25</td><td>87</td><td>46800</td><td>88600</td><td>9000</td></tr><tr><td class="type-cell">KT 586320</td><td>58</td><td>63</td><td>20</td><td>44.5</td><td>29300</td><td>69400</td><td>8500</td></tr><tr><td class="type-cell">KT 586420</td><td>58</td><td>64</td><td>20</td><td>54.5</td><td>33600</td><td>72500</td><td>8500</td></tr><tr><td class="type-cell">KT 606520</td><td>60</td><td>65</td><td>20</td><td>45.5</td><td>29700</td><td>71100</td><td>8500</td></tr><tr><td class="type-cell">KT 606820</td><td>60</td><td>68</td><td>20</td><td>76.5</td><td>38900</td><td>71700</td><td>8500</td></tr><tr><td class="type-cell">KT 606825</td><td>60</td><td>68</td><td>25</td><td>94</td><td>48600</td><td>95600</td><td>8500</td></tr><tr><td class="type-cell">KT 606827</td><td>60</td><td>68</td><td>27</td><td>101</td><td>52400</td><td>105000</td><td>8500</td></tr><tr><td class="type-cell">KT 607236</td><td>60</td><td>72</td><td>36</td><td>205</td><td>86700</td><td>152000</td><td>8500</td></tr><tr><td class="type-cell">KT 637120</td><td>63</td><td>71</td><td>20</td><td>79.5</td><td>39500</td><td>74400</td><td>8000</td></tr><tr><td class="type-cell">KT 657320</td><td>65</td><td>73</td><td>20</td><td>83.5</td><td>41200</td><td>79600</td><td>7500</td></tr><tr><td class="type-cell">KT 657330</td><td>65</td><td>73</td><td>30</td><td>124</td><td>59300</td><td>127000</td><td>7500</td></tr><tr><td class="type-cell">KT 687620</td><td>68</td><td>76</td><td>20</td><td>86.5</td><td>41800</td><td>82200</td><td>7500</td></tr><tr><td class="type-cell">KT 707820</td><td>70</td><td>78</td><td>20</td><td>89</td><td>42500</td><td>84900</td><td>7000</td></tr><tr><td class="type-cell">KT 707830</td><td>70</td><td>78</td><td>30</td><td>132</td><td>61200</td><td>136000</td><td>7000</td></tr><tr><td class="type-cell">KT 728020</td><td>72</td><td>80</td><td>20</td><td>91.5</td><td>43200</td><td>87500</td><td>7000</td></tr><tr><td class="type-cell">KT 758320</td><td>75</td><td>83</td><td>20</td><td>94.5</td><td>43800</td><td>90200</td><td>6500</td></tr><tr><td class="type-cell">KT 758325</td><td>75</td><td>83</td><td>25</td><td>116</td><td>54800</td><td>120000</td><td>6500</td></tr><tr><td class="type-cell">KT 758330</td><td>75</td><td>83</td><td>30</td><td>141</td><td>63100</td><td>144000</td><td>6500</td></tr><tr><td class="type-cell">KT 758335</td><td>75</td><td>83</td><td>35</td><td>164</td><td>71200</td><td>168000</td><td>6500</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>축경 80~100mm<span class="series-count">10건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 720px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>허용회전수(min<sup>-1</sup>)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 808822</td><td>80</td><td>88</td><td>22</td><td>110</td><td>49700</td><td>108000</td><td>6000</td></tr><tr><td class="type-cell">KT 808825</td><td>80</td><td>88</td><td>25</td><td>123</td><td>56400</td><td>127000</td><td>6000</td></tr><tr><td class="type-cell">KT 808830</td><td>80</td><td>88</td><td>30</td><td>149</td><td>65000</td><td>153000</td><td>6000</td></tr><tr><td class="type-cell">KT 859112</td><td>85</td><td>91</td><td>12</td><td>44.5</td><td>25200</td><td>56700</td><td>6000</td></tr><tr><td class="type-cell">KT 859325</td><td>85</td><td>93</td><td>25</td><td>130</td><td>57800</td><td>134000</td><td>6000</td></tr><tr><td class="type-cell">KT 859330</td><td>85</td><td>93</td><td>30</td><td>157</td><td>66600</td><td>161000</td><td>6000</td></tr><tr><td class="type-cell">KT 909825</td><td>90</td><td>98</td><td>25</td><td>138</td><td>60400</td><td>145000</td><td>5500</td></tr><tr><td class="type-cell">KT 909830</td><td>90</td><td>98</td><td>30</td><td>167</td><td>69600</td><td>174000</td><td>5500</td></tr><tr><td class="type-cell">KT 9510330</td><td>95</td><td>103</td><td>30</td><td>175</td><td>70900</td><td>182000</td><td>5500</td></tr><tr><td class="type-cell">KT 10010830</td><td>100</td><td>108</td><td>30</td><td>184</td><td>72500</td><td>191000</td><td>4500</td></tr></tbody>
+    </table>
+  </div>
+</details>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (질량은 g, C·C0는 N, 허용회전수는 min<sup>-1</sup>) · 허용회전수는 오일 윤활 기준이며 그리스 윤활 시 이 값의 50%까지 허용됩니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="eg" hidden>
+        <p class="cat-tab-panel-desc">엔진 등의 커넥팅로드 대단부(KT···EG)·소단부(KTV···EG)에 특화된 니들 케이지입니다. 고온·충격 하중·고속 운동·나쁜 윤활 조건 등 가혹한 환경에서 사용되도록 설계되었으며, 경량에 큰 정격 하중을 갖습니다.</p>
+
+        <div class="diagram-box">
+          <p class="diagram-caption">당사 IKO 카탈로그 규격 도면 — 커넥팅로드용 니들 케이지의 구조</p>
+          <img src="img/needle_cage_eg.png" alt="커넥팅로드용 니들 케이지 구조 단면도 (KT···EG · KTV···EG)" style="display: block; margin: 0 auto; height: 340px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+          <p class="diagram-legend">유지기(케이지) · 니들 롤러<br /><span style="color: var(--text-faint);">KT···EG(대단부용) · KTV···EG(소단부용)</span></p>
+        </div>
+
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="egFilter">형번 / 규격 검색</label>
+          <input id="egFilter" type="text" placeholder="예: KT202612EG 또는 20*26" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="egCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="egToggleAll">전체 펼치기</button>
+        </div>
+        <div id="egGroups">
+<details class="series-group">
+  <summary>대단부용 KT···EG 시리즈 (축경 8~32mm)<span class="series-count">26건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 620px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th></tr></thead>
+      <tbody><tr><td class="type-cell">KT 8128 EG</td><td>8</td><td>12</td><td>8</td><td>2.1</td><td>3280</td><td>2660</td></tr><tr><td class="type-cell">KT 101410 EG</td><td>10</td><td>14</td><td>10</td><td>3.2</td><td>4900</td><td>4680</td></tr><tr><td class="type-cell">KT 121610 EG</td><td>12</td><td>16</td><td>10</td><td>3.8</td><td>5650</td><td>5890</td></tr><tr><td class="type-cell">KT 121710 EG</td><td>12</td><td>17</td><td>10</td><td>5.3</td><td>6670</td><td>6380</td></tr><tr><td class="type-cell">KT 14199.7 EG</td><td>14</td><td>19</td><td>9.7</td><td>5.7</td><td>6120</td><td>5880</td></tr><tr><td class="type-cell">KT 141910 EG</td><td>14</td><td>19</td><td>10</td><td>5.7</td><td>6640</td><td>6530</td></tr><tr><td class="type-cell">KT 15199 EG</td><td>15</td><td>19</td><td>9</td><td>4.2</td><td>5790</td><td>6460</td></tr><tr><td class="type-cell">KT 152010 EG</td><td>15</td><td>20</td><td>10</td><td>6.1</td><td>7100</td><td>7260</td></tr><tr><td class="type-cell">KT 162211.5 EG</td><td>16</td><td>22</td><td>11.5</td><td>9.5</td><td>9550</td><td>9660</td></tr><tr><td class="type-cell">KT 162212 EG</td><td>16</td><td>22</td><td>12</td><td>9.7</td><td>10500</td><td>10900</td></tr><tr><td class="type-cell">KT 182210 EG</td><td>18</td><td>22</td><td>10</td><td>5.7</td><td>7500</td><td>9560</td></tr><tr><td class="type-cell">KT 182411.6 EG</td><td>18</td><td>24</td><td>11.6</td><td>11</td><td>10600</td><td>11500</td></tr><tr><td class="type-cell">KT 182412 EG</td><td>18</td><td>24</td><td>12</td><td>11</td><td>11800</td><td>13100</td></tr><tr><td class="type-cell">KT 202612 EG</td><td>20</td><td>26</td><td>12</td><td>12</td><td>12400</td><td>14300</td></tr><tr><td class="type-cell">KT 202614 EG</td><td>20</td><td>26</td><td>14</td><td>13.8</td><td>13000</td><td>15200</td></tr><tr><td class="type-cell">KT 202814 EG</td><td>20</td><td>28</td><td>14</td><td>20</td><td>15700</td><td>16100</td></tr><tr><td class="type-cell">KT 222814 EG</td><td>22</td><td>28</td><td>14</td><td>14.9</td><td>13600</td><td>16600</td></tr><tr><td class="type-cell">KT 222816 EG</td><td>22</td><td>28</td><td>16</td><td>17.5</td><td>15700</td><td>19800</td></tr><tr><td class="type-cell">KT 222912 EG</td><td>22</td><td>29</td><td>12</td><td>15.2</td><td>12900</td><td>14000</td></tr><tr><td class="type-cell">KT 223215 EG</td><td>22</td><td>32</td><td>15</td><td>30</td><td>21300</td><td>21500</td></tr><tr><td class="type-cell">KT 232913 EG</td><td>23</td><td>29</td><td>13</td><td>14.9</td><td>12800</td><td>15600</td></tr><tr><td class="type-cell">KT 243015 EG</td><td>24</td><td>30</td><td>15</td><td>17.9</td><td>14200</td><td>18000</td></tr><tr><td class="type-cell">KT 243016 EG</td><td>24</td><td>30</td><td>16</td><td>18.2</td><td>16300</td><td>21500</td></tr><tr><td class="type-cell">KT 243120 EG</td><td>24</td><td>31</td><td>20</td><td>28</td><td>20800</td><td>26400</td></tr><tr><td class="type-cell">KT 303818 EG</td><td>30</td><td>38</td><td>18</td><td>35.5</td><td>24900</td><td>32600</td></tr><tr><td class="type-cell">KT 324220 EG</td><td>32</td><td>42</td><td>20</td><td>54</td><td>31900</td><td>39400</td></tr></tbody>
+    </table>
+  </div>
+</details>
+<details class="series-group">
+  <summary>소단부용 KTV···EG 시리즈 (축경 9~18mm)<span class="series-count">17건</span></summary>
+  <div class="finder-results" style="overflow-x: auto;">
+    <table class="spec-table" style="min-width: 680px;">
+      <thead><tr><th>호칭번호</th><th>F<sub>w</sub></th><th>E<sub>w</sub></th><th>B<sub>c</sub></th><th>질량(g)</th><th>C(N)</th><th>C0(N)</th><th>유지기 안내방식</th></tr></thead>
+      <tbody><tr><td class="type-cell">KTV 91211.5 EG</td><td>9</td><td>12</td><td>11.5</td><td>2.8</td><td>3900</td><td>4070</td><td>외경 안내</td></tr><tr><td class="type-cell">KTV 91214 EG</td><td>9</td><td>12</td><td>14</td><td>3.5</td><td>4440</td><td>4810</td><td>내경 안내</td></tr><tr><td class="type-cell">KTV 101316 EG</td><td>10</td><td>13</td><td>16</td><td>4.5</td><td>4400</td><td>4880</td><td>내경 안내</td></tr><tr><td class="type-cell">KTV 101410 EG</td><td>10</td><td>14</td><td>10</td><td>3.8</td><td>4520</td><td>4220</td><td>내경 안내</td></tr><tr><td class="type-cell">KTV 101411 EG</td><td>10</td><td>14</td><td>11</td><td>4.1</td><td>5060</td><td>4880</td><td>외경 안내</td></tr><tr><td class="type-cell">KTV 101412.5 EG</td><td>10</td><td>14</td><td>12.5</td><td>4.8</td><td>5590</td><td>5540</td><td>내경 안내</td></tr><tr><td class="type-cell">KTV 10.51415 EG</td><td>10.5</td><td>14</td><td>15</td><td>5.1</td><td>5710</td><td>6270</td><td>외경 안내</td></tr><tr><td class="type-cell">KTV 121514.3 EG</td><td>12</td><td>15</td><td>14.3</td><td>4.3</td><td>5840</td><td>7390</td><td>외경 안내</td></tr><tr><td class="type-cell">KTV 121613 EG</td><td>12</td><td>16</td><td>13</td><td>5.6</td><td>7020</td><td>7800</td><td>외경 안내</td></tr><tr><td class="type-cell">KTV 121615.5 EG</td><td>12</td><td>16</td><td>15.5</td><td>6.8</td><td>7600</td><td>8600</td><td>외경 안내</td></tr><tr><td class="type-cell">KTV 141812 EG</td><td>14</td><td>18</td><td>12</td><td>6</td><td>6780</td><td>7760</td><td>내경 안내</td></tr><tr><td class="type-cell">KTV 141816.5 EG</td><td>14</td><td>18</td><td>16.5</td><td>8.2</td><td>9180</td><td>11500</td><td>내경 안내</td></tr><tr><td class="type-cell">KTV 141822 EG</td><td>14</td><td>18</td><td>22</td><td>10.8</td><td>9950</td><td>12600</td><td>내경 안내</td></tr><tr><td class="type-cell">KTV 162019 EG</td><td>16</td><td>20</td><td>19</td><td>10.6</td><td>10800</td><td>14600</td><td>외경 안내</td></tr><tr><td class="type-cell">KTV 162022 EG</td><td>16</td><td>20</td><td>22</td><td>12.7</td><td>11400</td><td>15700</td><td>내경 안내</td></tr><tr><td class="type-cell">KTV 182223.5 EG</td><td>18</td><td>22</td><td>23.5</td><td>14.9</td><td>13000</td><td>19300</td><td>내경 안내</td></tr><tr><td class="type-cell">KTV 182321 EG</td><td>18</td><td>23</td><td>21</td><td>16.4</td><td>14400</td><td>18900</td><td>내경 안내</td></tr></tbody>
+    </table>
+  </div>
+</details>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (질량은 g, C·C0는 N) · 호칭번호 끝의 EG는 커넥팅로드용(대단부/소단부), 보조기호는 정밀도·틈새 선별기호(예: B2)이며 미표시 시 기본값이 적용됩니다.</p>
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">
+        &#8251; 위 표는 당사 IKO 카탈로그(니들 베어링 치수표, 118~139페이지 범용·커넥팅로드용 니들 케이지 기준)를 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br />
+        표의 호칭번호 끝 "N"은 합성수지제 유지기 타입을 나타내며(탄소강제 유지기 타입 대비 사용 온도 범위가 좁음: 탄소강제 -20~120℃, 합성수지제 최고 110℃·연속 사용 100℃), KTW는 니들 롤러를 축 방향으로 2열 병렬 배치한 형식입니다. 치수표에 기재되지 않은 크기는 당사에 문의하시기 바랍니다.<br />
+        범용 니들 케이지 축경 11mm(KT 111410)의 질량(참고)값은 원본 카탈로그 인쇄 상태로 판독이 불가능하여 "문의"로 표기했습니다. 정확한 질량이 필요하신 경우 당사로 문의해 주시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-name">[회사명] BEARING CO.</div>
+        <div class="f-meta">
+          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
+          비공개 (문의 시 안내드립니다)
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="common.js"></script>
+<script>
+  (function () {
+    // Tab switching (범용 / 커넥팅로드용) — same pattern as bearing_page.html's cat-tab-btn/cat-tab-panel
+    var tabBtns = Array.prototype.slice.call(document.querySelectorAll('#needle-cage .cat-tab-btn'));
+    var tabPanels = Array.prototype.slice.call(document.querySelectorAll('#needle-cage .cat-tab-panel'));
+
+    function activateTab(target) {
+      tabBtns.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-tab') === target); });
+      tabPanels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== target; });
+    }
+
+    tabBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        activateTab(btn.getAttribute('data-tab'));
+      });
+    });
+  })();
+
+  function setupFinder(inputId, groupsId, countId, toggleBtnId, totalRows, seriesCount) {
+    var input = document.getElementById(inputId);
+    var groupsWrap = document.getElementById(groupsId);
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById(countId);
+    var toggleBtn = document.getElementById(toggleBtnId);
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        if (q !== '') {
+          grp.open = grpShown > 0;
+        } else {
+          grp.open = false;
+        }
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + seriesCount + '개 그룹';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + seriesCount + '개 그룹';
+  }
+
+  setupFinder('genFilter', 'genGroups', 'genCount', 'genToggleAll', 272, 11);
+  setupFinder('egFilter', 'egGroups', 'egCount', 'egToggleAll', 43, 2);
+</script>
+</body>
+</html>
