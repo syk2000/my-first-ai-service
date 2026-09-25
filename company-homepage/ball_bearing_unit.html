@@ -105,7 +105,7 @@
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: -8px 0 20px;">
-        아래 UC&middot;UK&middot;SB&middot;SA&middot;SC 표는 인서트 베어링 자체의 규격(d&middot;D&middot;B)입니다. 하우징 바깥 치수(H&middot;A&middot;N&middot;L 등)는 하우징 종류별로 <a href="unit_case.html">유니트 케이스</a> 페이지에 별도 정리되어 있습니다.
+        아래 UC&middot;UK&middot;SB&middot;SA&middot;SC&middot;UR&middot;SER&middot;HC(CHC) 표는 인서트 베어링 자체의 규격(d&middot;D&middot;B)입니다. 하우징 바깥 치수(H&middot;A&middot;N&middot;L 등)는 하우징 종류별로 <a href="unit_case.html">유니트 케이스</a> 페이지에 별도 정리되어 있습니다.
       </p>
 
       <div class="cat-tabs" role="tablist">
@@ -114,6 +114,9 @@
         <button type="button" class="cat-tab-btn" data-tab="sb">SB(CSB) · 세트스크류형</button>
         <button type="button" class="cat-tab-btn" data-tab="sa">SA(CSA) · 편심고정링형</button>
         <button type="button" class="cat-tab-btn" data-tab="sc">SC · 압입고정형</button>
+        <button type="button" class="cat-tab-btn" data-tab="ur">UR · 세트스크류형(협폭)</button>
+        <button type="button" class="cat-tab-btn" data-tab="ser">SER · 편심칼라형(협폭)</button>
+        <button type="button" class="cat-tab-btn" data-tab="hc">HC(CHC) · 편심칼라형(표준폭)</button>
       </div>
 
       <div class="cat-tab-panel" data-panel="uc">
@@ -221,9 +224,15 @@
         <p class="cat-tab-panel-desc">세트스크류(고정나사)로 축에 고정하는 SB(CSB) 인서트 베어링입니다.</p>
         <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
           <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 공식 카탈로그(제품 개요) 사진 · 구조 단면도(개념도)</p>
-          <div style="display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap;">
-            <img src="img/jib_sb.png" alt="SB 인서트 베어링" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
-            <img src="img/jib_csb.png" alt="CSB 인서트 베어링" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+          <div style="display: flex; gap: 24px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+            <div style="text-align: center;">
+              <img src="img/jib_sb.png" alt="SB 인서트 베어링(구면 외륜)" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+              <p style="font-size: 12px; font-weight: 700; color: #333; margin: 6px 0 0;">SB <span style="font-weight: 400; color: var(--text-sub);">(구면 외륜)</span></p>
+            </div>
+            <div style="text-align: center;">
+              <img src="img/jib_csb.png" alt="CSB 인서트 베어링(원통 외륜)" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+              <p style="font-size: 12px; font-weight: 700; color: #333; margin: 6px 0 0;">CSB <span style="font-weight: 400; color: var(--text-sub);">(원통 외륜)</span></p>
+            </div>
             <svg viewBox="0 0 200 200" style="display: block; width: 130px; height: 130px;" aria-label="SB 단면 개념도">
             <circle cx="100" cy="100" r="78" fill="none" stroke="#333" stroke-width="2.2" />
             <circle cx="100" cy="100" r="55" fill="none" stroke="#999" stroke-width="1.4" stroke-dasharray="4,3" />
@@ -257,9 +266,15 @@
         <p class="cat-tab-panel-desc">편심고정링으로 축에 고정하는 SA(CSA) 인서트 베어링입니다.</p>
         <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
           <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 공식 카탈로그(제품 개요) 사진 · 구조 단면도(개념도)</p>
-          <div style="display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap;">
-            <img src="img/jib_sa.png" alt="SA 인서트 베어링" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
-            <img src="img/jib_csa.png" alt="CSA 인서트 베어링" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+          <div style="display: flex; gap: 24px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+            <div style="text-align: center;">
+              <img src="img/jib_sa.png" alt="SA 인서트 베어링(구면 외륜)" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+              <p style="font-size: 12px; font-weight: 700; color: #333; margin: 6px 0 0;">SA <span style="font-weight: 400; color: var(--text-sub);">(구면 외륜)</span></p>
+            </div>
+            <div style="text-align: center;">
+              <img src="img/jib_csa.png" alt="CSA 인서트 베어링(원통 외륜)" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+              <p style="font-size: 12px; font-weight: 700; color: #333; margin: 6px 0 0;">CSA <span style="font-weight: 400; color: var(--text-sub);">(원통 외륜)</span></p>
+            </div>
             <svg viewBox="0 0 200 200" style="display: block; width: 130px; height: 130px;" aria-label="SA 단면 개념도">
             <circle cx="100" cy="100" r="78" fill="none" stroke="#333" stroke-width="2.2" />
             <circle cx="100" cy="100" r="55" fill="none" stroke="#999" stroke-width="1.4" stroke-dasharray="4,3" />
@@ -293,8 +308,11 @@
         <p class="cat-tab-panel-desc">압입 고정형 SC 인서트 베어링입니다.</p>
         <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
           <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">JIB 공식 카탈로그(제품 개요) 사진 · 구조 단면도(개념도)</p>
-          <div style="display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap;">
-            <img src="img/jib_sc.png" alt="SC 인서트 베어링" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+          <div style="display: flex; gap: 24px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+            <div style="text-align: center;">
+              <img src="img/jib_sc.png" alt="SC 인서트 베어링(압입 고정형)" style="display: block; height: 130px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+              <p style="font-size: 12px; font-weight: 700; color: #333; margin: 6px 0 0;">SC <span style="font-weight: 400; color: var(--text-sub);">(압입 고정형)</span></p>
+            </div>
             <svg viewBox="0 0 200 200" style="display: block; width: 130px; height: 130px;" aria-label="SC 단면 개념도">
             <circle cx="100" cy="100" r="78" fill="none" stroke="#333" stroke-width="2.2" />
             <circle cx="100" cy="100" r="55" fill="none" stroke="#999" stroke-width="1.4" stroke-dasharray="4,3" />
@@ -321,6 +339,108 @@
           </table>
         </div>
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그를 기준으로 작성했습니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="ur" hidden>
+        <p class="cat-tab-panel-desc">세트스크류(고정나사)로 축에 고정하는 UR 인서트 베어링입니다. SB와 같은 &ldquo;구면 외륜&middot;세트스크류&rdquo; 방식이지만, 하우징 규격이 SB와 달라 서로 호환되지 않는 별도 계열입니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">구조 단면도(개념도) · SWS&middot;JIB 자료에 없어 해외 정식 제조사 카탈로그 기준</p>
+          <div style="display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <svg viewBox="0 0 200 200" style="display: block; width: 150px; height: 150px;" aria-label="UR 단면 개념도">
+              <circle cx="100" cy="100" r="72" fill="none" stroke="#333" stroke-width="2.2" />
+              <circle cx="100" cy="100" r="50" fill="none" stroke="#999" stroke-width="1.4" stroke-dasharray="4,3" />
+              <circle cx="100" cy="100" r="30" fill="#e7e7e4" stroke="#333" stroke-width="2" />
+              <rect x="140" y="92" width="16" height="16" rx="2" fill="none" stroke="#333" stroke-width="1.6" transform="rotate(20 148 100)" />
+              <g stroke="#666" stroke-width="1" fill="none"><line x1="12" y1="28" x2="12" y2="172" marker-start="url(#urArrow)" marker-end="url(#urArrow)" /></g>
+              <text x="12" y="20" text-anchor="middle" font-size="15" fill="#333" font-weight="600">D</text>
+              <g stroke="#666" stroke-width="1" fill="none"><line x1="70" y1="100" x2="130" y2="100" marker-start="url(#urArrow)" marker-end="url(#urArrow)" /></g>
+              <text x="100" y="120" text-anchor="middle" font-size="15" fill="#333" font-weight="600">d</text>
+              <defs><marker id="urArrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#666" /></marker></defs>
+            </svg>
+          </div>
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">d(내경) · D(외경) · B(폭) · 구면 외륜 · 세트스크류 고정 (SB보다 협폭 하우징 계열)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="urFilter">형번 / 규격 검색</label>
+          <input id="urFilter" type="text" placeholder="예: UR206 또는 30*62" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+            <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>B(폭)</th></tr></thead>
+            <tbody id="urBody">
+              <tr><td class="type-cell">UR204-12MM</td><td>12</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UR204-15MM</td><td>15</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UR204-17MM</td><td>17</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UR204</td><td>20</td><td>47</td><td>31</td></tr><tr><td class="type-cell">UR205</td><td>25</td><td>52</td><td>34.9</td></tr><tr><td class="type-cell">UR206</td><td>30</td><td>62</td><td>38.1</td></tr><tr><td class="type-cell">UR207</td><td>35</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">UR208</td><td>40</td><td>80</td><td>49.2</td></tr><tr><td class="type-cell">UR209</td><td>45</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">UR210</td><td>50</td><td>90</td><td>51.6</td></tr><tr><td class="type-cell">UR211</td><td>55</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">UR212</td><td>60</td><td>110</td><td>65.1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · SWS&middot;JIB 자료에 없어 해외 정식 제조사(UBC/Universal Bearings) 공식 카탈로그를 기준으로 작성했습니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="ser" hidden>
+        <p class="cat-tab-panel-desc">편심고정링(칼라)으로 축에 고정하는 SER 인서트 베어링입니다. SA와 같은 &ldquo;구면 외륜&middot;편심칼라&rdquo; 방식이지만, 하우징 규격이 SA와 달라 서로 호환되지 않는 별도 계열입니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">구조 단면도(개념도) · SWS&middot;JIB 자료에 없어 해외 정식 제조사 카탈로그 기준</p>
+          <div style="display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <svg viewBox="0 0 200 200" style="display: block; width: 150px; height: 150px;" aria-label="SER 단면 개념도">
+              <circle cx="100" cy="100" r="72" fill="none" stroke="#333" stroke-width="2.2" />
+              <circle cx="100" cy="100" r="50" fill="none" stroke="#999" stroke-width="1.4" stroke-dasharray="4,3" />
+              <circle cx="100" cy="100" r="30" fill="#e7e7e4" stroke="#333" stroke-width="2" />
+              <circle cx="110" cy="90" r="13" fill="none" stroke="#333" stroke-width="1.8" stroke-dasharray="3,2" />
+              <g stroke="#666" stroke-width="1" fill="none"><line x1="12" y1="28" x2="12" y2="172" marker-start="url(#serArrow)" marker-end="url(#serArrow)" /></g>
+              <text x="12" y="20" text-anchor="middle" font-size="15" fill="#333" font-weight="600">D</text>
+              <g stroke="#666" stroke-width="1" fill="none"><line x1="70" y1="100" x2="130" y2="100" marker-start="url(#serArrow)" marker-end="url(#serArrow)" /></g>
+              <text x="100" y="120" text-anchor="middle" font-size="15" fill="#333" font-weight="600">d</text>
+              <defs><marker id="serArrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#666" /></marker></defs>
+            </svg>
+          </div>
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">d(내경) · D(외경) · B(폭) · 구면 외륜 · 점선 원=편심고정링 (SA보다 협폭 하우징 계열)</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="serFilter">형번 / 규격 검색</label>
+          <input id="serFilter" type="text" placeholder="예: SER206 또는 30*62" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+            <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>B(폭)</th></tr></thead>
+            <tbody id="serBody">
+              <tr><td class="type-cell">SER204</td><td>20</td><td>47</td><td>31</td></tr><tr><td class="type-cell">SER205</td><td>25</td><td>52</td><td>34.9</td></tr><tr><td class="type-cell">SER206</td><td>30</td><td>62</td><td>38.1</td></tr><tr><td class="type-cell">SER207</td><td>35</td><td>72</td><td>42.9</td></tr><tr><td class="type-cell">SER208</td><td>40</td><td>80</td><td>49.2</td></tr><tr><td class="type-cell">SER209</td><td>45</td><td>85</td><td>49.2</td></tr><tr><td class="type-cell">SER210</td><td>50</td><td>90</td><td>51.6</td></tr><tr><td class="type-cell">SER211</td><td>55</td><td>100</td><td>55.6</td></tr><tr><td class="type-cell">SER212</td><td>60</td><td>110</td><td>65.1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · SWS&middot;JIB 자료에 없어 해외 정식 제조사(AMI Bearings) 공식 카탈로그를 기준으로 작성했습니다. &#8251; SER는 20mm 미만 소형 규격이 없습니다.</p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="hc" hidden>
+        <p class="cat-tab-panel-desc">편심고정링(칼라)으로 축에 고정하는 HC(CHC) 인서트 베어링입니다. UC와 비슷한 폭을 가지면서 편심칼라로 고정하는 계열로, SA·SER보다 폭이 넓습니다. HC=구면 외륜, CHC=원통 외륜(하우징 규격 공유)입니다.</p>
+        <div style="background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 20px 16px; margin: 4px 0 18px;">
+          <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 14px;">구조 단면도(개념도) · SWS&middot;JIB 자료에 없어 해외 정식 제조사 카탈로그 기준</p>
+          <div style="display: flex; gap: 24px; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <svg viewBox="0 0 200 200" style="display: block; width: 150px; height: 150px;" aria-label="HC 단면 개념도">
+              <circle cx="100" cy="100" r="78" fill="none" stroke="#333" stroke-width="2.2" />
+              <circle cx="100" cy="100" r="55" fill="none" stroke="#999" stroke-width="1.4" stroke-dasharray="4,3" />
+              <circle cx="100" cy="100" r="34" fill="#e7e7e4" stroke="#333" stroke-width="2" />
+              <circle cx="112" cy="90" r="14" fill="none" stroke="#333" stroke-width="1.8" stroke-dasharray="3,2" />
+              <g stroke="#666" stroke-width="1" fill="none"><line x1="12" y1="22" x2="12" y2="178" marker-start="url(#hcArrow)" marker-end="url(#hcArrow)" /></g>
+              <text x="12" y="14" text-anchor="middle" font-size="15" fill="#333" font-weight="600">D</text>
+              <g stroke="#666" stroke-width="1" fill="none"><line x1="66" y1="100" x2="134" y2="100" marker-start="url(#hcArrow)" marker-end="url(#hcArrow)" /></g>
+              <text x="100" y="120" text-anchor="middle" font-size="15" fill="#333" font-weight="600">d</text>
+              <defs><marker id="hcArrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#666" /></marker></defs>
+            </svg>
+          </div>
+          <p style="font-size: 11.5px; color: var(--text-sub); text-align: center; margin: 10px 0 0;">d(내경) · D(외경) · B(폭) · HC=구면 외륜 / CHC=원통 외륜 (하우징 규격 공유) · 점선 원=편심고정링</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="hcFilter">형번 / 규격 검색</label>
+          <input id="hcFilter" type="text" placeholder="예: HC206 또는 30*62" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+            <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>B(폭)</th></tr></thead>
+            <tbody id="hcBody">
+              <tr><td class="type-cell">HC201</td><td>12</td><td>40</td><td>28.6</td></tr><tr><td class="type-cell">HC202</td><td>15</td><td>47</td><td>32.0</td></tr><tr><td class="type-cell">HC203</td><td>17</td><td>47</td><td>32.0</td></tr><tr><td class="type-cell">HC204</td><td>20</td><td>47</td><td>32.0</td></tr><tr><td class="type-cell">HC205</td><td>25</td><td>52</td><td>38.1</td></tr><tr><td class="type-cell">HC206</td><td>30</td><td>62</td><td>44.5</td></tr><tr><td class="type-cell">HC207</td><td>35</td><td>72</td><td>55.6</td></tr><tr><td class="type-cell">HC208</td><td>40</td><td>80</td><td>60.3</td></tr><tr><td class="type-cell">HC209</td><td>45</td><td>85</td><td>63.5</td></tr><tr><td class="type-cell">HC210</td><td>50</td><td>90</td><td>69.9</td></tr><tr><td class="type-cell">HC211</td><td>55</td><td>100</td><td>76.2</td></tr><tr><td class="type-cell">HC212</td><td>60</td><td>110</td><td>84.1</td></tr><tr><td class="type-cell">HC213</td><td>65</td><td>120</td><td>86.0</td></tr><tr><td class="type-cell">HC214</td><td>70</td><td>125</td><td>90.0</td></tr><tr><td class="type-cell">HC215</td><td>75</td><td>130</td><td>101.6</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · SWS&middot;JIB 자료에 없어 해외 정식 제조사(Peer Bearing) 공식 카탈로그를 기준으로 작성했습니다.</p>
       </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
@@ -410,7 +530,7 @@
         });
       });
     });
-    ['sb', 'sa', 'sc'].forEach(function (prefix) {
+    ['sb', 'sa', 'sc', 'ur', 'ser', 'hc'].forEach(function (prefix) {
       var input = document.getElementById(prefix + 'Filter');
       var rows = Array.prototype.slice.call(document.querySelectorAll('#' + prefix + 'Body tr'));
       input.addEventListener('input', function () {
