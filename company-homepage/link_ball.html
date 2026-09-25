@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>링크 볼 | [회사명] 베어링</title>
+<title>링크 볼&middot;필로볼&middot;L볼 | [회사명] 베어링</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -98,13 +98,18 @@
 <section class="page-section" id="link-ball" style="border-bottom: none;">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Link Ball</p>
-        <h2>링크 볼</h2>
-        <p>볼 스터드와 소켓형 시트가 결합된 구면 조인트로, 직선&middot;요동 운동이 함께 발생하는 링크 기구의 연결부에 사용됩니다.</p>
-        <p>당사 SWS 카탈로그의 로드 엔드 페이지에 함께 수록된 ZBL(RBL) 계열과 RBI 계열, 두 형번으로 공급됩니다.</p>
-        <p class="section-head-tip">형번을 입력하면 검색됩니다.</p>
+        <p class="eyebrow">Link Ball &middot; L-Ball</p>
+        <h2>링크 볼&middot;L볼</h2>
+        <p>볼 스터드와 소켓형 시트가 결합된 구면 조인트로, 직선&middot;요동 운동이 함께 발생하는 링크 기구의 연결부에 사용됩니다. 제조사&middot;형번 체계가 서로 다른 두 계열 — <strong>링크 볼</strong>(ZBL/RBL&middot;RBI, 당사 SWS 카탈로그)과 <strong>L볼</strong>(LHSA&middot;LHS&middot;PRC, 당사 IKO 카탈로그) — 을 용도가 같아 한 페이지에서 함께 비교할 수 있도록 모았습니다.</p>
+        <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
 
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="link">링크 볼 (ZBL/RBL&middot;RBI)</button>
+        <button type="button" class="cat-tab-btn" data-tab="lball">L볼</button>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="link">
       <h3 style="margin: 0 0 6px; font-size: 17px;">ZBL(RBL) 시리즈</h3>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 10px;">국내 유통 시장에서는 ZBL(잘만정공/JMC)과 RBL(일성테크/IBC) 두 형번이 동일 규격으로 상호 호환됩니다.</p>
       <div class="diagram-box">
@@ -223,6 +228,28 @@
         RBI 규격 역시 같은 카탈로그 페이지에 &ldquo;수주 대응품&rdquo;으로 함께 수록되어 있으나, 주문 제작 품목인 만큼 리드타임&middot;최소 수량은 발주 전 견적 문의로 확인하시기 바랍니다.
         일부 유통 자료에서 유사 형번을 다른 제조사(예: THK) 제품으로 표기하는 경우가 있으니, 정밀 가공&middot;발주 전에는 반드시 형번과 도면을 대조해 최종 확인하시기 바랍니다.
       </p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="lball" hidden>
+        <p class="cat-tab-panel-desc">볼 스터드와 교차되는 축심을 가진 자동 조심형 미끄럼 베어링입니다. 그리스 봉입형(LHSA), 무급유식(LHS), 그리고 LHS용 더스트 커버(PRC)로 구성됩니다. 자동차&middot;건설기계&middot;농업용 기계 등의 링크 기구에 사용됩니다.</p>
+        <div class="diagram-box">
+          <p class="diagram-caption">당사 IKO 카탈로그 규격 도면 &middot; L볼의 구조</p>
+          <img src="img/l_ball_structure.png" alt="L볼 LHSA&middot;LHS 구조 단면도" style="display: block; margin: 0 auto; width: 100%; max-width: 950px; height: auto; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+          <p class="diagram-legend">볼 스터드 &middot; 본체 &middot; 부시(저탄소강 또는 동합금) &middot; 더스트 커버(LHSA 5 이상)</p>
+        </div>
+
+      <div class="field" style="max-width:360px;margin-bottom:16px;">
+        <label for="lballFilter">형번 / 규격 검색</label>
+        <input id="lballFilter" type="text" placeholder="예: LHSA10 또는 LHS20" autocomplete="off" />
+      </div>
+      <div class="spec-toolbar">
+        <p class="finder-tip" id="lballCount" style="margin:0;"></p>
+        <button type="button" class="spec-toolbar-btn" id="lballToggleAll">전체 펼치기</button>
+      </div>
+      <div id="lballGroups"><details class="series-group"><summary>LHSA 시리즈 &middot; 리튬계면활성그리스 봉입형<span class="series-count">8건</span></summary><div class="finder-results"><div style="overflow-x:auto;"><table class="spec-table" style="min-width:1500px;"><thead><tr><th>호칭번호</th><th>질량(g)</th><th>나사 S</th><th>V</th><th>D</th><th>L</th><th>L1</th><th>L2</th><th>l1</th><th>W1</th><th>W2</th><th>D1</th><th>D2</th><th>ℓ</th><th>P</th><th>ℓ1</th><th>ℓ2</th><th>ℓ3</th><th>볼직경 mm</th><th>Cs(N)</th></tr></thead><tbody><tr><td>LHSA 4</td><td>11</td><td>M4×0.7</td><td>4¹</td><td>14</td><td>25</td><td>18</td><td>8</td><td>4</td><td>8</td><td>—</td><td>8</td><td>10</td><td>19.5</td><td>5.5²</td><td>7</td><td>7</td><td>5</td><td>8</td><td>880</td></tr><tr><td>LHSA 5</td><td>27</td><td>M5×0.8</td><td>5</td><td>17</td><td>38.5</td><td>30</td><td>16</td><td>5</td><td>10</td><td>—</td><td>10</td><td>12</td><td>32.5</td><td>8</td><td>12</td><td>13</td><td>10</td><td>11.112</td><td>1180</td></tr><tr><td>LHSA 6</td><td>27</td><td>M6×1</td><td>6</td><td>19</td><td>39.5</td><td>30</td><td>16</td><td>5</td><td>10</td><td>—</td><td>10</td><td>12</td><td>32.5</td><td>8</td><td>12</td><td>13</td><td>10</td><td>11.112</td><td>1670</td></tr><tr><td>LHSA 8</td><td>64</td><td>M8×1.25</td><td>8</td><td>24</td><td>48</td><td>36</td><td>19</td><td>5</td><td>14</td><td>14</td><td>13</td><td>16</td><td>41.5</td><td>10</td><td>14.5</td><td>17</td><td>12.5</td><td>15</td><td>4380</td></tr><tr><td>LHSA 10</td><td>106</td><td>M10×1.25</td><td>10</td><td>28</td><td>57</td><td>43</td><td>23</td><td>6.5</td><td>17</td><td>17</td><td>15</td><td>19</td><td>49</td><td>12</td><td>16</td><td>21</td><td>17</td><td>19.05</td><td>7400</td></tr><tr><td>LHSA 10M</td><td>106</td><td>M10×1.5</td><td>10</td><td>28</td><td>57</td><td>43</td><td>23</td><td>6.5</td><td>17</td><td>17</td><td>15</td><td>19</td><td>49</td><td>12</td><td>16</td><td>21</td><td>17</td><td>19.05</td><td>7400</td></tr><tr><td>LHSA 12</td><td>180</td><td>M12×1.75</td><td>12</td><td>34</td><td>67</td><td>50</td><td>27</td><td>6.5</td><td>19</td><td>19</td><td>17.5</td><td>22</td><td>64</td><td>14</td><td>20</td><td>30</td><td>20</td><td>22.225</td><td>9900</td></tr><tr><td>LHSA 14</td><td>260</td><td>M14×2</td><td>14</td><td>38</td><td>76</td><td>57</td><td>30</td><td>8</td><td>22</td><td>22</td><td>20</td><td>25</td><td>72</td><td>17</td><td>22.5</td><td>33.5</td><td>22</td><td>25.4</td><td>14600</td></tr></tbody></table></div></div></details><details class="series-group"><summary>LHS 시리즈 &middot; 무급유식(자체 윤활이 필요)<span class="series-count">10건</span></summary><div class="finder-results"><div style="overflow-x:auto;"><table class="spec-table" style="min-width:1500px;"><thead><tr><th>호칭번호</th><th>질량(g)</th><th>나사 S</th><th>V</th><th>D</th><th>B</th><th>L</th><th>L1</th><th>L2</th><th>l1</th><th>W</th><th>D1</th><th>D2</th><th>ℓ</th><th>P</th><th>ℓ1</th><th>ℓ2</th><th>ℓ3</th><th>볼직경 mm</th><th>Cs(N)</th></tr></thead><tbody><tr><td>LHS 5</td><td>22</td><td>M5×0.8</td><td>5</td><td>17</td><td>6</td><td>35.5</td><td>27</td><td>16</td><td>4</td><td>9</td><td>9</td><td>11</td><td>30.5</td><td>8</td><td>10</td><td>15</td><td>11</td><td>11.112</td><td>2080</td></tr><tr><td>LHS 6</td><td>32</td><td>M6×1</td><td>6</td><td>19.5</td><td>6.75</td><td>39.7</td><td>30</td><td>16</td><td>5</td><td>11</td><td>10</td><td>13</td><td>36.5</td><td>10</td><td>11.5</td><td>18.5</td><td>14</td><td>12.7</td><td>3290</td></tr><tr><td>LHS 8</td><td>60</td><td>M8×1.25</td><td>8</td><td>24</td><td>9</td><td>48</td><td>36</td><td>19</td><td>5</td><td>14</td><td>12.5</td><td>16</td><td>44</td><td>11</td><td>14.5</td><td>21.5</td><td>15</td><td>15.875</td><td>4900</td></tr><tr><td>LHS 10</td><td>102</td><td>M10×1.5</td><td>10</td><td>28</td><td>10.5</td><td>57</td><td>43</td><td>23</td><td>6.5</td><td>17</td><td>15</td><td>19</td><td>52.5</td><td>13</td><td>17</td><td>26</td><td>18</td><td>19.05</td><td>7640</td></tr><tr><td>LHS 12</td><td>160</td><td>M12×1.75</td><td>12</td><td>32</td><td>12</td><td>66</td><td>50</td><td>27</td><td>6.5</td><td>19</td><td>17.5</td><td>22</td><td>61</td><td>17</td><td>20</td><td>30</td><td>20</td><td>22.225</td><td>12400</td></tr><tr><td>LHS 14</td><td>227</td><td>M14×2</td><td>14</td><td>36</td><td>13.5</td><td>75</td><td>57</td><td>30</td><td>8</td><td>22</td><td>20</td><td>25</td><td>69</td><td>17</td><td>22.5</td><td>33.5</td><td>22</td><td>25.4</td><td>14600</td></tr><tr><td>LHS 16</td><td>300</td><td>M16×2</td><td>16</td><td>40</td><td>15</td><td>84</td><td>64</td><td>36</td><td>8</td><td>22</td><td>22</td><td>27</td><td>74</td><td>19</td><td>24.5</td><td>35.5</td><td>23</td><td>28.575</td><td>19500</td></tr><tr><td>LHS 18</td><td>445</td><td>M18×1.5</td><td>18</td><td>45</td><td>16.5</td><td>93.5</td><td>71</td><td>40</td><td>10</td><td>27</td><td>25</td><td>31</td><td>84</td><td>22</td><td>27.5</td><td>40.5</td><td>25</td><td>31.75</td><td>25600</td></tr><tr><td>LHS 20</td><td>580</td><td>M20×1.5</td><td>20</td><td>49</td><td>18</td><td>101.5</td><td>77</td><td>43</td><td>10</td><td>30</td><td>27.5</td><td>34</td><td>90.5</td><td>24</td><td>30</td><td>43</td><td>27</td><td>34.925</td><td>31600</td></tr><tr><td>LHS 22</td><td>765</td><td>M22×1.5</td><td>22</td><td>54</td><td>20</td><td>111</td><td>84</td><td>47</td><td>12</td><td>32</td><td>30</td><td>37</td><td>99</td><td>27</td><td>32.5</td><td>47.5</td><td>30</td><td>38.1</td><td>39800</td></tr></tbody></table></div></div></details><details class="series-group"><summary>PRC &middot; L볼용 더스트 커버(LHS용)<span class="series-count">10건</span></summary><div class="finder-results"><div style="overflow-x:auto;"><table class="spec-table" style="min-width:700px;"><thead><tr><th>호칭번호</th><th>X</th><th>Y</th><th>E</th><th>F</th><th>Z</th><th>G</th><th>H</th></tr></thead><tbody><tr><td>PRC 5</td><td>20</td><td>29</td><td>10</td><td>19</td><td>16</td><td>8</td><td>8</td></tr><tr><td>PRC 6</td><td>22</td><td>31</td><td>11</td><td>20</td><td>19</td><td>9.5</td><td>9.5</td></tr><tr><td>PRC 8</td><td>27</td><td>38.5</td><td>13.5</td><td>25</td><td>24</td><td>12</td><td>12</td></tr><tr><td>PRC 10</td><td>31</td><td>45.5</td><td>15.5</td><td>30</td><td>27</td><td>14</td><td>13</td></tr><tr><td>PRC 12</td><td>36</td><td>53</td><td>18</td><td>35</td><td>32</td><td>16.5</td><td>15.5</td></tr><tr><td>PRC 14</td><td>40</td><td>60</td><td>20</td><td>40</td><td>36.5</td><td>19</td><td>17.5</td></tr><tr><td>PRC 16</td><td>44</td><td>68</td><td>22</td><td>46</td><td>40</td><td>20.5</td><td>19.5</td></tr><tr><td>PRC 18</td><td>49</td><td>74.5</td><td>24.5</td><td>50</td><td>46</td><td>23.5</td><td>22.5</td></tr><tr><td>PRC 20</td><td>54</td><td>82</td><td>27</td><td>55</td><td>50</td><td>25.5</td><td>24.5</td></tr><tr><td>PRC 22</td><td>59</td><td>89.5</td><td>29.5</td><td>60</td><td>53.5</td><td>27.5</td><td>26</td></tr></tbody></table></div></div></details></div>
+
+        <p style="font-size:12.5px;color:var(--text-faint);margin-top:14px;">&#8251; 위 표는 당사 IKO 카탈로그를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.</p>
+      </div>
     </div>
   </section>
 
@@ -291,6 +318,57 @@
 
     input.addEventListener('input', applyFilter);
     updateCount(rows.length);
+  })();
+
+  (function () {
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+        panels.forEach(function (p) {
+          p.hidden = p.getAttribute('data-panel') !== target;
+        });
+      });
+    });
+  })();
+
+  (function () {
+    var input = document.getElementById('lballFilter');
+    var groupsWrap = document.getElementById('lballGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('lballCount');
+    var toggleBtn = document.getElementById('lballToggleAll');
+    var totalRows = 28;
+    var seriesCount = 3;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        if (q !== '') { grp.open = grpShown > 0; } else { grp.open = false; }
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + seriesCount + '개 시리즈';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + seriesCount + '개 시리즈';
   })();
 </script>
 </body>
