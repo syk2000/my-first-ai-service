@@ -41,6 +41,8 @@
     font-family: var(--font-body);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   img, svg {
