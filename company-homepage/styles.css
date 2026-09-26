@@ -403,7 +403,7 @@
     flex-wrap: nowrap;
     width: max-content;
     gap: 8px;
-    animation: hero-marquee 260s linear infinite;
+    animation: hero-marquee 80s linear infinite;
   }
 
   .hero-marquee-viewport:hover .hero-brands {
