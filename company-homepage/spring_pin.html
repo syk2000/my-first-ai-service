@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
-<title>스프링 핀 (평행형) | [회사명] 베어링</title>
+<title>스프링 핀 | [회사명] 베어링</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -99,15 +99,21 @@
 <section class="page-section" id="spring-pin" style="border-bottom: none;">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Spring Pin · Parallel Type</p>
-        <h2>스프링 핀 (평행형)</h2>
+        <p class="eyebrow">Spring Pin</p>
+        <h2>스프링 핀</h2>
         <p>
           말린 강판을 원통형으로 성형해 <strong style="color: var(--accent);">자체 탄성으로 구멍 벽면을 압박</strong>해 고정되는 핀입니다.
-          평행형은 전체 길이에 걸쳐 지름이 일정해, 노크 핀·힌지 핀 대용으로 널리 사용합니다. 규격은
-          <strong style="color: var(--accent);">KS B 1339, JIS B 2808</strong>을 따릅니다.
+          전체 길이에 걸쳐 지름이 일정한 <strong style="color: var(--accent);">평행형</strong>(노크 핀·힌지 핀 대용, KS B 1339·JIS B 2808)과,
+          몸통에 가는 파형 홈을 넣어 삽입력·유지력을 낮춘 <strong style="color: var(--accent);">경하중용</strong> 두 종류로 공급됩니다.
         </p>
       </div>
 
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="parallel">평행형</button>
+        <button type="button" class="cat-tab-btn" data-tab="light">경하중용</button>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="parallel">
       <div class="diagram-box-lg">
         <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
         <div style="display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
@@ -175,6 +181,94 @@
         D 최대는 핀 원둘레 위에서의 최댓값, D 최소는 D1·D2·D3의 평균값입니다.
         길이×지름 생산 규격표는 원본 매트릭스를 그대로 옮긴 이미지입니다. 정밀 가공·발주 전에는 반드시 정식 카탈로그 원본으로 최종 확인하시기 바랍니다.
       </p>
+      </div>
+
+      <div class="cat-tab-panel" data-panel="light" hidden>
+      <div class="diagram-box-lg">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <div style="display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/spring_pin_top_front.png" alt="스프링 핀 경하중용 정면도 — ℓ 전체 길이, E, D" style="display: block; margin: 0 auto; height: 200px; width: auto; max-width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 정면도 — 몸통에 가는 파형 홈이 있는 구조<br /><span style="color: var(--text-faint);">ℓ=전체 길이 · E=파형 홈 안쪽 지름 · D=바깥지름 · 모따기(C)는 임의 가공</span></p>
+          </div>
+          <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
+            <img src="assets/spring_pin_top_end.png" alt="끝단 단면도 — D1·D2·D3, 45˚ 모따기" style="display: block; margin: 0 auto; height: 200px; width: auto; max-width: 100%; image-rendering: -webkit-optimize-contrast;" />
+            <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 끝단 45° 모따기 단면<br /><span style="color: var(--text-faint);">D1·D2·D3=단계별 지름(평균값이 D 최소)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 640px;">
+          <thead>
+            <tr>
+              <th>호칭지름</th>
+              <th>D 최대</th>
+              <th>D 최소</th>
+              <th>t 기준치수</th>
+              <th>E 최대</th>
+              <th>2중전단하중 (kgf)</th>
+              <th>2중전단하중 (KN)</th>
+              <th>적용 구멍경</th>
+              <th>적용 구멍 허용차</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="type-cell">1.6</td><td>1.8</td><td>1.7</td><td>0.15</td><td>1.5</td><td>95</td><td>0.93</td><td>1.6</td><td style="font-size:11px; color:var(--text-faint);">+0.08 / 0</td></tr>
+            <tr><td class="type-cell">2</td><td>2.25</td><td>2.15</td><td>0.2</td><td>1.9</td><td>158</td><td>1.55</td><td>2</td><td rowspan="3" style="font-size:11px; color:var(--text-faint);">+0.09 / 0</td></tr>
+            <tr><td class="type-cell">2.5</td><td>2.75</td><td>2.65</td><td>0.25</td><td>2.4</td><td>247</td><td>2.42</td><td>2.5</td></tr>
+            <tr><td class="type-cell">3</td><td>3.25</td><td>3.15</td><td>0.3</td><td>2.9</td><td>356</td><td>3.49</td><td>3</td></tr>
+            <tr><td class="type-cell">4</td><td>4.4</td><td>4.2</td><td>0.4</td><td>3.9</td><td>629</td><td>6.16</td><td>4</td><td style="font-size:11px; color:var(--text-faint);">+0.12 / 0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size: 16px; margin: 28px 0 10px;">길이(ℓ) × 호칭지름(D) 생산 규격표</h3>
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 520px; text-align: center;">
+          <thead>
+            <tr>
+              <th>길이 ℓ</th>
+              <th>ℓ 허용차</th>
+              <th>1.6</th>
+              <th>2</th>
+              <th>2.5</th>
+              <th>3</th>
+              <th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="type-cell">4</td><td rowspan="6" style="font-size:11px; color:var(--text-faint);">+0.5 / 0</td><td>○</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">5</td><td>○</td><td>○</td><td>○</td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">6</td><td>○</td><td>○</td><td>○</td><td>○</td><td>&mdash;</td></tr>
+            <tr><td class="type-cell">8</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">10</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">12</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">14</td><td rowspan="10" style="font-size:11px; color:var(--text-faint);">+1 / 0</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">16</td><td>○</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">18</td><td>&mdash;</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">20</td><td>&mdash;</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">22</td><td>&mdash;</td><td>&mdash;</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">25</td><td>&mdash;</td><td>&mdash;</td><td>○</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">28</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">32</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>○</td><td>○</td></tr>
+            <tr><td class="type-cell">36</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>○</td></tr>
+            <tr><td class="type-cell">40</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>○</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-box">
+        <strong>재질</strong><br />
+        스프링강, 스프링용 스텐레스강(주문 생산)
+      </div>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        ※ 위 도면과 표는 <strong style="color: var(--text-sub);">당사 정식 규격표 원본을 600dpi로 다시 렌더링</strong>해서 재대조했으며, 기존 수치와 정확히 일치함을 확인했습니다.
+        D 최대는 핀 원둘레 위에서의 최댓값, D 최소는 D1·D2·D3의 평균값입니다.
+        정밀 가공·발주 전에는 반드시 정식 카탈로그 원본으로 최종 확인하시기 바랍니다.
+      </p>
+      </div>
     </div>
   </section>
 
@@ -196,5 +290,20 @@
   </footer>
 
 <script src="common.js"></script>
+<script>
+  (function () {
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+        panels.forEach(function (p) {
+          p.hidden = p.getAttribute('data-panel') !== target;
+        });
+      });
+    });
+  })();
+</script>
 </body>
 </html>
