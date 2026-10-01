@@ -473,58 +473,6 @@
     justify-content: center;
   }
 
-  /* ---------- Stats strip ---------- */
-
-  .stats-strip {
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
-  }
-
-  .stats-strip .wrap {
-    padding-block: 28px;
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .stats-cta {
-    display: flex;
-    justify-content: center;
-    margin-top: 22px;
-  }
-
-  .stat-tile {
-    text-align: center;
-    padding-inline: 12px;
-    border-left: 1px solid var(--border);
-  }
-
-  .stat-tile:first-child {
-    border-left: none;
-  }
-
-  .stat-value {
-    font-family: var(--font-mono);
-    font-variant-numeric: tabular-nums;
-    font-size: clamp(22px, 3vw, 30px);
-    font-weight: 600;
-    color: var(--text);
-  }
-
-  .stat-value .unit {
-    font-size: 0.55em;
-    color: var(--accent);
-    margin-left: 2px;
-  }
-
-  .stat-label {
-    margin-top: 6px;
-    font-size: 13px;
-    color: var(--text-sub);
-  }
-
   /* ---------- Section shell ---------- */
 
   section.page-section {
@@ -587,42 +535,6 @@
     font-size: 14px;
     color: var(--text-sub);
     max-width: 68ch;
-  }
-
-  .org-chart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .org-chart .org-node {
-    background: var(--surface-raised);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .org-chart .org-connector {
-    width: 1px;
-    height: 20px;
-    background: var(--border);
-  }
-
-  .org-chart .org-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .org-chart .org-row .org-node {
-    font-weight: 500;
-    font-size: 13.5px;
-    color: var(--text-sub);
   }
 
   .directions-map {
@@ -1140,45 +1052,6 @@
     border-top: 1px solid var(--border);
   }
 
-  table.brand-table {
-    min-width: 560px;
-  }
-
-  table.brand-table .brand-cell {
-    width: 120px;
-  }
-
-  table.brand-table .brand-cell .brand-logo-img {
-    max-width: 100%;
-    max-height: 24px;
-    object-fit: contain;
-    display: block;
-  }
-
-  table.brand-table .brand-cell .logo-plate .brand-logo-img {
-    max-height: 18px;
-  }
-
-  table.brand-table .brand-cell .brand-badge {
-    font-size: 13px;
-    padding: 4px 10px;
-  }
-
-  table.brand-table .brand-row {
-    cursor: pointer;
-    transition: background 0.15s ease;
-  }
-
-  table.brand-table .brand-row:hover {
-    background: var(--accent-soft);
-  }
-
-  table.brand-table .brand-sub {
-    font-size: 11.5px;
-    color: var(--text-faint);
-    font-family: var(--font-mono);
-  }
-
   .no-result {
     padding: 20px 4px;
     color: var(--text-sub);
@@ -1187,17 +1060,6 @@
   }
 
   /* ---------- History timeline ---------- */
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 48px;
-  }
-
-  .about-copy p {
-    color: var(--text-sub);
-    font-size: 15px;
-  }
 
   .timeline {
     list-style: none;
@@ -1300,28 +1162,6 @@
   .partner-slot:focus-visible {
     outline: 2px solid var(--steel);
     outline-offset: 2px;
-  }
-
-  .partner-slot .brand-mark {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    border: 1.5px solid var(--steel);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display-en);
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--steel);
-  }
-
-  .partner-slot .brand-name {
-    font-family: var(--font-display-en);
-    font-weight: 600;
-    font-size: 17px;
-    letter-spacing: 0.03em;
-    color: var(--text);
   }
 
   .partner-slot .brand-tag {
@@ -1454,8 +1294,7 @@
     gap: 14px;
   }
 
-  .field-full label,
-  .field-full-row label {
+  .field-full label {
     display: block;
     font-size: 13px;
     color: var(--text-sub);
@@ -1639,15 +1478,6 @@
       order: -1;
     }
 
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 22px;
-    }
-
-    .stat-tile:nth-child(3) {
-      border-left: none;
-    }
-
     .product-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -1660,7 +1490,6 @@
       grid-template-columns: 1fr 1fr;
     }
 
-    .about-grid,
     .inquiry-grid {
       grid-template-columns: 1fr;
     }
@@ -1715,10 +1544,6 @@
 
     .brand-grid {
       grid-template-columns: 1fr;
-    }
-
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
     }
 
     .finder-fields {
