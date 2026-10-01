@@ -130,6 +130,7 @@
         <button type="button" class="cat-tab-btn" data-tab="safcc">SAFCC&middot;SBFCC (경량 원형 플랜지)</button>
         <button type="button" class="cat-tab-btn" data-tab="sapf">SAPF&middot;SBPF (프레스강판 원형 플랜지)</button>
         <button type="button" class="cat-tab-btn" data-tab="t">테이크업형 (T)</button>
+        <button type="button" class="cat-tab-btn" data-tab="tfu">프레스형 테이크업 (TM&middot;TFU)</button>
       </div>
 
       <div class="cat-tab-panel" data-panel="p">
@@ -788,8 +789,89 @@
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)</p>
       </div>
 
+      <div class="cat-tab-panel" data-panel="tfu" hidden>
+        <p class="cat-tab-panel-desc">컨베이어 체인&middot;벨트의 장력을 조절하는 프레스 성형 브라켓형 테이크업 유닛입니다. 위 &ldquo;테이크업형 (T)&rdquo; 탭의 UCT 원통형 하우징과 달리, 평판을 절곡&middot;타발 가공한 사각 브라켓에 조정 볼트가 달린 슬라이드 레일 구조로, 체인기어나 벨트 컨베이어의 레일 위에서 밀어 장력을 맞추는 방식입니다. TM A타입은 단스트로크(체인기어용), TM B타입은 장스트로크(벨트 컨베이어용)이며, TFU&middot;SUS-TFU는 별도 스틸 케이스(베어링 별매) 제품입니다.</p>
+
+        <p style="font-size: 12.5px; color: var(--text-sub); margin: -4px 0 20px;">
+          별도 단면 도면 이미지는 준비 중입니다. 정확한 외형 치수&middot;도면이 필요하신 경우 <a href="board.html">견적문의</a>로 요청해 주세요.
+        </p>
+
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="tfuFilter">형번 / 축경 검색</label>
+          <input id="tfuFilter" type="text" placeholder="예: TM204A 또는 30" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="tfuCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="tfuToggleAll">전체 펼치기</button>
+        </div>
+        <div id="tfuGroups">
+          <details class="series-group">
+            <summary>SUS-TM&middot;TFU 시리즈 (스테인리스&middot;탄소강 케이스)<span class="series-count">11건</span></summary>
+            <div class="finder-results" style="overflow-x: auto;">
+              <table class="spec-table" style="min-width: 680px; max-width: 860px;">
+                <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>L(전장)</th><th>W(폭)</th><th>H(높이)</th><th>T(두께)</th><th>Stroke(조정거리)</th><th>고정볼트</th></tr></thead>
+                <tbody>
+                  <tr><td class="type-cell">SUS-TM204A</td><td>20</td><td>170</td><td>102</td><td>26</td><td>4.5</td><td>55</td><td>4-M8</td></tr>
+                  <tr><td class="type-cell">SUS-TM205A</td><td>25</td><td>170</td><td>102</td><td>26</td><td>2.5</td><td>55</td><td>4-M8</td></tr>
+                  <tr><td class="type-cell">SUS-TM206A</td><td>30</td><td>260</td><td>122</td><td>28</td><td>2.3</td><td>115</td><td>6-M10</td></tr>
+                  <tr><td class="type-cell">SUS-TFU204</td><td>20</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td></tr>
+                  <tr><td class="type-cell">SUS-TFU205</td><td>25</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td></tr>
+                  <tr><td class="type-cell">SUS-TFU206</td><td>30</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td></tr>
+                  <tr><td class="type-cell">SUS-TFU207</td><td>35</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td></tr>
+                  <tr><td class="type-cell">TFU204</td><td>20</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td></tr>
+                  <tr><td class="type-cell">TFU205</td><td>25</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td></tr>
+                  <tr><td class="type-cell">TFU206</td><td>30</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td></tr>
+                  <tr><td class="type-cell">TFU207</td><td>35</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td><td>문의</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size: 11px; color: var(--text-faint); margin: 6px 0 0;">SUS-TM204A~206A는 TM204A~206A와 동일 하우징(재질만 스테인리스)으로 치수가 동일합니다. TFU&middot;SUS-TFU는 TM 시리즈와 다른 프레스 성형 강판 케이스 구조로, 신뢰할 수 있는 실측 치수 자료를 확보하지 못해 상세 치수를 &ldquo;문의&rdquo;로 표기했습니다.</p>
+          </details>
+          <details class="series-group">
+            <summary>TM A타입 시리즈 (단스트로크&middot;체인기어용)<span class="series-count">9건</span></summary>
+            <div class="finder-results" style="overflow-x: auto;">
+              <table class="spec-table" style="min-width: 680px; max-width: 860px;">
+                <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>L(전장)</th><th>W(폭)</th><th>H(높이)</th><th>T(두께)</th><th>Stroke(조정거리)</th><th>고정볼트</th></tr></thead>
+                <tbody>
+                  <tr><td class="type-cell">TM204A</td><td>20</td><td>170</td><td>102</td><td>26</td><td>4.5</td><td>55</td><td>4-M8</td></tr>
+                  <tr><td class="type-cell">TM205A</td><td>25</td><td>170</td><td>102</td><td>26</td><td>2.5</td><td>55</td><td>4-M8</td></tr>
+                  <tr><td class="type-cell">TM206A</td><td>30</td><td>260</td><td>122</td><td>28</td><td>2.3</td><td>115</td><td>6-M10</td></tr>
+                  <tr><td class="type-cell">TM207A</td><td>35</td><td>310</td><td>132</td><td>29</td><td>1.0</td><td>140</td><td>6-M12</td></tr>
+                  <tr><td class="type-cell">TM208A</td><td>40</td><td>350</td><td>144</td><td>34</td><td>4.0</td><td>175</td><td>6-M12</td></tr>
+                  <tr><td class="type-cell">TM209A</td><td>45</td><td>420</td><td>164</td><td>38</td><td>7.5</td><td>210</td><td>6-M14</td></tr>
+                  <tr><td class="type-cell">TM210A</td><td>50</td><td>420</td><td>164</td><td>38</td><td>6.5</td><td>210</td><td>6-M14</td></tr>
+                  <tr><td class="type-cell">TM211A</td><td>55</td><td>540</td><td>190</td><td>43</td><td>5.5</td><td>300</td><td>6-M14</td></tr>
+                  <tr><td class="type-cell">TM212A</td><td>60</td><td>540</td><td>190</td><td>43</td><td>2.5</td><td>300</td><td>6-M14</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <details class="series-group">
+            <summary>TM B타입 시리즈 (장스트로크&middot;벨트 컨베이어용)<span class="series-count">9건</span></summary>
+            <div class="finder-results" style="overflow-x: auto;">
+              <table class="spec-table" style="min-width: 680px; max-width: 860px;">
+                <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>L(전장)</th><th>W(폭)</th><th>H(높이)</th><th>T(두께)</th><th>Stroke(조정거리)</th><th>고정볼트</th></tr></thead>
+                <tbody>
+                  <tr><td class="type-cell">TM204B</td><td>20</td><td>250</td><td>102</td><td>26</td><td>4.5</td><td>135</td><td>6-M8</td></tr>
+                  <tr><td class="type-cell">TM205B</td><td>25</td><td>250</td><td>102</td><td>26</td><td>2.5</td><td>135</td><td>6-M8</td></tr>
+                  <tr><td class="type-cell">TM206B</td><td>30</td><td>320</td><td>122</td><td>28</td><td>2.3</td><td>165</td><td>6-M10</td></tr>
+                  <tr><td class="type-cell">TM207B</td><td>35</td><td>390</td><td>132</td><td>29</td><td>1.0</td><td>225</td><td>6-M12</td></tr>
+                  <tr><td class="type-cell">TM208B</td><td>40</td><td>455</td><td>144</td><td>34</td><td>4.0</td><td>285</td><td>6-M12</td></tr>
+                  <tr><td class="type-cell">TM209B</td><td>45</td><td>580</td><td>164</td><td>38</td><td>7.5</td><td>375</td><td>8-M14</td></tr>
+                  <tr><td class="type-cell">TM210B</td><td>50</td><td>580</td><td>164</td><td>38</td><td>6.5</td><td>375</td><td>8-M14</td></tr>
+                  <tr><td class="type-cell">TM211B</td><td>55</td><td>715</td><td>194</td><td>43</td><td>5.5</td><td>475</td><td>8-M14</td></tr>
+                  <tr><td class="type-cell">TM212B</td><td>60</td><td>715</td><td>194</td><td>43</td><td>5.5</td><td>475</td><td>8-M14</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · TM A&middot;B타입(UCTM 동일규격) 치수는 국내 베어링 판매처 2곳의 제품상세 치수표(아래 출처)에서 서로 교차 확인했습니다. TFU&middot;SUS-TFU는 TM 시리즈와 다른 프레스 성형 강판 케이스로, 동일 수준의 신뢰 가능한 치수 자료를 찾지 못해 &ldquo;문의&rdquo;로 표기했습니다. 정밀 가공&middot;발주 전에는 반드시 견적 문의로 최종 치수를 확인하시기 바랍니다. 베어링 인서트 자체 규격은 <a href="ball_bearing_unit.html">베어링 유니트</a> 페이지를 참고해 주세요.</p>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 4px;">출처: bearingworks.co.kr(테이크업 유니트 UCTM205-A 제품상세 치수표, UCTM=TM 동일규격 표기), bearingstore.co.kr(테이크업 유니트 TM B타입 200계열 204B 제품상세 치수표)</p>
+      </div>
+
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">
-        &#8251; 위 표는 SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그(하우징 치수표, B01/B07/B08/B09/B10/B11/B17/B19/B25/B26/B27/B28/B32/B34/B40/B42/B46/B47/B48/B49 섹션)를 기준으로 작성했습니다. 하우징은 여러 축경을 하나의 규격으로 겸용하는 경우가 많아, 겸용되는 축경 범위를 &ldquo;적용 축경&rdquo;으로 표시했습니다. H&middot;L 외의 세부 치수(J&middot;F&middot;볼트 규격 등)는 정식 도면으로 별도 안내드리며, 베어링 인서트(UC/UK) 자체 규격은 <a href="ball_bearing_unit.html">베어링 유니트</a> 페이지를 참고해 주세요. 구면 롤러 베어링용 SN 하우징은 <a href="plummer_block.html">플러머 블럭</a> 페이지를 참고해 주세요. 정밀 가공&middot;발주 전에는 반드시 견적 문의로 최종 확인하시기 바랍니다.
+        &#8251; 위 UC&middot;UK 인서트용 하우징 표는 SWS 카탈로그에 없어 JIB(제일베어링) 공식 카탈로그(하우징 치수표, B01/B07/B08/B09/B10/B11/B17/B19/B25/B26/B27/B28/B32/B34/B40/B42/B46/B47/B48/B49 섹션)를 기준으로 작성했습니다. 하우징은 여러 축경을 하나의 규격으로 겸용하는 경우가 많아, 겸용되는 축경 범위를 &ldquo;적용 축경&rdquo;으로 표시했습니다. H&middot;L 외의 세부 치수(J&middot;F&middot;볼트 규격 등)는 정식 도면으로 별도 안내드리며, 베어링 인서트(UC/UK) 자체 규격은 <a href="ball_bearing_unit.html">베어링 유니트</a> 페이지를 참고해 주세요. 구면 롤러 베어링용 SN 하우징은 <a href="plummer_block.html">플러머 블럭</a> 페이지를 참고해 주세요. 정밀 가공&middot;발주 전에는 반드시 견적 문의로 최종 확인하시기 바랍니다.
       </p>
     </div>
   </section>
@@ -986,6 +1068,51 @@
 
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+  })();
+</script>
+
+<script>
+  (function () {
+    var input = document.getElementById('tfuFilter');
+    var groupsWrap = document.getElementById('tfuGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('tfuCount');
+    var toggleBtn = document.getElementById('tfuToggleAll');
+    var totalRows = 29;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        if (q !== '') { grp.open = grpShown > 0; } else { grp.open = false; }
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 3 + '개 시리즈';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      if (allOpen) {
+        input.value = '';
+        groups.forEach(function (grp) {
+          Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) { row.style.display = ''; });
+        });
+        countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 3 + '개 시리즈';
+      }
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 3 + '개 시리즈';
   })();
 </script>
 
