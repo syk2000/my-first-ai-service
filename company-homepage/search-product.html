@@ -215,7 +215,7 @@
 
       const rows = SPEC_DATA.filter((item) => {
         if (type && PAGE_GROUP[item.p] !== type) return false;
-        if (name && !item.m.toUpperCase().includes(name)) return false;
+        if (name && !(item.m || "").toUpperCase().includes(name)) return false;
         if (!matchNum(item.d, d)) return false;
         if (!matchNum(item.D, od)) return false;
         if (!matchNum(item.h, h)) return false;
@@ -250,11 +250,11 @@
         <table class="spec-table">
           <thead>
             <tr>
-              <th>유형</th>
-              <th>형번</th>
-              <th>d(내경) mm</th>
-              <th>D(외경) mm</th>
-              <th>H(두께/길이) mm</th>
+              <th>제품유형</th>
+              <th>제품명</th>
+              <th>내경 mm</th>
+              <th>외경 mm</th>
+              <th>두께 mm</th>
             </tr>
           </thead>
           <tbody>${tableRows}</tbody>
