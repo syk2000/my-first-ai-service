@@ -110,6 +110,9 @@
         <button type="button" class="cat-tab-btn" data-tab="kround">라운드키</button>
         <button type="button" class="cat-tab-btn" data-tab="ptaper">테이퍼핀</button>
         <button type="button" class="cat-tab-btn" data-tab="pparallel">평행핀</button>
+        <button type="button" class="cat-tab-btn" data-href="spring_pin.html">스프링 핀 ↗</button>
+        <button type="button" class="cat-tab-btn" data-href="pin_r.html">R형 스냅핀 ↗</button>
+        <button type="button" class="cat-tab-btn" data-href="dish_spring.html">접시 스프링 ↗</button>
       </div>
 
       <div class="cat-tab-panel" data-panel="knormal">
@@ -726,28 +729,7 @@
         </p>
       </div>
 
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">※ 개별 형번 검색은 <a href="search-product.html" style="color: var(--accent);">규격검색</a> 페이지 또는 견적 문의를 통해 안내해드립니다.</p>
-
-      <div class="product-subgroup" style="margin-top: 40px;">
-        <h3 class="product-subgroup-title">관련 키 · 핀 제품</h3>
-        <div class="product-grid">
-          <a class="product-card" href="spring_pin.html">
-            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="17" y="6" width="6" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M12 13 L17 17 L12 21 L17 25" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <h4>스프링 핀 (평행형·경하중용)</h4>
-            <span class="p-card-cta">규격 보기 →</span>
-          </a>
-          <a class="product-card" href="pin_r.html">
-            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M8 20 A6 6 0 1 1 20 20" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M14 20 L32 20 L28 15 M32 20 L28 25" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <h4>R형 스냅핀 (R핀)</h4>
-            <span class="p-card-cta">규격 보기 →</span>
-          </a>
-          <a class="product-card" href="dish_spring.html">
-            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><path d="M9 26 L20 10 L31 26 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
-            <h4>접시 스프링</h4>
-            <span class="p-card-cta">규격 보기 →</span>
-          </a>
-        </div>
-      </div>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">※ 개별 형번 검색은 <a href="search-product.html" style="color: var(--accent);">규격검색</a> 페이지 또는 견적 문의를 통해 안내해드립니다. 스프링 핀·R형 스냅핀·접시 스프링은 위 탭에서 바로 이동할 수 있습니다.</p>
     </div>
   </section>
 
@@ -775,6 +757,8 @@
     var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
     btns.forEach(function (btn) {
       btn.addEventListener('click', function () {
+        var href = btn.getAttribute('data-href');
+        if (href) { location.href = href; return; }
         var target = btn.getAttribute('data-tab');
         btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
         panels.forEach(function (p) {
