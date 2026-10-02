@@ -178,7 +178,14 @@
     z-index: 60;
   }
 
-  .nav-item:hover .nav-dropdown,
+  @media (hover: hover) and (pointer: fine) {
+    .nav-item:hover .nav-dropdown {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, 0);
+    }
+  }
+
   .nav-item:focus-within .nav-dropdown {
     opacity: 1;
     pointer-events: auto;
