@@ -118,7 +118,7 @@
         &middot; <strong>DB(배면조합)</strong> — 접촉선이 바깥쪽에서 모이는 O형 배열, 전도모멘트에 강함<br />
         &middot; <strong>DF(정면조합)</strong> — 접촉선이 안쪽에서 모이는 X형 배열, 축 휨에 유리<br />
         &middot; <strong>DT(직렬조합)</strong> — 같은 방향으로 나란히, 한쪽 방향 하중 분산용<br />
-        <span style="color: var(--text-faint); font-size: 12.5px;">DB&middot;DF&middot;DT는 UL 단품을 조합하는 장착 방식의 명칭이며, 조합 후 별도 형번이 부여되지는 않습니다. 2개 조합(DB/DF/DT) 외에 3개(DBB,DBD 등)&middot;4개(QDB,QDT 등) 조합도 가능하며, 필요 조합 수량&middot;예압 등급은 발주 전 문의 바랍니다.</span>
+        <span style="color: var(--text-faint); font-size: 12.5px;">DB&middot;DF&middot;DT는 UL 단품을 조합하는 장착 방식의 명칭이며, 조합 후 별도 형번이 부여되지는 않습니다. 2개 조합(DB/DF/DT) 외에 3개(DBB,DBD 등)&middot;4개(QDB,QDT 등) 조합도 가능하며, 필요 조합 수량&middot;예압 등급은 발주 전 문의 바랍니다. 아래 치수표의 <strong>조합방식 토글</strong>로 UL/DB/DT 형번 표기를 바꿔볼 수 있습니다(DF는 DB와 외형치수가 동일하여 생략).</span>
       </div>
 
       <div class="info-box">
@@ -136,6 +136,24 @@
         <label for="spdFilter">형번 / 규격 검색</label>
         <input id="spdFilter" type="text" placeholder="예: B7010 또는 50*80" autocomplete="off" />
       </div>
+      <div class="spec-toolbar" style="flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+        <div>
+          <p class="finder-tip" style="margin: 0 0 6px;">정밀등급</p>
+          <div class="cat-tabs" id="spdPrecisionToggle" style="margin: 0;">
+            <button type="button" class="cat-tab-btn active" data-precision="P4S">P4S</button>
+            <button type="button" class="cat-tab-btn" data-precision="P5">P5</button>
+          </div>
+        </div>
+        <div>
+          <p class="finder-tip" style="margin: 0 0 6px;">조합방식</p>
+          <div class="cat-tabs" id="spdComboToggle" style="margin: 0;">
+            <button type="button" class="cat-tab-btn active" data-combo="UL">UL(자유조합)</button>
+            <button type="button" class="cat-tab-btn" data-combo="DB">DB(배면조합)</button>
+            <button type="button" class="cat-tab-btn" data-combo="DT">DT(직렬조합)</button>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin: 8px 0 16px;">&#8251; d&middot;D&middot;B 외형치수는 등급&middot;조합방식과 무관하게 동일합니다. 동하중&middot;허용회전수(rpm)는 조합/등급별로 당사 카탈로그에 실측값이 없어 &ldquo;문의&rdquo;로 표시됩니다 — 아래 수치는 P4S&middot;UL(자유조합) 기준 실측값입니다.</p>
       <div class="spec-toolbar">
         <p class="finder-tip" id="spdCount" style="margin: 0;"></p>
         <button type="button" class="spec-toolbar-btn" id="spdToggleAll">전체 펼치기</button>
@@ -312,6 +330,69 @@
 
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 3 + '개 시리즈';
+
+    var allRows = Array.prototype.slice.call(groupsWrap.querySelectorAll('tbody tr'));
+    allRows.forEach(function (row) {
+      var typeCell = row.children[0];
+      var widthCell = row.children[3];
+      var loadCell = row.children[4];
+      var rpmCell = row.children[5];
+      typeCell.dataset.orig = typeCell.textContent;
+      widthCell.dataset.orig = widthCell.textContent;
+      loadCell.dataset.orig = loadCell.textContent;
+      rpmCell.dataset.orig = rpmCell.textContent;
+    });
+
+    var precisionMode = 'P4S';
+    var comboMode = 'UL';
+    var faint = 'var(--text-faint)';
+
+    function applyMode() {
+      allRows.forEach(function (row) {
+        var typeCell = row.children[0];
+        var widthCell = row.children[3];
+        var loadCell = row.children[4];
+        var rpmCell = row.children[5];
+        var parts = typeCell.dataset.orig.split('.');
+        parts[2] = precisionMode;
+        parts[3] = comboMode;
+        typeCell.textContent = parts.join('.');
+
+        if (comboMode === 'UL') {
+          widthCell.textContent = widthCell.dataset.orig;
+          loadCell.textContent = loadCell.dataset.orig;
+          loadCell.style.color = '';
+        } else {
+          widthCell.textContent = '2×' + widthCell.dataset.orig;
+          loadCell.textContent = '문의';
+          loadCell.style.color = faint;
+        }
+
+        if (precisionMode === 'P5' || comboMode !== 'UL') {
+          rpmCell.textContent = '문의';
+          rpmCell.style.color = faint;
+        } else {
+          rpmCell.textContent = rpmCell.dataset.orig;
+          rpmCell.style.color = '';
+        }
+      });
+    }
+
+    function wireToggle(wrapId, dataAttr, onChange) {
+      var wrap = document.getElementById(wrapId);
+      var btns = Array.prototype.slice.call(wrap.querySelectorAll('.cat-tab-btn'));
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          onChange(btn.getAttribute(dataAttr));
+          applyMode();
+        });
+      });
+    }
+
+    wireToggle('spdPrecisionToggle', 'data-precision', function (v) { precisionMode = v; });
+    wireToggle('spdComboToggle', 'data-combo', function (v) { comboMode = v; });
   })();
 </script>
 </body>
