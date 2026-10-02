@@ -131,19 +131,20 @@
               <input id="fName" type="text" placeholder="예: UC204 또는 6204" autocomplete="off" />
             </div>
             <div class="field">
-              <label for="fD">내경 d (mm)</label>
+              <label for="fD" id="fDLabel">내경 d (mm)</label>
               <input id="fD" type="number" placeholder="예: 20" min="0" step="0.1" />
             </div>
             <div class="field">
-              <label for="fOD">외경 D (mm)</label>
+              <label for="fOD" id="fODLabel">외경 D (mm)</label>
               <input id="fOD" type="number" placeholder="예: 47" min="0" step="0.1" />
             </div>
             <div class="field">
-              <label for="fH">두께/길이 H (mm)</label>
+              <label for="fH" id="fHLabel">두께/길이 H (mm)</label>
               <input id="fH" type="number" placeholder="예: 14" min="0" step="0.1" />
             </div>
           </div>
           <p class="finder-tip">검색 TIP · 항목을 전부 채우지 않아도 됩니다. 제품명(형번) 일부만 입력하거나, 내경·외경만 입력해도 기존에 등록된 규격 안에서 바로 확인됩니다.</p>
+          <p class="finder-tip" id="fTypeNote" style="display: none;"></p>
 
           <div class="finder-results" id="finderResults"></div>
         </div>
@@ -177,6 +178,10 @@
     const fD = document.getElementById("fD");
     const fOD = document.getElementById("fOD");
     const fH = document.getElementById("fH");
+    const fDLabel = document.getElementById("fDLabel");
+    const fODLabel = document.getElementById("fODLabel");
+    const fHLabel = document.getElementById("fHLabel");
+    const fTypeNote = document.getElementById("fTypeNote");
     const finderResults = document.getElementById("finderResults");
     const resultCount = document.getElementById("resultCount");
 
@@ -189,6 +194,43 @@
       fType.appendChild(opt);
     }
 
+    // 제품 유형별 d/D/H 필드 의미 — 실제 등록된 규격 데이터의 치수 기준에 맞춤
+    const DEFAULT_LABELS = { d: "내경 d", D: "외경 D", h: "두께/길이 H" };
+    const TYPE_FIELD_LABELS = {
+      "베어링": { d: "내경 d", D: "외경 D", h: "폭 B" },
+      "아답타·로크너트·와셔": { d: "내경 d", D: "외경 D", h: "폭/두께 H" },
+      "키&핀": {
+        d: "폭 b", D: "높이 h", h: "길이 L",
+        note: "키(각키·반달키 등)는 폭 b·높이 h·길이 L 기준입니다. 핀·스프링류는 지름을 d에, 길이를 H(L)에 입력해주세요.",
+      },
+      "파워록": { d: "내경 d", D: "외경 D", h: "폭 H" },
+      "강구·볼 리테이너·볼 캐스터": {
+        d: "지름/내경 d", D: "외경 D", h: "높이 H",
+        note: "강구(鋼球)는 지름만 d에 입력하면 검색됩니다.",
+      },
+      "테이크업 유닛": { d: "내경 d", D: "외경 D", h: "폭 H" },
+      "스냅링·핀·와셔": { d: "적용 지름 d", D: "홈지름/외경 D", h: "두께 H" },
+      "오일씰·오링·유압씰": { d: "내경 d", D: "외경 D", h: "폭/두께 H" },
+      "오일게이지": {
+        d: "호칭 d", D: "외경 D", h: "전체길이 H",
+        note: "오일게이지·오일캡은 나사 호칭 기준이라 d는 비워두고 D(외경)·H(전체길이)로 검색하는 걸 권장합니다.",
+      },
+      "오일레스/DU": { d: "내경 d", D: "외경 D", h: "길이 H" },
+    };
+
+    function updateFieldLabels() {
+      const labels = TYPE_FIELD_LABELS[fType.value] || DEFAULT_LABELS;
+      fDLabel.textContent = `${labels.d} (mm)`;
+      fODLabel.textContent = `${labels.D} (mm)`;
+      fHLabel.textContent = `${labels.h} (mm)`;
+      if (labels.note) {
+        fTypeNote.textContent = "※ " + labels.note;
+        fTypeNote.style.display = "";
+      } else {
+        fTypeNote.style.display = "none";
+      }
+    }
+
     // 메인 페이지 등 다른 화면에서 ?d=20&D=47&h=14&type=... 형태로 넘어온 값을 채워준다.
     const params = new URLSearchParams(location.search);
     if (params.has("name")) fName.value = params.get("name");
@@ -196,6 +238,7 @@
     if (params.has("D")) fOD.value = params.get("D");
     if (params.has("h")) fH.value = params.get("h");
     if (params.has("type") && GROUP_ORDER.includes(params.get("type"))) fType.value = params.get("type");
+    updateFieldLabels();
 
     function matchNum(value, input) {
       if (input === null) return true;
@@ -248,15 +291,17 @@
           ? `<p class="finder-tip">검색된 ${rows.length}건 중 ${MAX_RESULTS}건만 표시했습니다. 조건을 좁혀보세요.</p>`
           : "";
 
+      const colLabels = TYPE_FIELD_LABELS[type] || DEFAULT_LABELS;
+
       finderResults.innerHTML = `
         <table class="spec-table">
           <thead>
             <tr>
               <th>제품유형</th>
               <th>제품명</th>
-              <th>내경 mm</th>
-              <th>외경 mm</th>
-              <th>두께 mm</th>
+              <th>${colLabels.d} mm</th>
+              <th>${colLabels.D} mm</th>
+              <th>${colLabels.h} mm</th>
             </tr>
           </thead>
           <tbody>${tableRows}</tbody>
@@ -265,6 +310,7 @@
       `;
     }
 
+    fType.addEventListener("input", updateFieldLabels);
     [fType, fName, fD, fOD, fH].forEach((el) => el.addEventListener("input", renderResults));
     renderResults();
 </script>
