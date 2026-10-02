@@ -157,6 +157,32 @@
     position: relative;
   }
 
+  .nav-caret {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin-left: 2px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--text-sub);
+    cursor: pointer;
+    vertical-align: -3px;
+  }
+
+  .nav-caret svg {
+    width: 10px;
+    height: 7px;
+  }
+
+  .nav-item.open .nav-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+  }
+
   .mobile-lang-row {
     display: none;
   }
@@ -1427,6 +1453,10 @@
       padding: 8px 0;
       border-bottom: none;
       color: var(--text-faint);
+    }
+
+    .nav-caret {
+      display: none;
     }
 
     .nav-toggle {

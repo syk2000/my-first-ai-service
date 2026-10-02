@@ -14,6 +14,34 @@
       });
     });
 
+    // 상단 메뉴 드롭다운 탭 토글 (호버 불가능한 기기 대응)
+    document.querySelectorAll(".nav-caret").forEach((caretBtn) => {
+      caretBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const item = caretBtn.closest(".nav-item");
+        const willOpen = !item.classList.contains("open");
+        document.querySelectorAll(".nav-item.open").forEach((openItem) => {
+          openItem.classList.remove("open");
+          const btn = openItem.querySelector(".nav-caret");
+          if (btn) btn.setAttribute("aria-expanded", "false");
+        });
+        if (willOpen) {
+          item.classList.add("open");
+          caretBtn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      document.querySelectorAll(".nav-item.open").forEach((item) => {
+        if (!item.contains(e.target)) {
+          item.classList.remove("open");
+          const btn = item.querySelector(".nav-caret");
+          if (btn) btn.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+
     // 언어 선택 (UI만 동작 · 실제 번역 콘텐츠는 추후 연동)
     const langSelect = document.getElementById("langSelect");
     const langSelectBtn = document.getElementById("langSelectBtn");
