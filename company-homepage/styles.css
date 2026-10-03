@@ -144,7 +144,7 @@
   nav.main-nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 32px;
   }
 
   nav.main-nav a {
