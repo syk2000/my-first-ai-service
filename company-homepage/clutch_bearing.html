@@ -107,21 +107,26 @@
         <p>TSS/TFS(스프래그형), FC/RC/RCB(캠형), BW/BWC(니들 클러치) 등 다양한 계열로 공급됩니다.</p>
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
+      <div class="cat-tabs" role="tablist">
+        <button type="button" class="cat-tab-btn active" data-tab="housed">TSS&middot;TFS&middot;BB&middot;LD (하우징 일체형)</button>
+        <button type="button" class="cat-tab-btn" data-tab="insert">B (베어링형 인서트)</button>
+        <button type="button" class="cat-tab-btn" data-tab="cup">FC 외 8종 (드로운컵형)</button>
+      </div>
+      <div class="cat-tab-panel" data-panel="housed">
       <div class="diagram-box">
         <p class="diagram-caption">당사 SWS 카탈로그 규격 도면</p>
         <img src="img/clutch_bearing.png" alt="구조 단면도" style="display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
         <p class="diagram-legend">d(내경) · D(외경) · B(폭) · 하우징 일체형(플랜지 고정형) 구조 &mdash; TSS&middot;TFS&middot;BB&middot;LD 공통 형태입니다. 그 외 B·FC 등 계열은 아래 각 구간에 형태별 개념도를 별도로 표시했습니다.</p>
       </div>
-
-      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
-        <label for="clbFilter">형번 / 규격 검색</label>
-        <input id="clbFilter" type="text" placeholder="예: TSS20 또는 20*47" autocomplete="off" />
-      </div>
-      <div class="spec-toolbar">
-        <p class="finder-tip" id="clbCount" style="margin: 0;"></p>
-        <button type="button" class="spec-toolbar-btn" id="clbToggleAll">전체 펼치기</button>
-      </div>
-      <div id="clbGroups">
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="housedFilter">형번 / 규격 검색</label>
+          <input id="housedFilter" type="text" placeholder="예: TSS20 또는 20*47" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="housedCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="housedToggleAll">전체 펼치기</button>
+        </div>
+        <div id="housedGroups">
         <details class="series-group">
           <summary>TSS 시리즈<span class="series-count">12건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
@@ -184,25 +189,8 @@
             </div>
           </div>
         </details>
-        <div class="diagram-box" style="margin: 20px 0;">
-          <p class="diagram-caption">형태 참고용 개념도 (SWS 카탈로그 실측 도면 아님)</p>
-          <svg viewBox="0 0 200 160" width="200" height="160" style="display: block; margin: 0 auto;" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="80" r="68" stroke="#333" stroke-width="2.5"/>
-            <circle cx="100" cy="80" r="40" stroke="#333" stroke-width="2.5"/>
-            <circle cx="100" cy="80" r="6" fill="#333"/>
-            <g stroke="#333" stroke-width="3" stroke-linecap="round">
-              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(0 100 80)"/>
-              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(60 100 80)"/>
-              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(120 100 80)"/>
-              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(180 100 80)"/>
-              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(240 100 80)"/>
-              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(300 100 80)"/>
-            </g>
-          </svg>
-          <p class="diagram-legend">d(내경) · D(외경) · 하우징 없이 내&middot;외륜(스프래그 인서트)만 공급 &mdash; 표준 베어링 보어 자리에 압입해 사용하는 형태입니다.</p>
-        </div>
         <details class="series-group">
-          <summary>B 시리즈<span class="series-count">8건</span></summary>
+          <summary>BB 시리즈<span class="series-count">7건</span></summary>
           <div class="finder-results" style="overflow-x: auto;">
             <table class="spec-table" style="min-width: 420px; max-width: 600px;">
               <thead>
@@ -213,8 +201,9 @@
               <th>B(폭)</th>
             </tr>
           </thead>
-              <tbody><tr><td class="type-cell">B203</td><td>16.51</td><td>40</td><td>25</td></tr><tr><td class="type-cell">B204</td><td>18.796</td><td>47</td><td>25</td></tr><tr><td class="type-cell">B205</td><td>23.622</td><td>52</td><td>25</td></tr><tr><td class="type-cell">B206</td><td>32.766</td><td>62</td><td>28</td></tr><tr><td class="type-cell">B207</td><td>42.088</td><td>72</td><td>28</td></tr><tr><td class="type-cell">B208</td><td>46.761</td><td>80</td><td>32</td></tr><tr><td class="type-cell">B209</td><td>46.761</td><td>85</td><td>32</td></tr><tr><td class="type-cell">B210</td><td>56.109</td><td>90</td><td>32</td></tr></tbody>
+              <tbody><tr><td class="type-cell">BB15</td><td>15</td><td>35</td><td>11</td></tr><tr><td class="type-cell">BB17</td><td>17</td><td>40</td><td>12</td></tr><tr><td class="type-cell">BB20</td><td>20</td><td>47</td><td>14</td></tr><tr><td class="type-cell">BB25</td><td>25</td><td>52</td><td>15</td></tr><tr><td class="type-cell">BB30</td><td>30</td><td>62</td><td>16</td></tr><tr><td class="type-cell">BB35</td><td>35</td><td>72</td><td>17</td></tr><tr><td class="type-cell">BB40</td><td>40</td><td>80</td><td>22</td></tr></tbody>
             </table>
+            <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 8px;">※ 키홈 옵션: 형번 뒤에 <strong style="color: var(--text-sub);">-1K</strong>(내륜에만 키홈) 또는 <strong style="color: var(--text-sub);">-2K</strong>(내·외륜 모두 키홈)를 붙여 주문합니다. 치수(d/D/B)는 1K·2K 공통입니다.</p>
           </div>
         </details>
         <details class="series-group">
@@ -233,8 +222,37 @@
             </table>
           </div>
         </details>
+        </div>
+      </div>
+      <div class="cat-tab-panel" data-panel="insert" hidden>
+        <div class="diagram-box" style="margin: 20px 0;">
+          <p class="diagram-caption">형태 참고용 개념도 (SWS 카탈로그 실측 도면 아님)</p>
+          <svg viewBox="0 0 200 160" width="200" height="160" style="display: block; margin: 0 auto;" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="80" r="68" stroke="#333" stroke-width="2.5"/>
+            <circle cx="100" cy="80" r="40" stroke="#333" stroke-width="2.5"/>
+            <circle cx="100" cy="80" r="6" fill="#333"/>
+            <g stroke="#333" stroke-width="3" stroke-linecap="round">
+              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(0 100 80)"/>
+              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(60 100 80)"/>
+              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(120 100 80)"/>
+              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(180 100 80)"/>
+              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(240 100 80)"/>
+              <line x1="100" y1="42" x2="100" y2="58" transform="rotate(300 100 80)"/>
+            </g>
+          </svg>
+          <p class="diagram-legend">d(내경) · D(외경) · 하우징 없이 내&middot;외륜(스프래그 인서트)만 공급 &mdash; 표준 베어링 보어 자리에 압입해 사용하는 형태입니다.</p>
+        </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="insertFilter">형번 / 규격 검색</label>
+          <input id="insertFilter" type="text" placeholder="예: B205 또는 23*52" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="insertCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="insertToggleAll">전체 펼치기</button>
+        </div>
+        <div id="insertGroups">
         <details class="series-group">
-          <summary>BB 시리즈<span class="series-count">7건</span></summary>
+          <summary>B 시리즈<span class="series-count">8건</span></summary>
           <div class="finder-results" style="overflow-x: auto;">
             <table class="spec-table" style="min-width: 420px; max-width: 600px;">
               <thead>
@@ -245,11 +263,13 @@
               <th>B(폭)</th>
             </tr>
           </thead>
-              <tbody><tr><td class="type-cell">BB15</td><td>15</td><td>35</td><td>11</td></tr><tr><td class="type-cell">BB17</td><td>17</td><td>40</td><td>12</td></tr><tr><td class="type-cell">BB20</td><td>20</td><td>47</td><td>14</td></tr><tr><td class="type-cell">BB25</td><td>25</td><td>52</td><td>15</td></tr><tr><td class="type-cell">BB30</td><td>30</td><td>62</td><td>16</td></tr><tr><td class="type-cell">BB35</td><td>35</td><td>72</td><td>17</td></tr><tr><td class="type-cell">BB40</td><td>40</td><td>80</td><td>22</td></tr></tbody>
+              <tbody><tr><td class="type-cell">B203</td><td>16.51</td><td>40</td><td>25</td></tr><tr><td class="type-cell">B204</td><td>18.796</td><td>47</td><td>25</td></tr><tr><td class="type-cell">B205</td><td>23.622</td><td>52</td><td>25</td></tr><tr><td class="type-cell">B206</td><td>32.766</td><td>62</td><td>28</td></tr><tr><td class="type-cell">B207</td><td>42.088</td><td>72</td><td>28</td></tr><tr><td class="type-cell">B208</td><td>46.761</td><td>80</td><td>32</td></tr><tr><td class="type-cell">B209</td><td>46.761</td><td>85</td><td>32</td></tr><tr><td class="type-cell">B210</td><td>56.109</td><td>90</td><td>32</td></tr></tbody>
             </table>
-            <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 8px;">※ 키홈 옵션: 형번 뒤에 <strong style="color: var(--text-sub);">-1K</strong>(내륜에만 키홈) 또는 <strong style="color: var(--text-sub);">-2K</strong>(내·외륜 모두 키홈)를 붙여 주문합니다. 치수(d/D/B)는 1K·2K 공통입니다.</p>
           </div>
         </details>
+        </div>
+      </div>
+      <div class="cat-tab-panel" data-panel="cup" hidden>
         <div class="diagram-box" style="margin: 20px 0;">
           <p class="diagram-caption">형태 참고용 개념도 (SWS 카탈로그 실측 도면 아님)</p>
           <svg viewBox="0 0 220 140" width="220" height="140" style="display: block; margin: 0 auto;" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -265,6 +285,15 @@
           </svg>
           <p class="diagram-legend">d(내경) · D(외경) · B(폭) · 얇은 드로운컵(타발) 외륜에 니들 롤러를 넣은 소형 구조 &mdash; FC&middot;HF&middot;RC&middot;RCB&middot;FCBN&middot;FCB&middot;X&middot;BWC&middot;BW 공통 형태입니다.</p>
         </div>
+        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+          <label for="cupFilter">형번 / 규격 검색</label>
+          <input id="cupFilter" type="text" placeholder="예: FC12 또는 BW-13214" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="cupCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="cupToggleAll">전체 펼치기</button>
+        </div>
+        <div id="cupGroups">
         <details class="series-group">
           <summary>FC 시리즈<span class="series-count">12건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
@@ -439,6 +468,7 @@
             </table>
           </div>
         </details>
+        </div>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
@@ -468,43 +498,57 @@
 <script src="common.js"></script>
 <script>
   (function () {
-    var input = document.getElementById('clbFilter');
-    var groupsWrap = document.getElementById('clbGroups');
-    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
-    var countEl = document.getElementById('clbCount');
-    var toggleBtn = document.getElementById('clbToggleAll');
-    var totalRows = 97;
-
-    function applyFilter() {
-      var q = input.value.trim().toUpperCase();
-      var shown = 0;
-      groups.forEach(function (grp) {
-        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
-        var grpShown = 0;
-        grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
-          row.style.display = match ? '' : 'none';
-          if (match) grpShown++;
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+        panels.forEach(function (p) {
+          p.hidden = p.getAttribute('data-panel') !== target;
         });
-        shown += grpShown;
-        if (q !== '') {
-          grp.open = grpShown > 0;
-        } else {
-          grp.open = false;
-        }
       });
-      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 14 + '개 시리즈';
-    }
-
-    var allOpen = false;
-    toggleBtn.addEventListener('click', function () {
-      allOpen = !allOpen;
-      groups.forEach(function (grp) { grp.open = allOpen; });
-      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
     });
+  })();
+</script>
+<script>
+  (function () {
+    ['housed', 'insert', 'cup'].forEach(function (prefix) {
+      var input = document.getElementById(prefix + 'Filter');
+      var groupsWrap = document.getElementById(prefix + 'Groups');
+      var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+      var countEl = document.getElementById(prefix + 'Count');
+      var toggleBtn = document.getElementById(prefix + 'ToggleAll');
+      var totalRows = groupsWrap.querySelectorAll('tbody tr').length;
+      var totalSeries = groups.length;
 
-    input.addEventListener('input', applyFilter);
-    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 14 + '개 시리즈';
+      function applyFilter() {
+        var q = input.value.trim().toUpperCase();
+        var shown = 0;
+        groups.forEach(function (grp) {
+          var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+          var grpShown = 0;
+          grpRows.forEach(function (row) {
+            var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+            row.style.display = match ? '' : 'none';
+            if (match) grpShown++;
+          });
+          shown += grpShown;
+          grp.open = q !== '' && grpShown > 0;
+        });
+        countEl.textContent = (q === '' ? totalRows : shown) + ' / ' + totalRows + '건 표시 중 · ' + totalSeries + '개 시리즈';
+      }
+
+      var allOpen = false;
+      toggleBtn.addEventListener('click', function () {
+        allOpen = !allOpen;
+        groups.forEach(function (grp) { grp.open = allOpen; });
+        toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+      });
+
+      input.addEventListener('input', applyFilter);
+      countEl.textContent = totalRows + '건 · ' + totalSeries + '개 시리즈';
+    });
   })();
 </script>
 </body>
