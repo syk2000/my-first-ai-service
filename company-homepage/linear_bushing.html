@@ -107,13 +107,49 @@
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
       <div class="cat-tabs" role="tablist">
-        <button type="button" class="cat-tab-btn active" data-tab="lmf">LMF/LMFL</button>
+        <button type="button" class="cat-tab-btn active" data-tab="lm">LM/LM..L (표준형)</button>
+        <button type="button" class="cat-tab-btn" data-tab="lmf">LMF/LMFL</button>
         <button type="button" class="cat-tab-btn" data-tab="lmk">LMK/LMKL</button>
         <button type="button" class="cat-tab-btn" data-tab="lmh">LMH/LMHL</button>
         <button type="button" class="cat-tab-btn" data-tab="sc">SC/SCW/SCWNB</button>
       </div>
 
-      <div class="cat-tab-panel" data-panel="lmf">
+      <div class="cat-tab-panel" data-panel="lm">
+        <p class="cat-tab-panel-desc">LM(표준형)·LM..L(장원형) 리니어 부시입니다. 플랜지 없이 몸체만으로 하우징에 압입해 사용하는 가장 기본적인 형태입니다.</p>
+        <div class="diagram-box">
+          <p class="diagram-caption">당사 SWS 카탈로그 규격 도면</p>
+          <img src="img/lm_lm.png" alt="LM 구조 단면도" style="display: block; margin: 0 auto; height: clamp(180px, 26vw, 320px); width: auto; max-width: 100%;" loading="lazy">
+          <p class="diagram-legend">d(내경) · D(외경) · B(볼 유효길이) · L(전장) · W(스냅링 홈 간격)</p>
+        </div>
+        <div class="field" style="max-width: 320px; margin-bottom: 16px;">
+          <label for="lmFilter">형번 / 규격 검색</label>
+          <input id="lmFilter" type="text" placeholder="예: LM20" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="lmCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="lmToggleAll">전체 펼치기</button>
+        </div>
+        <div id="lmGroups">
+        <details class="series-group">
+          <summary>LM 시리즈 (표준형)<span class="series-count">18건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>L(전장)</th></tr></thead>
+              <tbody><tr><td class="type-cell">LM3</td><td>3</td><td>7</td><td>10</td></tr><tr><td class="type-cell">LM4</td><td>4</td><td>8</td><td>12</td></tr><tr><td class="type-cell">LM5</td><td>5</td><td>10</td><td>15</td></tr><tr><td class="type-cell">LM6</td><td>6</td><td>12</td><td>19</td></tr><tr><td class="type-cell">LM8S</td><td>8</td><td>15</td><td>17</td></tr><tr><td class="type-cell">LM8</td><td>8</td><td>15</td><td>24</td></tr><tr><td class="type-cell">LM10</td><td>10</td><td>19</td><td>29</td></tr><tr><td class="type-cell">LM12</td><td>12</td><td>21</td><td>30</td></tr><tr><td class="type-cell">LM13</td><td>13</td><td>23</td><td>32</td></tr><tr><td class="type-cell">LM16</td><td>16</td><td>28</td><td>37</td></tr><tr><td class="type-cell">LM20</td><td>20</td><td>32</td><td>42</td></tr><tr><td class="type-cell">LM25</td><td>25</td><td>40</td><td>59</td></tr><tr><td class="type-cell">LM30</td><td>30</td><td>45</td><td>64</td></tr><tr><td class="type-cell">LM35</td><td>35</td><td>52</td><td>70</td></tr><tr><td class="type-cell">LM38</td><td>38</td><td>57</td><td>76</td></tr><tr><td class="type-cell">LM40</td><td>40</td><td>60</td><td>80</td></tr><tr><td class="type-cell">LM50</td><td>50</td><td>80</td><td>100</td></tr><tr><td class="type-cell">LM60</td><td>60</td><td>90</td><td>110</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+        <details class="series-group">
+          <summary>LM..L 시리즈 (장원형)<span class="series-count">16건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>d(내경)</th><th>D(외경)</th><th>L(전장)</th></tr></thead>
+              <tbody><tr><td class="type-cell">LM3L</td><td>3</td><td>7</td><td>19</td></tr><tr><td class="type-cell">LM4L</td><td>4</td><td>8</td><td>23</td></tr><tr><td class="type-cell">LM5L</td><td>5</td><td>10</td><td>29</td></tr><tr><td class="type-cell">LM6L</td><td>6</td><td>12</td><td>35</td></tr><tr><td class="type-cell">LM8L</td><td>8</td><td>15</td><td>45</td></tr><tr><td class="type-cell">LM10L</td><td>10</td><td>19</td><td>55</td></tr><tr><td class="type-cell">LM12L</td><td>12</td><td>21</td><td>57</td></tr><tr><td class="type-cell">LM13L</td><td>13</td><td>23</td><td>61</td></tr><tr><td class="type-cell">LM16L</td><td>16</td><td>28</td><td>70</td></tr><tr><td class="type-cell">LM20L</td><td>20</td><td>32</td><td>80</td></tr><tr><td class="type-cell">LM25L</td><td>25</td><td>40</td><td>112</td></tr><tr><td class="type-cell">LM30L</td><td>30</td><td>45</td><td>123</td></tr><tr><td class="type-cell">LM35L</td><td>35</td><td>52</td><td>135</td></tr><tr><td class="type-cell">LM40L</td><td>40</td><td>60</td><td>154</td></tr><tr><td class="type-cell">LM50L</td><td>50</td><td>80</td><td>192</td></tr><tr><td class="type-cell">LM60L</td><td>60</td><td>90</td><td>211</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+        </div>
+      </div><div class="cat-tab-panel" data-panel="lmf" hidden>
         <p class="cat-tab-panel-desc">LMF(원형 플랜지)·LMFL(장원형 플랜지) 리니어 부시입니다. 플랜지에 볼트 구멍이 있어 설치면에 직접 고정합니다.</p>
         <div class="diagram-box">
           <p class="diagram-caption">당사 SWS 카탈로그 규격 도면</p>
@@ -265,7 +301,7 @@
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표, 187&sim;188p)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br>
+        &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표, 186&sim;188p)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.<br>
         이 제품군은 ISO 492 일반 허용공차 규격이 적용되지 않는(또는 별도 정밀등급이 적용되는) 품목으로, 공차는 제조사 자체 규격을 따릅니다. 정확한 공차는 발주 전 문의 바랍니다.
       </p>
     </div>
@@ -305,6 +341,40 @@
   })();
 </script>
 <script>
+
+  (function () {
+    var input = document.getElementById('lmFilter');
+    var groupsWrap = document.getElementById('lmGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('lmCount');
+    var toggleBtn = document.getElementById('lmToggleAll');
+    var totalRows = 34;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        grp.open = q !== '' ? grpShown > 0 : false;
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+    }
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+  })();
 
   (function () {
     var input = document.getElementById('lmfFilter');
