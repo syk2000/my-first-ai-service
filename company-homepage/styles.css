@@ -98,9 +98,13 @@
   .header-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 16px;
     padding-block: 14px;
+  }
+
+  .lang-select {
+    margin-left: auto;
   }
 
   .logo-slot {
@@ -1461,6 +1465,7 @@
 
     .nav-toggle {
       display: block;
+      margin-left: auto;
     }
 
     .header-cta,
