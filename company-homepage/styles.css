@@ -106,7 +106,7 @@
   .header-actions {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
     flex-shrink: 0;
   }
 
