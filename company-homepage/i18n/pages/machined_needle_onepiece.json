@@ -1,0 +1,42 @@
+{
+  "text": {
+    "en": {
+      "머신드 타입 니들 롤러 베어링 (일체형) | [회사명] 베어링": "Machined Type Needle Roller Bearings (One-Piece) | [Company Name] Bearing",
+      "<p class=\"eyebrow\">Machined Type Needle Roller Bearings</p> <h2>머신드 타입 니들 롤러 베어링 (일체형)</h2> <p>니들 롤러 결합체와 얇고 열처리된 강판재 컵모양 외륜으로 구성됩니다.</p> <p>공간과 비용을 절약할 수 있어 하우징이 구름면으로 사용될 수 없는 경우에 적합하며, 필요 시 내륜을 조합해 사용합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Machined Type Needle Roller Bearings</p> <h2>Machined Type Needle Roller Bearings (One-Piece)</h2> <p>Consists of a needle roller assembly combined with a thin, heat-treated steel-plate cup-shaped outer ring.</p> <p>Saves space and cost, making it suitable for cases where the housing itself cannot serve as the rolling surface; an inner ring can be combined with it when needed.</p> <p class=\"section-head-tip\">You can search by entering just part of the model number or dimensions.</p>",
+      "<p class=\"diagram-caption\">당사 SWS 카탈로그 규격 도면</p> <img src=\"img/machined_needle_onepiece.png\" alt=\"구조 단면도\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(내경) · D(외경) · 공차(d/D) · B(폭)</p>": "<p class=\"diagram-caption\">Our SWS Catalog Standard Drawing</p> <img src=\"img/machined_needle_onepiece.png\" alt=\"Structural Cross-Section Diagram\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d (bore) · D (outer diameter) · Tolerance (d/D) · B (width)</p>",
+      "<label for=\"mnoFilter\">형번 / 규격 검색</label> <input id=\"mnoFilter\" type=\"text\" placeholder=\"예: HK1010 또는 10*14\" autocomplete=\"off\">": "<label for=\"mnoFilter\">Model / Spec Search</label> <input id=\"mnoFilter\" type=\"text\" placeholder=\"e.g. HK1010 or 10*14\" autocomplete=\"off\">",
+      "<p class=\"finder-tip\" id=\"mnoCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"mnoToggleAll\">전체 펼치기</button>": "<p class=\"finder-tip\" id=\"mnoCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"mnoToggleAll\">Expand All</button>",
+      "HK 시리즈<span class=\"series-count\">57건</span>": "HK Series<span class=\"series-count\">57 items</span>",
+      "TA 시리즈<span class=\"series-count\">117건</span>": "TA Series<span class=\"series-count\">117 items</span>"
+    },
+    "ja": {
+      "머신드 타입 니들 롤러 베어링 (일체형) | [회사명] 베어링": "マシンドタイプニードルローラベアリング(一体形) | [会社名] ベアリング",
+      "<p class=\"eyebrow\">Machined Type Needle Roller Bearings</p> <h2>머신드 타입 니들 롤러 베어링 (일체형)</h2> <p>니들 롤러 결합체와 얇고 열처리된 강판재 컵모양 외륜으로 구성됩니다.</p> <p>공간과 비용을 절약할 수 있어 하우징이 구름면으로 사용될 수 없는 경우에 적합하며, 필요 시 내륜을 조합해 사용합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Machined Type Needle Roller Bearings</p> <h2>マシンドタイプニードルローラベアリング(一体形)</h2> <p>ニードルローラ組立体と、薄肉で熱処理された鋼板製カップ形外輪で構成されます。</p> <p>スペースとコストを節約できるため、ハウジングを転走面として使用できない場合に適しており、必要に応じて内輪を組み合わせて使用します。</p> <p class=\"section-head-tip\">型番または寸法の一部を入力するだけで検索できます。</p>",
+      "<p class=\"diagram-caption\">당사 SWS 카탈로그 규격 도면</p> <img src=\"img/machined_needle_onepiece.png\" alt=\"구조 단면도\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(내경) · D(외경) · 공차(d/D) · B(폭)</p>": "<p class=\"diagram-caption\">当社SWSカタログ規格図面</p> <img src=\"img/machined_needle_onepiece.png\" alt=\"構造断面図\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(内径)・D(外径)・公差(d/D)・B(幅)</p>",
+      "<label for=\"mnoFilter\">형번 / 규격 검색</label> <input id=\"mnoFilter\" type=\"text\" placeholder=\"예: HK1010 또는 10*14\" autocomplete=\"off\">": "<label for=\"mnoFilter\">型番 / 規格検索</label> <input id=\"mnoFilter\" type=\"text\" placeholder=\"例: HK1010 または10*14\" autocomplete=\"off\">",
+      "<p class=\"finder-tip\" id=\"mnoCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"mnoToggleAll\">전체 펼치기</button>": "<p class=\"finder-tip\" id=\"mnoCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"mnoToggleAll\">すべて展開</button>",
+      "HK 시리즈<span class=\"series-count\">57건</span>": "HKシリーズ<span class=\"series-count\">57件</span>",
+      "TA 시리즈<span class=\"series-count\">117건</span>": "TAシリーズ<span class=\"series-count\">117件</span>"
+    },
+    "zh": {
+      "머신드 타입 니들 롤러 베어링 (일체형) | [회사명] 베어링": "机加工型滚针轴承(一体式) | [公司名] 轴承",
+      "<p class=\"eyebrow\">Machined Type Needle Roller Bearings</p> <h2>머신드 타입 니들 롤러 베어링 (일체형)</h2> <p>니들 롤러 결합체와 얇고 열처리된 강판재 컵모양 외륜으로 구성됩니다.</p> <p>공간과 비용을 절약할 수 있어 하우징이 구름면으로 사용될 수 없는 경우에 적합하며, 필요 시 내륜을 조합해 사용합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Machined Type Needle Roller Bearings</p> <h2>机加工型滚针轴承(一体式)</h2> <p>由滚针组件与薄壁热处理钢板冲压而成的杯形外圈组成。</p> <p>可节省空间和成本，适用于壳体本身无法作为滚动面的场合，需要时可与内圈组合使用。</p> <p class=\"section-head-tip\">仅输入型号或尺寸的一部分也可以搜索。</p>",
+      "<p class=\"diagram-caption\">당사 SWS 카탈로그 규격 도면</p> <img src=\"img/machined_needle_onepiece.png\" alt=\"구조 단면도\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(내경) · D(외경) · 공차(d/D) · B(폭)</p>": "<p class=\"diagram-caption\">本公司SWS样本规格图纸</p> <img src=\"img/machined_needle_onepiece.png\" alt=\"结构剖面图\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(内径)· D(外径)· 公差(d/D)· B(宽度)</p>",
+      "<label for=\"mnoFilter\">형번 / 규격 검색</label> <input id=\"mnoFilter\" type=\"text\" placeholder=\"예: HK1010 또는 10*14\" autocomplete=\"off\">": "<label for=\"mnoFilter\">型号 / 规格搜索</label> <input id=\"mnoFilter\" type=\"text\" placeholder=\"例如: HK1010 或10*14\" autocomplete=\"off\">",
+      "<p class=\"finder-tip\" id=\"mnoCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"mnoToggleAll\">전체 펼치기</button>": "<p class=\"finder-tip\" id=\"mnoCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"mnoToggleAll\">全部展开</button>",
+      "HK 시리즈<span class=\"series-count\">57건</span>": "HK系列<span class=\"series-count\">57项</span>",
+      "TA 시리즈<span class=\"series-count\">117건</span>": "TA系列<span class=\"series-count\">117项</span>"
+    }
+  },
+  "attrs": {
+    "en": {
+      "예: HK1010 또는 10*14": "e.g. HK1010 or 10*14"
+    },
+    "ja": {
+      "예: HK1010 또는 10*14": "例: HK1010 または10*14"
+    },
+    "zh": {
+      "예: HK1010 또는 10*14": "例如: HK1010 或10*14"
+    }
+  }
+}
