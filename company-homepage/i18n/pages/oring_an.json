@@ -1,0 +1,33 @@
+{
+  "text": {
+    "en": {
+      "오링 AN계열 | [회사명] 베어링": "O-Ring AN Series | [회사명] 베어링",
+      "<p class=\"eyebrow\">O-Ring AN Series (AS568)</p> <h2>오링 AN계열</h2> <p>미국 AS568 표준(구 AN규격) 계열의 O-링입니다. Item(형번) 순으로 내경(d)·굵기(W)가 정해집니다.</p>": "<p class=\"eyebrow\">O-Ring AN Series (AS568)</p> <h2>O-Ring AN Series</h2> <p>O-rings in the U.S. AS568 standard (formerly the AN standard) series. The inner diameter (d) and cross-section thickness (W) are determined by Item (model) number.</p>",
+      "<img src=\"assets/oring_diagram_Ddw.png\" alt=\"O-링 AN계열 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">D=바깥지름 · d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_Ddw.png\" alt=\"O-Ring AN Series Drawing\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front View · Cross-Section · Circular Cross-Section<br><span style=\"color: var(--text-faint);\">D = outer diameter · d = inner diameter · W = thickness (cross-section diameter)</span></p>",
+      "단위: mm · Item=형번(호칭번호) · d=내경 · W=굵기 · 009, 045/046 등 번호 중복·값 반복은 원본 규격표에 인쇄된 그대로입니다.": "Unit: mm · Item = model (designation) number · d = inner diameter · W = thickness · Duplicate numbers/repeated values such as 009, 045/046 are exactly as printed in the original specification table."
+    },
+    "ja": {
+      "오링 AN계열 | [회사명] 베어링": "Oリング ANシリーズ | [회사명] 베어링",
+      "<p class=\"eyebrow\">O-Ring AN Series (AS568)</p> <h2>오링 AN계열</h2> <p>미국 AS568 표준(구 AN규격) 계열의 O-링입니다. Item(형번) 순으로 내경(d)·굵기(W)가 정해집니다.</p>": "<p class=\"eyebrow\">O-Ring AN Series (AS568)</p> <h2>Oリング ANシリーズ</h2> <p>米国AS568規格(旧AN規格)系列のOリングです。Item(型番)順に内径(d)・線径(W)が決まります。</p>",
+      "<img src=\"assets/oring_diagram_Ddw.png\" alt=\"O-링 AN계열 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">D=바깥지름 · d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_Ddw.png\" alt=\"Oリング ANシリーズ図面\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図・断面図・円形断面<br><span style=\"color: var(--text-faint);\">D=外径・d=内径・W=線径(太さ)</span></p>",
+      "단위: mm · Item=형번(호칭번호) · d=내경 · W=굵기 · 009, 045/046 등 번호 중복·값 반복은 원본 규격표에 인쇄된 그대로입니다.": "単位:mm・Item=型番(呼び番号)・d=内径・W=線径・009、045/046などの番号重複・値の繰り返しは原本規格表に印刷された通りです。"
+    },
+    "zh": {
+      "오링 AN계열 | [회사명] 베어링": "O型圈 AN系列 | [회사명] 베어링",
+      "<p class=\"eyebrow\">O-Ring AN Series (AS568)</p> <h2>오링 AN계열</h2> <p>미국 AS568 표준(구 AN규격) 계열의 O-링입니다. Item(형번) 순으로 내경(d)·굵기(W)가 정해집니다.</p>": "<p class=\"eyebrow\">O-Ring AN Series (AS568)</p> <h2>O型圈 AN系列</h2> <p>美国AS568标准(旧AN规格)系列的O型圈。内径(d)、线径(W)按Item(型号)顺序确定。</p>",
+      "<img src=\"assets/oring_diagram_Ddw.png\" alt=\"O-링 AN계열 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">D=바깥지름 · d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_Ddw.png\" alt=\"O型圈AN系列图纸\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正视图 · 剖面图 · 圆形截面<br><span style=\"color: var(--text-faint);\">D=外径 · d=内径 · W=线径(粗细)</span></p>",
+      "단위: mm · Item=형번(호칭번호) · d=내경 · W=굵기 · 009, 045/046 등 번호 중복·값 반복은 원본 규격표에 인쇄된 그대로입니다.": "单位:mm · Item=型号(代号) · d=内径 · W=线径 · 009、045/046等编号重复、数值重复均按原始规格表所印刷的内容照录。"
+    }
+  },
+  "attrs": {
+    "en": {
+      "O-링 AN계열 도면": "O-Ring AN Series Drawing"
+    },
+    "ja": {
+      "O-링 AN계열 도면": "Oリング ANシリーズ図面"
+    },
+    "zh": {
+      "O-링 AN계열 도면": "O型圈AN系列图纸"
+    }
+  }
+}

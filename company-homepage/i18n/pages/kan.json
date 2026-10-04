@@ -1,0 +1,33 @@
+{
+  "text": {
+    "en": {
+      "KAN | [회사명] 베어링": "KAN | [회사명] 베어링",
+      "<strong>사양</strong><br> 재질: SM45C · 경도: HRC28~32<br> 나사 정도: KS 2 · 표면처리: 인산염 피막": "<strong>Specifications</strong><br> Material: SM45C · Hardness: HRC28–32<br> Thread grade: KS 2 · Surface treatment: Phosphate coating",
+      "<strong>용도</strong><br> 베어링, 볼 스크류 서포트 베어링, 풀리 · 장력·상압의 조정 · 진동에 강하고 정도조정이 가능하며 강력 체결 가능": "<strong>Applications</strong><br> Bearings, ball screw support bearings, pulleys · Adjustment of tension and nip pressure · Resistant to vibration, allows precision adjustment, and enables strong clamping",
+      "<img src=\"assets/kan_diagram.png\" alt=\"KAN 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도 · 정면도 — 플랜지 체결 방식<br><span style=\"color: var(--text-faint);\">h=너트 폭 · D=바깥지름 · d=나사 안지름 · c=플랜지 두께</span></p>": "<img src=\"assets/kan_diagram.png\" alt=\"KAN Drawing\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Cross-Section · Front View — Flange Clamping Type<br><span style=\"color: var(--text-faint);\">h = nut width · D = outer diameter · d = thread bore · c = flange thickness</span></p>"
+    },
+    "ja": {
+      "KAN | [회사명] 베어링": "KAN | [회사명] 베어링",
+      "<strong>사양</strong><br> 재질: SM45C · 경도: HRC28~32<br> 나사 정도: KS 2 · 표면처리: 인산염 피막": "<strong>仕様</strong><br> 材質:SM45C・硬度:HRC28〜32<br> ねじ精度:KS 2・表面処理:リン酸塩皮膜",
+      "<strong>용도</strong><br> 베어링, 볼 스크류 서포트 베어링, 풀리 · 장력·상압의 조정 · 진동에 강하고 정도조정이 가능하며 강력 체결 가능": "<strong>用途</strong><br> 軸受、ボールねじサポート軸受、プーリー・張力や圧力の調整・振動に強く精度調整が可能で強力に締結可能",
+      "<img src=\"assets/kan_diagram.png\" alt=\"KAN 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도 · 정면도 — 플랜지 체결 방식<br><span style=\"color: var(--text-faint);\">h=너트 폭 · D=바깥지름 · d=나사 안지름 · c=플랜지 두께</span></p>": "<img src=\"assets/kan_diagram.png\" alt=\"KAN 図面\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 断面図・正面図 — フランジ締結方式<br><span style=\"color: var(--text-faint);\">h=ナット幅・D=外径・d=ねじ内径・c=フランジ厚さ</span></p>"
+    },
+    "zh": {
+      "KAN | [회사명] 베어링": "KAN | [회사명] 베어링",
+      "<strong>사양</strong><br> 재질: SM45C · 경도: HRC28~32<br> 나사 정도: KS 2 · 표면처리: 인산염 피막": "<strong>规格</strong><br> 材质:SM45C · 硬度:HRC28~32<br> 螺纹精度:KS 2 · 表面处理:磷化处理",
+      "<strong>용도</strong><br> 베어링, 볼 스크류 서포트 베어링, 풀리 · 장력·상압의 조정 · 진동에 강하고 정도조정이 가능하며 강력 체결 가능": "<strong>用途</strong><br> 轴承、滚珠丝杠支撑轴承、皮带轮 · 张力与压力调整 · 耐振动、可精密调整且能牢固锁紧",
+      "<img src=\"assets/kan_diagram.png\" alt=\"KAN 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도 · 정면도 — 플랜지 체결 방식<br><span style=\"color: var(--text-faint);\">h=너트 폭 · D=바깥지름 · d=나사 안지름 · c=플랜지 두께</span></p>": "<img src=\"assets/kan_diagram.png\" alt=\"KAN 图纸\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 剖面图 · 正视图 — 法兰紧固方式<br><span style=\"color: var(--text-faint);\">h=螺母宽度 · D=外径 · d=螺纹内径 · c=法兰厚度</span></p>"
+    }
+  },
+  "attrs": {
+    "en": {
+      "KAN 도면": "KAN Drawing"
+    },
+    "ja": {
+      "KAN 도면": "KAN 図面"
+    },
+    "zh": {
+      "KAN 도면": "KAN 图纸"
+    }
+  }
+}
