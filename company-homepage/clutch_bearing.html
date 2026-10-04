@@ -120,110 +120,31 @@
         <img src="img/clutch_bearing.png" alt="구조 단면도" style="display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
         <p class="diagram-legend">d(내경) · D(외경) · B(폭) · 하우징 일체형(플랜지 고정형) 구조 &mdash; TSS&middot;TFS&middot;BB&middot;LD 공통 형태입니다. 그 외 B·FC 등 계열은 아래 각 구간에 형태별 개념도를 별도로 표시했습니다.</p>
       </div>
-        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
-          <label for="housedFilter">형번 / 규격 검색</label>
-          <input id="housedFilter" type="text" placeholder="예: TSS20 또는 20*47" autocomplete="off" />
-        </div>
-        <div class="spec-toolbar">
-          <p class="finder-tip" id="housedCount" style="margin: 0;"></p>
-          <button type="button" class="spec-toolbar-btn" id="housedToggleAll">전체 펼치기</button>
-        </div>
-        <div id="housedGroups">
-        <details class="series-group">
-          <summary>TSS 시리즈<span class="series-count">12건</span></summary>
-          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">TSS8</td><td>8</td><td>24</td><td>8</td></tr><tr><td class="type-cell">TSS10</td><td>10</td><td>30</td><td>9</td></tr><tr><td class="type-cell">TSS12</td><td>12</td><td>32</td><td>10</td></tr><tr><td class="type-cell">TSS15</td><td>15</td><td>35</td><td>11</td></tr><tr><td class="type-cell">TSS20</td><td>20</td><td>47</td><td>14</td></tr><tr><td class="type-cell">TSS25</td><td>25</td><td>52</td><td>15</td></tr></tbody>
-            </table>
-            </div>
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">TSS30</td><td>30</td><td>62</td><td>16</td></tr><tr><td class="type-cell">TSS35</td><td>35</td><td>72</td><td>17</td></tr><tr><td class="type-cell">TSS40</td><td>40</td><td>80</td><td>18</td></tr><tr><td class="type-cell">TSS45</td><td>45</td><td>85</td><td>19</td></tr><tr><td class="type-cell">TSS50</td><td>50</td><td>90</td><td>20</td></tr><tr><td class="type-cell">TSS60</td><td>60</td><td>110</td><td>22</td></tr></tbody>
-            </table>
-            </div>
-          </div>
-        </details>
-        <details class="series-group">
-          <summary>TFS 시리즈<span class="series-count">12건</span></summary>
-          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">TFS12</td><td>12</td><td>35</td><td>13</td></tr><tr><td class="type-cell">TFS15</td><td>15</td><td>42</td><td>18</td></tr><tr><td class="type-cell">TFS17</td><td>17</td><td>47</td><td>19</td></tr><tr><td class="type-cell">TFS20</td><td>20</td><td>52</td><td>21</td></tr><tr><td class="type-cell">TFS25</td><td>25</td><td>62</td><td>24</td></tr><tr><td class="type-cell">TFS30</td><td>30</td><td>72</td><td>27</td></tr></tbody>
-            </table>
-            </div>
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">TFS35</td><td>35</td><td>80</td><td>31</td></tr><tr><td class="type-cell">TFS40</td><td>40</td><td>90</td><td>33</td></tr><tr><td class="type-cell">TFS45</td><td>45</td><td>100</td><td>36</td></tr><tr><td class="type-cell">TFS50</td><td>50</td><td>110</td><td>40</td></tr><tr><td class="type-cell">TFS60</td><td>60</td><td>130</td><td>46</td></tr><tr><td class="type-cell">TFS70</td><td>70</td><td>150</td><td>51</td></tr></tbody>
-            </table>
-            </div>
-          </div>
-        </details>
-        <details class="series-group">
-          <summary>BB 시리즈<span class="series-count">7건</span></summary>
-          <div class="finder-results" style="overflow-x: auto;">
-            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">BB15</td><td>15</td><td>35</td><td>11</td></tr><tr><td class="type-cell">BB17</td><td>17</td><td>40</td><td>12</td></tr><tr><td class="type-cell">BB20</td><td>20</td><td>47</td><td>14</td></tr><tr><td class="type-cell">BB25</td><td>25</td><td>52</td><td>15</td></tr><tr><td class="type-cell">BB30</td><td>30</td><td>62</td><td>16</td></tr><tr><td class="type-cell">BB35</td><td>35</td><td>72</td><td>17</td></tr><tr><td class="type-cell">BB40</td><td>40</td><td>80</td><td>22</td></tr></tbody>
-            </table>
-            <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 8px;">※ 키홈 옵션: 형번 뒤에 <strong style="color: var(--text-sub);">-1K</strong>(내륜에만 키홈) 또는 <strong style="color: var(--text-sub);">-2K</strong>(내·외륜 모두 키홈)를 붙여 주문합니다. 치수(d/D/B)는 1K·2K 공통입니다.</p>
-          </div>
-        </details>
-        <details class="series-group">
-          <summary>LD 시리즈<span class="series-count">5건</span></summary>
-          <div class="finder-results" style="overflow-x: auto;">
-            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
-              <thead>
-            <tr>
-              <th>형번</th>
-              <th>d(내경)</th>
-              <th>D(외경)</th>
-              <th>B(폭)</th>
-            </tr>
-          </thead>
-              <tbody><tr><td class="type-cell">LD04</td><td>10</td><td>47</td><td>19.5</td></tr><tr><td class="type-cell">LD05</td><td>14</td><td>52</td><td>19.5</td></tr><tr><td class="type-cell">LD06</td><td>20</td><td>62</td><td>19.5</td></tr><tr><td class="type-cell">LD07</td><td>25</td><td>72</td><td>19.5</td></tr><tr><td class="type-cell">LD08</td><td>30</td><td>80</td><td>19.5</td></tr></tbody>
-            </table>
-          </div>
-        </details>
+        <div class="product-grid">
+          <a class="product-card" href="clutch_tss.html">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="10" y="10" width="20" height="20" rx="3" stroke="currentColor" stroke-width="2.3"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.2"/></svg>
+            <h4>TSS 시리즈</h4>
+            <p>스프래그형, 표준폭 하우징 일체형</p>
+            <span class="p-card-cta">메트릭 · 12건 &middot; 규격 보기 &rarr;</span>
+          </a>
+          <a class="product-card" href="clutch_tfs.html">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="10" y="10" width="20" height="20" rx="3" stroke="currentColor" stroke-width="2.3"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.2"/></svg>
+            <h4>TFS 시리즈</h4>
+            <p>TSS 대비 광폭·고하중형</p>
+            <span class="p-card-cta">메트릭 · 12건 &middot; 규격 보기 &rarr;</span>
+          </a>
+          <a class="product-card" href="clutch_bb.html">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="10" y="10" width="20" height="20" rx="3" stroke="currentColor" stroke-width="2.3"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.2"/></svg>
+            <h4>BB 시리즈</h4>
+            <p>콤팩트형, 1K·2K 키홈 옵션</p>
+            <span class="p-card-cta">메트릭 · 7건 &middot; 규격 보기 &rarr;</span>
+          </a>
+          <a class="product-card" href="clutch_ld.html">
+            <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="10" y="10" width="20" height="20" rx="3" stroke="currentColor" stroke-width="2.3"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.2"/></svg>
+            <h4>LD 시리즈</h4>
+            <p>저속·경하중용 소형 시리즈</p>
+            <span class="p-card-cta">메트릭 · 5건 &middot; 규격 보기 &rarr;</span>
+          </a>
         </div>
       </div>
       <div class="cat-tab-panel" data-panel="insert" hidden>
@@ -432,7 +353,7 @@
 </script>
 <script>
   (function () {
-    ['housed', 'insert'].forEach(function (prefix) {
+    ['insert'].forEach(function (prefix) {
       var input = document.getElementById(prefix + 'Filter');
       var groupsWrap = document.getElementById(prefix + 'Groups');
       var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
