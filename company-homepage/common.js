@@ -62,7 +62,11 @@
       mobileLangOptions.querySelectorAll("button[data-lang]").forEach((b) => {
         b.setAttribute("aria-pressed", String(b.dataset.lang === code));
       });
+      if (window.I18N) window.I18N.apply(code);
     }
+
+    // 다른 페이지에서 선택했던 언어를 유지
+    setLanguage(window.I18N ? window.I18N.getSaved() : "KOR");
 
     langSelectBtn.addEventListener("click", (e) => {
       e.stopPropagation();
