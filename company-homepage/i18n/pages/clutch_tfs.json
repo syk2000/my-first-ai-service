@@ -1,0 +1,30 @@
+{
+  "text": {
+    "en": {
+      "TFS 시리즈 | [회사명] 베어링": "TFS Series | [회사명] Bearing",
+      "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS 시리즈 (하우징 일체형 롤러 클러치)</h2> <p>TSS와 같은 스프래그형 구조에 폭을 넓혀 부하 용량을 높인 광폭 시리즈입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS Series (Housing-Integrated Roller Clutch)</h2> <p>A wide-width series with the same sprag-type structure as the TSS, widened to increase load capacity.</p> <p class=\"section-head-tip\">You can search by entering just the model number or part of the dimensions.</p>",
+      "<label for=\"tfsFilter\">형번 / 규격 검색</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"예: TFS20\" autocomplete=\"off\">": "<label for=\"tfsFilter\">Model / Spec Search</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"e.g. TFS20\" autocomplete=\"off\">"
+    },
+    "ja": {
+      "TFS 시리즈 | [회사명] 베어링": "TFSシリーズ | [회사명]ベアリング",
+      "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS 시리즈 (하우징 일체형 롤러 클러치)</h2> <p>TSS와 같은 스프래그형 구조에 폭을 넓혀 부하 용량을 높인 광폭 시리즈입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFSシリーズ(ハウジング一体型ローラークラッチ)</h2> <p>TSSと同じスプラグ型構造で、幅を広げて負荷容量を高めたワイドシリーズです。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
+      "<label for=\"tfsFilter\">형번 / 규격 검색</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"예: TFS20\" autocomplete=\"off\">": "<label for=\"tfsFilter\">形番 / 規格検索</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"例: TFS20\" autocomplete=\"off\">"
+    },
+    "zh": {
+      "TFS 시리즈 | [회사명] 베어링": "TFS系列 | [회사명]轴承",
+      "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS 시리즈 (하우징 일체형 롤러 클러치)</h2> <p>TSS와 같은 스프래그형 구조에 폭을 넓혀 부하 용량을 높인 광폭 시리즈입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS系列(外壳一体型滚柱离合器)</h2> <p>采用与TSS相同的斜楔式结构，通过加宽宽度提升了承载能力的宽型系列。</p> <p class=\"section-head-tip\">只需输入型号或部分尺寸即可搜索。</p>",
+      "<label for=\"tfsFilter\">형번 / 규격 검색</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"예: TFS20\" autocomplete=\"off\">": "<label for=\"tfsFilter\">型号 / 规格搜索</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"例: TFS20\" autocomplete=\"off\">"
+    }
+  },
+  "attrs": {
+    "en": {
+      "예: TFS20": "e.g. TFS20"
+    },
+    "ja": {
+      "예: TFS20": "例: TFS20"
+    },
+    "zh": {
+      "예: TFS20": "例: TFS20"
+    }
+  }
+}

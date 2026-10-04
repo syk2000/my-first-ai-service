@@ -1,0 +1,30 @@
+{
+  "text": {
+    "en": {
+      "유패킹 SKY형 | [회사명] 베어링": "U-Packing SKY Type | [회사명] Bearing",
+      "<p class=\"eyebrow\">U-Packing SKY Type</p> <h2>유패킹 SKY형</h2> <p>피스톤·로드 겸용으로 사용하는 <strong style=\"color: var(--accent);\">U-패킹 SKY형</strong>입니다.</p>": "<p class=\"eyebrow\">U-Packing SKY Type</p> <h2>U-Packing SKY Type</h2> <p>This is the <strong style=\"color: var(--accent);\">U-Packing SKY type</strong>, used for both piston and rod applications.</p>",
+      "<img src=\"assets/u_packing_sky_diagram.png\" alt=\"U-Packing SKY형 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도<br><span style=\"color: var(--text-faint);\">d=내경 · D=외경 · H=높이</span></p>": "<img src=\"assets/u_packing_sky_diagram.png\" alt=\"U-Packing SKY type drawing\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Cross-section diagram<br><span style=\"color: var(--text-faint);\">d=inner diameter · D=outer diameter · H=height</span></p>"
+    },
+    "ja": {
+      "유패킹 SKY형 | [회사명] 베어링": "UパッキンSKY形 | [회사명]ベアリング",
+      "<p class=\"eyebrow\">U-Packing SKY Type</p> <h2>유패킹 SKY형</h2> <p>피스톤·로드 겸용으로 사용하는 <strong style=\"color: var(--accent);\">U-패킹 SKY형</strong>입니다.</p>": "<p class=\"eyebrow\">U-Packing SKY Type</p> <h2>UパッキンSKY形</h2> <p>ピストン・ロッド兼用として使用する<strong style=\"color: var(--accent);\">UパッキンSKY形</strong>です。</p>",
+      "<img src=\"assets/u_packing_sky_diagram.png\" alt=\"U-Packing SKY형 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도<br><span style=\"color: var(--text-faint);\">d=내경 · D=외경 · H=높이</span></p>": "<img src=\"assets/u_packing_sky_diagram.png\" alt=\"UパッキンSKY形図面\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 断面図<br><span style=\"color: var(--text-faint);\">d=内径・D=外径・H=高さ</span></p>"
+    },
+    "zh": {
+      "유패킹 SKY형 | [회사명] 베어링": "U型密封圈 SKY型 | [회사명]轴承",
+      "<p class=\"eyebrow\">U-Packing SKY Type</p> <h2>유패킹 SKY형</h2> <p>피스톤·로드 겸용으로 사용하는 <strong style=\"color: var(--accent);\">U-패킹 SKY형</strong>입니다.</p>": "<p class=\"eyebrow\">U-Packing SKY Type</p> <h2>U型密封圈 SKY型</h2> <p>这是可用于活塞・活塞杆两用的<strong style=\"color: var(--accent);\">U型密封圈 SKY型</strong>。</p>",
+      "<img src=\"assets/u_packing_sky_diagram.png\" alt=\"U-Packing SKY형 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도<br><span style=\"color: var(--text-faint);\">d=내경 · D=외경 · H=높이</span></p>": "<img src=\"assets/u_packing_sky_diagram.png\" alt=\"U型密封圈SKY型图纸\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 剖面图<br><span style=\"color: var(--text-faint);\">d=内径・D=外径・H=高度</span></p>"
+    }
+  },
+  "attrs": {
+    "en": {
+      "U-Packing SKY형 도면": "U-Packing SKY type drawing"
+    },
+    "ja": {
+      "U-Packing SKY형 도면": "UパッキンSKY形図面"
+    },
+    "zh": {
+      "U-Packing SKY형 도면": "U型密封圈SKY型图纸"
+    }
+  }
+}
