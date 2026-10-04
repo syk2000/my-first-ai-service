@@ -1,0 +1,66 @@
+{
+  "text": {
+    "en": {
+      "로크 너트 (Lock Nut) | [회사명] 베어링": "Lock Nut | [회사명] Bearing",
+      "<p class=\"eyebrow\">Lock Nut</p> <h2>로크 너트</h2> <p> 어댑터 슬리브·베어링을 축에 고정할 때 함께 사용하는 너트입니다. 와셔를 함께 사용하는 <strong style=\"color: var(--accent);\">너트 계열 AN</strong>과, 락 클립(toggle)을 사용하는 <strong style=\"color: var(--accent);\">너트 계열 ANL</strong> 두 가지로 구분합니다. </p>": "<p class=\"eyebrow\">Lock Nut</p> <h2>Lock Nut</h2> <p> A nut used together with an adapter sleeve or bearing to secure it to a shaft. It is divided into two types: <strong style=\"color: var(--accent);\">Nut series AN</strong>, which is used together with a washer, and <strong style=\"color: var(--accent);\">Nut series ANL</strong>, which uses a lock clip (toggle). </p>",
+      "<img src=\"assets/locknut_an_diagram.png\" alt=\"로크 너트 AN 계열 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 와셔를 사용하는 너트 (계열 AN)<br><span style=\"color: var(--text-faint);\">g=나사 물림 길이 · D1=바깥지름 · D6·D4=너트 폭</span></p>": "<img src=\"assets/locknut_an_diagram.png\" alt=\"Lock Nut AN Series Drawing\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Nut used with a washer (Series AN)<br><span style=\"color: var(--text-faint);\">g=thread engagement length · D1=outer diameter · D6·D4=nut width</span></p>",
+      "<img src=\"assets/locknut_anl_diagram.png\" alt=\"로크 너트 ANL 계열 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ toggle을 사용하는 너트 (계열 ANL)<br><span style=\"color: var(--text-faint);\">나사구멍에 락 클립(AL/ALL)을 30°로 삽입해 풀림을 방지</span></p>": "<img src=\"assets/locknut_anl_diagram.png\" alt=\"Lock Nut ANL Series Drawing\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Nut using a toggle (Series ANL)<br><span style=\"color: var(--text-faint);\">A lock clip (AL/ALL) is inserted into the threaded hole at 30° to prevent loosening</span></p>",
+      "너트 계열 AN": "Nut Series AN",
+      "나사의 호칭(D1)": "Thread Designation (D1)",
+      "너트 계열 ANL": "Nut Series ANL",
+      "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">로크 너트 클립 (toggle 계열 AN·ANL)</h3> <p style=\"font-size: 13.5px;\">toggle을 사용하는 로크너트의 나사구멍에 끼워 풀림을 막는 클립입니다. 대응하는 너트 호칭번호를 참고해 선택합니다.</p>": "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">Lock Nut Clip (toggle series AN·ANL)</h3> <p style=\"font-size: 13.5px;\">A clip inserted into the threaded hole of a toggle-type lock nut to prevent loosening. Select it by referring to the corresponding nut designation number.</p>",
+      "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"로크 너트 클립 AL 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL 클립 (계열 AN 대응)<br><span style=\"color: var(--text-faint);\">t1=두께 · S=폭 · L2·L3=길이 · S1=걸림 폭 · i=걸림 깊이</span></p>": "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"Lock Nut Clip AL Drawing\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL clip (for Series AN)<br><span style=\"color: var(--text-faint);\">t1=thickness · S=width · L2·L3=length · S1=engagement width · i=engagement depth</span></p>",
+      "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"로크 너트 클립 ALL 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL 클립 (계열 ANL 대응)</p>": "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"Lock Nut Clip ALL Drawing\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL clip (for Series ANL)</p>",
+      "대응 너트": "Corresponding Nut",
+      "AN 계열은 어댑터슬리브 계열 A31·A2·A3·A23에, ANL 계열은 어댑터슬리브 계열 A30에 적용합니다. 나사의 기준산형 및 나사산의 치수는 JIS B 0207에 의합니다.": "Series AN applies to adapter sleeve series A31·A2·A3·A23, and series ANL applies to adapter sleeve series A30. The thread's basic profile and thread dimensions conform to JIS B 0207."
+    },
+    "ja": {
+      "로크 너트 (Lock Nut) | [회사명] 베어링": "ロックナット (Lock Nut) | [회사명]ベアリング",
+      "<p class=\"eyebrow\">Lock Nut</p> <h2>로크 너트</h2> <p> 어댑터 슬리브·베어링을 축에 고정할 때 함께 사용하는 너트입니다. 와셔를 함께 사용하는 <strong style=\"color: var(--accent);\">너트 계열 AN</strong>과, 락 클립(toggle)을 사용하는 <strong style=\"color: var(--accent);\">너트 계열 ANL</strong> 두 가지로 구분합니다. </p>": "<p class=\"eyebrow\">Lock Nut</p> <h2>ロックナット</h2> <p> アダプタスリーブ・軸受を軸に固定する際に一緒に使用するナットです。座金を併用する<strong style=\"color: var(--accent);\">ナット系列AN</strong>と、ロッククリップ（toggle）を使用する<strong style=\"color: var(--accent);\">ナット系列ANL</strong>の2種類に分かれます。 </p>",
+      "<img src=\"assets/locknut_an_diagram.png\" alt=\"로크 너트 AN 계열 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 와셔를 사용하는 너트 (계열 AN)<br><span style=\"color: var(--text-faint);\">g=나사 물림 길이 · D1=바깥지름 · D6·D4=너트 폭</span></p>": "<img src=\"assets/locknut_an_diagram.png\" alt=\"ロックナットAN系列図面\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 座金を使用するナット（系列AN）<br><span style=\"color: var(--text-faint);\">g=ねじかみ合い長さ・D1=外径・D6・D4=ナット幅</span></p>",
+      "<img src=\"assets/locknut_anl_diagram.png\" alt=\"로크 너트 ANL 계열 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ toggle을 사용하는 너트 (계열 ANL)<br><span style=\"color: var(--text-faint);\">나사구멍에 락 클립(AL/ALL)을 30°로 삽입해 풀림을 방지</span></p>": "<img src=\"assets/locknut_anl_diagram.png\" alt=\"ロックナットANL系列図面\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ toggleを使用するナット（系列ANL）<br><span style=\"color: var(--text-faint);\">ねじ穴にロッククリップ（AL/ALL）を30°で挿入して緩みを防止</span></p>",
+      "너트 계열 AN": "ナット系列AN",
+      "나사의 호칭(D1)": "ねじの呼び(D1)",
+      "너트 계열 ANL": "ナット系列ANL",
+      "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">로크 너트 클립 (toggle 계열 AN·ANL)</h3> <p style=\"font-size: 13.5px;\">toggle을 사용하는 로크너트의 나사구멍에 끼워 풀림을 막는 클립입니다. 대응하는 너트 호칭번호를 참고해 선택합니다.</p>": "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">ロックナットクリップ（toggle系列AN・ANL）</h3> <p style=\"font-size: 13.5px;\">toggleを使用するロックナットのねじ穴に差し込んで緩みを防ぐクリップです。対応するナットの呼び番号を参考に選定します。</p>",
+      "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"로크 너트 클립 AL 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL 클립 (계열 AN 대응)<br><span style=\"color: var(--text-faint);\">t1=두께 · S=폭 · L2·L3=길이 · S1=걸림 폭 · i=걸림 깊이</span></p>": "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"ロックナットクリップAL図面\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALクリップ（系列AN対応）<br><span style=\"color: var(--text-faint);\">t1=厚さ・S=幅・L2・L3=長さ・S1=掛かり幅・i=掛かり深さ</span></p>",
+      "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"로크 너트 클립 ALL 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL 클립 (계열 ANL 대응)</p>": "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"ロックナットクリップALL図面\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALLクリップ（系列ANL対応）</p>",
+      "대응 너트": "対応ナット",
+      "AN 계열은 어댑터슬리브 계열 A31·A2·A3·A23에, ANL 계열은 어댑터슬리브 계열 A30에 적용합니다. 나사의 기준산형 및 나사산의 치수는 JIS B 0207에 의합니다.": "AN系列はアダプタスリーブ系列A31・A2・A3・A23に、ANL系列はアダプタスリーブ系列A30に適用します。ねじの基準山形およびねじ山の寸法はJIS B 0207によります。"
+    },
+    "zh": {
+      "로크 너트 (Lock Nut) | [회사명] 베어링": "锁紧螺母 (Lock Nut) | [회사명]轴承",
+      "<p class=\"eyebrow\">Lock Nut</p> <h2>로크 너트</h2> <p> 어댑터 슬리브·베어링을 축에 고정할 때 함께 사용하는 너트입니다. 와셔를 함께 사용하는 <strong style=\"color: var(--accent);\">너트 계열 AN</strong>과, 락 클립(toggle)을 사용하는 <strong style=\"color: var(--accent);\">너트 계열 ANL</strong> 두 가지로 구분합니다. </p>": "<p class=\"eyebrow\">Lock Nut</p> <h2>锁紧螺母</h2> <p> 将适配器套筒·轴承固定到轴上时配套使用的螺母。分为与垫圈配合使用的<strong style=\"color: var(--accent);\">螺母系列AN</strong>，以及使用锁紧卡扣（toggle）的<strong style=\"color: var(--accent);\">螺母系列ANL</strong>两种。 </p>",
+      "<img src=\"assets/locknut_an_diagram.png\" alt=\"로크 너트 AN 계열 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 와셔를 사용하는 너트 (계열 AN)<br><span style=\"color: var(--text-faint);\">g=나사 물림 길이 · D1=바깥지름 · D6·D4=너트 폭</span></p>": "<img src=\"assets/locknut_an_diagram.png\" alt=\"锁紧螺母AN系列图纸\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 配合垫圈使用的螺母（AN系列）<br><span style=\"color: var(--text-faint);\">g=螺纹啮合长度 · D1=外径 · D6·D4=螺母宽度</span></p>",
+      "<img src=\"assets/locknut_anl_diagram.png\" alt=\"로크 너트 ANL 계열 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ toggle을 사용하는 너트 (계열 ANL)<br><span style=\"color: var(--text-faint);\">나사구멍에 락 클립(AL/ALL)을 30°로 삽입해 풀림을 방지</span></p>": "<img src=\"assets/locknut_anl_diagram.png\" alt=\"锁紧螺母ANL系列图纸\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 使用toggle的螺母（ANL系列）<br><span style=\"color: var(--text-faint);\">将锁紧卡扣（AL/ALL）以30°插入螺纹孔中以防止松动</span></p>",
+      "너트 계열 AN": "螺母系列AN",
+      "나사의 호칭(D1)": "螺纹代号(D1)",
+      "너트 계열 ANL": "螺母系列ANL",
+      "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">로크 너트 클립 (toggle 계열 AN·ANL)</h3> <p style=\"font-size: 13.5px;\">toggle을 사용하는 로크너트의 나사구멍에 끼워 풀림을 막는 클립입니다. 대응하는 너트 호칭번호를 참고해 선택합니다.</p>": "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">锁紧螺母卡扣（toggle系列AN·ANL）</h3> <p style=\"font-size: 13.5px;\">插入使用toggle的锁紧螺母螺纹孔中以防止松动的卡扣。请参考对应的螺母代号进行选择。</p>",
+      "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"로크 너트 클립 AL 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL 클립 (계열 AN 대응)<br><span style=\"color: var(--text-faint);\">t1=두께 · S=폭 · L2·L3=길이 · S1=걸림 폭 · i=걸림 깊이</span></p>": "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"锁紧螺母卡扣AL图纸\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL卡扣（对应AN系列）<br><span style=\"color: var(--text-faint);\">t1=厚度 · S=宽度 · L2·L3=长度 · S1=卡接宽度 · i=卡接深度</span></p>",
+      "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"로크 너트 클립 ALL 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL 클립 (계열 ANL 대응)</p>": "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"锁紧螺母卡扣ALL图纸\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL卡扣（对应ANL系列）</p>",
+      "대응 너트": "对应螺母",
+      "AN 계열은 어댑터슬리브 계열 A31·A2·A3·A23에, ANL 계열은 어댑터슬리브 계열 A30에 적용합니다. 나사의 기준산형 및 나사산의 치수는 JIS B 0207에 의합니다.": "AN系列适用于适配器套筒系列A31·A2·A3·A23，ANL系列适用于适配器套筒系列A30。螺纹的基准牙型及螺纹尺寸依据JIS B 0207。"
+    }
+  },
+  "attrs": {
+    "en": {
+      "로크 너트 AN 계열 도면": "Lock Nut AN Series Drawing",
+      "로크 너트 ANL 계열 도면": "Lock Nut ANL Series Drawing",
+      "로크 너트 클립 AL 도면": "Lock Nut Clip AL Drawing",
+      "로크 너트 클립 ALL 도면": "Lock Nut Clip ALL Drawing"
+    },
+    "ja": {
+      "로크 너트 AN 계열 도면": "ロックナットAN系列図面",
+      "로크 너트 ANL 계열 도면": "ロックナットANL系列図面",
+      "로크 너트 클립 AL 도면": "ロックナットクリップAL図面",
+      "로크 너트 클립 ALL 도면": "ロックナットクリップALL図面"
+    },
+    "zh": {
+      "로크 너트 AN 계열 도면": "锁紧螺母AN系列图纸",
+      "로크 너트 ANL 계열 도면": "锁紧螺母ANL系列图纸",
+      "로크 너트 클립 AL 도면": "锁紧螺母卡扣AL图纸",
+      "로크 너트 클립 ALL 도면": "锁紧螺母卡扣ALL图纸"
+    }
+  }
+}

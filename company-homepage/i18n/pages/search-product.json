@@ -1,0 +1,48 @@
+{
+  "text": {
+    "en": {
+      "규격검색 | [회사명] 베어링": "Spec Search | [회사명] Bearing",
+      "<h3>찾으시는 규격이 있나요?</h3> <p>내경(d) · 외경(D) · 두께(H) 필드로 검색합니다.</p>": "<h3>Looking for a specific spec?</h3> <p>Search by bore (d) · outer diameter (D) · thickness (H) fields.</p>",
+      "<label for=\"fD\" id=\"fDLabel\">내경 d (mm)</label> <input id=\"fD\" type=\"number\" placeholder=\"예: 20\" min=\"0\" step=\"0.1\">": "<label for=\"fD\" id=\"fDLabel\">Bore d (mm)</label> <input id=\"fD\" type=\"number\" placeholder=\"e.g. 20\" min=\"0\" step=\"0.1\">",
+      "<label for=\"fOD\" id=\"fODLabel\">외경 D (mm)</label> <input id=\"fOD\" type=\"number\" placeholder=\"예: 47\" min=\"0\" step=\"0.1\">": "<label for=\"fOD\" id=\"fODLabel\">Outer Diameter D (mm)</label> <input id=\"fOD\" type=\"number\" placeholder=\"e.g. 47\" min=\"0\" step=\"0.1\">",
+      "<label for=\"fH\" id=\"fHLabel\">두께/길이 H (mm)</label> <input id=\"fH\" type=\"number\" placeholder=\"예: 14\" min=\"0\" step=\"0.1\">": "<label for=\"fH\" id=\"fHLabel\">Thickness/Length H (mm)</label> <input id=\"fH\" type=\"number\" placeholder=\"e.g. 14\" min=\"0\" step=\"0.1\">",
+      "검색 TIP · 항목을 전부 채우지 않아도 됩니다. 제품명(형번) 일부만 입력하거나, 내경·외경만 입력해도 기존에 등록된 규격 안에서 바로 확인됩니다.": "Search TIP · You do not need to fill in every field. Even entering just part of the product name (model number), or only the bore/outer diameter, will immediately check within our existing registered specs."
+    },
+    "ja": {
+      "규격검색 | [회사명] 베어링": "規格検索 | [회사명]ベアリング",
+      "<h3>찾으시는 규격이 있나요?</h3> <p>내경(d) · 외경(D) · 두께(H) 필드로 검색합니다.</p>": "<h3>お探しの規格はありますか？</h3> <p>内径（d）・外径（D）・厚さ（H）の項目で検索します。</p>",
+      "<label for=\"fD\" id=\"fDLabel\">내경 d (mm)</label> <input id=\"fD\" type=\"number\" placeholder=\"예: 20\" min=\"0\" step=\"0.1\">": "<label for=\"fD\" id=\"fDLabel\">内径 d (mm)</label> <input id=\"fD\" type=\"number\" placeholder=\"例: 20\" min=\"0\" step=\"0.1\">",
+      "<label for=\"fOD\" id=\"fODLabel\">외경 D (mm)</label> <input id=\"fOD\" type=\"number\" placeholder=\"예: 47\" min=\"0\" step=\"0.1\">": "<label for=\"fOD\" id=\"fODLabel\">外径 D (mm)</label> <input id=\"fOD\" type=\"number\" placeholder=\"例: 47\" min=\"0\" step=\"0.1\">",
+      "<label for=\"fH\" id=\"fHLabel\">두께/길이 H (mm)</label> <input id=\"fH\" type=\"number\" placeholder=\"예: 14\" min=\"0\" step=\"0.1\">": "<label for=\"fH\" id=\"fHLabel\">厚さ/長さ H (mm)</label> <input id=\"fH\" type=\"number\" placeholder=\"例: 14\" min=\"0\" step=\"0.1\">",
+      "검색 TIP · 항목을 전부 채우지 않아도 됩니다. 제품명(형번) 일부만 입력하거나, 내경·외경만 입력해도 기존에 등록된 규격 안에서 바로 확인됩니다.": "検索TIP・すべての項目を入力する必要はありません。製品名（形番）の一部だけ、または内径・外径だけ入力しても、既存の登録規格の中からすぐに確認できます。"
+    },
+    "zh": {
+      "규격검색 | [회사명] 베어링": "规格搜索 | [회사명]轴承",
+      "<h3>찾으시는 규격이 있나요?</h3> <p>내경(d) · 외경(D) · 두께(H) 필드로 검색합니다.</p>": "<h3>在寻找特定规格吗？</h3> <p>可通过内径(d)·外径(D)·厚度(H)字段进行搜索。</p>",
+      "<label for=\"fD\" id=\"fDLabel\">내경 d (mm)</label> <input id=\"fD\" type=\"number\" placeholder=\"예: 20\" min=\"0\" step=\"0.1\">": "<label for=\"fD\" id=\"fDLabel\">内径 d (mm)</label> <input id=\"fD\" type=\"number\" placeholder=\"例如: 20\" min=\"0\" step=\"0.1\">",
+      "<label for=\"fOD\" id=\"fODLabel\">외경 D (mm)</label> <input id=\"fOD\" type=\"number\" placeholder=\"예: 47\" min=\"0\" step=\"0.1\">": "<label for=\"fOD\" id=\"fODLabel\">外径 D (mm)</label> <input id=\"fOD\" type=\"number\" placeholder=\"例如: 47\" min=\"0\" step=\"0.1\">",
+      "<label for=\"fH\" id=\"fHLabel\">두께/길이 H (mm)</label> <input id=\"fH\" type=\"number\" placeholder=\"예: 14\" min=\"0\" step=\"0.1\">": "<label for=\"fH\" id=\"fHLabel\">厚度/长度 H (mm)</label> <input id=\"fH\" type=\"number\" placeholder=\"例如: 14\" min=\"0\" step=\"0.1\">",
+      "검색 TIP · 항목을 전부 채우지 않아도 됩니다. 제품명(형번) 일부만 입력하거나, 내경·외경만 입력해도 기존에 등록된 규격 안에서 바로 확인됩니다.": "搜索提示 · 无需填写全部项目。只需输入产品名称（型号）的一部分，或仅输入内径·外径，即可在现有登记规格中立即查询。"
+    }
+  },
+  "attrs": {
+    "en": {
+      "예: UC204 또는 6204": "e.g. UC204 or 6204",
+      "예: 20": "e.g. 20",
+      "예: 47": "e.g. 47",
+      "예: 14": "e.g. 14"
+    },
+    "ja": {
+      "예: UC204 또는 6204": "例: UC204 または 6204",
+      "예: 20": "例: 20",
+      "예: 47": "例: 47",
+      "예: 14": "例: 14"
+    },
+    "zh": {
+      "예: UC204 또는 6204": "例如: UC204 或 6204",
+      "예: 20": "例如: 20",
+      "예: 47": "例如: 47",
+      "예: 14": "例如: 14"
+    }
+  }
+}
