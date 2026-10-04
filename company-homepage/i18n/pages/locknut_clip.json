@@ -1,0 +1,45 @@
+{
+ "text": {
+  "en": {
+   "로크 너트 클립 | [회사명] 베어링": "Lock Nut Clip | [Company Name] Bearing",
+   "<p class=\"eyebrow\">Lock Nut Clip</p> <h2>로크 너트 클립</h2> <p> toggle을 사용하는 로크너트(계열 AN·ANL)의 나사구멍에 끼워 풀림을 막는 클립입니다. <strong style=\"color: var(--accent);\">AL</strong>은 AN 계열, <strong style=\"color: var(--accent);\">ALL</strong>은 ANL 계열 너트에 대응합니다. </p>": "<p class=\"eyebrow\">Lock Nut Clip</p> <h2>Lock Nut Clip</h2> <p> A clip that fits into the toggle screw hole of a lock nut (AN/ANL series) to prevent it from loosening. <strong style=\"color: var(--accent);\">AL</strong> corresponds to the AN series, and <strong style=\"color: var(--accent);\">ALL</strong> corresponds to the ANL series nuts. </p>",
+   "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"로크 너트 클립 AL 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL 클립 (계열 AN 대응)<br><span style=\"color: var(--text-faint);\">t1=두께 · S=폭 · L2·L3=길이 · S1=걸림 폭 · i=걸림 깊이</span></p>": "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"Lock Nut Clip AL Drawing\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL Clip (for AN Series)<br><span style=\"color: var(--text-faint);\">t1=Thickness · S=Width · L2·L3=Length · S1=Catch Width · i=Catch Depth</span></p>",
+   "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"로크 너트 클립 ALL 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL 클립 (계열 ANL 대응)</p>": "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"Lock Nut Clip ALL Drawing\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL Clip (for ANL Series)</p>",
+   "toggle 계열 AN — AL 클립": "Toggle Series AN — AL Clip",
+   "너트의 호칭번호": "Nut Designation Number",
+   "toggle 계열 ANL — ALL 클립": "Toggle Series ANL — ALL Clip"
+  },
+  "ja": {
+   "로크 너트 클립 | [회사명] 베어링": "ロックナットクリップ | [会社名] ベアリング",
+   "<p class=\"eyebrow\">Lock Nut Clip</p> <h2>로크 너트 클립</h2> <p> toggle을 사용하는 로크너트(계열 AN·ANL)의 나사구멍에 끼워 풀림을 막는 클립입니다. <strong style=\"color: var(--accent);\">AL</strong>은 AN 계열, <strong style=\"color: var(--accent);\">ALL</strong>은 ANL 계열 너트에 대응합니다. </p>": "<p class=\"eyebrow\">Lock Nut Clip</p> <h2>ロックナットクリップ</h2> <p> トグルを使用するロックナット(AN・ANL系列)のねじ穴に差し込み、緩みを防止するクリップです。<strong style=\"color: var(--accent);\">AL</strong>はAN系列、<strong style=\"color: var(--accent);\">ALL</strong>はANL系列のナットに対応します。 </p>",
+   "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"로크 너트 클립 AL 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL 클립 (계열 AN 대응)<br><span style=\"color: var(--text-faint);\">t1=두께 · S=폭 · L2·L3=길이 · S1=걸림 폭 · i=걸림 깊이</span></p>": "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"ロックナットクリップAL図面\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALクリップ(AN系列対応)<br><span style=\"color: var(--text-faint);\">t1=厚さ ・ S=幅 ・ L2・L3=長さ ・ S1=掛かり幅 ・ i=掛かり深さ</span></p>",
+   "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"로크 너트 클립 ALL 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL 클립 (계열 ANL 대응)</p>": "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"ロックナットクリップALL図面\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALLクリップ(ANL系列対応)</p>",
+   "toggle 계열 AN — AL 클립": "トグル系列AN — ALクリップ",
+   "너트의 호칭번호": "ナットの呼び番号",
+   "toggle 계열 ANL — ALL 클립": "トグル系列ANL — ALLクリップ"
+  },
+  "zh": {
+   "로크 너트 클립 | [회사명] 베어링": "锁紧螺母卡扣 | [公司名] 轴承",
+   "<p class=\"eyebrow\">Lock Nut Clip</p> <h2>로크 너트 클립</h2> <p> toggle을 사용하는 로크너트(계열 AN·ANL)의 나사구멍에 끼워 풀림을 막는 클립입니다. <strong style=\"color: var(--accent);\">AL</strong>은 AN 계열, <strong style=\"color: var(--accent);\">ALL</strong>은 ANL 계열 너트에 대응합니다. </p>": "<p class=\"eyebrow\">Lock Nut Clip</p> <h2>锁紧螺母卡扣</h2> <p> 卡入使用止动销(toggle)的锁紧螺母(AN·ANL系列)螺孔中、防止松动的卡扣。<strong style=\"color: var(--accent);\">AL</strong>对应AN系列,<strong style=\"color: var(--accent);\">ALL</strong>对应ANL系列螺母。 </p>",
+   "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"로크 너트 클립 AL 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL 클립 (계열 AN 대응)<br><span style=\"color: var(--text-faint);\">t1=두께 · S=폭 · L2·L3=길이 · S1=걸림 폭 · i=걸림 깊이</span></p>": "<img src=\"assets/locknut_clip_al_diagram.png\" alt=\"锁紧螺母卡扣AL图纸\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ AL卡扣(对应AN系列)<br><span style=\"color: var(--text-faint);\">t1=厚度 · S=宽度 · L2·L3=长度 · S1=卡合宽度 · i=卡合深度</span></p>",
+   "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"로크 너트 클립 ALL 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL 클립 (계열 ANL 대응)</p>": "<img src=\"assets/locknut_clip_all_diagram.png\" alt=\"锁紧螺母卡扣ALL图纸\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ ALL卡扣(对应ANL系列)</p>",
+   "toggle 계열 AN — AL 클립": "Toggle系列AN — AL卡扣",
+   "너트의 호칭번호": "螺母的代号",
+   "toggle 계열 ANL — ALL 클립": "Toggle系列ANL — ALL卡扣"
+  }
+ },
+ "attrs": {
+  "en": {
+   "로크 너트 클립 AL 도면": "Lock Nut Clip AL Drawing",
+   "로크 너트 클립 ALL 도면": "Lock Nut Clip ALL Drawing"
+  },
+  "ja": {
+   "로크 너트 클립 AL 도면": "ロックナットクリップAL図面",
+   "로크 너트 클립 ALL 도면": "ロックナットクリップALL図面"
+  },
+  "zh": {
+   "로크 너트 클립 AL 도면": "锁紧螺母卡扣AL图纸",
+   "로크 너트 클립 ALL 도면": "锁紧螺母卡扣ALL图纸"
+  }
+ }
+}

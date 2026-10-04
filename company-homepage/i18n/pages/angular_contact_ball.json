@@ -1,0 +1,51 @@
+{
+ "text": {
+  "en": {
+   "앵귤러 콘택트 볼 베어링 | [회사명] 베어링": "Angular Contact Ball Bearings | [Company Name] Bearing",
+   "<p class=\"eyebrow\">Angular Contact Ball Bearings</p> <h2>앵귤러 콘택트 볼 베어링</h2> <p>경방향 하중과 한쪽 방향의 축방향 하중을 받을 수 있으며, 일반적으로 2개를 조합하여 사용합니다.</p> <p>접촉각 15°(접미기호 C), 30°(접미기호 A), 40°(접미기호 B) 등이 공급됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Angular Contact Ball Bearings</p> <h2>Angular Contact Ball Bearings</h2> <p>They can support radial loads together with an axial load in one direction, and are generally used in pairs.</p> <p>Available with contact angles of 15° (suffix C), 30° (suffix A), and 40° (suffix B).</p> <p class=\"section-head-tip\">You can search by entering just the part number or part of the dimensions.</p>",
+   "<p class=\"diagram-caption\">당사 SWS 카탈로그 규격 도면</p> <img src=\"img/angular_contact_ball.png\" alt=\"구조 단면도\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(내경) · D(외경) · 공차(d/D) · B(폭)</p>": "<p class=\"diagram-caption\">Our SWS Catalog Standard Drawing</p> <img src=\"img/angular_contact_ball.png\" alt=\"Cross-section diagram\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(Bore) · D(Outer Diameter) · Tolerance(d/D) · B(Width)</p>",
+   "<label for=\"acbFilter\">형번 / 규격 검색</label> <input id=\"acbFilter\" type=\"text\" placeholder=\"예: 7200 또는 30*62\" autocomplete=\"off\">": "<label for=\"acbFilter\">Part Number / Spec Search</label> <input id=\"acbFilter\" type=\"text\" placeholder=\"e.g. 7200 or 30*62\" autocomplete=\"off\">",
+   "<p class=\"finder-tip\" id=\"acbCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"acbToggleAll\">전체 펼치기</button>": "<p class=\"finder-tip\" id=\"acbCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"acbToggleAll\">Expand All</button>",
+   "79 시리즈<span class=\"series-count\">28건</span>": "79 Series<span class=\"series-count\">28 items</span>",
+   "70 시리즈<span class=\"series-count\">39건</span>": "70 Series<span class=\"series-count\">39 items</span>",
+   "72 시리즈<span class=\"series-count\">33건</span>": "72 Series<span class=\"series-count\">33 items</span>",
+   "73 시리즈<span class=\"series-count\">32건</span>": "73 Series<span class=\"series-count\">32 items</span>",
+   "74 시리즈<span class=\"series-count\">15건</span>": "74 Series<span class=\"series-count\">15 items</span>"
+  },
+  "ja": {
+   "앵귤러 콘택트 볼 베어링 | [회사명] 베어링": "アンギュラ玉軸受 | [会社名] ベアリング",
+   "<p class=\"eyebrow\">Angular Contact Ball Bearings</p> <h2>앵귤러 콘택트 볼 베어링</h2> <p>경방향 하중과 한쪽 방향의 축방향 하중을 받을 수 있으며, 일반적으로 2개를 조합하여 사용합니다.</p> <p>접촉각 15°(접미기호 C), 30°(접미기호 A), 40°(접미기호 B) 등이 공급됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Angular Contact Ball Bearings</p> <h2>アンギュラ玉軸受</h2> <p>ラジアル荷重と一方向のアキシアル荷重を受けることができ、一般的に2個を組み合わせて使用します。</p> <p>接触角15°(記号C)、30°(記号A)、40°(記号B)などが供給されます。</p> <p class=\"section-head-tip\">形番または寸法の一部のみ入力しても検索できます。</p>",
+   "<p class=\"diagram-caption\">당사 SWS 카탈로그 규격 도면</p> <img src=\"img/angular_contact_ball.png\" alt=\"구조 단면도\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(내경) · D(외경) · 공차(d/D) · B(폭)</p>": "<p class=\"diagram-caption\">当社SWSカタログ規格図面</p> <img src=\"img/angular_contact_ball.png\" alt=\"構造断面図\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(内径) ・ D(外径) ・ 公差(d/D) ・ B(幅)</p>",
+   "<label for=\"acbFilter\">형번 / 규격 검색</label> <input id=\"acbFilter\" type=\"text\" placeholder=\"예: 7200 또는 30*62\" autocomplete=\"off\">": "<label for=\"acbFilter\">形番 / 規格検索</label> <input id=\"acbFilter\" type=\"text\" placeholder=\"例: 7200 または 30*62\" autocomplete=\"off\">",
+   "<p class=\"finder-tip\" id=\"acbCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"acbToggleAll\">전체 펼치기</button>": "<p class=\"finder-tip\" id=\"acbCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"acbToggleAll\">すべて展開</button>",
+   "79 시리즈<span class=\"series-count\">28건</span>": "79シリーズ<span class=\"series-count\">28件</span>",
+   "70 시리즈<span class=\"series-count\">39건</span>": "70シリーズ<span class=\"series-count\">39件</span>",
+   "72 시리즈<span class=\"series-count\">33건</span>": "72シリーズ<span class=\"series-count\">33件</span>",
+   "73 시리즈<span class=\"series-count\">32건</span>": "73シリーズ<span class=\"series-count\">32件</span>",
+   "74 시리즈<span class=\"series-count\">15건</span>": "74シリーズ<span class=\"series-count\">15件</span>"
+  },
+  "zh": {
+   "앵귤러 콘택트 볼 베어링 | [회사명] 베어링": "角接触球轴承 | [公司名] 轴承",
+   "<p class=\"eyebrow\">Angular Contact Ball Bearings</p> <h2>앵귤러 콘택트 볼 베어링</h2> <p>경방향 하중과 한쪽 방향의 축방향 하중을 받을 수 있으며, 일반적으로 2개를 조합하여 사용합니다.</p> <p>접촉각 15°(접미기호 C), 30°(접미기호 A), 40°(접미기호 B) 등이 공급됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Angular Contact Ball Bearings</p> <h2>角接触球轴承</h2> <p>可承受径向载荷及单一方向的轴向载荷,通常两个一组配对使用。</p> <p>提供接触角15°(后缀C)、30°(后缀A)、40°(后缀B)等规格。</p> <p class=\"section-head-tip\">只需输入型号或部分尺寸即可搜索。</p>",
+   "<p class=\"diagram-caption\">당사 SWS 카탈로그 규격 도면</p> <img src=\"img/angular_contact_ball.png\" alt=\"구조 단면도\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(내경) · D(외경) · 공차(d/D) · B(폭)</p>": "<p class=\"diagram-caption\">本公司SWS样本规格图纸</p> <img src=\"img/angular_contact_ball.png\" alt=\"结构剖面图\" style=\"display: block; margin: 0 auto; height: 240px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(内径) · D(外径) · 公差(d/D) · B(宽度)</p>",
+   "<label for=\"acbFilter\">형번 / 규격 검색</label> <input id=\"acbFilter\" type=\"text\" placeholder=\"예: 7200 또는 30*62\" autocomplete=\"off\">": "<label for=\"acbFilter\">型号 / 规格搜索</label> <input id=\"acbFilter\" type=\"text\" placeholder=\"例: 7200 或 30*62\" autocomplete=\"off\">",
+   "<p class=\"finder-tip\" id=\"acbCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"acbToggleAll\">전체 펼치기</button>": "<p class=\"finder-tip\" id=\"acbCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"acbToggleAll\">全部展开</button>",
+   "79 시리즈<span class=\"series-count\">28건</span>": "79系列<span class=\"series-count\">28项</span>",
+   "70 시리즈<span class=\"series-count\">39건</span>": "70系列<span class=\"series-count\">39项</span>",
+   "72 시리즈<span class=\"series-count\">33건</span>": "72系列<span class=\"series-count\">33项</span>",
+   "73 시리즈<span class=\"series-count\">32건</span>": "73系列<span class=\"series-count\">32项</span>",
+   "74 시리즈<span class=\"series-count\">15건</span>": "74系列<span class=\"series-count\">15项</span>"
+  }
+ },
+ "attrs": {
+  "en": {
+   "예: 7200 또는 30*62": "e.g. 7200 or 30*62"
+  },
+  "ja": {
+   "예: 7200 또는 30*62": "例: 7200 または 30*62"
+  },
+  "zh": {
+   "예: 7200 또는 30*62": "例: 7200 或 30*62"
+  }
+ }
+}

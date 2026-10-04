@@ -1,0 +1,33 @@
+{
+ "text": {
+  "en": {
+   "오링 G계열 | [회사명] 베어링": "O-Ring G Series | [Company Name] Bearing",
+   "<p class=\"eyebrow\">O-Ring G Series</p> <h2>오링 G계열</h2> <p>고정 부위(플랜지·커버 등) 실링에 주로 사용하는 O-링 G계열입니다.</p>": "<p class=\"eyebrow\">O-Ring G Series</p> <h2>O-Ring G Series</h2> <p>The O-Ring G series is mainly used for sealing stationary parts such as flanges and covers.</p>",
+   "<img src=\"assets/oring_diagram_dw.png\" alt=\"O-링 G계열 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_dw.png\" alt=\"O-Ring G Series Drawing\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front View · Cross-Section · Circular Cross-Section<br><span style=\"color: var(--text-faint);\">d=Inner Diameter · W=Thickness (Wire Diameter)</span></p>",
+   "※ d 공차는 규격 구간별로 상이합니다(예: 소형 ±0.10~±0.15, 중형 ±0.25~±0.6, 대형 ±0.8 등). 정확한 공차는 발주 시 확인해 주세요.": "* The d tolerance varies by size range (e.g. small ±0.10 to ±0.15, medium ±0.25 to ±0.6, large ±0.8, etc.). Please confirm the exact tolerance when ordering."
+  },
+  "ja": {
+   "오링 G계열 | [회사명] 베어링": "Oリング G系列 | [会社名] ベアリング",
+   "<p class=\"eyebrow\">O-Ring G Series</p> <h2>오링 G계열</h2> <p>고정 부위(플랜지·커버 등) 실링에 주로 사용하는 O-링 G계열입니다.</p>": "<p class=\"eyebrow\">O-Ring G Series</p> <h2>Oリング G系列</h2> <p>固定部位(フランジ・カバーなど)のシーリングに主に使用するOリングG系列です。</p>",
+   "<img src=\"assets/oring_diagram_dw.png\" alt=\"O-링 G계열 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_dw.png\" alt=\"OリングG系列図面\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図 ・ 断面図 ・ 円形断面<br><span style=\"color: var(--text-faint);\">d=内径 ・ W=太さ(線径)</span></p>",
+   "※ d 공차는 규격 구간별로 상이합니다(예: 소형 ±0.10~±0.15, 중형 ±0.25~±0.6, 대형 ±0.8 등). 정확한 공차는 발주 시 확인해 주세요.": "※ dの公差は規格区間ごとに異なります(例: 小型±0.10~±0.15、中型±0.25~±0.6、大型±0.8など)。正確な公差は発注時にご確認ください。"
+  },
+  "zh": {
+   "오링 G계열 | [회사명] 베어링": "O形圈 G系列 | [公司名] 轴承",
+   "<p class=\"eyebrow\">O-Ring G Series</p> <h2>오링 G계열</h2> <p>고정 부위(플랜지·커버 등) 실링에 주로 사용하는 O-링 G계열입니다.</p>": "<p class=\"eyebrow\">O-Ring G Series</p> <h2>O形圈 G系列</h2> <p>主要用于固定部位(法兰、盖板等)密封的O形圈G系列。</p>",
+   "<img src=\"assets/oring_diagram_dw.png\" alt=\"O-링 G계열 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_dw.png\" alt=\"O形圈G系列图纸\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正视图 · 剖面图 · 圆形截面<br><span style=\"color: var(--text-faint);\">d=内径 · W=线径</span></p>",
+   "※ d 공차는 규격 구간별로 상이합니다(예: 소형 ±0.10~±0.15, 중형 ±0.25~±0.6, 대형 ±0.8 등). 정확한 공차는 발주 시 확인해 주세요.": "※ d的公差因规格区间而异(例如:小型±0.10~±0.15,中型±0.25~±0.6,大型±0.8等)。请在下单时确认准确公差。"
+  }
+ },
+ "attrs": {
+  "en": {
+   "O-링 G계열 도면": "O-Ring G Series Drawing"
+  },
+  "ja": {
+   "O-링 G계열 도면": "OリングG系列図面"
+  },
+  "zh": {
+   "O-링 G계열 도면": "O形圈G系列图纸"
+  }
+ }
+}
