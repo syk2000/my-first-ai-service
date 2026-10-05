@@ -1,0 +1,36 @@
+{
+  "text": {
+    "en": {
+      "오일씰 NOK 호환표 | [회사명] 베어링": "Oil Seal NOK Compatibility Table | [Company Name] Bearing",
+      "<p class=\"eyebrow\">Oil Seal NOK Compatibility Table</p> <h2>오일씰 NOK 호환표</h2> <p>당사 오일씰 형번과 NOK 호환 형번(SC/SB/TC/TB/VC/VB 재질·형상별)을 정리한 표입니다. 형번 일부만 입력해도 검색됩니다.</p> <p style=\"font-size: 12.5px; color: var(--text-sub); margin-top: 8px;\">○ = NOK·삼정·대광 3사 규격 모두 겹침 · ★ = NOK·삼정 겹침 · △ = 삼정·대광 겹침 · ⬠ = NOK·대광 겹침</p>": "<p class=\"eyebrow\">Oil Seal NOK Compatibility Table</p> <h2>Oil Seal NOK Compatibility Table</h2> <p>This table lists our oil seal model numbers alongside NOK-compatible model numbers (by SC/SB/TC/TB/VC/VB material/shape). Searching with just part of a model number also works.</p> <p style=\"font-size: 12.5px; color: var(--text-sub); margin-top: 8px;\">○ = Overlaps across all 3 makers' specs (NOK · Samjung · Daekwang) · ★ = Overlaps between NOK · Samjung · △ = Overlaps between Samjung · Daekwang · ⬠ = Overlaps between NOK · Daekwang</p>",
+      "<label for=\"nokFilter\">형번 검색</label> <input id=\"nokFilter\" type=\"text\" placeholder=\"예: R/T8-18 또는 AC 0052\" autocomplete=\"off\">": "<label for=\"nokFilter\">Search by Model Number</label> <input id=\"nokFilter\" type=\"text\" placeholder=\"e.g. R/T8-18 or AC 0052\" autocomplete=\"off\">",
+      "품명": "Product Name",
+      "※ 위 표는 당사 정식 호환표 원본을 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "* The table above was prepared based on our official compatibility table original. Before precision machining or ordering, please be sure to make a final confirmation with our official specification sheet original."
+    },
+    "ja": {
+      "오일씰 NOK 호환표 | [회사명] 베어링": "オイルシールNOK互換表 | [会社名]ベアリング",
+      "<p class=\"eyebrow\">Oil Seal NOK Compatibility Table</p> <h2>오일씰 NOK 호환표</h2> <p>당사 오일씰 형번과 NOK 호환 형번(SC/SB/TC/TB/VC/VB 재질·형상별)을 정리한 표입니다. 형번 일부만 입력해도 검색됩니다.</p> <p style=\"font-size: 12.5px; color: var(--text-sub); margin-top: 8px;\">○ = NOK·삼정·대광 3사 규격 모두 겹침 · ★ = NOK·삼정 겹침 · △ = 삼정·대광 겹침 · ⬠ = NOK·대광 겹침</p>": "<p class=\"eyebrow\">Oil Seal NOK Compatibility Table</p> <h2>オイルシールNOK互換表</h2> <p>当社オイルシール形番とNOK互換形番(SC/SB/TC/TB/VC/VB材質・形状別)をまとめた表です。形番の一部だけ入力しても検索できます。</p> <p style=\"font-size: 12.5px; color: var(--text-sub); margin-top: 8px;\">○ = NOK・三正・大光3社規格すべて重複 · ★ = NOK・三正重複 · △ = 三正・大光重複 · ⬠ = NOK・大光重複</p>",
+      "<label for=\"nokFilter\">형번 검색</label> <input id=\"nokFilter\" type=\"text\" placeholder=\"예: R/T8-18 또는 AC 0052\" autocomplete=\"off\">": "<label for=\"nokFilter\">形番検索</label> <input id=\"nokFilter\" type=\"text\" placeholder=\"例: R/T8-18 または AC 0052\" autocomplete=\"off\">",
+      "품명": "品名",
+      "※ 위 표는 당사 정식 호환표 원본을 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "※上記の表は当社正式互換表原本を基準に作成しました。精密加工・発注前には必ず当社正式規格表原本で最終確認をお願いいたします。"
+    },
+    "zh": {
+      "오일씰 NOK 호환표 | [회사명] 베어링": "油封NOK对照表 | [公司名]轴承",
+      "<p class=\"eyebrow\">Oil Seal NOK Compatibility Table</p> <h2>오일씰 NOK 호환표</h2> <p>당사 오일씰 형번과 NOK 호환 형번(SC/SB/TC/TB/VC/VB 재질·형상별)을 정리한 표입니다. 형번 일부만 입력해도 검색됩니다.</p> <p style=\"font-size: 12.5px; color: var(--text-sub); margin-top: 8px;\">○ = NOK·삼정·대광 3사 규격 모두 겹침 · ★ = NOK·삼정 겹침 · △ = 삼정·대광 겹침 · ⬠ = NOK·대광 겹침</p>": "<p class=\"eyebrow\">Oil Seal NOK Compatibility Table</p> <h2>油封NOK对照表</h2> <p>本表整理了本公司油封型号与NOK兼容型号(按SC/SB/TC/TB/VC/VB材质・形状分类)。仅输入型号的一部分也可以搜索。</p> <p style=\"font-size: 12.5px; color: var(--text-sub); margin-top: 8px;\">○ = NOK・三正・大光三家规格均重叠 · ★ = NOK・三正重叠 · △ = 三正・大光重叠 · ⬠ = NOK・大光重叠</p>",
+      "<label for=\"nokFilter\">형번 검색</label> <input id=\"nokFilter\" type=\"text\" placeholder=\"예: R/T8-18 또는 AC 0052\" autocomplete=\"off\">": "<label for=\"nokFilter\">型号搜索</label> <input id=\"nokFilter\" type=\"text\" placeholder=\"例: R/T8-18 或 AC 0052\" autocomplete=\"off\">",
+      "품명": "品名",
+      "※ 위 표는 당사 정식 호환표 원본을 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "※上表以本公司正式对照表原件为准编写。精密加工・订购前，请务必以本公司正式规格表原件进行最终确认。"
+    }
+  },
+  "attrs": {
+    "en": {
+      "예: R/T8-18 또는 AC 0052": "e.g. R/T8-18 or AC 0052"
+    },
+    "ja": {
+      "예: R/T8-18 또는 AC 0052": "例: R/T8-18 または AC 0052"
+    },
+    "zh": {
+      "예: R/T8-18 또는 AC 0052": "例: R/T8-18 或 AC 0052"
+    }
+  }
+}
