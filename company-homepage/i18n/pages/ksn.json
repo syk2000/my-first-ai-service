@@ -1,0 +1,27 @@
+{
+ "text": {
+  "en": {
+   "KSN | [회사명] 베어링": "KSN | [Company Name] Bearing",
+   "<img src=\"assets/ksn_diagram.png\" alt=\"KSN 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도 — 셋트스크류 + 핀 고정 · 정면도<br><span style=\"color: var(--text-faint);\">d=나사 안지름 · B=너트 폭 · d2=바깥지름</span></p>": "<img src=\"assets/ksn_diagram.png\" alt=\"KSN Drawing\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Cross-section — Set screw + pin fixing · Front view<br><span style=\"color: var(--text-faint);\">d=Thread bore diameter · B=Nut width · d2=Outer diameter</span></p>"
+  },
+  "ja": {
+   "KSN | [회사명] 베어링": "KSN | [会社名]ベアリング",
+   "<img src=\"assets/ksn_diagram.png\" alt=\"KSN 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도 — 셋트스크류 + 핀 고정 · 정면도<br><span style=\"color: var(--text-faint);\">d=나사 안지름 · B=너트 폭 · d2=바깥지름</span></p>": "<img src=\"assets/ksn_diagram.png\" alt=\"KSN 図面\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 断面図 — 止めねじ+ピン固定・正面図<br><span style=\"color: var(--text-faint);\">d=ねじ内径・B=ナット幅・d2=外径</span></p>"
+  },
+  "zh": {
+   "KSN | [회사명] 베어링": "KSN | [公司名]轴承",
+   "<img src=\"assets/ksn_diagram.png\" alt=\"KSN 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도 — 셋트스크류 + 핀 고정 · 정면도<br><span style=\"color: var(--text-faint);\">d=나사 안지름 · B=너트 폭 · d2=바깥지름</span></p>": "<img src=\"assets/ksn_diagram.png\" alt=\"KSN 图纸\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 剖面图 — 定位螺钉+销钉固定・正视图<br><span style=\"color: var(--text-faint);\">d=螺纹内径・B=螺母宽度・d2=外径</span></p>"
+  }
+ },
+ "attrs": {
+  "en": {
+   "KSN 도면": "KSN Drawing"
+  },
+  "ja": {
+   "KSN 도면": "KSN 図面"
+  },
+  "zh": {
+   "KSN 도면": "KSN 图纸"
+  }
+ }
+}

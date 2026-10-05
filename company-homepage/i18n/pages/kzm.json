@@ -1,0 +1,30 @@
+{
+ "text": {
+  "en": {
+   "KZM | [회사명] 베어링": "KZM | [Company Name] Bearing",
+   "<strong>사양</strong><br> 재질: SCM440 · 경도: HRC28~32<br> 나사 정도: ISO 4H정도 · 나사직각도: ⊥0.005 직각도<br> 표면처리: 인산염 피막": "<strong>Specifications</strong><br> Material: SCM440 · Hardness: HRC28–32<br> Thread grade: ISO 4H grade · Thread perpendicularity: ⊥0.005 perpendicularity<br> Surface treatment: Phosphate coating",
+   "<img src=\"assets/kzm_diagram.png\" alt=\"KZM 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도<br><span style=\"color: var(--text-faint);\">n×m=셋트스크류 갯수×나사 · g=셋트스크류 피치원 · D=바깥지름 · d=나사 안지름 · h=너트 폭</span></p>": "<img src=\"assets/kzm_diagram.png\" alt=\"KZM Drawing\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front view · Cross-section<br><span style=\"color: var(--text-faint);\">n×m=Set screw count × thread · g=Set screw pitch circle · D=Outer diameter · d=Thread bore diameter · h=Nut width</span></p>"
+  },
+  "ja": {
+   "KZM | [회사명] 베어링": "KZM | [会社名]ベアリング",
+   "<strong>사양</strong><br> 재질: SCM440 · 경도: HRC28~32<br> 나사 정도: ISO 4H정도 · 나사직각도: ⊥0.005 직각도<br> 표면처리: 인산염 피막": "<strong>仕様</strong><br> 材質:SCM440・硬度:HRC28~32<br> ねじ精度:ISO 4H級・ねじ直角度:⊥0.005直角度<br> 表面処理:リン酸塩皮膜",
+   "<img src=\"assets/kzm_diagram.png\" alt=\"KZM 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도<br><span style=\"color: var(--text-faint);\">n×m=셋트스크류 갯수×나사 · g=셋트스크류 피치원 · D=바깥지름 · d=나사 안지름 · h=너트 폭</span></p>": "<img src=\"assets/kzm_diagram.png\" alt=\"KZM 図面\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図・断面図<br><span style=\"color: var(--text-faint);\">n×m=止めねじ本数×ねじ・g=止めねじピッチ円・D=外径・d=ねじ内径・h=ナット幅</span></p>"
+  },
+  "zh": {
+   "KZM | [회사명] 베어링": "KZM | [公司名]轴承",
+   "<strong>사양</strong><br> 재질: SCM440 · 경도: HRC28~32<br> 나사 정도: ISO 4H정도 · 나사직각도: ⊥0.005 직각도<br> 표면처리: 인산염 피막": "<strong>规格</strong><br> 材质:SCM440・硬度:HRC28~32<br> 螺纹精度:ISO 4H级・螺纹垂直度:⊥0.005垂直度<br> 表面处理:磷酸盐镀层",
+   "<img src=\"assets/kzm_diagram.png\" alt=\"KZM 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도<br><span style=\"color: var(--text-faint);\">n×m=셋트스크류 갯수×나사 · g=셋트스크류 피치원 · D=바깥지름 · d=나사 안지름 · h=너트 폭</span></p>": "<img src=\"assets/kzm_diagram.png\" alt=\"KZM 图纸\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正视图・剖面图<br><span style=\"color: var(--text-faint);\">n×m=定位螺钉数量×螺纹・g=定位螺钉节圆・D=外径・d=螺纹内径・h=螺母宽度</span></p>"
+  }
+ },
+ "attrs": {
+  "en": {
+   "KZM 도면": "KZM Drawing"
+  },
+  "ja": {
+   "KZM 도면": "KZM 図面"
+  },
+  "zh": {
+   "KZM 도면": "KZM 图纸"
+  }
+ }
+}
