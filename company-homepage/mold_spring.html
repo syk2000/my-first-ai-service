@@ -4537,6 +4537,7 @@
 <script src="common.js"></script>
 <script>
   (function () {
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
     var tabBtns = Array.prototype.slice.call(document.querySelectorAll('#mold-spring .cat-tab-btn'));
     var tabPanels = Array.prototype.slice.call(document.querySelectorAll('#mold-spring .cat-tab-panel'));
 
@@ -4547,9 +4548,17 @@
 
     tabBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        activateTab(btn.getAttribute('data-tab'));
+        var target = btn.getAttribute('data-tab');
+        activateTab(target);
+        try { sessionStorage.setItem(STORAGE_KEY, target); } catch (e) {}
       });
     });
+
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && tabPanels.some(function (p) { return p.getAttribute('data-panel') === saved; })) {
+      activateTab(saved);
+    }
   })();
 
   function setupFinder(inputId, groupsId, countId, toggleBtnId, totalRows, seriesCount) {

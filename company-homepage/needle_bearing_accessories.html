@@ -177,17 +177,25 @@
 <script src="common.js"></script>
 <script>
   (function () {
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
     var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
     var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    function activate(target) {
+      btns.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-tab') === target); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== target; });
+    }
     btns.forEach(function (btn) {
       btn.addEventListener('click', function () {
         var target = btn.getAttribute('data-tab');
-        btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
-        panels.forEach(function (p) {
-          p.hidden = p.getAttribute('data-panel') !== target;
-        });
+        activate(target);
+        try { sessionStorage.setItem(STORAGE_KEY, target); } catch (e) {}
       });
     });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && panels.some(function (p) { return p.getAttribute('data-panel') === saved; })) {
+      activate(saved);
+    }
   })();
 
   (function () {
