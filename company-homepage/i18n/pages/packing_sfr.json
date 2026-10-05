@@ -1,0 +1,30 @@
+{
+  "text": {
+    "en": {
+      "패킹 SFR형 | [회사명] 베어링": "Packing SFR Type | [Company Name] Bearing",
+      "<p class=\"eyebrow\">Dust Seal / Packing SFR Type</p> <h2>더스트씰 · 패킹 SFR형</h2> <p>이물질 유입을 막는 <strong style=\"color: var(--accent);\">더스트 씰</strong>로 사용하는 패킹 SFR형입니다.</p>": "<p class=\"eyebrow\">Dust Seal / Packing SFR Type</p> <h2>Dust Seal · Packing SFR Type</h2> <p>Packing SFR type used as a <strong style=\"color: var(--accent);\">dust seal</strong> to prevent the ingress of foreign matter.</p>",
+      "<img src=\"assets/packing_sfr_diagram.png\" alt=\"패킹 SFR형 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도<br><span style=\"color: var(--text-faint);\">d=내경 · D=외경 · H=높이</span></p>": "<img src=\"assets/packing_sfr_diagram.png\" alt=\"Packing SFR type drawing\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Cross-section diagram<br><span style=\"color: var(--text-faint);\">d=inner diameter · D=outer diameter · H=height</span></p>"
+    },
+    "ja": {
+      "패킹 SFR형 | [회사명] 베어링": "パッキンSFR型 | [会社名]ベアリング",
+      "<p class=\"eyebrow\">Dust Seal / Packing SFR Type</p> <h2>더스트씰 · 패킹 SFR형</h2> <p>이물질 유입을 막는 <strong style=\"color: var(--accent);\">더스트 씰</strong>로 사용하는 패킹 SFR형입니다.</p>": "<p class=\"eyebrow\">Dust Seal / Packing SFR Type</p> <h2>ダストシール・パッキンSFR型</h2> <p>異物の侵入を防ぐ<strong style=\"color: var(--accent);\">ダストシール</strong>として使用するパッキンSFR型です。</p>",
+      "<img src=\"assets/packing_sfr_diagram.png\" alt=\"패킹 SFR형 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도<br><span style=\"color: var(--text-faint);\">d=내경 · D=외경 · H=높이</span></p>": "<img src=\"assets/packing_sfr_diagram.png\" alt=\"パッキンSFR型図面\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 断面図<br><span style=\"color: var(--text-faint);\">d=内径・D=外径・H=高さ</span></p>"
+    },
+    "zh": {
+      "패킹 SFR형 | [회사명] 베어링": "密封圈SFR型 | [公司名]轴承",
+      "<p class=\"eyebrow\">Dust Seal / Packing SFR Type</p> <h2>더스트씰 · 패킹 SFR형</h2> <p>이물질 유입을 막는 <strong style=\"color: var(--accent);\">더스트 씰</strong>로 사용하는 패킹 SFR형입니다.</p>": "<p class=\"eyebrow\">Dust Seal / Packing SFR Type</p> <h2>防尘密封圈・SFR型密封圈</h2> <p>用作防止异物进入的<strong style=\"color: var(--accent);\">防尘密封件</strong>的SFR型密封圈。</p>",
+      "<img src=\"assets/packing_sfr_diagram.png\" alt=\"패킹 SFR형 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도<br><span style=\"color: var(--text-faint);\">d=내경 · D=외경 · H=높이</span></p>": "<img src=\"assets/packing_sfr_diagram.png\" alt=\"SFR型密封圈图纸\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 剖面图<br><span style=\"color: var(--text-faint);\">d=内径・D=外径・H=高度</span></p>"
+    }
+  },
+  "attrs": {
+    "en": {
+      "패킹 SFR형 도면": "Packing SFR type drawing"
+    },
+    "ja": {
+      "패킹 SFR형 도면": "パッキンSFR型図面"
+    },
+    "zh": {
+      "패킹 SFR형 도면": "SFR型密封圈图纸"
+    }
+  }
+}

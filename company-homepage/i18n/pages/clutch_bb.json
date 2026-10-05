@@ -1,0 +1,33 @@
+{
+  "text": {
+    "en": {
+      "BB 시리즈 | [회사명] 베어링": "BB Series | [Company Name] Bearing",
+      "<p class=\"eyebrow\">Clutch Bearings · BB Series</p> <h2>BB 시리즈 (캠 클러치 베어링)</h2> <p>TSS 계열보다 콤팩트한, 볼베어링과 같은 형태(하우징·플랜지 없음)의 시리즈로, 키홈 가공 옵션(1K·2K)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · BB Series</p> <h2>BB Series (Cam Clutch Bearing)</h2> <p>A more compact series than TSS, supplied in the same form as a ball bearing (no housing or flange), with an optional keyway (1K·2K).</p> <p class=\"section-head-tip\">You can search by entering just part of the model number or dimensions.</p>",
+      "<label for=\"bbFilter\">형번 / 규격 검색</label> <input id=\"bbFilter\" type=\"text\" placeholder=\"예: BB20\" autocomplete=\"off\">": "<label for=\"bbFilter\">Model / Spec Search</label> <input id=\"bbFilter\" type=\"text\" placeholder=\"e.g. BB20\" autocomplete=\"off\">",
+      "※ 키홈 옵션: 형번 뒤에 <strong style=\"color: var(--text-sub);\">-1K</strong>(내륜에만 키홈) 또는 <strong style=\"color: var(--text-sub);\">-2K</strong>(내·외륜 모두 키홈)를 붙여 주문합니다. 치수(d/D/B)는 1K·2K 공통입니다.": "※ Keyway option: order by adding <strong style=\"color: var(--text-sub);\">-1K</strong> (keyway on inner ring only) or <strong style=\"color: var(--text-sub);\">-2K</strong> (keyway on both inner and outer rings) after the model number. Dimensions (d/D/B) are common to both 1K and 2K."
+    },
+    "ja": {
+      "BB 시리즈 | [회사명] 베어링": "BBシリーズ | [会社名]ベアリング",
+      "<p class=\"eyebrow\">Clutch Bearings · BB Series</p> <h2>BB 시리즈 (캠 클러치 베어링)</h2> <p>TSS 계열보다 콤팩트한, 볼베어링과 같은 형태(하우징·플랜지 없음)의 시리즈로, 키홈 가공 옵션(1K·2K)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · BB Series</p> <h2>BBシリーズ(カムクラッチベアリング)</h2> <p>TSS系列よりコンパクトな、ボールベアリングと同じ形状(ハウジング・フランジなし)のシリーズで、キー溝加工オプション(1K・2K)があります。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
+      "<label for=\"bbFilter\">형번 / 규격 검색</label> <input id=\"bbFilter\" type=\"text\" placeholder=\"예: BB20\" autocomplete=\"off\">": "<label for=\"bbFilter\">形番 / 規格検索</label> <input id=\"bbFilter\" type=\"text\" placeholder=\"例: BB20\" autocomplete=\"off\">",
+      "※ 키홈 옵션: 형번 뒤에 <strong style=\"color: var(--text-sub);\">-1K</strong>(내륜에만 키홈) 또는 <strong style=\"color: var(--text-sub);\">-2K</strong>(내·외륜 모두 키홈)를 붙여 주문합니다. 치수(d/D/B)는 1K·2K 공통입니다.": "※ キー溝オプション: 形番の後ろに<strong style=\"color: var(--text-sub);\">-1K</strong>(内輪のみキー溝)または<strong style=\"color: var(--text-sub);\">-2K</strong>(内輪・外輪ともにキー溝)を付けて注文します。寸法(d/D/B)は1K・2K共通です。"
+    },
+    "zh": {
+      "BB 시리즈 | [회사명] 베어링": "BB系列 | [公司名]轴承",
+      "<p class=\"eyebrow\">Clutch Bearings · BB Series</p> <h2>BB 시리즈 (캠 클러치 베어링)</h2> <p>TSS 계열보다 콤팩트한, 볼베어링과 같은 형태(하우징·플랜지 없음)의 시리즈로, 키홈 가공 옵션(1K·2K)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · BB Series</p> <h2>BB系列(凸轮离合器轴承)</h2> <p>比TSS系列更紧凑,以与滚珠轴承相同的形态(无壳体、法兰)供应,带键槽加工选项(1K·2K)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
+      "<label for=\"bbFilter\">형번 / 규격 검색</label> <input id=\"bbFilter\" type=\"text\" placeholder=\"예: BB20\" autocomplete=\"off\">": "<label for=\"bbFilter\">型号 / 规格搜索</label> <input id=\"bbFilter\" type=\"text\" placeholder=\"例如: BB20\" autocomplete=\"off\">",
+      "※ 키홈 옵션: 형번 뒤에 <strong style=\"color: var(--text-sub);\">-1K</strong>(내륜에만 키홈) 또는 <strong style=\"color: var(--text-sub);\">-2K</strong>(내·외륜 모두 키홈)를 붙여 주문합니다. 치수(d/D/B)는 1K·2K 공통입니다.": "※ 键槽选项：在型号后加<strong style=\"color: var(--text-sub);\">-1K</strong>(仅内圈开键槽)或<strong style=\"color: var(--text-sub);\">-2K</strong>(内外圈均开键槽)进行订购。尺寸(d/D/B)1K与2K通用。"
+    }
+  },
+  "attrs": {
+    "en": {
+      "예: BB20": "e.g. BB20"
+    },
+    "ja": {
+      "예: BB20": "例: BB20"
+    },
+    "zh": {
+      "예: BB20": "例如: BB20"
+    }
+  }
+}

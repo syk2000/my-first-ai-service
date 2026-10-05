@@ -1,0 +1,30 @@
+{
+ "text": {
+  "en": {
+   "KZMV | [회사명] 베어링": "KZMV | [Company Name] Bearing",
+   "<strong>사양</strong><br> 재질: SCM440 · 경도: HRC28~32<br> 나사 정도: ISO 4H정도 · 나사직각도: ⊥0.005 직각도<br> 표면처리: 인산염 피막 · 셋트스크류를 축 방향에서 체결": "<strong>Specifications</strong><br> Material: SCM440 · Hardness: HRC28–32<br> Thread Grade: ISO Grade 4H · Thread Squareness: ⊥0.005 squareness<br> Surface Treatment: Phosphate coating · Set screws tightened from the axial direction",
+   "<img src=\"assets/kzmv_diagram.png\" alt=\"KZMV 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 — 셋트스크류가 축 방향으로 체결<br><span style=\"color: var(--text-faint);\">n×m=셋트스크류 갯수×나사 · D=바깥지름 · d=나사 안지름 · h=너트 폭</span></p>": "<img src=\"assets/kzmv_diagram.png\" alt=\"KZMV Drawing\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front View · Cross-Section — Set screws tightened in the axial direction<br><span style=\"color: var(--text-faint);\">n×m=Number of Set Screws × Thread · D=Outer Diameter · d=Thread Inner Diameter · h=Nut Width</span></p>"
+  },
+  "ja": {
+   "KZMV | [회사명] 베어링": "KZMV | [会社名] ベアリング",
+   "<strong>사양</strong><br> 재질: SCM440 · 경도: HRC28~32<br> 나사 정도: ISO 4H정도 · 나사직각도: ⊥0.005 직각도<br> 표면처리: 인산염 피막 · 셋트스크류를 축 방향에서 체결": "<strong>仕様</strong><br> 材質: SCM440 ・ 硬度: HRC28~32<br> ねじ精度: ISO 4H程度 ・ ねじ直角度: ⊥0.005直角度<br> 表面処理: リン酸塩皮膜 ・ セットスクリューを軸方向から締結",
+   "<img src=\"assets/kzmv_diagram.png\" alt=\"KZMV 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 — 셋트스크류가 축 방향으로 체결<br><span style=\"color: var(--text-faint);\">n×m=셋트스크류 갯수×나사 · D=바깥지름 · d=나사 안지름 · h=너트 폭</span></p>": "<img src=\"assets/kzmv_diagram.png\" alt=\"KZMV図面\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図 ・ 断面図 — セットスクリューが軸方向に締結<br><span style=\"color: var(--text-faint);\">n×m=セットスクリュー本数×ねじ ・ D=外径 ・ d=ねじ内径 ・ h=ナット幅</span></p>"
+  },
+  "zh": {
+   "KZMV | [회사명] 베어링": "KZMV | [公司名] 轴承",
+   "<strong>사양</strong><br> 재질: SCM440 · 경도: HRC28~32<br> 나사 정도: ISO 4H정도 · 나사직각도: ⊥0.005 직각도<br> 표면처리: 인산염 피막 · 셋트스크류를 축 방향에서 체결": "<strong>规格</strong><br> 材质: SCM440 · 硬度: HRC28~32<br> 螺纹精度: ISO 4H级 · 螺纹垂直度: ⊥0.005垂直度<br> 表面处理: 磷酸盐镀层 · 从轴向方向紧固定位螺钉",
+   "<img src=\"assets/kzmv_diagram.png\" alt=\"KZMV 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 — 셋트스크류가 축 방향으로 체결<br><span style=\"color: var(--text-faint);\">n×m=셋트스크류 갯수×나사 · D=바깥지름 · d=나사 안지름 · h=너트 폭</span></p>": "<img src=\"assets/kzmv_diagram.png\" alt=\"KZMV图纸\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正视图 · 剖面图 — 定位螺钉沿轴向紧固<br><span style=\"color: var(--text-faint);\">n×m=定位螺钉数量×螺纹 · D=外径 · d=螺纹内径 · h=螺母宽度</span></p>"
+  }
+ },
+ "attrs": {
+  "en": {
+   "KZMV 도면": "KZMV Drawing"
+  },
+  "ja": {
+   "KZMV 도면": "KZMV図面"
+  },
+  "zh": {
+   "KZMV 도면": "KZMV图纸"
+  }
+ }
+}

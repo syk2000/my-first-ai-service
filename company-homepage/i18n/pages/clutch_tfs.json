@@ -2,17 +2,17 @@
   "text": {
     "en": {
       "TFS 시리즈 | [회사명] 베어링": "TFS Series | [회사명] Bearing",
-      "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS 시리즈 (하우징 일체형 롤러 클러치)</h2> <p>TSS와 같은 스프래그형 구조에 폭을 넓혀 부하 용량을 높인 광폭 시리즈입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS Series (Housing-Integrated Roller Clutch)</h2> <p>A wide-width series with the same sprag-type structure as the TSS, widened to increase load capacity.</p> <p class=\"section-head-tip\">You can search by entering just the model number or part of the dimensions.</p>",
+      "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS 시리즈 (스프래그 클러치 베어링)</h2> <p>TSS와 같은 형태(하우징·플랜지 없음)의 스프래그 구조에 폭을 넓혀 부하 용량을 높인 광폭 시리즈입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS Series (Sprag Clutch Bearing)</h2> <p>A wide-width series with the same sprag structure as TSS (no housing or flange), widened to increase load capacity.</p> <p class=\"section-head-tip\">You can search by entering just part of the model number or dimensions.</p>",
       "<label for=\"tfsFilter\">형번 / 규격 검색</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"예: TFS20\" autocomplete=\"off\">": "<label for=\"tfsFilter\">Model / Spec Search</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"e.g. TFS20\" autocomplete=\"off\">"
     },
     "ja": {
       "TFS 시리즈 | [회사명] 베어링": "TFSシリーズ | [회사명]ベアリング",
-      "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS 시리즈 (하우징 일체형 롤러 클러치)</h2> <p>TSS와 같은 스프래그형 구조에 폭을 넓혀 부하 용량을 높인 광폭 시리즈입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFSシリーズ(ハウジング一体型ローラークラッチ)</h2> <p>TSSと同じスプラグ型構造で、幅を広げて負荷容量を高めたワイドシリーズです。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
+      "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS 시리즈 (스프래그 클러치 베어링)</h2> <p>TSS와 같은 형태(하우징·플랜지 없음)의 스프래그 구조에 폭을 넓혀 부하 용량을 높인 광폭 시리즈입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFSシリーズ(スプラグクラッチベアリング)</h2> <p>TSSと同じ形状(ハウジング・フランジなし)のスプラグ構造の幅を広げ、負荷容量を高めた広幅シリーズです。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
       "<label for=\"tfsFilter\">형번 / 규격 검색</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"예: TFS20\" autocomplete=\"off\">": "<label for=\"tfsFilter\">形番 / 規格検索</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"例: TFS20\" autocomplete=\"off\">"
     },
     "zh": {
       "TFS 시리즈 | [회사명] 베어링": "TFS系列 | [회사명]轴承",
-      "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS 시리즈 (하우징 일체형 롤러 클러치)</h2> <p>TSS와 같은 스프래그형 구조에 폭을 넓혀 부하 용량을 높인 광폭 시리즈입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS系列(外壳一体型滚柱离合器)</h2> <p>采用与TSS相同的斜楔式结构，通过加宽宽度提升了承载能力的宽型系列。</p> <p class=\"section-head-tip\">只需输入型号或部分尺寸即可搜索。</p>",
+      "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS 시리즈 (스프래그 클러치 베어링)</h2> <p>TSS와 같은 형태(하우징·플랜지 없음)의 스프래그 구조에 폭을 넓혀 부하 용량을 높인 광폭 시리즈입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TFS Series</p> <h2>TFS系列(斜楔式离合器轴承)</h2> <p>与TSS形态相同(无壳体、法兰)的斜楔结构,加宽后提高了承载能力的宽幅系列。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
       "<label for=\"tfsFilter\">형번 / 규격 검색</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"예: TFS20\" autocomplete=\"off\">": "<label for=\"tfsFilter\">型号 / 规格搜索</label> <input id=\"tfsFilter\" type=\"text\" placeholder=\"例: TFS20\" autocomplete=\"off\">"
     }
   },

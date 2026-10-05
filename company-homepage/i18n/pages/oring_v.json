@@ -1,0 +1,33 @@
+{
+  "text": {
+    "en": {
+      "오링 V계열 | [회사명] 베어링": "O-Ring V Series | [Company Name] Bearing",
+      "<p class=\"eyebrow\">O-Ring V Series</p> <h2>오링 V계열</h2> <p>대형 진공·플랜지 실링 등에 사용하는 굵은 단면의 O-링 V계열입니다.</p>": "<p class=\"eyebrow\">O-Ring V Series</p> <h2>O-Ring V Series</h2> <p>A thick cross-section O-ring V series used for large vacuum and flange sealing applications, among others.</p>",
+      "<img src=\"assets/oring_diagram_dw.png\" alt=\"O-링 V계열 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_dw.png\" alt=\"O-ring V series drawing\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front view · cross-section diagram · circular cross-section<br><span style=\"color: var(--text-faint);\">d=inner diameter · W=thickness (cord diameter)</span></p>",
+      "※ d 공차는 규격 구간별로 상이합니다(예: ±0.15~±0.6, 최대형 ±0.8~±1.0). 정확한 공차는 발주 시 확인해 주세요.": "※ The tolerance for d varies by spec range (e.g. ±0.15 to ±0.6, up to ±0.8 to ±1.0 for the largest sizes). Please confirm the exact tolerance when ordering."
+    },
+    "ja": {
+      "오링 V계열 | [회사명] 베어링": "OリングV系列 | [会社名]ベアリング",
+      "<p class=\"eyebrow\">O-Ring V Series</p> <h2>오링 V계열</h2> <p>대형 진공·플랜지 실링 등에 사용하는 굵은 단면의 O-링 V계열입니다.</p>": "<p class=\"eyebrow\">O-Ring V Series</p> <h2>OリングV系列</h2> <p>大型真空・フランジシーリングなどに使用する太い断面のOリングV系列です。</p>",
+      "<img src=\"assets/oring_diagram_dw.png\" alt=\"O-링 V계열 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_dw.png\" alt=\"OリングV系列図面\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図・断面図・円形断面<br><span style=\"color: var(--text-faint);\">d=内径・W=太さ(線径)</span></p>",
+      "※ d 공차는 규격 구간별로 상이합니다(예: ±0.15~±0.6, 최대형 ±0.8~±1.0). 정확한 공차는 발주 시 확인해 주세요.": "※ dの公差は規格区間ごとに異なります(例: ±0.15~±0.6、最大サイズは±0.8~±1.0)。正確な公差はご発注時にご確認ください。"
+    },
+    "zh": {
+      "오링 V계열 | [회사명] 베어링": "O型圈V系列 | [公司名]轴承",
+      "<p class=\"eyebrow\">O-Ring V Series</p> <h2>오링 V계열</h2> <p>대형 진공·플랜지 실링 등에 사용하는 굵은 단면의 O-링 V계열입니다.</p>": "<p class=\"eyebrow\">O-Ring V Series</p> <h2>O型圈V系列</h2> <p>用于大型真空、法兰密封等场合的粗截面O型圈V系列。</p>",
+      "<img src=\"assets/oring_diagram_dw.png\" alt=\"O-링 V계열 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_dw.png\" alt=\"O型圈V系列图纸\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正视图・剖面图・圆形截面<br><span style=\"color: var(--text-faint);\">d=内径・W=线径(粗细)</span></p>",
+      "※ d 공차는 규격 구간별로 상이합니다(예: ±0.15~±0.6, 최대형 ±0.8~±1.0). 정확한 공차는 발주 시 확인해 주세요.": "※ d的公差因规格区间而异(例如：±0.15~±0.6，最大规格为±0.8~±1.0)。准确公差请在下单时确认。"
+    }
+  },
+  "attrs": {
+    "en": {
+      "O-링 V계열 도면": "O-ring V series drawing"
+    },
+    "ja": {
+      "O-링 V계열 도면": "OリングV系列図面"
+    },
+    "zh": {
+      "O-링 V계열 도면": "O型圈V系列图纸"
+    }
+  }
+}

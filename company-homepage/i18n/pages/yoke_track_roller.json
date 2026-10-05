@@ -1,0 +1,45 @@
+{
+ "text": {
+  "en": {
+   "요오크형 트랙 롤러 베어링 | [회사명] 베어링": "Yoke Type Track Roller Bearings | [Company Name] Bearing",
+   "<p class=\"eyebrow\">Yoke Type Track Roller Bearings</p> <h2>요오크형 트랙 롤러 베어링</h2> <p>복열 니들 롤러(NUTR)와 케이지형(NATR) 구조로 큰 반경 방향 하중과 충격 하중을 지지하며, LR 시리즈(단열/복열 볼 트랙 롤러)도 함께 제공합니다.</p> <p>캠 기구, 컨베이어, 자동화 설비의 가이드 롤러로 사용됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Yoke Type Track Roller Bearings</p> <h2>Yoke Type Track Roller Bearings</h2> <p>With a double-row needle roller (NUTR) and caged (NATR) structure, these support large radial loads and shock loads. The LR series (single-/double-row ball track rollers) is also available.</p> <p>Used as guide rollers in cam mechanisms, conveyors, and automation equipment.</p> <p class=\"section-head-tip\">You can search by entering just the part number or part of the dimensions.</p>",
+   "<p class=\"diagram-caption\">당사 SWS 카탈로그 규격 도면</p> <img src=\"img/yoke_track_roller.png\" alt=\"구조 단면도\" style=\"display: block; margin: 0 auto; height: 185px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(내경) · D(외경) · 공차(d/D) · B(폭)</p>": "<p class=\"diagram-caption\">Our SWS Catalog Standard Drawing</p> <img src=\"img/yoke_track_roller.png\" alt=\"Cross-section diagram\" style=\"display: block; margin: 0 auto; height: 185px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(bore) · D(O.D.) · Tolerance(d/D) · B(width)</p>",
+   "<label for=\"ytrFilter\">형번 / 규격 검색</label> <input id=\"ytrFilter\" type=\"text\" placeholder=\"예: NUTR 2047R 또는 20*47\" autocomplete=\"off\">": "<label for=\"ytrFilter\">Part Number / Spec Search</label> <input id=\"ytrFilter\" type=\"text\" placeholder=\"e.g. NUTR 2047R or 20*47\" autocomplete=\"off\">",
+   "<p class=\"finder-tip\" id=\"ytrCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"ytrToggleAll\">전체 펼치기</button>": "<p class=\"finder-tip\" id=\"ytrCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"ytrToggleAll\">Expand All</button>",
+   "NUTR 시리즈<span class=\"series-count\">29건</span>": "NUTR Series<span class=\"series-count\">29 items</span>",
+   "NATR 시리즈<span class=\"series-count\">14건</span>": "NATR Series<span class=\"series-count\">14 items</span>",
+   "LR 시리즈<span class=\"series-count\">36건</span>": "LR Series<span class=\"series-count\">36 items</span>"
+  },
+  "ja": {
+   "요오크형 트랙 롤러 베어링 | [회사명] 베어링": "ヨーク形トラックローラベアリング | [会社名] ベアリング",
+   "<p class=\"eyebrow\">Yoke Type Track Roller Bearings</p> <h2>요오크형 트랙 롤러 베어링</h2> <p>복열 니들 롤러(NUTR)와 케이지형(NATR) 구조로 큰 반경 방향 하중과 충격 하중을 지지하며, LR 시리즈(단열/복열 볼 트랙 롤러)도 함께 제공합니다.</p> <p>캠 기구, 컨베이어, 자동화 설비의 가이드 롤러로 사용됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Yoke Type Track Roller Bearings</p> <h2>ヨーク形トラックローラベアリング</h2> <p>複列ニードルローラ(NUTR)とケージ形(NATR)構造により大きなラジアル荷重や衝撃荷重を支持し、LRシリーズ(単列/複列ボールトラックローラ)も併せて提供します。</p> <p>カム機構、コンベア、自動化設備のガイドローラとして使用されます。</p> <p class=\"section-head-tip\">形番または寸法の一部のみ入力しても検索できます。</p>",
+   "<p class=\"diagram-caption\">당사 SWS 카탈로그 규격 도면</p> <img src=\"img/yoke_track_roller.png\" alt=\"구조 단면도\" style=\"display: block; margin: 0 auto; height: 185px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(내경) · D(외경) · 공차(d/D) · B(폭)</p>": "<p class=\"diagram-caption\">当社SWSカタログ規格図面</p> <img src=\"img/yoke_track_roller.png\" alt=\"構造断面図\" style=\"display: block; margin: 0 auto; height: 185px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(内径) ・ D(外径) ・ 公差(d/D) ・ B(幅)</p>",
+   "<label for=\"ytrFilter\">형번 / 규격 검색</label> <input id=\"ytrFilter\" type=\"text\" placeholder=\"예: NUTR 2047R 또는 20*47\" autocomplete=\"off\">": "<label for=\"ytrFilter\">形番 / 規格検索</label> <input id=\"ytrFilter\" type=\"text\" placeholder=\"例: NUTR 2047R または 20*47\" autocomplete=\"off\">",
+   "<p class=\"finder-tip\" id=\"ytrCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"ytrToggleAll\">전체 펼치기</button>": "<p class=\"finder-tip\" id=\"ytrCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"ytrToggleAll\">すべて展開</button>",
+   "NUTR 시리즈<span class=\"series-count\">29건</span>": "NUTRシリーズ<span class=\"series-count\">29件</span>",
+   "NATR 시리즈<span class=\"series-count\">14건</span>": "NATRシリーズ<span class=\"series-count\">14件</span>",
+   "LR 시리즈<span class=\"series-count\">36건</span>": "LRシリーズ<span class=\"series-count\">36件</span>"
+  },
+  "zh": {
+   "요오크형 트랙 롤러 베어링 | [회사명] 베어링": "轭型滚轮轴承 | [公司名] 轴承",
+   "<p class=\"eyebrow\">Yoke Type Track Roller Bearings</p> <h2>요오크형 트랙 롤러 베어링</h2> <p>복열 니들 롤러(NUTR)와 케이지형(NATR) 구조로 큰 반경 방향 하중과 충격 하중을 지지하며, LR 시리즈(단열/복열 볼 트랙 롤러)도 함께 제공합니다.</p> <p>캠 기구, 컨베이어, 자동화 설비의 가이드 롤러로 사용됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Yoke Type Track Roller Bearings</p> <h2>轭型滚轮轴承</h2> <p>采用双列滚针(NUTR)与保持架型(NATR)结构,可承受较大的径向载荷和冲击载荷,同时也提供LR系列(单列/双列滚珠滚轮)。</p> <p>用作凸轮机构、输送机、自动化设备的导向滚轮。</p> <p class=\"section-head-tip\">只需输入型号或部分尺寸即可搜索。</p>",
+   "<p class=\"diagram-caption\">당사 SWS 카탈로그 규격 도면</p> <img src=\"img/yoke_track_roller.png\" alt=\"구조 단면도\" style=\"display: block; margin: 0 auto; height: 185px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(내경) · D(외경) · 공차(d/D) · B(폭)</p>": "<p class=\"diagram-caption\">本公司SWS样本规格图纸</p> <img src=\"img/yoke_track_roller.png\" alt=\"结构剖面图\" style=\"display: block; margin: 0 auto; height: 185px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\" loading=\"lazy\"> <p class=\"diagram-legend\">d(内径) · D(外径) · 公差(d/D) · B(宽度)</p>",
+   "<label for=\"ytrFilter\">형번 / 규격 검색</label> <input id=\"ytrFilter\" type=\"text\" placeholder=\"예: NUTR 2047R 또는 20*47\" autocomplete=\"off\">": "<label for=\"ytrFilter\">型号 / 规格搜索</label> <input id=\"ytrFilter\" type=\"text\" placeholder=\"例: NUTR 2047R 或 20*47\" autocomplete=\"off\">",
+   "<p class=\"finder-tip\" id=\"ytrCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"ytrToggleAll\">전체 펼치기</button>": "<p class=\"finder-tip\" id=\"ytrCount\" style=\"margin: 0;\"></p> <button type=\"button\" class=\"spec-toolbar-btn\" id=\"ytrToggleAll\">全部展开</button>",
+   "NUTR 시리즈<span class=\"series-count\">29건</span>": "NUTR系列<span class=\"series-count\">29项</span>",
+   "NATR 시리즈<span class=\"series-count\">14건</span>": "NATR系列<span class=\"series-count\">14项</span>",
+   "LR 시리즈<span class=\"series-count\">36건</span>": "LR系列<span class=\"series-count\">36项</span>"
+  }
+ },
+ "attrs": {
+  "en": {
+   "예: NUTR 2047R 또는 20*47": "e.g. NUTR 2047R or 20*47"
+  },
+  "ja": {
+   "예: NUTR 2047R 또는 20*47": "例: NUTR 2047R または 20*47"
+  },
+  "zh": {
+   "예: NUTR 2047R 또는 20*47": "例: NUTR 2047R 或 20*47"
+  }
+ }
+}
