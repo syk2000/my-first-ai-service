@@ -612,6 +612,15 @@
     color: var(--steel);
   }
 
+  .product-card .p-icon-photo {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #f4f4f2;
+  }
+
   .product-card h4 {
     font-size: 16.5px;
     font-weight: 700;
@@ -1581,6 +1590,11 @@
     .product-card .p-icon {
       width: 32px;
       height: 32px;
+    }
+
+    .product-card .p-icon-photo {
+      width: 44px;
+      height: 44px;
     }
 
     .product-card h4 {
