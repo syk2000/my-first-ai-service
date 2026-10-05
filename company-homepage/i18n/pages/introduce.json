@@ -1,0 +1,72 @@
+{
+  "text": {
+    "en": {
+      "회사소개 | [회사명] 베어링": "About Us | [Company Name] Bearing",
+      "<p class=\"eyebrow\">About</p> <h2>회사 소개</h2> <p> [회사명]은 국내외 베어링 브랜드를 안정적으로 수급하여, 제조 현장에 필요한 규격을 빠르고 정확하게 공급하는 것을 목표로 하는 베어링 전문 유통업체입니다. </p>": "<p class=\"eyebrow\">About</p> <h2>Company Overview</h2> <p> [Company Name] is a specialized bearing distributor that aims to stably supply domestic and international bearing brands, providing the specifications needed on the manufacturing floor quickly and accurately. </p>",
+      "<h3 class=\"subgroup-title\">인사말</h3> <p> 신뢰&믿음&미래에 입각한 경영원칙을 견고히 하고 있는 [회사명]가<br> 설레는 마음으로 고객 여러분께 인사 올립니다. </p> <p style=\"margin-top: 20px;\"> 정당한 노력에 의한 수익 창출로 고객과 업계, 나아가 사회에 이바지한다는 믿음으로,<br> 최고 품질의 제품과 가격 경쟁력, 최상의 서비스를 통해 고객 만족을 실현하고<br> 고객의 성공 사업을 지원하겠습니다. 고객과의 약속은 무엇보다 우선하여 신속·정확하게 대응하며<br> 고객 여러분께 소중하고 귀한 파트너가 되도록 최선을 다하겠습니다. </p> <p style=\"margin-top: 20px;\"> 앞으로도 지속적인 지도 편달과 협조를 기대하며<br> 고객 여러분들의 앞날에 건강과 행복이 함께하시길 기원합니다. </p> <p style=\"margin-top: 16px; font-weight: 600; color: var(--text);\">대표이사 홍길동</p> <p style=\"font-size: 12.5px; color: var(--text-faint); margin-top: 12px;\">※ [회사명] 자리에는 실제 회사명을 넣어서 사용하시면 됩니다.</p>": "<h3 class=\"subgroup-title\">Greeting</h3> <p> [Company Name], firmly grounded in a management philosophy of trust, belief, and the future,<br> greets our customers with great excitement. </p> <p style=\"margin-top: 20px;\"> With the belief that generating profit through fair effort contributes to our customers, the industry, and society at large,<br> we will realize customer satisfaction through top-quality products, competitive pricing, and the best service,<br> and support our customers' business success. We will respond swiftly and accurately, prioritizing our promises to customers above all else,<br> and do our utmost to become a valued and trusted partner to every customer. </p> <p style=\"margin-top: 20px;\"> We look forward to your continued guidance and cooperation,<br> and wish all of our customers health and happiness in the days ahead. </p> <p style=\"margin-top: 16px; font-weight: 600; color: var(--text);\">CEO Gil-dong Hong</p> <p style=\"font-size: 12.5px; color: var(--text-faint); margin-top: 12px;\">※ Please replace [Company Name] with your actual company name when using this template.</p>",
+      "연혁": "History",
+      "[회사명] 창립": "[Company Name] Founded",
+      "NACHI 대리점": "NACHI Authorized Dealer",
+      "IBC 대리점": "IBC Authorized Dealer",
+      "JIB 대리점 채택": "Adopted as JIB Authorized Dealer",
+      "WBC 대리점 채택": "Adopted as WBC Authorized Dealer",
+      "(주)[회사명] 법인 전환 설립": "Incorporated as [Company Name] Co., Ltd.",
+      "JMC 대리점 채택": "Adopted as JMC Authorized Dealer",
+      "본사 이전": "Head Office Relocated",
+      "TYB 대리점": "TYB Authorized Dealer",
+      "찾아오시는 길": "Directions",
+      "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">네이버 지도로 길찾기</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">구글 지도로 길찾기</a>": "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">Get Directions via Naver Map</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">Get Directions via Google Maps</a>",
+      "<span class=\"c-label\">대중교통</span><span>지하철 O호선 OO역 O번 출구 도보 O분</span>": "<span class=\"c-label\">Public Transit</span><span>Subway Line O, OO Station, Exit O, O-min walk</span>",
+      "<span class=\"c-label\">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span>": "<span class=\"c-label\">Parking</span><span>Visitor parking available in the building (advance inquiry recommended)</span>"
+    },
+    "ja": {
+      "회사소개 | [회사명] 베어링": "会社紹介 | [会社名] ベアリング",
+      "<p class=\"eyebrow\">About</p> <h2>회사 소개</h2> <p> [회사명]은 국내외 베어링 브랜드를 안정적으로 수급하여, 제조 현장에 필요한 규격을 빠르고 정확하게 공급하는 것을 목표로 하는 베어링 전문 유통업체입니다. </p>": "<p class=\"eyebrow\">About</p> <h2>会社紹介</h2> <p> [会社名]は、国内外のベアリングブランドを安定的に調達し、製造現場に必要な規格を迅速かつ正確に供給することを目指す、ベアリング専門の流通企業です。 </p>",
+      "<h3 class=\"subgroup-title\">인사말</h3> <p> 신뢰&믿음&미래에 입각한 경영원칙을 견고히 하고 있는 [회사명]가<br> 설레는 마음으로 고객 여러분께 인사 올립니다. </p> <p style=\"margin-top: 20px;\"> 정당한 노력에 의한 수익 창출로 고객과 업계, 나아가 사회에 이바지한다는 믿음으로,<br> 최고 품질의 제품과 가격 경쟁력, 최상의 서비스를 통해 고객 만족을 실현하고<br> 고객의 성공 사업을 지원하겠습니다. 고객과의 약속은 무엇보다 우선하여 신속·정확하게 대응하며<br> 고객 여러분께 소중하고 귀한 파트너가 되도록 최선을 다하겠습니다. </p> <p style=\"margin-top: 20px;\"> 앞으로도 지속적인 지도 편달과 협조를 기대하며<br> 고객 여러분들의 앞날에 건강과 행복이 함께하시길 기원합니다. </p> <p style=\"margin-top: 16px; font-weight: 600; color: var(--text);\">대표이사 홍길동</p> <p style=\"font-size: 12.5px; color: var(--text-faint); margin-top: 12px;\">※ [회사명] 자리에는 실제 회사명을 넣어서 사용하시면 됩니다.</p>": "<h3 class=\"subgroup-title\">ご挨拶</h3> <p> 信頼・信念・未来に基づいた経営理念を堅く守っている[会社名]が、<br> 心躍る思いでお客様にご挨拶申し上げます。 </p> <p style=\"margin-top: 20px;\"> 正当な努力による収益創出がお客様と業界、ひいては社会に貢献するという信念のもと、<br> 最高品質の製品と価格競争力、最高のサービスを通じてお客様満足を実現し、<br> お客様の事業の成功を支援してまいります。お客様とのお約束を何よりも優先して迅速・正確に対応し、<br> お客様にとって大切で貴重なパートナーとなるよう最善を尽くします。 </p> <p style=\"margin-top: 20px;\"> 今後とも変わらぬご指導とご協力を賜りますようお願い申し上げるとともに、<br> お客様の今後のご健康とご多幸をお祈りいたします。 </p> <p style=\"margin-top: 16px; font-weight: 600; color: var(--text);\">代表取締役 ホン・ギルドン</p> <p style=\"font-size: 12.5px; color: var(--text-faint); margin-top: 12px;\">※ [会社名]の部分には実際の会社名を入れてご使用ください。</p>",
+      "연혁": "沿革",
+      "[회사명] 창립": "[会社名] 創立",
+      "NACHI 대리점": "NACHI代理店",
+      "IBC 대리점": "IBC代理店",
+      "JIB 대리점 채택": "JIB代理店採用",
+      "WBC 대리점 채택": "WBC代理店採用",
+      "(주)[회사명] 법인 전환 설립": "法人化し(株)[会社名]として設立",
+      "JMC 대리점 채택": "JMC代理店採用",
+      "본사 이전": "本社移転",
+      "TYB 대리점": "TYB代理店",
+      "찾아오시는 길": "アクセス",
+      "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">네이버 지도로 길찾기</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">구글 지도로 길찾기</a>": "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">Naverマップで経路を見る</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">Googleマップで経路を見る</a>",
+      "<span class=\"c-label\">대중교통</span><span>지하철 O호선 OO역 O번 출구 도보 O분</span>": "<span class=\"c-label\">公共交通機関</span><span>地下鉄O号線 OO駅 O番出口 徒歩O分</span>",
+      "<span class=\"c-label\">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span>": "<span class=\"c-label\">駐車場</span><span>建物内に来客用駐車場あり（事前のお問い合わせを推奨）</span>"
+    },
+    "zh": {
+      "회사소개 | [회사명] 베어링": "公司简介 | [公司名] 轴承",
+      "<p class=\"eyebrow\">About</p> <h2>회사 소개</h2> <p> [회사명]은 국내외 베어링 브랜드를 안정적으로 수급하여, 제조 현장에 필요한 규격을 빠르고 정확하게 공급하는 것을 목표로 하는 베어링 전문 유통업체입니다. </p>": "<p class=\"eyebrow\">About</p> <h2>公司简介</h2> <p> [公司名]是一家专业轴承经销企业，致力于稳定采购国内外轴承品牌，为制造现场快速、准确地供应所需规格的产品。 </p>",
+      "<h3 class=\"subgroup-title\">인사말</h3> <p> 신뢰&믿음&미래에 입각한 경영원칙을 견고히 하고 있는 [회사명]가<br> 설레는 마음으로 고객 여러분께 인사 올립니다. </p> <p style=\"margin-top: 20px;\"> 정당한 노력에 의한 수익 창출로 고객과 업계, 나아가 사회에 이바지한다는 믿음으로,<br> 최고 품질의 제품과 가격 경쟁력, 최상의 서비스를 통해 고객 만족을 실현하고<br> 고객의 성공 사업을 지원하겠습니다. 고객과의 약속은 무엇보다 우선하여 신속·정확하게 대응하며<br> 고객 여러분께 소중하고 귀한 파트너가 되도록 최선을 다하겠습니다. </p> <p style=\"margin-top: 20px;\"> 앞으로도 지속적인 지도 편달과 협조를 기대하며<br> 고객 여러분들의 앞날에 건강과 행복이 함께하시길 기원합니다. </p> <p style=\"margin-top: 16px; font-weight: 600; color: var(--text);\">대표이사 홍길동</p> <p style=\"font-size: 12.5px; color: var(--text-faint); margin-top: 12px;\">※ [회사명] 자리에는 실제 회사명을 넣어서 사용하시면 됩니다.</p>": "<h3 class=\"subgroup-title\">致辞</h3> <p> 秉持信任、信念、未来经营理念的[公司名]，<br> 怀着激动的心情向各位客户致以问候。 </p> <p style=\"margin-top: 20px;\"> 我们坚信，通过正当努力创造利润能够回馈客户、行业乃至社会，<br> 将以最优品质的产品、具有竞争力的价格和最佳的服务实现客户满意，<br> 支持客户事业的成功。我们将把对客户的承诺置于首位，迅速、准确地予以回应，<br> 并竭尽全力成为客户宝贵而值得信赖的合作伙伴。 </p> <p style=\"margin-top: 20px;\"> 今后也期待各位一如既往的指导与协助，<br> 并祝愿各位客户健康幸福。 </p> <p style=\"margin-top: 16px; font-weight: 600; color: var(--text);\">代表理事 洪吉东</p> <p style=\"font-size: 12.5px; color: var(--text-faint); margin-top: 12px;\">※ 请将[公司名]替换为实际公司名称后使用。</p>",
+      "연혁": "沿革",
+      "[회사명] 창립": "[公司名] 创立",
+      "NACHI 대리점": "NACHI代理商",
+      "IBC 대리점": "IBC代理商",
+      "JIB 대리점 채택": "获选为JIB代理商",
+      "WBC 대리점 채택": "获选为WBC代理商",
+      "(주)[회사명] 법인 전환 설립": "转制为法人，成立[公司名]股份有限公司",
+      "JMC 대리점 채택": "获选为JMC代理商",
+      "본사 이전": "总部迁址",
+      "TYB 대리점": "TYB代理商",
+      "찾아오시는 길": "交通路线",
+      "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">네이버 지도로 길찾기</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">구글 지도로 길찾기</a>": "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">通过Naver地图查看路线</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">通过谷歌地图查看路线</a>",
+      "<span class=\"c-label\">대중교통</span><span>지하철 O호선 OO역 O번 출구 도보 O분</span>": "<span class=\"c-label\">公共交通</span><span>地铁O号线 OO站 O号出口 步行O分钟</span>",
+      "<span class=\"c-label\">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span>": "<span class=\"c-label\">停车</span><span>楼内可提供访客停车位(建议提前联系确认)</span>"
+    }
+  },
+  "attrs": {
+    "en": {
+      "영등포역 위치 지도": "Map of Yeongdeungpo Station location"
+    },
+    "ja": {
+      "영등포역 위치 지도": "永登浦駅位置地図"
+    },
+    "zh": {
+      "영등포역 위치 지도": "永登浦站位置地图"
+    }
+  }
+}
