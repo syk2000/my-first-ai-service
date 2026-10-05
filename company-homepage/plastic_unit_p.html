@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=1280" />
 <meta name="robots" content="noindex, nofollow" />
-<title>플라스틱 베어링 유닛 (P·FL·F·UC) | [회사명] 베어링</title>
+<title>P 시리즈(필로우 블록형) | [회사명] 베어링</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -100,80 +100,63 @@
     </div>
   </header>
 
-<section class="page-section" id="plastic-unit" style="border-bottom: none;">
+<section class="page-section" id="plastic-unit-p" style="border-bottom: none;">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Plastic Bearing Units</p>
-        <h2>플라스틱 베어링 유닛 (P·FL·F·UC)</h2>
-        <p>
-          하우징을 <strong style="color: var(--accent);">엔지니어링 플라스틱(폴리에틸렌 등)</strong>으로 제작한 베어링 유닛입니다.
-          주철(일반 UCP/UCF/UCFL) 대비 <strong style="color: var(--accent);">무자성·내식성·경량</strong>이 장점이며, 식품·제약·화학·수분이 많은 환경에서 많이 사용됩니다.
-          필로우 블록형(P)&middot;플랜지형(FL)&middot;사각 플랜지형(F) 3종 하우징과, 하우징 없이 조립용으로 공급되는 UC 인서트 베어링으로 구성됩니다.
-        </p>
+        <p class="eyebrow">Plastic Bearing Units &middot; P Series</p>
+        <h2>플라스틱 베어링 유닛 P 시리즈 (필로우 블록형)</h2>
+        <p>하우징을 <strong style="color: var(--accent);">엔지니어링 플라스틱(폴리에틸렌 등)</strong>으로 제작한 필로우 블록형 유닛입니다. 바닥면을 볼트로 고정하는 가장 일반적인 설치 방식이며, 주철(일반 UCP) 대비 <strong style="color: var(--accent);">무자성&middot;내식성&middot;경량</strong>이 장점입니다.</p>
+        <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
 
-      <div class="info-box" style="margin-bottom: 20px;">
-        <strong>재질 안내</strong><br />
-        하우징은 폴리에틸렌(PE) 계열 엔지니어링 플라스틱이며, 내부 베어링은 일반적으로 스테인리스 인서트 베어링을 사용합니다(제조사 자료 기준).
-        식품가공 설비, 세척 라인, 의약품 생산 설비 등 주철 하우징의 부식&middot;자성이 문제가 되는 환경에 적합합니다.
-        정확한 수지 등급(POM/PE 등)은 발주 로트에 따라 다를 수 있어 별도 문의 바랍니다.
-      </div>
+      <div class="diagram-box">
+          <p class="diagram-caption">형태 참고용 도면 — 표준 UCP 필로우 블록과 동일한 하우징 구조이며, 재질만 엔지니어링 플라스틱입니다.</p>
+          <img src="img/pbu_diagram.png" alt="필로우 블록형(P) 구조 단면도" style="display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;" loading="lazy">
+          <p class="diagram-legend">아래 표의 d(축경)·H(전고)·L(전장)·W(설치폭)·J(볼트간격)·cH(축중심높이)에 해당합니다. 도면 기호(A·B·F·H1·H2 등)는 원 출처 표기로, 아래 표 기호와 1:1로 대응하지 않을 수 있습니다.</p>
+        </div>
+        <div class="field" style="max-width: 320px; margin-bottom: 16px;">
+          <label for="pFilter">형번 / 축경 검색</label>
+          <input id="pFilter" type="text" placeholder="예: P204 또는 20" autocomplete="off" />
+        </div>
+        <div class="finder-results" style="overflow-x: auto;">
+          <table class="spec-table" style="min-width: 760px;">
+            <thead><tr><th>형번</th><th>축경(d)</th><th>전고(H)</th><th>전장(L)</th><th>설치폭(W)</th><th>볼트간격(J)</th><th>축중심높이(cH)</th><th>베어링폭(B)</th></tr></thead>
+            <tbody id="pBody">
+              <tr><td class="type-cell">P201 (PPL201)</td><td>12</td><td>65.5</td><td>127</td><td>38</td><td>95</td><td>33.3</td><td>문의</td></tr>
+              <tr><td class="type-cell">P202 (PPL202)</td><td>15</td><td>65.5</td><td>127</td><td>38</td><td>95</td><td>33.3</td><td>문의</td></tr>
+              <tr><td class="type-cell">P203 (PPL203)</td><td>17</td><td>65.5</td><td>127</td><td>38</td><td>95</td><td>33.3</td><td>문의</td></tr>
+              <tr><td class="type-cell">P204 (P204PE)</td><td>20</td><td>65</td><td>127</td><td>38</td><td>95</td><td>33.3</td><td>13~15</td></tr>
+              <tr><td class="type-cell">P205 (P205PE)</td><td>25</td><td>71</td><td>140.5</td><td>38</td><td>105</td><td>36.5</td><td>18</td></tr>
+              <tr><td class="type-cell">P206 (P206PE)</td><td>30</td><td>84</td><td>163</td><td>46</td><td>119</td><td>42.9</td><td>18</td></tr>
+              <tr><td class="type-cell">P207 (PPL207)</td><td>35</td><td>95</td><td>168</td><td>48</td><td>127</td><td>47.6</td><td>문의</td></tr>
+              <tr><td class="type-cell">P208 (PPL208)</td><td>40</td><td>99</td><td>184</td><td>54</td><td>137</td><td>49.2</td><td>문의</td></tr>
+              <tr><td class="type-cell">P209 (PPL209)</td><td>45</td><td>106</td><td>192</td><td>54</td><td>146</td><td>54.0</td><td>문의</td></tr>
+              <tr><td class="type-cell">P210 (PPL210)</td><td>50</td><td>114</td><td>206</td><td>60</td><td>159</td><td>57.2</td><td>문의</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 201~203&middot;207~210은 독일 MOVET社 플라스틱 하우징(PPL201~PPL210, PBT 수지) 공식 데이터시트 기준이며, 204~206 치수와 L&middot;W&middot;J&middot;cH 값이 교차 확인되어 신뢰도가 높습니다. 베어링폭(B)은 해당 자료에 없어 문의로 남겨두었습니다. PPL210(축경 50mm)이 이 제조사 플라스틱 라인업의 최대 사이즈입니다.</p>
 
-      <p style="font-size: 12.5px; color: var(--text-sub); margin: -6px 0 20px;">
-        &#8251; 참고: 주철 하우징은 축경이 커지면 UCP2(소형) &rarr; UCP3(중형) 등으로 하우징 번호 계열이 바뀌지만, 플라스틱 하우징은 제가 확인한 제조사(Felstrom&middot;MOVET) 기준으로 축경 12~50mm 전 구간을 &ldquo;2xx&rdquo; 번호 하나로만 공급하며 3xx(300번대) 계열 제품은 존재하지 않습니다. 50mm를 넘는 축경은 하중 특성상 플라스틱 하우징으로 만들어지지 않는 것으로 보입니다.
-      </p>
-
-      <div class="product-grid">
-        <a class="product-card" href="plastic_unit_p.html">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="6" y="18" width="28" height="8" rx="2" stroke="currentColor" stroke-width="2.3"/><circle cx="20" cy="22" r="7" stroke="currentColor" stroke-width="2.2"/></svg>
-          <h4>P 시리즈</h4>
-          <p>필로우 블록형, 바닥 볼트 고정형</p>
-          <span class="p-card-cta">메트릭 · 10건 &middot; 규격 보기 &rarr;</span>
-        </a>
-        <a class="product-card" href="plastic_unit_fl.html">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="20" rx="17" ry="11" stroke="currentColor" stroke-width="2.3"/><circle cx="20" cy="20" r="7" stroke="currentColor" stroke-width="2.2"/></svg>
-          <h4>FL 시리즈</h4>
-          <p>플랜지형 2홀, 벽면&middot;수직면 고정형</p>
-          <span class="p-card-cta">메트릭 · 5건 &middot; 규격 보기 &rarr;</span>
-        </a>
-        <a class="product-card" href="plastic_unit_f.html">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2.3"/><circle cx="20" cy="20" r="7" stroke="currentColor" stroke-width="2.2"/></svg>
-          <h4>F 시리즈</h4>
-          <p>사각 플랜지형 4홀, 벽면&middot;수직면 고정형</p>
-          <span class="p-card-cta">메트릭 · 5건 &middot; 규격 보기 &rarr;</span>
-        </a>
-        <a class="product-card" href="plastic_unit_uc.html">
-          <svg class="p-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.2"/></svg>
-          <h4>UC 조립형 베어링</h4>
-          <p>하우징 없이 축에 직접 조립, 구면 외륜</p>
-          <span class="p-card-cta">메트릭 · 5건 &middot; 규격 보기 &rarr;</span>
-        </a>
-      </div>
-
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
         &#8251; 위 표는 당사 SWS 카탈로그에 치수 자료가 없어, 해외 제조사&middot;유통사의 공개 자료(Miniature Bearings Australia의 P204PE&middot;P205PE&middot;P206PE 제품 페이지, MOVET의 PPL 플라스틱 하우징 공식 데이터시트, Felstrom의 플라스틱 하우징 유닛(UCF2..PSS&middot;UCFL2..PSS) 공식 데이터시트, 표준 UC200계열 인서트 베어링 치수)를 기준으로 작성했습니다. 확인하지 못한 치수는 추정하지 않고 &ldquo;문의&rdquo;로 표기했습니다. 정밀 가공&middot;발주 전에는 반드시 견적 문의로 최종 치수를 확인하시기 바랍니다.
       </p>
+      <p style="font-size: 12.5px; margin-top: 20px;"><a href="plastic_unit.html" style="color: var(--accent);">&larr; 플라스틱 베어링 유닛 전체 목록으로</a></p>
     </div>
   </section>
 
-<footer class="site-footer">
-    <div class="wrap footer-row">
-      <div>
-        <div class="f-name">[회사명] BEARING CO.</div>
-        <div class="f-meta">
-          사업자등록번호 000-00-00000 &middot; 대표 홍길동<br />
-          비공개 (문의 시 안내드립니다)
-        </div>
-      </div>
-      <nav class="footer-nav">
-        <a href="introduce.html">회사소개</a>
-        <a href="about-product.html">취급제품</a>
-        <a href="board.html">문의</a>
-      </nav>
-    </div>
-  </footer>
-
 <script src="i18n.js"></script>
 <script src="common.js"></script>
+<script>
+  (function () {
+    var input = document.getElementById('pFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#pBody tr'));
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toUpperCase();
+      rows.forEach(function (row) {
+        row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1) ? '' : 'none';
+      });
+    });
+  })();
+</script>
 </body>
 </html>
