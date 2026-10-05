@@ -109,6 +109,58 @@
         <p style="font-size: 12.5px; color: var(--text-sub); margin-top: 8px;">○ = NOK&middot;삼정&middot;대광 3사 규격 모두 겹침 &nbsp;&middot;&nbsp; ★ = NOK&middot;삼정 겹침 &nbsp;&middot;&nbsp; △ = 삼정&middot;대광 겹침 &nbsp;&middot;&nbsp; ⬠ = NOK&middot;대광 겹침</p>
       </div>
 
+      <div class="diagram-box">
+        <p class="diagram-caption">형태 참고용 개념도 (SWS 카탈로그 실측 도면&middot;NOK 등 제조사 도면 아님) &mdash; 일반적인 오일씰(스프링&middot;더스트 립 있는 형식) 단면</p>
+        <svg viewBox="0 0 360 240" width="340" height="227" style="display: block; margin: 0 auto;" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="#999" stroke-width="1" stroke-dasharray="5 4">
+            <line x1="108" y1="88" x2="240" y2="88"/>
+            <line x1="108" y1="152" x2="240" y2="152"/>
+          </g>
+          <line x1="128" y1="120" x2="252" y2="120" stroke="#999" stroke-width="1" stroke-dasharray="8 3 2 3"/>
+          <text x="236" y="116" font-size="11" fill="#555">축</text>
+          <g>
+            <path d="M150,40 H200 V58 H188 L180,88 L172,86 L170,66 H162 L154,86 L150,84 Z" fill="#dddddd" stroke="#333" stroke-width="2"/>
+            <path d="M156,45 H196 V51 H162 V62 H156 Z" fill="#999999" stroke="#333" stroke-width="1.2"/>
+            <circle cx="189" cy="73" r="5" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+          </g>
+          <g transform="translate(0,240) scale(1,-1)">
+            <path d="M150,40 H200 V58 H188 L180,88 L172,86 L170,66 H162 L154,86 L150,84 Z" fill="#dddddd" stroke="#333" stroke-width="2"/>
+            <path d="M156,45 H196 V51 H162 V62 H156 Z" fill="#999999" stroke="#333" stroke-width="1.2"/>
+            <circle cx="189" cy="73" r="5" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+          </g>
+          <g stroke="#666" stroke-width="1">
+            <line x1="150" y1="40" x2="114" y2="40"/>
+            <line x1="150" y1="200" x2="114" y2="200"/>
+            <line x1="120" y1="40" x2="120" y2="200" marker-start="url(#sjArrow)" marker-end="url(#sjArrow)"/>
+            <line x1="175" y1="88" x2="175" y2="152" marker-start="url(#sjArrow)" marker-end="url(#sjArrow)"/>
+            <line x1="150" y1="40" x2="150" y2="18"/>
+            <line x1="200" y1="40" x2="200" y2="18"/>
+            <line x1="150" y1="24" x2="200" y2="24" marker-start="url(#sjArrow)" marker-end="url(#sjArrow)"/>
+          </g>
+          <text x="108" y="125" text-anchor="end" font-size="14" fill="#333" font-weight="600">D</text>
+          <text x="182" y="125" font-size="14" fill="#333" font-weight="600">d</text>
+          <text x="175" y="15" text-anchor="middle" font-size="14" fill="#333" font-weight="600">H</text>
+          <g stroke="#666" stroke-width="1">
+            <line x1="196" y1="48" x2="258" y2="40"/>
+            <line x1="194" y1="73" x2="258" y2="70"/>
+            <line x1="182" y1="90" x2="258" y2="100"/>
+            <line x1="153" y1="160" x2="140" y2="214"/>
+          </g>
+          <text x="262" y="44" font-size="12" fill="#333" font-weight="600">금속 케이스</text>
+          <text x="262" y="74" font-size="12" fill="#333" font-weight="600">스프링</text>
+          <text x="262" y="104" font-size="12" fill="#333" font-weight="600">주 립</text>
+          <text x="140" y="228" text-anchor="middle" font-size="12" fill="#333" font-weight="600">더스트 립</text>
+          <text x="262" y="200" font-size="11" fill="#555">오른쪽: 오일 측</text>
+          <text x="262" y="215" font-size="11" fill="#555">왼쪽: 외부(먼지) 측</text>
+          <defs>
+            <marker id="sjArrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#666"/>
+            </marker>
+          </defs>
+        </svg>
+        <p class="diagram-legend">d(내경 = 축 지름) &middot; D(외경 = 하우징 구멍 지름) &middot; H(두께) &mdash; 표의 d&middot;D&middot;H 열이 이 위치입니다. TYPE에 따라 더스트 립&middot;스프링 유무, 금속 케이스의 고무 피복 여부가 달라지며(예: 더스트 립이 없는 형식도 있음), 개념도 비례는 실제와 다를 수 있습니다.</p>
+      </div>
+
       <div class="field" style="max-width: 360px; margin-bottom: 16px;">
         <label for="sjFilter">규격 검색</label>
         <input id="sjFilter" type="text" placeholder="예: 25*40 또는 25" autocomplete="off" />
