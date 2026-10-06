@@ -1,15 +1,15 @@
 {
  "text": {
   "en": {
-   "KSNA | [회사명] 베어링": "KSNA | [Company Name] Bearing",
+   "KSNA | ILJIN 베어링": "KSNA | ILJIN Bearing",
    "<img src=\"assets/ksna_diagram.png\" alt=\"KSNA 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도 — 셋트스크류 + 핀 고정, 플랜지 일체형 · 정면도<br><span style=\"color: var(--text-faint);\">d=나사 안지름 · B=너트 폭 · d2=바깥지름</span></p>": "<img src=\"assets/ksna_diagram.png\" alt=\"KSNA Drawing\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Cross-section — Set screw + pin fixing, integrated flange type · Front view<br><span style=\"color: var(--text-faint);\">d=Thread bore diameter · B=Nut width · d2=Outer diameter</span></p>"
   },
   "ja": {
-   "KSNA | [회사명] 베어링": "KSNA | [会社名]ベアリング",
+   "KSNA | ILJIN 베어링": "KSNA | ILJINベアリング",
    "<img src=\"assets/ksna_diagram.png\" alt=\"KSNA 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도 — 셋트스크류 + 핀 고정, 플랜지 일체형 · 정면도<br><span style=\"color: var(--text-faint);\">d=나사 안지름 · B=너트 폭 · d2=바깥지름</span></p>": "<img src=\"assets/ksna_diagram.png\" alt=\"KSNA 図面\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 断面図 — 止めねじ+ピン固定、フランジ一体型・正面図<br><span style=\"color: var(--text-faint);\">d=ねじ内径・B=ナット幅・d2=外径</span></p>"
   },
   "zh": {
-   "KSNA | [회사명] 베어링": "KSNA | [公司名]轴承",
+   "KSNA | ILJIN 베어링": "KSNA | ILJIN轴承",
    "<img src=\"assets/ksna_diagram.png\" alt=\"KSNA 도면\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도 — 셋트스크류 + 핀 고정, 플랜지 일체형 · 정면도<br><span style=\"color: var(--text-faint);\">d=나사 안지름 · B=너트 폭 · d2=바깥지름</span></p>": "<img src=\"assets/ksna_diagram.png\" alt=\"KSNA 图纸\" style=\"height: 240px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 剖面图 — 定位螺钉+销钉固定,法兰一体型・正视图<br><span style=\"color: var(--text-faint);\">d=螺纹内径・B=螺母宽度・d2=外径</span></p>"
   }
  },

@@ -1,17 +1,17 @@
 {
  "text": {
   "en": {
-   "패킹 SCB형 (DKB) | [회사명] 베어링": "Packing SCB Type (DKB) | [Company Name] Bearing",
+   "패킹 SCB형 (DKB) | ILJIN 베어링": "Packing SCB Type (DKB) | ILJIN Bearing",
    "<p class=\"eyebrow\">Dust Seal / Packing SCB(DKB) Type</p> <h2>더스트씰 · 패킹 SCB형 (DKB)</h2> <p>이물질 유입을 막는 <strong style=\"color: var(--accent);\">더스트 씰</strong>로 사용하는 패킹 SCB형(DKB)입니다.</p>": "<p class=\"eyebrow\">Dust Seal / Packing SCB(DKB) Type</p> <h2>Dust Seal · Packing SCB Type (DKB)</h2> <p>Packing SCB type (DKB), used as a <strong style=\"color: var(--accent);\">dust seal</strong> to keep out foreign particles.</p>",
    "<img src=\"assets/packing_scb_diagram.png\" alt=\"패킹 SCB형(DKB) 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도<br><span style=\"color: var(--text-faint);\">d=내경 · D=외경 · H=높이 · t=폭</span></p>": "<img src=\"assets/packing_scb_diagram.png\" alt=\"Packing SCB Type (DKB) Drawing\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Cross-Section<br><span style=\"color: var(--text-faint);\">d=Inner Diameter · D=Outer Diameter · H=Height · t=Width</span></p>"
   },
   "ja": {
-   "패킹 SCB형 (DKB) | [회사명] 베어링": "パッキン SCB型(DKB) | [会社名] ベアリング",
+   "패킹 SCB형 (DKB) | ILJIN 베어링": "パッキン SCB型(DKB) | ILJIN ベアリング",
    "<p class=\"eyebrow\">Dust Seal / Packing SCB(DKB) Type</p> <h2>더스트씰 · 패킹 SCB형 (DKB)</h2> <p>이물질 유입을 막는 <strong style=\"color: var(--accent);\">더스트 씰</strong>로 사용하는 패킹 SCB형(DKB)입니다.</p>": "<p class=\"eyebrow\">Dust Seal / Packing SCB(DKB) Type</p> <h2>ダストシール ・ パッキンSCB型(DKB)</h2> <p>異物の侵入を防ぐ<strong style=\"color: var(--accent);\">ダストシール</strong>として使用するパッキンSCB型(DKB)です。</p>",
    "<img src=\"assets/packing_scb_diagram.png\" alt=\"패킹 SCB형(DKB) 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도<br><span style=\"color: var(--text-faint);\">d=내경 · D=외경 · H=높이 · t=폭</span></p>": "<img src=\"assets/packing_scb_diagram.png\" alt=\"パッキンSCB型(DKB)図面\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 断面図<br><span style=\"color: var(--text-faint);\">d=内径 ・ D=外径 ・ H=高さ ・ t=幅</span></p>"
   },
   "zh": {
-   "패킹 SCB형 (DKB) | [회사명] 베어링": "密封圈 SCB型(DKB) | [公司名] 轴承",
+   "패킹 SCB형 (DKB) | ILJIN 베어링": "密封圈 SCB型(DKB) | ILJIN 轴承",
    "<p class=\"eyebrow\">Dust Seal / Packing SCB(DKB) Type</p> <h2>더스트씰 · 패킹 SCB형 (DKB)</h2> <p>이물질 유입을 막는 <strong style=\"color: var(--accent);\">더스트 씰</strong>로 사용하는 패킹 SCB형(DKB)입니다.</p>": "<p class=\"eyebrow\">Dust Seal / Packing SCB(DKB) Type</p> <h2>防尘密封圈 · 密封圈SCB型(DKB)</h2> <p>用作防止异物侵入的<strong style=\"color: var(--accent);\">防尘密封圈</strong>的密封圈SCB型(DKB)。</p>",
    "<img src=\"assets/packing_scb_diagram.png\" alt=\"패킹 SCB형(DKB) 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 단면도<br><span style=\"color: var(--text-faint);\">d=내경 · D=외경 · H=높이 · t=폭</span></p>": "<img src=\"assets/packing_scb_diagram.png\" alt=\"密封圈SCB型(DKB)图纸\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 剖面图<br><span style=\"color: var(--text-faint);\">d=内径 · D=外径 · H=高度 · t=宽度</span></p>"
   }

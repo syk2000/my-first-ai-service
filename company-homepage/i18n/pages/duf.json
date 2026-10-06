@@ -1,7 +1,7 @@
 {
   "text": {
     "en": {
-      "DUF 드라이 베어링 | [회사명] 베어링": "DUF Dry Bearing | [Company Name] Bearing",
+      "DUF 드라이 베어링 | ILJIN 베어링": "DUF Dry Bearing | ILJIN Bearing",
       "<p class=\"eyebrow\">DUF Dry Bearing</p> <h2>DUF 드라이 베어링</h2> <p>DU 드라이 베어링에 <strong style=\"color: var(--accent);\">후렌지</strong>가 붙어 축 방향 위치 결정이 가능한 타입입니다.</p>": "<p class=\"eyebrow\">DUF Dry Bearing</p> <h2>DUF Dry Bearing</h2> <p>A type with a <strong style=\"color: var(--accent);\">flange</strong> attached to the DU dry bearing, enabling axial positioning.</p>",
       "<img src=\"assets/duf_diagram.png\" alt=\"DUF 드라이 베어링 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도<br><span style=\"color: var(--text-faint);\">FD=후렌지 바깥지름 · L=길이 · T1=합금 두께 · T2=후렌지 두께</span></p>": "<img src=\"assets/duf_diagram.png\" alt=\"DUF Dry Bearing Drawing\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front View · Cross-Section<br><span style=\"color: var(--text-faint);\">FD=Flange Outer Diameter · L=Length · T1=Alloy Thickness · T2=Flange Thickness</span></p>",
       "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">기본 규격 조견표 (내경 × 외경)</h3>": "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">Basic Spec Reference Table (Bore x OD)</h3>",
@@ -13,7 +13,7 @@
       "단위: mm · 코드 표기 예) DUF 0606-12 = d6, L6, FD12.": "Units: mm · Code example: DUF 0606-12 = d6, L6, FD12."
     },
     "ja": {
-      "DUF 드라이 베어링 | [회사명] 베어링": "DUF ドライベアリング | [会社名] ベアリング",
+      "DUF 드라이 베어링 | ILJIN 베어링": "DUF ドライベアリング | ILJIN ベアリング",
       "<p class=\"eyebrow\">DUF Dry Bearing</p> <h2>DUF 드라이 베어링</h2> <p>DU 드라이 베어링에 <strong style=\"color: var(--accent);\">후렌지</strong>가 붙어 축 방향 위치 결정이 가능한 타입입니다.</p>": "<p class=\"eyebrow\">DUF Dry Bearing</p> <h2>DUFドライベアリング</h2> <p>DUドライベアリングに<strong style=\"color: var(--accent);\">フランジ</strong>が付き、軸方向の位置決めが可能なタイプです。</p>",
       "<img src=\"assets/duf_diagram.png\" alt=\"DUF 드라이 베어링 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도<br><span style=\"color: var(--text-faint);\">FD=후렌지 바깥지름 · L=길이 · T1=합금 두께 · T2=후렌지 두께</span></p>": "<img src=\"assets/duf_diagram.png\" alt=\"DUFドライベアリング図面\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図・断面図<br><span style=\"color: var(--text-faint);\">FD=フランジ外径・L=長さ・T1=合金厚さ・T2=フランジ厚さ</span></p>",
       "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">기본 규격 조견표 (내경 × 외경)</h3>": "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">基本規格早見表(内径×外径)</h3>",
@@ -25,7 +25,7 @@
       "단위: mm · 코드 표기 예) DUF 0606-12 = d6, L6, FD12.": "単位: mm・コード表記例) DUF 0606-12 = d6, L6, FD12。"
     },
     "zh": {
-      "DUF 드라이 베어링 | [회사명] 베어링": "DUF 干式轴承 | [公司名] 轴承",
+      "DUF 드라이 베어링 | ILJIN 베어링": "DUF 干式轴承 | ILJIN 轴承",
       "<p class=\"eyebrow\">DUF Dry Bearing</p> <h2>DUF 드라이 베어링</h2> <p>DU 드라이 베어링에 <strong style=\"color: var(--accent);\">후렌지</strong>가 붙어 축 방향 위치 결정이 가능한 타입입니다.</p>": "<p class=\"eyebrow\">DUF Dry Bearing</p> <h2>DUF干式轴承</h2> <p>在DU干式轴承基础上加装<strong style=\"color: var(--accent);\">法兰</strong>，可实现轴向定位的类型。</p>",
       "<img src=\"assets/duf_diagram.png\" alt=\"DUF 드라이 베어링 도면\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도<br><span style=\"color: var(--text-faint);\">FD=후렌지 바깥지름 · L=길이 · T1=합금 두께 · T2=후렌지 두께</span></p>": "<img src=\"assets/duf_diagram.png\" alt=\"DUF干式轴承图纸\" style=\"height: 220px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正视图・剖面图<br><span style=\"color: var(--text-faint);\">FD=法兰外径・L=长度・T1=合金层厚度・T2=法兰厚度</span></p>",
       "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">기본 규격 조견표 (내경 × 외경)</h3>": "<h3 style=\"font-size: 18px; margin: 0 0 8px;\">基本规格速查表(内径 × 外径)</h3>",

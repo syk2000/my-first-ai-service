@@ -1,7 +1,7 @@
 {
   "text": {
     "en": {
-      "스핀들 베어링 | [회사명] 베어링": "Spindle Bearings | [Company Name] Bearing",
+      "스핀들 베어링 | ILJIN 베어링": "Spindle Bearings | ILJIN Bearing",
       "<p class=\"eyebrow\">Spindle Bearings</p> <h2>스핀들 베어링</h2> <p>공작기계용 주축(Spindle) 전용 베어링으로 접촉각 15°와 25°를 주로 사용하고, 개방형(Open Type)과 씰타입(Sealed Type)이 있으며, 볼의 크기를 작게한 초고속계열(HS,HSS), 세라믹볼을 사용한 계열(HC,HCS), 크로니들 재질을 사용한 계열(XC,XCS) 베어링도 공급됩니다.</p> <p>표준폭의 70 시리즈, 광폭·고하중의 72 시리즈, 초박형의 719 시리즈 3종으로 구분되어 공급됩니다.</p> <p>아래 치수표는 접촉각 15° P4S급 자유조합형 베어링의 오일(Oil) 윤활시 허용 회전속도(rpm)를 기준하였습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Spindle Bearings</p> <h2>Spindle Bearings</h2> <p>These are bearings dedicated to machine tool spindles, mainly using contact angles of 15° and 25°. Open Type and Sealed Type versions are available, along with an ultra-high-speed series with smaller balls (HS, HSS), a series using ceramic balls (HC, HCS), and a series using Cronidur steel (XC, XCS).</p> <p>Supplied in three types: the standard-width 70 series, the wide, high-load 72 series, and the ultra-thin 719 series.</p> <p>The dimension table below is based on the permissible rotational speed (rpm) under oil lubrication for 15° contact angle, P4S-grade, universally matchable (UL) bearings.</p> <p class=\"section-head-tip\">You can search by entering just part of the model number or dimensions.</p>",
       "당사 SWS 카탈로그 규격 도면 & 조합(배열) 방식 개념도": "Our SWS Catalog Standard Drawing & Combination (Arrangement) Method Diagram",
       "d(내경)·D(외경)·B(폭)·동하중(kN)·rpm. 적색 점 = 접촉선을 연장했을 때 축과 만나는 지점(유효 하중중심)으로, 두 점 사이 거리(a)가 넓을수록 전도모멘트에 유리합니다. 조합방식 그림은 이해를 돕기 위한 개념도이며 실제 접촉각(15°/25°)과는 축척이 다릅니다.": "d(Bore) · D(Outer Diameter) · B(Width) · Dynamic Load Rating(kN) · rpm. The red dot marks the point where the extended contact line meets the shaft (effective load center) — the greater the distance (a) between the two points, the stronger the resistance to overturning moment. The combination diagrams are conceptual illustrations for clarity and are not drawn to the actual scale of the contact angles (15°/25°).",
@@ -18,7 +18,7 @@
       "719 시리즈<span class=\"series-count\">32건</span>": "Series 719<span class=\"series-count\">32 items</span>"
     },
     "ja": {
-      "스핀들 베어링 | [회사명] 베어링": "スピンドル軸受 | [会社名] ベアリング",
+      "스핀들 베어링 | ILJIN 베어링": "スピンドル軸受 | ILJIN ベアリング",
       "<p class=\"eyebrow\">Spindle Bearings</p> <h2>스핀들 베어링</h2> <p>공작기계용 주축(Spindle) 전용 베어링으로 접촉각 15°와 25°를 주로 사용하고, 개방형(Open Type)과 씰타입(Sealed Type)이 있으며, 볼의 크기를 작게한 초고속계열(HS,HSS), 세라믹볼을 사용한 계열(HC,HCS), 크로니들 재질을 사용한 계열(XC,XCS) 베어링도 공급됩니다.</p> <p>표준폭의 70 시리즈, 광폭·고하중의 72 시리즈, 초박형의 719 시리즈 3종으로 구분되어 공급됩니다.</p> <p>아래 치수표는 접촉각 15° P4S급 자유조합형 베어링의 오일(Oil) 윤활시 허용 회전속도(rpm)를 기준하였습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Spindle Bearings</p> <h2>スピンドル軸受</h2> <p>工作機械の主軸(スピンドル)専用軸受で、接触角15°と25°を主に使用し、開放型(オープンタイプ)とシール型(シールタイプ)があり、ボール径を小さくした超高速シリーズ(HS、HSS)、セラミックボールを使用したシリーズ(HC、HCS)、クロニダー鋼を使用したシリーズ(XC、XCS)の軸受も供給されます。</p> <p>標準幅の70シリーズ、広幅・高荷重の72シリーズ、超薄型の719シリーズの3種に分けて供給されます。</p> <p>下記の寸法表は、接触角15°・P4S級・自由組み合わせ型軸受の油(オイル)潤滑時における許容回転速度(rpm)を基準としています。</p> <p class=\"section-head-tip\">形番または寸法の一部のみ入力しても検索できます。</p>",
       "당사 SWS 카탈로그 규격 도면 & 조합(배열) 방식 개념도": "当社SWSカタログ規格図面 & 組み合わせ(配列)方式概念図",
       "d(내경)·D(외경)·B(폭)·동하중(kN)·rpm. 적색 점 = 접촉선을 연장했을 때 축과 만나는 지점(유효 하중중심)으로, 두 점 사이 거리(a)가 넓을수록 전도모멘트에 유리합니다. 조합방식 그림은 이해를 돕기 위한 개념도이며 실제 접촉각(15°/25°)과는 축척이 다릅니다.": "d(内径)・D(外径)・B(幅)・動定格荷重(kN)・rpm。赤い点は接触線を延長した場合に軸と交わる点(有効荷重中心)を示し、2点間の距離(a)が広いほど転倒モーメントに強くなります。組み合わせ方式の図はわかりやすくするための概念図であり、実際の接触角(15°/25°)とは縮尺が異なります。",
@@ -35,7 +35,7 @@
       "719 시리즈<span class=\"series-count\">32건</span>": "719シリーズ<span class=\"series-count\">32件</span>"
     },
     "zh": {
-      "스핀들 베어링 | [회사명] 베어링": "主轴轴承 | [公司名] 轴承",
+      "스핀들 베어링 | ILJIN 베어링": "主轴轴承 | ILJIN 轴承",
       "<p class=\"eyebrow\">Spindle Bearings</p> <h2>스핀들 베어링</h2> <p>공작기계용 주축(Spindle) 전용 베어링으로 접촉각 15°와 25°를 주로 사용하고, 개방형(Open Type)과 씰타입(Sealed Type)이 있으며, 볼의 크기를 작게한 초고속계열(HS,HSS), 세라믹볼을 사용한 계열(HC,HCS), 크로니들 재질을 사용한 계열(XC,XCS) 베어링도 공급됩니다.</p> <p>표준폭의 70 시리즈, 광폭·고하중의 72 시리즈, 초박형의 719 시리즈 3종으로 구분되어 공급됩니다.</p> <p>아래 치수표는 접촉각 15° P4S급 자유조합형 베어링의 오일(Oil) 윤활시 허용 회전속도(rpm)를 기준하였습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Spindle Bearings</p> <h2>主轴轴承</h2> <p>专用于机床主轴(Spindle)的轴承,主要采用15°和25°接触角,分为开放型(Open Type)和密封型(Sealed Type),此外还提供缩小滚珠直径的超高速系列(HS、HSS)、采用陶瓷球的系列(HC、HCS)以及采用Cronidur钢的系列(XC、XCS)。</p> <p>分为标准宽度的70系列、宽幅重载的72系列、超薄型的719系列三种规格供应。</p> <p>下方尺寸表以接触角15°、P4S级、可自由组合型轴承在油润滑条件下的许用转速(rpm)为基准。</p> <p class=\"section-head-tip\">只需输入型号或部分尺寸即可搜索。</p>",
       "당사 SWS 카탈로그 규격 도면 & 조합(배열) 방식 개념도": "本公司SWS样本规格图纸 & 组合(排列)方式示意图",
       "d(내경)·D(외경)·B(폭)·동하중(kN)·rpm. 적색 점 = 접촉선을 연장했을 때 축과 만나는 지점(유효 하중중심)으로, 두 점 사이 거리(a)가 넓을수록 전도모멘트에 유리합니다. 조합방식 그림은 이해를 돕기 위한 개념도이며 실제 접촉각(15°/25°)과는 축척이 다릅니다.": "d(内径)・D(外径)・B(宽度)・动载荷(kN)・rpm。红点为接触线延长后与轴相交的点(有效载荷中心),两点间距离(a)越大,抗倾覆力矩能力越强。组合方式示意图仅为便于理解的概念图,与实际接触角(15°/25°)的比例不同。",

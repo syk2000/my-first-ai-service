@@ -1,19 +1,19 @@
 {
   "text": {
     "en": {
-      "알루미늄 테이크업 | [회사명] 베어링": "Aluminum Take-up Unit | [회사명] Bearing",
+      "알루미늄 테이크업 | ILJIN 베어링": "Aluminum Take-up Unit | ILJIN Bearing",
       "<p class=\"eyebrow\">Take-up Units</p> <h2>알루미늄 테이크업</h2> <p>소형화·경량화된 알루미늄 소재 테이크업으로, 고속회전에 적합하고 설치가 쉬우며 부식에 강합니다. 축경 12~20mm용 소형 유닛입니다.</p>": "<p class=\"eyebrow\">Take-up Units</p> <h2>Aluminum Take-up Unit</h2> <p>A compact, lightweight take-up unit made of aluminum, suitable for high-speed rotation, easy to install, and highly corrosion-resistant. A compact unit for shaft diameters of 12-20mm.</p>",
       "<p class=\"diagram-caption\">당사 정식 규격 도면</p> <img src=\"img/takeup_usbm.png\" alt=\"알루미늄 테이크업(USBM) 단면도 — L 전장, L1·L2 볼트 구멍 간격, W1 폭, S1 조정볼트 위치, H·H1 높이, φD 축경\" style=\"display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\"> <p class=\"diagram-legend-tight\">L=전장 · L1·L2=볼트 구멍 간격 · W1=폭 · S1=조정볼트 위치 · H·H1=높이 · φD=축경</p>": "<p class=\"diagram-caption\">Our Official Standard Drawing</p> <img src=\"img/takeup_usbm.png\" alt=\"Aluminum take-up unit (USBM) cross-section — L overall length, L1·L2 bolt hole spacing, W1 width, S1 adjustment bolt position, H·H1 height, φD shaft diameter\" style=\"display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\"> <p class=\"diagram-legend-tight\">L=overall length · L1·L2=bolt hole spacing · W1=width · S1=adjustment bolt position · H·H1=height · φD=shaft diameter</p>",
       "단위: mm · SS는 스테인리스 소재입니다.": "Unit: mm · SS indicates stainless steel material."
     },
     "ja": {
-      "알루미늄 테이크업 | [회사명] 베어링": "アルミテイクアップ | [회사명]ベアリング",
+      "알루미늄 테이크업 | ILJIN 베어링": "アルミテイクアップ | ILJINベアリング",
       "<p class=\"eyebrow\">Take-up Units</p> <h2>알루미늄 테이크업</h2> <p>소형화·경량화된 알루미늄 소재 테이크업으로, 고속회전에 적합하고 설치가 쉬우며 부식에 강합니다. 축경 12~20mm용 소형 유닛입니다.</p>": "<p class=\"eyebrow\">Take-up Units</p> <h2>アルミテイクアップ</h2> <p>小型化・軽量化されたアルミニウム素材のテイクアップで、高速回転に適しており、取り付けが容易で、耐食性に優れています。軸径12～20mm用の小型ユニットです。</p>",
       "<p class=\"diagram-caption\">당사 정식 규격 도면</p> <img src=\"img/takeup_usbm.png\" alt=\"알루미늄 테이크업(USBM) 단면도 — L 전장, L1·L2 볼트 구멍 간격, W1 폭, S1 조정볼트 위치, H·H1 높이, φD 축경\" style=\"display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\"> <p class=\"diagram-legend-tight\">L=전장 · L1·L2=볼트 구멍 간격 · W1=폭 · S1=조정볼트 위치 · H·H1=높이 · φD=축경</p>": "<p class=\"diagram-caption\">当社正式規格図面</p> <img src=\"img/takeup_usbm.png\" alt=\"アルミテイクアップ（USBM）断面図 — L全長、L1・L2ボルト穴間隔、W1幅、S1調整ボルト位置、H・H1高さ、φD軸径\" style=\"display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\"> <p class=\"diagram-legend-tight\">L=全長・L1・L2=ボルト穴間隔・W1=幅・S1=調整ボルト位置・H・H1=高さ・φD=軸径</p>",
       "단위: mm · SS는 스테인리스 소재입니다.": "単位: mm・SSはステンレス素材です。"
     },
     "zh": {
-      "알루미늄 테이크업 | [회사명] 베어링": "铝制张紧座 | [회사명]轴承",
+      "알루미늄 테이크업 | ILJIN 베어링": "铝制张紧座 | ILJIN轴承",
       "<p class=\"eyebrow\">Take-up Units</p> <h2>알루미늄 테이크업</h2> <p>소형화·경량화된 알루미늄 소재 테이크업으로, 고속회전에 적합하고 설치가 쉬우며 부식에 강합니다. 축경 12~20mm용 소형 유닛입니다.</p>": "<p class=\"eyebrow\">Take-up Units</p> <h2>铝制张紧座</h2> <p>小型化·轻量化的铝制张紧座，适合高速旋转，安装简便，耐腐蚀性强。为轴径12~20mm用的小型单元。</p>",
       "<p class=\"diagram-caption\">당사 정식 규격 도면</p> <img src=\"img/takeup_usbm.png\" alt=\"알루미늄 테이크업(USBM) 단면도 — L 전장, L1·L2 볼트 구멍 간격, W1 폭, S1 조정볼트 위치, H·H1 높이, φD 축경\" style=\"display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\"> <p class=\"diagram-legend-tight\">L=전장 · L1·L2=볼트 구멍 간격 · W1=폭 · S1=조정볼트 위치 · H·H1=높이 · φD=축경</p>": "<p class=\"diagram-caption\">本公司正式规格图纸</p> <img src=\"img/takeup_usbm.png\" alt=\"铝制张紧座（USBM）剖面图 — L全长，L1·L2螺栓孔间距，W1宽度，S1调整螺栓位置，H·H1高度，φD轴径\" style=\"display: block; margin: 0 auto; height: 220px; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast;\"> <p class=\"diagram-legend-tight\">L=全长 · L1·L2=螺栓孔间距 · W1=宽度 · S1=调整螺栓位置 · H·H1=高度 · φD=轴径</p>",
       "단위: mm · SS는 스테인리스 소재입니다.": "单位: mm · SS为不锈钢材质。"

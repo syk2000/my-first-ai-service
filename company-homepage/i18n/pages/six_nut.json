@@ -1,7 +1,7 @@
 {
   "text": {
     "en": {
-      "6각 U-NUT | [회사명] 베어링": "Hex U-Nut | [Company Name] Bearing",
+      "6각 U-NUT | ILJIN 베어링": "Hex U-Nut | ILJIN Bearing",
       "<p class=\"eyebrow\">Hex U-Nut</p> <h2>6각 U-NUT</h2> <p> 범용 6각 로크너트입니다. 나사 안쪽에 90°~120°로 파인 홈을 두어 조립 시 축 나사부를 살짝 눌러 변형시켜 풀림을 방지합니다. 표준형(1종·2종·3종), 소형, 캡형, 후렌지형, 용접형 등 형태별로 취급합니다. </p>": "<p class=\"eyebrow\">Hex U-Nut</p> <h2>Hex U-Nut</h2> <p> A general-purpose hex lock nut. A groove cut at 90°-120° on the inside of the thread slightly deforms the shaft's threaded section when tightened, preventing loosening. Available in standard types (Type 1, Type 2, Type 3), small, capped, flanged, and welded forms. </p>",
       "당사 정식 규격 도면 — 표준형(1종·2종·3종)": "Our official specification drawing — Standard type (Type 1, Type 2, Type 3)",
       "<img src=\"assets/sixnut_hex_diagram.png\" alt=\"6각 U-NUT 표준형 도면\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도(s,e) · 1종(h,l,m) · 2종<br><span style=\"color: var(--text-faint);\">d×p=나사 호칭</span></p>": "<img src=\"assets/sixnut_hex_diagram.png\" alt=\"Hex U-Nut standard type drawing\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front view (s,e) · Type 1 (h,l,m) · Type 2<br><span style=\"color: var(--text-faint);\">d×p = thread designation</span></p>",
@@ -19,7 +19,7 @@
       "※ 위 도면과 표는 당사 정식 규격표 원본을 기준으로 작성했습니다. 세부 사이즈별 치수는 견적 문의 시 정식 규격표로 안내드립니다. 정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "* The drawings and tables above are based on our official specification sheet original. Detailed dimensions by size will be provided via the official specification sheet upon quote inquiry. Before precision machining or ordering, please be sure to make a final confirmation with our official specification sheet original."
     },
     "ja": {
-      "6각 U-NUT | [회사명] 베어링": "6角U-NUT | [会社名]ベアリング",
+      "6각 U-NUT | ILJIN 베어링": "6角U-NUT | ILJINベアリング",
       "<p class=\"eyebrow\">Hex U-Nut</p> <h2>6각 U-NUT</h2> <p> 범용 6각 로크너트입니다. 나사 안쪽에 90°~120°로 파인 홈을 두어 조립 시 축 나사부를 살짝 눌러 변형시켜 풀림을 방지합니다. 표준형(1종·2종·3종), 소형, 캡형, 후렌지형, 용접형 등 형태별로 취급합니다. </p>": "<p class=\"eyebrow\">Hex U-Nut</p> <h2>6角U-NUT</h2> <p> 汎用6角ロックナットです。ねじの内側に90°~120°に切った溝を設け、組み付け時に軸のねじ部を軽く押して変形させることで緩みを防止します。標準形(1種・2種・3種)、小型、キャップ形、フランジ形、溶接形など形態別に取り扱っています。 </p>",
       "당사 정식 규격 도면 — 표준형(1종·2종·3종)": "当社正式規格図面 — 標準形(1種・2種・3種)",
       "<img src=\"assets/sixnut_hex_diagram.png\" alt=\"6각 U-NUT 표준형 도면\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도(s,e) · 1종(h,l,m) · 2종<br><span style=\"color: var(--text-faint);\">d×p=나사 호칭</span></p>": "<img src=\"assets/sixnut_hex_diagram.png\" alt=\"6角U-NUT標準形図面\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図(s,e)・1種(h,l,m)・2種<br><span style=\"color: var(--text-faint);\">d×p=ねじ呼び</span></p>",
@@ -37,7 +37,7 @@
       "※ 위 도면과 표는 당사 정식 규격표 원본을 기준으로 작성했습니다. 세부 사이즈별 치수는 견적 문의 시 정식 규격표로 안내드립니다. 정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "※上記の図面と表は当社正式規格表原本を基準に作成しました。サイズ別の詳細寸法はお見積り依頼時に正式規格表でご案内いたします。精密加工・発注前には必ず当社正式規格表原本で最終確認をお願いいたします。"
     },
     "zh": {
-      "6각 U-NUT | [회사명] 베어링": "六角U型螺母 | [公司名]轴承",
+      "6각 U-NUT | ILJIN 베어링": "六角U型螺母 | ILJIN轴承",
       "<p class=\"eyebrow\">Hex U-Nut</p> <h2>6각 U-NUT</h2> <p> 범용 6각 로크너트입니다. 나사 안쪽에 90°~120°로 파인 홈을 두어 조립 시 축 나사부를 살짝 눌러 변형시켜 풀림을 방지합니다. 표준형(1종·2종·3종), 소형, 캡형, 후렌지형, 용접형 등 형태별로 취급합니다. </p>": "<p class=\"eyebrow\">Hex U-Nut</p> <h2>六角U型螺母</h2> <p> 通用六角锁紧螺母。螺纹内侧开有90°~120°的切槽，组装时会轻微压迫并使轴的螺纹部分变形，从而防止松动。按形态分为标准型(1种・2种・3种)、小型、带盖型、法兰型、焊接型等多种规格。 </p>",
       "당사 정식 규격 도면 — 표준형(1종·2종·3종)": "本公司正式规格图纸 — 标准型(1种・2种・3种)",
       "<img src=\"assets/sixnut_hex_diagram.png\" alt=\"6각 U-NUT 표준형 도면\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도(s,e) · 1종(h,l,m) · 2종<br><span style=\"color: var(--text-faint);\">d×p=나사 호칭</span></p>": "<img src=\"assets/sixnut_hex_diagram.png\" alt=\"六角U型螺母标准型图纸\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正视图(s,e)・1种(h,l,m)・2种<br><span style=\"color: var(--text-faint);\">d×p=螺纹代号</span></p>",

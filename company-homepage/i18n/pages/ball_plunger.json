@@ -1,7 +1,7 @@
 {
   "text": {
     "en": {
-      "볼 플런저 (Ball Plunger) | [회사명] 베어링": "Ball Plunger | [Company Name] Bearing",
+      "볼 플런저 (Ball Plunger) | ILJIN 베어링": "Ball Plunger | ILJIN Bearing",
       "<p class=\"eyebrow\">Ball Plunger</p> <h2>볼 플런저 (Ball Plunger)</h2> <p>육각 홈붙이 나사 안에 스프링으로 볼을 밀어내는 위치결정·인덱싱용 부품으로, 금형·지그·고정구 등의 클릭감 있는 위치 고정에 사용됩니다. 제조사·형번 체계가 다른 <strong>국산 BP 시리즈</strong>와 <strong>독일 Halder(할더) 2203 시리즈</strong>를 함께 비교할 수 있도록 모았습니다.</p> <p class=\"section-head-tip\">형번 또는 나사 규격 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Ball Plunger</p> <h2>Ball Plunger</h2> <p>A positioning/indexing component built into a hex socket set screw that uses a spring to push out a ball, used for click-feel position locking in molds, jigs, fixtures, and similar applications. Here we compare the <strong>domestic BP series</strong> and the <strong>German Halder 2203 series</strong>, which use different manufacturers and part-numbering systems.</p> <p class=\"section-head-tip\">You can search by entering just part of the part number or thread spec.</p>",
       "<button type=\"button\" class=\"cat-tab-btn active\" data-tab=\"domestic\">국산 (BP 시리즈)</button> <button type=\"button\" class=\"cat-tab-btn\" data-tab=\"halder\">독일산 (Halder 2203)</button>": "<button type=\"button\" class=\"cat-tab-btn active\" data-tab=\"domestic\">Domestic (BP Series)</button> <button type=\"button\" class=\"cat-tab-btn\" data-tab=\"halder\">German (Halder 2203)</button>",
       "육각 소켓 세트스크류 형태의 하우징 안에 코일스프링으로 볼을 밀어내는 표준 볼 플런저입니다. 회전방지용 로크(LOCK) 구조가 함께 표기되어 있습니다.": "A standard ball plunger with a hex socket set-screw style housing that uses a coil spring to push out the ball. An anti-rotation LOCK structure is also indicated.",
@@ -26,7 +26,7 @@
       "※ 국산 BP 시리즈는 국내 유통 카탈로그(동우교역), Halder 2203 시리즈는 Halder社 정식 카탈로그를 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "※ The domestic BP series is based on a domestically distributed catalog (Dongwoo Trading); the Halder 2203 series is based on Halder's official catalog. Before precision machining or ordering, always perform a final check against the original official specification sheet."
     },
     "ja": {
-      "볼 플런저 (Ball Plunger) | [회사명] 베어링": "ボールプランジャー (Ball Plunger) | [会社名] ベアリング",
+      "볼 플런저 (Ball Plunger) | ILJIN 베어링": "ボールプランジャー (Ball Plunger) | ILJIN ベアリング",
       "<p class=\"eyebrow\">Ball Plunger</p> <h2>볼 플런저 (Ball Plunger)</h2> <p>육각 홈붙이 나사 안에 스프링으로 볼을 밀어내는 위치결정·인덱싱용 부품으로, 금형·지그·고정구 등의 클릭감 있는 위치 고정에 사용됩니다. 제조사·형번 체계가 다른 <strong>국산 BP 시리즈</strong>와 <strong>독일 Halder(할더) 2203 시리즈</strong>를 함께 비교할 수 있도록 모았습니다.</p> <p class=\"section-head-tip\">형번 또는 나사 규격 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Ball Plunger</p> <h2>ボールプランジャー (Ball Plunger)</h2> <p>六角穴付きセットスクリューの中でスプリングによりボールを押し出す位置決め・インデックス用部品で、金型・治具・固定具などのクリック感のある位置固定に使用されます。メーカー・形番体系が異なる<strong>国産BPシリーズ</strong>と<strong>ドイツHalder(ハルダー)2203シリーズ</strong>を併せて比較できるようまとめました。</p> <p class=\"section-head-tip\">形番またはねじ規格の一部だけ入力しても検索できます。</p>",
       "<button type=\"button\" class=\"cat-tab-btn active\" data-tab=\"domestic\">국산 (BP 시리즈)</button> <button type=\"button\" class=\"cat-tab-btn\" data-tab=\"halder\">독일산 (Halder 2203)</button>": "<button type=\"button\" class=\"cat-tab-btn active\" data-tab=\"domestic\">国産 (BPシリーズ)</button> <button type=\"button\" class=\"cat-tab-btn\" data-tab=\"halder\">ドイツ製 (Halder 2203)</button>",
       "육각 소켓 세트스크류 형태의 하우징 안에 코일스프링으로 볼을 밀어내는 표준 볼 플런저입니다. 회전방지용 로크(LOCK) 구조가 함께 표기되어 있습니다.": "六角穴付きセットスクリュー形状のハウジング内でコイルスプリングによりボールを押し出す標準型ボールプランジャーです。回転防止用ロック(LOCK)構造も併記されています。",
@@ -51,7 +51,7 @@
       "※ 국산 BP 시리즈는 국내 유통 카탈로그(동우교역), Halder 2203 시리즈는 Halder社 정식 카탈로그를 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "※ 国産BPシリーズは国内流通カタログ(トンウ貿易)、Halder 2203シリーズはHalder社の正式カタログを基準に作成しました。精密加工・発注前には必ず正式規格表の原本で最終確認してください。"
     },
     "zh": {
-      "볼 플런저 (Ball Plunger) | [회사명] 베어링": "滚珠柱塞 (Ball Plunger) | [公司名] 轴承",
+      "볼 플런저 (Ball Plunger) | ILJIN 베어링": "滚珠柱塞 (Ball Plunger) | ILJIN 轴承",
       "<p class=\"eyebrow\">Ball Plunger</p> <h2>볼 플런저 (Ball Plunger)</h2> <p>육각 홈붙이 나사 안에 스프링으로 볼을 밀어내는 위치결정·인덱싱용 부품으로, 금형·지그·고정구 등의 클릭감 있는 위치 고정에 사용됩니다. 제조사·형번 체계가 다른 <strong>국산 BP 시리즈</strong>와 <strong>독일 Halder(할더) 2203 시리즈</strong>를 함께 비교할 수 있도록 모았습니다.</p> <p class=\"section-head-tip\">형번 또는 나사 규격 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Ball Plunger</p> <h2>滚珠柱塞 (Ball Plunger)</h2> <p>这是一种内置于内六角紧定螺钉中、利用弹簧顶出钢珠的定位·分度用零件，用于模具、夹具、治具等需要卡位手感的位置固定场合。我们将制造商与型号体系不同的<strong>国产BP系列</strong>与<strong>德国Halder 2203系列</strong>汇总在一起便于比较。</p> <p class=\"section-head-tip\">只需输入型号或螺纹规格的一部分即可搜索。</p>",
       "<button type=\"button\" class=\"cat-tab-btn active\" data-tab=\"domestic\">국산 (BP 시리즈)</button> <button type=\"button\" class=\"cat-tab-btn\" data-tab=\"halder\">독일산 (Halder 2203)</button>": "<button type=\"button\" class=\"cat-tab-btn active\" data-tab=\"domestic\">国产 (BP系列)</button> <button type=\"button\" class=\"cat-tab-btn\" data-tab=\"halder\">德国产 (Halder 2203)</button>",
       "육각 소켓 세트스크류 형태의 하우징 안에 코일스프링으로 볼을 밀어내는 표준 볼 플런저입니다. 회전방지용 로크(LOCK) 구조가 함께 표기되어 있습니다.": "这是一种内六角紧定螺钉形状外壳内置螺旋弹簧顶出钢珠的标准滚珠柱塞。图中还标注了防转动锁定(LOCK)结构。",

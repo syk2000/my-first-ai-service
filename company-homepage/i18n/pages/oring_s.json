@@ -1,19 +1,19 @@
 {
   "text": {
     "en": {
-      "S오링 | [회사명] 베어링": "S O-Ring | [회사명] Bearing",
+      "S오링 | ILJIN 베어링": "S O-Ring | ILJIN Bearing",
       "<p class=\"eyebrow\">S O-Ring</p> <h2>S오링</h2> <p>S계열 O-링입니다. No.(형번) 순으로 굵기(W)·내경(d)이 정해집니다.</p>": "<p class=\"eyebrow\">S O-Ring</p> <h2>S O-Ring</h2> <p>This is the S series O-ring. The thickness (W) and inner diameter (d) are determined in order by No. (model number).</p>",
       "<img src=\"assets/oring_diagram_s.png\" alt=\"S오링 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_s.png\" alt=\"S O-ring drawing\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front view · cross-section · circular cross-section<br><span style=\"color: var(--text-faint);\">d=inner diameter · W=thickness (wire diameter)</span></p>",
       "※ d 공차는 규격 구간별로 상이합니다(±0.15~±0.6). 정확한 공차는 발주 시 확인해 주세요.": "* The tolerance for d varies by spec range (±0.15 to ±0.6). Please check the exact tolerance when ordering."
     },
     "ja": {
-      "S오링 | [회사명] 베어링": "Sオーリング | [회사명]ベアリング",
+      "S오링 | ILJIN 베어링": "Sオーリング | ILJINベアリング",
       "<p class=\"eyebrow\">S O-Ring</p> <h2>S오링</h2> <p>S계열 O-링입니다. No.(형번) 순으로 굵기(W)·내경(d)이 정해집니다.</p>": "<p class=\"eyebrow\">S O-Ring</p> <h2>Sオーリング</h2> <p>S系列のOリングです。No.(形番)順に太さ(W)・内径(d)が決まります。</p>",
       "<img src=\"assets/oring_diagram_s.png\" alt=\"S오링 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_s.png\" alt=\"Sオーリング図面\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図・断面図・円形断面<br><span style=\"color: var(--text-faint);\">d=内径・W=太さ(線径)</span></p>",
       "※ d 공차는 규격 구간별로 상이합니다(±0.15~±0.6). 정확한 공차는 발주 시 확인해 주세요.": "※d公差は規格区間ごとに異なります(±0.15~±0.6)。正確な公差は発注時にご確認ください。"
     },
     "zh": {
-      "S오링 | [회사명] 베어링": "S型O形圈 | [회사명]轴承",
+      "S오링 | ILJIN 베어링": "S型O形圈 | ILJIN轴承",
       "<p class=\"eyebrow\">S O-Ring</p> <h2>S오링</h2> <p>S계열 O-링입니다. No.(형번) 순으로 굵기(W)·내경(d)이 정해집니다.</p>": "<p class=\"eyebrow\">S O-Ring</p> <h2>S型O形圈</h2> <p>这是S系列O形圈。粗细(W)・内径(d)按No.(型号)顺序确定。</p>",
       "<img src=\"assets/oring_diagram_s.png\" alt=\"S오링 도면\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 원형 단면<br><span style=\"color: var(--text-faint);\">d=내경 · W=굵기(선경)</span></p>": "<img src=\"assets/oring_diagram_s.png\" alt=\"S型O形圈图纸\" style=\"height: 200px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正视图・剖视图・圆形截面<br><span style=\"color: var(--text-faint);\">d=内径・W=粗细（线径）</span></p>",
       "※ d 공차는 규격 구간별로 상이합니다(±0.15~±0.6). 정확한 공차는 발주 시 확인해 주세요.": "※d公差因规格区间而异(±0.15~±0.6)。准确公差请在订购时确认。"

@@ -1,17 +1,17 @@
 {
   "text": {
     "en": {
-      "TSS 시리즈 | [회사명] 베어링": "TSS Series | [Company Name] Bearing",
+      "TSS 시리즈 | ILJIN 베어링": "TSS Series | ILJIN Bearing",
       "<p class=\"eyebrow\">Clutch Bearings · TSS Series</p> <h2>TSS 시리즈 (스프래그 클러치 베어링)</h2> <p>표준 베어링과 같은 형태(하우징·플랜지 없음)로 공급되는 스프래그형 롤러 클러치 표준폭 시리즈입니다. 표준 베어링 보어 자리에 압입해 사용합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TSS Series</p> <h2>TSS Series (Sprag Clutch Bearing)</h2> <p>A standard-width sprag-type roller clutch series supplied in the same form as a standard bearing (no housing or flange). It is press-fitted in place of a standard bearing bore.</p> <p class=\"section-head-tip\">You can search by entering just part of the model number or dimensions.</p>",
       "<label for=\"tssFilter\">형번 / 규격 검색</label> <input id=\"tssFilter\" type=\"text\" placeholder=\"예: TSS20\" autocomplete=\"off\">": "<label for=\"tssFilter\">Model / Spec Search</label> <input id=\"tssFilter\" type=\"text\" placeholder=\"e.g. TSS20\" autocomplete=\"off\">"
     },
     "ja": {
-      "TSS 시리즈 | [회사명] 베어링": "TSSシリーズ | [会社名]ベアリング",
+      "TSS 시리즈 | ILJIN 베어링": "TSSシリーズ | ILJINベアリング",
       "<p class=\"eyebrow\">Clutch Bearings · TSS Series</p> <h2>TSS 시리즈 (스프래그 클러치 베어링)</h2> <p>표준 베어링과 같은 형태(하우징·플랜지 없음)로 공급되는 스프래그형 롤러 클러치 표준폭 시리즈입니다. 표준 베어링 보어 자리에 압입해 사용합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TSS Series</p> <h2>TSSシリーズ(スプラグクラッチベアリング)</h2> <p>標準ベアリングと同じ形状(ハウジング・フランジなし)で供給される、スプラグ型ローラークラッチの標準幅シリーズです。標準ベアリングのボア位置に圧入して使用します。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
       "<label for=\"tssFilter\">형번 / 규격 검색</label> <input id=\"tssFilter\" type=\"text\" placeholder=\"예: TSS20\" autocomplete=\"off\">": "<label for=\"tssFilter\">形番 / 規格検索</label> <input id=\"tssFilter\" type=\"text\" placeholder=\"例: TSS20\" autocomplete=\"off\">"
     },
     "zh": {
-      "TSS 시리즈 | [회사명] 베어링": "TSS系列 | [公司名]轴承",
+      "TSS 시리즈 | ILJIN 베어링": "TSS系列 | ILJIN轴承",
       "<p class=\"eyebrow\">Clutch Bearings · TSS Series</p> <h2>TSS 시리즈 (스프래그 클러치 베어링)</h2> <p>표준 베어링과 같은 형태(하우징·플랜지 없음)로 공급되는 스프래그형 롤러 클러치 표준폭 시리즈입니다. 표준 베어링 보어 자리에 압입해 사용합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Clutch Bearings · TSS Series</p> <h2>TSS系列(斜楔式离合器轴承)</h2> <p>以与标准轴承相同的形态(无壳体、法兰)供应的斜楔式滚柱离合器标准宽度系列,压装于标准轴承孔位使用。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
       "<label for=\"tssFilter\">형번 / 규격 검색</label> <input id=\"tssFilter\" type=\"text\" placeholder=\"예: TSS20\" autocomplete=\"off\">": "<label for=\"tssFilter\">型号 / 规格搜索</label> <input id=\"tssFilter\" type=\"text\" placeholder=\"例如: TSS20\" autocomplete=\"off\">"
     }

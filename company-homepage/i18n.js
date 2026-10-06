@@ -1,5 +1,6 @@
-// 다국어(EN/JA/ZH) 번역 엔진 — 공통 사전(i18n/common.json) + 페이지별 사전(i18n/pages/<파일명>.json)을
-// 불러와, 한국어 원문과 정확히 일치하는 "리프 요소"(블록 자식이 없는 요소)의 innerHTML을 치환합니다.
+// 다국어(EN/JA/ZH) 번역 엔진 — 공통 사전(i18n/common.json) + 전체 페이지 사전 번들(i18n/pages-bundle.json,
+// 페이지 파일명을 키로 모든 i18n/pages/<파일명>.json을 합친 것)을 불러와, 한국어 원문과 정확히 일치하는
+// "리프 요소"(블록 자식이 없는 요소)의 innerHTML을 치환합니다.
 // 표(tbody) 안의 규격 데이터는 절대 건드리지 않습니다.
 (function () {
   var BLOCK_TAGS = { HTML: 1, HEAD: 1, BODY: 1, DIV: 1, SECTION: 1, TABLE: 1, THEAD: 1, TBODY: 1, TR: 1, UL: 1, OL: 1, DETAILS: 1, HEADER: 1, FOOTER: 1, NAV: 1, FORM: 1, ARTICLE: 1 };
@@ -151,14 +152,21 @@
   var loadDictsPromise = null;
   function loadDicts() {
     if (loadDictsPromise) return loadDictsPromise;
-    var tasks = [fetchJSON('i18n/common.json')];
-    tasks.push(fetchJSON('i18n/pages/' + pageBaseName() + '.json'));
+    // 페이지별 사전을 187개 개별 파일 대신 하나의 번들(pages-bundle.json)로 받아옵니다.
+    // 배포 대상(Claude Artifact 등)의 파일 개수 제한 때문에 개별 파일이 통째로 누락되는 걸 막기 위함입니다.
+    var tasks = [fetchJSON('i18n/common.json'), fetchJSON('i18n/pages-bundle.json')];
     loadDictsPromise = Promise.all(tasks).then(function (results) {
-      results.forEach(function (r) {
-        if (!r) return;
-        mergeDict(dict, r.text || r);
-        mergeDict(attrDict, r.attrs || {});
-      });
+      var common = results[0];
+      if (common) {
+        mergeDict(dict, common.text || common);
+        mergeDict(attrDict, common.attrs || {});
+      }
+      var bundle = results[1];
+      var pageDict = bundle && bundle[pageBaseName()];
+      if (pageDict) {
+        mergeDict(dict, pageDict.text || pageDict);
+        mergeDict(attrDict, pageDict.attrs || {});
+      }
       pageDictLoaded = true;
     });
     return loadDictsPromise;

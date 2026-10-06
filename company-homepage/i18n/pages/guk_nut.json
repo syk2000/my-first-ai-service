@@ -1,21 +1,21 @@
 {
   "text": {
     "en": {
-      "GUK NUT | [회사명] 베어링": "GUK NUT | [Company Name] Bearing",
+      "GUK NUT | ILJIN 베어링": "GUK NUT | ILJIN Bearing",
       "<p class=\"eyebrow\">Guk Nut</p> <h2>GUK NUT</h2> <p> 너트 안쪽에 나일론 링을 삽입한 <strong style=\"color: var(--accent);\">셋트스크류 불필요형</strong> 로크너트입니다. </p>": "<p class=\"eyebrow\">Guk Nut</p> <h2>GUK NUT</h2> <p> A lock nut with a nylon ring inserted inside the nut, making it a <strong style=\"color: var(--accent);\">set-screw-free type</strong>. </p>",
       "<strong>사양</strong><br> 재질: Nut–Steel(항장력 500~700N/mm²), Nylon Ring–Polyamide<br> 나사 정도: 4H(ISO규격) · 표면처리: 아연합금(녹 방지) · 허용온도: Max.100°C": "<strong>Specifications</strong><br> Material: Nut–Steel (tensile strength 500–700N/mm²), Nylon Ring–Polyamide<br> Thread grade: 4H (ISO standard) · Surface treatment: Zinc alloy (rust prevention) · Allowable temperature: Max. 100°C",
       "<strong>특징</strong><br> 진동에 강력 · 10회 반복사용해도 자기보지력(풀림 방지력) 유지 · 밸런스가 좋은 대체형<br> 고정용 셋트스크류가 없어 복잡한 토크 관리가 필요하지 않음": "<strong>Features</strong><br> Strong resistance to vibration · Retains its self-retention (anti-loosening) force even after 10 repeated uses · A well-balanced alternative type<br> With no fixing set screw, complex torque management is not required",
       "<img src=\"assets/guknut_diagram.png\" alt=\"GUK NUT 도면\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도(S) · 단면도<br><span style=\"color: var(--text-faint);\">H=나일론 링 폭 · h=나일론 링 나사 물림 · d=나사 안지름 · D2·D=바깥지름 · 0.3~0.6=모따기</span></p>": "<img src=\"assets/guknut_diagram.png\" alt=\"GUK NUT Drawing\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front view (S) · Cross-section<br><span style=\"color: var(--text-faint);\">H=Nylon ring width · h=Nylon ring thread engagement · d=Thread inner diameter · D2·D=Outer diameter · 0.3–0.6=Chamfer</span></p>"
     },
     "ja": {
-      "GUK NUT | [회사명] 베어링": "GUK NUT | [会社名] ベアリング",
+      "GUK NUT | ILJIN 베어링": "GUK NUT | ILJIN ベアリング",
       "<p class=\"eyebrow\">Guk Nut</p> <h2>GUK NUT</h2> <p> 너트 안쪽에 나일론 링을 삽입한 <strong style=\"color: var(--accent);\">셋트스크류 불필요형</strong> 로크너트입니다. </p>": "<p class=\"eyebrow\">Guk Nut</p> <h2>GUK NUT</h2> <p> ナットの内側にナイロンリングを挿入した、<strong style=\"color: var(--accent);\">止めねじ不要形</strong>のロックナットです。 </p>",
       "<strong>사양</strong><br> 재질: Nut–Steel(항장력 500~700N/mm²), Nylon Ring–Polyamide<br> 나사 정도: 4H(ISO규격) · 표면처리: 아연합금(녹 방지) · 허용온도: Max.100°C": "<strong>仕様</strong><br> 材質: ナット–鋼(引張強さ500~700N/mm²)、ナイロンリング–ポリアミド<br> ねじ精度: 4H(ISO規格) ・ 表面処理: 亜鉛合金(防錆) ・ 許容温度: Max.100°C",
       "<strong>특징</strong><br> 진동에 강력 · 10회 반복사용해도 자기보지력(풀림 방지력) 유지 · 밸런스가 좋은 대체형<br> 고정용 셋트스크류가 없어 복잡한 토크 관리가 필요하지 않음": "<strong>特長</strong><br> 振動に強い ・ 10回繰り返し使用しても自己保持力(緩み止め力)を維持 ・ バランスに優れた代替形<br> 固定用止めねじが不要なため、複雑なトルク管理が不要",
       "<img src=\"assets/guknut_diagram.png\" alt=\"GUK NUT 도면\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도(S) · 단면도<br><span style=\"color: var(--text-faint);\">H=나일론 링 폭 · h=나일론 링 나사 물림 · d=나사 안지름 · D2·D=바깥지름 · 0.3~0.6=모따기</span></p>": "<img src=\"assets/guknut_diagram.png\" alt=\"GUK NUT図面\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図(S) ・ 断面図<br><span style=\"color: var(--text-faint);\">H=ナイロンリング幅 ・ h=ナイロンリングねじ食い込み部 ・ d=ねじ内径 ・ D2・D=外径 ・ 0.3~0.6=面取り</span></p>"
     },
     "zh": {
-      "GUK NUT | [회사명] 베어링": "GUK NUT | [公司名] 轴承",
+      "GUK NUT | ILJIN 베어링": "GUK NUT | ILJIN 轴承",
       "<p class=\"eyebrow\">Guk Nut</p> <h2>GUK NUT</h2> <p> 너트 안쪽에 나일론 링을 삽입한 <strong style=\"color: var(--accent);\">셋트스크류 불필요형</strong> 로크너트입니다. </p>": "<p class=\"eyebrow\">Guk Nut</p> <h2>GUK NUT</h2> <p> 在螺母内侧嵌入尼龙环，<strong style=\"color: var(--accent);\">无需定位螺钉</strong>的锁紧螺母。 </p>",
       "<strong>사양</strong><br> 재질: Nut–Steel(항장력 500~700N/mm²), Nylon Ring–Polyamide<br> 나사 정도: 4H(ISO규격) · 표면처리: 아연합금(녹 방지) · 허용온도: Max.100°C": "<strong>规格</strong><br> 材质: 螺母–钢(抗拉强度500~700N/mm²)，尼龙环–聚酰胺<br> 螺纹精度: 4H(ISO标准) · 表面处理: 锌合金(防锈) · 允许温度: Max.100°C",
       "<strong>특징</strong><br> 진동에 강력 · 10회 반복사용해도 자기보지력(풀림 방지력) 유지 · 밸런스가 좋은 대체형<br> 고정용 셋트스크류가 없어 복잡한 토크 관리가 필요하지 않음": "<strong>特点</strong><br> 抗振性强 · 反复使用10次仍能保持自锁力(防松力) · 平衡性良好的替代型<br> 无需固定用定位螺钉，不需要复杂的扭矩管理",

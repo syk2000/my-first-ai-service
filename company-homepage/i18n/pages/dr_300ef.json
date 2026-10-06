@@ -1,19 +1,19 @@
 {
   "text": {
     "en": {
-      "DR 300EF | [회사명] 베어링": "DR 300EF | [회사명] Bearing",
+      "DR 300EF | ILJIN 베어링": "DR 300EF | ILJIN Bearing",
       "<p class=\"eyebrow\">Power Lock</p> <h2>DR 300EF</h2> <p> DR300 및 DR300C 타입과 <strong style=\"color: var(--accent);\">동일한 내외경</strong>을 가지며 센터링 기능이 있습니다. 펌프, 캠, 스프라켓 휠, 기어 등에 사용됩니다. </p>": "<p class=\"eyebrow\">Power Lock</p> <h2>DR 300EF</h2> <p> Has the <strong style=\"color: var(--accent);\">same bore and outer diameter</strong> as the DR300 and DR300C types, plus a centering function. Used in pumps, cams, sprocket wheels, gears, and similar applications. </p>",
       "<strong>사양</strong><br> 표면 거칠기: Rt max 16μm · 가공 공차(Max): 축–h8 허브–H8<br> 제품 주문 방법: DR300EF–d1×D1 (예: DR300EF–20×25)": "<strong>Specifications</strong><br> Surface roughness: Rt max 16μm · Machining tolerance (Max): Shaft–h8 Hub–H8<br> Ordering method: DR300EF–d1×D1 (e.g. DR300EF–20×25)",
       "<img src=\"assets/dr300ef_diagram.png\" alt=\"DR300EF 도면\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 체결 예시(내륜링·외륜링)<br><span style=\"color: var(--text-faint);\">φd=축지름 · φD·φD1·φD2·φD3=바깥지름 계열 · Lt·L2·L3·L4·ℓ=폭 치수</span></p>": "<img src=\"assets/dr300ef_diagram.png\" alt=\"DR300EF Drawing\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ Front view · Cross-section · Fastening example (inner ring · outer ring)<br><span style=\"color: var(--text-faint);\">φd=shaft diameter · φD·φD1·φD2·φD3=outer diameter series · Lt·L2·L3·L4·ℓ=width dimensions</span></p>"
     },
     "ja": {
-      "DR 300EF | [회사명] 베어링": "DR 300EF | [회사명]ベアリング",
+      "DR 300EF | ILJIN 베어링": "DR 300EF | ILJINベアリング",
       "<p class=\"eyebrow\">Power Lock</p> <h2>DR 300EF</h2> <p> DR300 및 DR300C 타입과 <strong style=\"color: var(--accent);\">동일한 내외경</strong>을 가지며 센터링 기능이 있습니다. 펌프, 캠, 스프라켓 휠, 기어 등에 사용됩니다. </p>": "<p class=\"eyebrow\">Power Lock</p> <h2>DR 300EF</h2> <p> DR300およびDR300Cタイプと<strong style=\"color: var(--accent);\">同一の内外径</strong>を持ち、センタリング機能があります。ポンプ、カム、スプロケットホイール、ギヤなどに使用されます。 </p>",
       "<strong>사양</strong><br> 표면 거칠기: Rt max 16μm · 가공 공차(Max): 축–h8 허브–H8<br> 제품 주문 방법: DR300EF–d1×D1 (예: DR300EF–20×25)": "<strong>仕様</strong><br> 表面粗さ: Rt max 16μm · 加工公差(Max): 軸–h8 ハブ–H8<br> 製品注文方法: DR300EF–d1×D1 (例: DR300EF–20×25)",
       "<img src=\"assets/dr300ef_diagram.png\" alt=\"DR300EF 도면\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 체결 예시(내륜링·외륜링)<br><span style=\"color: var(--text-faint);\">φd=축지름 · φD·φD1·φD2·φD3=바깥지름 계열 · Lt·L2·L3·L4·ℓ=폭 치수</span></p>": "<img src=\"assets/dr300ef_diagram.png\" alt=\"DR300EF図面\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正面図・断面図・締結例（内輪リング・外輪リング）<br><span style=\"color: var(--text-faint);\">φd=軸径・φD・φD1・φD2・φD3=外径系列・Lt・L2・L3・L4・ℓ=幅寸法</span></p>"
     },
     "zh": {
-      "DR 300EF | [회사명] 베어링": "DR 300EF | [회사명]轴承",
+      "DR 300EF | ILJIN 베어링": "DR 300EF | ILJIN轴承",
       "<p class=\"eyebrow\">Power Lock</p> <h2>DR 300EF</h2> <p> DR300 및 DR300C 타입과 <strong style=\"color: var(--accent);\">동일한 내외경</strong>을 가지며 센터링 기능이 있습니다. 펌프, 캠, 스프라켓 휠, 기어 등에 사용됩니다. </p>": "<p class=\"eyebrow\">Power Lock</p> <h2>DR 300EF</h2> <p> 与DR300及DR300C型号具有<strong style=\"color: var(--accent);\">相同的内外径</strong>，并具备定心功能。用于泵、凸轮、链轮、齿轮等。 </p>",
       "<strong>사양</strong><br> 표면 거칠기: Rt max 16μm · 가공 공차(Max): 축–h8 허브–H8<br> 제품 주문 방법: DR300EF–d1×D1 (예: DR300EF–20×25)": "<strong>规格</strong><br> 表面粗糙度: Rt max 16μm · 加工公差(Max): 轴–h8 轮毂–H8<br> 产品订购方式: DR300EF–d1×D1 (例如: DR300EF–20×25)",
       "<img src=\"assets/dr300ef_diagram.png\" alt=\"DR300EF 도면\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 정면도 · 단면도 · 체결 예시(내륜링·외륜링)<br><span style=\"color: var(--text-faint);\">φd=축지름 · φD·φD1·φD2·φD3=바깥지름 계열 · Lt·L2·L3·L4·ℓ=폭 치수</span></p>": "<img src=\"assets/dr300ef_diagram.png\" alt=\"DR300EF图纸\" style=\"height: 260px; width: auto; max-width: 100%; object-fit: contain;\"> <p class=\"diagram-legend\">↑ 正视图·剖面图·紧固示例（内环·外环）<br><span style=\"color: var(--text-faint);\">φd=轴径 · φD·φD1·φD2·φD3=外径系列 · Lt·L2·L3·L4·ℓ=宽度尺寸</span></p>"
