@@ -10,6 +10,13 @@
   var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, SVG: 1, TBODY: 1 };
   var ATTR_NAMES = ['placeholder', 'alt', 'aria-label', 'title'];
   var KOREAN_RE = /[가-힣]/;
+  // 언어 전환 드롭다운(#langSelect, #mobileLangOptions) 내부는 번역 대상에서 제외합니다.
+  // 각 버튼 라벨("한국어/English/中文/日本語")은 그 자체로 다국어 혼합 텍스트라 "한국어"라는
+  // 글자 때문에 번역 대상 리프로 잡혀 el.innerHTML이 통째로 교체되면, 거기 달려 있던 클릭
+  // 이벤트 리스너가 새로 파싱된 버튼 노드에는 없어서 그 뒤로 언어 전환 버튼이 완전히 먹통이 됩니다.
+  function inNoTranslateZone(el) {
+    return !!(el.closest && el.closest('#langSelect, #mobileLangOptions'));
+  }
 
   var dict = { en: {}, ja: {}, zh: {} };
   var attrDict = { en: {}, ja: {}, zh: {} };
@@ -45,6 +52,7 @@
     (function walk(el) {
       if (!el || el.nodeType !== 1) return;
       if (SKIP_TAGS[el.tagName]) return;
+      if (el.id === 'langSelect' || el.id === 'mobileLangOptions') return;
       if (isLeaf(el)) {
         leaves.push(el);
         return;
@@ -56,6 +64,7 @@
     for (var j = 0; j < all.length; j++) {
       var el = all[j];
       if (el.closest('tbody')) continue;
+      if (inNoTranslateZone(el)) continue;
       for (var k = 0; k < ATTR_NAMES.length; k++) {
         var a = ATTR_NAMES[k];
         var v = el.getAttribute(a);
