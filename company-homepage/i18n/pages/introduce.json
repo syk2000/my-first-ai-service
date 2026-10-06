@@ -17,7 +17,8 @@
       "찾아오시는 길": "Directions",
       "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">네이버 지도로 길찾기</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">구글 지도로 길찾기</a>": "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">Get Directions via Naver Map</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">Get Directions via Google Maps</a>",
       "<span class=\"c-label\">대중교통</span><span>지하철 O호선 OO역 O번 출구 도보 O분</span>": "<span class=\"c-label\">Public Transit</span><span>Subway Line O, OO Station, Exit O, O-min walk</span>",
-      "<span class=\"c-label\">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span>": "<span class=\"c-label\">Parking</span><span>Visitor parking available in the building (advance inquiry recommended)</span>"
+      "<span class=\"c-label\">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span>": "<span class=\"c-label\">Parking</span><span>Visitor parking available in the building (advance inquiry recommended)</span>",
+      "ilJIN 대리점": "ilJIN Authorized Dealer"
     },
     "ja": {
       "회사소개 | [회사명] 베어링": "会社紹介 | [会社名] ベアリング",
@@ -36,7 +37,8 @@
       "찾아오시는 길": "アクセス",
       "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">네이버 지도로 길찾기</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">구글 지도로 길찾기</a>": "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">Naverマップで経路を見る</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">Googleマップで経路を見る</a>",
       "<span class=\"c-label\">대중교통</span><span>지하철 O호선 OO역 O번 출구 도보 O분</span>": "<span class=\"c-label\">公共交通機関</span><span>地下鉄O号線 OO駅 O番出口 徒歩O分</span>",
-      "<span class=\"c-label\">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span>": "<span class=\"c-label\">駐車場</span><span>建物内に来客用駐車場あり（事前のお問い合わせを推奨）</span>"
+      "<span class=\"c-label\">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span>": "<span class=\"c-label\">駐車場</span><span>建物内に来客用駐車場あり（事前のお問い合わせを推奨）</span>",
+      "ilJIN 대리점": "ilJIN代理店"
     },
     "zh": {
       "회사소개 | [회사명] 베어링": "公司简介 | [公司名] 轴承",
@@ -55,7 +57,8 @@
       "찾아오시는 길": "交通路线",
       "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">네이버 지도로 길찾기</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">구글 지도로 길찾기</a>": "<a class=\"btn btn-outline btn-sm\" href=\"https://map.naver.com/p/search/%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">通过Naver地图查看路线</a> <a class=\"btn btn-outline btn-sm\" href=\"https://www.google.com/maps/search/?api=1&query=%EC%98%81%EB%93%B1%ED%8F%AC%EC%97%AD\" target=\"_blank\" rel=\"noopener noreferrer\">通过谷歌地图查看路线</a>",
       "<span class=\"c-label\">대중교통</span><span>지하철 O호선 OO역 O번 출구 도보 O분</span>": "<span class=\"c-label\">公共交通</span><span>地铁O号线 OO站 O号出口 步行O分钟</span>",
-      "<span class=\"c-label\">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span>": "<span class=\"c-label\">停车</span><span>楼内可提供访客停车位(建议提前联系确认)</span>"
+      "<span class=\"c-label\">주차</span><span>건물 내 방문객 주차 가능 (사전 문의 권장)</span>": "<span class=\"c-label\">停车</span><span>楼内可提供访客停车位(建议提前联系确认)</span>",
+      "ilJIN 대리점": "ilJIN代理商"
     }
   },
   "attrs": {
