@@ -22,7 +22,15 @@
   var pageDictLoaded = false;
 
   function hasKorean(s) { return s && KOREAN_RE.test(s); }
-  function normKey(s) { return s.replace(/\s+/g, ' ').trim(); }
+  function normKey(s) {
+    s = s.replace(/\s+/g, ' ').trim();
+    // 마크업이 시간이 지나며 조금씩 바뀌어도(자기닫힘 태그 </br> 추가 등) 사전 키가 안 깨지도록
+    // 흔한 서식 차이를 흡수합니다 — 사전 쪽 키도 동일 함수로 정규화해서 저장합니다.
+    s = s.replace(/\s*\/>/g, '>');               // <circle ... /> -> <circle ...>
+    s = s.replace(/viewbox=/gi, 'viewBox=');      // viewbox 대소문자 통일
+    s = s.replace(/<([a-zA-Z][a-zA-Z0-9]*)([^>]*)>\s*<\/\1>/g, '<$1$2>'); // <x ...></x> -> <x ...>
+    return s;
+  }
 
   function isLeaf(el) {
     if (SKIP_TAGS[el.tagName] || NEVER_LEAF_SELF[el.tagName]) return false;
@@ -140,7 +148,11 @@
   function mergeDict(target, src) {
     if (!src) return;
     ['en', 'ja', 'zh'].forEach(function (lk) {
-      if (src[lk]) Object.assign(target[lk], src[lk]);
+      if (!src[lk]) return;
+      // 사전 키도 normKey로 정규화해서 저장 — 런타임에 읽는 ko 키와 동일한 정규화를 거치도록 맞춥니다.
+      Object.keys(src[lk]).forEach(function (k) {
+        target[lk][normKey(k)] = src[lk][k];
+      });
     });
   }
 
