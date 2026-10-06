@@ -54,7 +54,9 @@
       langSelectBtn.setAttribute("aria-expanded", "false");
     }
 
-    function setLanguage(code) {
+    // 드롭다운 표시(라벨·체크마크)는 번역이 "실제로 적용된 뒤"에만 갱신합니다 —
+    // 요청만 하고 아직 반영 전인 상태가 화면에 보이는 일이 없도록, 단일 진실 공급원을 적용 완료 시점으로 둡니다.
+    function updateLangUI(code) {
       langSelectLabel.textContent = code;
       langMenu.querySelectorAll("button[data-lang]").forEach((b) => {
         b.setAttribute("aria-checked", String(b.dataset.lang === code));
@@ -62,7 +64,14 @@
       mobileLangOptions.querySelectorAll("button[data-lang]").forEach((b) => {
         b.setAttribute("aria-pressed", String(b.dataset.lang === code));
       });
-      if (window.I18N) window.I18N.apply(code);
+    }
+
+    function setLanguage(code) {
+      if (window.I18N) {
+        window.I18N.apply(code, updateLangUI);
+      } else {
+        updateLangUI(code);
+      }
     }
 
     // 다른 페이지에서 선택했던 언어를 유지

@@ -20,6 +20,7 @@
   var currentLang = 'KOR';
   var applying = false;
   var pageDictLoaded = false;
+  var requestEpoch = 0; // apply() 호출마다 증가 — 늦게 도착한 이전 요청이 최신 요청을 덮어쓰지 않도록 가드
 
   function hasKorean(s) { return s && KOREAN_RE.test(s); }
   function normKey(s) {
@@ -87,33 +88,45 @@
   function applyOnce(code) {
     var lk = langKey(code);
     applying = true;
-    leaves.forEach(function (el) {
-      var ko = originalHTML.get(el);
-      if (ko === undefined) return;
-      if (!lk) {
-        if (el.innerHTML !== ko) el.innerHTML = ko;
-        return;
-      }
-      var tr = dict[lk][normKey(ko)];
-      if (tr !== undefined && el.innerHTML !== tr) {
-        el.innerHTML = tr;
-      } else if (tr === undefined && el.innerHTML !== ko) {
-        el.innerHTML = ko; // 번역 없으면 한국어 원문 유지
-      }
-    });
-    attrEls.forEach(function (item) {
-      var rec = originalAttr.get(item.el);
-      if (!rec) return;
-      var ko = rec[item.attr];
-      if (ko === undefined) return;
-      if (!lk) {
-        item.el.setAttribute(item.attr, ko);
-        return;
-      }
-      var tr = attrDict[lk][normKey(ko)];
-      item.el.setAttribute(item.attr, tr !== undefined ? tr : ko);
-    });
-    applying = false;
+    try {
+      leaves.forEach(function (el) {
+        try {
+          var ko = originalHTML.get(el);
+          if (ko === undefined) return;
+          if (!lk) {
+            if (el.innerHTML !== ko) el.innerHTML = ko;
+            return;
+          }
+          var tr = dict[lk][normKey(ko)];
+          if (tr !== undefined && el.innerHTML !== tr) {
+            el.innerHTML = tr;
+          } else if (tr === undefined && el.innerHTML !== ko) {
+            el.innerHTML = ko; // 번역 없으면 한국어 원문 유지
+          }
+        } catch (e) {
+          // 개별 요소 치환 실패가 나머지 요소 전체를 막지 않도록 격리
+        }
+      });
+      attrEls.forEach(function (item) {
+        try {
+          var rec = originalAttr.get(item.el);
+          if (!rec) return;
+          var ko = rec[item.attr];
+          if (ko === undefined) return;
+          if (!lk) {
+            item.el.setAttribute(item.attr, ko);
+            return;
+          }
+          var tr = attrDict[lk][normKey(ko)];
+          item.el.setAttribute(item.attr, tr !== undefined ? tr : ko);
+        } catch (e) {
+          // 개별 속성 치환 실패 격리
+        }
+      });
+    } finally {
+      // 루프 중 예외가 나더라도 applying 플래그가 영구히 true로 멈추지 않도록 보장
+      applying = false;
+    }
   }
 
   // 동적으로 생성되는 짧은 한국어 UI 조각(검색 결과 건수, 전체 펼치기/접기 버튼 등) 보조 치환
@@ -198,20 +211,23 @@
     collect(document.body);
     cacheOriginals();
     startObserver();
-    var saved = null;
-    try { saved = localStorage.getItem('siteLang'); } catch (e) {}
-    var code = saved || 'KOR';
-    loadDicts().then(function () {
-      apply(code);
-    });
+    // 저장된 언어 복원은 common.js의 최초 setLanguage() 호출이 담당합니다(apply에 UI 콜백까지 넘겨줌).
+    // 여기서 또 apply()를 호출하면, 그 사이 사용자가 다른 언어를 클릭했을 때 이 늦게 끝나는 호출이
+    // 오래된 값으로 덮어써버리는 경합이 생길 수 있어 제거했습니다. 사전은 미리 받아만 둡니다.
+    loadDicts();
   }
 
-  function apply(code) {
+  function apply(code, onApplied) {
     currentLang = code;
     try { localStorage.setItem('siteLang', code); } catch (e) {}
+    requestEpoch += 1;
+    var myEpoch = requestEpoch;
     function run() {
+      // 이 요청이 떠 있는 동안 더 최신 apply() 호출이 들어왔다면, 그 결과를 덮어쓰지 않고 조용히 버림
+      if (myEpoch !== requestEpoch) return;
       applyOnce(code);
       sweepDynamic(document.body);
+      if (onApplied) onApplied(code);
     }
     if (pageDictLoaded) {
       run();
