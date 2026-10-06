@@ -1,6 +1,8 @@
-// 다국어(EN/JA/ZH) 번역 엔진 — 공통 사전(i18n/common.json) + 전체 페이지 사전 번들(i18n/pages-bundle.json,
-// 페이지 파일명을 키로 모든 i18n/pages/<파일명>.json을 합친 것)을 불러와, 한국어 원문과 정확히 일치하는
-// "리프 요소"(블록 자식이 없는 요소)의 innerHTML을 치환합니다.
+// 다국어(EN/JA/ZH) 번역 엔진 — 공통 사전(i18n/common.dict.js → window.I18N_COMMON) + 전체 페이지
+// 사전 번들(i18n/pages-bundle.dict.js → window.I18N_PAGES_BUNDLE, 페이지 파일명을 키로 모든
+// i18n/pages/<파일명>.json을 합친 것)을 읽어, 한국어 원문과 정확히 일치하는 "리프 요소"(블록 자식이
+// 없는 요소)의 innerHTML을 치환합니다. 이 두 .dict.js 파일은 i18n/common.json·i18n/pages-bundle.json을
+// 원본으로 생성한 결과물이며, 반드시 이 스크립트보다 먼저 <script>로 로드되어 있어야 합니다.
 // 표(tbody) 안의 규격 데이터는 절대 건드리지 않습니다.
 (function () {
   var BLOCK_TAGS = { HTML: 1, HEAD: 1, BODY: 1, DIV: 1, SECTION: 1, TABLE: 1, THEAD: 1, TBODY: 1, TR: 1, UL: 1, OL: 1, DETAILS: 1, HEADER: 1, FOOTER: 1, NAV: 1, FORM: 1, ARTICLE: 1 };
@@ -163,10 +165,6 @@
     });
   }
 
-  function fetchJSON(url) {
-    return fetch(url).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
-  }
-
   function mergeDict(target, src) {
     if (!src) return;
     ['en', 'ja', 'zh'].forEach(function (lk) {
@@ -186,23 +184,23 @@
   var loadDictsPromise = null;
   function loadDicts() {
     if (loadDictsPromise) return loadDictsPromise;
-    // 페이지별 사전을 187개 개별 파일 대신 하나의 번들(pages-bundle.json)로 받아옵니다.
-    // 배포 대상(Claude Artifact 등)의 파일 개수 제한 때문에 개별 파일이 통째로 누락되는 걸 막기 위함입니다.
-    var tasks = [fetchJSON('i18n/common.json'), fetchJSON('i18n/pages-bundle.json')];
-    loadDictsPromise = Promise.all(tasks).then(function (results) {
-      var common = results[0];
-      if (common) {
-        mergeDict(dict, common.text || common);
-        mergeDict(attrDict, common.attrs || {});
-      }
-      var bundle = results[1];
-      var pageDict = bundle && bundle[pageBaseName()];
-      if (pageDict) {
-        mergeDict(dict, pageDict.text || pageDict);
-        mergeDict(attrDict, pageDict.attrs || {});
-      }
-      pageDictLoaded = true;
-    });
+    // 사전은 fetch()가 아니라 <script> 태그(i18n/common.dict.js, i18n/pages-bundle.dict.js)로
+    // window.I18N_COMMON / window.I18N_PAGES_BUNDLE에 미리 실려 옵니다. fetch는 file://로 폴더를
+    // 그냥 열었을 때(서버 없이) CORS 때문에 항상 실패하지만, <script src>는 file://에서도 똑같이
+    // 동작하므로 로컬에서 더블클릭으로 열어도 번역이 그대로 동작합니다.
+    var common = window.I18N_COMMON || null;
+    if (common) {
+      mergeDict(dict, common.text || common);
+      mergeDict(attrDict, common.attrs || {});
+    }
+    var bundle = window.I18N_PAGES_BUNDLE || null;
+    var pageDict = bundle && bundle[pageBaseName()];
+    if (pageDict) {
+      mergeDict(dict, pageDict.text || pageDict);
+      mergeDict(attrDict, pageDict.attrs || {});
+    }
+    pageDictLoaded = true;
+    loadDictsPromise = Promise.resolve();
     return loadDictsPromise;
   }
 
