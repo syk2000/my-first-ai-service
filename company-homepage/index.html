@@ -466,9 +466,9 @@
   </footer>
 
 <script src="assets/spec-data.js"></script>
-<script src="i18n/common.dict.js?v=20261008b"></script>
-<script src="i18n/pages-bundle.dict.js?v=20261008b"></script>
-<script src="i18n.js?v=20261008b"></script>
+<script src="i18n/common.dict.js?v=20261008c"></script>
+<script src="i18n/pages-bundle.dict.js?v=20261008c"></script>
+<script src="i18n.js?v=20261008c"></script>
 <script src="common.js?v=20261006b"></script>
 <script>
     const MAX_RESULTS = 200;
@@ -484,10 +484,18 @@
 
     resultCount.textContent = SPEC_DATA.length;
 
+    // 다국어 — 검색기 입력칸·결과 영역은 i18n.js 자동 번역에서 제외되어 있어 여기서 직접 번역한다
+    // (사전은 i18n/common.json, 한국어 모드이거나 사전에 없으면 원문 그대로)
+    const tr = (ko) => (window.I18N && window.I18N.t ? window.I18N.t(ko) : ko);
+    const trModel = (m) => (m || "").replace(/[가-힣]+(?: [가-힣]+)*/g, (ko) => tr(ko));
+    const trLabel = (s) => s.replace(/^(.*?)( \(mm\))?$/, (all, ko, mm) => tr(ko) + (mm || ""));
+    const finderLabels = [...document.querySelectorAll(".finder-fields label")].map((el) => [el, el.textContent]);
+    const finderPlaceholders = [...document.querySelectorAll(".finder-fields input[placeholder]")].map((el) => [el, el.getAttribute("placeholder")]);
+
     for (const g of GROUP_ORDER) {
       const opt = document.createElement("option");
       opt.value = g;
-      opt.textContent = g;
+      opt.textContent = tr(g);
       fType.appendChild(opt);
     }
 
@@ -505,13 +513,13 @@
       const h = fH.value !== "" ? Number(fH.value) : null;
 
       if (type === "" && name === "" && d === null && od === null && h === null) {
-        finderResults.innerHTML = '<p class="no-result">제품명(형번) 또는 내경·외경·두께 중 하나 이상을 입력하면 등록된 규격에서 바로 찾아드립니다.</p>';
+        finderResults.innerHTML = `<p class="no-result">${tr("제품명(형번) 또는 내경·외경·두께 중 하나 이상을 입력하면 등록된 규격에서 바로 찾아드립니다.")}</p>`;
         return;
       }
 
       const rows = SPEC_DATA.filter((item) => {
         if (type && PAGE_GROUP[item.p] !== type) return false;
-        if (name && !(item.m || "").toUpperCase().includes(name)) return false;
+        if (name && !(item.m || "").toUpperCase().includes(name) && !trModel(item.m).toUpperCase().includes(name)) return false;
         if (!matchNum(item.d, d)) return false;
         if (!matchNum(item.D, od)) return false;
         if (!matchNum(item.h, h)) return false;
@@ -519,7 +527,7 @@
       });
 
       if (rows.length === 0) {
-        finderResults.innerHTML = '<p class="no-result">조건에 맞는 규격을 찾지 못했습니다. 담당자에게 견적 문의를 남겨주시면 확인해드립니다.</p>';
+        finderResults.innerHTML = `<p class="no-result">${tr("조건에 맞는 규격을 찾지 못했습니다. 담당자에게 견적 문의를 남겨주시면 확인해드립니다.")}</p>`;
         return;
       }
 
@@ -528,8 +536,8 @@
         .map(
           (item) => `
             <tr>
-              <td class="type-cell">${item.c}</td>
-              <td>${item.m}</td>
+              <td class="type-cell">${tr(item.c)}</td>
+              <td>${trModel(item.m)}</td>
               <td>${item.d ?? "-"}</td>
               <td>${item.D ?? "-"}</td>
               <td>${item.h ?? "-"}</td>
@@ -539,18 +547,18 @@
 
       const moreNote =
         rows.length > MAX_RESULTS
-          ? `<p class="finder-tip">검색된 ${rows.length}건 중 ${MAX_RESULTS}건만 표시했습니다. 조건을 좁혀보세요.</p>`
+          ? `<p class="finder-tip">${tr("검색된 {n}건 중 {max}건만 표시했습니다. 조건을 좁혀보세요.").replace("{n}", rows.length).replace("{max}", MAX_RESULTS)}</p>`
           : "";
 
       finderResults.innerHTML = `
         <table class="spec-table">
           <thead>
             <tr>
-              <th>제품유형</th>
-              <th>제품명</th>
-              <th>내경 mm</th>
-              <th>외경 mm</th>
-              <th>두께 mm</th>
+              <th>${tr("제품유형")}</th>
+              <th>${tr("제품명")}</th>
+              <th>${tr("내경")} mm</th>
+              <th>${tr("외경")} mm</th>
+              <th>${tr("두께")} mm</th>
             </tr>
           </thead>
           <tbody>${tableRows}</tbody>
@@ -561,6 +569,15 @@
 
     [fType, fName, fD, fOD, fH].forEach((el) => el.addEventListener("input", renderResults));
     renderResults();
+
+    // 언어가 바뀔 때마다(페이지 진입 시 저장된 언어 복원 포함) 라벨·옵션·결과를 현재 언어로 다시 그림
+    function applyFinderLang() {
+      finderLabels.forEach(([el, ko]) => (el.textContent = trLabel(ko)));
+      finderPlaceholders.forEach(([el, ko]) => el.setAttribute("placeholder", tr(ko)));
+      fType.querySelectorAll("option").forEach((opt) => (opt.textContent = tr(opt.value || "전체")));
+      renderResults();
+    }
+    window.addEventListener("i18n:applied", applyFinderLang);
 
 // 문의 폼 (실제 전송 없이 클라이언트에서만 확인 메시지 표시)
     const inquiryForm = document.getElementById("inquiryForm");

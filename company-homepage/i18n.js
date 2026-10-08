@@ -16,8 +16,12 @@
   // 각 버튼 라벨("한국어/English/中文/日本語")은 그 자체로 다국어 혼합 텍스트라 "한국어"라는
   // 글자 때문에 번역 대상 리프로 잡혀 el.innerHTML이 통째로 교체되면, 거기 달려 있던 클릭
   // 이벤트 리스너가 새로 파싱된 버튼 노드에는 없어서 그 뒤로 언어 전환 버튼이 완전히 먹통이 됩니다.
+  // 규격 검색기(.finder-fields 입력칸, #fTypeNote, #finderResults)도 같은 이유로 제외합니다 — 칸을 감싼
+  // div가 리프로 잡혀 innerHTML이 교체되면 select·input 요소가 새로 만들어져 검색 이벤트가 끊깁니다.
+  // 이 영역은 검색기 스크립트가 I18N.t()와 'i18n:applied' 이벤트로 직접 번역합니다.
+  var NO_TRANSLATE_SELECTOR = '#langSelect, #mobileLangOptions, .finder-fields, #fTypeNote, #finderResults';
   function inNoTranslateZone(el) {
-    return !!(el.closest && el.closest('#langSelect, #mobileLangOptions'));
+    return !!(el.closest && el.closest(NO_TRANSLATE_SELECTOR));
   }
 
   var dict = { en: {}, ja: {}, zh: {} };
@@ -55,7 +59,7 @@
     (function walk(el) {
       if (!el || el.nodeType !== 1) return;
       if (SKIP_TAGS[el.tagName]) return;
-      if (el.id === 'langSelect' || el.id === 'mobileLangOptions') return;
+      if (el.matches && el.matches(NO_TRANSLATE_SELECTOR)) return;
       if (isLeaf(el)) {
         leaves.push(el);
         return;
@@ -158,7 +162,7 @@
     if (!lk) return;
     var nodes = root.querySelectorAll('.finder-tip, .spec-toolbar-btn, .series-count, [id$="Count"], [id$="ToggleAll"]');
     nodes.forEach(function (node) {
-      if (node.closest('tbody')) return;
+      if (node.closest('tbody') || inNoTranslateZone(node)) return;
       var t = node.textContent;
       if (!t || !hasKorean(t)) return;
       var out = t;
@@ -222,6 +226,9 @@
     observer.observe(document.body, { childList: true, subtree: true, characterData: true });
   }
 
+  var initialized = false;
+  var pendingRun = null; // init() 전에 들어온 apply() 요청(가장 최신 것 하나만 보관)
+
   function init() {
     collect(document.body);
     cacheOriginals();
@@ -230,6 +237,15 @@
     // 여기서 또 apply()를 호출하면, 그 사이 사용자가 다른 언어를 클릭했을 때 이 늦게 끝나는 호출이
     // 오래된 값으로 덮어써버리는 경합이 생길 수 있어 제거했습니다. 사전은 미리 받아만 둡니다.
     loadDicts();
+    initialized = true;
+    // common.js는 <body> 끝에서 DOMContentLoaded보다 먼저 setLanguage()를 부르므로, 그 시점엔 아직
+    // 번역 대상(leaves)이 수집되기 전이라 적용할 게 없습니다 — 미뤄둔 요청을 여기서 실행해야
+    // 다른 페이지에서 고른 언어가 새 페이지에도 실제로 반영됩니다.
+    if (pendingRun) {
+      var r = pendingRun;
+      pendingRun = null;
+      r();
+    }
   }
 
   function apply(code, onApplied) {
@@ -243,15 +259,28 @@
       applyOnce(code);
       sweepDynamic(document.body);
       if (onApplied) onApplied(code);
+      // 스크립트가 직접 그리는 영역(규격 검색기 등)이 현재 언어로 다시 그릴 수 있도록 알림
+      try { window.dispatchEvent(new CustomEvent('i18n:applied', { detail: code })); } catch (e) {}
     }
-    if (pageDictLoaded) {
+    if (!initialized) {
+      pendingRun = run;
+    } else if (pageDictLoaded) {
       run();
     } else {
       loadDicts().then(run);
     }
   }
 
-  window.I18N = { init: init, apply: apply, getSaved: function () {
+  // 한국어 문구 하나를 현재 언어로 번역(사전에 없거나 한국어 모드면 원문 그대로) — 스크립트가 만드는 UI용
+  function t(ko) {
+    var lk = langKey(currentLang);
+    if (!lk || ko == null) return ko;
+    loadDicts();
+    var tr = dict[lk][normKey(String(ko))];
+    return tr !== undefined ? tr : ko;
+  }
+
+  window.I18N = { init: init, apply: apply, t: t, getSaved: function () {
     try { return localStorage.getItem('siteLang') || 'KOR'; } catch (e) { return 'KOR'; }
   } };
 
