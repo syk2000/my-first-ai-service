@@ -26,6 +26,7 @@
   var originalAttr = new Map(); // element -> { attrName: originalValue }
   var leaves = [];
   var attrEls = [];
+  var originalTitle = null; // 브라우저 탭 제목(<title>) 원문 — <head>에 있어 leaves 수집 대상이 아니라 따로 보관
   var currentLang = 'KOR';
   var applying = false;
   var pageDictLoaded = false;
@@ -78,6 +79,7 @@
   }
 
   function cacheOriginals() {
+    if (originalTitle === null) originalTitle = document.title;
     leaves.forEach(function (el) {
       if (!originalHTML.has(el)) originalHTML.set(el, el.innerHTML);
     });
@@ -134,6 +136,10 @@
           // 개별 속성 치환 실패 격리
         }
       });
+      if (originalTitle) {
+        var titleTr = lk ? dict[lk][normKey(originalTitle)] : undefined;
+        document.title = titleTr !== undefined ? titleTr : originalTitle;
+      }
     } finally {
       // 루프 중 예외가 나더라도 applying 플래그가 영구히 true로 멈추지 않도록 보장
       applying = false;
@@ -142,9 +148,9 @@
 
   // 동적으로 생성되는 짧은 한국어 UI 조각(검색 결과 건수, 전체 펼치기/접기 버튼 등) 보조 치환
   var UNIT_WORDS = {
-    en: { '건': ' items', '개 시리즈': ' series', '표시 중': 'shown', '전체 펼치기': 'Expand all', '전체 접기': 'Collapse all' },
-    ja: { '건': '件', '개 시리즈': 'シリーズ', '표시 중': '表示中', '전체 펼치기': 'すべて展開', '전체 접기': 'すべて折りたたむ' },
-    zh: { '건': '个', '개 시리즈': '个系列', '표시 중': '显示中', '전체 펼치기': '全部展开', '전체 접기': '全部折叠' }
+    en: { '건': ' items', '개 시리즈': ' series', '개 그룹': ' groups', '개 d·D 조합': ' d·D combinations', '표시 중': 'shown', '전체 펼치기': 'Expand all', '전체 접기': 'Collapse all' },
+    ja: { '건': '件', '개 시리즈': 'シリーズ', '개 그룹': 'グループ', '개 d·D 조합': '通りのd·D組合せ', '표시 중': '表示中', '전체 펼치기': 'すべて展開', '전체 접기': 'すべて折りたたむ' },
+    zh: { '건': '个', '개 시리즈': '个系列', '개 그룹': '个组', '개 d·D 조합': '种d·D组合', '표시 중': '显示中', '전체 펼치기': '全部展开', '전체 접기': '全部折叠' }
   };
 
   function sweepDynamic(root) {
@@ -159,6 +165,8 @@
       out = out.replace(/전체\s*펼치기/g, UNIT_WORDS[lk]['전체 펼치기']);
       out = out.replace(/전체\s*접기/g, UNIT_WORDS[lk]['전체 접기']);
       out = out.replace(/(\d+)\s*개\s*시리즈/g, '$1' + UNIT_WORDS[lk]['개 시리즈']);
+      out = out.replace(/(\d+)\s*개\s*그룹/g, '$1' + UNIT_WORDS[lk]['개 그룹']);
+      out = out.replace(/(\d+)\s*개\s*d·D\s*조합/g, '$1' + UNIT_WORDS[lk]['개 d·D 조합']);
       out = out.replace(/표시\s*중/g, UNIT_WORDS[lk]['표시 중']);
       out = out.replace(/(\d+)\s*건/g, '$1' + UNIT_WORDS[lk]['건']);
       if (out !== t) node.textContent = out;
