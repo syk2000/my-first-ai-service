@@ -169,10 +169,10 @@
       </nav>
     </div>
   </footer>
-<script src="assets/spec-data.js"></script>
-<script src="i18n/common.dict.js?v=20261008c"></script>
-<script src="i18n/pages-bundle.dict.js?v=20261008c"></script>
-<script src="i18n.js?v=20261008c"></script>
+<script src="assets/spec-data.js?v=20261008d"></script>
+<script src="i18n/common.dict.js?v=20261008d"></script>
+<script src="i18n/pages-bundle.dict.js?v=20261008d"></script>
+<script src="i18n.js?v=20261008d"></script>
 <script src="common.js?v=20261006b"></script>
 <script>
     const MAX_RESULTS = 200;
@@ -229,6 +229,12 @@
         note: "오일게이지·오일캡은 나사 호칭 기준이라 d는 비워두고 D(외경)·H(전체길이)로 검색하는 걸 권장합니다.",
       },
       "오일레스/DU": { d: "내경 d", D: "외경 D", h: "길이 H" },
+      "접시 스프링": { d: "내경 d", D: "외경 D", h: "두께 t" },
+      "금형 스프링": { d: "내경 d", D: "외경 D", h: "자유장 L" },
+      "볼 플런저": {
+        d: "나사 호칭 d", D: "치수 D", h: "치수 H",
+        note: "볼 플런저는 나사 호칭 지름(M8 → 8)을 d에 입력하세요. 국산 BP 시리즈는 D=B·H=D 치수, 독일 Halder 2203은 D=몸통 외경 d2·H=전장 l 기준입니다.",
+      },
       "하우징(유닛 케이스)": {
         d: "축경(기준값) d", D: "주요 치수 D", h: "전장/두께 H",
         note: "하우징은 한 모델이 여러 축경을 수용하는 경우가 많아, d는 형번의 베어링 보어 코드로 환산한 대표값입니다. D·H는 모델별로 외경·사각변·중심높이 등 각기 다른 치수일 수 있으니 결과의 제품유형을 함께 확인해주세요.",
