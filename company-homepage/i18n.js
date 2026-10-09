@@ -192,13 +192,25 @@
     });
   }
 
+  // 번역문 속 SVG 도형 태그(<line …> 등)가 자기닫힘(/>) 없이 들어오면, HTML 파서가 그 뒤의 도형·글자를
+  // 전부 그 태그의 자식으로 넣어버려 화살표·라벨이 화면에서 사라집니다 — 사전을 읽을 때 자기닫힘으로 보정
+  var SVG_SHAPE_RE = /<(circle|line|path|rect|image|polyline|polygon|ellipse|use|stop)(\s[^<>]*?)?(\/?)>(\s*<\/\1>)?/gi;
+  function fixSvg(v) {
+    if (typeof v !== 'string' || v.indexOf('<svg') < 0) return v;
+    return v.replace(/<svg[\s\S]*?<\/svg>/gi, function (svg) {
+      return svg.replace(SVG_SHAPE_RE, function (all, t, attrs, slash, closer) {
+        return closer ? all : '<' + t + (attrs || '') + '/>';
+      });
+    });
+  }
+
   function mergeDict(target, src) {
     if (!src) return;
     ['en', 'ja', 'zh'].forEach(function (lk) {
       if (!src[lk]) return;
       // 사전 키도 normKey로 정규화해서 저장 — 런타임에 읽는 ko 키와 동일한 정규화를 거치도록 맞춥니다.
       Object.keys(src[lk]).forEach(function (k) {
-        target[lk][normKey(k)] = src[lk][k];
+        target[lk][normKey(k)] = fixSvg(src[lk][k]);
       });
     });
   }
