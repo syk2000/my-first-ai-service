@@ -42,7 +42,7 @@
       });
     });
 
-    // 언어 선택 (UI만 동작 · 실제 번역 콘텐츠는 추후 연동)
+    // 언어 선택 — 실제 번역은 i18n.js(window.I18N)가 적용하고, 여기서는 드롭다운 UI와 선택 저장만 담당
     const langSelect = document.getElementById("langSelect");
     const langSelectBtn = document.getElementById("langSelectBtn");
     const langSelectLabel = document.getElementById("langSelectLabel");

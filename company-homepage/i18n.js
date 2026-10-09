@@ -156,6 +156,8 @@
         var titleTr = lk ? dict[lk][normKey(originalTitle)] : undefined;
         document.title = titleTr !== undefined ? titleTr : originalTitle;
       }
+      // 스크린리더·브라우저 자동번역·검색엔진이 현재 언어를 알 수 있도록 <html lang>도 함께 변경
+      document.documentElement.setAttribute('lang', lk || 'ko');
     } finally {
       // 루프 중 예외가 나더라도 applying 플래그가 영구히 true로 멈추지 않도록 보장
       applying = false;
