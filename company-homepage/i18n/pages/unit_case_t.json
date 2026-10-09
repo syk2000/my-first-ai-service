@@ -27,7 +27,9 @@
       "UCT2 시리즈 (소형)<span class=\"series-count\">15건</span>": "UCT2 Series (Small)<span class=\"series-count\">15 items</span>",
       "UCT3 시리즈 (중형)<span class=\"series-count\">21건</span>": "UCT3 Series (Medium)<span class=\"series-count\">21 items</span>",
       "단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)": "Unit: mm (Inch-based sub-specifications in the shaft diameter column are given alongside their representative mm values)",
-      "유닛 케이스 T형 (테이크업) | [회사명] 베어링": "Unit Housing Type T (Take-Up) | [Company Name] Bearing"
+      "유닛 케이스 T형 (테이크업) | [회사명] 베어링": "Unit Housing Type T (Take-Up) | [Company Name] Bearing",
+      "형번 / 축경 검색": "Search by Model / Shaft Dia.",
+      "전체 펼치기": "Expand All"
     },
     "ja": {
       "\n        <svg class=\"logo-mark\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">\n          <circle cx=\"20\" cy=\"20\" r=\"17\" stroke=\"#c98a2b\" stroke-width=\"2.5\"></circle>\n          <circle cx=\"20\" cy=\"20\" r=\"8.5\" stroke=\"#4f7fb3\" stroke-width=\"2.5\"></circle>\n          <circle cx=\"20\" cy=\"7\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"30.5\" cy=\"14\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"30.5\" cy=\"26\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"20\" cy=\"33\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"9.5\" cy=\"26\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"9.5\" cy=\"14\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n        </svg>\n        <span class=\"company-name\">\n          [회사명] 베어링\n          <span class=\"sub\">BEARING DISTRIBUTION</span>\n        </span>\n      ": "\n        <svg class=\"logo-mark\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">\n          <circle cx=\"20\" cy=\"20\" r=\"17\" stroke=\"#c98a2b\" stroke-width=\"2.5\"></circle>\n          <circle cx=\"20\" cy=\"20\" r=\"8.5\" stroke=\"#4f7fb3\" stroke-width=\"2.5\"></circle>\n          <circle cx=\"20\" cy=\"7\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"30.5\" cy=\"14\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"30.5\" cy=\"26\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"20\" cy=\"33\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"9.5\" cy=\"26\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"9.5\" cy=\"14\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n        </svg>\n        <span class=\"company-name\">\n          [会社名] ベアリング\n          <span class=\"sub\">ベアリング販売</span>\n        </span>\n      ",
@@ -56,7 +58,9 @@
       "UCT2 시리즈 (소형)<span class=\"series-count\">15건</span>": "UCT2シリーズ(小型)<span class=\"series-count\">15件</span>",
       "UCT3 시리즈 (중형)<span class=\"series-count\">21건</span>": "UCT3シリーズ(中型)<span class=\"series-count\">21件</span>",
       "단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)": "単位: mm(軸径欄のインチ系サブ規格は代表mm値を併記)",
-      "유닛 케이스 T형 (테이크업) | [회사명] 베어링": "ユニットケース T形（テイクアップ） | [会社名] ベアリング"
+      "유닛 케이스 T형 (테이크업) | [회사명] 베어링": "ユニットケース T形（テイクアップ） | [会社名] ベアリング",
+      "형번 / 축경 검색": "形番 / 軸径検索",
+      "전체 펼치기": "すべて展開"
     },
     "zh": {
       "\n        <svg class=\"logo-mark\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">\n          <circle cx=\"20\" cy=\"20\" r=\"17\" stroke=\"#c98a2b\" stroke-width=\"2.5\"></circle>\n          <circle cx=\"20\" cy=\"20\" r=\"8.5\" stroke=\"#4f7fb3\" stroke-width=\"2.5\"></circle>\n          <circle cx=\"20\" cy=\"7\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"30.5\" cy=\"14\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"30.5\" cy=\"26\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"20\" cy=\"33\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"9.5\" cy=\"26\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"9.5\" cy=\"14\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n        </svg>\n        <span class=\"company-name\">\n          [회사명] 베어링\n          <span class=\"sub\">BEARING DISTRIBUTION</span>\n        </span>\n      ": "\n        <svg class=\"logo-mark\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">\n          <circle cx=\"20\" cy=\"20\" r=\"17\" stroke=\"#c98a2b\" stroke-width=\"2.5\"></circle>\n          <circle cx=\"20\" cy=\"20\" r=\"8.5\" stroke=\"#4f7fb3\" stroke-width=\"2.5\"></circle>\n          <circle cx=\"20\" cy=\"7\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"30.5\" cy=\"14\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"30.5\" cy=\"26\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"20\" cy=\"33\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"9.5\" cy=\"26\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n          <circle cx=\"9.5\" cy=\"14\" r=\"2.6\" fill=\"#eef2f6\"></circle>\n        </svg>\n        <span class=\"company-name\">\n          [公司名] 轴承\n          <span class=\"sub\">轴承经销</span>\n        </span>\n      ",
@@ -85,7 +89,9 @@
       "UCT2 시리즈 (소형)<span class=\"series-count\">15건</span>": "UCT2系列(小型)<span class=\"series-count\">15项</span>",
       "UCT3 시리즈 (중형)<span class=\"series-count\">21건</span>": "UCT3系列(中型)<span class=\"series-count\">21项</span>",
       "단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)": "单位: mm(轴径栏中的英制子规格以代表性mm值并列标注)",
-      "유닛 케이스 T형 (테이크업) | [회사명] 베어링": "轴承座 T型（张紧座） | [公司名] 轴承"
+      "유닛 케이스 T형 (테이크업) | [회사명] 베어링": "轴承座 T型（张紧座） | [公司名] 轴承",
+      "형번 / 축경 검색": "型号 / 轴径搜索",
+      "전체 펼치기": "全部展开"
     }
   },
   "attrs": {

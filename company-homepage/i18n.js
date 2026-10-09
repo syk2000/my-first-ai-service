@@ -30,6 +30,8 @@
   var originalAttr = new Map(); // element -> { attrName: originalValue }
   var leaves = [];
   var attrEls = [];
+  var lastSet = new Map(); // element -> 이 엔진이 마지막으로 넣은 innerHTML(브라우저 직렬화 기준)
+  var sweptText = new Map(); // node -> { ko, out } sweepDynamic이 바꾼 동적 문구(한국어 복원용)
   var originalTitle = null; // 브라우저 탭 제목(<title>) 원문 — <head>에 있어 leaves 수집 대상이 아니라 따로 보관
   var currentLang = 'KOR';
   var applying = false;
@@ -52,6 +54,10 @@
     for (var i = 0; i < el.children.length; i++) {
       if (BLOCK_TAGS[el.children[i].tagName]) return false;
     }
+    // 입력칸·버튼을 품은 요소(검색칸 .field, 펼치기 툴바, 탭 버튼 줄, 문의 폼 등)는 통째로 innerHTML을
+    // 바꾸면 input/button이 새로 만들어져 페이지 스크립트가 걸어둔 이벤트가 끊깁니다 — 리프로 잡지 않고
+    // 안쪽(label, 버튼 글자 등)으로 내려가 텍스트만 번역합니다.
+    if (el.querySelector && el.querySelector('input, select, textarea, button')) return false;
     return hasKorean(el.textContent);
   }
 
@@ -106,19 +112,25 @@
     var lk = langKey(code);
     applying = true;
     try {
+      // 지난번 sweepDynamic이 바꿔둔 동적 문구(건수 등)는 먼저 한국어로 되돌림 — 새 언어로는 run()에서 다시 치환
+      sweptText.forEach(function (rec, node) {
+        if (node.textContent === rec.out) node.textContent = rec.ko;
+      });
+      sweptText.clear();
       leaves.forEach(function (el) {
         try {
           var ko = originalHTML.get(el);
           if (ko === undefined) return;
-          if (!lk) {
-            if (el.innerHTML !== ko) el.innerHTML = ko;
-            return;
-          }
-          var tr = dict[lk][normKey(ko)];
-          if (tr !== undefined && el.innerHTML !== tr) {
-            el.innerHTML = tr;
-          } else if (tr === undefined && el.innerHTML !== ko) {
-            el.innerHTML = ko; // 번역 없으면 한국어 원문 유지
+          var cur = el.innerHTML;
+          // 이 엔진이 마지막으로 넣어둔 내용(또는 원문) 그대로일 때만 손댐 — 페이지 스크립트가 그 뒤에 바꾼
+          // 내용(검색 건수, 펼치기/접기 버튼 상태 등)을 옛 원문으로 덮어쓰지 않기 위해
+          var owned = lastSet.has(el) ? cur === lastSet.get(el) : cur === ko;
+          if (!owned) return;
+          var tr = lk ? dict[lk][normKey(ko)] : undefined;
+          var target = tr !== undefined ? tr : ko; // 번역 없으면 한국어 원문 유지
+          if (cur !== target) {
+            el.innerHTML = target;
+            lastSet.set(el, el.innerHTML);
           }
         } catch (e) {
           // 개별 요소 치환 실패가 나머지 요소 전체를 막지 않도록 격리
@@ -173,7 +185,10 @@
       out = out.replace(/(\d+)\s*개\s*d·D\s*조합/g, '$1' + UNIT_WORDS[lk]['개 d·D 조합']);
       out = out.replace(/표시\s*중/g, UNIT_WORDS[lk]['표시 중']);
       out = out.replace(/(\d+)\s*건/g, '$1' + UNIT_WORDS[lk]['건']);
-      if (out !== t) node.textContent = out;
+      if (out !== t) {
+        node.textContent = out;
+        sweptText.set(node, { ko: t, out: node.textContent });
+      }
     });
   }
 
