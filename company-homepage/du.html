@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -111,7 +112,7 @@
         <p class="diagram-caption">당사 정식 규격 도면</p>
         <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
           <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
-            <img src="assets/du_diagram.png" alt="DU 드라이 베어링 도면" style="height: 200px; width: auto; max-width: 100%; object-fit: contain;" />
+            <img loading="lazy" src="assets/du_diagram.webp" alt="DU 드라이 베어링 도면" style="height: 200px; width: auto; max-width: 100%; object-fit: contain;" />
             <p class="diagram-legend">↑ 표준 드라이 메탈 · 모서리 가공부 · 단면도 · 하우징 공차<br /><span style="color: var(--text-faint);">&phi;d=안지름(샤프트 h7) · &phi;D=바깥지름 · L=길이 · 하우징 H7</span></p>
           </div>
         </div>
@@ -222,14 +223,14 @@
         <p style="font-size: 13.5px;">아래 표는 원본 규격표를 그대로 스캔한 이미지입니다. d=3~160까지 생산하며, 빈 칸은 해당 길이의 생산품이 없음을 의미합니다.</p>
       </div>
       <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px; margin-bottom: 20px; overflow-x: auto;">
-        <img src="assets/du_table1.png" alt="DU 드라이 베어링 규격표 1 (BUSH Length 3~12)" style="width: 100%; max-width: 1100px; display: block; margin: 0 auto;" />
+        <img loading="lazy" src="assets/du_table1.webp" alt="DU 드라이 베어링 규격표 1 (BUSH Length 3~12)" style="width: 100%; max-width: 1100px; display: block; margin: 0 auto;" />
       </div>
 
       <div class="section-head" style="margin-top: 8px;">
         <h3 style="font-size: 18px; margin: 0 0 8px;">표준 드라이 매탈 측정 (BUSH Length 15~100)</h3>
       </div>
       <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px; margin-bottom: 20px; overflow-x: auto;">
-        <img src="assets/du_table2.png" alt="DU 드라이 베어링 규격표 2 (BUSH Length 15~100) 및 SK DRY BEARING PLATE" style="width: 100%; max-width: 1100px; display: block; margin: 0 auto;" />
+        <img loading="lazy" src="assets/du_table2.webp" alt="DU 드라이 베어링 규격표 2 (BUSH Length 15~100) 및 SK DRY BEARING PLATE" style="width: 100%; max-width: 1100px; display: block; margin: 0 auto;" />
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 코드 표기 예) DU1006 = d10, L6. SK DRY BEARING PLATE는 별매 판형 드라이 베어링 소재입니다.</p>
 
@@ -262,10 +263,10 @@
     </div>
   </footer>
 
-<script src="i18n/common.dict.js?v=20261010b"></script>
-<script src="i18n/pages-bundle.dict.js?v=20261010b"></script>
-<script src="i18n.js?v=20261010a"></script>
-<script src="common.js?v=20261010a"></script>
+<script src="i18n/common.dict.js?v=20261010c"></script>
+<script src="i18n/pages/du.dict.js?v=20261010c"></script>
+<script src="i18n.js?v=20261010c"></script>
+<script src="common.js?v=20261010c"></script>
 <script>
   (function () {
     var input = document.getElementById('duFilter');
