@@ -1098,7 +1098,7 @@
   /* 세로 비율이 큰 로고(KOYO·FAG·SJA·EZO)는 높이를 더 허용해 다른 로고와 크기를 맞춤 */
   .brand-tile-logo .logo-plate .brand-logo-img.logo-tall { max-height: 46px; }
   .partner-slot .logo-plate .brand-logo-img.logo-tall { max-height: 40px; }
-  .brand-chip .logo-plate .chip-logo.logo-tall { max-height: 30px; }
+  .brand-chip .chip-logo.logo-tall { max-height: 32px; }
 
   .brand-tile-logo .brand-badge {
     font-size: 16px;
