@@ -471,7 +471,8 @@
     background: var(--accent-soft);
     border: 1px solid var(--border);
     border-radius: 999px;
-    padding: 6px 14px;
+    height: 42px;
+    padding: 4px 6px;
     text-decoration: none;
     transition: border-color 0.15s ease;
   }
@@ -482,23 +483,32 @@
   }
 
   .brand-chip .brand-badge {
-    font-size: 13px;
-    padding: 2px 10px;
+    font-size: 16px;
+    height: 100%;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 999px;
   }
 
+  /* 흰 판 없는 로고도 타원 양옆 여백을 맞춤 */
+  .brand-chip > .chip-logo { margin: 0 10px; }
+
+  /* 로고가 타원(칩) 안을 꽉 채우도록 — 흰 판도 칩과 같은 타원형 */
   .brand-chip .chip-logo {
-    max-height: 16px;
-    max-width: 100px;
+    max-height: 26px;
+    max-width: 128px;
     object-fit: contain;
     display: block;
   }
 
   .brand-chip .logo-plate {
-    padding: 2px 8px;
+    height: 100%;
+    padding: 3px 14px;
+    border-radius: 999px;
   }
 
   .brand-chip .logo-plate .chip-logo {
-    max-height: 13px;
+    max-height: 24px;
   }
 
   .hero-actions {
@@ -1088,7 +1098,7 @@
   /* 세로 비율이 큰 로고(KOYO·FAG·SJA·EZO)는 높이를 더 허용해 다른 로고와 크기를 맞춤 */
   .brand-tile-logo .logo-plate .brand-logo-img.logo-tall { max-height: 46px; }
   .partner-slot .logo-plate .brand-logo-img.logo-tall { max-height: 40px; }
-  .brand-chip .logo-plate .chip-logo.logo-tall { max-height: 22px; }
+  .brand-chip .logo-plate .chip-logo.logo-tall { max-height: 30px; }
 
   .brand-tile-logo .brand-badge {
     font-size: 16px;
