@@ -1424,6 +1424,41 @@
     text-decoration: none;
   }
   .recent-item a:hover { color: var(--accent); }
+  .recent-item a { font-family: var(--font-mono); font-weight: 600; }
+  .recent-kind {
+    margin-left: 6px;
+    font-family: var(--font-body);
+    font-size: 11.5px;
+    font-weight: 400;
+    color: var(--text-faint);
+  }
+
+  /* 규격표 행 클릭 → 최근 본 품번 기록 */
+  table.spec-table tbody td { cursor: pointer; }
+  table.spec-table tbody tr:hover td { background: rgba(79, 127, 179, 0.08); }
+  table.spec-table tbody tr.row-picked td { background: rgba(201, 138, 43, 0.18); }
+
+  .site-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translate(-50%, 12px);
+    background: var(--surface);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-size: 13.5px;
+    padding: 10px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 1000;
+  }
+  .site-toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
   .recent-add {
     background: none;
     border: 0;

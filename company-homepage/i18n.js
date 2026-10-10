@@ -18,7 +18,7 @@
   // 규격 검색기(.finder-fields 입력칸, #fTypeNote, #finderResults)도 같은 이유로 제외합니다 — 칸을 감싼
   // div가 리프로 잡혀 innerHTML이 교체되면 select·input 요소가 새로 만들어져 검색 이벤트가 끊깁니다.
   // 이 영역은 검색기 스크립트가 I18N.t()와 'i18n:applied' 이벤트로 직접 번역합니다.
-  var NO_TRANSLATE_SELECTOR = '#langSelect, #mobileLangOptions, .finder-fields, #fTypeNote, #finderResults, #recentViews';
+  var NO_TRANSLATE_SELECTOR = '#langSelect, #mobileLangOptions, .finder-fields, #fTypeNote, #finderResults, #recentViews, #siteToast';
   function inNoTranslateZone(el) {
     return !!(el.closest && el.closest(NO_TRANSLATE_SELECTOR));
   }
