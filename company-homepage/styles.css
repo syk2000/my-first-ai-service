@@ -1095,10 +1095,32 @@
     max-width: 160px;
   }
 
-  /* 세로 비율이 큰 로고(KOYO·FAG·SJA·EZO)는 높이를 더 허용해 다른 로고와 크기를 맞춤 */
-  .brand-tile-logo .brand-logo-img.logo-tall,
-  .brand-tile-logo .logo-plate .brand-logo-img.logo-tall { max-height: 46px; }
+  /* 세로 비율이 큰 로고(FAG·SJA·EZO 등)는 띠·칩에서 높이를 더 허용해 다른 로고와 크기를 맞춤 */
   .partner-slot .logo-plate .brand-logo-img.logo-tall { max-height: 40px; }
+
+  /* 취급 브랜드 카드: 로고마다 비율에 맞춘 높이(lh-NN)로 보이는 면적을 고르게 —
+     가로로 긴 로고는 낮게, 정사각형에 가까운 로고는 높게 */
+  .brand-tile-logo .brand-logo-img[class*="lh-"] {
+    width: auto;
+    max-width: 190px;
+    max-height: none;
+  }
+  .brand-tile-logo .lh-26 { height: 26px; }
+  .brand-tile-logo .lh-28 { height: 28px; }
+  .brand-tile-logo .lh-30 { height: 30px; }
+  .brand-tile-logo .lh-32 { height: 32px; }
+  .brand-tile-logo .lh-34 { height: 34px; }
+  .brand-tile-logo .lh-36 { height: 36px; }
+  .brand-tile-logo .lh-38 { height: 38px; }
+  .brand-tile-logo .lh-40 { height: 40px; }
+  .brand-tile-logo .lh-42 { height: 42px; }
+  .brand-tile-logo .lh-44 { height: 44px; }
+  .brand-tile-logo .lh-46 { height: 46px; }
+  .brand-tile-logo .lh-48 { height: 48px; }
+  .brand-tile-logo .lh-50 { height: 50px; }
+  .brand-tile-logo .lh-54 { height: 54px; }
+  .brand-tile-logo .lh-58 { height: 58px; }
+  .brand-tile-logo .lh-60 { height: 60px; }
   .brand-chip .chip-logo.logo-tall { max-height: 32px; }
 
   .brand-tile-logo .brand-badge {
