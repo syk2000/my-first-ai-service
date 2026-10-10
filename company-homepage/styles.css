@@ -1082,7 +1082,13 @@
 
   .brand-tile-logo .logo-plate .brand-logo-img {
     max-height: 26px;
+    max-width: 160px;
   }
+
+  /* 세로 비율이 큰 로고(KOYO·FAG·SJA·EZO)는 높이를 더 허용해 다른 로고와 크기를 맞춤 */
+  .brand-tile-logo .logo-plate .brand-logo-img.logo-tall { max-height: 46px; }
+  .partner-slot .logo-plate .brand-logo-img.logo-tall { max-height: 40px; }
+  .brand-chip .logo-plate .chip-logo.logo-tall { max-height: 22px; }
 
   .brand-tile-logo .brand-badge {
     font-size: 16px;
@@ -1377,6 +1383,108 @@
     min-height: 18px;
   }
   .form-status:empty { display: none; }
+
+  /* 개인정보 수집 및 이용 동의 (견적문의 폼) — 체크 한 줄 + 내용 보기 팝업 */
+  .consent-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .consent-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13.5px;
+    color: var(--text);
+    cursor: pointer;
+  }
+  .consent-check .req {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .consent-view {
+    flex: none;
+    background: none;
+    border: 0;
+    padding: 2px 0;
+    color: var(--text-sub);
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+  .consent-view:hover { color: var(--accent); }
+
+  .consent-dialog {
+    width: min(560px, calc(100vw - 32px));
+    background: var(--surface);
+    color: var(--text-sub);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px 30px 26px;
+    font-size: 13.5px;
+  }
+  .consent-dialog::backdrop { background: rgba(4, 8, 14, 0.7); }
+  .consent-dialog-head {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--text-faint);
+  }
+  .consent-dialog-head h3 {
+    margin: 6px 0 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .consent-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    background: none;
+    border: 0;
+    color: var(--text-faint);
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .consent-close:hover { color: var(--text); }
+  .consent-intro { margin: 18px 0 16px; line-height: 1.6; }
+  .consent-grid { border-top: 1px solid var(--text-faint); }
+  .consent-grid > div {
+    display: flex;
+    gap: 16px;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.55;
+  }
+  .consent-label {
+    flex: 0 0 120px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .consent-note {
+    margin: 18px 0 0;
+    padding: 14px 16px;
+    background: var(--bg);
+    border-radius: var(--radius-sm);
+    color: var(--text-faint);
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .consent-ok {
+    width: 100%;
+    margin-top: 22px;
+    justify-content: center;
+  }
+  .inquiry-form .consent-check input {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    flex: none;
+    margin-top: 2px;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
 
   /* 최근 본 제품 (견적문의 폼 하단) */
   .recent-views {
