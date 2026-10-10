@@ -102,6 +102,34 @@
       if (e.key === "Escape") closeLangMenu();
     });
 
+    // 최근 본 제품 기록 — 제품 페이지를 볼 때마다 이름을 남겨 견적문의(board.html)에서 보여줍니다.
+    // sessionStorage를 쓰므로 홈페이지(탭)를 닫으면 기록이 자동으로 초기화됩니다.
+    const RECENT_KEY = "recentProducts";
+    const NON_PRODUCT_PAGES = ["", "index", "main", "introduce", "about-product", "brands", "board", "notice", "catalog", "search-product"];
+    const pageFile = location.pathname.split("/").pop();
+    const shortName = (title) => title.split(" | ")[0].trim();
+
+    function readRecent() {
+      try { return JSON.parse(sessionStorage.getItem(RECENT_KEY)) || []; } catch (e) { return []; }
+    }
+    function writeRecent(list) {
+      try { sessionStorage.setItem(RECENT_KEY, JSON.stringify(list)); } catch (e) {}
+    }
+
+    if (!NON_PRODUCT_PAGES.includes(pageFile.replace(/\.html?$/, ""))) {
+      // 이 시점엔 번역 적용 전이라 제목이 항상 한국어 — 다른 언어 이름은 페이지 사전에서 함께 저장
+      const names = { KOR: shortName(document.title) };
+      const pageText = window.I18N_PAGE && window.I18N_PAGE.text;
+      const LANG_KEYS = { ENG: "en", JPN: "ja", CHN: "zh" };
+      Object.keys(LANG_KEYS).forEach((code) => {
+        const tr = pageText && pageText[LANG_KEYS[code]] && pageText[LANG_KEYS[code]][document.title];
+        if (tr) names[code] = shortName(tr);
+      });
+      const list = readRecent().filter((r) => r.u !== pageFile);
+      list.unshift({ u: pageFile, n: names });
+      writeRecent(list.slice(0, 12));
+    }
+
     // 우클릭 / 드래그 방지 (참고: 규격 검색 결과표·입력창은 CSS에서 선택·복사 예외 처리됨)
     document.addEventListener("contextmenu", (e) => e.preventDefault());
     document.addEventListener("dragstart", (e) => {

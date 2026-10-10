@@ -1376,6 +1376,69 @@
     color: var(--accent);
     min-height: 18px;
   }
+  .form-status:empty { display: none; }
+
+  /* 최근 본 제품 (견적문의 폼 하단) */
+  .recent-views {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+  .recent-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .recent-head h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .recent-clear {
+    background: none;
+    border: 0;
+    color: var(--text-faint);
+    font-size: 12.5px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .recent-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .recent-item {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+  }
+  .recent-item a {
+    padding: 6px 4px 6px 12px;
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .recent-item a:hover { color: var(--accent); }
+  .recent-add {
+    background: none;
+    border: 0;
+    color: var(--accent);
+    font-size: 16px;
+    line-height: 1;
+    padding: 4px 11px 4px 6px;
+    cursor: pointer;
+  }
+  .recent-empty,
+  .recent-hint {
+    font-size: 12.5px;
+    color: var(--text-faint);
+  }
+  .recent-hint { margin-top: 10px; }
 
   /* ---------- Footer ---------- */
 

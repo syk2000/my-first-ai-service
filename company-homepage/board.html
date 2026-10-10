@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261010d">
 </head>
 <body>
 
@@ -150,6 +150,7 @@
         </div>
         <button type="submit" class="btn btn-accent" style="align-self: flex-start;">문의 보내기</button>
         <p class="form-status" id="formStatus"></p>
+        <div class="recent-views" id="recentViews"></div>
       </form>
     </div>
   </section>
@@ -169,10 +170,10 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261010c"></script>
-<script src="i18n/pages/board.dict.js?v=20261010c"></script>
-<script src="i18n.js?v=20261010c"></script>
-<script src="common.js?v=20261010c"></script>
+<script src="i18n/common.dict.js?v=20261010d"></script>
+<script src="i18n/pages/board.dict.js?v=20261010d"></script>
+<script src="i18n.js?v=20261010d"></script>
+<script src="common.js?v=20261010d"></script>
 <script>
     // 문의 폼 (실제 전송 없이 클라이언트에서만 확인 메시지 표시)
     const inquiryForm = document.getElementById("inquiryForm");
@@ -183,7 +184,62 @@
       formStatus.textContent = "문의가 접수되었습니다. (지금은 예시 화면이라 실제로 전송되지는 않습니다)";
       inquiryForm.reset();
     });
-  
+
+    // 최근 본 제품 (common.js가 sessionStorage에 기록 — 홈페이지를 닫으면 초기화)
+    const recentBox = document.getElementById("recentViews");
+    const cMessage = document.getElementById("cMessage");
+    const tr = (s) => (window.I18N ? window.I18N.t(s) : s);
+
+    function el(tag, cls, text) {
+      const e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text) e.textContent = text;
+      return e;
+    }
+
+    function renderRecent() {
+      const list = readRecent();
+      const lang = window.I18N ? window.I18N.getSaved() : "KOR";
+      recentBox.replaceChildren();
+
+      const head = el("div", "recent-head");
+      head.append(el("h3", "", tr("최근 본 제품")));
+      if (list.length) {
+        const clear = el("button", "recent-clear", tr("기록 지우기"));
+        clear.type = "button";
+        clear.addEventListener("click", () => { writeRecent([]); renderRecent(); });
+        head.append(clear);
+      }
+      recentBox.append(head);
+
+      if (!list.length) {
+        recentBox.append(el("p", "recent-empty", tr("아직 둘러본 제품이 없습니다. 제품 페이지를 보시면 여기에 표시됩니다.")));
+        return;
+      }
+      const ul = el("ul", "recent-list");
+      list.forEach((r) => {
+        const name = r.n[lang] || r.n.KOR;
+        const li = el("li", "recent-item");
+        const a = el("a", "", name);
+        a.href = r.u;
+        const add = el("button", "recent-add", "+");
+        add.type = "button";
+        add.title = tr("문의 내용에 추가");
+        add.setAttribute("aria-label", name + " — " + add.title);
+        add.addEventListener("click", () => {
+          const line = name + " / " + tr("수량") + ": ";
+          cMessage.value = cMessage.value ? cMessage.value.replace(/\s*$/, "\n") + line : line;
+          cMessage.focus();
+        });
+        li.append(a, add);
+        ul.append(li);
+      });
+      recentBox.append(ul, el("p", "recent-hint", tr("제품명을 누르면 해당 페이지로 이동하고, + 를 누르면 문의 내용에 추가됩니다.")));
+    }
+
+    renderRecent();
+    window.addEventListener("i18n:applied", renderRecent);
+
 </script>
 </body>
 </html>
