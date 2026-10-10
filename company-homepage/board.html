@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261010t">
+<link rel="stylesheet" href="styles.css?v=20261010v">
 </head>
 <body>
 
@@ -117,25 +117,24 @@
           <li><span class="c-label">주소</span><span>비공개 (문의 시 안내드립니다)</span></li>
           <li><span class="c-label">영업시간</span><span>평일 09:00 – 18:00</span></li>
         </ul>
+
+        <a class="kakao-btn" href="https://pf.kakao.com/_XXXXXX/chat" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.84 5.32 4.62 6.74l-.96 3.53c-.08.31.26.56.53.38l4.2-2.78c.53.07 1.06.13 1.61.13 5.52 0 10-3.58 10-8S17.52 3 12 3z" /></svg><span>카카오톡 상담하기</span></a>
+        <p class="kakao-note">카카오톡으로 규격·수량을 보내주시면 빠르게 답변드립니다.</p>
       </div>
 
       <form class="inquiry-form" id="inquiryForm">
         <div class="form-row">
           <div>
-            <label for="cName">담당자명</label>
-            <input id="cName" type="text" placeholder="홍길동" required />
+            <label for="cName">회사명 또는 성함</label>
+            <input id="cName" type="text" placeholder="(주)예시산업 / 홍길동" required />
           </div>
-          <div>
-            <label for="cCompany">회사명</label>
-            <input id="cCompany" type="text" placeholder="(주)예시산업" />
-          </div>
-        </div>
-        <div class="form-row">
           <div>
             <label for="cPhone">연락처</label>
             <input id="cPhone" type="tel" placeholder="010-0000-0000" required />
           </div>
-          <div>
+        </div>
+        <div class="form-row">
+          <div class="span-2">
             <label for="cType">문의 유형</label>
             <select id="cType">
               <option>규격/재고 문의</option>
@@ -170,8 +169,7 @@
       <p class="consent-intro">[회사명]은 견적 및 재고 문의의 확인과 답변을 위해 아래와 같이 개인정보를 수집·이용합니다.</p>
       <div class="consent-grid">
         <div><span class="consent-label">수집·이용 목적</span><span>견적 및 재고 문의 접수, 상담 내용 확인 및 답변</span></div>
-        <div><span class="consent-label">필수 수집 항목</span><span>담당자명, 연락처, 문의 내용</span></div>
-        <div><span class="consent-label">선택 수집 항목</span><span>회사명</span></div>
+        <div><span class="consent-label">필수 수집 항목</span><span>회사명 또는 성함, 연락처, 문의 내용</span></div>
         <div><span class="consent-label">보유 및 이용 기간</span><span>문의 답변 완료일로부터 1년 후 파기 (관계 법령에 따라 보존이 필요한 경우 해당 기간까지)</span></div>
       </div>
       <p class="consent-note">귀하는 개인정보 수집 및 이용에 동의하지 않을 권리가 있습니다. 다만, 필수 항목에 대한 동의를 거부할 경우 온라인 문의 접수와 답변이 제한될 수 있습니다.</p>
@@ -194,10 +192,10 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261010t"></script>
-<script src="i18n/pages/board.dict.js?v=20261010t"></script>
-<script src="i18n.js?v=20261010t"></script>
-<script src="common.js?v=20261010t"></script>
+<script src="i18n/common.dict.js?v=20261010v"></script>
+<script src="i18n/pages/board.dict.js?v=20261010v"></script>
+<script src="i18n.js?v=20261010v"></script>
+<script src="common.js?v=20261010v"></script>
 <script>
     // 문의 폼 (실제 전송 없이 클라이언트에서만 확인 메시지 표시)
     const inquiryForm = document.getElementById("inquiryForm");
