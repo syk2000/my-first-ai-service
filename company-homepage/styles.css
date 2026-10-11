@@ -1458,6 +1458,15 @@
     cursor: pointer;
   }
   .kakao-submit + .kakao-note { margin-top: -6px; }
+  .kakao-btn.kakao-submit:disabled { opacity: 0.6; cursor: wait; }
+  /* 스팸 봇 차단용 숨김 칸 (사람에게는 보이지 않음) */
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
   .kakao-chat-link {
     display: inline-block;
     margin-top: 10px;
