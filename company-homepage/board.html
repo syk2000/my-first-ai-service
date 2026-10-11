@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261011e">
+<link rel="stylesheet" href="styles.css?v=20261011f">
 </head>
 <body>
 
@@ -117,9 +117,6 @@
           <li><span class="c-label">주소</span><span>비공개 (문의 시 안내드립니다)</span></li>
           <li><span class="c-label">영업시간</span><span>평일 09:00 – 18:00</span></li>
         </ul>
-
-        <a class="kakao-btn" href="https://pf.kakao.com/_YMbgn/chat" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.84 5.32 4.62 6.74l-.96 3.53c-.08.31.26.56.53.38l4.2-2.78c.53.07 1.06.13 1.61.13 5.52 0 10-3.58 10-8S17.52 3 12 3z" /></svg><span>카카오톡 상담하기</span></a>
-        <p class="kakao-note">카카오톡으로 규격·수량을 보내주시면 빠르게 답변드립니다.</p>
       </div>
 
       <form class="inquiry-form" id="inquiryForm">
@@ -145,7 +142,7 @@
         </div>
         <div class="field-full">
           <label for="cMessage">문의 내용</label>
-          <textarea id="cMessage" rows="4" placeholder="필요하신 규격, 수량, 납기 등을 적어주세요."></textarea>
+          <textarea id="cMessage" rows="4" placeholder="필요하신 규격, 수량, 납기 등을 적어주세요." required></textarea>
         </div>
         <div class="consent-row">
           <label class="consent-check" for="cAgree">
@@ -154,7 +151,8 @@
           </label>
           <button type="button" class="consent-view" id="consentOpen">내용 보기</button>
         </div>
-        <button type="submit" class="btn btn-accent" style="align-self: flex-start;">문의 보내기</button>
+        <button type="submit" class="kakao-btn kakao-submit"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.84 5.32 4.62 6.74l-.96 3.53c-.08.31.26.56.53.38l4.2-2.78c.53.07 1.06.13 1.61.13 5.52 0 10-3.58 10-8S17.52 3 12 3z" /></svg><span>카카오톡으로 문의하기</span></button>
+        <p class="kakao-note">버튼을 누르면 입력하신 내용이 자동으로 복사되고 카카오톡 상담창이 열립니다. 채팅창에 붙여넣기(Ctrl+V)만 하시면 됩니다.</p>
         <p class="form-status" id="formStatus"></p>
         <div class="recent-views" id="recentViews"></div>
       </form>
@@ -192,19 +190,50 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261011e"></script>
-<script src="i18n/pages/board.dict.js?v=20261011e"></script>
-<script src="i18n.js?v=20261011e"></script>
-<script src="common.js?v=20261011e"></script>
+<script src="i18n/common.dict.js?v=20261011f"></script>
+<script src="i18n/pages/board.dict.js?v=20261011f"></script>
+<script src="i18n.js?v=20261011f"></script>
+<script src="common.js?v=20261011f"></script>
 <script>
-    // 문의 폼 (실제 전송 없이 클라이언트에서만 확인 메시지 표시)
+    // 문의 폼 → 카카오톡으로 문의하기
+    // 카카오톡 채널은 외부에서 채팅창에 글을 미리 채워 넣는 기능을 제공하지 않으므로,
+    // 입력 내용을 정리해 클립보드에 복사한 뒤 상담창을 열고, 고객은 붙여넣기만 하면 되게 합니다.
+    const KAKAO_CHAT_URL = "https://pf.kakao.com/_YMbgn/chat";
     const inquiryForm = document.getElementById("inquiryForm");
     const formStatus = document.getElementById("formStatus");
 
+    function copyText(text) {
+      const fallback = () => {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.append(ta);
+        ta.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        ta.remove();
+      };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).catch(fallback);
+      else fallback();
+    }
+
     inquiryForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      formStatus.textContent = "문의가 접수되었습니다. (지금은 예시 화면이라 실제로 전송되지는 않습니다)";
-      inquiryForm.reset();
+      const type = document.getElementById("cType");
+      const message = [
+        "[견적 문의]",
+        "회사명/성함: " + document.getElementById("cName").value.trim(),
+        "연락처: " + document.getElementById("cPhone").value.trim(),
+        "문의 유형: " + type.options[type.selectedIndex].textContent.trim(),
+        "문의 내용:",
+        document.getElementById("cMessage").value.trim(),
+      ].join("\n");
+      copyText(message);
+      // 팝업 차단을 피하려면 클릭 처리 안에서 바로 열어야 함
+      window.open(KAKAO_CHAT_URL, "_blank", "noopener");
+      const t = window.I18N ? window.I18N.t : (s) => s;
+      formStatus.textContent = t("문의 내용이 복사되었습니다. 열린 카카오톡 상담창에 붙여넣기(Ctrl+V) 후 전송해 주세요.");
     });
 
     // 개인정보 수집 및 이용 동의 — '내용 보기'로 전문을 팝업으로 표시

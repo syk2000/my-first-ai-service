@@ -1449,6 +1449,15 @@
     transition: filter 0.15s ease;
   }
   .kakao-btn:hover { filter: brightness(0.95); }
+  /* 견적문의 폼의 전송 버튼으로 쓸 때 */
+  .kakao-btn.kakao-submit {
+    margin-top: 0;
+    align-self: flex-start;
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .kakao-submit + .kakao-note { margin-top: -6px; }
   .kakao-btn svg { flex: none; }
   .kakao-note {
     margin-top: 10px;
