@@ -1012,6 +1012,21 @@
     margin: 0 0 14px;
   }
 
+  /* 대리점 외 회사 자료의 출처 표기 (설명 문구 바로 아래 한 줄) */
+  .diagram-caption + .diagram-source { margin-top: -10px; }
+  .diagram-source {
+    text-align: center;
+    font-size: 10.5px;
+    color: #8a8a8a;
+    margin: 0 0 14px;
+  }
+  .diagram-source.page-source {
+    text-align: left;
+    margin-top: 18px;
+    font-size: 11.5px;
+    color: var(--text-faint);
+  }
+
   .diagram-row {
     display: flex;
     gap: 24px;
