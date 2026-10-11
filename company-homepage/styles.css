@@ -757,8 +757,16 @@
     overflow: hidden;
   }
 
+  /* 규격 찾기 상자 윗부분: 메인 첫 화면과 같은 파랑·보라 그라데이션 + 흰 글자 */
   .finder-head {
-    background: var(--surface-raised);
+    --text: #ffffff;
+    --text-sub: rgba(255, 255, 255, 0.85);
+    --border: rgba(255, 255, 255, 0.2);
+    --accent: #ffc27a;
+    color: var(--text);
+    background:
+      radial-gradient(ellipse 420px 160px at 92% 0%, rgba(120, 160, 255, 0.35), transparent 70%),
+      linear-gradient(120deg, #1d2a8f 0%, #2b3fd0 55%, #4a35c2 100%);
     padding: 22px 26px;
     display: flex;
     justify-content: space-between;
