@@ -1625,14 +1625,28 @@
     border: 1px solid var(--border);
     border-radius: 999px;
   }
-  .recent-item a {
+  .recent-item.added { border-color: var(--accent); }
+  /* 칩 본체: 누르면 문의 내용에 추가 */
+  .recent-pick {
+    background: none;
+    border: 0;
     padding: 6px 4px 6px 12px;
+    font-family: var(--font-mono);
     font-size: 13px;
+    font-weight: 600;
     color: var(--text);
+    cursor: pointer;
+  }
+  .recent-pick:hover { color: var(--accent); }
+  /* ↗: 해당 제품 표로 이동 */
+  .recent-go {
+    padding: 4px 11px 4px 6px;
+    font-size: 13px;
+    line-height: 1;
+    color: var(--text-faint);
     text-decoration: none;
   }
-  .recent-item a:hover { color: var(--accent); }
-  .recent-item a { font-family: var(--font-mono); font-weight: 600; }
+  .recent-go:hover { color: var(--accent); }
   .recent-kind {
     margin-left: 6px;
     font-family: var(--font-body);
@@ -1666,15 +1680,6 @@
   .site-toast.show {
     opacity: 1;
     transform: translate(-50%, 0);
-  }
-  .recent-add {
-    background: none;
-    border: 0;
-    color: var(--accent);
-    font-size: 16px;
-    line-height: 1;
-    padding: 4px 11px 4px 6px;
-    cursor: pointer;
   }
   .recent-empty,
   .recent-hint {
