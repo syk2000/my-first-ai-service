@@ -1458,15 +1458,18 @@
     cursor: pointer;
   }
   .kakao-submit + .kakao-note { margin-top: -6px; }
-  .kakao-btn.kakao-submit:disabled { opacity: 0.6; cursor: wait; }
-  /* 스팸 봇 차단용 숨김 칸 (사람에게는 보이지 않음) */
-  .hp-field {
-    position: absolute;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
+  /* 붙여넣기 → 전송 안내 상자 */
+  .kakao-guide {
+    padding: 14px 16px;
+    background: rgba(254, 229, 0, 0.08);
+    border: 1px solid rgba(254, 229, 0, 0.45);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-size: 13.5px;
+    line-height: 1.6;
   }
+  .kakao-guide strong { display: block; margin-bottom: 6px; color: #fee500; }
+  .kakao-guide ol { margin: 0 0 4px; padding-left: 20px; }
   .kakao-chat-link {
     display: inline-block;
     margin-top: 10px;
