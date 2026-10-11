@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261011o">
+<link rel="stylesheet" href="styles.css?v=20261011p">
 </head>
 <body>
 
@@ -134,8 +134,7 @@
           <div class="span-2">
             <label for="cType">문의 유형</label>
             <select id="cType">
-              <option>규격/재고 문의</option>
-              <option>견적 요청</option>
+              <option>견적·재고 문의</option>
               <option>기타 문의</option>
             </select>
           </div>
@@ -194,10 +193,10 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261011o"></script>
-<script src="i18n/pages/board.dict.js?v=20261011o"></script>
-<script src="i18n.js?v=20261011o"></script>
-<script src="common.js?v=20261011o"></script>
+<script src="i18n/common.dict.js?v=20261011p"></script>
+<script src="i18n/pages/board.dict.js?v=20261011p"></script>
+<script src="i18n.js?v=20261011p"></script>
+<script src="common.js?v=20261011p"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: Web3Forms로 회사 메일함에 자동 접수.
@@ -207,7 +206,7 @@
     const WEB3FORMS_KEY = ""; // web3forms.com에서 받은 Access Key를 따옴표 안에 넣으면 이메일 자동 접수가 켜짐
     const INQUIRY_EMAIL = "sales@example.com"; // 키가 없을 때 mailto로 받을 회사 이메일
     const KAKAO_CHAT_URL = "https://pf.kakao.com/_YMbgn/chat";
-    const TYPE_KO = ["규격/재고 문의", "견적 요청", "기타 문의"]; // 담당자가 읽기 쉽게 항상 한국어로
+    const TYPE_KO = ["견적·재고 문의", "기타 문의"]; // 담당자가 읽기 쉽게 항상 한국어로
     const inquiryForm = document.getElementById("inquiryForm");
     const formStatus = document.getElementById("formStatus");
     const tt = (s) => (window.I18N ? window.I18N.t(s) : s);
