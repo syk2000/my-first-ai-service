@@ -1457,7 +1457,39 @@
     font-family: inherit;
     cursor: pointer;
   }
-  .kakao-submit + .kakao-note { margin-top: -6px; }
+  /* 견적문의 전송 버튼 두 개(이메일·카카오톡) */
+  .inquiry-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .mail-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 22px;
+    background: var(--accent);
+    color: #1a1206;
+    border: 0;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+  }
+  .mail-btn:hover { filter: brightness(1.06); }
+  .mail-btn:disabled,
+  .kakao-btn.kakao-submit:disabled { opacity: 0.6; cursor: wait; }
+  .inquiry-actions + .hp-field + .kakao-note { margin-top: -6px; }
+  /* 스팸 봇 차단용 숨김 칸 (사람에게는 보이지 않음) */
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
   /* 붙여넣기 → 전송 안내 상자 */
   .kakao-guide {
     padding: 14px 16px;
