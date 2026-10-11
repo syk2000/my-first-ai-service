@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261011m">
+<link rel="stylesheet" href="styles.css?v=20261011n">
 </head>
 <body>
 
@@ -152,11 +152,11 @@
           <button type="button" class="consent-view" id="consentOpen">내용 보기</button>
         </div>
         <div class="inquiry-actions">
-          <button type="submit" class="kakao-btn kakao-submit" data-via="kakao"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.84 5.32 4.62 6.74l-.96 3.53c-.08.31.26.56.53.38l4.2-2.78c.53.07 1.06.13 1.61.13 5.52 0 10-3.58 10-8S17.52 3 12 3z" /></svg><span>카카오톡으로 문의하기</span></button>
+          <button type="submit" class="kakao-btn kakao-submit" data-via="kakao" formnovalidate><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.84 5.32 4.62 6.74l-.96 3.53c-.08.31.26.56.53.38l4.2-2.78c.53.07 1.06.13 1.61.13 5.52 0 10-3.58 10-8S17.52 3 12 3z" /></svg><span>카카오톡으로 문의하기</span></button>
           <button type="submit" class="mail-btn" data-via="email"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 5.5h18v13H3z M3.5 6.5l8.5 6.5 8.5-6.5" /></svg><span>이메일로 문의하기</span></button>
         </div>
         <input type="checkbox" id="cBotcheck" class="hp-field" tabindex="-1" aria-hidden="true" />
-        <p class="kakao-note">카카오톡 문의는 열리는 SWS 상담창에 붙여넣고 전송해 주세요. 이메일 문의는 버튼을 누르면 바로 접수됩니다.</p>
+        <p class="kakao-note">카카오톡 문의는 입력 없이도 바로 SWS 상담창이 열립니다. 이메일 문의는 위 내용을 입력한 뒤 버튼을 누르면 바로 접수됩니다.</p>
         <p class="form-status" id="formStatus"></p>
         <div class="recent-views" id="recentViews"></div>
       </form>
@@ -194,10 +194,10 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261011m"></script>
-<script src="i18n/pages/board.dict.js?v=20261011m"></script>
-<script src="i18n.js?v=20261011m"></script>
-<script src="common.js?v=20261011m"></script>
+<script src="i18n/common.dict.js?v=20261011n"></script>
+<script src="i18n/pages/board.dict.js?v=20261011n"></script>
+<script src="i18n.js?v=20261011n"></script>
+<script src="common.js?v=20261011n"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: Web3Forms로 회사 메일함에 자동 접수.
@@ -293,21 +293,33 @@
         sendEmail(d);
         return;
       }
-      copyText(inquiryText(d));
+      // 카카오톡 문의는 입력칸을 채우지 않아도 바로 상담창을 엶(버튼에 formnovalidate).
+      // 적어둔 내용이 있으면 복사해 두어 상담창에 붙여넣을 수 있게 함
+      const filled = Boolean(d.name || d.phone || d.message);
+      if (filled) copyText(inquiryText(d));
       // 팝업 차단을 피하려면 클릭 처리 안에서 바로 열어야 함
       window.open(KAKAO_CHAT_URL, "_blank", "noopener");
 
-      // 붙여넣기 → 전송 안내 (상담창이 안 열렸을 때를 위한 버튼 포함)
+      // 안내 (상담창이 안 열렸을 때를 위한 버튼 포함)
       const box = document.createElement("div");
       box.className = "kakao-guide";
       const title = document.createElement("strong");
-      title.textContent = tt("문의 내용이 복사되었습니다. 열린 카카오톡 상담창에서:");
-      const ol = document.createElement("ol");
-      [
-        tt("아래쪽 '메시지 입력' 칸을 누르고"),
-        tt("붙여넣기 하세요 — PC: Ctrl+V / 휴대폰: 입력칸을 길게 눌러 '붙여넣기'"),
-        tt("'전송'을 누르면 문의가 접수됩니다."),
-      ].forEach((s) => { const li = document.createElement("li"); li.textContent = s; ol.append(li); });
+      const steps = filled
+        ? [
+            tt("아래쪽 '메시지 입력' 칸을 누르고"),
+            tt("붙여넣기 하세요 — PC: Ctrl+V / 휴대폰: 입력칸을 길게 눌러 '붙여넣기'"),
+            tt("'전송'을 누르면 문의가 접수됩니다."),
+          ]
+        : [tt("필요하신 규격·수량을 상담창에 적어 보내주세요.")];
+      title.textContent = filled
+        ? tt("문의 내용이 복사되었습니다. 열린 카카오톡 상담창에서:")
+        : tt("SWS 카카오톡 상담창이 열렸습니다.");
+      const ol = document.createElement(filled ? "ol" : "p");
+      steps.forEach((s) => {
+        const item = document.createElement(filled ? "li" : "span");
+        item.textContent = s;
+        ol.append(item);
+      });
       const link = document.createElement("a");
       link.className = "kakao-chat-link";
       link.href = KAKAO_CHAT_URL;
@@ -381,15 +393,19 @@
           cMessage.setSelectionRange(cMessage.value.length, cMessage.value.length);
           li.classList.add("added");
         });
-        // 작은 ↗ 아이콘: 해당 제품 표의 그 행으로 이동
-        const go = el("a", "recent-go", "↗");
-        go.href = r.u + "#pick=" + encodeURIComponent(r.m);
-        go.title = tr("제품 표 보기");
-        go.setAttribute("aria-label", r.m + " — " + go.title);
-        li.append(pick, go);
+        // ✕: 이 품번을 최근 본 목록에서 지움
+        const del = el("button", "recent-del", "✕");
+        del.type = "button";
+        del.title = tr("목록에서 지우기");
+        del.setAttribute("aria-label", r.m + " — " + del.title);
+        del.addEventListener("click", () => {
+          writeRecent(readRecent().filter((x) => !(x.m === r.m && x.u === r.u)));
+          renderRecent();
+        });
+        li.append(pick, del);
         ul.append(li);
       });
-      recentBox.append(ul, el("p", "recent-hint", tr("품번을 누르면 문의 내용에 추가되고, ↗ 를 누르면 해당 제품 표로 이동합니다.")));
+      recentBox.append(ul, el("p", "recent-hint", tr("품번을 누르면 문의 내용에 추가되고, ✕ 를 누르면 목록에서 지워집니다.")));
     }
 
     renderRecent();

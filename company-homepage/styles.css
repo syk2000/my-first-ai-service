@@ -1711,15 +1711,17 @@
     cursor: pointer;
   }
   .recent-pick:hover { color: var(--accent); }
-  /* ↗: 해당 제품 표로 이동 */
-  .recent-go {
+  /* ✕: 최근 본 목록에서 지우기 */
+  .recent-del {
+    background: none;
+    border: 0;
     padding: 4px 11px 4px 6px;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1;
     color: var(--text-faint);
-    text-decoration: none;
+    cursor: pointer;
   }
-  .recent-go:hover { color: var(--accent); }
+  .recent-del:hover { color: #d9534f; }
   .recent-kind {
     margin-left: 6px;
     font-family: var(--font-body);
@@ -2025,3 +2027,45 @@
   form.inquiry-form {
     box-shadow: 0 2px 12px rgba(22, 33, 58, 0.06);
   }
+
+  /* 상단바: 메인 첫 화면과 같은 파랑·보라 그라데이션 + 흰 글자 */
+  header.site-header {
+    background: linear-gradient(90deg, #1d2a8f 0%, #2b3fd0 55%, #4a35c2 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    --text: #ffffff;
+    --text-sub: rgba(255, 255, 255, 0.86);
+    --text-faint: rgba(255, 255, 255, 0.7);
+    --border: rgba(255, 255, 255, 0.3);
+    --surface-raised: rgba(255, 255, 255, 0.12);
+  }
+  /* 상단바 안의 펼침 메뉴·언어 선택 창·모바일 메뉴는 흰 바탕 + 진한 글자 유지 */
+  .site-header .nav-dropdown,
+  .site-header .lang-menu,
+  .site-header nav.main-nav.open {
+    --text: #16213a;
+    --text-sub: #4a5876;
+    --text-faint: #7a879f;
+    --border: #dbe2ee;
+    --surface-raised: #ffffff;
+    color: var(--text);
+    box-shadow: 0 16px 32px rgba(22, 33, 58, 0.18);
+  }
+
+  /* 대리점 띠: 메인 첫 화면과 같은 그라데이션, 로고 칸은 반투명 유리 느낌 */
+  .partner-strip {
+    --text: #ffffff;
+    --text-sub: rgba(255, 255, 255, 0.86);
+    --text-faint: rgba(255, 255, 255, 0.7);
+    --border: rgba(255, 255, 255, 0.28);
+    color: var(--text);
+    background:
+      radial-gradient(ellipse 700px 380px at 90% 10%, rgba(120, 160, 255, 0.3), transparent 60%),
+      radial-gradient(ellipse 600px 380px at 5% 100%, rgba(150, 90, 255, 0.3), transparent 60%),
+      linear-gradient(135deg, #1d2a8f 0%, #2b3fd0 45%, #4a35c2 100%);
+  }
+  .partner-strip .partner-slot {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+  .partner-strip .partner-slot:hover { border-color: #ffffff; }
+  .partner-strip .partner-slot .brand-tag { color: #ffd59a; }
