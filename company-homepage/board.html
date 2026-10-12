@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261011p">
+<link rel="stylesheet" href="styles.css?v=20261012a">
 </head>
 <body>
 
@@ -193,18 +193,19 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261011p"></script>
-<script src="i18n/pages/board.dict.js?v=20261011p"></script>
-<script src="i18n.js?v=20261011p"></script>
-<script src="common.js?v=20261011p"></script>
+<script src="i18n/common.dict.js?v=20261012a"></script>
+<script src="i18n/pages/board.dict.js?v=20261012a"></script>
+<script src="i18n.js?v=20261012a"></script>
+<script src="common.js?v=20261012a"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
-    // · 이메일로 문의하기: Web3Forms로 회사 메일함에 자동 접수.
-    //   WEB3FORMS_KEY가 비어 있으면 손님의 메일 프로그램을 견적 내용이 채워진 상태로 열어줌(mailto)
+    // · 이메일로 문의하기: FormSubmit(무료, 키 불필요)으로 INQUIRY_EMAIL에 '견적·발주 요청서' 표 양식 메일 자동 발송.
+    //   첫 접수 때 FormSubmit이 이 주소로 '활성화 확인' 메일을 보내며, 그 메일의 버튼을 한 번 눌러야 이후 접수가 도착함.
+    //   전송 실패·로컬 파일로 열었을 때는 손님의 메일 프로그램을 같은 양식이 채워진 상태로 열어줌(mailto)
     // · 카카오톡으로 문의하기: SWS 카카오톡 채널 1:1 상담. 카카오톡 채널은 외부 사이트가 채팅 입력칸에
     //   글을 넣거나 대신 보내는 것을 막아두었으므로, 내용을 복사하고 상담창을 열어 손님이 붙여넣기 → 전송
-    const WEB3FORMS_KEY = ""; // web3forms.com에서 받은 Access Key를 따옴표 안에 넣으면 이메일 자동 접수가 켜짐
-    const INQUIRY_EMAIL = "sales@example.com"; // 키가 없을 때 mailto로 받을 회사 이메일
+    const INQUIRY_EMAIL = "lsd00213@naver.com"; // 견적·발주 요청서를 받을 메일 주소
+    const FORMSUBMIT_URL = "https://formsubmit.co/ajax/" + INQUIRY_EMAIL;
     const KAKAO_CHAT_URL = "https://pf.kakao.com/_YMbgn/chat";
     const TYPE_KO = ["견적·재고 문의", "기타 문의"]; // 담당자가 읽기 쉽게 항상 한국어로
     const inquiryForm = document.getElementById("inquiryForm");
@@ -244,35 +245,66 @@
       formStatus.replaceChildren(p);
     }
 
+    // 견적·발주 요청서 양식 (메일 표·mailto 본문 공통)
+    function requestForm(d) {
+      const now = new Date();
+      const p = (n) => String(n).padStart(2, "0");
+      const ymd = now.getFullYear() + p(now.getMonth() + 1) + p(now.getDate());
+      const hm = p(now.getHours()) + p(now.getMinutes());
+      return [
+        ["문서 구분", "견적·발주 요청서"],
+        ["문서번호", "Q-" + ymd + "-" + hm],
+        ["요청일시", now.getFullYear() + "-" + p(now.getMonth() + 1) + "-" + p(now.getDate()) + " " + p(now.getHours()) + ":" + p(now.getMinutes())],
+        ["요청 업체/성함", d.name],
+        ["연락처", d.phone],
+        ["문의 유형", d.type],
+        ["요청 품목 및 수량", d.message],
+        ["회신 방법", "위 연락처로 견적서(또는 발주 확인서) 회신"],
+      ];
+    }
+
+    function openMailDraft(d, subject) {
+      const rows = requestForm(d);
+      const body = [
+        "━━━━━━━━━━━━━━━━━━━━",
+        "        견적·발주 요청서",
+        "━━━━━━━━━━━━━━━━━━━━",
+        ...rows.filter(([k]) => k !== "문서 구분" && k !== "요청 품목 및 수량").map(([k, v]) => "■ " + k + ": " + v),
+        "",
+        "■ 요청 품목 및 수량",
+        d.message,
+        "━━━━━━━━━━━━━━━━━━━━",
+      ].join("\n");
+      location.href = "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      showMessage(tt("메일 프로그램이 열리면 내용을 확인하고 보내기를 눌러 주세요."));
+    }
+
     async function sendEmail(d) {
-      const subject = "[SWS 홈페이지] 새 견적 문의 - " + d.name;
-      // 키가 없거나 로컬 파일로 열었을 때: 메일 프로그램을 내용이 채워진 상태로 열기
-      if (!WEB3FORMS_KEY || !location.protocol.startsWith("http")) {
-        location.href = "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(inquiryText(d));
-        showMessage(tt("메일 프로그램이 열리면 내용을 확인하고 보내기를 눌러 주세요."));
+      const subject = "[SWS 홈페이지] 견적·발주 요청서 - " + d.name;
+      // 로컬 파일로 열었을 때: 메일 프로그램을 양식이 채워진 상태로 열기
+      if (!location.protocol.startsWith("http")) {
+        openMailDraft(d, subject);
         return;
       }
       const buttons = inquiryForm.querySelectorAll("button[type=submit]");
       buttons.forEach((b) => (b.disabled = true));
       showMessage(tt("전송 중입니다…"));
+      const payload = {
+        _subject: subject,
+        _template: "table", // 항목·내용 표 형태 메일
+        _captcha: "false",
+        _honey: document.getElementById("cBotcheck").checked ? "bot" : "", // 봇이 채우면 FormSubmit이 버림
+      };
+      requestForm(d).forEach(([k, v]) => (payload[k] = v));
       let ok = false;
       try {
-        const r = await fetch("https://api.web3forms.com/submit", {
+        const r = await fetch(FORMSUBMIT_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_KEY,
-            subject,
-            from_name: "SWS 홈페이지",
-            "회사명/성함": d.name,
-            "연락처": d.phone,
-            "문의 유형": d.type,
-            "문의 내용": d.message,
-            botcheck: document.getElementById("cBotcheck").checked,
-          }),
+          body: JSON.stringify(payload),
         });
         const res = await r.json().catch(() => ({}));
-        ok = r.ok && res.success !== false;
+        ok = r.ok && String(res.success) === "true";
       } catch (err) {
         ok = false;
       }
@@ -281,7 +313,8 @@
         showMessage(tt("문의가 접수되었습니다. 담당자가 확인 후 빠르게 연락드리겠습니다."));
         inquiryForm.reset();
       } else {
-        showMessage(tt("이메일 전송에 실패했습니다. 잠시 후 다시 시도하시거나 카카오톡으로 문의해 주세요."));
+        // 자동 발송이 안 되면 같은 양식으로 메일 작성 창을 열어 직접 보내게 함
+        openMailDraft(d, subject);
       }
     }
 
