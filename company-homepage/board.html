@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261012b">
+<link rel="stylesheet" href="styles.css?v=20261013a">
 </head>
 <body>
 
@@ -192,15 +192,15 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261012b"></script>
-<script src="i18n/pages/board.dict.js?v=20261012b"></script>
-<script src="i18n.js?v=20261012b"></script>
-<script src="common.js?v=20261012b"></script>
+<script src="i18n/common.dict.js?v=20261013a"></script>
+<script src="i18n/pages/board.dict.js?v=20261013a"></script>
+<script src="i18n.js?v=20261013a"></script>
+<script src="common.js?v=20261013a"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: FormSubmit(무료, 키 불필요)으로 INQUIRY_EMAIL에 '견적·발주 요청서' 표 양식 메일 자동 발송.
     //   첫 접수 때 FormSubmit이 이 주소로 '활성화 확인' 메일을 보내며, 그 메일의 버튼을 한 번 눌러야 이후 접수가 도착함.
-    //   전송 실패·로컬 파일로 열었을 때는 손님의 메일 프로그램을 같은 양식이 채워진 상태로 열어줌(mailto)
+    //   전송 실패 시에는 안내와 함께 '메일 앱으로 보내기'(mailto) 링크를 보여주고, 로컬 파일로 열었을 때만 바로 메일 앱을 엶
     // · 카카오톡으로 문의하기: SWS 카카오톡 채널 1:1 상담. 카카오톡 채널은 외부 사이트가 채팅 입력칸에
     //   글을 넣거나 대신 보내는 것을 막아두었으므로, 내용을 복사하고 상담창을 열어 손님이 붙여넣기 → 전송
     const INQUIRY_EMAIL = "lsd00213@naver.com"; // 견적·발주 요청서를 받을 메일 주소
@@ -262,7 +262,7 @@
       ];
     }
 
-    function openMailDraft(d, subject) {
+    function mailDraftUrl(d, subject) {
       const rows = requestForm(d);
       const body = [
         "━━━━━━━━━━━━━━━━━━━━",
@@ -274,8 +274,24 @@
         d.message,
         "━━━━━━━━━━━━━━━━━━━━",
       ].join("\n");
-      location.href = "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      return "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    }
+
+    function openMailDraft(d, subject) {
+      location.href = mailDraftUrl(d, subject);
       showMessage(tt("메일 프로그램이 열리면 내용을 확인하고 보내기를 눌러 주세요."));
+    }
+
+    // 자동 접수 실패 시: 메일 프로그램을 멋대로 열지 않고(설정 안 된 PC에선 Outlook 설정 창이 뜸)
+    // 안내 + 직접 고를 수 있는 '메일 앱으로 보내기' 링크만 보여줌. 입력 내용은 지우지 않음
+    function showMailFallback(d, subject) {
+      const p = document.createElement("span");
+      p.textContent = tt("지금은 자동 접수가 되지 않습니다. 카카오톡으로 문의하시거나, 사용하시는 메일 앱으로 보내 주세요.") + " ";
+      const a = document.createElement("a");
+      a.href = mailDraftUrl(d, subject);
+      a.textContent = tt("메일 앱으로 보내기") + " (" + INQUIRY_EMAIL + ")";
+      a.style.textDecoration = "underline";
+      formStatus.replaceChildren(p, a);
     }
 
     async function sendEmail(d) {
@@ -312,8 +328,7 @@
         showMessage(tt("문의가 접수되었습니다. 담당자가 확인 후 빠르게 연락드리겠습니다."));
         inquiryForm.reset();
       } else {
-        // 자동 발송이 안 되면 같은 양식으로 메일 작성 창을 열어 직접 보내게 함
-        openMailDraft(d, subject);
+        showMailFallback(d, subject);
       }
     }
 
