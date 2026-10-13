@@ -1364,7 +1364,7 @@
 
   .inquiry-grid {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
     gap: 48px;
   }
 
@@ -1475,11 +1475,12 @@
   }
 
   /* 회신 받을 연락처: [전화번호|이메일] 선택 + 입력칸 */
-  .form-row.contact-row { grid-template-columns: 1fr 1.35fr; }
-  /* 문의 유형(왼쪽) | 문의 내용(오른쪽, 넓게) 한 줄 배치 */
-  .form-row.message-row { grid-template-columns: 215px 1fr; align-items: start; }
+  /* 회사명 | 회신 연락처 | 문의 유형 한 줄 */
+  .form-row.contact-row { grid-template-columns: 0.9fr 1.5fr 1.05fr; }
+  .form-row.contact-row select { padding-left: 10px; padding-right: 6px; }
+  .form-row.contact-row input { padding-left: 11px; padding-right: 8px; }
   .contact-pick { display: flex; gap: 6px; }
-  .inquiry-form .contact-pick select { width: 96px; flex: none; padding-left: 8px; padding-right: 4px; }
+  .inquiry-form .contact-pick select { width: 90px; flex: none; padding-left: 8px; padding-right: 4px; }
   .contact-pick input { flex: 1; min-width: 0; }
 
   .form-status {
