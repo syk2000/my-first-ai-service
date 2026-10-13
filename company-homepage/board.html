@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261013a">
+<link rel="stylesheet" href="styles.css?v=20261013b">
 </head>
 <body>
 
@@ -113,7 +113,7 @@
         <ul class="contact-list">
           <li><span class="c-label">전화</span><span>02-2613-3040</span></li>
           <li><span class="c-label">팩스</span><span>02-2613-3042</span></li>
-          <li><span class="c-label">이메일</span><span>sales@example.com</span></li>
+          <li><span class="c-label">이메일</span><span>lsd00213@naver.com</span></li>
           <li><span class="c-label">주소</span><span>비공개 (문의 시 안내드립니다)</span></li>
           <li><span class="c-label">영업시간</span><span>평일 09:00 – 18:00</span></li>
         </ul>
@@ -192,10 +192,10 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261013a"></script>
-<script src="i18n/pages/board.dict.js?v=20261013a"></script>
-<script src="i18n.js?v=20261013a"></script>
-<script src="common.js?v=20261013a"></script>
+<script src="i18n/common.dict.js?v=20261013b"></script>
+<script src="i18n/pages/board.dict.js?v=20261013b"></script>
+<script src="i18n.js?v=20261013b"></script>
+<script src="common.js?v=20261013b"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: FormSubmit(무료, 키 불필요)으로 INQUIRY_EMAIL에 '견적·발주 요청서' 표 양식 메일 자동 발송.
@@ -204,7 +204,8 @@
     // · 카카오톡으로 문의하기: SWS 카카오톡 채널 1:1 상담. 카카오톡 채널은 외부 사이트가 채팅 입력칸에
     //   글을 넣거나 대신 보내는 것을 막아두었으므로, 내용을 복사하고 상담창을 열어 손님이 붙여넣기 → 전송
     const INQUIRY_EMAIL = "lsd00213@naver.com"; // 견적·발주 요청서를 받을 메일 주소
-    const FORMSUBMIT_URL = "https://formsubmit.co/ajax/" + INQUIRY_EMAIL;
+    // FormSubmit 활성화 메일에 적힌 별칭(메일 주소를 코드에 노출하지 않아 스팸 수집 방지). 실제 받는 곳은 INQUIRY_EMAIL
+    const FORMSUBMIT_URL = "https://formsubmit.co/ajax/06c8bd050147ba661797f96176c179f7";
     const KAKAO_CHAT_URL = "https://pf.kakao.com/_YMbgn/chat";
     const TYPE_KO = ["견적·재고 문의", "기타 문의"]; // 담당자가 읽기 쉽게 항상 한국어로
     const inquiryForm = document.getElementById("inquiryForm");
