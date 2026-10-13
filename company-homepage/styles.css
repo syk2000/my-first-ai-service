@@ -1476,8 +1476,8 @@
 
   /* 회신 받을 연락처: [전화번호|이메일] 선택 + 입력칸 */
   .form-row.contact-row { grid-template-columns: 1fr 1.35fr; }
-  /* 문의 내용(왼쪽, 넓게) | 문의 유형(오른쪽) 한 줄 배치 */
-  .form-row.message-row { grid-template-columns: 1fr 215px; align-items: start; }
+  /* 문의 유형(왼쪽) | 문의 내용(오른쪽, 넓게) 한 줄 배치 */
+  .form-row.message-row { grid-template-columns: 215px 1fr; align-items: start; }
   .contact-pick { display: flex; gap: 6px; }
   .inquiry-form .contact-pick select { width: 96px; flex: none; padding-left: 8px; padding-right: 4px; }
   .contact-pick input { flex: 1; min-width: 0; }
@@ -2088,3 +2088,7 @@
   }
   .partner-strip .partner-slot:hover { border-color: #ffffff; }
   .partner-strip .partner-slot .brand-tag { color: #ffd59a; }
+
+/* 회사소개 인사말: 읽기 편한 줄 길이 + 오른쪽 서명 */
+#greeting p { max-width: 860px; line-height: 1.85; }
+#greeting .greeting-sign { margin-top: 26px; text-align: right; color: var(--text); }
