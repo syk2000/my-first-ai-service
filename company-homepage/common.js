@@ -154,19 +154,31 @@
       return cells[0] ? cells[0].textContent.trim() : "";
     }
 
-    function showToast(text) {
+    // 알림창 전체가 견적문의 링크: 누르면 견적문의 페이지로 이동(최근 본 품번에 방금 품번이 들어 있음)
+    function showToast(text, linkText) {
       let toast = document.getElementById("siteToast");
       if (!toast) {
-        toast = document.createElement("div");
+        toast = document.createElement("a");
         toast.id = "siteToast";
         toast.className = "site-toast";
+        toast.href = "board.html";
         toast.setAttribute("role", "status");
+        toast.addEventListener("mouseenter", () => clearTimeout(showToast.timer));
+        toast.addEventListener("mouseleave", () => hideLater(1500));
         document.body.append(toast);
       }
-      toast.textContent = text;
+      const msg = document.createElement("span");
+      msg.textContent = text;
+      const go = document.createElement("strong");
+      go.className = "toast-go";
+      go.textContent = linkText;
+      toast.replaceChildren(msg, go);
       toast.classList.add("show");
+      hideLater(4000);
+    }
+    function hideLater(ms) {
       clearTimeout(showToast.timer);
-      showToast.timer = setTimeout(() => toast.classList.remove("show"), 1800);
+      showToast.timer = setTimeout(() => document.getElementById("siteToast").classList.remove("show"), ms);
     }
 
     document.addEventListener("click", (e) => {
@@ -183,7 +195,7 @@
       document.querySelectorAll("tr.row-picked").forEach((r) => r.classList.remove("row-picked"));
       tr.classList.add("row-picked");
       const t = window.I18N ? window.I18N.t : (s) => s;
-      showToast(t("최근 본 품번에 추가했습니다") + ": " + entry.m);
+      showToast(t("최근 본 품번에 추가했습니다") + ": " + entry.m, t("견적문의로 가기") + " →");
     });
 
     // 견적문의의 품번 링크(…html#pick=6205)로 들어오면 해당 행으로 스크롤해 표시

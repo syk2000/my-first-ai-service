@@ -1776,7 +1776,18 @@
   .site-toast.show {
     opacity: 1;
     transform: translate(-50%, 0);
+    pointer-events: auto;
   }
+  a.site-toast { display: flex; align-items: center; gap: 14px; text-decoration: none; cursor: pointer; }
+  .site-toast .toast-go {
+    color: #fff;
+    background: var(--accent);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .site-toast:hover .toast-go { filter: brightness(1.08); }
   .recent-empty,
   .recent-hint {
     font-size: 12.5px;
