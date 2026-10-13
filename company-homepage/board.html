@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261013f">
+<link rel="stylesheet" href="styles.css?v=20261013g">
 </head>
 <body>
 
@@ -136,8 +136,12 @@
             </div>
           </div>
         </div>
-        <div class="form-row">
-          <div class="span-2">
+        <div class="form-row message-row">
+          <div class="field-full">
+            <label for="cMessage">문의 내용</label>
+            <textarea id="cMessage" rows="4" placeholder="필요하신 규격, 수량, 납기 등을 적어주세요." required></textarea>
+          </div>
+          <div>
             <label for="cType">문의 유형</label>
             <select id="cType">
               <option>견적·단가 문의</option>
@@ -145,10 +149,6 @@
               <option>발주 문의</option>
             </select>
           </div>
-        </div>
-        <div class="field-full">
-          <label for="cMessage">문의 내용</label>
-          <textarea id="cMessage" rows="4" placeholder="필요하신 규격, 수량, 납기 등을 적어주세요." required></textarea>
         </div>
         <div class="consent-row">
           <label class="consent-check" for="cAgree">
@@ -199,10 +199,10 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261013f"></script>
-<script src="i18n/pages/board.dict.js?v=20261013f"></script>
-<script src="i18n.js?v=20261013f"></script>
-<script src="common.js?v=20261013f"></script>
+<script src="i18n/common.dict.js?v=20261013g"></script>
+<script src="i18n/pages/board.dict.js?v=20261013g"></script>
+<script src="i18n.js?v=20261013g"></script>
+<script src="common.js?v=20261013g"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: FormSubmit(무료, 키 불필요)으로 INQUIRY_EMAIL에 '견적·발주 요청서' 표 양식 메일 자동 발송.
