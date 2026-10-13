@@ -125,9 +125,10 @@
   }
 
   .logo-mark {
-    width: 34px;
+    width: auto;
     height: 34px;
     flex-shrink: 0;
+    display: block;
   }
 
   .logo-slot .company-name {
@@ -1968,7 +1969,7 @@
     }
 
     .logo-mark {
-      width: 28px;
+      width: auto;
       height: 28px;
     }
 
@@ -2032,7 +2033,6 @@
 
   /* ---------- 밝은 테마 보정 ---------- */
   /* 헤더 로고 마크의 흰 점 → 진한 남색 */
-  .site-header .logo-mark circle[fill="#eef2f6"] { fill: var(--text); }
 
   /* 로고 칸: 흰색·밝은 로고(JMC·일성테크·NTN·SAMICK·SOG 등)가 보이도록 어두운 남색 바탕 */
   .brand-tile-logo { background: var(--logo-bg); }
