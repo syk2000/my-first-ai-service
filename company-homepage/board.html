@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261013b">
+<link rel="stylesheet" href="styles.css?v=20261013d">
 </head>
 <body>
 
@@ -120,14 +120,20 @@
       </div>
 
       <form class="inquiry-form" id="inquiryForm">
-        <div class="form-row">
+        <div class="form-row contact-row">
           <div>
             <label for="cName">회사명 또는 성함</label>
             <input id="cName" type="text" placeholder="(주)예시산업 / 홍길동" required />
           </div>
           <div>
-            <label for="cPhone">연락처</label>
-            <input id="cPhone" type="tel" placeholder="010-0000-0000" required />
+            <label for="cPhone">회신 받을 연락처</label>
+            <div class="contact-pick">
+              <select id="cContactKind" aria-label="연락처 종류">
+                <option value="phone">전화번호</option>
+                <option value="email">이메일</option>
+              </select>
+              <input id="cPhone" type="tel" placeholder="010-0000-0000" required />
+            </div>
           </div>
         </div>
         <div class="form-row">
@@ -192,10 +198,10 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261013b"></script>
-<script src="i18n/pages/board.dict.js?v=20261013b"></script>
-<script src="i18n.js?v=20261013b"></script>
-<script src="common.js?v=20261013b"></script>
+<script src="i18n/common.dict.js?v=20261013d"></script>
+<script src="i18n/pages/board.dict.js?v=20261013d"></script>
+<script src="i18n.js?v=20261013d"></script>
+<script src="common.js?v=20261013d"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: FormSubmit(무료, 키 불필요)으로 INQUIRY_EMAIL에 '견적·발주 요청서' 표 양식 메일 자동 발송.
@@ -228,16 +234,34 @@
       else fallback();
     }
 
+    // 회신 받을 연락처 종류(전화번호/이메일)에 맞춰 입력칸 형식·예시 글씨를 바꿈
+    const contactKind = document.getElementById("cContactKind");
+    const contactInput = document.getElementById("cPhone");
+    function syncContactKind() {
+      const email = contactKind.value === "email";
+      contactInput.type = email ? "email" : "tel";
+      contactInput.placeholder = email ? "name@company.com" : "010-0000-0000";
+      contactInput.autocomplete = email ? "email" : "tel";
+    }
+    let lastKind = contactKind.value;
+    contactKind.addEventListener("change", () => { lastKind = contactKind.value; syncContactKind(); contactInput.focus(); });
+    // 언어를 바꾸면 선택칸 내용이 다시 그려지므로 고른 종류를 되살림
+    window.addEventListener("i18n:applied", () => { contactKind.value = lastKind; syncContactKind(); });
+    syncContactKind();
+
     function readForm() {
+      const email = contactKind.value === "email";
       return {
         name: document.getElementById("cName").value.trim(),
-        phone: document.getElementById("cPhone").value.trim(),
+        phone: contactInput.value.trim(),
+        contactLabel: email ? "이메일" : "전화번호",
+        email,
         type: TYPE_KO[document.getElementById("cType").selectedIndex] || "기타 문의",
         message: document.getElementById("cMessage").value.trim(),
       };
     }
     const inquiryText = (d) =>
-      ["[견적 문의]", "회사명/성함: " + d.name, "연락처: " + d.phone, "문의 유형: " + d.type, "문의 내용:", d.message].join("\n");
+      ["[견적 문의]", "회사명/성함: " + d.name, "연락처(" + d.contactLabel + "): " + d.phone, "문의 유형: " + d.type, "문의 내용:", d.message].join("\n");
 
     function showMessage(text) {
       const p = document.createElement("span");
@@ -256,10 +280,10 @@
         ["문서번호", "Q-" + ymd + "-" + hm],
         ["요청일시", now.getFullYear() + "-" + p(now.getMonth() + 1) + "-" + p(now.getDate()) + " " + p(now.getHours()) + ":" + p(now.getMinutes())],
         ["요청 업체/성함", d.name],
-        ["연락처", d.phone],
+        ["회신 연락처(" + d.contactLabel + ")", d.phone],
         ["문의 유형", d.type],
         ["요청 품목 및 수량", d.message],
-        ["회신 방법", "위 연락처로 견적서(또는 발주 확인서) 회신"],
+        ["회신 방법", d.email ? "위 이메일로 견적서(또는 발주 확인서) 회신 — 이 메일에서 '답장'을 누르면 손님 이메일로 바로 보내집니다" : "위 전화번호로 연락 후 견적서(또는 발주 확인서) 회신"],
       ];
     }
 
@@ -311,6 +335,7 @@
         _captcha: "false",
         _honey: document.getElementById("cBotcheck").checked ? "bot" : "", // 봇이 채우면 FormSubmit이 버림
       };
+      if (d.email) payload._replyto = d.phone; // 받은 메일에서 '답장' → 손님 이메일로
       requestForm(d).forEach(([k, v]) => (payload[k] = v));
       let ok = false;
       try {

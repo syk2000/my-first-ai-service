@@ -1443,11 +1443,14 @@
     gap: 14px;
   }
 
-  .field-full label {
+  /* 문의 폼 항목 이름(회사명·연락처·문의 유형·문의 내용)을 모두 같은 크기·간격으로 */
+  .inquiry-form .form-row label,
+  .field-full > label {
     display: block;
-    font-size: 13px;
-    color: var(--text-sub);
-    margin-bottom: 6px;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 7px;
   }
 
   .inquiry-form input,
@@ -1470,6 +1473,12 @@
     outline: 2px solid var(--steel);
     outline-offset: 1px;
   }
+
+  /* 회신 받을 연락처: [전화번호|이메일] 선택 + 입력칸 */
+  .form-row.contact-row { grid-template-columns: 1fr 1.35fr; }
+  .contact-pick { display: flex; gap: 6px; }
+  .inquiry-form .contact-pick select { width: 96px; flex: none; padding-left: 8px; padding-right: 4px; }
+  .contact-pick input { flex: 1; min-width: 0; }
 
   .form-status {
     font-size: 13.5px;
