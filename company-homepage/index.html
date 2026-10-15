@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261015d">
+<link rel="stylesheet" href="styles.css?v=20261015e">
 </head>
 <body>
 
@@ -175,22 +175,36 @@
         </div>
       </div>
 
+      <!-- 광고 배너 (임시 문구 — 나중에 받은 이미지/문구로 교체: 각 .ad-slide 안을 <img>로 바꿔도 됨) -->
       <div class="hero-art">
-        <svg viewBox="0 0 320 320" width="280" height="280" role="img" aria-label="베어링 단면 예시 그림">
-          <circle cx="160" cy="160" r="140" fill="none" stroke="#28405c" stroke-width="1.5" />
-          <circle cx="160" cy="160" r="140" fill="none" stroke="#c98a2b" stroke-width="4" stroke-dasharray="4 10" />
-          <circle cx="160" cy="160" r="98" fill="#131f30" stroke="#4f7fb3" stroke-width="3" />
-          <circle cx="160" cy="160" r="54" fill="#0c1420" stroke="#28405c" stroke-width="3" />
-          <circle cx="160" cy="160" r="14" fill="#0c1420" stroke="#6d84a0" stroke-width="2" />
-          <g fill="#eef2f6" stroke="#0c1420" stroke-width="1.5">
-            <circle cx="160" cy="82" r="11" />
-            <circle cx="228" cy="121" r="11" />
-            <circle cx="228" cy="199" r="11" />
-            <circle cx="160" cy="238" r="11" />
-            <circle cx="92" cy="199" r="11" />
-            <circle cx="92" cy="121" r="11" />
-          </g>
-        </svg>
+        <div class="ad-banner" aria-roledescription="carousel" aria-label="SWS 안내 배너">
+          <a class="ad-slide ad-1 is-active" href="brands.html">
+            <img class="ad-logo" src="assets/sws-logo.webp" alt="" width="45" height="34" />
+            <span class="ad-eyebrow">OFFICIAL DISTRIBUTOR</span>
+            <strong class="ad-title">공식 대리점 정품 취급</strong>
+            <span class="ad-desc">NACHI · IBC · JIB · WBC · JMC · ILJIN · TYB 정품을 대리점 자격으로 직접 공급합니다.</span>
+            <span class="ad-cta">취급 브랜드 보기 →</span>
+          </a>
+          <a class="ad-slide ad-2" href="#finder" tabindex="-1">
+            <img class="ad-logo" src="assets/sws-logo.webp" alt="" width="45" height="34" />
+            <span class="ad-eyebrow">SPEC SEARCH</span>
+            <strong class="ad-title">치수만 알아도 바로 찾기</strong>
+            <span class="ad-desc">내경·외경·두께 중 아는 값만 입력하면 등록된 규격을 바로 확인할 수 있습니다.</span>
+            <span class="ad-cta">규격 검색하기 →</span>
+          </a>
+          <a class="ad-slide ad-3" href="board.html" tabindex="-1">
+            <img class="ad-logo" src="assets/sws-logo.webp" alt="" width="45" height="34" />
+            <span class="ad-eyebrow">QUOTE &amp; ORDER</span>
+            <strong class="ad-title">견적·발주 문의</strong>
+            <span class="ad-desc">카카오톡 또는 이메일로 문의하시면 담당자가 빠르게 회신드립니다.</span>
+            <span class="ad-cta">견적 문의하기 →</span>
+          </a>
+          <div class="ad-dots">
+            <button type="button" class="ad-dot is-active" aria-label="1"></button>
+            <button type="button" class="ad-dot" aria-label="2"></button>
+            <button type="button" class="ad-dot" aria-label="3"></button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -439,10 +453,10 @@
   </footer>
 
 <script src="assets/spec-data.js?v=20261010a"></script>
-<script src="i18n/common.dict.js?v=20261015d"></script>
-<script src="i18n/pages/index.dict.js?v=20261015d"></script>
-<script src="i18n.js?v=20261015d"></script>
-<script src="common.js?v=20261015d"></script>
+<script src="i18n/common.dict.js?v=20261015e"></script>
+<script src="i18n/pages/index.dict.js?v=20261015e"></script>
+<script src="i18n.js?v=20261015e"></script>
+<script src="common.js?v=20261015e"></script>
 <script>
     const MAX_RESULTS = 200;
     const TOLERANCE = 0.51; // mm — absorbs typing an integer against an x.5 nominal value

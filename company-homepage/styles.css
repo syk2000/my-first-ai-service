@@ -567,6 +567,105 @@
     justify-content: center;
   }
 
+  /* ---------- 메인 오른쪽 광고 배너 (자동 넘김) ---------- */
+  .ad-banner {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    aspect-ratio: 16 / 10;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 18px 50px rgba(8, 14, 60, 0.45);
+  }
+  .ad-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 34px 38px 46px;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease, visibility 0.6s;
+  }
+  .ad-slide.is-active { opacity: 1; visibility: visible; transform: none; }
+  .ad-1 { background: linear-gradient(135deg, #e8892b 0%, #c4561d 100%); }
+  .ad-2 { background: linear-gradient(135deg, #0f9fb8 0%, #1d4fc4 100%); }
+  .ad-3 { background: linear-gradient(135deg, #14213d 0%, #3a2fa8 100%); }
+  .ad-slide::after {
+    /* 은은한 원형 무늬 */
+    content: "";
+    position: absolute;
+    right: -70px;
+    bottom: -90px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 36px solid rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  .ad-logo {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    height: 34px;
+    width: auto;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+  }
+  .ad-eyebrow {
+    font-family: var(--font-display-en);
+    font-size: 12.5px;
+    letter-spacing: 0.14em;
+    opacity: 0.85;
+  }
+  .ad-title {
+    font-family: var(--font-display-kr);
+    font-size: clamp(26px, 2.6vw, 34px);
+    font-weight: 900;
+    line-height: 1.2;
+  }
+  .ad-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 34ch;
+    opacity: 0.92;
+  }
+  .ad-cta {
+    align-self: flex-start;
+    margin-top: 6px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #16213a;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .ad-slide:hover .ad-cta { background: #fff; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); }
+  .ad-dots {
+    position: absolute;
+    left: 38px;
+    bottom: 18px;
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+  }
+  .ad-dot {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: width 0.3s, background 0.3s;
+  }
+  .ad-dot.is-active { width: 26px; background: #fff; }
+
   /* ---------- Section shell ---------- */
 
   section.page-section {

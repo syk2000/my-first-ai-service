@@ -218,3 +218,26 @@
     document.addEventListener("dragstart", (e) => {
       if (!e.target.closest("input, textarea, .spec-table")) e.preventDefault();
     });
+
+    // 메인 오른쪽 광고 배너: 5초마다 다음 장, 점을 누르면 해당 장. 마우스를 올리면 멈춤
+    (function adBanner() {
+      const box = document.querySelector(".ad-banner");
+      if (!box) return;
+      const slides = [...box.querySelectorAll(".ad-slide")];
+      const dots = [...box.querySelectorAll(".ad-dot")];
+      let cur = 0;
+      let timer;
+      function go(i) {
+        cur = (i + slides.length) % slides.length;
+        slides.forEach((s, k) => {
+          s.classList.toggle("is-active", k === cur);
+          s.tabIndex = k === cur ? 0 : -1;
+        });
+        dots.forEach((d, k) => d.classList.toggle("is-active", k === cur));
+      }
+      const start = () => { clearInterval(timer); timer = setInterval(() => go(cur + 1), 5000); };
+      dots.forEach((d, k) => d.addEventListener("click", () => { go(k); start(); }));
+      box.addEventListener("mouseenter", () => clearInterval(timer));
+      box.addEventListener("mouseleave", start);
+      start();
+    })();
