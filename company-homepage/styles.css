@@ -566,8 +566,7 @@
     display: flex;
     justify-content: center;
   }
-  /* 배너는 본문 폭 밖 오른쪽 화면 끝 가까이(여백 32px)까지 확장 */
-  .hero-art:has(.ad-banner) { margin-right: calc(-1 * max(0px, (100vw - 1112px) / 2 - 40px)); }
+  /* 배너 오른쪽 끝 = 상단 언어 선택(KOR) 버튼 오른쪽 끝(본문 폭 끝) */
 
   /* ---------- 메인 오른쪽 광고 배너 (자동 넘김) ---------- */
   .ad-banner {
