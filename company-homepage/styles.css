@@ -470,7 +470,12 @@
     color: var(--text-sub);
   }
 
+  /* 왼쪽 글 묶음 폭 = 제목 가장 긴 줄("베어링 유통파트너") 폭 → 돌아가는 로고 줄도 그 폭까지만 */
+  .hero-grid > div:first-child { width: fit-content; max-width: 100%; }
+  .hero p.lede { contain: inline-size; }
+
   .hero-marquee-viewport {
+    contain: inline-size;
     overflow: hidden;
     margin-top: 20px;
     -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
