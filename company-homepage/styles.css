@@ -446,8 +446,8 @@
 
   .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-    gap: 40px;
+    grid-template-columns: fit-content(560px) minmax(0, 1fr); /* 왼쪽 글 묶음은 제목 폭만큼(최대 560px), 나머지는 배너 */
+    gap: 56px;
     align-items: center;
   }
 
@@ -571,8 +571,7 @@
   .ad-banner {
     position: relative;
     width: 100%;
-    max-width: 540px;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 10.5;
     border-radius: 18px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.28);
@@ -585,7 +584,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    padding: 34px 38px 46px;
+    padding: 44px 52px 58px;
     color: #fff;
     text-decoration: none;
     opacity: 0;
@@ -603,17 +602,17 @@
     position: absolute;
     right: -70px;
     bottom: -90px;
-    width: 280px;
-    height: 280px;
+    width: 380px;
+    height: 380px;
     border-radius: 50%;
-    border: 36px solid rgba(255, 255, 255, 0.1);
+    border: 46px solid rgba(255, 255, 255, 0.1);
     pointer-events: none;
   }
   .ad-logo {
     position: absolute;
-    top: 22px;
-    right: 24px;
-    height: 34px;
+    top: 26px;
+    right: 30px;
+    height: 42px;
     width: auto;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
   }
@@ -625,12 +624,12 @@
   }
   .ad-title {
     font-family: var(--font-display-kr);
-    font-size: clamp(26px, 2.6vw, 34px);
+    font-size: clamp(30px, 3.2vw, 42px);
     font-weight: 900;
     line-height: 1.2;
   }
   .ad-desc {
-    font-size: 15px;
+    font-size: 16.5px;
     line-height: 1.6;
     max-width: 34ch;
     opacity: 0.92;
@@ -648,8 +647,8 @@
   .ad-slide:hover .ad-cta { background: #fff; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); }
   .ad-dots {
     position: absolute;
-    left: 38px;
-    bottom: 18px;
+    left: 52px;
+    bottom: 24px;
     display: flex;
     gap: 8px;
     z-index: 2;
