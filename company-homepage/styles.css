@@ -401,7 +401,7 @@
   /* 메인 첫 화면: 파랑·보라 그라데이션 + 떠다니는 반투명 사각형·별 장식, 안쪽 글자는 흰색 계열 */
   .hero {
     position: relative;
-    padding-block: 72px 88px;
+    padding-block: 40px 44px;
     overflow: hidden;
     --text: #ffffff;
     --text-sub: rgba(255, 255, 255, 0.86);
@@ -571,7 +571,7 @@
   .ad-banner {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10.5;
+    aspect-ratio: 4 / 3;
     border-radius: 18px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.28);
