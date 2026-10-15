@@ -447,7 +447,7 @@
   .hero-grid {
     display: grid;
     grid-template-columns: fit-content(560px) minmax(0, 1fr); /* 왼쪽 글 묶음은 제목 폭만큼(최대 560px), 나머지는 배너 */
-    gap: 56px;
+    gap: 32px;
     align-items: center;
   }
 
@@ -566,12 +566,14 @@
     display: flex;
     justify-content: center;
   }
+  /* 배너는 본문 폭 밖 오른쪽 화면 끝 가까이(여백 32px)까지 확장 */
+  .hero-art:has(.ad-banner) { margin-right: calc(-1 * max(0px, (100vw - 1112px) / 2 - 40px)); }
 
   /* ---------- 메인 오른쪽 광고 배너 (자동 넘김) ---------- */
   .ad-banner {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 480px;
     border-radius: 18px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.28);
