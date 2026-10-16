@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261016d">
+<link rel="stylesheet" href="styles.css?v=20261016e">
 </head>
 <body>
 
@@ -188,10 +188,10 @@
       </nav>
     </div>
   </footer>
-<script src="i18n/common.dict.js?v=20261016d"></script>
-<script src="i18n/pages/board.dict.js?v=20261016d"></script>
-<script src="i18n.js?v=20261016d"></script>
-<script src="common.js?v=20261016d"></script>
+<script src="i18n/common.dict.js?v=20261016e"></script>
+<script src="i18n/pages/board.dict.js?v=20261016e"></script>
+<script src="i18n.js?v=20261016e"></script>
+<script src="common.js?v=20261016e"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: FormSubmit(무료, 키 불필요)으로 INQUIRY_EMAIL에 '견적·발주 요청서' 표 양식 메일 자동 발송.
@@ -238,6 +238,30 @@
     // 언어를 바꾸면 선택칸 내용이 다시 그려지므로 고른 종류를 되살림
     window.addEventListener("i18n:applied", () => { contactKind.value = lastKind; syncContactKind(); });
     syncContactKind();
+
+    // 전화번호는 숫자만 입력해도 하이픈 자동 삽입 (010-1234-5678 / 02-123-4567 / 031-123-4567 / 1588-1234)
+    function formatPhone(raw) {
+      const n = raw.replace(/\D/g, "").slice(0, 11);
+      if (/^1[5-9]/.test(n)) return n.length > 4 ? n.slice(0, 4) + "-" + n.slice(4, 8) : n; // 대표번호
+      const a = n.startsWith("02") ? 2 : 3; // 지역번호 길이(서울 02만 2자리)
+      if (n.length <= a) return n;
+      const rest = n.slice(a);
+      // 남은 자리: 7자리 이하면 3-4, 8자리면 4-4
+      const mid = rest.length <= 7 ? 3 : 4;
+      return rest.length <= mid ? n.slice(0, a) + "-" + rest : n.slice(0, a) + "-" + rest.slice(0, mid) + "-" + rest.slice(mid);
+    }
+    contactInput.addEventListener("input", () => {
+      if (contactKind.value !== "phone") return;
+      const before = contactInput.value;
+      const digitsLeft = before.slice(0, contactInput.selectionStart).replace(/\D/g, "").length;
+      const after = formatPhone(before);
+      if (after === before) return;
+      contactInput.value = after;
+      // 커서를 같은 숫자 뒤로 되돌려 중간 수정도 자연스럽게
+      let pos = 0, seen = 0;
+      while (pos < after.length && seen < digitsLeft) { if (/\d/.test(after[pos])) seen++; pos++; }
+      contactInput.setSelectionRange(pos, pos);
+    });
 
     function readForm() {
       const email = contactKind.value === "email";
