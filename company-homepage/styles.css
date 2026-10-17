@@ -445,7 +445,8 @@
 
   .hero-grid {
     display: grid;
-    grid-template-columns: fit-content(560px) minmax(0, 1fr); /* 왼쪽 글 묶음은 제목 폭만큼(최대 560px), 나머지는 배너 */
+    /* 왼쪽 글 묶음 폭 = 한국어 제목 가장 긴 줄("베어링 유통파트너", 약 7.65em) — 언어가 바뀌어도 배너 크기가 같도록 고정 */
+    grid-template-columns: calc(7.65 * clamp(34px, 5vw, 54px)) minmax(0, 1fr);
     gap: 32px;
     align-items: center;
   }
@@ -470,7 +471,9 @@
   }
 
   /* 왼쪽 글 묶음 폭 = 제목 가장 긴 줄("베어링 유통파트너") 폭 → 돌아가는 로고 줄도 그 폭까지만 */
-  .hero-grid > div:first-child { width: fit-content; max-width: 100%; }
+  .hero-grid > div:first-child { min-width: 0; }
+  /* 영어 제목은 단어가 길어 한국어와 같은 3줄·같은 폭에 들어가도록 글자만 조금 줄임 */
+  html[lang="en"] .hero h1 { font-size: calc(0.73 * clamp(34px, 5vw, 54px)); }
   .hero p.lede { contain: inline-size; }
 
   .hero-marquee-viewport {
