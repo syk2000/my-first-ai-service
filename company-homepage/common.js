@@ -102,14 +102,11 @@
       if (e.key === "Escape") closeLangMenu();
     });
 
-    // 최근 본 품번 기록 — 규격표·검색 결과에서 행을 누르면 그 품번(예: 6205)을 남겨 견적문의(board.html)에서
-    // 보여줍니다. sessionStorage를 쓰므로 홈페이지(탭)를 닫으면 기록이 자동으로 초기화됩니다.
-    // 항목: { m: 품번, u: 제품 페이지, n: { KOR: 제품 종류, ENG/JPN/CHN: 번역 이름(있으면) } }
+    // 견적 목록 — 규격 검색 결과에서 [담기]를 누른 품번(예: 6205)을 남겨 견적문의(board.html)에서 보여줍니다.
+    // sessionStorage를 쓰므로 홈페이지(탭)를 닫으면 목록이 자동으로 초기화됩니다.
+    // 항목: { m: 품번, u: 제품 페이지, n: { KOR: 제품 종류 } }
     const RECENT_KEY = "recentModels";
     const RECENT_MAX = 20;
-    const pageFile = location.pathname.split("/").pop() || "index.html";
-    const shortName = (title) => title.split(" | ")[0].trim();
-
     function readRecent() {
       try { return JSON.parse(sessionStorage.getItem(RECENT_KEY)) || []; } catch (e) { return []; }
     }
@@ -117,44 +114,7 @@
       try { sessionStorage.setItem(RECENT_KEY, JSON.stringify(list)); } catch (e) {}
     }
 
-    // 이 시점엔 번역 적용 전이라 제목이 항상 한국어 — 다른 언어 이름은 페이지 사전에서 가져옴
-    const pageKind = (() => {
-      const names = { KOR: shortName(document.title) };
-      const pageText = window.I18N_PAGE && window.I18N_PAGE.text;
-      const LANG_KEYS = { ENG: "en", JPN: "ja", CHN: "zh" };
-      Object.keys(LANG_KEYS).forEach((code) => {
-        const tr = pageText && pageText[LANG_KEYS[code]] && pageText[LANG_KEYS[code]][document.title];
-        if (tr) names[code] = shortName(tr);
-      });
-      return names;
-    })();
-
-    // 클릭한 칸이 속한 행의 품번 — rowspan으로 위 행과 품번 칸을 공유하는 표도 처리
-    function modelOf(td) {
-      const tr = td.parentElement;
-      const tbody = tr.parentElement;
-      const heads = [...tbody.closest("table").querySelectorAll("thead th")].map((th) => th.textContent.trim());
-      // 모든 열이 품번인 표(예: 키 b×h×L)는 누른 칸 자체가 품번
-      if (heads.length > 1 && heads.every((h) => h === heads[0])) return td.textContent.trim();
-      const grid = [];
-      [...tbody.rows].forEach((row, r) => {
-        grid[r] = grid[r] || [];
-        let c = 0;
-        [...row.cells].forEach((cell) => {
-          while (grid[r][c]) c++;
-          for (let i = 0; i < cell.rowSpan; i++) {
-            for (let j = 0; j < cell.colSpan; j++) (grid[r + i] = grid[r + i] || [])[c + j] = cell;
-          }
-          c += cell.colSpan;
-        });
-      });
-      const cells = grid[tr.sectionRowIndex] || [];
-      // 품번 칸 없이 치수로 구분하는 표(오일씰: d·D·H)는 치수를 이어 붙임
-      if (/^d\s*\(/.test(heads[0] || "")) return cells.slice(0, 3).map((c) => c.textContent.trim()).join("×");
-      return cells[0] ? cells[0].textContent.trim() : "";
-    }
-
-    // 알림창 전체가 견적문의 링크: 누르면 견적문의 페이지로 이동(최근 본 품번에 방금 품번이 들어 있음)
+    // 알림창 전체가 견적문의 링크: 누르면 견적문의 페이지로 이동(견적 목록에 방금 담은 품번이 들어 있음)
     function showToast(text, linkText) {
       let toast = document.getElementById("siteToast");
       if (!toast) {
@@ -181,21 +141,20 @@
       showToast.timer = setTimeout(() => document.getElementById("siteToast").classList.remove("show"), ms);
     }
 
+    // 견적 목록 담기 — 규격 검색 결과의 [담기] 버튼으로만 추가. 제품 규격 페이지의 표는 보기 전용(클릭 동작 없음)
     document.addEventListener("click", (e) => {
-      const td = e.target.closest("table.spec-table tbody td");
-      // 복사하려고 글자를 드래그해 선택한 경우는 기록하지 않음
-      if (!td || String(window.getSelection())) return;
-      const tr = td.parentElement;
+      const btn = e.target.closest("tr[data-p] .quote-add");
+      if (!btn) return;
+      const tr = btn.closest("tr");
       // 규격 검색 결과 행은 [제품유형, 제품명, …] 순서이고 제품 페이지를 data-p로 갖고 있음
-      const entry = tr.dataset.p
-        ? { m: tr.cells[1].textContent.trim(), u: tr.dataset.p, n: { KOR: tr.dataset.c } }
-        : { m: modelOf(td), u: pageFile, n: pageKind };
+      const entry = { m: tr.cells[1].textContent.trim(), u: tr.dataset.p, n: { KOR: tr.dataset.c } };
       if (!entry.m || entry.m === "-") return;
       writeRecent([entry, ...readRecent().filter((r) => !(r.m === entry.m && r.u === entry.u))].slice(0, RECENT_MAX));
-      document.querySelectorAll("tr.row-picked").forEach((r) => r.classList.remove("row-picked"));
       tr.classList.add("row-picked");
       const t = window.I18N ? window.I18N.t : (s) => s;
-      showToast(t("최근 본 품번에 추가했습니다") + ": " + entry.m, t("견적문의로 가기") + " →");
+      btn.textContent = t("담김");
+      btn.classList.add("is-added");
+      showToast(t("견적 목록에 담았습니다") + ": " + entry.m, t("견적문의로 가기") + " →");
     });
 
     // 견적문의의 품번 링크(…html#pick=6205)로 들어오면 해당 행으로 스크롤해 표시

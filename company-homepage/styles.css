@@ -1855,10 +1855,22 @@
     color: var(--text-faint);
   }
 
-  /* 규격표 행 클릭 → 최근 본 품번 기록 */
-  table.spec-table tbody td { cursor: pointer; }
+  /* 규격표는 보기 전용. 규격 검색 결과의 [담기] 버튼으로만 견적 목록에 추가 */
   table.spec-table tbody tr:hover td { background: rgba(79, 127, 179, 0.08); }
   table.spec-table tbody tr.row-picked td { background: rgba(201, 138, 43, 0.18); }
+  .quote-cell { text-align: center; white-space: nowrap; }
+  .quote-add {
+    font: inherit;
+    font-size: 12.5px;
+    padding: 4px 12px;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+  }
+  .quote-add:hover { background: var(--accent); color: #fff; }
+  .quote-add.is-added { background: var(--accent); color: #fff; }
 
   .site-toast {
     position: fixed;
