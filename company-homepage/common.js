@@ -160,7 +160,10 @@
     // 견적문의의 품번 링크(…html#pick=6205)로 들어오면 해당 행으로 스크롤해 표시
     if (location.hash.startsWith("#pick=")) {
       const model = decodeURIComponent(location.hash.slice(6));
-      const hit = [...document.querySelectorAll("table.spec-table tbody td")].find((td) => td.textContent.trim() === model);
+      // 표에 "P201 (PPL201)"처럼 병기된 형번도 찾도록 앞부분 일치까지 허용
+      const tds = [...document.querySelectorAll("table.spec-table tbody td")];
+      const text = (td) => td.textContent.replace(/\s+/g, " ").trim();
+      const hit = tds.find((td) => text(td) === model) || tds.find((td) => text(td).startsWith(model + " "));
       if (hit) {
         const details = hit.closest("details");
         if (details) details.open = true;
