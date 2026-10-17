@@ -172,11 +172,14 @@
       }
     }
 
-    // 우클릭 / 드래그 방지 (참고: 규격 검색 결과표·입력창은 CSS에서 선택·복사 예외 처리됨)
-    document.addEventListener("contextmenu", (e) => e.preventDefault());
-    document.addEventListener("dragstart", (e) => {
-      if (!e.target.closest("input, textarea, .spec-table")) e.preventDefault();
-    });
+    // 우클릭 / 드래그 / 복사 방지 — 규격표 내용을 긁어 가지 못하게 함 (입력창만 예외, 선택 차단은 styles.css의 user-select)
+    const isField = (el) => el && el.closest && el.closest("input, textarea, select");
+    document.addEventListener("contextmenu", (e) => { if (!isField(e.target)) e.preventDefault(); });
+    document.addEventListener("dragstart", (e) => { if (!isField(e.target)) e.preventDefault(); });
+    document.addEventListener("selectstart", (e) => { if (!isField(e.target)) e.preventDefault(); });
+    ["copy", "cut"].forEach((type) => document.addEventListener(type, (e) => {
+      if (!isField(document.activeElement)) e.preventDefault();
+    }));
 
     // 메인 오른쪽 광고 배너: 4.5초마다 다음 장, 점을 누르면 해당 장. 마우스를 올리면 멈춤
     (function adBanner() {

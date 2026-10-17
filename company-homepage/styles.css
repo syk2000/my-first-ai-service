@@ -51,8 +51,7 @@
     user-select: none;
   }
 
-  input, textarea, select,
-  .spec-table, .spec-table * {
+  input, textarea, select {
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text;
