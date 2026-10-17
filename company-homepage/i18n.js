@@ -2,7 +2,7 @@
 // 전용 사전(i18n/pages/<파일명>.dict.js → window.I18N_PAGE)을 읽어, 한국어 원문과 정확히 일치하는
 // "리프 요소"(블록 자식이 없는 요소)의 innerHTML을 치환합니다. .dict.js 파일은 같은 이름의 .json을
 // 원본으로 i18n/build.js가 생성한 결과물이며, 반드시 이 스크립트보다 먼저 <script>로 로드되어 있어야 합니다.
-// 표(tbody) 안의 규격 데이터는 절대 건드리지 않습니다.
+// 표(tbody) 안의 규격 데이터는 건드리지 않습니다(사전에 있는 한국어 설명 칸만 예외).
 (function () {
   var BLOCK_TAGS = { HTML: 1, HEAD: 1, BODY: 1, DIV: 1, SECTION: 1, TABLE: 1, THEAD: 1, TBODY: 1, TR: 1, UL: 1, OL: 1, DETAILS: 1, HEADER: 1, FOOTER: 1, NAV: 1, FORM: 1, ARTICLE: 1 };
   // 자식이 전부 "항목형"(title/meta, th/td, li)이라 BLOCK_TAGS 자식-검사로는 못 잡는 태그 —
@@ -71,6 +71,16 @@
       }
       for (var i = 0; i < el.children.length; i++) walk(el.children[i]);
     })(root);
+
+    // 예외: 표 안의 한국어 설명 칸(재질 설명, "문의" 등)만 개별 칸 단위로 번역 대상에 넣음 —
+    // 사전에 정확히 같은 원문이 있을 때만 바뀌고(applyOnce), 숫자·형번 칸은 한국어가 없어 손대지 않음
+    var cells = root.querySelectorAll('tbody td, tbody th');
+    for (var c = 0; c < cells.length; c++) {
+      var cell = cells[c];
+      if (!hasKorean(cell.textContent) || inNoTranslateZone(cell)) continue;
+      if (cell.querySelector('input, select, textarea, button, table')) continue;
+      leaves.push(cell);
+    }
 
     var all = root.querySelectorAll('*');
     for (var j = 0; j < all.length; j++) {
