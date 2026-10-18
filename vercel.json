@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/kakao.js": {
+      "includeFiles": "company-homepage/assets/spec-data.js"
+    }
+  }
+}
