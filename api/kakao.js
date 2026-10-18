@@ -91,7 +91,9 @@ const WELCOME =
 function answer(utterance, blockName) {
   const u = (utterance || "").trim();
   if (/웰컴|welcome/i.test(blockName || "")) return reply([text(WELCOME)]);
-  if (!u ||/^(도움말|사용법|규격 ?검색 ?방법|안녕|시작|처음|메뉴)/.test(u)) return reply([text(HELP)]);
+  // 인사·메뉴 요청은 첫인사와 같은 안내로(이미 대화한 적 있는 손님은 웰컴 블록이 다시 나오지 않음)
+  if (!u || /^(안녕|하이|시작|처음|메뉴|hi|hello)/i.test(u)) return reply([text(WELCOME)]);
+  if (/^(도움말|사용법|규격 ?검색 ?방법)/.test(u)) return reply([text(HELP)]);
   if (/견적|주문|문의/.test(u)) {
     return reply([
       {
