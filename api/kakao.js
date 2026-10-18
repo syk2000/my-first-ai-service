@@ -64,6 +64,7 @@ function searchUrl(query) {
 }
 
 const QUICK = [
+  { label: "처음으로", action: "message", messageText: "처음" },
   { label: "규격 검색 방법", action: "message", messageText: "도움말" },
   { label: "견적 문의", action: "message", messageText: "견적 문의" },
   { label: "연락처·위치", action: "message", messageText: "연락처" },
