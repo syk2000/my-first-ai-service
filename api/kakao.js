@@ -80,9 +80,18 @@ const HELP =
   "■ 치수로 찾기 (내경 외경 두께)\n예) 25 52 15  또는  25*52\n\n" +
   "찾는 규격이 없으면 '견적 문의'를 눌러 주세요.";
 
-function answer(utterance) {
+// 첫인사 — 오픈빌더 "웰컴 블록"(채팅방에 처음 들어왔을 때)에서 보냄
+const WELCOME =
+  "안녕하세요, SWS TECH입니다 😊\n" +
+  "베어링·오일씰·키·스냅링 등 규격을 바로 찾아드려요.\n\n" +
+  "■ 형번으로 찾기\n예) 6205, UC205, NK8/12\n\n" +
+  "■ 치수로 찾기 (내경 외경 두께)\n예) 25 52 15\n\n" +
+  "견적이나 상담은 아래 '견적 문의' 버튼을 눌러 주세요.";
+
+function answer(utterance, blockName) {
   const u = (utterance || "").trim();
-  if (!u || /^(도움말|사용법|규격 ?검색 ?방법|안녕|시작|처음|메뉴)/.test(u)) return reply([text(HELP)]);
+  if (/웰컴|welcome/i.test(blockName || "")) return reply([text(WELCOME)]);
+  if (!u ||/^(도움말|사용법|규격 ?검색 ?방법|안녕|시작|처음|메뉴)/.test(u)) return reply([text(HELP)]);
   if (/견적|주문|문의/.test(u)) {
     return reply([
       {
@@ -151,8 +160,10 @@ module.exports = (req, res) => {
     try { body = JSON.parse(body); } catch (e) { body = {}; }
   }
   const utterance = body && body.userRequest ? body.userRequest.utterance : "";
+  const blockName = (body && body.userRequest && body.userRequest.block && body.userRequest.block.name) ||
+    (body && body.intent && body.intent.name) || "";
   try {
-    res.status(200).json(answer(utterance));
+    res.status(200).json(answer(utterance, blockName));
   } catch (e) {
     res.status(200).json(reply([text("일시적인 오류로 답변하지 못했어요. 잠시 후 다시 시도하거나 02-2613-3040으로 연락 주세요.")]));
   }
