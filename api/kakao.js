@@ -67,15 +67,24 @@ function dedupe(rows) {
     const key = [form, r.d, r.D, r.h].join("|");
     const hit = seen.get(key);
     if (hit) {
-      if (!hit.sources.includes(r.c)) hit.sources.push(r.c);
+      // 국산(삼정) 표를 대표 카드로, 나머지(NOK 등)는 호환 형번으로 함께 표시
+      if (prio(r) < prio(hit)) {
+        hit.alts.unshift(hit.c + ": " + hit.m);
+        Object.assign(hit, r, { sources: [r.c, ...hit.sources.filter((c) => c !== r.c)] });
+      } else {
+        if (!hit.sources.includes(r.c)) hit.sources.push(r.c);
+        if (r.m !== hit.m) hit.alts.push(r.c + ": " + r.m);
+      }
       continue;
     }
-    const item = Object.assign({}, r, { sources: [r.c] });
+    const item = Object.assign({}, r, { sources: [r.c], alts: [] });
     seen.set(key, item);
     out.push(item);
   }
   return out;
 }
+const PRIO = { "oilseal_samjung.html": 0, "page_nok.html": 2, "plastic_unit_uc.html": 2 };
+const prio = (r) => (r.p in PRIO ? PRIO[r.p] : 1);
 
 function searchUrl(query) {
   const p = new URLSearchParams();
@@ -334,8 +343,9 @@ function answer(utterance, blockName) {
     ]);
   }
   const cards = rows.slice(0, MAX_CARDS).map((r) => ({
-    title: String(r.m).slice(0, 50),
-    description: `${r.sources.join(" · ")}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)`.slice(0, 230),
+    title: ((r.p === "oilseal_samjung.html" ? "삼정 오일씰 " : "") + r.m).slice(0, 50),
+    description: (`${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)` +
+      r.alts.map((a) => "\n" + a.replace(/^오일씰 NOK 호환표:/, "NOK 호환:")).join("")).slice(0, 230),
     buttons: [{ action: "webLink", label: "규격표 보기", webLinkUrl: SITE + r.p + "#pick=" + encodeURIComponent(r.m) }],
   }));
   const head =
