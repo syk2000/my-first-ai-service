@@ -140,8 +140,8 @@ const FORMS = {
   quote: {
     tag: "[견적 문의서]",
     name: "견적 문의서",
-    fields: ["회사명", "담당자", "연락처", "이메일", "품번/규격", "수량", "희망 납기", "요청사항"],
-    required: ["연락처", "품번/규격"],
+    fields: ["회사명/담당자", "품번/규격", "수량", "비고"],
+    required: ["회사명/담당자", "품번/규격"],
   },
   order: {
     tag: "[발주서]",
@@ -183,7 +183,7 @@ async function sendFormMail(parsed, userId) {
   const stamp = now.toISOString().slice(0, 16).replace("T", " ");
   const docNo = (form === FORMS.order ? "O-" : "Q-") + stamp.replace(/[-: ]/g, "").slice(0, 12);
   const payload = {
-    _subject: `[SWS 카카오톡] ${form.name} - ${values["회사명"] || values["담당자"] || "손님"}`,
+    _subject: `[SWS 카카오톡] ${form.name} - ${values["회사명/담당자"] || values["회사명"] || values["담당자"] || "손님"}`,
     _template: "table",
     _captcha: "false",
     "문서 구분": form.name + " (카카오톡 챗봇 접수)",
@@ -238,13 +238,13 @@ async function forwardImage(url, userId) {
 }
 
 async function submitForm(parsed, userId) {
-  const { form, missing } = parsed;
+  const { form, missing, values } = parsed;
   if (missing.length) {
     return reply([text(`${form.name}에 ${missing.map((m) => "'" + m + "'").join(", ")} 항목이 비어 있어요.\n채워서 다시 보내 주세요.`)]);
   }
   const { ok, docNo } = await sendFormMail(parsed, userId);
   if (ok) {
-    return reply([text(`${form.name}가 접수되었어요. (접수번호 ${docNo})\n담당자가 확인 후 적어 주신 연락처로 빠르게 회신드릴게요.\n급하시면 ${PHONE}으로 전화 주세요.` +
+    return reply([text(`${form.name}가 접수되었어요. (접수번호 ${docNo})\n${values["연락처"] ? "담당자가 확인 후 적어 주신 연락처로 빠르게 회신드릴게요." : "담당자가 확인 후 이 카카오톡으로 빠르게 회신드릴게요."}\n급하시면 ${PHONE}으로 전화 주세요.` +
       (form.note ? "\n\n사업자등록증 사진을 아직 안 보내셨다면 이 채팅방에 보내 주세요." : ""))]);
   }
   return reply([{
