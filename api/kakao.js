@@ -53,6 +53,30 @@ function search(query) {
   return hits.sort((a, b) => rank(a) - rank(b) || groupRank(a) - groupRank(b));
 }
 
+// 치수와 형태가 같은 규격은 한 번만 — 같은 오일씰이 NOK 호환표·삼정 규격표 등 여러 표에 실린 경우 등
+//  · 오일씰 형식표(oilseal_types)는 형식(TC·D·D3…)이 형태, NOK·삼정 표는 형식 표기가 없어 하나의 형태로 봄
+//  · 그 밖의 제품은 같은 형번 + 같은 치수일 때만 중복(예: 플라스틱 유닛과 볼 베어링 유닛의 UC205)
+const SEAL_PAGES = { "page_nok.html": 1, "oilseal_samjung.html": 1, "oilseal_types.html": 1 };
+function dedupe(rows) {
+  const seen = new Map();
+  const out = [];
+  for (const r of rows) {
+    const form = SEAL_PAGES[r.p]
+      ? "seal:" + (r.p === "oilseal_types.html" ? String(r.m).split(" ")[0] : "")
+      : "m:" + norm(String(r.m).replace(/[○●△⬠★☆◎]/g, ""));
+    const key = [form, r.d, r.D, r.h].join("|");
+    const hit = seen.get(key);
+    if (hit) {
+      if (!hit.sources.includes(r.c)) hit.sources.push(r.c);
+      continue;
+    }
+    const item = Object.assign({}, r, { sources: [r.c] });
+    seen.set(key, item);
+    out.push(item);
+  }
+  return out;
+}
+
 function searchUrl(query) {
   const p = new URLSearchParams();
   if (query.kind === "dim") {
@@ -303,7 +327,7 @@ function answer(utterance, blockName) {
   // "UC205 규격 알려줘"처럼 붙은 말은 떼고 검색
   const cleaned = u.replace(/(규격|품번|형번|치수|사이즈|검색|찾아\s*줘|찾아\s*주세요|알려\s*줘|알려\s*주세요|있어요|있나요|\?)/g, " ").replace(/\s+/g, " ").trim() || u;
   const query = parse(cleaned);
-  const rows = search(query);
+  const rows = dedupe(search(query));
   if (!rows.length) {
     return reply([
       text(`'${u}'에 맞는 등록 규격을 찾지 못했어요.\n형번은 일부만, 치수는 '내경 외경 두께' 순서로 입력해 보세요.\n찾는 품목이 없으면 '견적 문의'를 눌러 주세요.`),
@@ -311,7 +335,7 @@ function answer(utterance, blockName) {
   }
   const cards = rows.slice(0, MAX_CARDS).map((r) => ({
     title: String(r.m).slice(0, 50),
-    description: `${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)`.slice(0, 230),
+    description: `${r.sources.join(" · ")}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)`.slice(0, 230),
     buttons: [{ action: "webLink", label: "규격표 보기", webLinkUrl: SITE + r.p + "#pick=" + encodeURIComponent(r.m) }],
   }));
   const head =
