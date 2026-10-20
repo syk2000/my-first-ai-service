@@ -67,11 +67,16 @@ const QUICK = [
   { label: "처음으로", action: "message", messageText: "처음" },
   { label: "규격 검색 방법", action: "message", messageText: "도움말" },
   { label: "견적 문의", action: "message", messageText: "견적 문의" },
-  { label: "연락처·위치", action: "message", messageText: "연락처" },
+  { label: "발주 문의", action: "message", messageText: "발주 문의" },
+  { label: "상담", action: "message", messageText: "상담" },
+  { label: "FAQ", action: "message", messageText: "FAQ" },
 ];
 
-function reply(outputs) {
-  return { version: "2.0", template: { outputs, quickReplies: QUICK } };
+// outputs 배열, 또는 { outputs, quick }(바로가기 버튼을 바꿀 때)
+function reply(x) {
+  const outputs = Array.isArray(x) ? x : x.outputs;
+  const quick = Array.isArray(x) ? QUICK : x.quick;
+  return { version: "2.0", template: { outputs, quickReplies: quick } };
 }
 const text = (t) => ({ simpleText: { text: t } });
 
@@ -89,6 +94,175 @@ const WELCOME =
   "■ 치수로 찾기 (내경 외경 두께)\n예) 25 52 15\n\n" +
   "견적이나 상담은 아래 '견적 문의' 버튼을 눌러 주세요.";
 
+const PHONE = "02-2613-3040";
+
+// ── 견적·발주 양식: 손님이 길게 눌러 복사 → 채워서 보내면 메일(FormSubmit, 홈페이지 견적문의와 같은 받는 주소)로 접수
+const FORMS = {
+  quote: {
+    tag: "[견적 문의서]",
+    name: "견적 문의서",
+    fields: ["회사명", "담당자", "연락처", "이메일", "품번/규격", "수량", "희망 납기", "요청사항"],
+    required: ["연락처", "품번/규격"],
+  },
+  order: {
+    tag: "[발주서]",
+    name: "발주서",
+    fields: ["회사명", "사업자번호", "담당자", "연락처", "이메일(세금계산서)", "품번/규격", "수량", "견적번호(있으면)", "납품 주소", "희망 납기", "결제 방법", "요청사항"],
+    required: ["회사명", "연락처", "품번/규격"],
+  },
+};
+
+function formIntro(form) {
+  return [
+    text(
+      `${form.name} 양식이에요.\n` +
+      "아래 말풍선을 길게 눌러 복사한 뒤, 각 항목 ':' 뒤에 내용을 적어서 이 채팅방에 보내 주세요.\n\n" +
+      "품목이 여러 개면 품번/규격 칸에 '6205 10개, 6206 5개'처럼 이어서 적으시면 돼요."
+    ),
+    text(form.tag + "\n" + form.fields.map((f) => f + ": ").join("\n")),
+  ];
+}
+
+// 양식을 채워 보낸 메시지인지 확인하고 항목별로 나눔
+function parseForm(u) {
+  const form = Object.values(FORMS).find((f) => u.startsWith(f.tag));
+  if (!form) return null;
+  const values = {};
+  for (const line of u.split(/\r?\n/).slice(1)) {
+    const m = line.match(/^\s*([^:：]+)[:：]\s*(.*)$/);
+    if (m) values[m[1].trim()] = m[2].trim();
+  }
+  const missing = form.required.filter((k) => !values[k]);
+  return { form, values, missing };
+}
+
+async function sendFormMail(parsed, userId) {
+  const { form, values } = parsed;
+  const now = new Date(Date.now() + 9 * 3600 * 1000); // 한국 시간
+  const stamp = now.toISOString().slice(0, 16).replace("T", " ");
+  const docNo = (form === FORMS.order ? "O-" : "Q-") + stamp.replace(/[-: ]/g, "").slice(0, 12);
+  const payload = {
+    _subject: `[SWS 카카오톡] ${form.name} - ${values["회사명"] || values["담당자"] || "손님"}`,
+    _template: "table",
+    _captcha: "false",
+    "문서 구분": form.name + " (카카오톡 챗봇 접수)",
+    "문서번호": docNo,
+    "접수일시": stamp,
+  };
+  form.fields.forEach((f) => (payload[f] = values[f] || "-"));
+  if (values["이메일"] || values["이메일(세금계산서)"]) payload._replyto = values["이메일"] || values["이메일(세금계산서)"];
+  payload["카카오 사용자 ID"] = userId || "-";
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 3500); // 카카오는 5초 안에 답해야 함
+  try {
+    const r = await fetch(FORMSUBMIT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json", Referer: SITE + "board.html", Origin: "https://my-first-ai-service-pi.vercel.app" },
+      body: JSON.stringify(payload),
+      signal: ctrl.signal,
+    });
+    const res = await r.json().catch(() => ({}));
+    return { ok: r.ok && String(res.success) === "true", docNo };
+  } catch (e) {
+    return { ok: false, docNo };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+const FORMSUBMIT_URL = "https://formsubmit.co/ajax/06c8bd050147ba661797f96176c179f7";
+
+async function submitForm(parsed, userId) {
+  const { form, missing } = parsed;
+  if (missing.length) {
+    return reply([text(`${form.name}에 ${missing.map((m) => "'" + m + "'").join(", ")} 항목이 비어 있어요.\n채워서 다시 보내 주세요.`)]);
+  }
+  const { ok, docNo } = await sendFormMail(parsed, userId);
+  if (ok) {
+    return reply([text(`${form.name}가 접수되었어요. (접수번호 ${docNo})\n담당자가 확인 후 적어 주신 연락처로 빠르게 회신드릴게요.\n급하시면 ${PHONE}으로 전화 주세요.`)]);
+  }
+  return reply([{
+    textCard: {
+      title: "자동 접수가 되지 않았어요",
+      description: `일시적인 문제로 ${form.name}를 메일로 전달하지 못했어요.\n번거로우시겠지만 전화 또는 카톡 상담으로 알려 주세요.`,
+      buttons: [
+        { action: "phone", label: "전화 상담", phoneNumber: PHONE },
+        { action: "message", label: "카톡 상담", messageText: "카톡 상담" },
+      ],
+    },
+  }]);
+}
+
+// ── 상담: 카톡 상담 / 전화 상담
+const KAKAO_CONSULT =
+  "카톡 상담은 채팅 입력창 아래의 '상담 연결' 버튼을 누르면 담당자와 1:1 대화로 연결돼요.\n" +
+  "연결된 뒤 문의 내용을 남겨 주시면 확인 후 답변드릴게요.";
+function consult() {
+  return [{
+    textCard: {
+      title: "상담 방법을 선택해 주세요",
+      description: `• 카톡 상담: 담당자와 1:1 채팅\n• 전화 상담: ${PHONE}`,
+      buttons: [
+        { action: "message", label: "카톡 상담", messageText: "카톡 상담" },
+        { action: "phone", label: "전화 상담", phoneNumber: PHONE },
+      ],
+    },
+  }];
+}
+
+// ── 자주 하는 질문 (홈페이지에 있는 내용으로만 답함)
+const FAQ = [
+  {
+    short: "취급 제품",
+    q: "어떤 제품을 취급하나요?",
+    a: "베어링·베어링 유닛을 중심으로 아답타·로크너트·와셔, 키&핀, 파워록, 강구·볼 리테이너, 테이크업 유닛, 스냅링, 오일씰·오링·유압씰, 오일게이지, 오일레스 부시, 접시·금형 스프링, 볼 플런저, 유닛 하우징, LM가이드 블록을 취급해요.",
+    link: ["취급 제품 보기", "about-product.html"],
+  },
+  {
+    short: "브랜드·정품",
+    q: "정품인가요? 어떤 브랜드가 있나요?",
+    a: "NACHI·IBC·JIB·WBC·JMC·ILJIN·TYB 제품을 공식 대리점 자격으로 직접 공급해요. 그 밖의 국내외 브랜드도 취급해요.",
+    link: ["취급 브랜드 보기", "brands.html"],
+  },
+  {
+    short: "형번 모를 때",
+    q: "형번을 모르면 어떻게 찾나요?",
+    a: "치수만 알아도 찾을 수 있어요. 이 채팅에 '내경 외경 두께' 순서로 보내 주세요.\n예) 25 52 15  또는  25*52",
+  },
+  {
+    short: "견적 방법",
+    q: "견적은 어떻게 받나요?",
+    a: "하단 메뉴의 '견적문의'를 누르면 견적 문의서 양식이 나와요. 양식을 채워 보내 주시면 담당자가 확인 후 회신드려요.",
+  },
+  {
+    short: "발주 방법",
+    q: "발주는 어떻게 하나요?",
+    a: "하단 메뉴의 '발주문의'를 누르면 발주서 양식이 나와요. 회사명·연락처·품번·수량을 적어 보내 주시면 접수돼요.",
+  },
+  {
+    short: "카탈로그",
+    q: "카탈로그를 볼 수 있나요?",
+    a: "홈페이지 카탈로그 페이지에서 볼 수 있어요.",
+    link: ["카탈로그 보기", "catalog.html"],
+  },
+  {
+    short: "위치·연락처",
+    q: "회사 위치와 연락처는?",
+    a: `TEL ${PHONE} · FAX 02-2613-3042\n서울 구로구 경인로53길 32, 미래에코타워 B101·102호`,
+    link: ["찾아오시는 길", "introduce.html#directions"],
+  },
+];
+function faqList() {
+  return {
+    outputs: [text("자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n" + FAQ.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
+    quick: [...FAQ.map((f) => ({ label: f.short, action: "message", messageText: f.q })), QUICK[0]],
+  };
+}
+function faqAnswer(f) {
+  const card = { title: "Q. " + f.q, description: f.a.slice(0, 400) };
+  if (f.link) card.buttons = [{ action: "webLink", label: f.link[0], webLinkUrl: SITE + f.link[1] }];
+  return [{ textCard: card }, text("다른 질문은 'FAQ'를 눌러 주세요.")];
+}
+
 function answer(utterance, blockName) {
   const u = (utterance || "").trim();
   if (/웰컴|welcome/i.test(blockName || "")) return reply([text(WELCOME)]);
@@ -103,20 +277,14 @@ function answer(utterance, blockName) {
       "■ 치수 (내경 외경 두께)\n예) 25 52 15  또는  25*52"
     )]);
   }
-  if (/견적|주문|문의/.test(u)) {
-    return reply([
-      {
-        textCard: {
-          title: "견적 문의",
-          description: "형번·수량을 이 채팅에 남겨 주시면 담당자가 확인 후 답변드립니다.\n홈페이지 견적문의 양식으로도 접수할 수 있어요.",
-          buttons: [
-            { action: "webLink", label: "견적문의 양식", webLinkUrl: SITE + "board.html" },
-            { action: "phone", label: "전화 문의", phoneNumber: "02-2613-3040" },
-          ],
-        },
-      },
-    ]);
-  }
+  const compact = u.replace(/\s+/g, "");
+  if (/^(발주|주문)(문의|하기|서)?$/.test(compact)) return reply(formIntro(FORMS.order));
+  if (/^견적(문의|요청|서)?$/.test(compact) || /^문의(하기)?$/.test(compact)) return reply(formIntro(FORMS.quote));
+  if (/^카톡상담$/.test(compact)) return reply([text(KAKAO_CONSULT)]);
+  if (/^(상담|상담문의|상담하기|전화상담)$/.test(compact)) return reply(consult(compact === "전화상담"));
+  if (/^(FAQ|자주(하는|묻는)질문)$/i.test(compact)) return reply(faqList());
+  const faq = FAQ.find((f) => f.q.replace(/\s+/g, "") === compact.replace(/^Q\.?/, ""));
+  if (faq) return reply(faqAnswer(faq));
   if (/연락처|전화|위치|주소|오시는|팩스/.test(u)) {
     return reply([
       {
@@ -163,7 +331,7 @@ function answer(utterance, blockName) {
   return reply(outputs);
 }
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
   if (req.method !== "POST") {
     res.status(200).json({ ok: true, info: "SWS TECH kakao skill — POST only" });
     return;
@@ -173,10 +341,12 @@ module.exports = (req, res) => {
     try { body = JSON.parse(body); } catch (e) { body = {}; }
   }
   const utterance = body && body.userRequest ? body.userRequest.utterance : "";
+  const userId = body && body.userRequest && body.userRequest.user ? body.userRequest.user.id : "";
   const blockName = (body && body.userRequest && body.userRequest.block && body.userRequest.block.name) ||
     (body && body.intent && body.intent.name) || "";
   try {
-    res.status(200).json(answer(utterance, blockName));
+    const parsed = parseForm((utterance || "").trim());
+    res.status(200).json(parsed ? await submitForm(parsed, userId) : answer(utterance, blockName));
   } catch (e) {
     res.status(200).json(reply([text("일시적인 오류로 답변하지 못했어요. 잠시 후 다시 시도하거나 02-2613-3040으로 연락 주세요.")]));
   }
