@@ -152,7 +152,7 @@ const FORMS = {
   },
 };
 
-function formIntro(form, item) {
+function formIntro(form, item, qty) {
   return [
     text(
       `${form.name} 양식이에요.\n` +
@@ -160,7 +160,7 @@ function formIntro(form, item) {
       "품목이 여러 개면 품번/규격 칸에 '6205 10개, 6206 5개'처럼 이어서 적으시면 돼요." +
       (form.note ? "\n\n" + form.note : "")
     ),
-    text(form.tag + "\n" + form.fields.map((f) => f + ": " + (item && f === "품번/규격" ? item : "")).join("\n")),
+    text(form.tag + "\n" + form.fields.map((f) => f + ": " + ((f === "품번/규격" && item) || (f === "수량" && qty) || "")).join("\n")),
   ];
 }
 
@@ -243,6 +243,21 @@ async function submitForm(parsed, userId) {
     return reply([text(`${form.name}에 ${missing.map((m) => "'" + m + "'").join(", ")} 항목이 비어 있어요.\n채워서 다시 보내 주세요.`)]);
   }
   const { ok, docNo } = await sendFormMail(parsed, userId);
+  if (ok && form === FORMS.quote) {
+    // 견적 접수 안내에 [발주하기] — 견적서를 받은 뒤 이 버튼으로 같은 품번·수량이 채워진 발주서를 바로 열 수 있음
+    const item = values["품번/규격"];
+    const qty = values["수량"];
+    return reply([{
+      textCard: {
+        title: `견적 문의서가 접수되었어요`,
+        description: `접수번호 ${docNo}\n담당자가 확인 후 이 카카오톡으로 견적서를 보내드릴게요.\n견적서를 받고 주문하실 때 아래 [발주하기]를 눌러 주세요.`,
+        buttons: [
+          { action: "message", label: "발주하기", messageText: "발주 문의: " + item + (qty ? " | 수량 " + qty : "") },
+          { action: "phone", label: "전화 문의", phoneNumber: PHONE },
+        ],
+      },
+    }]);
+  }
   if (ok) {
     return reply([text(`${form.name}가 접수되었어요. (접수번호 ${docNo})\n${values["연락처"] ? "담당자가 확인 후 적어 주신 연락처로 빠르게 회신드릴게요." : "담당자가 확인 후 이 카카오톡으로 빠르게 회신드릴게요."}\n급하시면 ${PHONE}으로 전화 주세요.` +
       (form.note ? "\n\n사업자등록증 사진을 아직 안 보내셨다면 이 채팅방에 보내 주세요." : ""))]);
@@ -346,7 +361,11 @@ function answer(utterance, blockName) {
   }
   // 규격 카드의 [견적 문의]/[발주 문의] 버튼 → 품번이 채워진 양식
   const pick = u.match(/^(견적|발주)\s*문의\s*[:：]\s*(.+)$/);
-  if (pick) return reply(formIntro(pick[1] === "발주" ? FORMS.order : FORMS.quote, pick[2].trim()));
+  if (pick) {
+    // "발주 문의: 6205 | 수량 10" — 견적 접수 후 [발주하기] 버튼은 수량까지 넘김
+    const [item, qty] = pick[2].split(/\s*\|\s*수량\s*/);
+    return reply(formIntro(pick[1] === "발주" ? FORMS.order : FORMS.quote, item.trim(), qty && qty.trim()));
+  }
   const compact = u.replace(/\s+/g, "");
   // 숫자 없이 "발주…"·"견적…"으로 시작하면 양식 안내(메뉴 오타 "발주문화" 등도 허용)
   if (!/\d/.test(compact) && /^(발주|주문)/.test(compact)) return reply(formIntro(FORMS.order));
