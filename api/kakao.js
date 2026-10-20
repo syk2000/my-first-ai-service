@@ -132,7 +132,9 @@ function answer(utterance, blockName) {
     ]);
   }
 
-  const query = parse(u);
+  // "UC205 규격 알려줘"처럼 붙은 말은 떼고 검색
+  const cleaned = u.replace(/(규격|품번|형번|치수|사이즈|검색|찾아\s*줘|찾아\s*주세요|알려\s*줘|알려\s*주세요|있어요|있나요|\?)/g, " ").replace(/\s+/g, " ").trim() || u;
+  const query = parse(cleaned);
   const rows = search(query);
   if (!rows.length) {
     return reply([
