@@ -95,6 +95,14 @@ function answer(utterance, blockName) {
   // 인사·메뉴 요청은 첫인사와 같은 안내로(이미 대화한 적 있는 손님은 웰컴 블록이 다시 나오지 않음)
   if (!u || /^(안녕|하이|시작|처음|메뉴|hi|hello)/i.test(u)) return reply([text(WELCOME)]);
   if (/^(도움말|사용법|규격 ?검색 ?방법)/.test(u)) return reply([text(HELP)]);
+  // 채팅방 하단 메뉴 [규격&품번] 등 — 숫자 없이 "규격/품번/형번/검색"만 오면 입력 안내
+  if (!/\d/.test(u) && /규격|품번|형번|검색/.test(u)) {
+    return reply([text(
+      "찾으시는 형번이나 치수를 입력해 주세요.\n\n" +
+      "■ 형번\n예) 6205, UC205, NK8/12\n\n" +
+      "■ 치수 (내경 외경 두께)\n예) 25 52 15  또는  25*52"
+    )]);
+  }
   if (/견적|주문|문의/.test(u)) {
     return reply([
       {
