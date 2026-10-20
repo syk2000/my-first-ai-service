@@ -56,10 +56,10 @@ function search(query) {
 // 치수·형태가 같은 규격은 한 번만 — 홈페이지 규격 검색과 같은 규칙(spec-data.js의 specDedupe)
 const dedupe = (rows) => load().specDedupe(rows);
 
-// 양식에 넣을 품번 표기 — 기호(○ 등)는 빼고, 삼정 오일씰은 "오일씰 25×52×10"처럼
+// 양식에 넣을 품번 표기 — 기호(○ 등)는 빼고, 오일씰은 "오일씰 TC 25×52×10"처럼
 function cardName(r) {
   const m = String(r.m).replace(/[○●△⬠★☆◎]/g, "").replace(/\s+/g, " ").trim();
-  return (r.c === "삼정오일씰 규격표" ? "오일씰 " : "") + m;
+  return (r.c === "오일씰 형식 및 적용현황" && !/^오일씰/.test(m) ? "오일씰 " : "") + m;
 }
 
 function searchUrl(query) {
@@ -370,9 +370,9 @@ function answer(utterance, blockName) {
     ]);
   }
   const cards = rows.slice(0, MAX_CARDS).map((r) => ({
-    title: ((r.c === "삼정오일씰 규격표" ? "삼정 오일씰 " : "") + r.m).slice(0, 50),
+    title: cardName(r).slice(0, 50),
     description: (`${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)` +
-      r.alts.map((a) => "\n" + a.replace(/^오일씰 NOK 호환표:/, "NOK 호환:")).join("")).slice(0, 230),
+      r.alts.map((a) => "\n" + a).join("")).slice(0, 230),
     // 카드에서 바로 견적·발주 — 누르면 품번이 채워진 양식이 나옴
     buttons: [
       { action: "message", label: "견적 문의", messageText: "견적 문의: " + cardName(r) },
