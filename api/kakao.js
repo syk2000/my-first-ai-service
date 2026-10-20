@@ -142,6 +142,7 @@ const FORMS = {
     name: "발주서",
     fields: ["회사명", "사업자번호", "담당자", "연락처", "이메일(세금계산서)", "품번/규격", "수량", "견적번호(있으면)", "납품 주소", "희망 납기", "결제 방법", "요청사항"],
     required: ["회사명", "연락처", "품번/규격"],
+    note: "📎 사업자등록증 사진도 이 채팅방에 함께 보내 주세요. (채팅창 아래 + 또는 사진 버튼)",
   },
 };
 
@@ -150,7 +151,8 @@ function formIntro(form) {
     text(
       `${form.name} 양식이에요.\n` +
       "아래 말풍선을 길게 눌러 복사한 뒤, 각 항목 ':' 뒤에 내용을 적어서 이 채팅방에 보내 주세요.\n\n" +
-      "품목이 여러 개면 품번/규격 칸에 '6205 10개, 6206 5개'처럼 이어서 적으시면 돼요."
+      "품목이 여러 개면 품번/규격 칸에 '6205 10개, 6206 5개'처럼 이어서 적으시면 돼요." +
+      (form.note ? "\n\n" + form.note : "")
     ),
     text(form.tag + "\n" + form.fields.map((f) => f + ": ").join("\n")),
   ];
@@ -185,6 +187,12 @@ async function sendFormMail(parsed, userId) {
   form.fields.forEach((f) => (payload[f] = values[f] || "-"));
   if (values["이메일"] || values["이메일(세금계산서)"]) payload._replyto = values["이메일"] || values["이메일(세금계산서)"];
   payload["카카오 사용자 ID"] = userId || "-";
+  const { ok } = await postMail(payload);
+  return { ok, docNo };
+}
+
+// 홈페이지 견적문의와 같은 FormSubmit 주소로 메일 발송
+async function postMail(payload) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), 3500); // 카카오는 5초 안에 답해야 함
   try {
@@ -195,14 +203,33 @@ async function sendFormMail(parsed, userId) {
       signal: ctrl.signal,
     });
     const res = await r.json().catch(() => ({}));
-    return { ok: r.ok && String(res.success) === "true", docNo };
+    return { ok: r.ok && String(res.success) === "true" };
   } catch (e) {
-    return { ok: false, docNo };
+    return { ok: false };
   } finally {
     clearTimeout(timer);
   }
 }
 const FORMSUBMIT_URL = "https://formsubmit.co/ajax/06c8bd050147ba661797f96176c179f7";
+
+// 손님이 채팅방에 보낸 사진(카카오가 이미지 주소로 전달) → 담당자 메일로 링크 전달
+function isImage(u) {
+  return /^https?:\/\/\S+$/i.test(u) && /(kakaocdn|kakao\.com|\.(jpe?g|png|gif|webp|heic)(\?|$))/i.test(u);
+}
+async function forwardImage(url, userId) {
+  const { ok } = await postMail({
+    _subject: "[SWS 카카오톡] 첨부 사진 (사업자등록증 등)",
+    _template: "table",
+    _captcha: "false",
+    "문서 구분": "카카오톡 챗봇으로 받은 사진",
+    "사진 주소": url,
+    "카카오 사용자 ID": userId || "-",
+    "안내": "같은 카카오 사용자 ID로 접수된 발주서·견적서와 함께 확인해 주세요. 사진 주소는 일정 기간이 지나면 열리지 않을 수 있어요.",
+  });
+  return reply([text(ok
+    ? "사진을 받았어요. 발주서와 함께 담당자에게 전달했어요."
+    : "사진을 전달하지 못했어요. 번거로우시겠지만 '상담 연결' 후 다시 보내 주시거나 " + PHONE + "으로 연락 주세요.")]);
+}
 
 async function submitForm(parsed, userId) {
   const { form, missing } = parsed;
@@ -211,7 +238,8 @@ async function submitForm(parsed, userId) {
   }
   const { ok, docNo } = await sendFormMail(parsed, userId);
   if (ok) {
-    return reply([text(`${form.name}가 접수되었어요. (접수번호 ${docNo})\n담당자가 확인 후 적어 주신 연락처로 빠르게 회신드릴게요.\n급하시면 ${PHONE}으로 전화 주세요.`)]);
+    return reply([text(`${form.name}가 접수되었어요. (접수번호 ${docNo})\n담당자가 확인 후 적어 주신 연락처로 빠르게 회신드릴게요.\n급하시면 ${PHONE}으로 전화 주세요.` +
+      (form.note ? "\n\n사업자등록증 사진을 아직 안 보내셨다면 이 채팅방에 보내 주세요." : ""))]);
   }
   return reply([{
     textCard: {
@@ -311,8 +339,9 @@ function answer(utterance, blockName) {
     )]);
   }
   const compact = u.replace(/\s+/g, "");
-  if (/^(발주|주문)(문의|하기|서)?$/.test(compact)) return reply(formIntro(FORMS.order));
-  if (/^견적(문의|요청|서)?$/.test(compact) || /^문의(하기)?$/.test(compact)) return reply(formIntro(FORMS.quote));
+  // 숫자 없이 "발주…"·"견적…"으로 시작하면 양식 안내(메뉴 오타 "발주문화" 등도 허용)
+  if (!/\d/.test(compact) && /^(발주|주문)/.test(compact)) return reply(formIntro(FORMS.order));
+  if ((!/\d/.test(compact) && /^견적/.test(compact)) || /^문의(하기)?$/.test(compact)) return reply(formIntro(FORMS.quote));
   if (/^카톡상담$/.test(compact)) return reply([text(KAKAO_CONSULT)]);
   if (/^(상담|상담문의|상담하기|전화상담)$/.test(compact)) return reply(consult(compact === "전화상담"));
   if (/^(FAQ|자주(하는|묻는)질문)$/i.test(compact)) return reply(faqList());
@@ -334,7 +363,7 @@ function answer(utterance, blockName) {
   }
 
   // "UC205 규격 알려줘"처럼 붙은 말은 떼고 검색
-  const cleaned = u.replace(/(규격|품번|형번|치수|사이즈|검색|찾아\s*줘|찾아\s*주세요|알려\s*줘|알려\s*주세요|있어요|있나요|\?)/g, " ").replace(/\s+/g, " ").trim() || u;
+  const cleaned = u.replace(/(규격|품번|형번|치수|사이즈|검색|견적|발주|주문|문의|찾아\s*줘|찾아\s*주세요|알려\s*줘|알려\s*주세요|있어요|있나요|\?)/g, " ").replace(/\s+/g, " ").trim() || u;
   const query = parse(cleaned);
   const rows = dedupe(search(query));
   if (!rows.length) {
@@ -379,8 +408,11 @@ module.exports = async (req, res) => {
   const blockName = (body && body.userRequest && body.userRequest.block && body.userRequest.block.name) ||
     (body && body.intent && body.intent.name) || "";
   try {
-    const parsed = parseForm((utterance || "").trim());
-    res.status(200).json(parsed ? await submitForm(parsed, userId) : answer(utterance, blockName));
+    const u = (utterance || "").trim();
+    const parsed = parseForm(u);
+    if (parsed) res.status(200).json(await submitForm(parsed, userId));
+    else if (isImage(u)) res.status(200).json(await forwardImage(u, userId));
+    else res.status(200).json(answer(utterance, blockName));
   } catch (e) {
     res.status(200).json(reply([text("일시적인 오류로 답변하지 못했어요. 잠시 후 다시 시도하거나 02-2613-3040으로 연락 주세요.")]));
   }
