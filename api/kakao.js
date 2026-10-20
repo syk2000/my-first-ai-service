@@ -13,7 +13,7 @@ let DATA = null;
 function load() {
   if (DATA) return DATA;
   const src = fs.readFileSync(path.join(process.cwd(), "company-homepage/assets/spec-data.js"), "utf8");
-  DATA = new Function(src + ";return { SPEC_DATA, PAGE_GROUP, GROUP_ORDER };")();
+  DATA = new Function(src + ";return { SPEC_DATA, PAGE_GROUP, GROUP_ORDER, specDedupe };")();
   return DATA;
 }
 
@@ -53,43 +53,13 @@ function search(query) {
   return hits.sort((a, b) => rank(a) - rank(b) || groupRank(a) - groupRank(b));
 }
 
-// 치수와 형태가 같은 규격은 한 번만 — 같은 오일씰이 NOK 호환표·삼정 규격표 등 여러 표에 실린 경우 등
-//  · 오일씰 형식표(oilseal_types)는 형식(TC·D·D3…)이 형태, NOK·삼정 표는 형식 표기가 없어 하나의 형태로 봄
-//  · 그 밖의 제품은 같은 형번 + 같은 치수일 때만 중복(예: 플라스틱 유닛과 볼 베어링 유닛의 UC205)
-const SEAL_PAGES = { "page_nok.html": 1, "oilseal_samjung.html": 1, "oilseal_types.html": 1 };
-function dedupe(rows) {
-  const seen = new Map();
-  const out = [];
-  for (const r of rows) {
-    const form = SEAL_PAGES[r.p]
-      ? "seal:" + (r.p === "oilseal_types.html" ? String(r.m).split(" ")[0] : "")
-      : "m:" + norm(String(r.m).replace(/[○●△⬠★☆◎]/g, ""));
-    const key = [form, r.d, r.D, r.h].join("|");
-    const hit = seen.get(key);
-    if (hit) {
-      // 국산(삼정) 표를 대표 카드로, 나머지(NOK 등)는 호환 형번으로 함께 표시
-      if (prio(r) < prio(hit)) {
-        hit.alts.unshift(hit.c + ": " + hit.m);
-        Object.assign(hit, r, { sources: [r.c, ...hit.sources.filter((c) => c !== r.c)] });
-      } else {
-        if (!hit.sources.includes(r.c)) hit.sources.push(r.c);
-        if (r.m !== hit.m) hit.alts.push(r.c + ": " + r.m);
-      }
-      continue;
-    }
-    const item = Object.assign({}, r, { sources: [r.c], alts: [] });
-    seen.set(key, item);
-    out.push(item);
-  }
-  return out;
-}
-const PRIO = { "oilseal_samjung.html": 0, "page_nok.html": 2, "plastic_unit_uc.html": 2 };
-const prio = (r) => (r.p in PRIO ? PRIO[r.p] : 1);
+// 치수·형태가 같은 규격은 한 번만 — 홈페이지 규격 검색과 같은 규칙(spec-data.js의 specDedupe)
+const dedupe = (rows) => load().specDedupe(rows);
 
 // 양식에 넣을 품번 표기 — 기호(○ 등)는 빼고, 삼정 오일씰은 "오일씰 25×52×10"처럼
 function cardName(r) {
   const m = String(r.m).replace(/[○●△⬠★☆◎]/g, "").replace(/\s+/g, " ").trim();
-  return (r.p === "oilseal_samjung.html" ? "오일씰 " : "") + m;
+  return (r.c === "삼정오일씰 규격표" ? "오일씰 " : "") + m;
 }
 
 function searchUrl(query) {
@@ -400,7 +370,7 @@ function answer(utterance, blockName) {
     ]);
   }
   const cards = rows.slice(0, MAX_CARDS).map((r) => ({
-    title: ((r.p === "oilseal_samjung.html" ? "삼정 오일씰 " : "") + r.m).slice(0, 50),
+    title: ((r.c === "삼정오일씰 규격표" ? "삼정 오일씰 " : "") + r.m).slice(0, 50),
     description: (`${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)` +
       r.alts.map((a) => "\n" + a.replace(/^오일씰 NOK 호환표:/, "NOK 호환:")).join("")).slice(0, 230),
     // 카드에서 바로 견적·발주 — 누르면 품번이 채워진 양식이 나옴

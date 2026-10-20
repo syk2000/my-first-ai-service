@@ -453,7 +453,7 @@
     </div>
   </footer>
 
-<script src="assets/spec-data.js?v=20261017o"></script>
+<script src="assets/spec-data.js?v=20261020b"></script>
 <script src="i18n/common.dict.js?v=20261017r"></script>
 <script src="i18n/pages/index.dict.js?v=20261017p"></script>
 <script src="i18n.js?v=20261017p"></script>
@@ -505,14 +505,14 @@
         return;
       }
 
-      const rows = SPEC_DATA.filter((item) => {
+      const rows = specDedupe(SPEC_DATA.filter((item) => {
         if (type && PAGE_GROUP[item.p] !== type) return false;
         if (name && !(item.m || "").toUpperCase().includes(name) && !trModel(item.m).toUpperCase().includes(name)) return false;
         if (!matchNum(item.d, d)) return false;
         if (!matchNum(item.D, od)) return false;
         if (!matchNum(item.h, h)) return false;
         return true;
-      });
+      }));
 
       if (rows.length === 0) {
         finderResults.innerHTML = `<p class="no-result">${tr("조건에 맞는 규격을 찾지 못했습니다. 담당자에게 견적 문의를 남겨주시면 확인해드립니다.")}</p>`;
