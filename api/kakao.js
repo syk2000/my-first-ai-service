@@ -86,6 +86,12 @@ function dedupe(rows) {
 const PRIO = { "oilseal_samjung.html": 0, "page_nok.html": 2, "plastic_unit_uc.html": 2 };
 const prio = (r) => (r.p in PRIO ? PRIO[r.p] : 1);
 
+// 양식에 넣을 품번 표기 — 기호(○ 등)는 빼고, 삼정 오일씰은 "오일씰 25×52×10"처럼
+function cardName(r) {
+  const m = String(r.m).replace(/[○●△⬠★☆◎]/g, "").replace(/\s+/g, " ").trim();
+  return (r.p === "oilseal_samjung.html" ? "오일씰 " : "") + m;
+}
+
 function searchUrl(query) {
   const p = new URLSearchParams();
   if (query.kind === "dim") {
@@ -146,7 +152,7 @@ const FORMS = {
   },
 };
 
-function formIntro(form) {
+function formIntro(form, item) {
   return [
     text(
       `${form.name} 양식이에요.\n` +
@@ -154,7 +160,7 @@ function formIntro(form) {
       "품목이 여러 개면 품번/규격 칸에 '6205 10개, 6206 5개'처럼 이어서 적으시면 돼요." +
       (form.note ? "\n\n" + form.note : "")
     ),
-    text(form.tag + "\n" + form.fields.map((f) => f + ": ").join("\n")),
+    text(form.tag + "\n" + form.fields.map((f) => f + ": " + (item && f === "품번/규격" ? item : "")).join("\n")),
   ];
 }
 
@@ -338,6 +344,9 @@ function answer(utterance, blockName) {
       "■ 치수 (내경 외경 두께)\n예) 25 52 15  또는  25*52"
     )]);
   }
+  // 규격 카드의 [견적 문의]/[발주 문의] 버튼 → 품번이 채워진 양식
+  const pick = u.match(/^(견적|발주)\s*문의\s*[:：]\s*(.+)$/);
+  if (pick) return reply(formIntro(pick[1] === "발주" ? FORMS.order : FORMS.quote, pick[2].trim()));
   const compact = u.replace(/\s+/g, "");
   // 숫자 없이 "발주…"·"견적…"으로 시작하면 양식 안내(메뉴 오타 "발주문화" 등도 허용)
   if (!/\d/.test(compact) && /^(발주|주문)/.test(compact)) return reply(formIntro(FORMS.order));
@@ -375,7 +384,11 @@ function answer(utterance, blockName) {
     title: ((r.p === "oilseal_samjung.html" ? "삼정 오일씰 " : "") + r.m).slice(0, 50),
     description: (`${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)` +
       r.alts.map((a) => "\n" + a.replace(/^오일씰 NOK 호환표:/, "NOK 호환:")).join("")).slice(0, 230),
-    buttons: [{ action: "webLink", label: "규격표 보기", webLinkUrl: SITE + r.p + "#pick=" + encodeURIComponent(r.m) }],
+    // 카드에서 바로 견적·발주 — 누르면 품번이 채워진 양식이 나옴
+    buttons: [
+      { action: "message", label: "견적 문의", messageText: "견적 문의: " + cardName(r) },
+      { action: "message", label: "발주 문의", messageText: "발주 문의: " + cardName(r) },
+    ],
   }));
   const head =
     rows.length > MAX_CARDS
