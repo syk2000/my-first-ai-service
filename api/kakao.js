@@ -260,16 +260,11 @@ function consult() {
 // ── 자주 하는 질문 (홈페이지에 있는 내용으로만 답함)
 const FAQ = [
   {
-    short: "취급 제품",
-    q: "어떤 제품을 취급하나요?",
-    a: "베어링·베어링 유닛을 중심으로 아답타·로크너트·와셔, 키&핀, 파워록, 강구·볼 리테이너, 테이크업 유닛, 스냅링, 오일씰·오링·유압씰, 오일게이지, 오일레스 부시, 접시·금형 스프링, 볼 플런저, 유닛 하우징, LM가이드 블록을 취급해요.",
-    link: ["취급 제품 보기", "about-product.html"],
-  },
-  {
-    short: "브랜드·정품",
-    q: "정품인가요? 어떤 브랜드가 있나요?",
-    a: "NACHI·IBC·JIB·WBC·JMC·ILJIN·TYB 제품을 공식 대리점 자격으로 직접 공급해요. 그 밖의 국내외 브랜드도 취급해요.",
-    link: ["취급 브랜드 보기", "brands.html"],
+    short: "제품·브랜드",
+    q: "어떤 제품과 브랜드가 있나요?",
+    a: "베어링·베어링 유닛을 중심으로 아답타·로크너트·와셔, 키&핀, 파워록, 강구·볼 리테이너, 테이크업 유닛, 스냅링, 오일씰·오링·유압씰, 오일게이지, 오일레스 부시, 접시·금형 스프링, 볼 플런저, 유닛 하우징, LM가이드 블록을 취급해요.\n\n" +
+      "브랜드는 NACHI·IBC·JIB·WBC·JMC·ILJIN·TYB 제품을 공식 대리점 자격으로 직접 공급하고, 그 밖의 국내외 브랜드도 취급해요.",
+    links: [["취급 제품 보기", "about-product.html"], ["취급 브랜드 보기", "brands.html"]],
   },
   {
     short: "형번 모를 때",
@@ -307,7 +302,8 @@ function faqList() {
 }
 function faqAnswer(f) {
   const card = { title: "Q. " + f.q, description: f.a.slice(0, 400) };
-  if (f.link) card.buttons = [{ action: "webLink", label: f.link[0], webLinkUrl: SITE + f.link[1] }];
+  const links = f.links || (f.link ? [f.link] : []);
+  if (links.length) card.buttons = links.map(([label, path]) => ({ action: "webLink", label, webLinkUrl: SITE + path }));
   return [{ textCard: card }, text("다른 질문은 'FAQ'를 눌러 주세요.")];
 }
 
