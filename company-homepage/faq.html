@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko" translate="no" class="notranslate">
+<head>
+<meta charset="UTF-8" />
+<meta name="google" content="notranslate" />
+<meta name="viewport" content="width=1280" />
+<meta name="robots" content="noindex, nofollow" />
+<title>자주 하는 질문</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=20261021b">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <img class="logo-mark" src="assets/sws-logo.webp" alt="" width="45" height="34" />
+        <span class="company-name">
+          SWS TECH
+          <span class="sub">CORPORATION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <button type="button" class="nav-caret" aria-label="하위 메뉴 펼치기" aria-expanded="false"><svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg></button>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <button type="button" class="nav-caret" aria-label="하위 메뉴 펼치기" aria-expanded="false"><svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg></button>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="faq.html">자주 하는 질문</a>
+            <a href="catalog.html">카탈로그</a>
+            <a href="board.html">견적문의</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-cta">
+          <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+        </div>
+
+        <div class="lang-select" id="langSelect">
+          <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="langSelectLabel">KOR</span>
+            <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+          </button>
+          <div class="lang-menu" id="langMenu" role="menu">
+            <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <section class="page-section" id="faq" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>자주 하는 질문</h2>
+        <p>고객님들이 자주 묻는 질문을 모았습니다. 질문을 누르면 답변이 열립니다.</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>어떤 제품과 브랜드가 있나요?</summary>
+          <div class="faq-answer"><p>베어링·베어링 유닛을 중심으로 아답타·로크너트·와셔, 키&amp;핀, 파워록, 강구·볼 리테이너, 테이크업 유닛, 스냅링, 오일씰·오링·유압씰, 오일게이지, 오일레스 부시, 접시·금형 스프링, 볼 플런저, 유닛 하우징, LM가이드 블록을 취급합니다.</p><p>NACHI·IBC·JIB·WBC·JMC·ILJIN·TYB 제품은 공식 대리점 자격으로 직접 공급하며, 그 밖의 국내외 브랜드도 취급합니다.</p><p class="faq-links"><a href="about-product.html">취급 제품 보기 →</a><a href="brands.html">취급 브랜드 보기 →</a></p></div>
+        </details>
+        <details class="faq-item">
+          <summary>형번 및 규격 입력하는 방법</summary>
+          <div class="faq-answer"><p>규격검색 페이지나 카카오톡 채널에 형번 또는 치수를 입력하면 등록된 규격을 찾을 수 있습니다.</p><p><strong>형번으로 찾기</strong> — 예) 6205, UC205, NK8/12 (일부만 입력해도 됩니다)</p><p><strong>치수로 찾기</strong> — 형번을 모를 때는 내경·외경·두께를 입력하세요. 예) 25 52 15 또는 25*52</p><p class="faq-links"><a href="search-product.html">규격검색 바로가기 →</a></p></div>
+        </details>
+        <details class="faq-item">
+          <summary>견적/발주하는 법</summary>
+          <div class="faq-answer"><p><strong>견적</strong> — 견적문의 페이지에 규격과 수량을 적어 보내 주시거나, 카카오톡 채널 하단 메뉴의 '견적문의'를 눌러 양식을 보내 주시면 담당자가 확인 후 회신드립니다.</p><p><strong>발주</strong> — 카카오톡 채널 하단 메뉴의 '발주문의'를 눌러 회사명·연락처·품번·수량을 적어 보내 주시면 접수됩니다. 전화·이메일로도 발주하실 수 있습니다.</p><p class="faq-links"><a href="board.html">견적문의 바로가기 →</a><a href="https://pf.kakao.com/_YMbgn/chat" target="_blank" rel="noopener noreferrer">카카오톡 문의 →</a></p></div>
+        </details>
+        <details class="faq-item">
+          <summary>카탈로그를 볼 수 있나요?</summary>
+          <div class="faq-answer"><p>홈페이지 카탈로그 페이지에서 볼 수 있습니다.</p><p class="faq-links"><a href="catalog.html">카탈로그 보기 →</a></p></div>
+        </details>
+        <details class="faq-item">
+          <summary>영업시간은 어떻게 되나요?</summary>
+          <div class="faq-answer"><p>평일 09:00 ~ 18:00 (주말·공휴일 휴무)</p><p>영업시간 외에 남겨 주신 문의·견적·발주는 다음 영업일에 순서대로 확인해 회신드립니다.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>회사 위치와 연락처는?</summary>
+          <div class="faq-answer"><p>TEL 02-2613-3040 · FAX 02-2613-3042 · 이메일 lsd00213@naver.com</p><p>서울 구로구 경인로53길 32, 미래에코타워 B101·102호</p><p class="faq-links"><a href="introduce.html#directions">찾아오시는 길 →</a></p></div>
+        </details>
+      </div>
+
+      <p class="faq-more">원하는 답변이 없으면 <a href="board.html">견적문의</a> 또는 <a href="https://pf.kakao.com/_YMbgn/chat" target="_blank" rel="noopener noreferrer">카카오톡</a>으로 문의해 주세요.</p>
+    </div>
+  </section>
+
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-meta">
+          TEL 02-2613-3040 · FAX 02-2613-3042<br />
+          서울 구로구 경인로53길 32, 미래에코타워 B101·102호
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="i18n/common.dict.js?v=20261021b"></script>
+<script src="i18n/pages/faq.dict.js?v=20261021b"></script>
+<script src="i18n.js?v=20261017p"></script>
+<script src="common.js?v=20261017o"></script>
+</body>
+</html>

@@ -2236,3 +2236,21 @@
 .ost-drawing p.ost-drawing-name { font-weight: 700; font-size: 14px; color: #111; }
 .ost-drawing-empty { min-height: 60px; justify-content: center; background: var(--surface); }
 .ost-drawing-empty p { color: var(--text-faint); }
+
+/* 고객센터 > 자주 하는 질문 */
+.faq-list { max-width: 860px; }
+.faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); margin-bottom: 10px; overflow: hidden; }
+.faq-item > summary { cursor: pointer; list-style: none; padding: 16px 20px; font-size: 15.5px; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 12px; }
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > summary::before { content: 'Q'; flex: 0 0 auto; font-family: var(--font-display-en); color: var(--accent); font-size: 16px; }
+.faq-item > summary::after { content: '+'; margin-left: auto; color: var(--text-faint); font-size: 20px; font-weight: 400; }
+.faq-item[open] > summary::after { content: '−'; }
+.faq-item > summary:hover { background: var(--surface-raised); }
+.faq-item[open] > summary { border-bottom: 1px solid var(--border); }
+.faq-answer { padding: 16px 20px 18px 44px; font-size: 14.5px; line-height: 1.75; color: var(--text-sub); }
+.faq-answer p { margin: 0 0 8px; }
+.faq-answer strong { color: var(--text); }
+.faq-answer .faq-links { margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 16px; }
+.faq-answer a, .faq-more a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.faq-answer a:hover, .faq-more a:hover { text-decoration: underline; }
+.faq-more { margin-top: 20px; font-size: 13.5px; color: var(--text-sub); }
