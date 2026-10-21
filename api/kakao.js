@@ -53,6 +53,22 @@ function search(query) {
   return hits.sort((a, b) => rank(a) - rank(b) || groupRank(a) - groupRank(b));
 }
 
+// "2548"처럼 숫자를 붙여 쓴 치수 — 나눠 볼 수 있는 모든 경우(25×48, 25×52×8 …) 중 등록 규격이 있는 것만
+function splitDims(s) {
+  const ok = (p) => p !== "" && !/^0\d/.test(p);
+  const out = [];
+  for (let i = 1; i < s.length; i++) {
+    const a = s.slice(0, i), b = s.slice(i);
+    if (ok(a) && ok(b) && +a < +b) out.push({ kind: "dim", d: +a, D: +b, h: null });
+    for (let j = i + 1; j < s.length; j++) {
+      const c = s.slice(i, j), e = s.slice(j);
+      if (ok(a) && ok(c) && ok(e) && +a < +c && +e < +c) out.push({ kind: "dim", d: +a, D: +c, h: +e });
+    }
+  }
+  return out.map((q) => ({ q, rows: dedupe(search(q)) })).filter((x) => x.rows.length);
+}
+const dimLabel = (q) => [q.d, q.D, q.h].filter((v) => v !== null).join("×");
+
 // 치수·형태가 같은 규격은 한 번만 — 홈페이지 규격 검색과 같은 규칙(spec-data.js의 specDedupe)
 const dedupe = (rows) => load().specDedupe(rows);
 
@@ -341,7 +357,7 @@ function answer(utterance, blockName) {
   if (!/\d/.test(compact) && /^(발주|주문)/.test(compact)) return reply(formIntro(FORMS.order));
   if ((!/\d/.test(compact) && /^견적/.test(compact)) || /^문의(하기)?$/.test(compact)) return reply(formIntro(FORMS.quote));
   if (/^카톡상담$/.test(compact)) return reply([text(KAKAO_CONSULT)]);
-  if (/^(상담|상담문의|상담하기|전화상담)$/.test(compact)) return reply(consult(compact === "전화상담"));
+  if (/^(고객)?(상담|상담문의|상담하기|전화상담)$/.test(compact)) return reply(consult(compact === "전화상담"));
   if (/^(FAQ|자주(하는|묻는)질문)$/i.test(compact)) return reply(faqList());
   if (/연락처|전화|위치|주소|오시는|팩스/.test(u)) {
     return reply([
@@ -360,8 +376,22 @@ function answer(utterance, blockName) {
 
   // "UC205 규격 알려줘"처럼 붙은 말은 떼고 검색
   const cleaned = u.replace(/(규격|품번|형번|치수|사이즈|검색|견적|발주|주문|문의|찾아\s*줘|찾아\s*주세요|알려\s*줘|알려\s*주세요|있어요|있나요|\?)/g, " ").replace(/\s+/g, " ").trim() || u;
-  const query = parse(cleaned);
-  const rows = dedupe(search(query));
+  let query = parse(cleaned);
+  let rows = dedupe(search(query));
+  let note = "";
+  // 숫자만 붙여 쓴 경우: 그 숫자로 시작하는 형번이 없으면 치수로 나눠서 찾아봄 (2548 → 25×48)
+  if (query.kind === "model" && /^\d{3,8}$/.test(cleaned) && !rows.some((r) => norm(r.m).startsWith(cleaned))) {
+    const tries = splitDims(cleaned);
+    if (tries.length === 1) {
+      ({ q: query, rows } = tries[0]);
+      note = `'${cleaned}'에 맞는 형번이 없어서 ${dimLabel(query)} 치수로 찾았어요.\n`;
+    } else if (tries.length > 1) {
+      return reply({
+        outputs: [text(`'${cleaned}'에 맞는 형번이 없어요. 어떤 치수를 찾으세요?\n다음부터는 '25 48'처럼 띄어 쓰면 바로 찾을 수 있어요.`)],
+        quick: [...tries.slice(0, 9).map((x) => ({ label: dimLabel(x.q) + ` (${x.rows.length}건)`, action: "message", messageText: dimLabel(x.q) })), QUICK[0]],
+      });
+    }
+  }
   if (!rows.length) {
     return reply([
       text(`'${u}'에 맞는 등록 규격을 찾지 못했어요.\n형번은 일부만, 치수는 '내경 외경 두께' 순서로 입력해 보세요.\n찾는 품목이 없으면 '견적 문의'를 눌러 주세요.`),
@@ -377,10 +407,10 @@ function answer(utterance, blockName) {
       { action: "message", label: "발주 문의", messageText: "발주 문의: " + cardName(r) },
     ],
   }));
-  const head =
+  const head = note + (
     rows.length > MAX_CARDS
       ? `${rows.length}건을 찾았어요. 앞의 ${MAX_CARDS}건을 보여드려요.`
-      : `${rows.length}건을 찾았어요.`;
+      : `${rows.length}건을 찾았어요.`);
   const outputs = [text(head), { carousel: { type: "textCard", items: cards } }];
   if (rows.length > MAX_CARDS) {
     outputs.push({
