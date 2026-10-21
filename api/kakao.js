@@ -75,6 +75,7 @@ function searchUrl(query) {
 const QUICK = [
   { label: "처음으로", action: "message", messageText: "처음" },
   { label: "규격 검색 방법", action: "message", messageText: "도움말" },
+  { label: "자주 하는 질문", action: "message", messageText: "자주 하는 질문" },
 ];
 
 // outputs 배열, 또는 { outputs, quick }(바로가기 버튼을 바꿀 때)
