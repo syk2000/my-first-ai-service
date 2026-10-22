@@ -2254,3 +2254,14 @@
 .faq-answer a, .faq-more a { color: var(--accent); font-weight: 600; text-decoration: none; }
 .faq-answer a:hover, .faq-more a:hover { text-decoration: underline; }
 .faq-more { margin-top: 20px; font-size: 13.5px; color: var(--text-sub); }
+
+/* 회사소개 > 대리점 인증서 */
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+.cert-card { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; background: var(--surface); display: flex; flex-direction: column; }
+.cert-card .brand-tile-logo { min-height: 92px; }
+.cert-body { padding: 14px 16px 18px; }
+.cert-name { margin: 0 0 12px; font-weight: 700; font-size: 15px; color: var(--text); }
+.cert-img { aspect-ratio: 1 / 1.414; border-radius: 6px; overflow: hidden; background: #fff; border: 1px solid var(--border); }
+.cert-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.cert-empty { display: flex; align-items: center; justify-content: center; border-style: dashed; background: var(--surface-raised); }
+.cert-empty span { font-size: 13px; color: var(--text-faint); }
