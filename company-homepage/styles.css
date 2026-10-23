@@ -1451,6 +1451,9 @@
     object-fit: contain;
   }
 
+  /* 동그란 엠블럼(WBC)은 흰 판 없이 크게 */
+  .partner-slot .brand-logo-img.logo-round { max-height: 50px; }
+
   .logo-plate {
     background: #ffffff;
     border-radius: 6px;
