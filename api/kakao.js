@@ -400,6 +400,12 @@ const FAQ = [
       "규격 검색 결과 카드의 [견적 문의]·[발주 문의] 버튼을 누르면 품번이 채워진 양식이 바로 나와요.",
   },
   {
+    short: "재고·납기·가격",
+    q: "재고·납기·가격은 어떻게 알 수 있나요?",
+    a: "품목과 수량에 따라 달라서, 견적 문의를 남겨 주시면 담당자가 재고·납기·단가를 확인해 안내드려요.\n\n" +
+      "규격 검색 결과 카드의 [견적 문의]를 누르면 품번이 채워진 양식이 바로 나와요.",
+  },
+  {
     short: "카탈로그",
     q: "카탈로그를 볼 수 있나요?",
     a: "홈페이지 카탈로그 페이지에서 볼 수 있어요.",
@@ -421,6 +427,7 @@ const FAQ = [
 const PRODUCT_FAQ = [
   {
     short: "실드 형식 차이",
+    g: "베어링",
     q: "볼 베어링 실드 형식(OPEN·ZZ·DD)은 어떻게 다른가요?",
     a: "• OPEN(개방형): 실드가 없어요. 윤활유를 직접 관리하는 곳에 써요.\n" +
       "• Z/ZZ(철판 실드): 한쪽/양쪽에 철판 덮개. 회전이 가볍고 고속에 유리하지만 물·미세먼지 차단은 약해요.\n" +
@@ -428,7 +435,17 @@ const PRODUCT_FAQ = [
       "기존 제품에 적힌 표기를 그대로 알려 주시면 같은 형식으로 안내드려요.",
   },
   {
+    short: "DD·VV 차이",
+    g: "베어링",
+    q: "일제 베어링의 DD(DDU)와 VV는 어떻게 다른가요?",
+    a: "둘 다 양쪽 고무 실이지만 실이 닿는 방식이 달라요.\n" +
+      "• DDU(NSK)·LLU(NTN): 접촉식 — 실 립이 내륜에 닿아요. 먼지·물 차단이 가장 좋지만 회전 저항과 열이 조금 있어 고속에는 불리해요.\n" +
+      "• VV(NSK)·LLB(NTN): 비접촉식 — 실이 내륜에 닿지 않고 아주 좁은 틈을 둬요. 회전이 가볍고 고속에 유리하며, 먼지 차단은 접촉식보다 약하지만 철판 실드(ZZ)보다는 좋아요.\n\n" +
+      "기존 품번의 표기를 그대로 알려 주시면 같은 방식으로 안내드려요.",
+  },
+  {
     short: "메이커별 표기",
+    g: "베어링",
     q: "메이커마다 실드 표기가 다른데 같은 형식인가요?",
     a: "같은 형식을 메이커마다 다르게 표기해요.\n" +
       "• 양쪽 철판 실드: ZZ (SKF는 2Z)\n" +
@@ -438,18 +455,26 @@ const PRODUCT_FAQ = [
   },
   {
     short: "다른 메이커 대체",
+    g: "베어링",
     q: "다른 메이커 제품으로 바꿔 써도 되나요?",
     a: "같은 형번이면 국제 규격(ISO)에 따라 내경·외경·폭 같은 주요 치수가 같아서 대부분 바꿔 쓸 수 있어요.\n" +
       "다만 정밀도 등급, 내부틈새(C3 등), 케이지·그리스 사양은 다를 수 있어요. 사용하시는 기계나 조건을 함께 알려 주시면 맞는 제품을 안내드려요.",
   },
   {
-    short: "C3 뜻",
-    q: "형번 뒤의 C3는 무슨 뜻인가요?",
-    a: "베어링 안쪽의 틈새(내부틈새)가 보통(CN)보다 크다는 뜻이에요. 열이 많이 나거나 단단히 끼워 쓰는 곳(모터 등)에 많이 써요. C4는 C3보다 더 커요.\n\n" +
-      "기존 제품에 C3가 적혀 있으면 견적·발주 때 품번에 그대로 적어 주세요.",
+    short: "C3·CM 뜻",
+    g: "베어링",
+    q: "형번 뒤의 C3·CM은 무슨 뜻인가요?",
+    a: "베어링 안쪽 틈새(내부틈새)의 크기를 나타내요.\n" +
+      "• 표기 없음(CN): 보통 틈새\n" +
+      "• C2: 보통보다 작음\n" +
+      "• C3: 보통보다 큼 — 열이 많이 나거나 단단히 끼워 쓰는 곳에 써요.\n" +
+      "• C4·C5: C3보다 더 큼\n" +
+      "• CM: 전동기(모터)용 틈새 — 소음·진동을 줄이도록 틈새 범위를 좁게 관리한 것으로, 일본 메이커(NSK·NTN 등)가 써요.\n\n" +
+      "기존 제품에 적힌 틈새 표기를 견적·발주 때 품번에 그대로 적어 주세요.",
   },
   {
     short: "오일씰 형식",
+    g: "오일씰",
     q: "오일씰 형식(TC·SC·VC 등)은 어떻게 고르나요?",
     a: "기존 제품에 적힌 형식을 그대로 쓰시는 게 가장 확실해요. 형식은 구조에 따라 나뉘어요.\n" +
       "• TC: 외주고무 + 먼지막이 립 + 스프링\n" +
@@ -459,7 +484,18 @@ const PRODUCT_FAQ = [
       "형식을 모르시면 치수(내경·외경·두께)와 쓰는 곳을 알려 주세요. 담당자가 확인해 안내드려요.",
   },
   {
+    short: "TC·TB·TCV 차이",
+    g: "오일씰",
+    q: "오일씰 TC·TB(외철)·TCV는 어떻게 다른가요?",
+    a: "셋 다 먼지막이 립과 스프링이 있는 오일씰이에요.\n" +
+      "• TC: 바깥(외주)이 고무 — 하우징에 잘 밀착되고 조립이 쉬워 가장 많이 써요.\n" +
+      "• TB(외철): 바깥이 금속 — 하우징에 단단히 고정되고 열에 강하지만, 하우징 구멍이 정밀해야 해요.\n" +
+      "• TCV: TC 구조에 립을 보강한 내압형 — 유압 펌프·모터처럼 압력이 걸리는 곳에 써요.\n\n" +
+      "쓰시던 형식을 알려 주시거나, 모르시면 치수와 쓰는 곳을 알려 주세요.",
+  },
+  {
     short: "리니어 부시 표기",
+    g: "리니어 부시",
     q: "리니어 부시 UU·OP·AJ는 무슨 뜻인가요?",
     a: "• 표기 없음: 실 없음 / U: 한쪽 고무 실 / UU: 양쪽 고무 실\n" +
       "• OP: 개방형 — 몸체 한쪽이 트여 있어 받침대가 있는 축에 써요.\n" +
@@ -469,28 +505,47 @@ const PRODUCT_FAQ = [
   },
   {
     short: "형번이 안 보일 때",
+    g: "기타",
     q: "제품의 형번이 지워져서 안 보이면 어떻게 하나요?",
     a: "내경·외경·두께(폭)를 재서 이 채팅에 '25 52 15'처럼 보내 주시면 맞는 규격을 찾아드려요.\n\n" +
       "제품 사진을 보내시려면 채팅 입력창 아래 '상담 연결'을 누른 뒤 담당자에게 보내 주세요.",
   },
-  {
-    short: "재고·납기·가격",
-    q: "재고·납기·가격은 어떻게 알 수 있나요?",
-    a: "품목과 수량에 따라 달라서, 견적 문의를 남겨 주시면 담당자가 재고·납기·단가를 확인해 안내드려요.\n\n" +
-      "규격 검색 결과 카드의 [견적 문의]를 누르면 품번이 채워진 양식이 바로 나와요.",
-  },
 ];
-function productFaqList() {
+// 제품 질문은 품목별로: 먼저 품목을 고르고 → 그 품목 질문 목록
+const PRODUCT_GROUPS = ["베어링", "오일씰", "리니어 부시", "기타"];
+function productFaqList(group) {
+  if (!group) {
+    return {
+      outputs: [text("제품 문의 때 자주 하는 질문이에요. 품목을 골라 주세요.\n\n" +
+        PRODUCT_GROUPS.map((g) => `■ ${g}: ` + PRODUCT_FAQ.filter((f) => f.g === g).map((f) => f.short).join(", ")).join("\n"))],
+      quick: [...PRODUCT_GROUPS.map((g) => ({ label: g, action: "message", messageText: "제품 질문: " + g })),
+        { label: "일반 질문", action: "message", messageText: "일반 질문" }, QUICK[0]],
+    };
+  }
+  const items = PRODUCT_FAQ.filter((f) => f.g === group);
   return {
-    outputs: [text("제품 문의 때 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n" + PRODUCT_FAQ.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
-    quick: [...PRODUCT_FAQ.map((f) => ({ label: f.short, action: "message", messageText: f.q })), QUICK[0]],
+    outputs: [text(`${group} 관련 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n` + items.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
+    quick: [...items.map((f) => ({ label: f.short, action: "message", messageText: f.q })),
+      { label: "다른 품목", action: "message", messageText: "제품 질문" }, QUICK[0]],
   };
 }
 
+// 자주 하는 질문 첫 화면: 일반 질문 / 제품 질문 고르기
+function faqMenu() {
+  return {
+    outputs: [text("자주 하는 질문이에요. 어떤 질문이 궁금하세요?\n\n" +
+      "■ 일반 질문: 취급 제품·브랜드, 형번 입력 방법, 견적·발주, 재고·납기·가격, 카탈로그, 영업시간, 위치\n\n" +
+      "■ 제품 질문: 베어링 실드 형식(ZZ·DD·VV), C3·CM, 메이커별 표기, 오일씰 형식(TC·TB·TCV), 리니어 부시 표기 등")],
+    quick: [
+      { label: "일반 질문", action: "message", messageText: "일반 질문" },
+      { label: "제품 질문", action: "message", messageText: "제품 질문" },
+      QUICK[0],
+    ],
+  };
+}
 function faqList() {
   return {
-    outputs: [text("자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n" + FAQ.map((f, i) => `${i + 1}. ${f.q}`).join("\n") +
-      "\n\n제품(실드 형식, C3, 오일씰 형식 등)이 궁금하시면 [제품 질문]을 눌러 주세요.")],
+    outputs: [text("일반적으로 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n" + FAQ.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
     quick: [...FAQ.map((f) => ({ label: f.short, action: "message", messageText: f.q })),
       { label: "제품 질문", action: "message", messageText: "제품 질문" }, QUICK[0]],
   };
@@ -500,8 +555,8 @@ function faqAnswer(f, product) {
   const links = f.links || (f.link ? [f.link] : []);
   if (links.length) card.buttons = links.map(([label, path]) => ({ action: "webLink", label, webLinkUrl: SITE + path }));
   return product
-    ? { outputs: [{ textCard: card }], quick: [{ label: "제품 질문 목록", action: "message", messageText: "제품 질문" }, { label: "자주 하는 질문", action: "message", messageText: "자주 하는 질문" }, QUICK[0]] }
-    : [{ textCard: card }, text("다른 질문은 'FAQ'를 눌러 주세요.")];
+    ? { outputs: [{ textCard: card }], quick: [{ label: f.g + " 질문", action: "message", messageText: "제품 질문: " + f.g }, { label: "다른 품목", action: "message", messageText: "제품 질문" }, QUICK[0]] }
+    : { outputs: [{ textCard: card }], quick: [{ label: "일반 질문", action: "message", messageText: "일반 질문" }, { label: "제품 질문", action: "message", messageText: "제품 질문" }, QUICK[0]] };
 }
 
 function answer(utterance, blockName) {
@@ -517,6 +572,9 @@ function answer(utterance, blockName) {
   const pfaq = PRODUCT_FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
   if (pfaq) return reply(faqAnswer(pfaq, true));
   if (/^(제품\s*(질문|FAQ|문의\s*FAQ)|제품\s*관련\s*질문)$/i.test(u)) return reply(productFaqList());
+  const pg = u.match(/^제품\s*질문\s*[:：]\s*(.+)$/);
+  if (pg && PRODUCT_GROUPS.includes(pg[1].trim())) return reply(productFaqList(pg[1].trim()));
+  if (/^일반\s*질문$/.test(u)) return reply(faqList());
   // 채팅방 하단 메뉴 [규격&품번] 등 — 숫자 없이 "규격/품번/형번/검색"만 오면 입력 안내
   if (!/\d/.test(u) && /규격|품번|형번|검색/.test(u)) {
     return reply([text(
@@ -545,7 +603,7 @@ function answer(utterance, blockName) {
   if ((!/\d/.test(compact) && /^견적/.test(compact)) || /^문의(하기)?$/.test(compact)) return reply(formIntro(FORMS.quote));
   if (/^카톡상담$/.test(compact)) return reply([text(KAKAO_CONSULT + closedNote())]);
   if (/^(고객)?(상담|상담문의|상담하기|전화상담)$/.test(compact)) return reply(consult(compact === "전화상담"));
-  if (/^(FAQ|자주(하는|묻는)질문)$/i.test(compact)) return reply(faqList());
+  if (/^(FAQ|자주(하는|묻는)질문)$/i.test(compact)) return reply(faqMenu());
   if (/연락처|전화|위치|주소|오시는|팩스/.test(u)) {
     return reply([
       {
