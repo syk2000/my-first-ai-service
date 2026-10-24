@@ -205,7 +205,8 @@ function formIntro(form, item, qty) {
       // 볼 베어링(실드 표기 없는 형번)은 실드 형식을 비고에 적도록 안내
       (shieldItem(item) ? "\n\n※ 볼 베어링은 실드 형식에 따라 품번이 달라요. 비고에 OPEN(개방형)·ZZ(철판 실드)·DD(고무 실, 2RS·DDU와 같은 형식) 중 필요한 형식을 적어 주세요. 모르시면 담당자가 확인해 안내드려요." : "")
     ),
-    text(form.tag + "\n" + form.fields.map((f) => f + ": " + ((f === "품번/규격" && item) || (f === "수량" && qty) || "")).join("\n")),
+    // 말풍선에는 ':' 없이 "항목 이름 + 띄어쓰기"만 — 손님은 이름 뒤에 바로 내용을 적으면 됨
+    text(form.tag + "\n" + form.fields.map((f) => f + " " + ((f === "품번/규격" && item) || (f === "수량" && qty) || "")).join("\n")),
   ];
 }
 
