@@ -2306,3 +2306,4 @@
 .speed-table { min-width: 420px; }
 .speed-table td:not(:first-child), .speed-table th:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
 .speed-table.no-seal .col-seal { display: none; }
+.f-copy { margin-top: 18px; font-size: 12px; color: var(--text-faint); }
