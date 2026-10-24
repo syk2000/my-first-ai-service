@@ -78,6 +78,59 @@ function cardName(r) {
   return (r.c === "오일씰 형식 및 적용현황" && !/^오일씰/.test(m) ? "오일씰 " : "") + m;
 }
 
+// 볼 베어링은 같은 형번이라도 실드 형식(개방·ZZ·DD)을 골라야 해서, 견적·발주 전에 형식을 물어봄
+const SHIELD_CATS = { "깊은 홈 볼 베어링": 1, "미니어처 볼 베어링": 1 };
+const SHIELDS = [
+  ["OPEN (개방형)", ""],
+  ["ZZ (철판 실드)", "ZZ"],
+  ["DD (고무 실)", "DD"],
+];
+const hasShield = (m) => /(ZZ|2Z|DDU?|LLU|LLB|2RS\w*|RS|Z|D)$/i.test(m.replace(/\s+/g, ""));
+const needsShield = (r) => SHIELD_CATS[r.c] && !hasShield(String(r.m));
+function shieldAsk(kind, model) {
+  return {
+    outputs: [text(`${model}의 실드 형식을 골라 주세요.\n• OPEN: 실드 없는 개방형\n• ZZ: 양쪽 철판 실드\n• DD: 양쪽 고무 실 (2RS·DDU·LLU와 같은 형식)`)],
+    quick: [
+      ...SHIELDS.map(([label, sfx]) => ({ label, action: "message", messageText: `${kind} 문의: ${model}${sfx}` })),
+      { label: "모름·기타", action: "message", messageText: `${kind} 문의: ${model} (실드 형식 미정)` },
+      QUICK[0],
+    ],
+  };
+}
+
+// 형번 뒤에 붙는 실드·틈새 표기(6205ZZ, 6205-2RS, 6205 C3 …)를 떼어 기본 형번을 찾음
+const SUFFIX_RE = /[\s\-]*(2RSH|2RS1|2RS|DDU|LLU|LLB|ZZ|2Z|DD|RS|Z|D|NR|ZNR|C3|C4|CM|OPEN|OP)$/i;
+function stripSuffix(q) {
+  let base = q.trim();
+  const sfx = [];
+  for (let i = 0; i < 3; i++) {
+    const m = base.match(SUFFIX_RE);
+    if (!m || base.length - m[0].length < 2) break;
+    sfx.unshift(m[1].toUpperCase());
+    base = base.slice(0, base.length - m[0].length);
+  }
+  return sfx.length ? { base, sfx: sfx.join("") } : null;
+}
+
+// 정확히 맞는 규격이 없을 때 가까운 규격(치수는 차이가 작은 순, 형번은 앞부분이 많이 같은 순)
+function approx(query) {
+  const { SPEC_DATA } = load();
+  if (query.kind === "dim") {
+    const rel = (v, x) => (x === null ? 0 : v === null || v === undefined ? 9 : Math.abs(v - x) / Math.max(x, 1));
+    return dedupe(SPEC_DATA.filter((r) => r.d != null && r.D != null)
+      .map((r) => ({ r, s: rel(r.d, query.d) + rel(r.D, query.D) + rel(r.h, query.h) }))
+      .filter((x) => x.s < 0.6)
+      .sort((a, b) => a.s - b.s || groupRank(a.r) - groupRank(b.r))
+      .slice(0, 40).map((x) => x.r));
+  }
+  const q = norm(query.q);
+  const common = (m) => { let i = 0; while (i < m.length && i < q.length && m[i] === q[i]) i++; return i; };
+  return dedupe(SPEC_DATA.map((r) => ({ r, n: norm(r.m), c: common(norm(r.m)) }))
+    .filter((x) => x.c >= Math.max(2, Math.ceil(q.length * 0.5)))
+    .sort((a, b) => b.c - a.c || Math.abs(a.n.length - q.length) - Math.abs(b.n.length - q.length) || groupRank(a.r) - groupRank(b.r))
+    .slice(0, 40).map((x) => x.r));
+}
+
 function searchUrl(query) {
   const p = new URLSearchParams();
   if (query.kind === "dim") {
@@ -131,7 +184,6 @@ const FORMS = {
     name: "발주서",
     fields: ["회사명/담당자", "연락처", "품번/규격", "수량", "희망 납기", "비고"],
     required: ["회사명/담당자", "연락처", "품번/규격"],
-    note: "📎 사업자등록증 사진도 이 채팅방에 함께 보내 주세요. (채팅창 아래 + 또는 사진 버튼)",
   },
 };
 
@@ -201,23 +253,18 @@ async function postMail(payload) {
 }
 const FORMSUBMIT_URL = "https://formsubmit.co/ajax/06c8bd050147ba661797f96176c179f7";
 
-// 손님이 채팅방에 보낸 사진(카카오가 이미지 주소로 전달) → 담당자 메일로 링크 전달
+// 손님이 채팅방에 사진·파일을 보내면(카카오가 주소로 전달) 챗봇은 받지 않고 1:1 상담으로 안내
 function isImage(u) {
-  return /^https?:\/\/\S+$/i.test(u) && /(kakaocdn|kakao\.com|\.(jpe?g|png|gif|webp|heic)(\?|$))/i.test(u);
+  return /^https?:\/\/\S+$/i.test(u) && /(kakaocdn|kakao\.com|\.(jpe?g|png|gif|webp|heic|pdf)(\?|$))/i.test(u);
 }
-async function forwardImage(url, userId) {
-  const { ok } = await postMail({
-    _subject: "[SWS 카카오톡] 첨부 사진 (사업자등록증 등)",
-    _template: "table",
-    _captcha: "false",
-    "문서 구분": "카카오톡 챗봇으로 받은 사진",
-    "사진 주소": url,
-    "카카오 사용자 ID": userId || "-",
-    "안내": "같은 카카오 사용자 ID로 접수된 발주서·견적서와 함께 확인해 주세요. 사진 주소는 일정 기간이 지나면 열리지 않을 수 있어요.",
-  });
-  return reply([text(ok
-    ? "사진을 받았어요. 발주서와 함께 담당자에게 전달했어요."
-    : "사진을 전달하지 못했어요. 번거로우시겠지만 '상담 연결' 후 다시 보내 주시거나 " + PHONE + "으로 연락 주세요.")]);
+
+// 영업시간(평일 09:00~18:00, 한국 시간) 밖이면 안내 한 줄
+function closedNote() {
+  const now = new Date(Date.now() + 9 * 3600 * 1000);
+  const day = now.getUTCDay();
+  const h = now.getUTCHours();
+  if (day >= 1 && day <= 5 && h >= 9 && h < 18) return "";
+  return "\n\n지금은 영업시간(평일 09:00~18:00)이 아니에요. 다음 영업일 오전부터 순서대로 답변드릴게요.";
 }
 
 async function submitForm(parsed, userId) {
@@ -233,7 +280,7 @@ async function submitForm(parsed, userId) {
     return reply([{
       textCard: {
         title: `견적 문의서가 접수되었어요`,
-        description: `접수번호 ${docNo}\n담당자가 확인 후 이 카카오톡으로 견적서를 보내드릴게요.\n견적서를 받고 주문하실 때 아래 [발주하기]를 눌러 주세요.`,
+        description: (`접수번호 ${docNo}\n담당자가 확인 후 이 카카오톡으로 견적서를 보내드릴게요.\n견적서를 받고 주문하실 때 아래 [발주하기]를 눌러 주세요.` + closedNote()).slice(0, 400),
         buttons: [
           { action: "message", label: "발주하기", messageText: "발주 문의: " + item + (qty ? " | 수량 " + qty : "") },
           { action: "phone", label: "전화 문의", phoneNumber: PHONE },
@@ -243,7 +290,7 @@ async function submitForm(parsed, userId) {
   }
   if (ok) {
     return reply([text(`${form.name}가 접수되었어요. (접수번호 ${docNo})\n${values["연락처"] ? "담당자가 확인 후 적어 주신 연락처로 빠르게 회신드릴게요." : "담당자가 확인 후 이 카카오톡으로 빠르게 회신드릴게요."}\n급하시면 ${PHONE}으로 전화 주세요.` +
-      (form.note ? "\n\n사업자등록증 사진을 아직 안 보내셨다면 이 채팅방에 보내 주세요." : ""))]);
+      closedNote())]);
   }
   return reply([{
     textCard: {
@@ -265,7 +312,7 @@ function consult() {
   return [{
     textCard: {
       title: "상담 방법을 선택해 주세요",
-      description: `• 카톡 상담: 담당자와 1:1 채팅\n• 전화 상담: ${PHONE}`,
+      description: `• 카톡 상담: 담당자와 1:1 채팅\n• 전화 상담: ${PHONE}` + closedNote(),
       buttons: [
         { action: "message", label: "카톡 상담", messageText: "카톡 상담" },
         { action: "phone", label: "전화 상담", phoneNumber: PHONE },
@@ -346,6 +393,13 @@ function answer(utterance, blockName) {
     )]);
   }
   // 규격 카드의 [견적 문의]/[발주 문의] 버튼 → 품번이 채워진 양식
+  // 볼 베어링 카드의 [견적 문의]/[발주 문의] → 실드 형식 먼저 고르기
+  const shield = u.match(/^실드\s*선택\s*[:：]\s*(견적|발주)\s*\|\s*(.+)$/);
+  if (shield) return reply(shieldAsk(shield[1], shield[2].trim()));
+  // "근사치: 25 48" — 정확한 규격이 없을 때 가까운 규격 보여주기
+  const near = u.match(/^근사치\s*[:：]\s*(.+)$/);
+  if (near) return showResults(approx(parse(near[1].trim())), parse(near[1].trim()),
+    `'${near[1].trim()}'에 정확히 맞는 규격은 없어서 가까운 규격을 보여드려요.\n`, near[1].trim(), true);
   const pick = u.match(/^(견적|발주)\s*문의\s*[:：]\s*(.+)$/);
   if (pick) {
     // "발주 문의: 6205 | 수량 10" — 견적 접수 후 [발주하기] 버튼은 수량까지 넘김
@@ -356,7 +410,7 @@ function answer(utterance, blockName) {
   // 숫자 없이 "발주…"·"견적…"으로 시작하면 양식 안내(메뉴 오타 "발주문화" 등도 허용)
   if (!/\d/.test(compact) && /^(발주|주문)/.test(compact)) return reply(formIntro(FORMS.order));
   if ((!/\d/.test(compact) && /^견적/.test(compact)) || /^문의(하기)?$/.test(compact)) return reply(formIntro(FORMS.quote));
-  if (/^카톡상담$/.test(compact)) return reply([text(KAKAO_CONSULT)]);
+  if (/^카톡상담$/.test(compact)) return reply([text(KAKAO_CONSULT + closedNote())]);
   if (/^(고객)?(상담|상담문의|상담하기|전화상담)$/.test(compact)) return reply(consult(compact === "전화상담"));
   if (/^(FAQ|자주(하는|묻는)질문)$/i.test(compact)) return reply(faqList());
   if (/연락처|전화|위치|주소|오시는|팩스/.test(u)) {
@@ -392,27 +446,63 @@ function answer(utterance, blockName) {
       });
     }
   }
-  if (!rows.length) {
-    return reply([
-      text(`'${u}'에 맞는 등록 규격을 찾지 못했어요.\n형번은 일부만, 치수는 '내경 외경 두께' 순서로 입력해 보세요.\n찾는 품목이 없으면 '견적 문의'를 눌러 주세요.`),
-    ]);
+  // "6205ZZ", "6205-2RS"처럼 실드·틈새 표기가 붙어 정확한 형번이 없으면 표기를 떼고 기본 형번으로 찾음
+  let typed = null;
+  if (query.kind === "model" && !rows.some((r) => norm(r.m) === norm(cleaned))) {
+    const st = stripSuffix(cleaned);
+    if (st) {
+      const baseRows = dedupe(search({ kind: "model", q: st.base })).filter((r) => norm(r.m) === norm(st.base));
+      if (baseRows.length) {
+        rows = baseRows;
+        typed = { base: st.base, full: cleaned.trim() };
+        note = `'${cleaned}'에서 ${st.sfx} 표기를 떼고 ${st.base.trim()} 규격을 보여드려요. 견적·발주 양식에는 ${typed.full}로 들어가요.\n`;
+      }
+    }
   }
-  const cards = rows.slice(0, MAX_CARDS).map((r) => ({
-    title: cardName(r).slice(0, 50),
-    description: (`${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)` +
-      r.alts.map((a) => "\n" + a).join("")).slice(0, 230),
-    // 카드에서 바로 견적·발주 — 누르면 품번이 채워진 양식이 나옴
-    buttons: [
-      { action: "message", label: "견적 문의", messageText: "견적 문의: " + cardName(r) },
-      { action: "message", label: "발주 문의", messageText: "발주 문의: " + cardName(r) },
-    ],
-  }));
+  if (!rows.length) {
+    // 정확한 규격이 없으면 가까운 규격을 보여줄지 묻고, 바로 견적 문의도 할 수 있게
+    const hasNear = approx(query).length > 0;
+    return reply({
+      outputs: [text(`'${u}'에 맞는 등록 규격을 찾지 못했어요.` +
+        (hasNear ? "\n비슷한 규격을 찾아 드릴까요? 아래 [근사치 보기]를 눌러 주세요." : "\n형번은 일부만, 치수는 '내경 외경 두께' 순서로 입력해 보세요.") +
+        "\n찾는 품목을 바로 문의하시려면 [이 품번으로 견적 문의]를 눌러 주세요.")],
+      quick: [
+        ...(hasNear ? [{ label: "근사치 보기", action: "message", messageText: "근사치: " + cleaned }] : []),
+        { label: "이 품번으로 견적 문의", action: "message", messageText: "견적 문의: " + cleaned },
+        QUICK[0],
+      ],
+    });
+  }
+  return showResults(rows, query, note, cleaned, false, typed);
+}
+
+// 규격 카드 목록 — [견적 문의]·[발주 문의]·[상세 보기]
+function showResults(rows, query, note, q, isApprox, typed) {
+  if (!rows.length) {
+    return reply({
+      outputs: [text(`'${q}'에 가까운 등록 규격도 찾지 못했어요.\n[이 품번으로 견적 문의]를 누르면 담당자가 확인해 드릴게요.`)],
+      quick: [{ label: "이 품번으로 견적 문의", action: "message", messageText: "견적 문의: " + q }, QUICK[0]],
+    });
+  }
+  const cards = rows.slice(0, MAX_CARDS).map((r) => {
+    // 손님이 "6205ZZ"처럼 실드까지 적었으면 그 형번 그대로 양식에 넣음
+    const name = typed && norm(r.m) === norm(typed.base) ? typed.full : cardName(r);
+    const ask = !(typed && norm(r.m) === norm(typed.base)) && needsShield(r);
+    const btn = (kind) => ({ action: "message", label: kind + " 문의", messageText: ask ? `실드 선택: ${kind} | ${name}` : `${kind} 문의: ${name}` });
+    return {
+      title: name.slice(0, 50),
+      description: (`${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)` +
+        r.alts.map((a) => "\n" + a).join("")).slice(0, 230),
+      // 카드에서 바로 견적·발주(볼 베어링은 실드 형식을 먼저 고름), 상세 보기는 홈페이지 규격 페이지
+      buttons: [btn("견적"), btn("발주"), { action: "webLink", label: "상세 보기", webLinkUrl: SITE + r.p }],
+    };
+  });
   const head = note + (
     rows.length > MAX_CARDS
       ? `${rows.length}건을 찾았어요. 앞의 ${MAX_CARDS}건을 보여드려요.`
       : `${rows.length}건을 찾았어요.`);
   const outputs = [text(head), { carousel: { type: "textCard", items: cards } }];
-  if (rows.length > MAX_CARDS) {
+  if (rows.length > MAX_CARDS && !isApprox) {
     outputs.push({
       textCard: {
         title: "전체 결과 보기",
@@ -441,7 +531,7 @@ module.exports = async (req, res) => {
     const u = (utterance || "").trim();
     const parsed = parseForm(u);
     if (parsed) res.status(200).json(await submitForm(parsed, userId));
-    else if (isImage(u)) res.status(200).json(await forwardImage(u, userId));
+    else if (isImage(u)) res.status(200).json(reply([text("사진·파일은 챗봇이 받을 수 없어요. 채팅 입력창 아래 '상담 연결'을 누른 뒤 담당자에게 보내 주세요.")]));
     else res.status(200).json(answer(utterance, blockName));
   } catch (e) {
     res.status(200).json(reply([text("일시적인 오류로 답변하지 못했어요. 잠시 후 다시 시도하거나 02-2613-3040으로 연락 주세요.")]));
