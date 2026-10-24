@@ -85,7 +85,8 @@ const SHIELDS = [
   ["ZZ (철판 실드)", "ZZ"],
   ["DD (고무 실)", "DD"],
 ];
-const hasShield = (m) => /(ZZ|2Z|DDU?|LLU|LLB|2RS\w*|RS|Z|D)$/i.test(m.replace(/\s+/g, ""));
+// 실드·실 표기(메이커별): 철판 Z·ZZ / 고무 D·DD(국산), DU·DDU·V·VV(NSK), LU·LLU·LB·LLB·LH·LLH(NTN), RS·2RS(공통), NSE·2NSE(NACHI)
+const hasShield = (m) => /(ZZ|2Z|Z|DDU|DU|DD|D|VV|V|LLU|LU|LLB|LB|LLH|LH|2RS\w*|RS|2RU|RU|2NSE|NSE)$/i.test(m.replace(/\s+/g, ""));
 const needsShield = (r) => SHIELD_CATS[r.c] && !hasShield(String(r.m));
 // 양식에 들어갈 품번이 실드 표기 없는 볼 베어링 형번인지 (예: "6205" → true, "6205ZZ" → false)
 function shieldItem(item) {
@@ -120,7 +121,7 @@ const CATEGORY_WORDS = [
 
 // 형번 뒤에 붙는 실드·틈새 표기(6205ZZ, 6205-2RS, 6205 C3 …)를 떼어 기본 형번을 찾음
 // (리니어 부시: UU 양쪽 실, U 한쪽 실, OP 개방형, AJ 조정형 — LM20UU, LM20U, LM20UU-OP, LMF20LUU)
-const SUFFIX_RE = /[\s\-]*(2RSH|2RS1|2RS|DDU|LLU|LLB|ZZ|2Z|DD|RS|Z|D|NR|ZNR|C3|C4|CM|OPEN|OP|UU|U|AJ)$/i;
+const SUFFIX_RE = /[\s\-]*(2RSH|2RS1|2RS|DDU|DU|LLU|LU|LLB|LB|LLH|LH|VV|2NSE|NSE|2RU|RU|ZZ|2Z|DD|RS|Z|D|V|NR|ZNR|C3|C4|CM|OPEN|OP|UU|U|AJ)$/i;
 function stripSuffix(q) {
   let base = q.trim();
   const sfx = [];
@@ -218,7 +219,7 @@ function formIntro(form, item, qty) {
       // 오일씰은 같은 치수라도 형식이 여러 가지 — 손님이 알면 적고, 모르면 담당자가 안내
       (/^오일씰/.test(item || "") ? "\n\n※ 오일씰은 같은 치수라도 형식(립·스프링·외주 구조)이 여러 가지예요. 사용 중인 제품의 형식이나 품번을 아시면 비고에 적어 주세요. 모르시면 담당자가 확인해 맞는 형식을 안내드려요." : "") +
       // 볼 베어링(실드 표기 없는 형번)은 실드 형식을 비고에 적도록 안내
-      (shieldItem(item) ? "\n\n※ 볼 베어링은 실드 형식에 따라 품번이 달라요. 비고에 OPEN(개방형)·ZZ(철판 실드)·DD(고무 실, 2RS·DDU와 같은 형식) 중 필요한 형식을 적어 주세요. 모르시면 담당자가 확인해 안내드려요." : "") +
+      (shieldItem(item) ? "\n\n※ 볼 베어링은 실드 형식에 따라 품번이 달라요. 비고에 OPEN(개방형)·Z/ZZ(한쪽/양쪽 철판 실드)·D/DD(한쪽/양쪽 고무 실) 중 필요한 형식을 적어 주세요. 메이커 표기(NTN LU·LLU, NSK DU·DDU, 2RS 등)로 적으셔도 돼요. 모르시면 담당자가 확인해 안내드려요." : "") +
       // 리니어 부시(LM·LMF·LMK·LMH, 실 표기 없음)는 실 유무를 비고에 적도록 안내
       (/^LM[FKH]?\d/i.test((item || "").replace(/\s+/g, "")) && !/\d+L?(UU|U|OP|AJ)/i.test((item || "").replace(/\s+/g, "")) ? "\n\n※ 리니어 부시는 실 형식에 따라 품번이 달라요. 비고에 OPEN(실 없음)·UU(양쪽 고무 실)·U(한쪽 고무 실) 중 필요한 형식을 적어 주세요. 모르시면 담당자가 확인해 안내드려요." : "")
     ),
