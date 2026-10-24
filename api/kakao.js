@@ -119,8 +119,8 @@ const CATEGORY_WORDS = [
 ];
 
 // 형번 뒤에 붙는 실드·틈새 표기(6205ZZ, 6205-2RS, 6205 C3 …)를 떼어 기본 형번을 찾음
-// (리니어 부시: UU 양쪽 실, OP 개방형, AJ 조정형 — LM20UU, LM20UU-OP, LMF20LUU)
-const SUFFIX_RE = /[\s\-]*(2RSH|2RS1|2RS|DDU|LLU|LLB|ZZ|2Z|DD|RS|Z|D|NR|ZNR|C3|C4|CM|OPEN|OP|UU|AJ)$/i;
+// (리니어 부시: UU 양쪽 실, U 한쪽 실, OP 개방형, AJ 조정형 — LM20UU, LM20U, LM20UU-OP, LMF20LUU)
+const SUFFIX_RE = /[\s\-]*(2RSH|2RS1|2RS|DDU|LLU|LLB|ZZ|2Z|DD|RS|Z|D|NR|ZNR|C3|C4|CM|OPEN|OP|UU|U|AJ)$/i;
 function stripSuffix(q) {
   let base = q.trim();
   const sfx = [];
@@ -220,7 +220,7 @@ function formIntro(form, item, qty) {
       // 볼 베어링(실드 표기 없는 형번)은 실드 형식을 비고에 적도록 안내
       (shieldItem(item) ? "\n\n※ 볼 베어링은 실드 형식에 따라 품번이 달라요. 비고에 OPEN(개방형)·ZZ(철판 실드)·DD(고무 실, 2RS·DDU와 같은 형식) 중 필요한 형식을 적어 주세요. 모르시면 담당자가 확인해 안내드려요." : "") +
       // 리니어 부시(LM·LMF·LMK·LMH, 실 표기 없음)는 실 유무를 비고에 적도록 안내
-      (/^LM[FKH]?\d/i.test((item || "").replace(/\s+/g, "")) && !/UU|OP|AJ/i.test(item || "") ? "\n\n※ 리니어 부시는 실 형식에 따라 품번이 달라요. 비고에 UU(양쪽 고무 실)·실 없음 중 필요한 형식을 적어 주세요. 모르시면 담당자가 확인해 안내드려요." : "")
+      (/^LM[FKH]?\d/i.test((item || "").replace(/\s+/g, "")) && !/\d+L?(UU|U|OP|AJ)/i.test((item || "").replace(/\s+/g, "")) ? "\n\n※ 리니어 부시는 실 형식에 따라 품번이 달라요. 비고에 OPEN(실 없음)·UU(양쪽 고무 실)·U(한쪽 고무 실) 중 필요한 형식을 적어 주세요. 모르시면 담당자가 확인해 안내드려요." : "")
     ),
     // 말풍선에는 ':' 없이 "항목 이름 + 띄어쓰기"만 — 손님은 이름 뒤에 바로 내용을 적으면 됨
     text(form.tag + "\n" + form.fields.map((f) => f + " " + ((f === "품번/규격" && item) || (f === "수량" && qty) || "")).join("\n")),
