@@ -197,7 +197,7 @@ function formIntro(form, item, qty) {
   return [
     text(
       `${form.name} 양식이에요.\n` +
-      "아래 말풍선을 길게 눌러 복사한 뒤, 각 항목 ':' 뒤에 내용을 적어서 이 채팅방에 보내 주세요.\n\n" +
+      "아래 말풍선을 길게 눌러 복사한 뒤 내용을 채워서 이 채팅방에 보내 주세요.\n\n" +
       "품목이 여러 개면 품번/규격 칸에 '6205 10개, 6206 5개'처럼 이어서 적으시면 돼요." +
       (form.note ? "\n\n" + form.note : "") +
       // 오일씰은 같은 치수라도 형식이 여러 가지 — 손님이 알면 적고, 모르면 담당자가 안내
@@ -214,8 +214,20 @@ function parseForm(u) {
   const form = Object.values(FORMS).find((f) => u.startsWith(f.tag));
   if (!form) return null;
   const values = {};
+  // "회사명/담당자: 홍길동", "회사명/담당자 홍길동", "회사명/담당자홍길동" 모두 인식(':' 없어도 됨)
+  const fields = form.fields.slice().sort((a, b) => b.length - a.length);
   for (const line of u.split(/\r?\n/).slice(1)) {
-    const m = line.match(/^\s*([^:：]+)[:：]\s*(.*)$/);
+    const t = line.trim();
+    const f = fields.find((name) => t.replace(/\s+/g, "").startsWith(name.replace(/\s+/g, "")));
+    if (f) {
+      // 항목 이름 글자 수만큼(공백 무시) 앞에서 떼고 나머지를 값으로
+      let i = 0, k = 0;
+      const key = f.replace(/\s+/g, "");
+      while (i < t.length && k < key.length) { if (!/\s/.test(t[i])) k++; i++; }
+      values[f] = t.slice(i).replace(/^[\s:：\-=]+/, "").trim();
+      continue;
+    }
+    const m = t.match(/^([^:：]+)[:：]\s*(.*)$/);
     if (m) values[m[1].trim()] = m[2].trim();
   }
   const missing = form.required.filter((k) => !values[k]);
