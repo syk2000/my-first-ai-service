@@ -2292,3 +2292,5 @@
 .faq-answer a:hover, .faq-more a:hover { text-decoration: underline; }
 .faq-more { margin-top: 20px; font-size: 13.5px; color: var(--text-sub); }
 .faq-group-title { margin: 36px 0 14px; font-size: 18px; font-weight: 700; color: var(--text); }
+.faq-sub-title { margin: 20px 0 10px; font-size: 15px; font-weight: 700; color: var(--accent); }
+.faq-group-title:first-of-type { margin-top: 8px; }

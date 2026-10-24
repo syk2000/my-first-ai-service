@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261024b">
+<link rel="stylesheet" href="styles.css?v=20261024c">
 </head>
 <body>
 
@@ -102,6 +102,7 @@
         <p>고객님들이 자주 묻는 질문을 모았습니다. 질문을 누르면 답변이 열립니다.</p>
       </div>
 
+      <h3 class="faq-group-title">일반 질문</h3>
       <div class="faq-list">
         <details class="faq-item">
           <summary>어떤 제품과 브랜드가 있나요?</summary>
@@ -114,6 +115,10 @@
         <details class="faq-item">
           <summary>견적/발주하는 법</summary>
           <div class="faq-answer"><p><strong>견적</strong> — 견적문의 페이지에 규격과 수량을 적어 보내 주시거나, 카카오톡 채널 하단 메뉴의 '견적문의'를 눌러 양식을 보내 주시면 담당자가 확인 후 회신드립니다.</p><p><strong>발주</strong> — 카카오톡 채널 하단 메뉴의 '발주문의'를 눌러 회사명·연락처·품번·수량을 적어 보내 주시면 접수됩니다. 전화·이메일로도 발주하실 수 있습니다.</p><p class="faq-links"><a href="board.html">견적문의 바로가기 →</a><a href="https://pf.kakao.com/_YMbgn/chat" target="_blank" rel="noopener noreferrer">카카오톡 문의 →</a></p></div>
+        </details>
+        <details class="faq-item">
+          <summary>재고·납기·가격은 어떻게 알 수 있나요?</summary>
+          <div class="faq-answer"><p>품목과 수량에 따라 달라서, 견적 문의를 남겨 주시면 담당자가 재고·납기·단가를 확인해 안내드립니다.</p><p><a href="board.html">견적문의 바로가기 →</a></p></div>
         </details>
         <details class="faq-item">
           <summary>카탈로그를 볼 수 있나요?</summary>
@@ -129,11 +134,16 @@
         </details>
       </div>
 
-      <h3 class="faq-group-title">제품 관련 질문</h3>
+      <h3 class="faq-group-title">제품 질문</h3>
+      <h4 class="faq-sub-title">베어링</h4>
       <div class="faq-list">
         <details class="faq-item">
           <summary>볼 베어링 실드 형식(OPEN·ZZ·DD)은 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>OPEN(개방형)</strong> — 실드가 없습니다. 윤활유를 직접 관리하는 곳에 씁니다.</p><p><strong>Z/ZZ(철판 실드)</strong> — 한쪽/양쪽에 철판 덮개. 회전이 가볍고 고속에 유리하지만 물·미세먼지 차단은 약합니다.</p><p><strong>D/DD(고무 실)</strong> — 한쪽/양쪽에 고무 실. 먼지·물 차단이 좋고 회전 저항은 조금 큽니다.</p><p>기존 제품에 적힌 표기를 그대로 알려 주시면 같은 형식으로 안내드립니다.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>일제 베어링의 DD(DDU)와 VV는 어떻게 다른가요?</summary>
+          <div class="faq-answer"><p>둘 다 양쪽 고무 실이지만 실이 닿는 방식이 다릅니다.</p><p><strong>DDU(NSK)·LLU(NTN)</strong> — 접촉식. 실 립이 내륜에 닿습니다. 먼지·물 차단이 가장 좋지만 회전 저항과 열이 조금 있어 고속에는 불리합니다.</p><p><strong>VV(NSK)·LLB(NTN)</strong> — 비접촉식. 실이 내륜에 닿지 않고 아주 좁은 틈을 둡니다. 회전이 가볍고 고속에 유리하며, 먼지 차단은 접촉식보다 약하지만 철판 실드(ZZ)보다는 좋습니다.</p><p>기존 품번의 표기를 그대로 알려 주시면 같은 방식으로 안내드립니다.</p></div>
         </details>
         <details class="faq-item">
           <summary>메이커마다 실드 표기가 다른데 같은 형식인가요?</summary>
@@ -144,24 +154,33 @@
           <div class="faq-answer"><p>같은 형번이면 국제 규격(ISO)에 따라 내경·외경·폭 같은 주요 치수가 같아서 대부분 바꿔 쓸 수 있습니다.</p><p>다만 정밀도 등급, 내부틈새(C3 등), 케이지·그리스 사양은 다를 수 있습니다. 사용하시는 기계나 조건을 함께 알려 주시면 맞는 제품을 안내드립니다.</p></div>
         </details>
         <details class="faq-item">
-          <summary>형번 뒤의 C3는 무슨 뜻인가요?</summary>
-          <div class="faq-answer"><p>베어링 안쪽의 틈새(내부틈새)가 보통(CN)보다 크다는 뜻입니다. 열이 많이 나거나 단단히 끼워 쓰는 곳(모터 등)에 많이 씁니다. C4는 C3보다 더 큽니다.</p><p>기존 제품에 C3가 적혀 있으면 견적·발주 때 품번에 그대로 적어 주세요.</p></div>
+          <summary>형번 뒤의 C3·CM은 무슨 뜻인가요?</summary>
+          <div class="faq-answer"><p>베어링 안쪽 틈새(내부틈새)의 크기를 나타냅니다.</p><p><strong>표기 없음(CN)</strong> — 보통 틈새 / <strong>C2</strong> — 보통보다 작음</p><p><strong>C3</strong> — 보통보다 큼. 열이 많이 나거나 단단히 끼워 쓰는 곳에 씁니다. <strong>C4·C5</strong> — C3보다 더 큼</p><p><strong>CM</strong> — 전동기(모터)용 틈새. 소음·진동을 줄이도록 틈새 범위를 좁게 관리한 것으로, 일본 메이커(NSK·NTN 등)가 씁니다.</p><p>기존 제품에 적힌 틈새 표기를 견적·발주 때 품번에 그대로 적어 주세요.</p></div>
         </details>
+      </div>
+      <h4 class="faq-sub-title">오일씰</h4>
+      <div class="faq-list">
         <details class="faq-item">
           <summary>오일씰 형식(TC·SC·VC 등)은 어떻게 고르나요?</summary>
           <div class="faq-answer"><p>기존 제품에 적힌 형식을 그대로 쓰시는 것이 가장 확실합니다. 형식은 구조에 따라 나뉩니다.</p><p><strong>TC</strong> — 외주고무 + 먼지막이 립 + 스프링</p><p><strong>SC</strong> — 외주고무 + 단일 립 + 스프링</p><p><strong>TB·SB</strong> — TC·SC와 같은 구조에 외주가 금속</p><p><strong>VC·VB</strong> — 스프링 없음</p><p>형식을 모르시면 치수(내경·외경·두께)와 쓰는 곳을 알려 주세요. 담당자가 확인해 안내드립니다.</p></div>
         </details>
         <details class="faq-item">
+          <summary>오일씰 TC·TB(외철)·TCV는 어떻게 다른가요?</summary>
+          <div class="faq-answer"><p>셋 다 먼지막이 립과 스프링이 있는 오일씰입니다.</p><p><strong>TC</strong> — 바깥(외주)이 고무. 하우징에 잘 밀착되고 조립이 쉬워 가장 많이 씁니다.</p><p><strong>TB(외철)</strong> — 바깥이 금속. 하우징에 단단히 고정되고 열에 강하지만, 하우징 구멍이 정밀해야 합니다.</p><p><strong>TCV</strong> — TC 구조에 립을 보강한 내압형. 유압 펌프·모터처럼 압력이 걸리는 곳에 씁니다.</p><p>쓰시던 형식을 알려 주시거나, 모르시면 치수와 쓰는 곳을 알려 주세요.</p></div>
+        </details>
+      </div>
+      <h4 class="faq-sub-title">리니어 부시</h4>
+      <div class="faq-list">
+        <details class="faq-item">
           <summary>리니어 부시 UU·OP·AJ는 무슨 뜻인가요?</summary>
           <div class="faq-answer"><p><strong>표기 없음</strong> — 실 없음 / <strong>U</strong> — 한쪽 고무 실 / <strong>UU</strong> — 양쪽 고무 실</p><p><strong>OP</strong> — 개방형. 몸체 한쪽이 트여 있어 받침대가 있는 축에 씁니다.</p><p><strong>AJ</strong> — 조정형. 슬릿이 있어 틈새를 조절할 수 있습니다.</p><p><strong>L</strong> — 몸체가 긴 롱 타입 (예: LM20L)</p><p>예) LM20UU = 내경 20mm 표준형, 양쪽 고무 실</p></div>
         </details>
+      </div>
+      <h4 class="faq-sub-title">기타</h4>
+      <div class="faq-list">
         <details class="faq-item">
           <summary>제품의 형번이 지워져서 안 보이면 어떻게 하나요?</summary>
           <div class="faq-answer"><p>내경·외경·두께(폭)를 재서 규격검색 페이지나 카카오톡 채널에 입력하시면 맞는 규격을 찾을 수 있습니다. 예) 25 52 15</p><p>제품 사진은 카카오톡 채널의 '상담 연결'로 담당자에게 보내 주세요.</p><p><a href="search-product.html">규격검색 바로가기 →</a></p></div>
-        </details>
-        <details class="faq-item">
-          <summary>재고·납기·가격은 어떻게 알 수 있나요?</summary>
-          <div class="faq-answer"><p>품목과 수량에 따라 달라서, 견적 문의를 남겨 주시면 담당자가 재고·납기·단가를 확인해 안내드립니다.</p><p><a href="board.html">견적문의 바로가기 →</a></p></div>
         </details>
       </div>
 
@@ -187,7 +206,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261021c"></script>
-<script src="i18n/pages/faq.dict.js?v=20261024b"></script>
+<script src="i18n/pages/faq.dict.js?v=20261024c"></script>
 <script src="i18n.js?v=20261017p"></script>
 <script src="common.js?v=20261017o"></script>
 </body>
