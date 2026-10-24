@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261024c">
+<link rel="stylesheet" href="styles.css?v=20261024h">
 </head>
 <body>
 
@@ -101,6 +101,13 @@
         <h2>자주 하는 질문</h2>
         <p>고객님들이 자주 묻는 질문을 모았습니다. 질문을 누르면 답변이 열립니다.</p>
       </div>
+
+      <div class="field faq-search">
+        <label for="faqFilter">질문 검색</label>
+        <input id="faqFilter" type="search" placeholder="예: 실드, C3, 오링 온도, 파워록" autocomplete="off" />
+      </div>
+      <p class="finder-tip" id="faqCount"></p>
+      <p class="faq-empty" id="faqEmpty" hidden>찾는 질문이 없습니다. 견적문의나 카카오톡으로 문의해 주세요.</p>
 
       <h3 class="faq-group-title">일반 질문</h3>
       <div class="faq-list">
@@ -392,8 +399,49 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261021c"></script>
-<script src="i18n/pages/faq.dict.js?v=20261024g"></script>
+<script src="i18n/pages/faq.dict.js?v=20261024h"></script>
 <script src="i18n.js?v=20261017p"></script>
 <script src="common.js?v=20261017o"></script>
+<script>
+  // 질문 검색: 질문·답변 글자(띄어쓰기 무시)에 검색어가 모두 들어 있는 항목만 보여주고, 찾은 항목은 펼침
+  (function () {
+    var input = document.getElementById('faqFilter');
+    var countEl = document.getElementById('faqCount');
+    var emptyEl = document.getElementById('faqEmpty');
+    var items = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
+    var heads = Array.prototype.slice.call(document.querySelectorAll('.faq-group-title, .faq-sub-title'));
+    var squash = function (s) { return s.toLowerCase().replace(/[\s·・\-_/()（）]/g, ''); };
+    function apply() {
+      var words = input.value.trim().split(/\s+/).filter(Boolean).map(squash);
+      var shown = 0;
+      items.forEach(function (it) {
+        var text = squash(it.textContent);
+        var hit = words.every(function (w) { return text.indexOf(w) !== -1; });
+        it.hidden = !hit;
+        if (hit) shown++;
+        if (words.length) it.open = hit;
+      });
+      // 항목이 하나도 안 보이는 목록·소제목은 숨김
+      Array.prototype.forEach.call(document.querySelectorAll('.faq-list'), function (list) {
+        list.hidden = !Array.prototype.some.call(list.querySelectorAll('.faq-item'), function (x) { return !x.hidden; });
+      });
+      heads.forEach(function (hd) {
+        if (hd.classList.contains('faq-sub-title')) hd.hidden = hd.nextElementSibling.hidden;
+      });
+      heads.filter(function (hd) { return hd.classList.contains('faq-group-title'); }).forEach(function (hd) {
+        var el = hd.nextElementSibling, any = false;
+        while (el && !el.classList.contains('faq-group-title') && !el.classList.contains('faq-more')) {
+          if (el.classList.contains('faq-list') && !el.hidden) any = true;
+          el = el.nextElementSibling;
+        }
+        hd.hidden = !any;
+      });
+      countEl.textContent = words.length ? shown + ' / ' + items.length + '건 표시 중' : '';
+      emptyEl.hidden = !(words.length && shown === 0);
+      if (!words.length) items.forEach(function (it) { it.open = false; });
+    }
+    input.addEventListener('input', apply);
+  })();
+</script>
 </body>
 </html>

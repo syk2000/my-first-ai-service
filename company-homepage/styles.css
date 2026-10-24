@@ -2294,3 +2294,6 @@
 .faq-group-title { margin: 36px 0 14px; font-size: 18px; font-weight: 700; color: var(--text); }
 .faq-sub-title { margin: 20px 0 10px; font-size: 15px; font-weight: 700; color: var(--accent); }
 .faq-group-title:first-of-type { margin-top: 8px; }
+.faq-search { max-width: 420px; margin-bottom: 8px; }
+.faq-empty { margin: 8px 0 24px; padding: 16px 20px; border: 1px dashed var(--border); border-radius: var(--radius-md); color: var(--text-sub); font-size: 14px; }
+.faq-item[hidden], .faq-list[hidden], .faq-group-title[hidden], .faq-sub-title[hidden] { display: none; }
