@@ -193,7 +193,9 @@ function formIntro(form, item, qty) {
       `${form.name} 양식이에요.\n` +
       "아래 말풍선을 길게 눌러 복사한 뒤, 각 항목 ':' 뒤에 내용을 적어서 이 채팅방에 보내 주세요.\n\n" +
       "품목이 여러 개면 품번/규격 칸에 '6205 10개, 6206 5개'처럼 이어서 적으시면 돼요." +
-      (form.note ? "\n\n" + form.note : "")
+      (form.note ? "\n\n" + form.note : "") +
+      // 오일씰은 같은 치수라도 형식이 여러 가지 — 손님이 알면 적고, 모르면 담당자가 안내
+      (/^오일씰/.test(item || "") ? "\n\n※ 오일씰은 같은 치수라도 형식(립·스프링·외주 구조)이 여러 가지예요. 사용 중인 제품의 형식이나 품번을 아시면 비고에 적어 주세요. 모르시면 담당자가 확인해 맞는 형식을 안내드려요." : "")
     ),
     text(form.tag + "\n" + form.fields.map((f) => f + ": " + ((f === "품번/규격" && item) || (f === "수량" && qty) || "")).join("\n")),
   ];
@@ -484,6 +486,15 @@ function showResults(rows, query, note, q, isApprox, typed) {
       quick: [{ label: "이 품번으로 견적 문의", action: "message", messageText: "견적 문의: " + q }, QUICK[0]],
     });
   }
+  // 오일씰은 형식(TC·SC·D …)을 알리지 않고 "그 치수 규격이 있다"는 것만 — 같은 치수는 카드 하나로
+  const seen = {};
+  rows = rows.flatMap((r) => {
+    if (r.c !== "오일씰 형식 및 적용현황") return [r];
+    const key = [r.d, r.D, r.h].join("|");
+    if (seen[key]) return [];
+    seen[key] = 1;
+    return [Object.assign({}, r, { m: `오일씰 ${r.d}×${r.D}×${r.h}`, p: "oilseal_types.html", alts: [], seal: true })];
+  });
   const cards = rows.slice(0, MAX_CARDS).map((r) => {
     // 손님이 "6205ZZ"처럼 실드까지 적었으면 그 형번 그대로 양식에 넣음
     const name = typed && norm(r.m) === norm(typed.base) ? typed.full : cardName(r);
@@ -491,8 +502,10 @@ function showResults(rows, query, note, q, isApprox, typed) {
     const btn = (kind) => ({ action: "message", label: kind + " 문의", messageText: ask ? `실드 선택: ${kind} | ${name}` : `${kind} 문의: ${name}` });
     return {
       title: name.slice(0, 50),
-      description: (`${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)` +
-        r.alts.map((a) => "\n" + a).join("")).slice(0, 230),
+      description: (r.seal
+        ? `오일씰\nd ${fmt(r.d)} · D ${fmt(r.D)} · H ${fmt(r.h)} (mm)\n등록된 규격이 있어요.`
+        : `${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)` +
+          r.alts.map((a) => "\n" + a).join("")).slice(0, 230),
       // 카드에서 바로 견적·발주(볼 베어링은 실드 형식을 먼저 고름), 상세 보기는 홈페이지 규격 페이지
       buttons: [btn("견적"), btn("발주"), { action: "webLink", label: "상세 보기", webLinkUrl: SITE + r.p }],
     };
