@@ -2298,3 +2298,11 @@
 .faq-empty { margin: 8px 0 24px; padding: 16px 20px; border: 1px dashed var(--border); border-radius: var(--radius-md); color: var(--text-sub); font-size: 14px; }
 .faq-item[hidden], .faq-list[hidden], .faq-group-title[hidden], .faq-sub-title[hidden] { display: none; }
 .faq-tabs { margin: 4px 0 10px; max-width: 900px; }
+.notice-body { max-width: 900px; margin: 0 0 18px; font-size: 14.5px; line-height: 1.75; color: var(--text); }
+.notice-body p { margin: 0 0 8px; }
+.notice-item a.notice-title { text-decoration: none; }
+.notice-item a.notice-title:hover { text-decoration: underline; }
+.speed-table-wrap { overflow-x: auto; max-width: 720px; }
+.speed-table { min-width: 420px; }
+.speed-table td:not(:first-child), .speed-table th:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+.speed-table.no-seal .col-seal { display: none; }
