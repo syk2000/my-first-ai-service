@@ -423,6 +423,36 @@ const FAQ = [
     link: ["찾아오시는 길", "introduce.html#directions"],
   },
 ];
+// ── 구매·배송 질문 (회사 기준, 2026-10-24 담당자 확인)
+const BUY_FAQ = [
+  {
+    short: "낱개 구매",
+    q: "1개만 살 수 있나요?",
+    a: "네, 1개도 구매하실 수 있어요. 필요한 수량만큼 견적 문의나 발주 문의를 남겨 주세요.",
+  },
+  {
+    short: "결제·세금계산서",
+    q: "결제 방법과 세금계산서 발행은 어떻게 되나요?",
+    a: "계좌 이체로 결제하실 수 있고, 세금계산서도 발행해 드려요.\n\n발주서 비고에 세금계산서 발행이 필요하다고 적어 주시면 담당자가 확인해 처리해 드려요.",
+  },
+  {
+    short: "배송 기간",
+    q: "배송은 얼마나 걸리나요?",
+    a: "출고 후 보통 1~2일이면 받으실 수 있어요.\n\n재고가 없거나 주문 생산이 필요한 품목은 견적 때 납기를 따로 안내해 드려요.",
+  },
+  {
+    short: "반품",
+    q: "반품이 되나요?",
+    a: "제품을 받으신 뒤 7일 이내에 반품하실 수 있어요.\n\n반품이 필요하시면 채팅 입력창 아래 '상담 연결'이나 전화(" + PHONE + ")로 접수번호와 품목을 알려 주세요.",
+  },
+  {
+    short: "성적서·정품 증명",
+    q: "성적서나 정품 인증서를 받을 수 있나요?",
+    a: "• 국산 브랜드: 성적서나 정품 인증서를 받으실 수 있어요.\n" +
+      "• 수입 브랜드(일본 등): 성적서 대신 수입신고필증 같은 수입 서류로 정품을 확인해 드려요.\n\n" +
+      "필요한 서류를 견적·발주 때 비고에 적어 주세요.",
+  },
+];
 // ── 제품 문의 자주 하는 질문 (일반적인 기술 정보 + 문의 방법만 — 회사 정책은 넣지 않음)
 const PRODUCT_FAQ = [
   {
@@ -668,22 +698,36 @@ function faqMenu() {
   return {
     outputs: [text("자주 하는 질문이에요. 어떤 질문이 궁금하세요?\n\n" +
       "■ 일반 질문: 취급 제품·브랜드, 형번 입력 방법, 견적·발주, 재고·납기·가격, 카탈로그, 영업시간, 위치\n\n" +
+      "■ 구매·배송: 낱개 구매, 결제·세금계산서, 배송 기간, 반품, 성적서·정품 증명\n\n" +
       "■ 제품 질문: 베어링·베어링 유닛·오일씰·오링·스냅링·너트·키·핀·파워록·스프링·오일레스·오일게이지·LM 등 품목별 질문")],
     quick: [
       { label: "일반 질문", action: "message", messageText: "일반 질문" },
+      { label: "구매·배송", action: "message", messageText: "구매·배송 질문" },
       { label: "제품 질문", action: "message", messageText: "제품 질문" },
       QUICK[0],
     ],
+  };
+}
+function buyFaqList() {
+  return {
+    outputs: [text("구매·배송 관련 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n" + BUY_FAQ.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
+    quick: [...BUY_FAQ.map((f) => ({ label: f.short, action: "message", messageText: f.q })),
+      { label: "일반 질문", action: "message", messageText: "일반 질문" },
+      { label: "제품 질문", action: "message", messageText: "제품 질문" }, QUICK[0]],
   };
 }
 function faqList() {
   return {
     outputs: [text("일반적으로 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n" + FAQ.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
     quick: [...FAQ.map((f) => ({ label: f.short, action: "message", messageText: f.q })),
-      { label: "제품 질문", action: "message", messageText: "제품 질문" }, QUICK[0]],
+      { label: "구매·배송", action: "message", messageText: "구매·배송 질문" }, QUICK[0]],
   };
 }
 function faqAnswer(f, product) {
+  if (product === "buy") {
+    return { outputs: [{ textCard: { title: ("Q. " + f.q).slice(0, 50), description: f.a.slice(0, 400) } }],
+      quick: [{ label: "구매·배송", action: "message", messageText: "구매·배송 질문" }, { label: "일반 질문", action: "message", messageText: "일반 질문" }, QUICK[0]] };
+  }
   const card = { title: ("Q. " + f.q).slice(0, 50), description: f.a.slice(0, 400) };
   const links = f.links || (f.link ? [f.link] : []);
   if (links.length) card.buttons = links.map(([label, path]) => ({ action: "webLink", label, webLinkUrl: SITE + path }));
@@ -702,6 +746,9 @@ function answer(utterance, blockName) {
   const qkey = u.replace(/\s+/g, "").replace(/^Q\.?/, "");
   const faq = FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
   if (faq) return reply(faqAnswer(faq));
+  const bfaq = BUY_FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
+  if (bfaq) return reply(faqAnswer(bfaq, "buy"));
+  if (/^구매\s*·?\s*배송(\s*질문)?$/.test(u)) return reply(buyFaqList());
   const pfaq = PRODUCT_FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
   if (pfaq) return reply(faqAnswer(pfaq, true));
   if (/^(제품\s*(질문|FAQ|문의\s*FAQ)|제품\s*관련\s*질문)$/i.test(u)) return reply(productFaqList());
