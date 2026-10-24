@@ -451,8 +451,25 @@ function answer(utterance, blockName) {
     ]);
   }
 
-  // "UC205 규격 알려줘"처럼 붙은 말은 떼고 검색
-  const cleaned = u.replace(/(규격|품번|형번|치수|사이즈|검색|견적|발주|주문|문의|찾아\s*줘|찾아\s*주세요|알려\s*줘|알려\s*주세요|있어요|있나요|\?)/g, " ").replace(/\s+/g, " ").trim() || u;
+  // 인사·대답·잡담(숫자·영문 없음)은 검색하지 않고 안내
+  if (/감사|고맙|수고/.test(u) && !/\d/.test(u)) {
+    return reply([text("감사합니다 😊\n더 필요하신 규격이 있으면 형번이나 치수를 보내 주세요.")]);
+  }
+  // "6205 10개", "베어링 6205 재고 있나요?", "SKF 6205", "내경 25 외경 52", "25 52 15mm"처럼
+  // 붙은 말·수량·브랜드·단위는 떼고 검색 (수량은 견적·발주 양식에 채워 줌)
+  let work = u.replace(/(\d)\s*(mm|㎜)/gi, "$1");
+  let qty = null;
+  const qm = work.match(/(\d+)\s*(개|ea|pcs|세트|set|박스|box|본|롤)(?![a-z])/i);
+  if (qm) { qty = qm[1] + qm[2]; work = work.replace(qm[0], " "); }
+  work = work.replace(/(규격|품번|형번|치수|사이즈|검색|견적|발주|주문|문의(?:드립니다|드려요)?|찾아\s*줘|찾아\s*주세요|알려\s*줘|알려\s*주세요|부탁(?:드립니다|드려요|합니다|해요)?|해\s*주세요|주세요|있어요|있나요|있습니까|있을까요|재고|가격|단가|얼마(?:예요|인가요|에요)?|필요(?:합니다|해요)?|구매|구입|요청|혹시|수량|내경|외경|두께|폭|높이|볼\s*베어링|베어링|오일\s*씰|리데나|오링|O링|유니트|유닛|\?|!)/gi, " ");
+  work = work.replace(/(^|\s)(NACHI|SKF|NSK|NTN|FAG|KOYO|JTEKT|NMB|IKO|THK|TIMKEN|INA|KBC|JIB|WBC|IBC|TYB|ILJIN|ASAHI|FYH|EZO|KYK|JNS|ISC|NOK|일진|나치)(?=\s|$)/gi, " ");
+  work = work.replace(/\s+/g, " ").trim();
+  // "25-52-15"처럼 숫자만 '-'로 이은 것은 치수
+  if (/^\d+(\.\d+)?(\s*-\s*\d+(\.\d+)?){1,2}$/.test(work)) work = work.replace(/\s*-\s*/g, " ");
+  if (!work || !/[0-9a-z]/i.test(work)) {
+    return reply([text("찾으시는 형번이나 치수를 보내 주시면 바로 찾아드려요.\n예) 6205, UC205, 25 52 15\n\n담당자와 대화하시려면 채팅 입력창 아래 '상담 연결'을 눌러 주세요." + closedNote())]);
+  }
+  const cleaned = work;
   let query = parse(cleaned);
   let rows = dedupe(search(query));
   let note = "";
@@ -491,16 +508,16 @@ function answer(utterance, blockName) {
         "\n찾는 품목을 바로 문의하시려면 [이 품번으로 견적 문의]를 눌러 주세요.")],
       quick: [
         ...(hasNear ? [{ label: "근사치 보기", action: "message", messageText: "근사치: " + cleaned }] : []),
-        { label: "이 품번으로 견적 문의", action: "message", messageText: "견적 문의: " + cleaned },
+        { label: "이 품번으로 견적 문의", action: "message", messageText: "견적 문의: " + cleaned + (qty ? " | 수량 " + qty : "") },
         QUICK[0],
       ],
     });
   }
-  return showResults(rows, query, note, cleaned, false, typed);
+  return showResults(rows, query, note, cleaned, false, typed, qty);
 }
 
 // 규격 카드 목록 — [견적 문의]·[발주 문의]·[상세 보기]
-function showResults(rows, query, note, q, isApprox, typed) {
+function showResults(rows, query, note, q, isApprox, typed, qty) {
   if (!rows.length) {
     return reply({
       outputs: [text(`'${q}'에 가까운 등록 규격도 찾지 못했어요.\n[이 품번으로 견적 문의]를 누르면 담당자가 확인해 드릴게요.`)],
@@ -520,7 +537,7 @@ function showResults(rows, query, note, q, isApprox, typed) {
     // 손님이 "6205ZZ"처럼 실드까지 적었으면 그 형번 그대로 양식에 넣음
     const name = typed && norm(r.m) === norm(typed.base) ? typed.full : cardName(r);
     // 볼 베어링 실드 형식은 카드에서 묻지 않고, 양식 안내에서 비고에 적도록 함(오일씰 형식과 같은 방식)
-    const btn = (kind) => ({ action: "message", label: kind + " 문의", messageText: `${kind} 문의: ${name}` });
+    const btn = (kind) => ({ action: "message", label: kind + " 문의", messageText: `${kind} 문의: ${name}` + (qty ? ` | 수량 ${qty}` : "") });
     return {
       title: name.slice(0, 50),
       description: (r.seal
