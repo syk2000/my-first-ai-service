@@ -87,6 +87,12 @@ const SHIELDS = [
 ];
 const hasShield = (m) => /(ZZ|2Z|DDU?|LLU|LLB|2RS\w*|RS|Z|D)$/i.test(m.replace(/\s+/g, ""));
 const needsShield = (r) => SHIELD_CATS[r.c] && !hasShield(String(r.m));
+// 양식에 들어갈 품번이 실드 표기 없는 볼 베어링 형번인지 (예: "6205" → true, "6205ZZ" → false)
+function shieldItem(item) {
+  if (!item) return false;
+  const n = norm(item);
+  return load().SPEC_DATA.some((r) => norm(r.m) === n && needsShield(r));
+}
 function shieldAsk(kind, model) {
   return {
     outputs: [text(`${model}의 실드 형식을 골라 주세요.\n• OPEN: 실드 없는 개방형\n• ZZ: 양쪽 철판 실드\n• DD: 양쪽 고무 실 (2RS·DDU·LLU와 같은 형식)`)],
@@ -195,7 +201,9 @@ function formIntro(form, item, qty) {
       "품목이 여러 개면 품번/규격 칸에 '6205 10개, 6206 5개'처럼 이어서 적으시면 돼요." +
       (form.note ? "\n\n" + form.note : "") +
       // 오일씰은 같은 치수라도 형식이 여러 가지 — 손님이 알면 적고, 모르면 담당자가 안내
-      (/^오일씰/.test(item || "") ? "\n\n※ 오일씰은 같은 치수라도 형식(립·스프링·외주 구조)이 여러 가지예요. 사용 중인 제품의 형식이나 품번을 아시면 비고에 적어 주세요. 모르시면 담당자가 확인해 맞는 형식을 안내드려요." : "")
+      (/^오일씰/.test(item || "") ? "\n\n※ 오일씰은 같은 치수라도 형식(립·스프링·외주 구조)이 여러 가지예요. 사용 중인 제품의 형식이나 품번을 아시면 비고에 적어 주세요. 모르시면 담당자가 확인해 맞는 형식을 안내드려요." : "") +
+      // 볼 베어링(실드 표기 없는 형번)은 실드 형식을 비고에 적도록 안내
+      (shieldItem(item) ? "\n\n※ 볼 베어링은 실드 형식에 따라 품번이 달라요. 비고에 OPEN(개방형)·ZZ(철판 실드)·DD(고무 실, 2RS·DDU와 같은 형식) 중 필요한 형식을 적어 주세요. 모르시면 담당자가 확인해 안내드려요." : "")
     ),
     text(form.tag + "\n" + form.fields.map((f) => f + ": " + ((f === "품번/규격" && item) || (f === "수량" && qty) || "")).join("\n")),
   ];
@@ -498,8 +506,8 @@ function showResults(rows, query, note, q, isApprox, typed) {
   const cards = rows.slice(0, MAX_CARDS).map((r) => {
     // 손님이 "6205ZZ"처럼 실드까지 적었으면 그 형번 그대로 양식에 넣음
     const name = typed && norm(r.m) === norm(typed.base) ? typed.full : cardName(r);
-    const ask = !(typed && norm(r.m) === norm(typed.base)) && needsShield(r);
-    const btn = (kind) => ({ action: "message", label: kind + " 문의", messageText: ask ? `실드 선택: ${kind} | ${name}` : `${kind} 문의: ${name}` });
+    // 볼 베어링 실드 형식은 카드에서 묻지 않고, 양식 안내에서 비고에 적도록 함(오일씰 형식과 같은 방식)
+    const btn = (kind) => ({ action: "message", label: kind + " 문의", messageText: `${kind} 문의: ${name}` });
     return {
       title: name.slice(0, 50),
       description: (r.seal
