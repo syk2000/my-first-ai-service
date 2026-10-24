@@ -417,17 +417,91 @@ const FAQ = [
     link: ["찾아오시는 길", "introduce.html#directions"],
   },
 ];
-function faqList() {
+// ── 제품 문의 자주 하는 질문 (일반적인 기술 정보 + 문의 방법만 — 회사 정책은 넣지 않음)
+const PRODUCT_FAQ = [
+  {
+    short: "실드 형식 차이",
+    q: "볼 베어링 실드 형식(OPEN·ZZ·DD)은 어떻게 다른가요?",
+    a: "• OPEN(개방형): 실드가 없어요. 윤활유를 직접 관리하는 곳에 써요.\n" +
+      "• Z/ZZ(철판 실드): 한쪽/양쪽에 철판 덮개. 회전이 가볍고 고속에 유리하지만 물·미세먼지 차단은 약해요.\n" +
+      "• D/DD(고무 실): 한쪽/양쪽에 고무 실. 먼지·물 차단이 좋고 회전 저항은 조금 커요.\n\n" +
+      "기존 제품에 적힌 표기를 그대로 알려 주시면 같은 형식으로 안내드려요.",
+  },
+  {
+    short: "메이커별 표기",
+    q: "메이커마다 실드 표기가 다른데 같은 형식인가요?",
+    a: "같은 형식을 메이커마다 다르게 표기해요.\n" +
+      "• 양쪽 철판 실드: ZZ (SKF는 2Z)\n" +
+      "• 양쪽 고무 실: DD(국산), DDU(NSK), LLU(NTN), 2RS(SKF 등), 2NSE(NACHI)\n" +
+      "• 한쪽만 있는 형식: Z, D, DU, LU, RS 등\n\n" +
+      "세부 구조(접촉·비접촉 등)는 메이커마다 조금씩 달라서, 기존 품번을 알려 주시면 맞는 제품으로 안내드려요.",
+  },
+  {
+    short: "다른 메이커 대체",
+    q: "다른 메이커 제품으로 바꿔 써도 되나요?",
+    a: "같은 형번이면 국제 규격(ISO)에 따라 내경·외경·폭 같은 주요 치수가 같아서 대부분 바꿔 쓸 수 있어요.\n" +
+      "다만 정밀도 등급, 내부틈새(C3 등), 케이지·그리스 사양은 다를 수 있어요. 사용하시는 기계나 조건을 함께 알려 주시면 맞는 제품을 안내드려요.",
+  },
+  {
+    short: "C3 뜻",
+    q: "형번 뒤의 C3는 무슨 뜻인가요?",
+    a: "베어링 안쪽의 틈새(내부틈새)가 보통(CN)보다 크다는 뜻이에요. 열이 많이 나거나 단단히 끼워 쓰는 곳(모터 등)에 많이 써요. C4는 C3보다 더 커요.\n\n" +
+      "기존 제품에 C3가 적혀 있으면 견적·발주 때 품번에 그대로 적어 주세요.",
+  },
+  {
+    short: "오일씰 형식",
+    q: "오일씰 형식(TC·SC·VC 등)은 어떻게 고르나요?",
+    a: "기존 제품에 적힌 형식을 그대로 쓰시는 게 가장 확실해요. 형식은 구조에 따라 나뉘어요.\n" +
+      "• TC: 외주고무 + 먼지막이 립 + 스프링\n" +
+      "• SC: 외주고무 + 단일 립 + 스프링\n" +
+      "• TB·SB: TC·SC와 같은 구조에 외주가 금속\n" +
+      "• VC·VB: 스프링 없음\n\n" +
+      "형식을 모르시면 치수(내경·외경·두께)와 쓰는 곳을 알려 주세요. 담당자가 확인해 안내드려요.",
+  },
+  {
+    short: "리니어 부시 표기",
+    q: "리니어 부시 UU·OP·AJ는 무슨 뜻인가요?",
+    a: "• 표기 없음: 실 없음 / U: 한쪽 고무 실 / UU: 양쪽 고무 실\n" +
+      "• OP: 개방형 — 몸체 한쪽이 트여 있어 받침대가 있는 축에 써요.\n" +
+      "• AJ: 조정형 — 슬릿이 있어 틈새를 조절할 수 있어요.\n" +
+      "• L: 몸체가 긴 롱 타입 (예: LM20L)\n\n" +
+      "예) LM20UU = 내경 20mm 표준형, 양쪽 고무 실",
+  },
+  {
+    short: "형번이 안 보일 때",
+    q: "제품의 형번이 지워져서 안 보이면 어떻게 하나요?",
+    a: "내경·외경·두께(폭)를 재서 이 채팅에 '25 52 15'처럼 보내 주시면 맞는 규격을 찾아드려요.\n\n" +
+      "제품 사진을 보내시려면 채팅 입력창 아래 '상담 연결'을 누른 뒤 담당자에게 보내 주세요.",
+  },
+  {
+    short: "재고·납기·가격",
+    q: "재고·납기·가격은 어떻게 알 수 있나요?",
+    a: "품목과 수량에 따라 달라서, 견적 문의를 남겨 주시면 담당자가 재고·납기·단가를 확인해 안내드려요.\n\n" +
+      "규격 검색 결과 카드의 [견적 문의]를 누르면 품번이 채워진 양식이 바로 나와요.",
+  },
+];
+function productFaqList() {
   return {
-    outputs: [text("자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n" + FAQ.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
-    quick: [...FAQ.map((f) => ({ label: f.short, action: "message", messageText: f.q })), QUICK[0]],
+    outputs: [text("제품 문의 때 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n" + PRODUCT_FAQ.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
+    quick: [...PRODUCT_FAQ.map((f) => ({ label: f.short, action: "message", messageText: f.q })), QUICK[0]],
   };
 }
-function faqAnswer(f) {
-  const card = { title: "Q. " + f.q, description: f.a.slice(0, 400) };
+
+function faqList() {
+  return {
+    outputs: [text("자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.\n\n" + FAQ.map((f, i) => `${i + 1}. ${f.q}`).join("\n") +
+      "\n\n제품(실드 형식, C3, 오일씰 형식 등)이 궁금하시면 [제품 질문]을 눌러 주세요.")],
+    quick: [...FAQ.map((f) => ({ label: f.short, action: "message", messageText: f.q })),
+      { label: "제품 질문", action: "message", messageText: "제품 질문" }, QUICK[0]],
+  };
+}
+function faqAnswer(f, product) {
+  const card = { title: ("Q. " + f.q).slice(0, 50), description: f.a.slice(0, 400) };
   const links = f.links || (f.link ? [f.link] : []);
   if (links.length) card.buttons = links.map(([label, path]) => ({ action: "webLink", label, webLinkUrl: SITE + path }));
-  return [{ textCard: card }, text("다른 질문은 'FAQ'를 눌러 주세요.")];
+  return product
+    ? { outputs: [{ textCard: card }], quick: [{ label: "제품 질문 목록", action: "message", messageText: "제품 질문" }, { label: "자주 하는 질문", action: "message", messageText: "자주 하는 질문" }, QUICK[0]] }
+    : [{ textCard: card }, text("다른 질문은 'FAQ'를 눌러 주세요.")];
 }
 
 function answer(utterance, blockName) {
@@ -437,8 +511,12 @@ function answer(utterance, blockName) {
   if (!u || /^(안녕|하이|시작|처음|메뉴|hi|hello)/i.test(u)) return reply([text(WELCOME)]);
   if (/^(도움말|사용법|규격 ?검색 ?방법)/.test(u)) return reply([text(HELP)]);
   // FAQ 질문 버튼 — "형번 및 규격…", "견적/발주…"가 아래 키워드 안내에 걸리지 않도록 먼저 확인
-  const faq = FAQ.find((f) => f.q.replace(/\s+/g, "") === u.replace(/\s+/g, "").replace(/^Q\.?/, ""));
+  const qkey = u.replace(/\s+/g, "").replace(/^Q\.?/, "");
+  const faq = FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
   if (faq) return reply(faqAnswer(faq));
+  const pfaq = PRODUCT_FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
+  if (pfaq) return reply(faqAnswer(pfaq, true));
+  if (/^(제품\s*(질문|FAQ|문의\s*FAQ)|제품\s*관련\s*질문)$/i.test(u)) return reply(productFaqList());
   // 채팅방 하단 메뉴 [규격&품번] 등 — 숫자 없이 "규격/품번/형번/검색"만 오면 입력 안내
   if (!/\d/.test(u) && /규격|품번|형번|검색/.test(u)) {
     return reply([text(
