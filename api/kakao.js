@@ -104,6 +104,20 @@ function shieldAsk(kind, model) {
   };
 }
 
+// 손님 말에 들어 있는 품목 이름 → [찾을 때 뗄 말, 분류(r.c) 조건, 안내용 이름]
+const CATEGORY_WORDS = [
+  [/E\s*링|이\s*링|E형\s*멈춤\s*링/i, /E형 멈춤링/, "E형 멈춤링"],
+  [/C형\s*멈춤\s*링|스냅\s*링|멈춤\s*링|C\s*링|씨\s*링|스톱\s*링/i, /멈춤링|스냅링|스톱링/, "스냅링·멈춤링"],
+  [/오링|O\s*링|o-?ring/i, /오링/, "오링"],
+  [/스프링\s*핀|핀/, /핀/, "핀"],
+  [/로크\s*너트|록\s*너트|너트/, /너트/, "너트"],
+  [/와셔/, /와셔/, "와셔"],
+  [/반달\s*키|사각\s*키|라운드\s*키|키\s*홈|(^|\s)키(?=\s|\d|$)/, /키/, "키"],
+  [/금형\s*스프링|접시\s*스프링|스프링/, /스프링/, "스프링"],
+  [/부쉬|부시|부싱/, /부쉬|부시|부싱/, "부시"],
+  [/하우징/, /하우징/, "하우징"],
+];
+
 // 형번 뒤에 붙는 실드·틈새 표기(6205ZZ, 6205-2RS, 6205 C3 …)를 떼어 기본 형번을 찾음
 const SUFFIX_RE = /[\s\-]*(2RSH|2RS1|2RS|DDU|LLU|LLB|ZZ|2Z|DD|RS|Z|D|NR|ZNR|C3|C4|CM|OPEN|OP)$/i;
 function stripSuffix(q) {
@@ -457,16 +471,20 @@ function answer(utterance, blockName) {
   }
   // "6205 10개", "베어링 6205 재고 있나요?", "SKF 6205", "내경 25 외경 52", "25 52 15mm"처럼
   // 붙은 말·수량·브랜드·단위는 떼고 검색 (수량은 견적·발주 양식에 채워 줌)
-  let work = u.replace(/(\d)\s*(mm|㎜)/gi, "$1");
+  // 품목 이름이 함께 오면("스냅링 20", "오링 P20", "E링 5") 그 분류 안에서 찾음
+  const cat = CATEGORY_WORDS.find(([re]) => re.test(u));
+  let work = u.replace(/[^\p{L}\p{N}\s\-\/.*×"'()#+,~]/gu, " ").replace(/(\d)\s*(mm|㎜)/gi, "$1");
   let qty = null;
   const qm = work.match(/(\d+)\s*(개|ea|pcs|세트|set|박스|box|본|롤)(?![a-z])/i);
   if (qm) { qty = qm[1] + qm[2]; work = work.replace(qm[0], " "); }
   work = work.replace(/(규격|품번|형번|치수|사이즈|검색|견적|발주|주문|문의(?:드립니다|드려요)?|찾아\s*줘|찾아\s*주세요|알려\s*줘|알려\s*주세요|부탁(?:드립니다|드려요|합니다|해요)?|해\s*주세요|주세요|있어요|있나요|있습니까|있을까요|재고|가격|단가|얼마(?:예요|인가요|에요)?|필요(?:합니다|해요)?|구매|구입|요청|혹시|수량|내경|외경|두께|폭|높이|볼\s*베어링|베어링|오일\s*씰|리데나|오링|O링|유니트|유닛|\?|!)/gi, " ");
-  work = work.replace(/(^|\s)(NACHI|SKF|NSK|NTN|FAG|KOYO|JTEKT|NMB|IKO|THK|TIMKEN|INA|KBC|JIB|WBC|IBC|TYB|ILJIN|ASAHI|FYH|EZO|KYK|JNS|ISC|NOK|일진|나치)(?=\s|$)/gi, " ");
+  work = work.replace(/(^|\s)(NACHI|SKF|NSK|NTN|FAG|KOYO|JTEKT|NMB|IKO|THK|TIMKEN|INA|KBC|JIB|WBC|IBC|TYB|ILJIN|ASAHI|FYH|EZO|KYK|JNS|ISC|NOK|일진|나치|bearings?|oil\s*seals?|seals?|o-?rings?|price|stock|please|quote|order|need|want|qty)(?=\s|$)/gi, " ");
+  // 분류 이름(스냅링·멈춤링·E링·키·핀 …)도 검색어에서는 뗌 — 위에서 분류로 따로 걸러 줌
+  if (cat) work = work.replace(cat[0], " ");
   work = work.replace(/\s+/g, " ").trim();
   // "25-52-15"처럼 숫자만 '-'로 이은 것은 치수
   if (/^\d+(\.\d+)?(\s*-\s*\d+(\.\d+)?){1,2}$/.test(work)) work = work.replace(/\s*-\s*/g, " ");
-  if (!work || !/[0-9a-z]/i.test(work)) {
+  if (!work || !/[0-9a-z]/i.test(work) || work.replace(/\s+/g, "").length < 2 && !/^\d$/.test(work)) {
     return reply([text("찾으시는 형번이나 치수를 보내 주시면 바로 찾아드려요.\n예) 6205, UC205, 25 52 15\n\n담당자와 대화하시려면 채팅 입력창 아래 '상담 연결'을 눌러 주세요." + closedNote())]);
   }
   const cleaned = work;
@@ -485,6 +503,31 @@ function answer(utterance, blockName) {
         quick: [...tries.slice(0, 9).map((x) => ({ label: dimLabel(x.q) + ` (${x.rows.length}건)`, action: "message", messageText: dimLabel(x.q) })), QUICK[0]],
       });
     }
+  }
+  // 분류 이름이 있었으면 그 분류 결과만 — 없으면 "스냅링 20"처럼 숫자를 그 분류의 호칭(축·구멍 지름)이나 형번 숫자로 찾음
+  if (cat) {
+    if (/^\d+(\.\d+)?$/.test(cleaned)) {
+      // 숫자 하나: 호칭(d)이 같거나 형번에 그 숫자가 따로 들어간 것만 (20 → S-20, R-20 / 120·200은 제외)
+      const n = Number(cleaned);
+      const numRe = new RegExp(`(^|[^0-9.])${cleaned.replace(".", "\\.")}([^0-9.]|$)`);
+      rows = dedupe(load().SPEC_DATA.filter((r) => cat[1].test(r.c) && ((r.d != null && Math.abs(r.d - n) < 0.01) || numRe.test(r.m))))
+        .sort((a, b) => groupRank(a) - groupRank(b));
+      if (rows.length) note = `${cat[2]} 중 ${cleaned} 규격을 찾았어요.\n`;
+      query = { kind: "model", q: cleaned };
+    } else {
+      const inCat = rows.filter((r) => cat[1].test(r.c));
+      if (inCat.length) rows = inCat;
+    }
+  }
+  // "6205 6206 6207"처럼 여러 형번을 한 번에 보내면 형번마다 찾아서 모아 보여줌
+  // (숫자만 여러 개면 치수로 먼저 찾고, 치수로 없을 때 형번 여러 개로 봄)
+  if (!rows.length && cleaned.split(/[\s,]+/).filter(Boolean).length > 1) {
+    const parts = cleaned.split(/[\s,]+/).filter((p) => p.length >= 2);
+    const found = parts.flatMap((p) => {
+      const q = norm(p);
+      return dedupe(search({ kind: "model", q: p })).filter((r) => norm(r.m) === q).slice(0, 2);
+    });
+    if (found.length) { rows = found; query = { kind: "model", q: cleaned }; note = `보내 주신 형번 ${parts.length}개 중 등록된 규격을 모았어요.\n`; }
   }
   // "6205ZZ", "6205-2RS"처럼 실드·틈새 표기가 붙어 정확한 형번이 없으면 표기를 떼고 기본 형번으로 찾음
   let typed = null;
