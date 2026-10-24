@@ -2297,3 +2297,4 @@
 .faq-search { max-width: 420px; margin-bottom: 8px; }
 .faq-empty { margin: 8px 0 24px; padding: 16px 20px; border: 1px dashed var(--border); border-radius: var(--radius-md); color: var(--text-sub); font-size: 14px; }
 .faq-item[hidden], .faq-list[hidden], .faq-group-title[hidden], .faq-sub-title[hidden] { display: none; }
+.faq-tabs { margin: 4px 0 10px; max-width: 900px; }

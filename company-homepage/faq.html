@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261024h">
+<link rel="stylesheet" href="styles.css?v=20261024m">
 </head>
 <body>
 
@@ -106,11 +106,31 @@
         <label for="faqFilter">질문 검색</label>
         <input id="faqFilter" type="search" placeholder="예: 실드, C3, 오링 온도, 파워록" autocomplete="off" />
       </div>
+      <div class="ost-tabs faq-tabs" id="faqTabs">
+        <button type="button" class="ost-tab is-active" data-cat="">전체</button>
+        <button type="button" class="ost-tab" data-cat="일반 질문">일반 질문</button>
+        <button type="button" class="ost-tab" data-cat="구매·배송">구매·배송</button>
+        <button type="button" class="ost-tab" data-cat="베어링">베어링</button>
+        <button type="button" class="ost-tab" data-cat="베어링 형번">베어링 형번</button>
+        <button type="button" class="ost-tab" data-cat="베어링 유닛">베어링 유닛</button>
+        <button type="button" class="ost-tab" data-cat="오일씰">오일씰</button>
+        <button type="button" class="ost-tab" data-cat="오링·유압씰">오링·유압씰</button>
+        <button type="button" class="ost-tab" data-cat="스냅링">스냅링</button>
+        <button type="button" class="ost-tab" data-cat="와셔·풋시너트">와셔·풋시너트</button>
+        <button type="button" class="ost-tab" data-cat="너트·슬리브">너트·슬리브</button>
+        <button type="button" class="ost-tab" data-cat="키·핀">키·핀</button>
+        <button type="button" class="ost-tab" data-cat="파워록">파워록</button>
+        <button type="button" class="ost-tab" data-cat="스프링·플런저">스프링·플런저</button>
+        <button type="button" class="ost-tab" data-cat="오일레스·DU">오일레스·DU</button>
+        <button type="button" class="ost-tab" data-cat="오일게이지">오일게이지</button>
+        <button type="button" class="ost-tab" data-cat="리니어·LM">리니어·LM</button>
+        <button type="button" class="ost-tab" data-cat="기타">기타</button>
+      </div>
       <p class="finder-tip" id="faqCount"></p>
       <p class="faq-empty" id="faqEmpty" hidden>찾는 질문이 없습니다. 견적문의나 카카오톡으로 문의해 주세요.</p>
 
       <h3 class="faq-group-title">일반 질문</h3>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="일반 질문">
         <details class="faq-item">
           <summary>어떤 제품과 브랜드가 있나요?</summary>
           <div class="faq-answer"><p>베어링·베어링 유닛을 중심으로 아답타·로크너트·와셔, 키&amp;핀, 파워록, 강구·볼 리테이너, 테이크업 유닛, 스냅링, 오일씰·오링·유압씰, 오일게이지, 오일레스 부시, 접시·금형 스프링, 볼 플런저, 유닛 하우징, LM가이드 블록을 취급합니다.</p><p>NACHI·IBC·JIB·WBC·JMC·ILJIN·TYB 제품은 공식 대리점 자격으로 직접 공급하며, 그 밖의 국내외 브랜드도 취급합니다.</p><p class="faq-links"><a href="about-product.html">취급 제품 보기 →</a><a href="brands.html">취급 브랜드 보기 →</a></p></div>
@@ -142,7 +162,7 @@
       </div>
 
       <h3 class="faq-group-title">구매·배송</h3>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="구매·배송">
         <details class="faq-item">
           <summary>1개만 살 수 있나요?</summary>
           <div class="faq-answer"><p>네, 1개도 구매하실 수 있습니다. 필요한 수량만큼 견적 문의나 발주 문의를 남겨 주세요.</p></div>
@@ -167,7 +187,7 @@
 
       <h3 class="faq-group-title">제품 질문</h3>
       <h4 class="faq-sub-title">베어링</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="베어링">
         <details class="faq-item">
           <summary>볼 베어링 실드 형식(OPEN·ZZ·DD)은 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>OPEN(개방형)</strong> — 실드가 없습니다. 윤활유를 직접 관리하는 곳에 씁니다.</p><p><strong>Z/ZZ(철판 실드)</strong> — 한쪽/양쪽에 철판 덮개. 회전이 가볍고 고속에 유리하지만 물·미세먼지 차단은 약합니다.</p><p><strong>D/DD(고무 실)</strong> — 한쪽/양쪽에 고무 실. 먼지·물 차단이 좋고 회전 저항은 조금 큽니다.</p><p>기존 제품에 적힌 표기를 그대로 알려 주시면 같은 형식으로 안내드립니다.</p></div>
@@ -190,7 +210,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">베어링 형번</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="베어링 형번">
         <details class="faq-item">
           <summary>베어링 형번(6205 등)은 어떻게 읽나요?</summary>
           <div class="faq-answer"><p>6205를 예로 들면 이렇게 읽습니다.</p><p><strong>6</strong> — 형식 — 깊은 홈 볼 베어링 (7은 앵귤러, N은 원통 롤러 등)</p><p><strong>2</strong> — 크기 계열 — 같은 내경에서 68·69·60·62·63 순으로 외경·폭이 커짐</p><p><strong>05</strong> — 내경 번호 — 00=10, 01=12, 02=15, 03=17mm, 04부터는 ×5 (05=25mm, 10=50mm)</p><p>뒤에 붙는 ZZ·DD는 실드 형식, C3는 내부틈새입니다.</p></div>
@@ -213,7 +233,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">베어링 유닛</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="베어링 유닛">
         <details class="faq-item">
           <summary>베어링 유닛 인서트 UC·UK·SA·SB는 어떻게 다른가요?</summary>
           <div class="faq-answer"><p>축에 고정하는 방식이 다릅니다.</p><p><strong>UC</strong> — 내경 표준, 세트스크류(고정나사)로 고정</p><p><strong>UK</strong> — 테이퍼 내경, 어댑터 슬리브로 고정 (슬리브는 별도 부품)</p><p><strong>SA(CSA)·HC</strong> — 편심고정링(칼라)으로 고정</p><p><strong>SB(CSB)</strong> — 세트스크류로 고정. C가 붙으면 원통 외륜(CSB·CSA)</p><p><strong>UCX</strong> — UC보다 폭이 넓은 중하중용</p><p><a href="ball_bearing_unit.html">베어링 유닛 보기 →</a></p></div>
@@ -236,7 +256,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">오일씰</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="오일씰">
         <details class="faq-item">
           <summary>오일씰 형식(TC·SC·VC 등)은 어떻게 고르나요?</summary>
           <div class="faq-answer"><p>기존 제품에 적힌 형식을 그대로 쓰시는 것이 가장 확실합니다. 형식은 구조에 따라 나뉩니다.</p><p><strong>TC</strong> — 외주고무 + 먼지막이 립 + 스프링</p><p><strong>SC</strong> — 외주고무 + 단일 립 + 스프링</p><p><strong>TB·SB</strong> — TC·SC와 같은 구조에 외주가 금속</p><p><strong>VC·VB</strong> — 스프링 없음. 압력이 걸리는 곳에는 쓸 수 없습니다.</p><p>형식을 모르시면 치수(내경·외경·두께)와 쓰는 곳을 알려 주세요. 담당자가 확인해 안내드립니다.</p></div>
@@ -259,7 +279,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">오링·유압씰</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="오링·유압씰">
         <details class="faq-item">
           <summary>오링 P·G·S·V·AN 계열은 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>P계열</strong> — 운동용. 유압·공압 실린더의 피스톤·로드처럼 움직이는 곳</p><p><strong>G계열</strong> — 고정용. 플랜지·커버처럼 움직이지 않는 곳</p><p><strong>S계열</strong> — 단면이 가는 소형 치수 계열</p><p><strong>V계열</strong> — 진공 플랜지용. 단면이 굵은 대형</p><p><strong>AN계열</strong> — 미국 AS568 표준. 미국·유럽 장비에 많이 씁니다.</p><p>P·G·S·V는 일본 JIS B 2401 기준입니다. 기존 오링의 계열과 번호(예: P20)를 알려 주시면 같은 규격으로 안내드립니다.</p></div>
@@ -278,7 +298,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">스냅링</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="스냅링">
         <details class="faq-item">
           <summary>멈춤링 S형·R형·E형·C형은 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>S형(축용 C형)</strong> — 축 바깥 홈에 끼워 부품이 축 방향으로 빠지지 않게 잡습니다.</p><p><strong>R형(구멍용 C형)</strong> — 구멍 안쪽 홈에 끼워 하우징 속 베어링 등을 잡습니다. S·R형은 전용 플라이어로 벌리거나 오므려서 끼웁니다.</p><p><strong>E형(E링)</strong> — 축 홈에 옆에서 눌러 끼웁니다. 공구 없이도 끼울 수 있어 소형 부품에 많이 씁니다.</p><p><strong>C형(크레센트)</strong> — E형처럼 옆에서 끼우지만 몸체가 넓어 더 큰 힘을 견딥니다.</p></div>
@@ -309,7 +329,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">와셔·풋시너트</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="와셔·풋시너트">
         <details class="faq-item">
           <summary>풀림 방지 와셔는 어떤 종류가 있나요?</summary>
           <div class="faq-answer"><p><strong>E와셔(톱니 와셔)</strong> — 안쪽·바깥쪽 톱니가 체결면을 파고들어 풀림 방지 (KS B 1325)</p><p><strong>스핀 와셔</strong> — 회오리 모양 톱니로, 일반 스프링 와셔보다 진동 풀림에 강함</p><p><strong>노드 록</strong> — 두 장이 한 쌍으로 조립된 상태로 공급, 노란 크로메이트 도금이 표준</p><p><strong>웨이브 와셔</strong> — 풀림 방지보다는 예압을 주거나 축 방향 유격을 흡수 (베어링용 BWW)</p></div>
@@ -320,7 +340,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">너트·슬리브</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="너트·슬리브">
         <details class="faq-item">
           <summary>어댑터 슬리브(H)와 인발 슬리브(AH)는 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>어댑터 슬리브(H)</strong> — 테이퍼 내경 베어링을 원통 축에 고정. 바깥이 1/12 테이퍼라 로크너트로 밀면 축에 단단히 조여짐</p><p><strong>인발 슬리브(AH)</strong> — 베어링을 쉽게 빼낼(철거) 수 있도록 쓰는 슬리브</p><p><strong>계열 선택</strong> — 베어링 형번에 맞춰 H2·H3·H23·H30·H31·H32 중 선택. 예) UK205 → H2305X</p><p><a href="hah_sleeve.html">어댑터 슬리브 보기 →</a></p></div>
@@ -335,7 +355,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">키·핀</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="키·핀">
         <details class="faq-item">
           <summary>사각키·반달키·라운드키는 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>사각키</strong> — 축과 보스를 회전 방향으로 고정하는 기본 키. 일반강(SM45C)과 스테인리스(STS304, 300mm 봉재로 공급해 잘라 사용)</p><p><strong>반달키</strong> — 반달 모양으로 홈 안에서 기울어져 가공 오차를 흡수. 소형 축·테이퍼 축용</p><p><strong>라운드키(1R·2R)</strong> — 끝을 반원으로 가공해 둥근 키홈에 그대로 맞음. 1R은 한쪽, 2R은 양쪽</p><p><a href="key_pin.html">키·핀 보기 →</a></p></div>
@@ -346,7 +366,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">파워록</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="파워록">
         <details class="faq-item">
           <summary>파워록은 무엇이고 언제 쓰나요?</summary>
           <div class="faq-answer"><p>볼트를 조이면 링이 축과 보스(허브) 사이를 조여, 키 없이 기어·풀리·스프라켓 등을 축에 고정하는 체결 부품입니다.</p><p><strong>장점</strong> — 위치를 자유롭게 정할 수 있고, 붙이고 떼기 쉬움. 센터링 기능이 있는 형식이 많음</p><p>축 지름과 보스(허브) 지름을 알려 주시면 맞는 형식을 안내드립니다.</p><p><a href="power_lock.html">파워록 보기 →</a></p></div>
@@ -357,7 +377,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">스프링·플런저</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="스프링·플런저">
         <details class="faq-item">
           <summary>금형 스프링은 시리즈(색상)를 어떻게 고르나요?</summary>
           <div class="faq-answer"><p>금형의 녹아웃·이젝터·캠·슬라이드 등에 쓰는 사각 단면 코일 스프링입니다.</p><p><strong>시리즈</strong> — 하중(부하 용량)과 압축 가능 범위에 따라 SF·SSF·SL·SM·SH 등 13개 시리즈, 색상으로도 구분</p><p><strong>예) SF</strong> — 경소하중, 황색. 사용 변형량은 자유장의 40~50%</p><p><strong>주의</strong> — 완전히 눌린 밀착 높이까지는 사용하면 안 됨</p><p>외경·자유장과 필요한 하중을 알려 주시면 맞는 시리즈로 안내드립니다.</p><p><a href="mold_spring.html">금형 스프링 보기 →</a></p></div>
@@ -372,7 +392,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">오일레스·DU</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="오일레스·DU">
         <details class="faq-item">
           <summary>DU 드라이 베어링과 오일레스 부시는 어떻게 다른가요?</summary>
           <div class="faq-answer"><p>둘 다 따로 기름을 넣지 않고 쓰는 부시입니다.</p><p><strong>DU</strong> — 강 배면에 PTFE 합금층을 붙인 얇은 드라이 메탈. 형번은 DU+내경 2자리+길이 2자리 (DU1006 = 내경 10·길이 6). 하우징 H7, 축 h7</p><p><strong>오일레스 부시(#500SP)</strong> — 청동에 고체 윤활제를 박아 넣은 자체 윤활 부시. 회전·왕복 운동 모두 사용</p><p><a href="oiless.html">오일레스 보기 →</a></p></div>
@@ -383,7 +403,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">오일게이지</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="오일게이지">
         <details class="faq-item">
           <summary>오일게이지 MH·MHS·MHL은 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>MH</strong> — 특수 강화 수지 본체, 잘 보이고 압력·약품에 강함 (모든 약품에 쓸 수 있는 것은 아님)</p><p><strong>MHS</strong> — 파손·누유 걱정을 줄인 형식, 압력과 고열에 강함. O링이 있어 끝까지 돌려 끼우면 됨</p><p><strong>MHL</strong> — 충격에 강하고, 빨간 눈금과 흰 반사판으로 기름 양을 확인하기 쉬움</p><p>설치할 때는 나사산에 그리스를 바르고, 공구로 세게 두드리지 마세요.</p><p><a href="oil_gage.html">오일게이지 보기 →</a></p></div>
@@ -394,7 +414,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">리니어·LM</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="리니어·LM">
         <details class="faq-item">
           <summary>리니어 부시 UU·OP·AJ는 무슨 뜻인가요?</summary>
           <div class="faq-answer"><p><strong>표기 없음</strong> — 실 없음 / <strong>U</strong> — 한쪽 고무 실 / <strong>UU</strong> — 양쪽 고무 실</p><p><strong>OP</strong> — 개방형. 몸체 한쪽이 트여 있어 받침대가 있는 축에 씁니다.</p><p><strong>AJ</strong> — 조정형. 슬릿이 있어 틈새를 조절할 수 있습니다.</p><p><strong>L</strong> — 몸체가 긴 롱 타입 (예: LM20L)</p><p>예) LM20UU = 내경 20mm 표준형, 양쪽 고무 실</p></div>
@@ -409,7 +429,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">기타</h4>
-      <div class="faq-list">
+      <div class="faq-list" data-cat="기타">
         <details class="faq-item">
           <summary>제품의 형번이 지워져서 안 보이면 어떻게 하나요?</summary>
           <div class="faq-answer"><p>내경·외경·두께(폭)를 재서 규격검색 페이지나 카카오톡 채널에 입력하시면 맞는 규격을 찾을 수 있습니다. 예) 25 52 15</p><p>제품 사진은 카카오톡 채널의 '상담 연결'로 담당자에게 보내 주세요.</p><p><a href="search-product.html">규격검색 바로가기 →</a></p></div>
@@ -442,36 +462,40 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261021c"></script>
-<script src="i18n/pages/faq.dict.js?v=20261024l"></script>
+<script src="i18n/pages/faq.dict.js?v=20261024m"></script>
 <script src="i18n.js?v=20261017p"></script>
 <script src="common.js?v=20261017o"></script>
 <script>
-  // 질문 검색: 질문·답변 글자(띄어쓰기 무시)에 검색어가 모두 들어 있는 항목만 보여주고, 찾은 항목은 펼침
+  // 질문 검색 + 분류 선택: 고른 분류 안에서, 질문·답변 글자(띄어쓰기 무시)에 검색어가 모두 들어 있는 항목만 보여줌
   (function () {
     var input = document.getElementById('faqFilter');
     var countEl = document.getElementById('faqCount');
     var emptyEl = document.getElementById('faqEmpty');
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('#faqTabs .ost-tab'));
+    var lists = Array.prototype.slice.call(document.querySelectorAll('.faq-list[data-cat]'));
     var items = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
-    var heads = Array.prototype.slice.call(document.querySelectorAll('.faq-group-title, .faq-sub-title'));
+    var current = '';
     var squash = function (s) { return s.toLowerCase().replace(/[\s·・\-_/()（）]/g, ''); };
     function apply() {
       var words = input.value.trim().split(/\s+/).filter(Boolean).map(squash);
-      var shown = 0;
-      items.forEach(function (it) {
-        var text = squash(it.textContent);
-        var hit = words.every(function (w) { return text.indexOf(w) !== -1; });
-        it.hidden = !hit;
-        if (hit) shown++;
-        if (words.length) it.open = hit;
+      var shown = 0, total = 0;
+      lists.forEach(function (list) {
+        var inCat = current === '' || list.getAttribute('data-cat') === current;
+        var any = false;
+        Array.prototype.forEach.call(list.querySelectorAll('.faq-item'), function (it) {
+          if (inCat) total++;
+          var text = squash(it.textContent);
+          var hit = inCat && words.every(function (w) { return text.indexOf(w) !== -1; });
+          it.hidden = !hit;
+          if (hit) { shown++; any = true; }
+          it.open = hit && words.length > 0;
+        });
+        list.hidden = !any;
+        var head = list.previousElementSibling;
+        if (head && head.classList.contains('faq-sub-title')) head.hidden = !any;
       });
-      // 항목이 하나도 안 보이는 목록·소제목은 숨김
-      Array.prototype.forEach.call(document.querySelectorAll('.faq-list'), function (list) {
-        list.hidden = !Array.prototype.some.call(list.querySelectorAll('.faq-item'), function (x) { return !x.hidden; });
-      });
-      heads.forEach(function (hd) {
-        if (hd.classList.contains('faq-sub-title')) hd.hidden = hd.nextElementSibling.hidden;
-      });
-      heads.filter(function (hd) { return hd.classList.contains('faq-group-title'); }).forEach(function (hd) {
+      // 큰 제목(일반 질문·구매·배송·제품 질문): 아래 목록이 하나라도 보이면 표시
+      Array.prototype.forEach.call(document.querySelectorAll('.faq-group-title'), function (hd) {
         var el = hd.nextElementSibling, any = false;
         while (el && !el.classList.contains('faq-group-title') && !el.classList.contains('faq-more')) {
           if (el.classList.contains('faq-list') && !el.hidden) any = true;
@@ -479,10 +503,16 @@
         }
         hd.hidden = !any;
       });
-      countEl.textContent = words.length ? shown + ' / ' + items.length + '건 표시 중' : '';
-      emptyEl.hidden = !(words.length && shown === 0);
-      if (!words.length) items.forEach(function (it) { it.open = false; });
+      countEl.textContent = (words.length || current) ? shown + ' / ' + total + '건 표시 중' : '';
+      emptyEl.hidden = shown !== 0;
     }
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        current = tab.getAttribute('data-cat');
+        tabs.forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+        apply();
+      });
+    });
     input.addEventListener('input', apply);
   })();
 </script>
