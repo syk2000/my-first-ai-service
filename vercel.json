@@ -3,5 +3,13 @@
     "api/kakao.js": {
       "includeFiles": "company-homepage/assets/spec-data.js"
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/company-homepage/(.*)\\.(webp|png|jpg|jpeg|gif|svg|ico|pdf)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    }
+  ]
 }
