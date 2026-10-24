@@ -184,24 +184,51 @@
       if (!isField(document.activeElement)) e.preventDefault();
     }));
 
-    // 메인 오른쪽 광고 배너: 4.5초마다 다음 장, 점을 누르면 해당 장. 마우스를 올리면 멈춤
+    // 메인 오른쪽 광고 배너: 설명서처럼 한 장씩 넘김 — 배너를 누르면 다음 장(버튼 글자를 누르면 해당 페이지로 이동),
+    // 4.5초마다 자동으로 넘기고, 점을 누르면 해당 장. 마우스를 올리면 멈춤
     (function adBanner() {
       const box = document.querySelector(".ad-banner");
       if (!box) return;
       const slides = [...box.querySelectorAll(".ad-slide")];
       const dots = [...box.querySelectorAll(".ad-dot")];
+      const pageNo = box.querySelector(".ad-page");
       let cur = 0;
       let timer;
+      const FLIP_MS = 750;
       function go(i) {
-        cur = (i + slides.length) % slides.length;
+        const next = (i + slides.length) % slides.length;
+        if (next === cur) return;
+        const prev = slides[cur];
+        const incoming = slides[next];
+        const forward = next > cur || (cur === slides.length - 1 && next === 0);
+        slides.forEach((s) => s.classList.remove("is-leaving", "is-returning"));
+        if (forward) {
+          // 앞 장이 왼쪽 모서리를 축으로 넘어가며 다음 장이 드러남
+          prev.classList.add("is-leaving");
+          setTimeout(() => prev.classList.remove("is-leaving"), FLIP_MS);
+        } else {
+          // 뒤로 갈 때는 이전 장이 다시 덮이듯 돌아옴
+          incoming.classList.add("is-returning");
+          setTimeout(() => incoming.classList.remove("is-returning"), FLIP_MS);
+        }
+        cur = next;
         slides.forEach((s, k) => {
           s.classList.toggle("is-active", k === cur);
           s.tabIndex = k === cur ? 0 : -1;
         });
         dots.forEach((d, k) => d.classList.toggle("is-active", k === cur));
+        if (pageNo) pageNo.textContent = cur + 1 + " / " + slides.length;
       }
       const start = () => { clearInterval(timer); timer = setInterval(() => go(cur + 1), 4500); };
       dots.forEach((d, k) => d.addEventListener("click", () => { go(k); start(); }));
+      slides.forEach((s) => s.addEventListener("click", (e) => {
+        // 버튼(ad-cta)을 누르거나 키보드(Enter)로 누르면 원래 링크로 이동, 그 밖의 곳을 누르면 다음 장
+        if (e.target.closest(".ad-cta") || e.detail === 0) return;
+        e.preventDefault();
+        go(cur + 1);
+      }));
+      const curl = box.querySelector(".ad-curl");
+      if (curl) curl.addEventListener("click", () => go(cur + 1));
       box.addEventListener("mouseenter", () => clearInterval(timer));
       box.addEventListener("mouseleave", start);
       start();
