@@ -3026,3 +3026,19 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="oilgage_mhl.html"]::before { background-image: url("assets/cards/pc_oilgage_mhl.svg?v=1"); }
 .img-cards .product-card[href="oilseal_types.html"]::before { background-image: url("assets/cards/pc_oilseal_types.svg?v=1"); }
 .img-cards .product-card[href="oilseal_endcap.html"]::before { background-image: url("assets/cards/pc_oilseal_endcap.svg?v=1"); }
+
+/* 강구 페이지: 요약 카드·재질/크기 버튼·통합 규격표 */
+.sb-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 8px 0 28px; }
+.sb-facts > div { background: var(--surface, #fff); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; text-align: center; }
+.sb-facts strong { display: block; font-size: 18px; color: var(--steel, #3f63d8); }
+.sb-facts span { font-size: 12.5px; color: var(--text-sub); }
+.sb-h3 { font-size: 18px; margin: 0 0 12px; }
+.sb-tools { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 20px; margin-bottom: 14px; }
+.sb-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.sb-chip { border: 1px solid var(--border); background: var(--surface, #fff); color: var(--text); border-radius: 999px; padding: 7px 14px; font-size: 13px; cursor: pointer; }
+.sb-chip.active { background: var(--steel, #3f63d8); border-color: var(--steel, #3f63d8); color: #fff; font-weight: 700; }
+.sb-table td.sb-ok { color: var(--text); font-weight: 700; }
+.sb-table td.sb-no { color: var(--text-faint); }
+.sb-table td.sb-ask { color: var(--text-faint); font-size: 12px; text-align: center; }
+.sb-sub { font-size: 11px; font-weight: 400; color: var(--text-sub); }
+@media (max-width: 720px) { .sb-facts { grid-template-columns: repeat(2, 1fr); } }
