@@ -233,3 +233,41 @@
       box.addEventListener("mouseleave", start);
       start();
     })();
+
+    // 규격표가 있는데 검색창이 없는 페이지에 '형번 / 규격 검색' 칸을 자동으로 붙임
+    // (문구는 i18n/common.json 사전으로 번역 — 이 코드는 번역 대상 수집보다 먼저 실행됨)
+    (function () {
+      const tables = [...document.querySelectorAll("table.spec-table")].filter((t) => t.tBodies.length && !t.closest("#finderResults"));
+      if (!tables.length) return;
+      const content = document.querySelector("section.page-section, main");
+      if (!content || content.querySelector("input:not([type=hidden])")) return;
+      // 첫 표를 감싼 덩어리 바로 앞에 넣음
+      let anchor = tables[0];
+      while (anchor.parentElement && !anchor.parentElement.classList.contains("wrap")) anchor = anchor.parentElement;
+      const box = document.createElement("div");
+      box.className = "field auto-spec-search";
+      box.innerHTML = '<label for="autoSpecFilter">형번 / 규격 검색</label>' +
+        '<input id="autoSpecFilter" type="search" placeholder="예: 형번 또는 치수 (20, 30*62)" autocomplete="off">' +
+        '<p class="finder-tip" id="autoSpecCount" hidden></p>';
+      anchor.parentElement.insertBefore(box, anchor);
+      const input = box.querySelector("input");
+      const countEl = box.querySelector("#autoSpecCount");
+      const rows = tables.flatMap((t) => [...t.tBodies].flatMap((b) => [...b.rows]));
+      const norm = (s) => s.toUpperCase().replace(/[\s\-_]/g, "");
+      const cells = rows.map((r) => [...r.cells].map((c) => c.textContent.trim()));
+      input.addEventListener("input", () => {
+        // 띄어쓰기·*·x로 나눈 낱말이 모두 그 줄에 있어야 보임 — 숫자는 칸 값과 같아야, 글자는 들어 있기만 하면 됨
+        const words = input.value.trim().split(/[\s*×xX,]+/).filter(Boolean);
+        let shown = 0;
+        rows.forEach((r, i) => {
+          const hit = words.every((w) => /^\d+(\.\d+)?$/.test(w)
+            ? cells[i].some((c) => c.split(/[^\d.]+/).some((n) => n !== "" && parseFloat(n) === parseFloat(w)))
+            : cells[i].some((c) => norm(c).includes(norm(w))));
+          r.hidden = !hit;
+          if (hit) shown++;
+        });
+        if (words.length) document.querySelectorAll("details").forEach((d) => { if (d.querySelector("tbody tr:not([hidden])")) d.open = true; });
+        countEl.hidden = !words.length;
+        countEl.textContent = shown + " / " + rows.length + "건 표시 중";
+      });
+    })();
