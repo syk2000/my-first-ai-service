@@ -2325,7 +2325,7 @@ table.spec-table th { color: #4b5873; }
 .field input[type="search"]:focus, .field input[id$="Filter"]:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(232, 137, 43, 0.2); }
 .field:has(> input[type="search"]) > label, .field:has(> input[id$="Filter"]) > label { color: var(--steel); font-size: 14px; font-weight: 700; }
 /* 취급 제품군 카드 그림 — 위쪽에 제품 그림, 아이콘은 숨김 (그림은 assets/cards) */
-#bearing-group .product-card::before, #accessory-group .product-card::before { content: ""; display: block; height: 170px; margin: -22px -22px 6px; border-radius: var(--radius-md) var(--radius-md) 0 0; border-bottom: 1px solid var(--border); background: #fff center / contain no-repeat; }
+#bearing-group .product-card::before, #accessory-group .product-card::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / cover no-repeat; }
 #bearing-group .product-card .p-icon, #accessory-group .product-card .p-icon { display: none; }
 :is(#bearing-group, #accessory-group) .product-card[href="bearing_page.html"]::before { background-image: url("assets/cards/bearing_page.webp?v=1"); }
 :is(#bearing-group, #accessory-group) .product-card[href="adapter_nut_washer.html"]::before { background-image: url("assets/cards/adapter_nut_washer.webp?v=1"); }
