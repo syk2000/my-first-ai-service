@@ -3068,3 +3068,96 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="tm_screw.html"]::before { background-image: url("assets/cards/pc_tm_screw.webp?v=1"); }
 .img-cards .product-card[href="spring_plunger_2205.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2205.webp?v=1"); }
 .img-cards .product-card[href="spring_plunger_2206.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2206.webp?v=1"); }
+
+/* DURI 추가분(2026-10-28) 카드 그림 */
+:is(#bearing-group, #accessory-group) .product-card[href="coupling.html"]::before { background-image: url("assets/cards/coupling.webp?v=1"); }
+.img-cards .product-card[href="coupling_drb.html"]::before,
+.img-cards .product-card[href="coupling_doh.html"]::before,
+.img-cards .product-card[href="coupling_dhra.html"]::before,
+.img-cards .product-card[href="coupling_djc.html"]::before,
+.img-cards .product-card[href="coupling_drg.html"]::before,
+.img-cards .product-card[href="coupling_drn.html"]::before,
+.img-cards .product-card[href="coupling_drs.html"]::before,
+.img-cards .product-card[href="coupling_dhda.html"]::before,
+.img-cards .product-card[href="coupling_drfc.html"]::before,
+.img-cards .product-card[href="coupling_dracl.html"]::before,
+.img-cards .product-card[href="coupling_drjcl.html"]::before,
+.img-cards .product-card[href="coupling_collar.html"]::before,
+.img-cards .product-card[href="coupling_mt_drda.html"]::before,
+.img-cards .product-card[href="coupling_mt_dpds.html"]::before,
+.img-cards .product-card[href="coupling_mt_dhds.html"]::before,
+.img-cards .product-card[href="coupling_mt_jaw.html"]::before,
+.img-cards .product-card[href="coupling_mt_drj.html"]::before,
+.img-cards .product-card[href="dr_120.html"]::before,
+.img-cards .product-card[href="mas.html"]::before,
+.img-cards .product-card[href="masus.html"]::before,
+.img-cards .product-card[href="drap.html"]::before,
+.img-cards .product-card[href="drmc.html"]::before,
+.img-cards .product-card[href="kzmt.html"]::before,
+.img-cards .product-card[href="kzmf.html"]::before,
+.img-cards .product-card[href="ksnt.html"]::before,
+.img-cards .product-card[href="zmvt.html"]::before,
+.img-cards .product-card[href="dcn.html"]::before,
+.img-cards .product-card[href="grinding_locknut.html"]::before,
+.img-cards .product-card[href="ultra_grinding_locknut.html"]::before,
+.img-cards .product-card[href="balancing_locknut.html"]::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
+.img-cards .product-card[href="coupling_drb.html"] .p-icon,
+.img-cards .product-card[href="coupling_doh.html"] .p-icon,
+.img-cards .product-card[href="coupling_dhra.html"] .p-icon,
+.img-cards .product-card[href="coupling_djc.html"] .p-icon,
+.img-cards .product-card[href="coupling_drg.html"] .p-icon,
+.img-cards .product-card[href="coupling_drn.html"] .p-icon,
+.img-cards .product-card[href="coupling_drs.html"] .p-icon,
+.img-cards .product-card[href="coupling_dhda.html"] .p-icon,
+.img-cards .product-card[href="coupling_drfc.html"] .p-icon,
+.img-cards .product-card[href="coupling_dracl.html"] .p-icon,
+.img-cards .product-card[href="coupling_drjcl.html"] .p-icon,
+.img-cards .product-card[href="coupling_collar.html"] .p-icon,
+.img-cards .product-card[href="coupling_mt_drda.html"] .p-icon,
+.img-cards .product-card[href="coupling_mt_dpds.html"] .p-icon,
+.img-cards .product-card[href="coupling_mt_dhds.html"] .p-icon,
+.img-cards .product-card[href="coupling_mt_jaw.html"] .p-icon,
+.img-cards .product-card[href="coupling_mt_drj.html"] .p-icon,
+.img-cards .product-card[href="dr_120.html"] .p-icon,
+.img-cards .product-card[href="mas.html"] .p-icon,
+.img-cards .product-card[href="masus.html"] .p-icon,
+.img-cards .product-card[href="drap.html"] .p-icon,
+.img-cards .product-card[href="drmc.html"] .p-icon,
+.img-cards .product-card[href="kzmt.html"] .p-icon,
+.img-cards .product-card[href="kzmf.html"] .p-icon,
+.img-cards .product-card[href="ksnt.html"] .p-icon,
+.img-cards .product-card[href="zmvt.html"] .p-icon,
+.img-cards .product-card[href="dcn.html"] .p-icon,
+.img-cards .product-card[href="grinding_locknut.html"] .p-icon,
+.img-cards .product-card[href="ultra_grinding_locknut.html"] .p-icon,
+.img-cards .product-card[href="balancing_locknut.html"] .p-icon { display: none; }
+.img-cards .product-card[href="coupling_drb.html"]::before { background-image: url("assets/cards/pc_coupling_drb.webp?v=1"); }
+.img-cards .product-card[href="coupling_doh.html"]::before { background-image: url("assets/cards/pc_coupling_doh.webp?v=1"); }
+.img-cards .product-card[href="coupling_dhra.html"]::before { background-image: url("assets/cards/pc_coupling_dhra.webp?v=1"); }
+.img-cards .product-card[href="coupling_djc.html"]::before { background-image: url("assets/cards/pc_coupling_djc.webp?v=1"); }
+.img-cards .product-card[href="coupling_drg.html"]::before { background-image: url("assets/cards/pc_coupling_drg.webp?v=1"); }
+.img-cards .product-card[href="coupling_drn.html"]::before { background-image: url("assets/cards/pc_coupling_drn.webp?v=1"); }
+.img-cards .product-card[href="coupling_drs.html"]::before { background-image: url("assets/cards/pc_coupling_drs.webp?v=1"); }
+.img-cards .product-card[href="coupling_dhda.html"]::before { background-image: url("assets/cards/pc_coupling_dhda.webp?v=1"); }
+.img-cards .product-card[href="coupling_drfc.html"]::before { background-image: url("assets/cards/pc_coupling_drfc.webp?v=1"); }
+.img-cards .product-card[href="coupling_dracl.html"]::before { background-image: url("assets/cards/pc_coupling_dracl.webp?v=1"); }
+.img-cards .product-card[href="coupling_drjcl.html"]::before { background-image: url("assets/cards/pc_coupling_drjcl.webp?v=1"); }
+.img-cards .product-card[href="coupling_collar.html"]::before { background-image: url("assets/cards/pc_coupling_collar.webp?v=1"); }
+.img-cards .product-card[href="coupling_mt_drda.html"]::before { background-image: url("assets/cards/pc_coupling_mt_drda.webp?v=1"); }
+.img-cards .product-card[href="coupling_mt_dpds.html"]::before { background-image: url("assets/cards/pc_coupling_mt_dpds.webp?v=1"); }
+.img-cards .product-card[href="coupling_mt_dhds.html"]::before { background-image: url("assets/cards/pc_coupling_mt_dhds.webp?v=1"); }
+.img-cards .product-card[href="coupling_mt_jaw.html"]::before { background-image: url("assets/cards/pc_coupling_mt_jaw.webp?v=1"); }
+.img-cards .product-card[href="coupling_mt_drj.html"]::before { background-image: url("assets/cards/pc_coupling_mt_drj.webp?v=1"); }
+.img-cards .product-card[href="dr_120.html"]::before { background-image: url("assets/cards/pc_dr_120.webp?v=1"); }
+.img-cards .product-card[href="mas.html"]::before { background-image: url("assets/cards/pc_mas.webp?v=1"); }
+.img-cards .product-card[href="masus.html"]::before { background-image: url("assets/cards/pc_masus.webp?v=1"); }
+.img-cards .product-card[href="drap.html"]::before { background-image: url("assets/cards/pc_drap.webp?v=1"); }
+.img-cards .product-card[href="drmc.html"]::before { background-image: url("assets/cards/pc_drmc.webp?v=1"); }
+.img-cards .product-card[href="kzmt.html"]::before { background-image: url("assets/cards/pc_kzmt.webp?v=1"); }
+.img-cards .product-card[href="kzmf.html"]::before { background-image: url("assets/cards/pc_kzmf.webp?v=1"); }
+.img-cards .product-card[href="ksnt.html"]::before { background-image: url("assets/cards/pc_ksnt.webp?v=1"); }
+.img-cards .product-card[href="zmvt.html"]::before { background-image: url("assets/cards/pc_zmvt.webp?v=1"); }
+.img-cards .product-card[href="dcn.html"]::before { background-image: url("assets/cards/pc_dcn.webp?v=1"); }
+.img-cards .product-card[href="grinding_locknut.html"]::before { background-image: url("assets/cards/pc_grinding_locknut.webp?v=1"); }
+.img-cards .product-card[href="ultra_grinding_locknut.html"]::before { background-image: url("assets/cards/pc_ultra_grinding_locknut.webp?v=1"); }
+.img-cards .product-card[href="balancing_locknut.html"]::before { background-image: url("assets/cards/pc_balancing_locknut.webp?v=1"); }

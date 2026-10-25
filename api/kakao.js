@@ -605,6 +605,7 @@ function dimText(r) {
   if (/사각키|라운드 키/.test(r.c)) return `b ${fmt(r.d)} · h ${fmt(r.D)} · L ${fmt(r.h)}`;
   if (r.c === "반달키") return `d0 ${fmt(r.d)} · h ${fmt(r.h)}`;
   if (r.c === "테이퍼 핀" || r.c === "평행 핀") return `d ${fmt(r.d)} · L ${fmt(r.h)}`;
+  if (load().PAGE_GROUP[r.p] === "커플링") return `${r.d == null ? "" : `d ${fmt(r.d)} · `}A ${fmt(r.D)} · W ${fmt(r.h)}`;
   return `d ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)}`;
 }
 
