@@ -2309,7 +2309,7 @@
 .speed-table.no-seal .col-seal { display: none; }
 .f-copy { margin-top: 18px; font-size: 12px; color: var(--text-faint); }
 /* 규격표 워터마크 — 캡처해도 출처가 남도록 (메인 홈은 main/index.html에서 끔) */
-table.spec-table { background-image: url("assets/watermark.svg?v=2"); background-repeat: repeat; background-size: 560px 340px; }
+table.spec-table { background-image: url("assets/watermark.svg?v=3"); background-repeat: repeat; background-size: 760px 440px; }
 .copy-notice { margin: -6px 0 16px; font-size: 12.5px; font-weight: 500; color: #b4532a; }
 /* 규격표의 공차 등 작은 회색 칸 — 읽기 쉽게 진하게 */
 table.spec-table td[style*="--text-faint"] { color: var(--text) !important; font-size: 12px !important; }
