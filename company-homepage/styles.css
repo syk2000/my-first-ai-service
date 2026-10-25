@@ -3042,3 +3042,6 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .sb-table td.sb-ask { color: var(--text-faint); font-size: 12px; text-align: center; }
 .sb-sub { font-size: 11px; font-weight: 400; color: var(--text-sub); }
 @media (max-width: 720px) { .sb-facts { grid-template-columns: repeat(2, 1fr); } }
+
+/* 라운드키 생산 치수표: 칸마다 형번 */
+.rk-matrix td.rk-cell { font-size: 11.5px; white-space: normal; word-break: keep-all; line-height: 1.35; color: var(--text); font-weight: 600; }
