@@ -604,6 +604,7 @@ function answer(utterance, blockName) {
 function dimText(r) {
   if (/사각키|라운드 키/.test(r.c)) return `b ${fmt(r.d)} · h ${fmt(r.D)} · L ${fmt(r.h)}`;
   if (r.c === "반달키") return `d0 ${fmt(r.d)} · h ${fmt(r.h)}`;
+  if (r.c === "테이퍼 핀" || r.c === "평행 핀") return `d ${fmt(r.d)} · L ${fmt(r.h)}`;
   return `d ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)}`;
 }
 
