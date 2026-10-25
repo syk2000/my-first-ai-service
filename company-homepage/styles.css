@@ -2349,3 +2349,18 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .seal-type-card .st-text { padding: 10px 14px 14px; }
 .seal-type-card h4 { margin: 0 0 6px; font-family: var(--font-display-en); font-size: 18px; letter-spacing: 0.5px; color: var(--steel); }
 .seal-type-card p { margin: 0; font-size: 13px; line-height: 1.6; color: var(--text-sub); }
+/* 금형 스프링 시리즈 탭: 카탈로그 색상 점 */
+.cat-tab-btn[data-tab]::before { content: ""; display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; border: 1px solid rgba(0,0,0,0.35); }
+.cat-tab-btn[data-tab="sf"]::before { background: #f5c400; }
+.cat-tab-btn[data-tab="ssf"]::before { background: #f5c400; }
+.cat-tab-btn[data-tab="sl"]::before { background: #2f6fd6; }
+.cat-tab-btn[data-tab="ssl"]::before { background: #2f6fd6; }
+.cat-tab-btn[data-tab="sm"]::before { background: #d93a3a; }
+.cat-tab-btn[data-tab="sh"]::before { background: #2e9e4f; }
+.cat-tab-btn[data-tab="sb"]::before { background: #8a5a2b; }
+.cat-tab-btn[data-tab="sg"]::before { background: #222222; }
+.cat-tab-btn[data-tab="sy"]::before { background: #9acd32; }
+.cat-tab-btn[data-tab="ssy"]::before { background: #7b3fbf; }
+.cat-tab-btn[data-tab="su"]::before { background: #5ec8f0; }
+.cat-tab-btn[data-tab="sc"]::before { background: #c8a8e8; }
+.cat-tab-btn[data-tab="sr"]::before { background: #ffffff; }
