@@ -2901,13 +2901,13 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="dr_300.html"]::before { background-image: url("assets/cards/pc_dr_300.webp?v=2"); }
 .img-cards .product-card[href="dr_300c.html"]::before { background-image: url("assets/cards/pc_dr_300c.webp?v=2"); }
 .img-cards .product-card[href="dr_300f.html"]::before { background-image: url("assets/cards/pc_dr_300f.webp?v=2"); }
-.img-cards .product-card[href="dr_300ef.html"]::before { background-image: url("assets/cards/pc_dr_300ef.webp?v=2"); }
-.img-cards .product-card[href="dr_110.html"]::before { background-image: url("assets/cards/pc_dr_110.webp?v=2"); }
+.img-cards .product-card[href="dr_300ef.html"]::before { background-image: url("assets/cards/pc_dr_300ef_v2.webp?v=1"); }
+.img-cards .product-card[href="dr_110.html"]::before { background-image: url("assets/cards/pc_dr_110_v2.webp?v=1"); }
 .img-cards .product-card[href="dr_132a.html"]::before { background-image: url("assets/cards/pc_dr_132a.webp?v=2"); }
 .img-cards .product-card[href="dr_133b.html"]::before { background-image: url("assets/cards/pc_dr_133b.webp?v=2"); }
-.img-cards .product-card[href="dr_132.html"]::before { background-image: url("assets/cards/pc_dr_132.webp?v=2"); }
-.img-cards .product-card[href="dr_133.html"]::before { background-image: url("assets/cards/pc_dr_133.webp?v=2"); }
-.img-cards .product-card[href="dr_134s.html"]::before { background-image: url("assets/cards/pc_dr_134s.webp?v=2"); }
+.img-cards .product-card[href="dr_132.html"]::before { background-image: url("assets/cards/pc_dr_132_v2.webp?v=1"); }
+.img-cards .product-card[href="dr_133.html"]::before { background-image: url("assets/cards/pc_dr_133_v2.webp?v=1"); }
+.img-cards .product-card[href="dr_134s.html"]::before { background-image: url("assets/cards/pc_dr_134s_v2.webp?v=1"); }
 .img-cards .product-card[href="mad.html"]::before { background-image: url("assets/cards/pc_mad.webp?v=2"); }
 .img-cards .product-card[href="dr_400.html"]::before { background-image: url("assets/cards/pc_dr_400.webp?v=2"); }
 .img-cards .product-card[href="dr_500.html"]::before { background-image: url("assets/cards/pc_dr_500.webp?v=2"); }
@@ -3045,3 +3045,26 @@ a.seal-type-card:hover { border-color: var(--accent); }
 
 /* 라운드키 생산 치수표: 칸마다 형번 */
 .rk-matrix td.rk-cell { font-size: 11.5px; white-space: normal; word-break: keep-all; line-height: 1.35; color: var(--text); font-weight: 600; }
+
+/* 카탈로그 추가분(2026-10-27) 카드 그림 */
+.img-cards .product-card[href="link_ball_zbs.html"]::before,
+.img-cards .product-card[href="link_ball_tj.html"]::before,
+.img-cards .product-card[href="full_complement_cylindrical.html"]::before,
+.img-cards .product-card[href="slide_unit.html"]::before,
+.img-cards .product-card[href="tm_screw.html"]::before,
+.img-cards .product-card[href="spring_plunger_2205.html"]::before,
+.img-cards .product-card[href="spring_plunger_2206.html"]::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
+.img-cards .product-card[href="link_ball_zbs.html"] .p-icon,
+.img-cards .product-card[href="link_ball_tj.html"] .p-icon,
+.img-cards .product-card[href="full_complement_cylindrical.html"] .p-icon,
+.img-cards .product-card[href="slide_unit.html"] .p-icon,
+.img-cards .product-card[href="tm_screw.html"] .p-icon,
+.img-cards .product-card[href="spring_plunger_2205.html"] .p-icon,
+.img-cards .product-card[href="spring_plunger_2206.html"] .p-icon { display: none; }
+.img-cards .product-card[href="link_ball_zbs.html"]::before { background-image: url("assets/cards/pc_link_ball_zbs.webp?v=1"); }
+.img-cards .product-card[href="link_ball_tj.html"]::before { background-image: url("assets/cards/pc_link_ball_tj.webp?v=1"); }
+.img-cards .product-card[href="full_complement_cylindrical.html"]::before { background-image: url("assets/cards/pc_full_complement_cylindrical.webp?v=1"); }
+.img-cards .product-card[href="slide_unit.html"]::before { background-image: url("assets/cards/pc_slide_unit.webp?v=1"); }
+.img-cards .product-card[href="tm_screw.html"]::before { background-image: url("assets/cards/pc_tm_screw.webp?v=1"); }
+.img-cards .product-card[href="spring_plunger_2205.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2205.webp?v=1"); }
+.img-cards .product-card[href="spring_plunger_2206.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2206.webp?v=1"); }

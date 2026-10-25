@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261026k">
+<link rel="stylesheet" href="styles.css?v=20261027a">
 </head>
 <body>
 
@@ -98,7 +98,7 @@
       <div class="section-head">
         <p class="eyebrow">Linear Bushings</p>
         <h2>리니어 부시 (LM 부싱)</h2>
-        <p>축과 조합하여 직선 왕복운동을 지지하는 볼 부시입니다. 아래 탭에서 플랜지 형태별 규격을 확인하세요.</p>
+        <p>축과 조합하여 직선 왕복운동을 지지하는 볼 부시입니다. 아래 탭에서 형태·규격별 치수를 확인하세요.</p>
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
@@ -109,6 +109,10 @@
         <button type="button" class="cat-tab-btn" data-tab="lmh">LMH/LMHL</button>
         <button type="button" class="cat-tab-btn" data-tab="sc">SC/SCW/SCWNB</button>
         <button type="button" class="cat-tab-btn" data-tab="st">ST (스트로크)</button>
+        <button type="button" class="cat-tab-btn" data-tab="lme">LME (유럽 규격)</button>
+        <button type="button" class="cat-tab-btn" data-tab="lmb">LMB/SDB (인치 규격)</button>
+        <button type="button" class="cat-tab-btn" data-tab="kh">KH..PP (드로운컵형)</button>
+        <button type="button" class="cat-tab-btn" data-tab="sdm">SDM</button>
       </div>
 
       <div class="cat-tab-panel" data-panel="lm">
@@ -321,6 +325,114 @@
           </div>
         </details>
         </div>
+      </div><div class="cat-tab-panel" data-panel="lme" hidden>
+        <p class="cat-tab-panel-desc">유럽 규격 치수 계열의 리니어 부시입니다. LM과 같은 원통형 몸체이며, 축경별 외경·전장이 유럽 규격 치수로 되어 있습니다.</p>
+        <div class="diagram-box-lg">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <img loading="lazy" src="assets/linear_bushing_lm_catalog.webp?v=wm5" alt="원통형 리니어 부시 카탈로그 단면도" style="display: block; margin: 0 auto; height: 200px; width: auto; max-width: 100%;" />
+        <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 원통형 리니어 부시 단면 (카탈로그 공용 도면: LM · LM‥AJ · LM‥OP)<br /><span style="color: var(--text-faint);">dr: 내경 · D: 외경 · L: 전장</span></p>
+      </div>
+        <div class="field" style="max-width: 320px; margin-bottom: 16px;">
+          <label for="lmeFilter">형번 / 규격 검색</label>
+          <input id="lmeFilter" type="text" placeholder="예: LME20" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="lmeCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="lmeToggleAll">전체 펼치기</button>
+        </div>
+        <div id="lmeGroups">
+        <details class="series-group">
+          <summary>LME 시리즈 (유럽 규격)<span class="series-count">11건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>dr(내경)</th><th>D(외경)</th><th>L(전장)</th></tr></thead>
+              <tbody><tr><td class="type-cell">LME 5</td><td>5</td><td>12</td><td>22</td></tr><tr><td class="type-cell">LME 8</td><td>8</td><td>16</td><td>25</td></tr><tr><td class="type-cell">LME 12</td><td>12</td><td>22</td><td>32</td></tr><tr><td class="type-cell">LME 16</td><td>16</td><td>26</td><td>36</td></tr><tr><td class="type-cell">LME 20</td><td>20</td><td>32</td><td>45</td></tr><tr><td class="type-cell">LME 25</td><td>25</td><td>40</td><td>58</td></tr><tr><td class="type-cell">LME 30</td><td>30</td><td>47</td><td>68</td></tr><tr><td class="type-cell">LME 40</td><td>40</td><td>62</td><td>80</td></tr><tr><td class="type-cell">LME 50</td><td>50</td><td>75</td><td>100</td></tr><tr><td class="type-cell">LME 60</td><td>60</td><td>90</td><td>125</td></tr><tr><td class="type-cell">LME 80</td><td>80</td><td>120</td><td>165</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+        </div>
+      </div><div class="cat-tab-panel" data-panel="lmb" hidden>
+        <p class="cat-tab-panel-desc">인치 축에 사용하는 리니어 부시입니다. 형번의 숫자는 1/16인치 단위 축경을 뜻합니다(예: LMB 8 = 1/2인치 = 12.7mm). LMB는 소수점 한 자리, SDB는 소수점 세 자리까지 표기했습니다.</p>
+        <div class="diagram-box-lg">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <img loading="lazy" src="assets/linear_bushing_lm_catalog.webp?v=wm5" alt="원통형 리니어 부시 카탈로그 단면도" style="display: block; margin: 0 auto; height: 200px; width: auto; max-width: 100%;" />
+        <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 원통형 리니어 부시 단면 (카탈로그 공용 도면: LM · LM‥AJ · LM‥OP)<br /><span style="color: var(--text-faint);">dr: 내경 · D: 외경 · L: 전장</span></p>
+      </div>
+        <div class="field" style="max-width: 320px; margin-bottom: 16px;">
+          <label for="lmbFilter">형번 / 규격 검색</label>
+          <input id="lmbFilter" type="text" placeholder="예: LMB 8" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="lmbCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="lmbToggleAll">전체 펼치기</button>
+        </div>
+        <div id="lmbGroups">
+        <details class="series-group">
+          <summary>LMB 시리즈 (인치 규격)<span class="series-count">12건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>dr(내경)</th><th>D(외경)</th><th>L(전장)</th></tr></thead>
+              <tbody><tr><td class="type-cell">LMB 4</td><td>6.3</td><td>12.7</td><td>19.05</td></tr><tr><td class="type-cell">LMB 6</td><td>9.5</td><td>15.8</td><td>22.2</td></tr><tr><td class="type-cell">LMB 8</td><td>12.7</td><td>22.2</td><td>31.7</td></tr><tr><td class="type-cell">LMB 10</td><td>15.8</td><td>28.6</td><td>38.1</td></tr><tr><td class="type-cell">LMB 12</td><td>19.1</td><td>31.7</td><td>41.3</td></tr><tr><td class="type-cell">LMB 16</td><td>25.4</td><td>39.7</td><td>57.2</td></tr><tr><td class="type-cell">LMB 20</td><td>31.7</td><td>50.8</td><td>66.6</td></tr><tr><td class="type-cell">LMB 24</td><td>38.1</td><td>60.3</td><td>76.2</td></tr><tr><td class="type-cell">LMB 32</td><td>50.8</td><td>76.2</td><td>101.6</td></tr><tr><td class="type-cell">LMB 40</td><td>63.5</td><td>95.2</td><td>127</td></tr><tr><td class="type-cell">LMB 48</td><td>76.2</td><td>114.3</td><td>152.4</td></tr><tr><td class="type-cell">LMB 64</td><td>101.6</td><td>152.4</td><td>203.2</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+        <details class="series-group">
+          <summary>SDB 시리즈 (인치 규격)<span class="series-count">12건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>dr(내경)</th><th>D(외경)</th><th>L(전장)</th></tr></thead>
+              <tbody><tr><td class="type-cell">SDB 4</td><td>6.350</td><td>12.700</td><td>19.050</td></tr><tr><td class="type-cell">SDB 6</td><td>9.525</td><td>15.875</td><td>22.225</td></tr><tr><td class="type-cell">SDB 8</td><td>12.700</td><td>22.225</td><td>31.750</td></tr><tr><td class="type-cell">SDB 10</td><td>15.875</td><td>28.575</td><td>38.100</td></tr><tr><td class="type-cell">SDB 12</td><td>19.050</td><td>31.750</td><td>41.275</td></tr><tr><td class="type-cell">SDB 16</td><td>25.400</td><td>39.688</td><td>57.150</td></tr><tr><td class="type-cell">SDB 20</td><td>31.750</td><td>50.800</td><td>66.675</td></tr><tr><td class="type-cell">SDB 24</td><td>38.100</td><td>60.325</td><td>76.200</td></tr><tr><td class="type-cell">SDB 32</td><td>50.800</td><td>76.200</td><td>101.600</td></tr><tr><td class="type-cell">SDB 40</td><td>63.500</td><td>95.250</td><td>127.000</td></tr><tr><td class="type-cell">SDB 48</td><td>76.200</td><td>114.300</td><td>152.400</td></tr><tr><td class="type-cell">SDB 64</td><td>101.600</td><td>152.400</td><td>203.200</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+        </div>
+      </div><div class="cat-tab-panel" data-panel="kh" hidden>
+        <p class="cat-tab-panel-desc">얇은 강판을 프레스 성형한 외륜에 양측 실(PP)을 갖춘 컴팩트형 리니어 부시입니다. 외경이 작아 설치 공간이 좁은 곳에 적합합니다.</p>
+        <div class="field" style="max-width: 320px; margin-bottom: 16px;">
+          <label for="khFilter">형번 / 규격 검색</label>
+          <input id="khFilter" type="text" placeholder="예: KH 2030" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="khCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="khToggleAll">전체 펼치기</button>
+        </div>
+        <div id="khGroups">
+        <details class="series-group">
+          <summary>KH..PP 시리즈 (드로운컵형)<span class="series-count">11건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>dr(내경)</th><th>D(외경)</th><th>L(전장)</th></tr></thead>
+              <tbody><tr><td class="type-cell">KH 0622 PP</td><td>6</td><td>12</td><td>22</td></tr><tr><td class="type-cell">KH 0824 PP</td><td>8</td><td>15</td><td>24</td></tr><tr><td class="type-cell">KH 1026 PP</td><td>10</td><td>17</td><td>26</td></tr><tr><td class="type-cell">KH 1228 PP</td><td>12</td><td>19</td><td>28</td></tr><tr><td class="type-cell">KH 1428 PP</td><td>14</td><td>21</td><td>28</td></tr><tr><td class="type-cell">KH 1630 PP</td><td>16</td><td>24</td><td>30</td></tr><tr><td class="type-cell">KH 2030 PP</td><td>20</td><td>28</td><td>30</td></tr><tr><td class="type-cell">KH 2540 PP</td><td>25</td><td>35</td><td>40</td></tr><tr><td class="type-cell">KH 3050 PP</td><td>30</td><td>40</td><td>50</td></tr><tr><td class="type-cell">KH 4060 PP</td><td>40</td><td>52</td><td>60</td></tr><tr><td class="type-cell">KH 5070 PP</td><td>50</td><td>62</td><td>70</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+        </div>
+      </div><div class="cat-tab-panel" data-panel="sdm" hidden>
+        <p class="cat-tab-panel-desc">LM 표준형과 같은 원통형 구조의 리니어 부시입니다. 축경 6~100mm까지 공급됩니다.</p>
+        <div class="diagram-box-lg">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <img loading="lazy" src="assets/linear_bushing_lm_catalog.webp?v=wm5" alt="원통형 리니어 부시 카탈로그 단면도" style="display: block; margin: 0 auto; height: 200px; width: auto; max-width: 100%;" />
+        <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 원통형 리니어 부시 단면 (카탈로그 공용 도면: LM · LM‥AJ · LM‥OP)<br /><span style="color: var(--text-faint);">dr: 내경 · D: 외경 · L: 전장</span></p>
+      </div>
+        <div class="field" style="max-width: 320px; margin-bottom: 16px;">
+          <label for="sdmFilter">형번 / 규격 검색</label>
+          <input id="sdmFilter" type="text" placeholder="예: SDM 20" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="sdmCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="sdmToggleAll">전체 펼치기</button>
+        </div>
+        <div id="sdmGroups">
+        <details class="series-group">
+          <summary>SDM 시리즈<span class="series-count">17건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 420px; max-width: 600px;">
+              <thead><tr><th>형번</th><th>dr(내경)</th><th>D(외경)</th><th>L(전장)</th></tr></thead>
+              <tbody><tr><td class="type-cell">SDM 6</td><td>6</td><td>12</td><td>19</td></tr><tr><td class="type-cell">SDM 8S</td><td>8</td><td>15</td><td>17</td></tr><tr><td class="type-cell">SDM 8</td><td>8</td><td>15</td><td>24</td></tr><tr><td class="type-cell">SDM 10</td><td>10</td><td>19</td><td>29</td></tr><tr><td class="type-cell">SDM 12</td><td>12</td><td>21</td><td>30</td></tr><tr><td class="type-cell">SDM 13</td><td>13</td><td>23</td><td>32</td></tr><tr><td class="type-cell">SDM 16</td><td>16</td><td>28</td><td>37</td></tr><tr><td class="type-cell">SDM 20</td><td>20</td><td>32</td><td>42</td></tr><tr><td class="type-cell">SDM 25</td><td>25</td><td>40</td><td>59</td></tr><tr><td class="type-cell">SDM 30</td><td>30</td><td>45</td><td>64</td></tr><tr><td class="type-cell">SDM 35</td><td>35</td><td>52</td><td>70</td></tr><tr><td class="type-cell">SDM 38</td><td>38</td><td>57</td><td>76</td></tr><tr><td class="type-cell">SDM 40</td><td>40</td><td>60</td><td>80</td></tr><tr><td class="type-cell">SDM 50</td><td>50</td><td>80</td><td>100</td></tr><tr><td class="type-cell">SDM 60</td><td>60</td><td>90</td><td>110</td></tr><tr><td class="type-cell">SDM 80</td><td>80</td><td>120</td><td>140</td></tr><tr><td class="type-cell">SDM 100</td><td>100</td><td>150</td><td>175</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+        </div>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
@@ -348,7 +460,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261025a"></script>
-<script src="i18n/pages/linear_bushing.dict.js?v=20261017p"></script>
+<script src="i18n/pages/linear_bushing.dict.js?v=20261027a"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -562,6 +674,142 @@
         var grpShown = 0;
         grpRows.forEach(function (row) {
           var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        grp.open = q !== '' ? grpShown > 0 : false;
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
+    }
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
+  })();
+
+  (function () {
+    var input = document.getElementById('lmeFilter');
+    var groupsWrap = document.getElementById('lmeGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('lmeCount');
+    var toggleBtn = document.getElementById('lmeToggleAll');
+    var totalRows = 11;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        grp.open = q !== '' ? grpShown > 0 : false;
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
+    }
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
+  })();
+
+  (function () {
+    var input = document.getElementById('lmbFilter');
+    var groupsWrap = document.getElementById('lmbGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('lmbCount');
+    var toggleBtn = document.getElementById('lmbToggleAll');
+    var totalRows = 24;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        grp.open = q !== '' ? grpShown > 0 : false;
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+    }
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+  })();
+
+  (function () {
+    var input = document.getElementById('khFilter');
+    var groupsWrap = document.getElementById('khGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('khCount');
+    var toggleBtn = document.getElementById('khToggleAll');
+    var totalRows = 11;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        grp.open = q !== '' ? grpShown > 0 : false;
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
+    }
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
+  })();
+
+  (function () {
+    var input = document.getElementById('sdmFilter');
+    var groupsWrap = document.getElementById('sdmGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('sdmCount');
+    var toggleBtn = document.getElementById('sdmToggleAll');
+    var totalRows = 17;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1;
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });

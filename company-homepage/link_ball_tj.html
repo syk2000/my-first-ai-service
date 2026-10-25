@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko" translate="no" class="notranslate">
+<head>
+<meta charset="UTF-8" />
+<meta name="google" content="notranslate" />
+<meta name="viewport" content="width=1280" />
+<meta name="robots" content="noindex, nofollow" />
+<title>플로팅 조인트 TJ(FJ) 시리즈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=20261027a">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <img class="logo-mark" src="assets/sws-logo.webp" alt="" width="45" height="34" />
+        <span class="company-name">
+          SWS TECH
+          <span class="sub">CORPORATION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <button type="button" class="nav-caret" aria-label="하위 메뉴 펼치기" aria-expanded="false"><svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg></button>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <button type="button" class="nav-caret" aria-label="하위 메뉴 펼치기" aria-expanded="false"><svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg></button>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="faq.html">자주 하는 질문</a>
+            <a href="catalog.html">카탈로그</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-cta">
+          <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+        </div>
+
+        <div class="lang-select" id="langSelect">
+          <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="langSelectLabel">KOR</span>
+            <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+          </button>
+          <div class="lang-menu" id="langMenu" role="menu">
+            <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+<section class="page-section" id="link-ball-tj" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Floating Joint &middot; TJ(FJ)</p>
+        <h2>플로팅 조인트 TJ(FJ) 시리즈</h2>
+        <p>실린더 로드와 피구동 부품 사이에 끼워, 축심의 편심(G)과 각도 오차(&plusmn;5&deg;)를 흡수하는 조인트입니다. 설치 오차로 인한 실린더&middot;가이드의 편마모와 작동 불량을 줄여 줍니다.</p>
+        <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
+      </div>
+      <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
+
+      <div class="diagram-box-lg">
+        <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
+        <img loading="lazy" src="assets/link_ball_tj_catalog.webp?v=wm5" alt="TJ(FJ) 플로팅 조인트 규격 도면 — 측면도와 정면도" style="display: block; margin: 0 auto; height: 200px; width: auto; max-width: 100%;" />
+        <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ TJ(FJ) 플로팅 조인트 측면도와 정면도, 사용 범위(&plusmn;5&deg;)<br /><span style="color: var(--text-faint);">M=나사(수나사&middot;암나사 공통) &middot; DP=암나사 깊이 &middot; A=전장 &middot; &Oslash;D=본체 외경 &middot; F=로드측 대변 &middot; H=본체측 대변 &middot; G=허용 편심량</span></p>
+      </div>
+
+      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
+        <label for="lbFilter">형번 검색</label>
+        <input id="lbFilter" type="text" placeholder="예: TJ 16 또는 M16" autocomplete="off" />
+      </div>
+      <p class="finder-tip" id="lbCount" style="margin-bottom: 10px;"></p>
+
+      <div class="finder-results" style="overflow-x: auto;">
+        <table class="spec-table" style="min-width: 1100px;">
+          <thead>
+            <tr>
+              <th>형번</th>
+              <th>M(나사)</th>
+              <th>DP</th>
+              <th>A(전장)</th>
+              <th>B</th>
+              <th>C</th>
+              <th>&Oslash;D</th>
+              <th>E</th>
+              <th>F(대변)</th>
+              <th>H</th>
+              <th>요동 각도</th>
+              <th>허용 편심량 G</th>
+              <th>인장&middot;압축력 Max(kgf)</th>
+              <th>적용 실린더 내경(&oslash;)</th>
+            </tr>
+          </thead>
+          <tbody id="lbBody">
+            <tr><td class="type-cell">TJ 5</td><td>M5&times;0.8</td><td>7</td><td>35</td><td>14</td><td>2</td><td>16</td><td>5</td><td>6</td><td>10</td><td>10&deg;</td><td>0.5</td><td>12</td><td>10, 15</td></tr>
+            <tr><td class="type-cell">TJ 6</td><td>M6&times;1.0</td><td>7</td><td>35</td><td>14</td><td>2</td><td>16</td><td>5</td><td>6</td><td>10</td><td>10&deg;</td><td>0.5</td><td>12</td><td>15</td></tr>
+            <tr><td class="type-cell">TJ 8</td><td>M8&times;1.25</td><td>8</td><td>44</td><td>17.5</td><td>4.5</td><td>21</td><td>7</td><td>8</td><td>13</td><td>10&deg;</td><td>0.5</td><td>110</td><td>20</td></tr>
+            <tr><td class="type-cell">TJ 10</td><td>M10&times;1.25</td><td>9</td><td>48.5</td><td>19.5</td><td>5</td><td>24</td><td>8</td><td>10</td><td>17</td><td>10&deg;</td><td>0.5</td><td>250</td><td>25, 30</td></tr>
+            <tr><td class="type-cell">TJ 12*</td><td>M12&times;1.25</td><td>13</td><td>55</td><td>20</td><td>6</td><td>29</td><td>10</td><td>12</td><td>20</td><td>10&deg;</td><td>0.75</td><td>440</td><td>30, 40</td></tr>
+            <tr><td class="type-cell">TJ 14</td><td>M14&times;1.5</td><td>13</td><td>60</td><td>20</td><td>6</td><td>31</td><td>9</td><td>14</td><td>22</td><td>10&deg;</td><td>0.75</td><td>600</td><td>40</td></tr>
+            <tr><td class="type-cell">TJ 16</td><td>M16&times;1.5</td><td>15</td><td>69</td><td>24</td><td>7</td><td>38</td><td>12</td><td>16</td><td>26</td><td>10&deg;</td><td>1</td><td>1,100</td><td>50</td></tr>
+            <tr><td class="type-cell">TJ 16*</td><td>M16&times;2.0</td><td>15</td><td>69</td><td>24</td><td>7</td><td>38</td><td>12</td><td>16</td><td>26</td><td>10&deg;</td><td>1</td><td>1,100</td><td>50</td></tr>
+            <tr><td class="type-cell">TJ 18</td><td>M18&times;1.5</td><td>15</td><td>74.5</td><td>26</td><td>7.5</td><td>41</td><td>13.5</td><td>18</td><td>27</td><td>10&deg;</td><td>1</td><td>1,100</td><td>50, 63</td></tr>
+            <tr><td class="type-cell">TJ 20*</td><td>M20&times;1.5</td><td>18</td><td>90.5</td><td>30</td><td>9.5</td><td>50</td><td>16</td><td>20</td><td>32</td><td>10&deg;</td><td>1.25</td><td>1,800</td><td>80</td></tr>
+            <tr><td class="type-cell">TJ 20</td><td>M20&times;2.5</td><td>18</td><td>90.5</td><td>30</td><td>9.5</td><td>50</td><td>16</td><td>20</td><td>32</td><td>10&deg;</td><td>1.25</td><td>1,800</td><td>80</td></tr>
+            <tr><td class="type-cell">TJ 22</td><td>M22&times;1.5</td><td>18</td><td>90.5</td><td>31</td><td>9.5</td><td>50</td><td>16</td><td>22</td><td>32</td><td>10&deg;</td><td>1.25</td><td>1,800</td><td>80</td></tr>
+            <tr><td class="type-cell">TJ 24</td><td>M24&times;1.5</td><td>24</td><td>110</td><td>35</td><td>12</td><td>59.5</td><td>17</td><td>26</td><td>41</td><td>10&deg;</td><td>2</td><td>2,800</td><td>100</td></tr>
+            <tr><td class="type-cell">TJ 26</td><td>M26&times;1.5</td><td>24</td><td>110</td><td>35</td><td>12</td><td>59.5</td><td>17</td><td>26</td><td>41</td><td>10&deg;</td><td>2</td><td>2,800</td><td>100</td></tr>
+            <tr><td class="type-cell">TJ 30</td><td>M30&times;1.5</td><td>38</td><td>152</td><td>45</td><td>13</td><td>79</td><td>22</td><td>30</td><td>46</td><td>10&deg;</td><td>2</td><td>5,400</td><td>125, 140</td></tr>
+            <tr><td class="type-cell">TJ 30*</td><td>M30&times;2.0</td><td>38</td><td>152</td><td>45</td><td>13</td><td>79</td><td>22</td><td>30</td><td>46</td><td>10&deg;</td><td>2</td><td>5,400</td><td>125, 140</td></tr>
+            <tr><td class="type-cell">TJ 36</td><td>M36&times;1.5</td><td>42</td><td>178</td><td>55</td><td>16</td><td>96</td><td>24</td><td>36</td><td>55</td><td>10&deg;</td><td>3.0</td><td>7,100</td><td>160</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (하중은 kgf, 질량은 g)</p>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 2px;">규격 출처: 잘만정공(JMC) 공식 홈페이지 제품사양 &mdash; <a href="https://www.jalman.com/bbs/content.php?co_id=pro03_02" target="_blank" rel="noopener" style="color: inherit;">jalman.com</a></p>
+
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
+        &#8251; TJ는 Thrust Joint의 약자입니다. 형번 끝 &ldquo;*&rdquo; 표시 품목은 주문 생산품입니다. 같은 호칭번호라도 나사 피치(M)가 다른 형번이 있으니, 발주 시 나사 규격을 함께 알려 주시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-meta">
+          TEL 02-2613-3040 · FAX 02-2613-3042<br />
+          서울 구로구 경인로53길 32, 미래에코타워 B101·102호
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+    <div class="wrap f-copy">© SWS TECH. 본 홈페이지의 도면·규격표·사진 등 자료의 무단 복제·배포를 금합니다.</div>
+  </footer>
+
+<script src="i18n/common.dict.js?v=20261025a"></script>
+<script src="i18n/pages/link_ball_tj.dict.js?v=20261027b"></script>
+<script src="i18n.js?v=20261025a"></script>
+<script src="common.js?v=20261025h"></script>
+<script>
+  (function () {
+    var input = document.getElementById('lbFilter');
+    var rows = Array.prototype.slice.call(document.querySelectorAll('#lbBody tr'));
+    var countEl = document.getElementById('lbCount');
+
+    function updateCount(shown) {
+      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
+    }
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      updateCount(shown);
+    }
+
+    input.addEventListener('input', applyFilter);
+    updateCount(rows.length);
+  })();
+</script>
+</body>
+</html>
