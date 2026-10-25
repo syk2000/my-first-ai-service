@@ -2340,3 +2340,12 @@ table.spec-table th { color: #4b5873; }
 :is(#bearing-group, #accessory-group) .product-card[href="dish_spring.html"]::before { background-image: url("assets/cards/dish_spring.webp?v=1"); }
 :is(#bearing-group, #accessory-group) .product-card[href="mold_spring.html"]::before { background-image: url("assets/cards/mold_spring.webp?v=1"); }
 :is(#bearing-group, #accessory-group) .product-card[href="ball_plunger.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=1"); }
+/* 오일씰 형식별 단면 카드 */
+.seal-type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 4px; }
+.seal-type-card { display: flex; flex-direction: column; background: var(--surface); border: 1.5px solid #2b3550; border-radius: var(--radius-md); overflow: hidden; color: var(--text); text-decoration: none; }
+a.seal-type-card:hover { border-color: var(--accent); }
+.seal-type-card .st-fig { background: #fff; border-bottom: 1px solid var(--border); padding: 10px 24px 4px; }
+.seal-type-card .seal-type-svg { display: block; width: 100%; height: auto; }
+.seal-type-card .st-text { padding: 10px 14px 14px; }
+.seal-type-card h4 { margin: 0 0 6px; font-family: var(--font-display-en); font-size: 18px; letter-spacing: 0.5px; color: var(--steel); }
+.seal-type-card p { margin: 0; font-size: 13px; line-height: 1.6; color: var(--text-sub); }
