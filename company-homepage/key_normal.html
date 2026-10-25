@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261028a">
+<link rel="stylesheet" href="styles.css?v=20261028b">
 </head>
 <body>
 
@@ -139,12 +139,12 @@
             <tr><td class="type-cell">7&times;7</td><td>0/-0.036</td><td>0/-0.036</td><td>0.25~0.40</td><td>0/-0.036</td><td>&plusmn;0.0180</td><td>4.0</td><td>3.0</td><td>+0.20/0</td><td>20~25</td></tr>
             <tr><td class="type-cell">8&times;7</td><td>0/-0.036</td><td>0/-0.090</td><td>0.25~0.40</td><td>0/-0.036</td><td>&plusmn;0.0180</td><td>4.0</td><td>3.3</td><td>+0.20/0</td><td>22~30</td></tr>
             <tr><td class="type-cell">10&times;8</td><td>0/-0.036</td><td>0/-0.090</td><td>0.40~0.60</td><td>0/-0.036</td><td>&plusmn;0.0180</td><td>5.0</td><td>3.3</td><td>+0.20/0</td><td>30~38</td></tr>
-            <tr><td class="type-cell">12&times;8</td><td>0/-0.036</td><td>0/-0.090</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>5.0</td><td>3.3</td><td>+0.20/0</td><td>38~44</td></tr>
+            <tr><td class="type-cell">12&times;8</td><td>0/-0.043</td><td>0/-0.090</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>5.0</td><td>3.3</td><td>+0.20/0</td><td>38~44</td></tr>
             <tr><td class="type-cell">14&times;9</td><td>0/-0.043</td><td>0/-0.090</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>5.5</td><td>3.8</td><td>+0.20/0</td><td>44~50</td></tr>
             <tr><td class="type-cell">15&times;10</td><td>0/-0.043</td><td>0/-0.090</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>5.0</td><td>5.0</td><td>+0.20/0</td><td>50~55</td></tr>
             <tr><td class="type-cell">16&times;10</td><td>0/-0.043</td><td>0/-0.090</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>6.0</td><td>4.3</td><td>+0.20/0</td><td>50~58</td></tr>
             <tr><td class="type-cell">18&times;11</td><td>0/-0.043</td><td>0/-0.110</td><td>0.40~0.60</td><td>0/-0.043</td><td>&plusmn;0.0215</td><td>7.0</td><td>4.4</td><td>+0.20/0</td><td>58~65</td></tr>
-            <tr><td class="type-cell">20&times;12</td><td>0/-0.043</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.052</td><td>&plusmn;0.0260</td><td>7.5</td><td>4.9</td><td>+0.20/0</td><td>65~75</td></tr>
+            <tr><td class="type-cell">20&times;12</td><td>0/-0.052</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.052</td><td>&plusmn;0.0260</td><td>7.5</td><td>4.9</td><td>+0.20/0</td><td>65~75</td></tr>
             <tr><td class="type-cell">22&times;14</td><td>0/-0.052</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.052</td><td>&plusmn;0.0260</td><td>9.0</td><td>5.4</td><td>+0.20/0</td><td>75~85</td></tr>
             <tr><td class="type-cell">24&times;16</td><td>0/-0.052</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.052</td><td>&plusmn;0.0260</td><td>8.0</td><td>8.0</td><td>+0.20/0</td><td>80~90</td></tr>
             <tr><td class="type-cell">25&times;14</td><td>0/-0.052</td><td>0/-0.110</td><td>0.60~0.80</td><td>0/-0.052</td><td>&plusmn;0.0260</td><td>9.0</td><td>5.4</td><td>+0.20/0</td><td>85~95</td></tr>
@@ -219,56 +219,318 @@
         </p>
       </div>
 
-      <div style="display: flex; gap: 24px; flex-wrap: wrap;">
-        <div style="flex: 1 1 320px;">
-          <p style="font-size: 13px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">일반강(SM45C) 규격외 b&times;h</p>
-          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-            <table class="spec-table" style="min-width: 260px;">
+      <p style="font-size: 13px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">일반강(SM45C) 규격외 b&times;h</p>
+        <details class="series-group" open>
+          <summary>키 나비 4~9mm<span class="series-count">15건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 520px;">
+              <thead>
+                <tr><th>규격 b×h</th><th>b</th><th>b 허용차</th><th>h</th><th>h 허용차</th><th>c</th></tr>
+              </thead>
               <tbody>
-                <tr><td>4&times;3</td><td>9&times;9</td><td>16&times;9</td></tr>
-                <tr><td>5&times;4</td><td>10&times;4</td><td>16&times;11</td></tr>
-                <tr><td>6&times;4</td><td>10&times;6</td><td>16&times;14</td></tr>
-                <tr><td>6&times;5</td><td>10&times;7</td><td>20&times;10</td></tr>
-                <tr><td>7&times;4</td><td>10&times;9</td><td>22&times;12</td></tr>
-                <tr><td>7&times;5</td><td>10&times;10</td><td>24&times;14</td></tr>
-                <tr><td>7&times;6</td><td>12&times;6</td><td>25&times;12</td></tr>
-                <tr><td>8&times;4</td><td>12&times;7</td><td>28&times;14</td></tr>
-                <tr><td>8&times;5</td><td>12&times;9</td><td>32&times;20</td></tr>
-                <tr><td>8&times;6</td><td>13&times;10</td><td>36&times;22</td></tr>
-                <tr><td>9&times;5</td><td>14&times;8</td><td>40&times;20</td></tr>
-                <tr><td>9&times;7</td><td>15&times;8</td><td>45&times;20</td></tr>
+                <tr><td class="type-cell">4&times;3</td><td>4</td><td rowspan="4" style="font-size:11px; color:var(--text-faint);">0/-0.030</td><td>3</td><td rowspan="4" style="font-size:11px; color:var(--text-faint);">0/-0.030</td><td style="font-size:11px; color:var(--text-faint);">0.16~0.25</td></tr>
+                <tr><td class="type-cell">5&times;4</td><td>5</td><td>4</td><td rowspan="9" style="font-size:11px; color:var(--text-faint);">0.25~0.40</td></tr>
+                <tr><td class="type-cell">6&times;4</td><td>6</td><td>4</td></tr>
+                <tr><td class="type-cell">6&times;5</td><td>6</td><td>5</td></tr>
+                <tr><td class="type-cell">7&times;4</td><td>7</td><td rowspan="11" style="font-size:11px; color:var(--text-faint);">0/-0.036</td><td>5</td><td rowspan="2" style="font-size:11px; color:var(--text-faint);">0/-0.036</td></tr>
+                <tr><td class="type-cell">7&times;5</td><td>7</td><td>5</td></tr>
+                <tr><td class="type-cell">7&times;6</td><td>7</td><td>6</td><td rowspan="9" style="font-size:11px; color:var(--text-faint);">0/-0.090</td></tr>
+                <tr><td class="type-cell">8&times;4</td><td>8</td><td>4</td></tr>
+                <tr><td class="type-cell">8&times;5</td><td>8</td><td>5</td></tr>
+                <tr><td class="type-cell">8&times;6</td><td>8</td><td>6</td></tr>
+                <tr><td class="type-cell">8&times;8</td><td>8</td><td>8</td><td rowspan="5" style="font-size:11px; color:var(--text-faint);">0.40~0.60</td></tr>
+                <tr><td class="type-cell">9&times;5</td><td>9</td><td>5</td></tr>
+                <tr><td class="type-cell">9&times;7</td><td>9</td><td>7</td></tr>
+                <tr><td class="type-cell">9&times;8</td><td>9</td><td>8</td></tr>
+                <tr><td class="type-cell">9&times;9</td><td>9</td><td>9</td></tr>
               </tbody>
             </table>
           </div>
-          <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 위는 규격외 생산품 중 대표 예시이며, 전체 목록은 훨씬 더 많습니다.</p>
-        </div>
-        <div style="flex: 1 1 320px;">
-          <p style="font-size: 13px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">
-            <span style="display: inline-flex; align-items: center; gap: 4px; background: linear-gradient(135deg, #4f7fb3, #2f5d8a); color: #fff; font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-right: 4px;">STS304</span>
-            스텐 규격외 b&times;h&times;L
-          </p>
-          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-            <table class="spec-table" style="min-width: 260px;">
+        </details>
+        <details class="series-group" open>
+          <summary>키 나비 10~19mm<span class="series-count">60건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 520px;">
+              <thead>
+                <tr><th>규격 b×h</th><th>b</th><th>b 허용차</th><th>h</th><th>h 허용차</th><th>c</th></tr>
+              </thead>
               <tbody>
-                <tr><td>2&times;2&times;300</td><td>10&times;5&times;300</td><td>20&times;20&times;300</td></tr>
-                <tr><td>3&times;3&times;300</td><td>10&times;6&times;300</td><td>22&times;5&times;300</td></tr>
-                <tr><td>5&times;3&times;300</td><td>10&times;7&times;300</td><td>22&times;12&times;300</td></tr>
-                <tr><td>5&times;4&times;300</td><td>10&times;8&times;300</td><td>22&times;16&times;300</td></tr>
-                <tr><td>5.9&times;5.9&times;300</td><td>12&times;6&times;300</td><td>24&times;14&times;300</td></tr>
-                <tr><td>6&times;4&times;300</td><td>12&times;9&times;300</td><td>25&times;16&times;300</td></tr>
-                <tr><td>6&times;5&times;300</td><td>14&times;8&times;300</td><td>30&times;30&times;300</td></tr>
-                <tr><td>7&times;5&times;300</td><td>14&times;10&times;300</td><td>32&times;32&times;300</td></tr>
-                <tr><td>7&times;6&times;300</td><td>14&times;11&times;300</td><td>36&times;20&times;300</td></tr>
-                <tr><td>8&times;5&times;300</td><td>15&times;9&times;300</td><td>40&times;10&times;300</td></tr>
-                <tr><td>8&times;6&times;300</td><td>18&times;10&times;300</td><td>40&times;22&times;300</td></tr>
-                <tr><td>9&times;7&times;300</td><td>19&times;12&times;300</td><td>40&times;24&times;300</td></tr>
-                <tr><td>9&times;8&times;300</td><td>20&times;10&times;300</td><td>45&times;25&times;300</td></tr>
+                <tr><td class="type-cell">10&times;4</td><td>10</td><td rowspan="12" style="font-size:11px; color:var(--text-faint);">0/-0.036</td><td>4</td><td rowspan="36" style="font-size:11px; color:var(--text-faint);">0/-0.090</td><td rowspan="49" style="font-size:11px; color:var(--text-faint);">0.40~0.60</td></tr>
+                <tr><td class="type-cell">10&times;5</td><td>10</td><td>5</td></tr>
+                <tr><td class="type-cell">10&times;6</td><td>10</td><td>6</td></tr>
+                <tr><td class="type-cell">10&times;7</td><td>10</td><td>7</td></tr>
+                <tr><td class="type-cell">10&times;9</td><td>10</td><td>9</td></tr>
+                <tr><td class="type-cell">10&times;10</td><td>10</td><td>10</td></tr>
+                <tr><td class="type-cell">11&times;8</td><td>11</td><td>8</td></tr>
+                <tr><td class="type-cell">11&times;9</td><td>11</td><td>9</td></tr>
+                <tr><td class="type-cell">11&times;11</td><td>11</td><td>11</td></tr>
+                <tr><td class="type-cell">12&times;3</td><td>12</td><td>3</td></tr>
+                <tr><td class="type-cell">12&times;6</td><td>12</td><td>6</td></tr>
+                <tr><td class="type-cell">12&times;7</td><td>12</td><td>7</td></tr>
+                <tr><td class="type-cell">12&times;9</td><td>12</td><td rowspan="42" style="font-size:11px; color:var(--text-faint);">0/-0.043</td><td>9</td></tr>
+                <tr><td class="type-cell">12&times;10</td><td>12</td><td>10</td></tr>
+                <tr><td class="type-cell">12&times;11</td><td>12</td><td>11</td></tr>
+                <tr><td class="type-cell">12&times;12</td><td>12</td><td>12</td></tr>
+                <tr><td class="type-cell">13&times;10</td><td>13</td><td>10</td></tr>
+                <tr><td class="type-cell">13&times;11</td><td>13</td><td>11</td></tr>
+                <tr><td class="type-cell">13&times;12</td><td>13</td><td>12</td></tr>
+                <tr><td class="type-cell">13&times;13</td><td>13</td><td>13</td></tr>
+                <tr><td class="type-cell">14&times;6</td><td>14</td><td>6</td></tr>
+                <tr><td class="type-cell">14&times;7</td><td>14</td><td>7</td></tr>
+                <tr><td class="type-cell">14&times;8</td><td>14</td><td>8</td></tr>
+                <tr><td class="type-cell">14&times;10</td><td>14</td><td>10</td></tr>
+                <tr><td class="type-cell">14&times;11</td><td>14</td><td>11</td></tr>
+                <tr><td class="type-cell">14&times;12</td><td>14</td><td>12</td></tr>
+                <tr><td class="type-cell">14&times;13</td><td>14</td><td>13</td></tr>
+                <tr><td class="type-cell">14&times;14</td><td>14</td><td>14</td></tr>
+                <tr><td class="type-cell">15&times;5</td><td>15</td><td>5</td></tr>
+                <tr><td class="type-cell">15&times;8</td><td>15</td><td>8</td></tr>
+                <tr><td class="type-cell">15&times;11</td><td>15</td><td>11</td></tr>
+                <tr><td class="type-cell">15&times;12</td><td>15</td><td>12</td></tr>
+                <tr><td class="type-cell">15&times;15</td><td>15</td><td>15</td></tr>
+                <tr><td class="type-cell">16&times;6</td><td>16</td><td>6</td></tr>
+                <tr><td class="type-cell">16&times;8</td><td>16</td><td>8</td></tr>
+                <tr><td class="type-cell">16&times;9</td><td>16</td><td>9</td></tr>
+                <tr><td class="type-cell">16&times;11</td><td>16</td><td>11</td><td rowspan="24" style="font-size:11px; color:var(--text-faint);">0/-0.110</td></tr>
+                <tr><td class="type-cell">16&times;12</td><td>16</td><td>12</td></tr>
+                <tr><td class="type-cell">16&times;13</td><td>16</td><td>13</td></tr>
+                <tr><td class="type-cell">16&times;14</td><td>16</td><td>14</td></tr>
+                <tr><td class="type-cell">16&times;15</td><td>16</td><td>15</td></tr>
+                <tr><td class="type-cell">16&times;16</td><td>16</td><td>16</td></tr>
+                <tr><td class="type-cell">17&times;6</td><td>17</td><td>6</td></tr>
+                <tr><td class="type-cell">17&times;8</td><td>17</td><td>8</td></tr>
+                <tr><td class="type-cell">17&times;10</td><td>17</td><td>10</td></tr>
+                <tr><td class="type-cell">17&times;11</td><td>17</td><td>11</td></tr>
+                <tr><td class="type-cell">17&times;15</td><td>17</td><td>15</td></tr>
+                <tr><td class="type-cell">17&times;17</td><td>17</td><td>17</td></tr>
+                <tr><td class="type-cell">18&times;10</td><td>18</td><td>10</td></tr>
+                <tr><td class="type-cell">18&times;12</td><td>18</td><td>12</td><td rowspan="11" style="font-size:11px; color:var(--text-faint);">0.60~0.80</td></tr>
+                <tr><td class="type-cell">18&times;14</td><td>18</td><td>14</td></tr>
+                <tr><td class="type-cell">18&times;15</td><td>18</td><td>15</td></tr>
+                <tr><td class="type-cell">18&times;16</td><td>18</td><td>16</td></tr>
+                <tr><td class="type-cell">18&times;18</td><td>18</td><td>18</td></tr>
+                <tr><td class="type-cell">19&times;5</td><td>19</td><td rowspan="6" style="font-size:11px; color:var(--text-faint);">0/-0.043</td><td>5</td></tr>
+                <tr><td class="type-cell">19&times;9</td><td>19</td><td>9</td></tr>
+                <tr><td class="type-cell">19&times;12</td><td>19</td><td>12</td></tr>
+                <tr><td class="type-cell">19&times;14</td><td>19</td><td>14</td></tr>
+                <tr><td class="type-cell">19&times;16</td><td>19</td><td>16</td></tr>
+                <tr><td class="type-cell">19&times;19</td><td>19</td><td>19</td></tr>
               </tbody>
             </table>
           </div>
-          <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 대표 예시이며, 6.35&times;6.35 · 7.92&times;7.92 · 12.7&times;12.7 등 인치 환산 사이즈를 포함해 전체 목록은 더 많습니다.</p>
-        </div>
+        </details>
+        <details class="series-group" open>
+          <summary>키 나비 20~29mm<span class="series-count">58건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 520px;">
+              <thead>
+                <tr><th>규격 b×h</th><th>b</th><th>b 허용차</th><th>h</th><th>h 허용차</th><th>c</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="type-cell">20&times;5</td><td>20</td><td rowspan="6" style="font-size:11px; color:var(--text-faint);">0/-0.043</td><td>5</td><td rowspan="58" style="font-size:11px; color:var(--text-faint);">0/-0.110</td><td rowspan="58" style="font-size:11px; color:var(--text-faint);">0.60~0.80</td></tr>
+                <tr><td class="type-cell">20&times;6</td><td>20</td><td>6</td></tr>
+                <tr><td class="type-cell">20&times;8</td><td>20</td><td>8</td></tr>
+                <tr><td class="type-cell">20&times;9</td><td>20</td><td>9</td></tr>
+                <tr><td class="type-cell">20&times;10</td><td>20</td><td>10</td></tr>
+                <tr><td class="type-cell">20&times;11</td><td>20</td><td>11</td></tr>
+                <tr><td class="type-cell">20&times;13</td><td>20</td><td rowspan="47" style="font-size:11px; color:var(--text-faint);">0/-0.052</td><td>13</td></tr>
+                <tr><td class="type-cell">20&times;14</td><td>20</td><td>14</td></tr>
+                <tr><td class="type-cell">20&times;15</td><td>20</td><td>15</td></tr>
+                <tr><td class="type-cell">20&times;16</td><td>20</td><td>16</td></tr>
+                <tr><td class="type-cell">20&times;17</td><td>20</td><td>17</td></tr>
+                <tr><td class="type-cell">20&times;18</td><td>20</td><td>18</td></tr>
+                <tr><td class="type-cell">20&times;20</td><td>20</td><td>20</td></tr>
+                <tr><td class="type-cell">22&times;10</td><td>22</td><td>10</td></tr>
+                <tr><td class="type-cell">22&times;11</td><td>22</td><td>11</td></tr>
+                <tr><td class="type-cell">22&times;12</td><td>22</td><td>12</td></tr>
+                <tr><td class="type-cell">22&times;13</td><td>22</td><td>13</td></tr>
+                <tr><td class="type-cell">22&times;15</td><td>22</td><td>15</td></tr>
+                <tr><td class="type-cell">22&times;16</td><td>22</td><td>16</td></tr>
+                <tr><td class="type-cell">22&times;18</td><td>22</td><td>18</td></tr>
+                <tr><td class="type-cell">22&times;20</td><td>22</td><td>20</td></tr>
+                <tr><td class="type-cell">22&times;22</td><td>22</td><td>22</td></tr>
+                <tr><td class="type-cell">23&times;15</td><td>23</td><td>15</td></tr>
+                <tr><td class="type-cell">24&times;6</td><td>24</td><td>6</td></tr>
+                <tr><td class="type-cell">24&times;12</td><td>24</td><td>12</td></tr>
+                <tr><td class="type-cell">24&times;14</td><td>24</td><td>14</td></tr>
+                <tr><td class="type-cell">24&times;18</td><td>24</td><td>18</td></tr>
+                <tr><td class="type-cell">24&times;20</td><td>24</td><td>20</td></tr>
+                <tr><td class="type-cell">24&times;22</td><td>24</td><td>22</td></tr>
+                <tr><td class="type-cell">24&times;24</td><td>24</td><td>24</td></tr>
+                <tr><td class="type-cell">25&times;5</td><td>25</td><td>5</td></tr>
+                <tr><td class="type-cell">25&times;6</td><td>25</td><td>6</td></tr>
+                <tr><td class="type-cell">25&times;8</td><td>25</td><td>8</td></tr>
+                <tr><td class="type-cell">25&times;9</td><td>25</td><td>9</td></tr>
+                <tr><td class="type-cell">25&times;10</td><td>25</td><td>10</td></tr>
+                <tr><td class="type-cell">25&times;12</td><td>25</td><td>12</td></tr>
+                <tr><td class="type-cell">25&times;13</td><td>25</td><td>13</td></tr>
+                <tr><td class="type-cell">25&times;15</td><td>25</td><td>15</td></tr>
+                <tr><td class="type-cell">25&times;16</td><td>25</td><td>16</td></tr>
+                <tr><td class="type-cell">25&times;18</td><td>25</td><td>18</td></tr>
+                <tr><td class="type-cell">25&times;20</td><td>25</td><td>20</td></tr>
+                <tr><td class="type-cell">25&times;22</td><td>25</td><td>22</td></tr>
+                <tr><td class="type-cell">25&times;25</td><td>25</td><td>25</td></tr>
+                <tr><td class="type-cell">26&times;12</td><td>26</td><td>12</td></tr>
+                <tr><td class="type-cell">26&times;14</td><td>26</td><td>14</td></tr>
+                <tr><td class="type-cell">26&times;20</td><td>26</td><td>20</td></tr>
+                <tr><td class="type-cell">26&times;22</td><td>26</td><td>22</td></tr>
+                <tr><td class="type-cell">26&times;26</td><td>26</td><td>26</td></tr>
+                <tr><td class="type-cell">27&times;5</td><td>27</td><td>5</td></tr>
+                <tr><td class="type-cell">27&times;6</td><td>27</td><td>6</td></tr>
+                <tr><td class="type-cell">28&times;12</td><td>28</td><td>12</td></tr>
+                <tr><td class="type-cell">28&times;13</td><td>28</td><td>13</td></tr>
+                <tr><td class="type-cell">28&times;14</td><td>28</td><td>14</td></tr>
+                <tr><td class="type-cell">28&times;18</td><td>28</td><td rowspan="5" style="font-size:11px; color:var(--text-faint);">0/-0.062</td><td>18</td></tr>
+                <tr><td class="type-cell">28&times;22</td><td>28</td><td>22</td></tr>
+                <tr><td class="type-cell">28&times;24</td><td>28</td><td>24</td></tr>
+                <tr><td class="type-cell">28&times;28</td><td>28</td><td>28</td></tr>
+                <tr><td class="type-cell">29&times;6</td><td>29</td><td>6</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="series-group" open>
+          <summary>키 나비 30~39mm<span class="series-count">43건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 520px;">
+              <thead>
+                <tr><th>규격 b×h</th><th>b</th><th>b 허용차</th><th>h</th><th>h 허용차</th><th>c</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="type-cell">30&times;10</td><td>30</td><td rowspan="43" style="font-size:11px; color:var(--text-faint);">0/-0.062</td><td>10</td><td rowspan="30" style="font-size:11px; color:var(--text-faint);">0/-0.110</td><td rowspan="30" style="font-size:11px; color:var(--text-faint);">0.60~0.80</td></tr>
+                <tr><td class="type-cell">30&times;12</td><td>30</td><td>12</td></tr>
+                <tr><td class="type-cell">30&times;14</td><td>30</td><td>14</td></tr>
+                <tr><td class="type-cell">30&times;15</td><td>30</td><td>15</td></tr>
+                <tr><td class="type-cell">30&times;16</td><td>30</td><td>16</td></tr>
+                <tr><td class="type-cell">30&times;18</td><td>30</td><td>18</td></tr>
+                <tr><td class="type-cell">30&times;20</td><td>30</td><td>20</td></tr>
+                <tr><td class="type-cell">30&times;22</td><td>30</td><td>22</td></tr>
+                <tr><td class="type-cell">30&times;24</td><td>30</td><td>24</td></tr>
+                <tr><td class="type-cell">30&times;25</td><td>30</td><td>25</td></tr>
+                <tr><td class="type-cell">30&times;26</td><td>30</td><td>26</td></tr>
+                <tr><td class="type-cell">30&times;30</td><td>30</td><td>30</td></tr>
+                <tr><td class="type-cell">32&times;6</td><td>32</td><td>6</td></tr>
+                <tr><td class="type-cell">32&times;10</td><td>32</td><td>10</td></tr>
+                <tr><td class="type-cell">32&times;12</td><td>32</td><td>12</td></tr>
+                <tr><td class="type-cell">32&times;15</td><td>32</td><td>15</td></tr>
+                <tr><td class="type-cell">32&times;16</td><td>32</td><td>16</td></tr>
+                <tr><td class="type-cell">32&times;20</td><td>32</td><td>20</td></tr>
+                <tr><td class="type-cell">32&times;24</td><td>32</td><td>24</td></tr>
+                <tr><td class="type-cell">32&times;25</td><td>32</td><td>25</td></tr>
+                <tr><td class="type-cell">32&times;28</td><td>32</td><td>28</td></tr>
+                <tr><td class="type-cell">32&times;30</td><td>32</td><td>30</td></tr>
+                <tr><td class="type-cell">32&times;32</td><td>32</td><td>32</td></tr>
+                <tr><td class="type-cell">35&times;5</td><td>35</td><td>5</td></tr>
+                <tr><td class="type-cell">35&times;7</td><td>35</td><td>7</td></tr>
+                <tr><td class="type-cell">35&times;9</td><td>35</td><td>9</td></tr>
+                <tr><td class="type-cell">35&times;10</td><td>35</td><td>10</td></tr>
+                <tr><td class="type-cell">35&times;12</td><td>35</td><td>12</td></tr>
+                <tr><td class="type-cell">35&times;15</td><td>35</td><td>15</td></tr>
+                <tr><td class="type-cell">35&times;20</td><td>35</td><td>20</td></tr>
+                <tr><td class="type-cell">35&times;25</td><td>35</td><td>25</td><td rowspan="13" style="font-size:11px; color:var(--text-faint);">0/-0.130</td><td rowspan="13" style="font-size:11px; color:var(--text-faint);">1.00~1.20</td></tr>
+                <tr><td class="type-cell">35&times;30</td><td>35</td><td>30</td></tr>
+                <tr><td class="type-cell">35&times;35</td><td>35</td><td>35</td></tr>
+                <tr><td class="type-cell">36&times;12</td><td>36</td><td>12</td></tr>
+                <tr><td class="type-cell">36&times;15</td><td>36</td><td>15</td></tr>
+                <tr><td class="type-cell">36&times;22</td><td>36</td><td>22</td></tr>
+                <tr><td class="type-cell">36&times;24</td><td>36</td><td>24</td></tr>
+                <tr><td class="type-cell">36&times;32</td><td>36</td><td>32</td></tr>
+                <tr><td class="type-cell">36&times;36</td><td>36</td><td>36</td></tr>
+                <tr><td class="type-cell">38&times;8</td><td>38</td><td>8</td></tr>
+                <tr><td class="type-cell">38&times;20</td><td>38</td><td>20</td></tr>
+                <tr><td class="type-cell">38&times;22</td><td>38</td><td>22</td></tr>
+                <tr><td class="type-cell">38&times;25</td><td>38</td><td>25</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details class="series-group" open>
+          <summary>키 나비 40~100mm<span class="series-count">41건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 520px;">
+              <thead>
+                <tr><th>규격 b×h</th><th>b</th><th>b 허용차</th><th>h</th><th>h 허용차</th><th>c</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="type-cell">40&times;10</td><td>40</td><td rowspan="25" style="font-size:11px; color:var(--text-faint);">0/-0.062</td><td>10</td><td rowspan="25" style="font-size:11px; color:var(--text-faint);">0/-0.130</td><td rowspan="25" style="font-size:11px; color:var(--text-faint);">1.00~1.20</td></tr>
+                <tr><td class="type-cell">40&times;12</td><td>40</td><td>12</td></tr>
+                <tr><td class="type-cell">40&times;15</td><td>40</td><td>15</td></tr>
+                <tr><td class="type-cell">40&times;18</td><td>40</td><td>18</td></tr>
+                <tr><td class="type-cell">40&times;20</td><td>40</td><td>20</td></tr>
+                <tr><td class="type-cell">40&times;25</td><td>40</td><td>25</td></tr>
+                <tr><td class="type-cell">40&times;30</td><td>40</td><td>30</td></tr>
+                <tr><td class="type-cell">40&times;35</td><td>40</td><td>35</td></tr>
+                <tr><td class="type-cell">40&times;40</td><td>40</td><td>40</td></tr>
+                <tr><td class="type-cell">42&times;20</td><td>42</td><td>20</td></tr>
+                <tr><td class="type-cell">42&times;25</td><td>42</td><td>25</td></tr>
+                <tr><td class="type-cell">42&times;30</td><td>42</td><td>30</td></tr>
+                <tr><td class="type-cell">42&times;40</td><td>42</td><td>40</td></tr>
+                <tr><td class="type-cell">45&times;10</td><td>45</td><td>10</td></tr>
+                <tr><td class="type-cell">45&times;15</td><td>45</td><td>15</td></tr>
+                <tr><td class="type-cell">45&times;20</td><td>45</td><td>20</td></tr>
+                <tr><td class="type-cell">45&times;28</td><td>45</td><td>28</td></tr>
+                <tr><td class="type-cell">45&times;30</td><td>45</td><td>30</td></tr>
+                <tr><td class="type-cell">45&times;35</td><td>45</td><td>35</td></tr>
+                <tr><td class="type-cell">48&times;28</td><td>48</td><td>28</td></tr>
+                <tr><td class="type-cell">48&times;30</td><td>48</td><td>30</td></tr>
+                <tr><td class="type-cell">50&times;10</td><td>50</td><td>10</td></tr>
+                <tr><td class="type-cell">50&times;15</td><td>50</td><td>15</td></tr>
+                <tr><td class="type-cell">50&times;20</td><td>50</td><td>20</td></tr>
+                <tr><td class="type-cell">50&times;25</td><td>50</td><td>25</td></tr>
+                <tr><td class="type-cell">50&times;30</td><td>50</td><td rowspan="14" style="font-size:11px; color:var(--text-faint);">0/-0.074</td><td>30</td><td rowspan="16" style="font-size:11px; color:var(--text-faint);">0/-0.160</td><td rowspan="11" style="font-size:11px; color:var(--text-faint);">1.60~2.00</td></tr>
+                <tr><td class="type-cell">50&times;32</td><td>50</td><td>32</td></tr>
+                <tr><td class="type-cell">50&times;35</td><td>50</td><td>35</td></tr>
+                <tr><td class="type-cell">50&times;40</td><td>50</td><td>40</td></tr>
+                <tr><td class="type-cell">50&times;50</td><td>50</td><td>50</td></tr>
+                <tr><td class="type-cell">58&times;28</td><td>58</td><td>28</td></tr>
+                <tr><td class="type-cell">58&times;32</td><td>58</td><td>32</td></tr>
+                <tr><td class="type-cell">60&times;10</td><td>60</td><td>10</td></tr>
+                <tr><td class="type-cell">60&times;15</td><td>60</td><td>15</td></tr>
+                <tr><td class="type-cell">60&times;20</td><td>60</td><td>20</td></tr>
+                <tr><td class="type-cell">60&times;30</td><td>60</td><td>30</td></tr>
+                <tr><td class="type-cell">70&times;40</td><td>70</td><td>40</td><td rowspan="5" style="font-size:11px; color:var(--text-faint);">2.50~3.00</td></tr>
+                <tr><td class="type-cell">70&times;45</td><td>70</td><td>45</td></tr>
+                <tr><td class="type-cell">75&times;45</td><td>75</td><td>45</td></tr>
+                <tr><td class="type-cell">90&times;50</td><td>90</td><td rowspan="2" style="font-size:11px; color:var(--text-faint);">0/-0.074</td><td>50</td></tr>
+                <tr><td class="type-cell">100&times;48</td><td>100</td><td>48</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 길이는 300mm입니다. 7&times;4의 h는 카탈로그 인쇄값(5)을 그대로 옮겼습니다.</p>
+
+      <p style="font-size: 13px; font-weight: 700; color: var(--text-sub); margin: 24px 0 8px;">
+        <span style="display: inline-flex; align-items: center; gap: 4px; background: linear-gradient(135deg, #4f7fb3, #2f5d8a); color: #fff; font-size: 10.5px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-right: 4px;">STS304</span>
+        스텐 규격외 b&times;h&times;L
+      </p>
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 700px;">
+          <thead>
+            <tr>
+              <th>b&times;h&times;L</th><th>b&times;h&times;L</th><th>b&times;h&times;L</th><th>b&times;h&times;L</th><th>b&times;h&times;L</th>
+            </tr>
+          </thead>
+          <tbody>
+                <tr><td>2&times;2&times;300</td><td>10&times;5&times;300</td><td>15&times;15&times;300</td><td>20&times;20&times;300</td><td>36&times;20&times;300</td></tr>
+                <tr><td>3&times;3&times;300</td><td>10&times;6&times;300</td><td>16&times;5&times;300</td><td>22&times;5&times;300</td><td>40&times;10&times;300</td></tr>
+                <tr><td>5&times;3&times;300</td><td>10&times;7&times;300</td><td>16&times;11&times;300</td><td>22&times;12&times;300</td><td>40&times;22&times;300</td></tr>
+                <tr><td>5&times;4&times;300</td><td>10&times;8&times;300</td><td>16&times;14&times;300</td><td>22&times;16&times;300</td><td>40&times;24&times;300</td></tr>
+                <tr><td>5.9&times;5.9&times;300</td><td>12&times;6&times;300</td><td>16&times;16&times;300</td><td>22&times;22&times;300</td><td>45&times;25&times;300</td></tr>
+                <tr><td>6&times;4&times;300</td><td>12&times;9&times;300</td><td>18&times;10&times;300</td><td>24&times;14&times;300</td><td>&nbsp;</td></tr>
+                <tr><td>6&times;5&times;300</td><td>12.7&times;12.7&times;300</td><td>18&times;14&times;300</td><td>24&times;24&times;300</td><td>&nbsp;</td></tr>
+                <tr><td>6.35&times;6.35&times;300</td><td>13&times;13&times;300</td><td>18&times;15&times;300</td><td>25&times;12&times;300</td><td style="font-size:11px; color:var(--text-faint); text-align:right;">단위 : Inch</td></tr>
+                <tr><td>7&times;5&times;300</td><td>14&times;8&times;300</td><td>18&times;18&times;300</td><td>25&times;16&times;300</td><td>1/2&times;1/2&times;300</td></tr>
+                <tr><td>7&times;6&times;300</td><td>14&times;10&times;300</td><td>19&times;12&times;300</td><td>25&times;25&times;300</td><td>1/4&times;1/4&times;300</td></tr>
+                <tr><td>7.92&times;7.92&times;300</td><td>14&times;11&times;300</td><td>19&times;19&times;300</td><td>26&times;26&times;300</td><td>3/8&times;3/8&times;300</td></tr>
+                <tr><td>8&times;5&times;300</td><td>14&times;12&times;300</td><td>20&times;8&times;300</td><td>28&times;28&times;300</td><td>5/8&times;5/8&times;300</td></tr>
+                <tr><td>8&times;6&times;300</td><td>14&times;14&times;300</td><td>20&times;10&times;300</td><td>30&times;20&times;300</td><td>5/16&times;5/16&times;300</td></tr>
+                <tr><td>9&times;7&times;300</td><td>15&times;9&times;300</td><td>20&times;13&times;300</td><td>30&times;30&times;300</td><td>7/16&times;7/16&times;300</td></tr>
+                <tr><td>9&times;8&times;300</td><td>15&times;12&times;300</td><td>20&times;14&times;300</td><td>32&times;32&times;300</td><td>&nbsp;</td></tr>
+                <tr><td>9&times;9&times;300</td><td>15&times;14&times;300</td><td>20&times;18&times;300</td><td>35&times;22&times;300</td><td>&nbsp;</td></tr>
+          </tbody>
+        </table>
       </div>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (마지막 열 아래쪽은 inch) · 주문 제작 가능</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 20px;">
         ※ 위 표는 당사 정식 규격표 원본을 기준으로 작성했습니다. 스텐(STS304) 사각키는 위와 같이 파란 배지로 구분해 표기했습니다.
@@ -295,7 +557,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261028a"></script>
-<script src="i18n/pages/key_normal.dict.js?v=20261026o"></script>
+<script src="i18n/pages/key_normal.dict.js?v=20261028b"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 </body>

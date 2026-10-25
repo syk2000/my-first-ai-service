@@ -1309,7 +1309,6 @@
   .brand-tile-logo .lh-26 { height: 26px; }
   .brand-tile-logo .lh-28 { height: 28px; }
   .brand-tile-logo .lh-30 { height: 30px; }
-  .brand-tile-logo .lh-32 { height: 32px; }
   .brand-tile-logo .lh-34 { height: 34px; }
   .brand-tile-logo .lh-36 { height: 36px; }
   .brand-tile-logo .lh-38 { height: 38px; }
@@ -1635,7 +1634,6 @@
     min-height: 18px;
   }
   .form-status:empty { display: none; }
-  .form-row .span-2 { grid-column: 1 / -1; }
 
   /* 카카오톡 상담 버튼 (카카오 브랜드 노랑) */
   .kakao-btn {
@@ -1966,11 +1964,6 @@
     flex-wrap: wrap;
   }
 
-  .footer-row .f-name {
-    font-family: var(--font-display-en);
-    font-weight: 600;
-    font-size: 15px;
-  }
 
   .footer-row .f-meta {
     margin-top: 8px;
@@ -2267,13 +2260,6 @@
 .ost-tab { padding: 6px 13px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text); font: 600 13px var(--font-body); cursor: pointer; }
 .ost-tab:hover { border-color: var(--accent); color: var(--accent); }
 .ost-tab.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
-.ost-tabs-note { font-size: 12px; color: var(--text-faint); margin: 0 0 18px; }
-.ost-drawing { display: flex; align-items: center; gap: 18px; margin: 0 0 12px; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--radius-md); background: #fff; max-width: 520px; }
-.ost-drawing img { width: 96px; height: auto; flex: 0 0 auto; }
-.ost-drawing p { margin: 0; font-size: 13px; color: #333; line-height: 1.6; }
-.ost-drawing p.ost-drawing-name { font-weight: 700; font-size: 14px; color: #111; }
-.ost-drawing-empty { min-height: 60px; justify-content: center; background: var(--surface); }
-.ost-drawing-empty p { color: var(--text-faint); }
 
 /* 고객센터 > 자주 하는 질문 */
 .faq-list { max-width: 860px; }
