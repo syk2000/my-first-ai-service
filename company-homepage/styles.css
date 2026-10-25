@@ -3018,7 +3018,7 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="hybrid_bearing.html"]::before { background-image: url("assets/cards/pc_hybrid_bearing.webp?v=1"); }
 .img-cards .product-card[href="key_normal.html"]::before { background-image: url("assets/cards/pc_key_normal.webp?v=2"); }
 .img-cards .product-card[href="half_key.html"]::before { background-image: url("assets/cards/pc_half_key.webp?v=2"); }
-.img-cards .product-card[href="round_key.html"]::before { background-image: url("assets/cards/pc_round_key.svg?v=1"); }
+.img-cards .product-card[href="round_key.html"]::before { background-image: url("assets/cards/pc_round_key.webp?v=3"); }
 .img-cards .product-card[href="taper_pin.html"]::before { background-image: url("assets/cards/pc_taper_pin.svg?v=1"); }
 .img-cards .product-card[href="parallel_pin.html"]::before { background-image: url("assets/cards/pc_parallel_pin.svg?v=1"); }
 .img-cards .product-card[href="oilgage_md_mc.html"]::before { background-image: url("assets/cards/pc_oilgage_md_mc.svg?v=1"); }
