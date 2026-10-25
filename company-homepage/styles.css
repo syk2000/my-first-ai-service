@@ -2364,32 +2364,625 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .cat-tab-btn[data-tab="su"]::before { background: #5ec8f0; }
 .cat-tab-btn[data-tab="sc"]::before { background: #c8a8e8; }
 .cat-tab-btn[data-tab="sr"]::before { background: #ffffff; }
-/* 카드 아이콘 대신 해당 페이지 그림 (assets/cards/sr_*.webp) */
-.img-cards .product-card::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
-.img-cards .product-card .p-icon { display: none; }
-.img-cards .product-card[href="snapring_r.html"]::before { background-image: url("assets/cards/sr_snapring_r.webp?v=4"); }
-.img-cards .product-card[href="snapring_s.html"]::before { background-image: url("assets/cards/sr_snapring_s.webp?v=4"); }
-.img-cards .product-card[href="irtw.html"]::before { background-image: url("assets/cards/sr_irtw.webp?v=4"); }
-.img-cards .product-card[href="istw.html"]::before { background-image: url("assets/cards/sr_istw.webp?v=4"); }
-.img-cards .product-card[href="wr.html"]::before { background-image: url("assets/cards/sr_wr.webp?v=4"); }
-.img-cards .product-card[href="ws.html"]::before { background-image: url("assets/cards/sr_ws.webp?v=4"); }
-.img-cards .product-card[href="snapring_nr.html"]::before { background-image: url("assets/cards/sr_snapring_nr.webp?v=4"); }
-.img-cards .product-card[href="snapring_e.html"]::before { background-image: url("assets/cards/sr_snapring_e.webp?v=4"); }
-.img-cards .product-card[href="snapring_c.html"]::before { background-image: url("assets/cards/sr_snapring_c.webp?v=4"); }
-.img-cards .product-card[href="snapring_u.html"]::before { background-image: url("assets/cards/sr_snapring_u.webp?v=4"); }
-.img-cards .product-card[href="snapring_g.html"]::before { background-image: url("assets/cards/sr_snapring_g.webp?v=4"); }
-.img-cards .product-card[href="snapring_k.html"]::before { background-image: url("assets/cards/sr_snapring_k.webp?v=4"); }
-.img-cards .product-card[href="s_cs_stop.html"]::before { background-image: url("assets/cards/sr_s_cs_stop.webp?v=4"); }
-.img-cards .product-card[href="r_cr_stop.html"]::before { background-image: url("assets/cards/sr_r_cr_stop.webp?v=4"); }
-.img-cards .product-card[href="s_pushnut.html"]::before { background-image: url("assets/cards/sr_s_pushnut.webp?v=4"); }
-.img-cards .product-card[href="r_pushnut.html"]::before { background-image: url("assets/cards/sr_r_pushnut.webp?v=4"); }
-.img-cards .product-card[href="prat_push_nut.html"]::before { background-image: url("assets/cards/sr_prat_push_nut.webp?v=4"); }
-.img-cards .product-card[href="circle_speed_nut.html"]::before { background-image: url("assets/cards/sr_circle_speed_nut.webp?v=4"); }
-.img-cards .product-card[href="wave_washer.html"]::before { background-image: url("assets/cards/sr_wave_washer.webp?v=4"); }
-.img-cards .product-card[href="e_washer.html"]::before { background-image: url("assets/cards/sr_e_washer.webp?v=4"); }
-.img-cards .product-card[href="spin_washer.html"]::before { background-image: url("assets/cards/sr_spin_washer.webp?v=4"); }
-.img-cards .product-card[href="nod_lock.html"]::before { background-image: url("assets/cards/sr_nod_lock.webp?v=4"); }
-.img-cards .product-card[href="hose_clamp.html"]::before { background-image: url("assets/cards/sr_hose_clamp.webp?v=4"); }
-.img-cards .product-card[href="e_holder.html"]::before { background-image: url("assets/cards/sr_e_holder.webp?v=4"); }
-.img-cards .product-card[href="e_stand.html"]::before { background-image: url("assets/cards/sr_e_stand.webp?v=4"); }
-.img-cards .product-card[href="heli_coil.html"]::before { background-image: url("assets/cards/sr_heli_coil.webp?v=4"); }
+/* 카드 아이콘 대신 해당 페이지 치수 도면 (assets/cards/pc_*.webp, 워터마크 없는 원본) */
+.img-cards .product-card[href="hah_sleeve.html"]::before,
+.img-cards .product-card[href="sleeve.html"]::before,
+.img-cards .product-card[href="lock_nut.html"]::before,
+.img-cards .product-card[href="locknut_clip.html"]::before,
+.img-cards .product-card[href="kzm.html"]::before,
+.img-cards .product-card[href="kzmv.html"]::before,
+.img-cards .product-card[href="kan.html"]::before,
+.img-cards .product-card[href="ksn.html"]::before,
+.img-cards .product-card[href="ksna.html"]::before,
+.img-cards .product-card[href="dn.html"]::before,
+.img-cards .product-card[href="twin_nut.html"]::before,
+.img-cards .product-card[href="fine_nut.html"]::before,
+.img-cards .product-card[href="six_nut.html"]::before,
+.img-cards .product-card[href="guk_nut.html"]::before,
+.img-cards .product-card[href="lock_washer.html"]::before,
+.img-cards .product-card[href="ball_retainer.html"]::before,
+.img-cards .product-card[href="ball_caster.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit_uc.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit_uk.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit_sb.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit_sa.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit_sc.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit_ur.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit_ser.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit_hc.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit_ucx.html"]::before,
+.img-cards .product-card[href="deep_groove_ball.html"]::before,
+.img-cards .product-card[href="angular_contact_ball.html"]::before,
+.img-cards .product-card[href="self_aligning_ball.html"]::before,
+.img-cards .product-card[href="self_aligning_deep_groove.html"]::before,
+.img-cards .product-card[href="double_row_angular_contact.html"]::before,
+.img-cards .product-card[href="miniature_ball.html"]::before,
+.img-cards .product-card[href="cylindrical_roller.html"]::before,
+.img-cards .product-card[href="taper_roller.html"]::before,
+.img-cards .product-card[href="barrel_roller.html"]::before,
+.img-cards .product-card[href="spherical_roller.html"]::before,
+.img-cards .product-card[href="double_row_taper.html"]::before,
+.img-cards .product-card[href="double_row_cylindrical.html"]::before,
+.img-cards .product-card[href="machined_needle_onepiece.html"]::before,
+.img-cards .product-card[href="machined_needle_separate.html"]::before,
+.img-cards .product-card[href="naf_needle_bearing.html"]::before,
+.img-cards .product-card[href="thrust_combo_needle.html"]::before,
+.img-cards .product-card[href="angular_combo_needle.html"]::before,
+.img-cards .product-card[href="shell_needle_inch.html"]::before,
+.img-cards .product-card[href="shell_needle_separate.html"]::before,
+.img-cards .product-card[href="needle_cage.html"]::before,
+.img-cards .product-card[href="cam_follower.html"]::before,
+.img-cards .product-card[href="roller_follower.html"]::before,
+.img-cards .product-card[href="yoke_track_roller.html"]::before,
+.img-cards .product-card[href="cross_roller_bearing.html"]::before,
+.img-cards .product-card[href="roller_bearing.html"]::before,
+.img-cards .product-card[href="needle_inner_ring.html"]::before,
+.img-cards .product-card[href="needle_bearing_accessories.html"]::before,
+.img-cards .product-card[href="thrust_ball.html"]::before,
+.img-cards .product-card[href="angular_thrust_ball.html"]::before,
+.img-cards .product-card[href="thrust_cylindrical_roller.html"]::before,
+.img-cards .product-card[href="self_aligning_thrust_roller.html"]::before,
+.img-cards .product-card[href="thrust_needle.html"]::before,
+.img-cards .product-card[href="kingpin_thrust.html"]::before,
+.img-cards .product-card[href="linear_bushing.html"]::before,
+.img-cards .product-card[href="lm_guide.html"]::before,
+.img-cards .product-card[href="spherical_plain.html"]::before,
+.img-cards .product-card[href="link_ball.html"]::before,
+.img-cards .product-card[href="rod_end.html"]::before,
+.img-cards .product-card[href="unit_case.html"]::before,
+.img-cards .product-card[href="ball_bearing_unit.html"]::before,
+.img-cards .product-card[href="plummer_block.html"]::before,
+.img-cards .product-card[href="radial_insert.html"]::before,
+.img-cards .product-card[href="small_unit.html"]::before,
+.img-cards .product-card[href="plastic_unit.html"]::before,
+.img-cards .product-card[href="spindle_bearing.html"]::before,
+.img-cards .product-card[href="ball_screw_support.html"]::before,
+.img-cards .product-card[href="clutch_bearing.html"]::before,
+.img-cards .product-card[href="kojin_joint.html"]::before,
+.img-cards .product-card[href="clutch_tss.html"]::before,
+.img-cards .product-card[href="clutch_tfs.html"]::before,
+.img-cards .product-card[href="clutch_bb.html"]::before,
+.img-cards .product-card[href="clutch_ld.html"]::before,
+.img-cards .product-card[href="clutch_fc.html"]::before,
+.img-cards .product-card[href="clutch_hf.html"]::before,
+.img-cards .product-card[href="clutch_rc.html"]::before,
+.img-cards .product-card[href="clutch_rcb.html"]::before,
+.img-cards .product-card[href="clutch_fcbn.html"]::before,
+.img-cards .product-card[href="clutch_fcb.html"]::before,
+.img-cards .product-card[href="clutch_x.html"]::before,
+.img-cards .product-card[href="clutch_bwc.html"]::before,
+.img-cards .product-card[href="clutch_bw.html"]::before,
+.img-cards .product-card[href="hah_sleeve_h2.html"]::before,
+.img-cards .product-card[href="hah_sleeve_h3.html"]::before,
+.img-cards .product-card[href="hah_sleeve_h23.html"]::before,
+.img-cards .product-card[href="hah_sleeve_h30.html"]::before,
+.img-cards .product-card[href="hah_sleeve_h31.html"]::before,
+.img-cards .product-card[href="hah_sleeve_h32.html"]::before,
+.img-cards .product-card[href="spring_pin.html"]::before,
+.img-cards .product-card[href="pin_r.html"]::before,
+.img-cards .product-card[href="link_ball_zbl.html"]::before,
+.img-cards .product-card[href="link_ball_rbi.html"]::before,
+.img-cards .product-card[href="l_ball_lhsa.html"]::before,
+.img-cards .product-card[href="l_ball_lhs.html"]::before,
+.img-cards .product-card[href="l_ball_prc.html"]::before,
+.img-cards .product-card[href="oil_cap.html"]::before,
+.img-cards .product-card[href="oilessbush.html"]::before,
+.img-cards .product-card[href="tw.html"]::before,
+.img-cards .product-card[href="guide_bush.html"]::before,
+.img-cards .product-card[href="oiless_french.html"]::before,
+.img-cards .product-card[href="du.html"]::before,
+.img-cards .product-card[href="duf.html"]::before,
+.img-cards .product-card[href="dwc.html"]::before,
+.img-cards .product-card[href="dwck.html"]::before,
+.img-cards .product-card[href="dwk.html"]::before,
+.img-cards .product-card[href="plastic_unit_p.html"]::before,
+.img-cards .product-card[href="plastic_unit_fl.html"]::before,
+.img-cards .product-card[href="plastic_unit_f.html"]::before,
+.img-cards .product-card[href="plastic_unit_uc.html"]::before,
+.img-cards .product-card[href="plummer_block_sn2.html"]::before,
+.img-cards .product-card[href="plummer_block_sn3.html"]::before,
+.img-cards .product-card[href="plummer_block_sn5.html"]::before,
+.img-cards .product-card[href="plummer_block_sn6.html"]::before,
+.img-cards .product-card[href="dr_200.html"]::before,
+.img-cards .product-card[href="dr_300.html"]::before,
+.img-cards .product-card[href="dr_300c.html"]::before,
+.img-cards .product-card[href="dr_300f.html"]::before,
+.img-cards .product-card[href="dr_300ef.html"]::before,
+.img-cards .product-card[href="dr_110.html"]::before,
+.img-cards .product-card[href="dr_132a.html"]::before,
+.img-cards .product-card[href="dr_133b.html"]::before,
+.img-cards .product-card[href="dr_132.html"]::before,
+.img-cards .product-card[href="dr_133.html"]::before,
+.img-cards .product-card[href="dr_134s.html"]::before,
+.img-cards .product-card[href="mad.html"]::before,
+.img-cards .product-card[href="dr_400.html"]::before,
+.img-cards .product-card[href="dr_500.html"]::before,
+.img-cards .product-card[href="dr_603.html"]::before,
+.img-cards .product-card[href="oring_p.html"]::before,
+.img-cards .product-card[href="oring_g.html"]::before,
+.img-cards .product-card[href="oring_v.html"]::before,
+.img-cards .product-card[href="oring_an.html"]::before,
+.img-cards .product-card[href="oring_s.html"]::before,
+.img-cards .product-card[href="oring_nonstandard.html"]::before,
+.img-cards .product-card[href="u_packing_ky.html"]::before,
+.img-cards .product-card[href="u_packing_sky.html"]::before,
+.img-cards .product-card[href="u_packing_gly.html"]::before,
+.img-cards .product-card[href="v_packing_vf.html"]::before,
+.img-cards .product-card[href="packing_mya.html"]::before,
+.img-cards .product-card[href="packing_psd.html"]::before,
+.img-cards .product-card[href="packing_osy.html"]::before,
+.img-cards .product-card[href="packing_zf.html"]::before,
+.img-cards .product-card[href="packing_pny.html"]::before,
+.img-cards .product-card[href="packing_pgy.html"]::before,
+.img-cards .product-card[href="packing_sdr.html"]::before,
+.img-cards .product-card[href="packing_pdu.html"]::before,
+.img-cards .product-card[href="packing_ser.html"]::before,
+.img-cards .product-card[href="packing_sfr.html"]::before,
+.img-cards .product-card[href="packing_pcs.html"]::before,
+.img-cards .product-card[href="packing_dki.html"]::before,
+.img-cards .product-card[href="packing_scb.html"]::before,
+.img-cards .product-card[href="snapring_r.html"]::before,
+.img-cards .product-card[href="snapring_s.html"]::before,
+.img-cards .product-card[href="irtw.html"]::before,
+.img-cards .product-card[href="istw.html"]::before,
+.img-cards .product-card[href="wr.html"]::before,
+.img-cards .product-card[href="ws.html"]::before,
+.img-cards .product-card[href="snapring_nr.html"]::before,
+.img-cards .product-card[href="snapring_e.html"]::before,
+.img-cards .product-card[href="snapring_c.html"]::before,
+.img-cards .product-card[href="snapring_u.html"]::before,
+.img-cards .product-card[href="snapring_g.html"]::before,
+.img-cards .product-card[href="snapring_k.html"]::before,
+.img-cards .product-card[href="s_cs_stop.html"]::before,
+.img-cards .product-card[href="r_cr_stop.html"]::before,
+.img-cards .product-card[href="s_pushnut.html"]::before,
+.img-cards .product-card[href="r_pushnut.html"]::before,
+.img-cards .product-card[href="prat_push_nut.html"]::before,
+.img-cards .product-card[href="circle_speed_nut.html"]::before,
+.img-cards .product-card[href="wave_washer.html"]::before,
+.img-cards .product-card[href="e_washer.html"]::before,
+.img-cards .product-card[href="spin_washer.html"]::before,
+.img-cards .product-card[href="nod_lock.html"]::before,
+.img-cards .product-card[href="hose_clamp.html"]::before,
+.img-cards .product-card[href="e_holder.html"]::before,
+.img-cards .product-card[href="e_stand.html"]::before,
+.img-cards .product-card[href="heli_coil.html"]::before,
+.img-cards .product-card[href="takeup_aluminum.html"]::before,
+.img-cards .product-card[href="takeup_steel.html"]::before,
+.img-cards .product-card[href="takeup_uctm.html"]::before,
+.img-cards .product-card[href="takeup_uctn.html"]::before,
+.img-cards .product-card[href="takeup_cts.html"]::before,
+.img-cards .product-card[href="unit_case_p.html"]::before,
+.img-cards .product-card[href="unit_case_ph.html"]::before,
+.img-cards .product-card[href="unit_case_pa.html"]::before,
+.img-cards .product-card[href="unit_case_f.html"]::before,
+.img-cards .product-card[href="unit_case_fl.html"]::before,
+.img-cards .product-card[href="unit_case_fa.html"]::before,
+.img-cards .product-card[href="unit_case_fb.html"]::before,
+.img-cards .product-card[href="unit_case_fs.html"]::before,
+.img-cards .product-card[href="unit_case_fc.html"]::before,
+.img-cards .product-card[href="unit_case_fcx.html"]::before,
+.img-cards .product-card[href="unit_case_c.html"]::before,
+.img-cards .product-card[href="unit_case_t.html"]::before,
+.img-cards .product-card[href="unit_case_hcp.html"]::before,
+.img-cards .product-card[href="unit_case_salp.html"]::before,
+.img-cards .product-card[href="unit_case_ucha.html"]::before,
+.img-cards .product-card[href="unit_case_safcc.html"]::before,
+.img-cards .product-card[href="unit_case_salf.html"]::before,
+.img-cards .product-card[href="unit_case_sapp.html"]::before,
+.img-cards .product-card[href="unit_case_sapfl.html"]::before,
+.img-cards .product-card[href="unit_case_sapf.html"]::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
+.img-cards .product-card[href="hah_sleeve.html"] .p-icon,
+.img-cards .product-card[href="sleeve.html"] .p-icon,
+.img-cards .product-card[href="lock_nut.html"] .p-icon,
+.img-cards .product-card[href="locknut_clip.html"] .p-icon,
+.img-cards .product-card[href="kzm.html"] .p-icon,
+.img-cards .product-card[href="kzmv.html"] .p-icon,
+.img-cards .product-card[href="kan.html"] .p-icon,
+.img-cards .product-card[href="ksn.html"] .p-icon,
+.img-cards .product-card[href="ksna.html"] .p-icon,
+.img-cards .product-card[href="dn.html"] .p-icon,
+.img-cards .product-card[href="twin_nut.html"] .p-icon,
+.img-cards .product-card[href="fine_nut.html"] .p-icon,
+.img-cards .product-card[href="six_nut.html"] .p-icon,
+.img-cards .product-card[href="guk_nut.html"] .p-icon,
+.img-cards .product-card[href="lock_washer.html"] .p-icon,
+.img-cards .product-card[href="ball_retainer.html"] .p-icon,
+.img-cards .product-card[href="ball_caster.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit_uc.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit_uk.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit_sb.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit_sa.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit_sc.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit_ur.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit_ser.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit_hc.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit_ucx.html"] .p-icon,
+.img-cards .product-card[href="deep_groove_ball.html"] .p-icon,
+.img-cards .product-card[href="angular_contact_ball.html"] .p-icon,
+.img-cards .product-card[href="self_aligning_ball.html"] .p-icon,
+.img-cards .product-card[href="self_aligning_deep_groove.html"] .p-icon,
+.img-cards .product-card[href="double_row_angular_contact.html"] .p-icon,
+.img-cards .product-card[href="miniature_ball.html"] .p-icon,
+.img-cards .product-card[href="cylindrical_roller.html"] .p-icon,
+.img-cards .product-card[href="taper_roller.html"] .p-icon,
+.img-cards .product-card[href="barrel_roller.html"] .p-icon,
+.img-cards .product-card[href="spherical_roller.html"] .p-icon,
+.img-cards .product-card[href="double_row_taper.html"] .p-icon,
+.img-cards .product-card[href="double_row_cylindrical.html"] .p-icon,
+.img-cards .product-card[href="machined_needle_onepiece.html"] .p-icon,
+.img-cards .product-card[href="machined_needle_separate.html"] .p-icon,
+.img-cards .product-card[href="naf_needle_bearing.html"] .p-icon,
+.img-cards .product-card[href="thrust_combo_needle.html"] .p-icon,
+.img-cards .product-card[href="angular_combo_needle.html"] .p-icon,
+.img-cards .product-card[href="shell_needle_inch.html"] .p-icon,
+.img-cards .product-card[href="shell_needle_separate.html"] .p-icon,
+.img-cards .product-card[href="needle_cage.html"] .p-icon,
+.img-cards .product-card[href="cam_follower.html"] .p-icon,
+.img-cards .product-card[href="roller_follower.html"] .p-icon,
+.img-cards .product-card[href="yoke_track_roller.html"] .p-icon,
+.img-cards .product-card[href="cross_roller_bearing.html"] .p-icon,
+.img-cards .product-card[href="roller_bearing.html"] .p-icon,
+.img-cards .product-card[href="needle_inner_ring.html"] .p-icon,
+.img-cards .product-card[href="needle_bearing_accessories.html"] .p-icon,
+.img-cards .product-card[href="thrust_ball.html"] .p-icon,
+.img-cards .product-card[href="angular_thrust_ball.html"] .p-icon,
+.img-cards .product-card[href="thrust_cylindrical_roller.html"] .p-icon,
+.img-cards .product-card[href="self_aligning_thrust_roller.html"] .p-icon,
+.img-cards .product-card[href="thrust_needle.html"] .p-icon,
+.img-cards .product-card[href="kingpin_thrust.html"] .p-icon,
+.img-cards .product-card[href="linear_bushing.html"] .p-icon,
+.img-cards .product-card[href="lm_guide.html"] .p-icon,
+.img-cards .product-card[href="spherical_plain.html"] .p-icon,
+.img-cards .product-card[href="link_ball.html"] .p-icon,
+.img-cards .product-card[href="rod_end.html"] .p-icon,
+.img-cards .product-card[href="unit_case.html"] .p-icon,
+.img-cards .product-card[href="ball_bearing_unit.html"] .p-icon,
+.img-cards .product-card[href="plummer_block.html"] .p-icon,
+.img-cards .product-card[href="radial_insert.html"] .p-icon,
+.img-cards .product-card[href="small_unit.html"] .p-icon,
+.img-cards .product-card[href="plastic_unit.html"] .p-icon,
+.img-cards .product-card[href="spindle_bearing.html"] .p-icon,
+.img-cards .product-card[href="ball_screw_support.html"] .p-icon,
+.img-cards .product-card[href="clutch_bearing.html"] .p-icon,
+.img-cards .product-card[href="kojin_joint.html"] .p-icon,
+.img-cards .product-card[href="clutch_tss.html"] .p-icon,
+.img-cards .product-card[href="clutch_tfs.html"] .p-icon,
+.img-cards .product-card[href="clutch_bb.html"] .p-icon,
+.img-cards .product-card[href="clutch_ld.html"] .p-icon,
+.img-cards .product-card[href="clutch_fc.html"] .p-icon,
+.img-cards .product-card[href="clutch_hf.html"] .p-icon,
+.img-cards .product-card[href="clutch_rc.html"] .p-icon,
+.img-cards .product-card[href="clutch_rcb.html"] .p-icon,
+.img-cards .product-card[href="clutch_fcbn.html"] .p-icon,
+.img-cards .product-card[href="clutch_fcb.html"] .p-icon,
+.img-cards .product-card[href="clutch_x.html"] .p-icon,
+.img-cards .product-card[href="clutch_bwc.html"] .p-icon,
+.img-cards .product-card[href="clutch_bw.html"] .p-icon,
+.img-cards .product-card[href="hah_sleeve_h2.html"] .p-icon,
+.img-cards .product-card[href="hah_sleeve_h3.html"] .p-icon,
+.img-cards .product-card[href="hah_sleeve_h23.html"] .p-icon,
+.img-cards .product-card[href="hah_sleeve_h30.html"] .p-icon,
+.img-cards .product-card[href="hah_sleeve_h31.html"] .p-icon,
+.img-cards .product-card[href="hah_sleeve_h32.html"] .p-icon,
+.img-cards .product-card[href="spring_pin.html"] .p-icon,
+.img-cards .product-card[href="pin_r.html"] .p-icon,
+.img-cards .product-card[href="link_ball_zbl.html"] .p-icon,
+.img-cards .product-card[href="link_ball_rbi.html"] .p-icon,
+.img-cards .product-card[href="l_ball_lhsa.html"] .p-icon,
+.img-cards .product-card[href="l_ball_lhs.html"] .p-icon,
+.img-cards .product-card[href="l_ball_prc.html"] .p-icon,
+.img-cards .product-card[href="oil_cap.html"] .p-icon,
+.img-cards .product-card[href="oilessbush.html"] .p-icon,
+.img-cards .product-card[href="tw.html"] .p-icon,
+.img-cards .product-card[href="guide_bush.html"] .p-icon,
+.img-cards .product-card[href="oiless_french.html"] .p-icon,
+.img-cards .product-card[href="du.html"] .p-icon,
+.img-cards .product-card[href="duf.html"] .p-icon,
+.img-cards .product-card[href="dwc.html"] .p-icon,
+.img-cards .product-card[href="dwck.html"] .p-icon,
+.img-cards .product-card[href="dwk.html"] .p-icon,
+.img-cards .product-card[href="plastic_unit_p.html"] .p-icon,
+.img-cards .product-card[href="plastic_unit_fl.html"] .p-icon,
+.img-cards .product-card[href="plastic_unit_f.html"] .p-icon,
+.img-cards .product-card[href="plastic_unit_uc.html"] .p-icon,
+.img-cards .product-card[href="plummer_block_sn2.html"] .p-icon,
+.img-cards .product-card[href="plummer_block_sn3.html"] .p-icon,
+.img-cards .product-card[href="plummer_block_sn5.html"] .p-icon,
+.img-cards .product-card[href="plummer_block_sn6.html"] .p-icon,
+.img-cards .product-card[href="dr_200.html"] .p-icon,
+.img-cards .product-card[href="dr_300.html"] .p-icon,
+.img-cards .product-card[href="dr_300c.html"] .p-icon,
+.img-cards .product-card[href="dr_300f.html"] .p-icon,
+.img-cards .product-card[href="dr_300ef.html"] .p-icon,
+.img-cards .product-card[href="dr_110.html"] .p-icon,
+.img-cards .product-card[href="dr_132a.html"] .p-icon,
+.img-cards .product-card[href="dr_133b.html"] .p-icon,
+.img-cards .product-card[href="dr_132.html"] .p-icon,
+.img-cards .product-card[href="dr_133.html"] .p-icon,
+.img-cards .product-card[href="dr_134s.html"] .p-icon,
+.img-cards .product-card[href="mad.html"] .p-icon,
+.img-cards .product-card[href="dr_400.html"] .p-icon,
+.img-cards .product-card[href="dr_500.html"] .p-icon,
+.img-cards .product-card[href="dr_603.html"] .p-icon,
+.img-cards .product-card[href="oring_p.html"] .p-icon,
+.img-cards .product-card[href="oring_g.html"] .p-icon,
+.img-cards .product-card[href="oring_v.html"] .p-icon,
+.img-cards .product-card[href="oring_an.html"] .p-icon,
+.img-cards .product-card[href="oring_s.html"] .p-icon,
+.img-cards .product-card[href="oring_nonstandard.html"] .p-icon,
+.img-cards .product-card[href="u_packing_ky.html"] .p-icon,
+.img-cards .product-card[href="u_packing_sky.html"] .p-icon,
+.img-cards .product-card[href="u_packing_gly.html"] .p-icon,
+.img-cards .product-card[href="v_packing_vf.html"] .p-icon,
+.img-cards .product-card[href="packing_mya.html"] .p-icon,
+.img-cards .product-card[href="packing_psd.html"] .p-icon,
+.img-cards .product-card[href="packing_osy.html"] .p-icon,
+.img-cards .product-card[href="packing_zf.html"] .p-icon,
+.img-cards .product-card[href="packing_pny.html"] .p-icon,
+.img-cards .product-card[href="packing_pgy.html"] .p-icon,
+.img-cards .product-card[href="packing_sdr.html"] .p-icon,
+.img-cards .product-card[href="packing_pdu.html"] .p-icon,
+.img-cards .product-card[href="packing_ser.html"] .p-icon,
+.img-cards .product-card[href="packing_sfr.html"] .p-icon,
+.img-cards .product-card[href="packing_pcs.html"] .p-icon,
+.img-cards .product-card[href="packing_dki.html"] .p-icon,
+.img-cards .product-card[href="packing_scb.html"] .p-icon,
+.img-cards .product-card[href="snapring_r.html"] .p-icon,
+.img-cards .product-card[href="snapring_s.html"] .p-icon,
+.img-cards .product-card[href="irtw.html"] .p-icon,
+.img-cards .product-card[href="istw.html"] .p-icon,
+.img-cards .product-card[href="wr.html"] .p-icon,
+.img-cards .product-card[href="ws.html"] .p-icon,
+.img-cards .product-card[href="snapring_nr.html"] .p-icon,
+.img-cards .product-card[href="snapring_e.html"] .p-icon,
+.img-cards .product-card[href="snapring_c.html"] .p-icon,
+.img-cards .product-card[href="snapring_u.html"] .p-icon,
+.img-cards .product-card[href="snapring_g.html"] .p-icon,
+.img-cards .product-card[href="snapring_k.html"] .p-icon,
+.img-cards .product-card[href="s_cs_stop.html"] .p-icon,
+.img-cards .product-card[href="r_cr_stop.html"] .p-icon,
+.img-cards .product-card[href="s_pushnut.html"] .p-icon,
+.img-cards .product-card[href="r_pushnut.html"] .p-icon,
+.img-cards .product-card[href="prat_push_nut.html"] .p-icon,
+.img-cards .product-card[href="circle_speed_nut.html"] .p-icon,
+.img-cards .product-card[href="wave_washer.html"] .p-icon,
+.img-cards .product-card[href="e_washer.html"] .p-icon,
+.img-cards .product-card[href="spin_washer.html"] .p-icon,
+.img-cards .product-card[href="nod_lock.html"] .p-icon,
+.img-cards .product-card[href="hose_clamp.html"] .p-icon,
+.img-cards .product-card[href="e_holder.html"] .p-icon,
+.img-cards .product-card[href="e_stand.html"] .p-icon,
+.img-cards .product-card[href="heli_coil.html"] .p-icon,
+.img-cards .product-card[href="takeup_aluminum.html"] .p-icon,
+.img-cards .product-card[href="takeup_steel.html"] .p-icon,
+.img-cards .product-card[href="takeup_uctm.html"] .p-icon,
+.img-cards .product-card[href="takeup_uctn.html"] .p-icon,
+.img-cards .product-card[href="takeup_cts.html"] .p-icon,
+.img-cards .product-card[href="unit_case_p.html"] .p-icon,
+.img-cards .product-card[href="unit_case_ph.html"] .p-icon,
+.img-cards .product-card[href="unit_case_pa.html"] .p-icon,
+.img-cards .product-card[href="unit_case_f.html"] .p-icon,
+.img-cards .product-card[href="unit_case_fl.html"] .p-icon,
+.img-cards .product-card[href="unit_case_fa.html"] .p-icon,
+.img-cards .product-card[href="unit_case_fb.html"] .p-icon,
+.img-cards .product-card[href="unit_case_fs.html"] .p-icon,
+.img-cards .product-card[href="unit_case_fc.html"] .p-icon,
+.img-cards .product-card[href="unit_case_fcx.html"] .p-icon,
+.img-cards .product-card[href="unit_case_c.html"] .p-icon,
+.img-cards .product-card[href="unit_case_t.html"] .p-icon,
+.img-cards .product-card[href="unit_case_hcp.html"] .p-icon,
+.img-cards .product-card[href="unit_case_salp.html"] .p-icon,
+.img-cards .product-card[href="unit_case_ucha.html"] .p-icon,
+.img-cards .product-card[href="unit_case_safcc.html"] .p-icon,
+.img-cards .product-card[href="unit_case_salf.html"] .p-icon,
+.img-cards .product-card[href="unit_case_sapp.html"] .p-icon,
+.img-cards .product-card[href="unit_case_sapfl.html"] .p-icon,
+.img-cards .product-card[href="unit_case_sapf.html"] .p-icon { display: none; }
+.img-cards .product-card[href="hah_sleeve.html"]::before { background-image: url("assets/cards/pc_hah_sleeve.webp?v=2"); }
+.img-cards .product-card[href="sleeve.html"]::before { background-image: url("assets/cards/pc_sleeve.webp?v=2"); }
+.img-cards .product-card[href="lock_nut.html"]::before { background-image: url("assets/cards/pc_lock_nut.webp?v=2"); }
+.img-cards .product-card[href="locknut_clip.html"]::before { background-image: url("assets/cards/pc_locknut_clip.webp?v=2"); }
+.img-cards .product-card[href="kzm.html"]::before { background-image: url("assets/cards/pc_kzm.webp?v=2"); }
+.img-cards .product-card[href="kzmv.html"]::before { background-image: url("assets/cards/pc_kzmv.webp?v=2"); }
+.img-cards .product-card[href="kan.html"]::before { background-image: url("assets/cards/pc_kan.webp?v=2"); }
+.img-cards .product-card[href="ksn.html"]::before { background-image: url("assets/cards/pc_ksn.webp?v=2"); }
+.img-cards .product-card[href="ksna.html"]::before { background-image: url("assets/cards/pc_ksna.webp?v=2"); }
+.img-cards .product-card[href="dn.html"]::before { background-image: url("assets/cards/pc_dn.webp?v=2"); }
+.img-cards .product-card[href="twin_nut.html"]::before { background-image: url("assets/cards/pc_twin_nut.webp?v=2"); }
+.img-cards .product-card[href="fine_nut.html"]::before { background-image: url("assets/cards/pc_fine_nut.webp?v=2"); }
+.img-cards .product-card[href="six_nut.html"]::before { background-image: url("assets/cards/pc_six_nut.webp?v=2"); }
+.img-cards .product-card[href="guk_nut.html"]::before { background-image: url("assets/cards/pc_guk_nut.webp?v=2"); }
+.img-cards .product-card[href="lock_washer.html"]::before { background-image: url("assets/cards/pc_lock_washer.webp?v=2"); }
+.img-cards .product-card[href="ball_retainer.html"]::before { background-image: url("assets/cards/pc_ball_retainer.webp?v=2"); }
+.img-cards .product-card[href="ball_caster.html"]::before { background-image: url("assets/cards/pc_ball_caster.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit_uc.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_uc.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit_uk.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_uk.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit_sb.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_sb.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit_sa.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_sa.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit_sc.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_sc.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit_ur.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_ur.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit_ser.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_ser.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit_hc.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_hc.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit_ucx.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_ucx.webp?v=2"); }
+.img-cards .product-card[href="deep_groove_ball.html"]::before { background-image: url("assets/cards/pc_deep_groove_ball.webp?v=2"); }
+.img-cards .product-card[href="angular_contact_ball.html"]::before { background-image: url("assets/cards/pc_angular_contact_ball.webp?v=2"); }
+.img-cards .product-card[href="self_aligning_ball.html"]::before { background-image: url("assets/cards/pc_self_aligning_ball.webp?v=2"); }
+.img-cards .product-card[href="self_aligning_deep_groove.html"]::before { background-image: url("assets/cards/pc_self_aligning_deep_groove.webp?v=2"); }
+.img-cards .product-card[href="double_row_angular_contact.html"]::before { background-image: url("assets/cards/pc_double_row_angular_contact.webp?v=2"); }
+.img-cards .product-card[href="miniature_ball.html"]::before { background-image: url("assets/cards/pc_miniature_ball.webp?v=2"); }
+.img-cards .product-card[href="cylindrical_roller.html"]::before { background-image: url("assets/cards/pc_cylindrical_roller.webp?v=2"); }
+.img-cards .product-card[href="taper_roller.html"]::before { background-image: url("assets/cards/pc_taper_roller.webp?v=2"); }
+.img-cards .product-card[href="barrel_roller.html"]::before { background-image: url("assets/cards/pc_barrel_roller.webp?v=2"); }
+.img-cards .product-card[href="spherical_roller.html"]::before { background-image: url("assets/cards/pc_spherical_roller.webp?v=2"); }
+.img-cards .product-card[href="double_row_taper.html"]::before { background-image: url("assets/cards/pc_double_row_taper.webp?v=2"); }
+.img-cards .product-card[href="double_row_cylindrical.html"]::before { background-image: url("assets/cards/pc_double_row_cylindrical.webp?v=2"); }
+.img-cards .product-card[href="machined_needle_onepiece.html"]::before { background-image: url("assets/cards/pc_machined_needle_onepiece.webp?v=2"); }
+.img-cards .product-card[href="machined_needle_separate.html"]::before { background-image: url("assets/cards/pc_machined_needle_separate.webp?v=2"); }
+.img-cards .product-card[href="naf_needle_bearing.html"]::before { background-image: url("assets/cards/pc_naf_needle_bearing.webp?v=2"); }
+.img-cards .product-card[href="thrust_combo_needle.html"]::before { background-image: url("assets/cards/pc_thrust_combo_needle.webp?v=2"); }
+.img-cards .product-card[href="angular_combo_needle.html"]::before { background-image: url("assets/cards/pc_angular_combo_needle.webp?v=2"); }
+.img-cards .product-card[href="shell_needle_inch.html"]::before { background-image: url("assets/cards/pc_shell_needle_inch.webp?v=2"); }
+.img-cards .product-card[href="shell_needle_separate.html"]::before { background-image: url("assets/cards/pc_shell_needle_separate.webp?v=2"); }
+.img-cards .product-card[href="needle_cage.html"]::before { background-image: url("assets/cards/pc_needle_cage.webp?v=2"); }
+.img-cards .product-card[href="cam_follower.html"]::before { background-image: url("assets/cards/pc_cam_follower.webp?v=2"); }
+.img-cards .product-card[href="roller_follower.html"]::before { background-image: url("assets/cards/pc_roller_follower.webp?v=2"); }
+.img-cards .product-card[href="yoke_track_roller.html"]::before { background-image: url("assets/cards/pc_yoke_track_roller.webp?v=2"); }
+.img-cards .product-card[href="cross_roller_bearing.html"]::before { background-image: url("assets/cards/pc_cross_roller_bearing.webp?v=2"); }
+.img-cards .product-card[href="roller_bearing.html"]::before { background-image: url("assets/cards/pc_roller_bearing.webp?v=2"); }
+.img-cards .product-card[href="needle_inner_ring.html"]::before { background-image: url("assets/cards/pc_needle_inner_ring.webp?v=2"); }
+.img-cards .product-card[href="needle_bearing_accessories.html"]::before { background-image: url("assets/cards/pc_needle_bearing_accessories.webp?v=2"); }
+.img-cards .product-card[href="thrust_ball.html"]::before { background-image: url("assets/cards/pc_thrust_ball.webp?v=2"); }
+.img-cards .product-card[href="angular_thrust_ball.html"]::before { background-image: url("assets/cards/pc_angular_thrust_ball.webp?v=2"); }
+.img-cards .product-card[href="thrust_cylindrical_roller.html"]::before { background-image: url("assets/cards/pc_thrust_cylindrical_roller.webp?v=2"); }
+.img-cards .product-card[href="self_aligning_thrust_roller.html"]::before { background-image: url("assets/cards/pc_self_aligning_thrust_roller.webp?v=2"); }
+.img-cards .product-card[href="thrust_needle.html"]::before { background-image: url("assets/cards/pc_thrust_needle.webp?v=2"); }
+.img-cards .product-card[href="kingpin_thrust.html"]::before { background-image: url("assets/cards/pc_kingpin_thrust.webp?v=2"); }
+.img-cards .product-card[href="linear_bushing.html"]::before { background-image: url("assets/cards/pc_linear_bushing.webp?v=2"); }
+.img-cards .product-card[href="lm_guide.html"]::before { background-image: url("assets/cards/pc_lm_guide.webp?v=2"); }
+.img-cards .product-card[href="spherical_plain.html"]::before { background-image: url("assets/cards/pc_spherical_plain.webp?v=2"); }
+.img-cards .product-card[href="link_ball.html"]::before { background-image: url("assets/cards/pc_link_ball.webp?v=2"); }
+.img-cards .product-card[href="rod_end.html"]::before { background-image: url("assets/cards/pc_rod_end.webp?v=2"); }
+.img-cards .product-card[href="unit_case.html"]::before { background-image: url("assets/cards/pc_unit_case.webp?v=2"); }
+.img-cards .product-card[href="ball_bearing_unit.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit.webp?v=2"); }
+.img-cards .product-card[href="plummer_block.html"]::before { background-image: url("assets/cards/pc_plummer_block.webp?v=2"); }
+.img-cards .product-card[href="radial_insert.html"]::before { background-image: url("assets/cards/pc_radial_insert.webp?v=2"); }
+.img-cards .product-card[href="small_unit.html"]::before { background-image: url("assets/cards/pc_small_unit.webp?v=2"); }
+.img-cards .product-card[href="plastic_unit.html"]::before { background-image: url("assets/cards/pc_plastic_unit.webp?v=2"); }
+.img-cards .product-card[href="spindle_bearing.html"]::before { background-image: url("assets/cards/pc_spindle_bearing.webp?v=2"); }
+.img-cards .product-card[href="ball_screw_support.html"]::before { background-image: url("assets/cards/pc_ball_screw_support.webp?v=2"); }
+.img-cards .product-card[href="clutch_bearing.html"]::before { background-image: url("assets/cards/pc_clutch_bearing.webp?v=2"); }
+.img-cards .product-card[href="kojin_joint.html"]::before { background-image: url("assets/cards/pc_kojin_joint.webp?v=2"); }
+.img-cards .product-card[href="clutch_tss.html"]::before { background-image: url("assets/cards/pc_clutch_tss.webp?v=2"); }
+.img-cards .product-card[href="clutch_tfs.html"]::before { background-image: url("assets/cards/pc_clutch_tfs.webp?v=2"); }
+.img-cards .product-card[href="clutch_bb.html"]::before { background-image: url("assets/cards/pc_clutch_bb.webp?v=2"); }
+.img-cards .product-card[href="clutch_ld.html"]::before { background-image: url("assets/cards/pc_clutch_ld.webp?v=2"); }
+.img-cards .product-card[href="clutch_fc.html"]::before { background-image: url("assets/cards/pc_clutch_fc.webp?v=2"); }
+.img-cards .product-card[href="clutch_hf.html"]::before { background-image: url("assets/cards/pc_clutch_hf.webp?v=2"); }
+.img-cards .product-card[href="clutch_rc.html"]::before { background-image: url("assets/cards/pc_clutch_rc.webp?v=2"); }
+.img-cards .product-card[href="clutch_rcb.html"]::before { background-image: url("assets/cards/pc_clutch_rcb.webp?v=2"); }
+.img-cards .product-card[href="clutch_fcbn.html"]::before { background-image: url("assets/cards/pc_clutch_fcbn.webp?v=2"); }
+.img-cards .product-card[href="clutch_fcb.html"]::before { background-image: url("assets/cards/pc_clutch_fcb.webp?v=2"); }
+.img-cards .product-card[href="clutch_x.html"]::before { background-image: url("assets/cards/pc_clutch_x.webp?v=2"); }
+.img-cards .product-card[href="clutch_bwc.html"]::before { background-image: url("assets/cards/pc_clutch_bwc.webp?v=2"); }
+.img-cards .product-card[href="clutch_bw.html"]::before { background-image: url("assets/cards/pc_clutch_bw.webp?v=2"); }
+.img-cards .product-card[href="hah_sleeve_h2.html"]::before { background-image: url("assets/cards/pc_hah_sleeve_h2.webp?v=2"); }
+.img-cards .product-card[href="hah_sleeve_h3.html"]::before { background-image: url("assets/cards/pc_hah_sleeve_h3.webp?v=2"); }
+.img-cards .product-card[href="hah_sleeve_h23.html"]::before { background-image: url("assets/cards/pc_hah_sleeve_h23.webp?v=2"); }
+.img-cards .product-card[href="hah_sleeve_h30.html"]::before { background-image: url("assets/cards/pc_hah_sleeve_h30.webp?v=2"); }
+.img-cards .product-card[href="hah_sleeve_h31.html"]::before { background-image: url("assets/cards/pc_hah_sleeve_h31.webp?v=2"); }
+.img-cards .product-card[href="hah_sleeve_h32.html"]::before { background-image: url("assets/cards/pc_hah_sleeve_h32.webp?v=2"); }
+.img-cards .product-card[href="spring_pin.html"]::before { background-image: url("assets/cards/pc_spring_pin.webp?v=2"); }
+.img-cards .product-card[href="pin_r.html"]::before { background-image: url("assets/cards/pc_pin_r.webp?v=2"); }
+.img-cards .product-card[href="link_ball_zbl.html"]::before { background-image: url("assets/cards/pc_link_ball_zbl.webp?v=2"); }
+.img-cards .product-card[href="link_ball_rbi.html"]::before { background-image: url("assets/cards/pc_link_ball_rbi.webp?v=2"); }
+.img-cards .product-card[href="l_ball_lhsa.html"]::before { background-image: url("assets/cards/pc_l_ball_lhsa.webp?v=2"); }
+.img-cards .product-card[href="l_ball_lhs.html"]::before { background-image: url("assets/cards/pc_l_ball_lhs.webp?v=2"); }
+.img-cards .product-card[href="l_ball_prc.html"]::before { background-image: url("assets/cards/pc_l_ball_prc.webp?v=2"); }
+.img-cards .product-card[href="oil_cap.html"]::before { background-image: url("assets/cards/pc_oil_cap.webp?v=2"); }
+.img-cards .product-card[href="oilessbush.html"]::before { background-image: url("assets/cards/pc_oilessbush.webp?v=2"); }
+.img-cards .product-card[href="tw.html"]::before { background-image: url("assets/cards/pc_tw.webp?v=2"); }
+.img-cards .product-card[href="guide_bush.html"]::before { background-image: url("assets/cards/pc_guide_bush.webp?v=2"); }
+.img-cards .product-card[href="oiless_french.html"]::before { background-image: url("assets/cards/pc_oiless_french.webp?v=2"); }
+.img-cards .product-card[href="du.html"]::before { background-image: url("assets/cards/pc_du.webp?v=2"); }
+.img-cards .product-card[href="duf.html"]::before { background-image: url("assets/cards/pc_duf.webp?v=2"); }
+.img-cards .product-card[href="dwc.html"]::before { background-image: url("assets/cards/pc_dwc.webp?v=2"); }
+.img-cards .product-card[href="dwck.html"]::before { background-image: url("assets/cards/pc_dwck.webp?v=2"); }
+.img-cards .product-card[href="dwk.html"]::before { background-image: url("assets/cards/pc_dwk.webp?v=2"); }
+.img-cards .product-card[href="plastic_unit_p.html"]::before { background-image: url("assets/cards/pc_plastic_unit_p.webp?v=2"); }
+.img-cards .product-card[href="plastic_unit_fl.html"]::before { background-image: url("assets/cards/pc_plastic_unit_fl.webp?v=2"); }
+.img-cards .product-card[href="plastic_unit_f.html"]::before { background-image: url("assets/cards/pc_plastic_unit_f.webp?v=2"); }
+.img-cards .product-card[href="plastic_unit_uc.html"]::before { background-image: url("assets/cards/pc_plastic_unit_uc.webp?v=2"); }
+.img-cards .product-card[href="plummer_block_sn2.html"]::before { background-image: url("assets/cards/pc_plummer_block_sn2.webp?v=2"); }
+.img-cards .product-card[href="plummer_block_sn3.html"]::before { background-image: url("assets/cards/pc_plummer_block_sn3.webp?v=2"); }
+.img-cards .product-card[href="plummer_block_sn5.html"]::before { background-image: url("assets/cards/pc_plummer_block_sn5.webp?v=2"); }
+.img-cards .product-card[href="plummer_block_sn6.html"]::before { background-image: url("assets/cards/pc_plummer_block_sn6.webp?v=2"); }
+.img-cards .product-card[href="dr_200.html"]::before { background-image: url("assets/cards/pc_dr_200.webp?v=2"); }
+.img-cards .product-card[href="dr_300.html"]::before { background-image: url("assets/cards/pc_dr_300.webp?v=2"); }
+.img-cards .product-card[href="dr_300c.html"]::before { background-image: url("assets/cards/pc_dr_300c.webp?v=2"); }
+.img-cards .product-card[href="dr_300f.html"]::before { background-image: url("assets/cards/pc_dr_300f.webp?v=2"); }
+.img-cards .product-card[href="dr_300ef.html"]::before { background-image: url("assets/cards/pc_dr_300ef.webp?v=2"); }
+.img-cards .product-card[href="dr_110.html"]::before { background-image: url("assets/cards/pc_dr_110.webp?v=2"); }
+.img-cards .product-card[href="dr_132a.html"]::before { background-image: url("assets/cards/pc_dr_132a.webp?v=2"); }
+.img-cards .product-card[href="dr_133b.html"]::before { background-image: url("assets/cards/pc_dr_133b.webp?v=2"); }
+.img-cards .product-card[href="dr_132.html"]::before { background-image: url("assets/cards/pc_dr_132.webp?v=2"); }
+.img-cards .product-card[href="dr_133.html"]::before { background-image: url("assets/cards/pc_dr_133.webp?v=2"); }
+.img-cards .product-card[href="dr_134s.html"]::before { background-image: url("assets/cards/pc_dr_134s.webp?v=2"); }
+.img-cards .product-card[href="mad.html"]::before { background-image: url("assets/cards/pc_mad.webp?v=2"); }
+.img-cards .product-card[href="dr_400.html"]::before { background-image: url("assets/cards/pc_dr_400.webp?v=2"); }
+.img-cards .product-card[href="dr_500.html"]::before { background-image: url("assets/cards/pc_dr_500.webp?v=2"); }
+.img-cards .product-card[href="dr_603.html"]::before { background-image: url("assets/cards/pc_dr_603.webp?v=2"); }
+.img-cards .product-card[href="oring_p.html"]::before { background-image: url("assets/cards/pc_oring_p.webp?v=2"); }
+.img-cards .product-card[href="oring_g.html"]::before { background-image: url("assets/cards/pc_oring_g.webp?v=2"); }
+.img-cards .product-card[href="oring_v.html"]::before { background-image: url("assets/cards/pc_oring_v.webp?v=2"); }
+.img-cards .product-card[href="oring_an.html"]::before { background-image: url("assets/cards/pc_oring_an.webp?v=2"); }
+.img-cards .product-card[href="oring_s.html"]::before { background-image: url("assets/cards/pc_oring_s.webp?v=2"); }
+.img-cards .product-card[href="oring_nonstandard.html"]::before { background-image: url("assets/cards/pc_oring_nonstandard.webp?v=2"); }
+.img-cards .product-card[href="u_packing_ky.html"]::before { background-image: url("assets/cards/pc_u_packing_ky.webp?v=2"); }
+.img-cards .product-card[href="u_packing_sky.html"]::before { background-image: url("assets/cards/pc_u_packing_sky.webp?v=2"); }
+.img-cards .product-card[href="u_packing_gly.html"]::before { background-image: url("assets/cards/pc_u_packing_gly.webp?v=2"); }
+.img-cards .product-card[href="v_packing_vf.html"]::before { background-image: url("assets/cards/pc_v_packing_vf.webp?v=2"); }
+.img-cards .product-card[href="packing_mya.html"]::before { background-image: url("assets/cards/pc_packing_mya.webp?v=2"); }
+.img-cards .product-card[href="packing_psd.html"]::before { background-image: url("assets/cards/pc_packing_psd.webp?v=2"); }
+.img-cards .product-card[href="packing_osy.html"]::before { background-image: url("assets/cards/pc_packing_osy.webp?v=2"); }
+.img-cards .product-card[href="packing_zf.html"]::before { background-image: url("assets/cards/pc_packing_zf.webp?v=2"); }
+.img-cards .product-card[href="packing_pny.html"]::before { background-image: url("assets/cards/pc_packing_pny.webp?v=2"); }
+.img-cards .product-card[href="packing_pgy.html"]::before { background-image: url("assets/cards/pc_packing_pgy.webp?v=2"); }
+.img-cards .product-card[href="packing_sdr.html"]::before { background-image: url("assets/cards/pc_packing_sdr.webp?v=2"); }
+.img-cards .product-card[href="packing_pdu.html"]::before { background-image: url("assets/cards/pc_packing_pdu.webp?v=2"); }
+.img-cards .product-card[href="packing_ser.html"]::before { background-image: url("assets/cards/pc_packing_ser.webp?v=2"); }
+.img-cards .product-card[href="packing_sfr.html"]::before { background-image: url("assets/cards/pc_packing_sfr.webp?v=2"); }
+.img-cards .product-card[href="packing_pcs.html"]::before { background-image: url("assets/cards/pc_packing_pcs.webp?v=2"); }
+.img-cards .product-card[href="packing_dki.html"]::before { background-image: url("assets/cards/pc_packing_dki.webp?v=2"); }
+.img-cards .product-card[href="packing_scb.html"]::before { background-image: url("assets/cards/pc_packing_scb.webp?v=2"); }
+.img-cards .product-card[href="snapring_r.html"]::before { background-image: url("assets/cards/pc_snapring_r.webp?v=2"); }
+.img-cards .product-card[href="snapring_s.html"]::before { background-image: url("assets/cards/pc_snapring_s.webp?v=2"); }
+.img-cards .product-card[href="irtw.html"]::before { background-image: url("assets/cards/pc_irtw.webp?v=2"); }
+.img-cards .product-card[href="istw.html"]::before { background-image: url("assets/cards/pc_istw.webp?v=2"); }
+.img-cards .product-card[href="wr.html"]::before { background-image: url("assets/cards/pc_wr.webp?v=2"); }
+.img-cards .product-card[href="ws.html"]::before { background-image: url("assets/cards/pc_ws.webp?v=2"); }
+.img-cards .product-card[href="snapring_nr.html"]::before { background-image: url("assets/cards/pc_snapring_nr.webp?v=2"); }
+.img-cards .product-card[href="snapring_e.html"]::before { background-image: url("assets/cards/pc_snapring_e.webp?v=2"); }
+.img-cards .product-card[href="snapring_c.html"]::before { background-image: url("assets/cards/pc_snapring_c.webp?v=2"); }
+.img-cards .product-card[href="snapring_u.html"]::before { background-image: url("assets/cards/pc_snapring_u.webp?v=2"); }
+.img-cards .product-card[href="snapring_g.html"]::before { background-image: url("assets/cards/pc_snapring_g.webp?v=2"); }
+.img-cards .product-card[href="snapring_k.html"]::before { background-image: url("assets/cards/pc_snapring_k.webp?v=2"); }
+.img-cards .product-card[href="s_cs_stop.html"]::before { background-image: url("assets/cards/pc_s_cs_stop.webp?v=2"); }
+.img-cards .product-card[href="r_cr_stop.html"]::before { background-image: url("assets/cards/pc_r_cr_stop.webp?v=2"); }
+.img-cards .product-card[href="s_pushnut.html"]::before { background-image: url("assets/cards/pc_s_pushnut.webp?v=2"); }
+.img-cards .product-card[href="r_pushnut.html"]::before { background-image: url("assets/cards/pc_r_pushnut.webp?v=2"); }
+.img-cards .product-card[href="prat_push_nut.html"]::before { background-image: url("assets/cards/pc_prat_push_nut.webp?v=2"); }
+.img-cards .product-card[href="circle_speed_nut.html"]::before { background-image: url("assets/cards/pc_circle_speed_nut.webp?v=2"); }
+.img-cards .product-card[href="wave_washer.html"]::before { background-image: url("assets/cards/pc_wave_washer.webp?v=2"); }
+.img-cards .product-card[href="e_washer.html"]::before { background-image: url("assets/cards/pc_e_washer.webp?v=2"); }
+.img-cards .product-card[href="spin_washer.html"]::before { background-image: url("assets/cards/pc_spin_washer.webp?v=2"); }
+.img-cards .product-card[href="nod_lock.html"]::before { background-image: url("assets/cards/pc_nod_lock.webp?v=2"); }
+.img-cards .product-card[href="hose_clamp.html"]::before { background-image: url("assets/cards/pc_hose_clamp.webp?v=2"); }
+.img-cards .product-card[href="e_holder.html"]::before { background-image: url("assets/cards/pc_e_holder.webp?v=2"); }
+.img-cards .product-card[href="e_stand.html"]::before { background-image: url("assets/cards/pc_e_stand.webp?v=2"); }
+.img-cards .product-card[href="heli_coil.html"]::before { background-image: url("assets/cards/pc_heli_coil.webp?v=2"); }
+.img-cards .product-card[href="takeup_aluminum.html"]::before { background-image: url("assets/cards/pc_takeup_aluminum.webp?v=2"); }
+.img-cards .product-card[href="takeup_steel.html"]::before { background-image: url("assets/cards/pc_takeup_steel.webp?v=2"); }
+.img-cards .product-card[href="takeup_uctm.html"]::before { background-image: url("assets/cards/pc_takeup_uctm.webp?v=2"); }
+.img-cards .product-card[href="takeup_uctn.html"]::before { background-image: url("assets/cards/pc_takeup_uctn.webp?v=2"); }
+.img-cards .product-card[href="takeup_cts.html"]::before { background-image: url("assets/cards/pc_takeup_cts.webp?v=2"); }
+.img-cards .product-card[href="unit_case_p.html"]::before { background-image: url("assets/cards/pc_unit_case_p.webp?v=2"); }
+.img-cards .product-card[href="unit_case_ph.html"]::before { background-image: url("assets/cards/pc_unit_case_ph.webp?v=2"); }
+.img-cards .product-card[href="unit_case_pa.html"]::before { background-image: url("assets/cards/pc_unit_case_pa.webp?v=2"); }
+.img-cards .product-card[href="unit_case_f.html"]::before { background-image: url("assets/cards/pc_unit_case_f.webp?v=2"); }
+.img-cards .product-card[href="unit_case_fl.html"]::before { background-image: url("assets/cards/pc_unit_case_fl.webp?v=2"); }
+.img-cards .product-card[href="unit_case_fa.html"]::before { background-image: url("assets/cards/pc_unit_case_fa.webp?v=2"); }
+.img-cards .product-card[href="unit_case_fb.html"]::before { background-image: url("assets/cards/pc_unit_case_fb.webp?v=2"); }
+.img-cards .product-card[href="unit_case_fs.html"]::before { background-image: url("assets/cards/pc_unit_case_fs.webp?v=2"); }
+.img-cards .product-card[href="unit_case_fc.html"]::before { background-image: url("assets/cards/pc_unit_case_fc.webp?v=2"); }
+.img-cards .product-card[href="unit_case_fcx.html"]::before { background-image: url("assets/cards/pc_unit_case_fcx.webp?v=2"); }
+.img-cards .product-card[href="unit_case_c.html"]::before { background-image: url("assets/cards/pc_unit_case_c.webp?v=2"); }
+.img-cards .product-card[href="unit_case_t.html"]::before { background-image: url("assets/cards/pc_unit_case_t.webp?v=2"); }
+.img-cards .product-card[href="unit_case_hcp.html"]::before { background-image: url("assets/cards/pc_unit_case_hcp.webp?v=2"); }
+.img-cards .product-card[href="unit_case_salp.html"]::before { background-image: url("assets/cards/pc_unit_case_salp.webp?v=2"); }
+.img-cards .product-card[href="unit_case_ucha.html"]::before { background-image: url("assets/cards/pc_unit_case_ucha.webp?v=2"); }
+.img-cards .product-card[href="unit_case_safcc.html"]::before { background-image: url("assets/cards/pc_unit_case_safcc.webp?v=2"); }
+.img-cards .product-card[href="unit_case_salf.html"]::before { background-image: url("assets/cards/pc_unit_case_salf.webp?v=2"); }
+.img-cards .product-card[href="unit_case_sapp.html"]::before { background-image: url("assets/cards/pc_unit_case_sapp.webp?v=2"); }
+.img-cards .product-card[href="unit_case_sapfl.html"]::before { background-image: url("assets/cards/pc_unit_case_sapfl.webp?v=2"); }
+.img-cards .product-card[href="unit_case_sapf.html"]::before { background-image: url("assets/cards/pc_unit_case_sapf.webp?v=2"); }
