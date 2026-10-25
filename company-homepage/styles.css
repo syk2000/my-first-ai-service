@@ -11,7 +11,7 @@
     --bg: #f5f7fb;
     --surface: #ffffff;
     --surface-raised: #eef2f8;
-    --border: #dbe2ee;
+    --border: #b9c4d8;
     --text: #16213a;
     --text-sub: #4a5876;
     --text-faint: #7a879f;
@@ -411,7 +411,7 @@
     background:
       radial-gradient(ellipse 700px 420px at 85% 15%, rgba(120, 160, 255, 0.35), transparent 60%),
       radial-gradient(ellipse 620px 460px at 10% 95%, rgba(150, 90, 255, 0.35), transparent 60%),
-      linear-gradient(135deg, #1d2a8f 0%, #2b3fd0 45%, #4a35c2 100%);
+      linear-gradient(135deg, #14213d 0%, #252f7e 55%, #3a2fa8 100%);
   }
   .hero::before,
   .hero::after {
@@ -599,7 +599,7 @@
   .ad-slide.is-active { opacity: 1; visibility: visible; z-index: 1; }
   .ad-1 { background: linear-gradient(135deg, #e8892b 0%, #c4561d 100%); }
   .ad-2 { background: linear-gradient(135deg, #0f9fb8 0%, #1d4fc4 100%); }
-  .ad-3 { background: linear-gradient(135deg, #14213d 0%, #3a2fa8 100%); }
+  .ad-3 { background: linear-gradient(135deg, #1d2a8f 0%, #2b3fd0 45%, #4a35c2 100%); }
   .ad-slide::after {
     /* 은은한 원형 무늬 */
     content: "";
@@ -2308,5 +2308,8 @@
 .speed-table.no-seal .col-seal { display: none; }
 .f-copy { margin-top: 18px; font-size: 12px; color: var(--text-faint); }
 /* 규격표 워터마크 — 캡처해도 출처가 남도록 (메인 홈은 main/index.html에서 끔) */
-table.spec-table { background-image: url("assets/watermark.svg?v=1"); background-repeat: repeat; background-size: 240px 150px; }
+table.spec-table { background-image: url("assets/watermark.svg?v=1"); background-repeat: repeat; background-size: 120px 75px; }
 .copy-notice { margin: -6px 0 16px; font-size: 12.5px; font-weight: 500; color: #b4532a; }
+/* 규격표의 공차 등 작은 회색 칸 — 읽기 쉽게 진하게 */
+table.spec-table td[style*="--text-faint"] { color: var(--text) !important; font-size: 12px !important; }
+table.spec-table th { color: #4b5873; }
