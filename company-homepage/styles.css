@@ -2329,7 +2329,7 @@ table.spec-table th { color: #4b5873; }
 #bearing-group .product-card .p-icon, #accessory-group .product-card .p-icon { display: none; }
 :is(#bearing-group, #accessory-group) .product-card[href="bearing_page.html"]::before { background-image: url("assets/cards/bearing_page.webp?v=5"); }
 :is(#bearing-group, #accessory-group) .product-card[href="adapter_nut_washer.html"]::before { background-image: url("assets/cards/adapter_nut_washer.webp?v=5"); }
-:is(#bearing-group, #accessory-group) .product-card[href="key_pin.html"]::before { background-image: url("assets/cards/key_pin.webp?v=5"); }
+:is(#bearing-group, #accessory-group) .product-card[href="key_pin.html"]::before { background-image: url("assets/cards/key_pin.svg?v=6"); }
 :is(#bearing-group, #accessory-group) .product-card[href="power_lock.html"]::before { background-image: url("assets/cards/power_lock.webp?v=5"); }
 :is(#bearing-group, #accessory-group) .product-card[href="ball.html"]::before { background-image: url("assets/cards/ball.webp?v=5"); }
 :is(#bearing-group, #accessory-group) .product-card[href="takeup_unit.html"]::before { background-image: url("assets/cards/takeup_unit.webp?v=5"); }
