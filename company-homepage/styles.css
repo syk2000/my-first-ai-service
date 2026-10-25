@@ -2327,19 +2327,19 @@ table.spec-table th { color: #4b5873; }
 /* 취급 제품군 카드 그림 — 위쪽에 제품 그림, 아이콘은 숨김 (그림은 assets/cards) */
 #bearing-group .product-card::before, #accessory-group .product-card::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / cover no-repeat; }
 #bearing-group .product-card .p-icon, #accessory-group .product-card .p-icon { display: none; }
-:is(#bearing-group, #accessory-group) .product-card[href="bearing_page.html"]::before { background-image: url("assets/cards/bearing_page.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="adapter_nut_washer.html"]::before { background-image: url("assets/cards/adapter_nut_washer.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="key_pin.html"]::before { background-image: url("assets/cards/key_pin.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="power_lock.html"]::before { background-image: url("assets/cards/power_lock.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="ball.html"]::before { background-image: url("assets/cards/ball.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="takeup_unit.html"]::before { background-image: url("assets/cards/takeup_unit.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="snapring_page.html"]::before { background-image: url("assets/cards/snapring_page.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="seal.html"]::before { background-image: url("assets/cards/seal.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="oil_gage.html"]::before { background-image: url("assets/cards/oil_gage.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="oiless.html"]::before { background-image: url("assets/cards/oiless.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="dish_spring.html"]::before { background-image: url("assets/cards/dish_spring.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="mold_spring.html"]::before { background-image: url("assets/cards/mold_spring.webp?v=3"); }
-:is(#bearing-group, #accessory-group) .product-card[href="ball_plunger.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=3"); }
+:is(#bearing-group, #accessory-group) .product-card[href="bearing_page.html"]::before { background-image: url("assets/cards/bearing_page.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="adapter_nut_washer.html"]::before { background-image: url("assets/cards/adapter_nut_washer.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="key_pin.html"]::before { background-image: url("assets/cards/key_pin.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="power_lock.html"]::before { background-image: url("assets/cards/power_lock.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="ball.html"]::before { background-image: url("assets/cards/ball.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="takeup_unit.html"]::before { background-image: url("assets/cards/takeup_unit.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="snapring_page.html"]::before { background-image: url("assets/cards/snapring_page.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="seal.html"]::before { background-image: url("assets/cards/seal.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="oil_gage.html"]::before { background-image: url("assets/cards/oil_gage.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="oiless.html"]::before { background-image: url("assets/cards/oiless.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="dish_spring.html"]::before { background-image: url("assets/cards/dish_spring.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="mold_spring.html"]::before { background-image: url("assets/cards/mold_spring.webp?v=4"); }
+:is(#bearing-group, #accessory-group) .product-card[href="ball_plunger.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=4"); }
 /* 오일씰 형식별 단면 카드 */
 .seal-type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 4px; }
 .seal-type-card { display: flex; flex-direction: column; background: var(--surface); border: 1.5px solid #2b3550; border-radius: var(--radius-md); overflow: hidden; color: var(--text); text-decoration: none; }
@@ -2367,29 +2367,29 @@ a.seal-type-card:hover { border-color: var(--accent); }
 /* 카드 아이콘 대신 해당 페이지 그림 (assets/cards/sr_*.webp) */
 .img-cards .product-card::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
 .img-cards .product-card .p-icon { display: none; }
-.img-cards .product-card[href="snapring_r.html"]::before { background-image: url("assets/cards/sr_snapring_r.webp?v=3"); }
-.img-cards .product-card[href="snapring_s.html"]::before { background-image: url("assets/cards/sr_snapring_s.webp?v=3"); }
-.img-cards .product-card[href="irtw.html"]::before { background-image: url("assets/cards/sr_irtw.webp?v=3"); }
-.img-cards .product-card[href="istw.html"]::before { background-image: url("assets/cards/sr_istw.webp?v=3"); }
-.img-cards .product-card[href="wr.html"]::before { background-image: url("assets/cards/sr_wr.webp?v=3"); }
-.img-cards .product-card[href="ws.html"]::before { background-image: url("assets/cards/sr_ws.webp?v=3"); }
-.img-cards .product-card[href="snapring_nr.html"]::before { background-image: url("assets/cards/sr_snapring_nr.webp?v=3"); }
-.img-cards .product-card[href="snapring_e.html"]::before { background-image: url("assets/cards/sr_snapring_e.webp?v=3"); }
-.img-cards .product-card[href="snapring_c.html"]::before { background-image: url("assets/cards/sr_snapring_c.webp?v=3"); }
-.img-cards .product-card[href="snapring_u.html"]::before { background-image: url("assets/cards/sr_snapring_u.webp?v=3"); }
-.img-cards .product-card[href="snapring_g.html"]::before { background-image: url("assets/cards/sr_snapring_g.webp?v=3"); }
-.img-cards .product-card[href="snapring_k.html"]::before { background-image: url("assets/cards/sr_snapring_k.webp?v=3"); }
-.img-cards .product-card[href="s_cs_stop.html"]::before { background-image: url("assets/cards/sr_s_cs_stop.webp?v=3"); }
-.img-cards .product-card[href="r_cr_stop.html"]::before { background-image: url("assets/cards/sr_r_cr_stop.webp?v=3"); }
-.img-cards .product-card[href="s_pushnut.html"]::before { background-image: url("assets/cards/sr_s_pushnut.webp?v=3"); }
-.img-cards .product-card[href="r_pushnut.html"]::before { background-image: url("assets/cards/sr_r_pushnut.webp?v=3"); }
-.img-cards .product-card[href="prat_push_nut.html"]::before { background-image: url("assets/cards/sr_prat_push_nut.webp?v=3"); }
-.img-cards .product-card[href="circle_speed_nut.html"]::before { background-image: url("assets/cards/sr_circle_speed_nut.webp?v=3"); }
-.img-cards .product-card[href="wave_washer.html"]::before { background-image: url("assets/cards/sr_wave_washer.webp?v=3"); }
-.img-cards .product-card[href="e_washer.html"]::before { background-image: url("assets/cards/sr_e_washer.webp?v=3"); }
-.img-cards .product-card[href="spin_washer.html"]::before { background-image: url("assets/cards/sr_spin_washer.webp?v=3"); }
-.img-cards .product-card[href="nod_lock.html"]::before { background-image: url("assets/cards/sr_nod_lock.webp?v=3"); }
-.img-cards .product-card[href="hose_clamp.html"]::before { background-image: url("assets/cards/sr_hose_clamp.webp?v=3"); }
-.img-cards .product-card[href="e_holder.html"]::before { background-image: url("assets/cards/sr_e_holder.webp?v=3"); }
-.img-cards .product-card[href="e_stand.html"]::before { background-image: url("assets/cards/sr_e_stand.webp?v=3"); }
-.img-cards .product-card[href="heli_coil.html"]::before { background-image: url("assets/cards/sr_heli_coil.webp?v=3"); }
+.img-cards .product-card[href="snapring_r.html"]::before { background-image: url("assets/cards/sr_snapring_r.webp?v=4"); }
+.img-cards .product-card[href="snapring_s.html"]::before { background-image: url("assets/cards/sr_snapring_s.webp?v=4"); }
+.img-cards .product-card[href="irtw.html"]::before { background-image: url("assets/cards/sr_irtw.webp?v=4"); }
+.img-cards .product-card[href="istw.html"]::before { background-image: url("assets/cards/sr_istw.webp?v=4"); }
+.img-cards .product-card[href="wr.html"]::before { background-image: url("assets/cards/sr_wr.webp?v=4"); }
+.img-cards .product-card[href="ws.html"]::before { background-image: url("assets/cards/sr_ws.webp?v=4"); }
+.img-cards .product-card[href="snapring_nr.html"]::before { background-image: url("assets/cards/sr_snapring_nr.webp?v=4"); }
+.img-cards .product-card[href="snapring_e.html"]::before { background-image: url("assets/cards/sr_snapring_e.webp?v=4"); }
+.img-cards .product-card[href="snapring_c.html"]::before { background-image: url("assets/cards/sr_snapring_c.webp?v=4"); }
+.img-cards .product-card[href="snapring_u.html"]::before { background-image: url("assets/cards/sr_snapring_u.webp?v=4"); }
+.img-cards .product-card[href="snapring_g.html"]::before { background-image: url("assets/cards/sr_snapring_g.webp?v=4"); }
+.img-cards .product-card[href="snapring_k.html"]::before { background-image: url("assets/cards/sr_snapring_k.webp?v=4"); }
+.img-cards .product-card[href="s_cs_stop.html"]::before { background-image: url("assets/cards/sr_s_cs_stop.webp?v=4"); }
+.img-cards .product-card[href="r_cr_stop.html"]::before { background-image: url("assets/cards/sr_r_cr_stop.webp?v=4"); }
+.img-cards .product-card[href="s_pushnut.html"]::before { background-image: url("assets/cards/sr_s_pushnut.webp?v=4"); }
+.img-cards .product-card[href="r_pushnut.html"]::before { background-image: url("assets/cards/sr_r_pushnut.webp?v=4"); }
+.img-cards .product-card[href="prat_push_nut.html"]::before { background-image: url("assets/cards/sr_prat_push_nut.webp?v=4"); }
+.img-cards .product-card[href="circle_speed_nut.html"]::before { background-image: url("assets/cards/sr_circle_speed_nut.webp?v=4"); }
+.img-cards .product-card[href="wave_washer.html"]::before { background-image: url("assets/cards/sr_wave_washer.webp?v=4"); }
+.img-cards .product-card[href="e_washer.html"]::before { background-image: url("assets/cards/sr_e_washer.webp?v=4"); }
+.img-cards .product-card[href="spin_washer.html"]::before { background-image: url("assets/cards/sr_spin_washer.webp?v=4"); }
+.img-cards .product-card[href="nod_lock.html"]::before { background-image: url("assets/cards/sr_nod_lock.webp?v=4"); }
+.img-cards .product-card[href="hose_clamp.html"]::before { background-image: url("assets/cards/sr_hose_clamp.webp?v=4"); }
+.img-cards .product-card[href="e_holder.html"]::before { background-image: url("assets/cards/sr_e_holder.webp?v=4"); }
+.img-cards .product-card[href="e_stand.html"]::before { background-image: url("assets/cards/sr_e_stand.webp?v=4"); }
+.img-cards .product-card[href="heli_coil.html"]::before { background-image: url("assets/cards/sr_heli_coil.webp?v=4"); }
