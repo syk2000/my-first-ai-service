@@ -510,9 +510,18 @@ function answer(utterance, blockName) {
   if (!work || !/[0-9a-z]/i.test(work) || work.replace(/\s+/g, "").length < 2 && !/^\d$/.test(work)) {
     return reply([text("찾으시는 형번이나 치수를 보내 주시면 바로 찾아드려요.\n예) 6205, UC205, 25 52 15\n\n담당자와 대화하시려면 채팅 입력창 아래 '상담 연결'을 눌러 주세요." + closedNote())]);
   }
+  // "TC 25*52*7"처럼 오일씰 형식 + 치수 — 홈페이지 오일씰 표는 형식 구분이 없으므로 형식은 떼고 오일씰 안에서 치수로 찾고,
+  // 견적·발주 양식에는 손님이 적은 형식을 그대로 넣음
+  let sealType = null;
+  const sm = work.match(/^(TCV|TCN|TCS|TC|SC|TB|SB|VC|VB|TA|SA|MG|SM|DM|DA|PCS|SCB|S|D|V)\s*(?=\d)/i);
+  if (sm && /^\d+(\.\d+)?([\s×xX*]+\d+(\.\d+)?){1,2}$/.test(work.slice(sm[0].length).trim())) {
+    sealType = sm[1].toUpperCase();
+    work = work.slice(sm[0].length).trim();
+  }
   const cleaned = work;
   let query = parse(cleaned);
   let rows = dedupe(search(query));
+  if (sealType) rows = rows.filter((r) => /^oilseal/.test(r.p));
   let note = "";
   // 숫자만 붙여 쓴 경우: 그 숫자로 시작하는 형번이 없으면 치수로 나눠서 찾아봄 (2548 → 25×48)
   if (query.kind === "model" && /^\d{3,8}$/.test(cleaned) && !rows.some((r) => norm(r.m).startsWith(cleaned))) {
@@ -538,7 +547,11 @@ function answer(utterance, blockName) {
       if (rows.length) note = `${cat[2]} 중 ${cleaned} 규격을 찾았어요.\n`;
       query = { kind: "model", q: cleaned };
     } else {
-      const inCat = rows.filter((r) => cat[1].test(r.c));
+      let inCat = rows.filter((r) => cat[1].test(r.c));
+      // "반달키 3*10"처럼 치수가 그 분류의 호칭(형번)인 경우 — 형번으로 다시 찾음
+      if (!inCat.length && query.kind === "dim") {
+        inCat = dedupe(search({ kind: "model", q: dimLabel(query) })).filter((r) => cat[1].test(r.c) && norm(r.m).startsWith(norm(dimLabel(query))));
+      }
       if (inCat.length) rows = inCat;
     }
   }
@@ -565,6 +578,11 @@ function answer(utterance, blockName) {
       }
     }
   }
+  if (sealType && rows.length) {
+    const r = rows[0], dims = `${r.d}×${r.D}×${r.h}`;
+    typed = { base: `오일씰 ${dims}`, full: `오일씰 ${sealType} ${dims}` };
+    note = `오일씰 ${dims} 규격이 있어요. 견적·발주 양식에는 ${sealType} 형식으로 들어가요.\n`;
+  }
   if (!rows.length) {
     // 정확한 규격이 없으면 가까운 규격을 보여줄지 묻고, 바로 견적 문의도 할 수 있게
     const hasNear = approx(query).length > 0;
@@ -580,6 +598,13 @@ function answer(utterance, blockName) {
     });
   }
   return showResults(rows, query, note, cleaned, false, typed, qty);
+}
+
+// 카드에 보일 치수 — 키는 b(나비)·h(높이)·L(길이), 반달키는 d0(축 지름)·h, 베어링은 폭 B
+function dimText(r) {
+  if (/사각키|라운드 키/.test(r.c)) return `b ${fmt(r.d)} · h ${fmt(r.D)} · L ${fmt(r.h)}`;
+  if (r.c === "반달키") return `d0 ${fmt(r.d)} · h ${fmt(r.h)}`;
+  return `d ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)}`;
 }
 
 // 규격 카드 목록 — [견적 문의]·[발주 문의]·[상세 보기]
@@ -608,7 +633,7 @@ function showResults(rows, query, note, q, isApprox, typed, qty) {
       title: name.slice(0, 50),
       description: (r.seal
         ? `오일씰\nd ${fmt(r.d)} · D ${fmt(r.D)} · H ${fmt(r.h)} (mm)\n등록된 규격이 있어요.`
-        : `${r.c}\nd ${fmt(r.d)} · D ${fmt(r.D)} · ${load().PAGE_GROUP[r.p] === "베어링" ? "B" : "H"} ${fmt(r.h)} (mm)` +
+        : `${r.c}\n${dimText(r)} (mm)` +
           r.alts.map((a) => "\n" + a).join("")).slice(0, 230),
       // 카드에서 바로 견적·발주, 상세 보기는 홈페이지 규격 페이지
       buttons: [btn("견적"), btn("발주"), { action: "webLink", label: "상세 보기", webLinkUrl: SITE + r.p }],
