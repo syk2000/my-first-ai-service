@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="220" height="140" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="50" width="140" height="26" stroke="#222" stroke-width="2" fill="none" />
+              <line x1="30" y1="30" x2="170" y2="30" stroke="#333" stroke-width="1" />
+              <line x1="30" y1="24" x2="30" y2="36" stroke="#333" stroke-width="1" />
+              <line x1="170" y1="24" x2="170" y2="36" stroke="#333" stroke-width="1" />
+              <text x="94" y="26" font-size="13" fill="#222">L</text>
+              <line x1="12" y1="50" x2="12" y2="76" stroke="#333" stroke-width="1" />
+              <text x="0" y="66" font-size="13" fill="#222">h</text>
+              <line x1="30" y1="90" x2="170" y2="90" stroke="#333" stroke-width="1" />
+              <line x1="30" y1="84" x2="30" y2="96" stroke="#333" stroke-width="1" />
+              <line x1="170" y1="84" x2="170" y2="96" stroke="#333" stroke-width="1" />
+              <text x="94" y="106" font-size="13" fill="#222">b</text>
+            </svg>

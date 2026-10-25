@@ -2986,3 +2986,43 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="unit_case_sapp.html"]::before { background-image: url("assets/cards/pc_unit_case_sapp.webp?v=2"); }
 .img-cards .product-card[href="unit_case_sapfl.html"]::before { background-image: url("assets/cards/pc_unit_case_sapfl.webp?v=2"); }
 .img-cards .product-card[href="unit_case_sapf.html"]::before { background-image: url("assets/cards/pc_unit_case_sapf.webp?v=2"); }
+/* 그림이 직접 그린 도면뿐인 페이지 카드 */
+.img-cards .product-card[href="steel_ball.html"]::before,
+.img-cards .product-card[href="double_direction_thrust_ball.html"]::before,
+.img-cards .product-card[href="hybrid_bearing.html"]::before,
+.img-cards .product-card[href="key_normal.html"]::before,
+.img-cards .product-card[href="half_key.html"]::before,
+.img-cards .product-card[href="round_key.html"]::before,
+.img-cards .product-card[href="taper_pin.html"]::before,
+.img-cards .product-card[href="parallel_pin.html"]::before,
+.img-cards .product-card[href="oilgage_md_mc.html"]::before,
+.img-cards .product-card[href="oilgage_mh_mhs.html"]::before,
+.img-cards .product-card[href="oilgage_mhl.html"]::before,
+.img-cards .product-card[href="oilseal_types.html"]::before,
+.img-cards .product-card[href="oilseal_endcap.html"]::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
+.img-cards .product-card[href="steel_ball.html"] .p-icon,
+.img-cards .product-card[href="double_direction_thrust_ball.html"] .p-icon,
+.img-cards .product-card[href="hybrid_bearing.html"] .p-icon,
+.img-cards .product-card[href="key_normal.html"] .p-icon,
+.img-cards .product-card[href="half_key.html"] .p-icon,
+.img-cards .product-card[href="round_key.html"] .p-icon,
+.img-cards .product-card[href="taper_pin.html"] .p-icon,
+.img-cards .product-card[href="parallel_pin.html"] .p-icon,
+.img-cards .product-card[href="oilgage_md_mc.html"] .p-icon,
+.img-cards .product-card[href="oilgage_mh_mhs.html"] .p-icon,
+.img-cards .product-card[href="oilgage_mhl.html"] .p-icon,
+.img-cards .product-card[href="oilseal_types.html"] .p-icon,
+.img-cards .product-card[href="oilseal_endcap.html"] .p-icon { display: none; }
+.img-cards .product-card[href="steel_ball.html"]::before { background-image: url("assets/cards/pc_steel_ball.svg?v=1"); }
+.img-cards .product-card[href="double_direction_thrust_ball.html"]::before { background-image: url("assets/cards/pc_double_direction_thrust_ball.svg?v=1"); }
+.img-cards .product-card[href="hybrid_bearing.html"]::before { background-image: url("assets/cards/pc_hybrid_bearing.webp?v=1"); }
+.img-cards .product-card[href="key_normal.html"]::before { background-image: url("assets/cards/pc_key_normal.svg?v=1"); }
+.img-cards .product-card[href="half_key.html"]::before { background-image: url("assets/cards/pc_half_key.svg?v=1"); }
+.img-cards .product-card[href="round_key.html"]::before { background-image: url("assets/cards/pc_round_key.svg?v=1"); }
+.img-cards .product-card[href="taper_pin.html"]::before { background-image: url("assets/cards/pc_taper_pin.svg?v=1"); }
+.img-cards .product-card[href="parallel_pin.html"]::before { background-image: url("assets/cards/pc_parallel_pin.svg?v=1"); }
+.img-cards .product-card[href="oilgage_md_mc.html"]::before { background-image: url("assets/cards/pc_oilgage_md_mc.svg?v=1"); }
+.img-cards .product-card[href="oilgage_mh_mhs.html"]::before { background-image: url("assets/cards/pc_oilgage_mh_mhs.svg?v=1"); }
+.img-cards .product-card[href="oilgage_mhl.html"]::before { background-image: url("assets/cards/pc_oilgage_mhl.svg?v=1"); }
+.img-cards .product-card[href="oilseal_types.html"]::before { background-image: url("assets/cards/pc_oilseal_types.svg?v=1"); }
+.img-cards .product-card[href="oilseal_endcap.html"]::before { background-image: url("assets/cards/pc_oilseal_endcap.svg?v=1"); }

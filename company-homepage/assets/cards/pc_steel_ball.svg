@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 300 228" width="280" height="213"  fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="150" cy="100" r="70" fill="#eeeeee" stroke="#333" stroke-width="2.5"/>
+          <ellipse cx="125" cy="72" rx="18" ry="11" fill="#ffffff" stroke="none"/>
+          <g stroke="#999" stroke-width="1" stroke-dasharray="8 3 2 3">
+            <line x1="68" y1="100" x2="232" y2="100"/>
+            <line x1="150" y1="18" x2="150" y2="182"/>
+          </g>
+          <g stroke="#666" stroke-width="1">
+            <line x1="80" y1="100" x2="80" y2="204"/>
+            <line x1="220" y1="100" x2="220" y2="204"/>
+            <line x1="80" y1="198" x2="220" y2="198" marker-start="url(#sbArrow)" marker-end="url(#sbArrow)"/>
+          </g>
+          <text x="150" y="220" text-anchor="middle" font-size="14" fill="#333" font-weight="600">d</text>
+          <defs>
+            <marker id="sbArrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#666"/>
+            </marker>
+          </defs>
+        </svg>
