@@ -528,14 +528,6 @@
     border-color: var(--accent);
   }
 
-  .brand-chip .brand-badge {
-    font-size: 16px;
-    height: 100%;
-    padding: 0 16px;
-    border: 0;
-    border-radius: 999px;
-  }
-
   /* 흰 판 없는 로고도 타원 양옆 여백을 맞춤 */
   .brand-chip > .chip-logo { margin: 0 10px; }
 
@@ -1324,11 +1316,6 @@
   .brand-tile-logo .lh-70 { height: 70px; }
   .brand-chip .chip-logo.logo-tall { max-height: 32px; }
 
-  .brand-tile-logo .brand-badge {
-    font-size: 16px;
-    padding: 6px 16px;
-  }
-
   .brand-tile-cta {
     text-align: center;
     background: var(--accent-soft);
@@ -1457,24 +1444,6 @@
     font-size: 10px;
     letter-spacing: 0.06em;
     color: var(--accent);
-  }
-
-  .brand-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display-en);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: var(--text);
-    background: var(--accent-soft);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-  }
-
-  .partner-slot .brand-badge {
-    font-size: 15px;
-    padding: 6px 16px;
   }
 
   .partner-slot .brand-logo-img {
@@ -1964,7 +1933,6 @@
     flex-wrap: wrap;
   }
 
-
   .footer-row .f-meta {
     margin-top: 8px;
     font-size: 12.5px;
@@ -2329,7 +2297,6 @@ table.spec-table th { color: #4b5873; }
 /* 오일씰 형식별 단면 카드 */
 .seal-type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 4px; }
 .seal-type-card { display: flex; flex-direction: column; background: var(--surface); border: 1.5px solid #2b3550; border-radius: var(--radius-md); overflow: hidden; color: var(--text); text-decoration: none; }
-a.seal-type-card:hover { border-color: var(--accent); }
 .seal-type-card .st-fig { background: #fff; border-bottom: 1px solid var(--border); padding: 10px 24px 4px; }
 .seal-type-card .seal-type-svg { display: block; width: 100%; height: auto; }
 .seal-type-card .st-text { padding: 10px 14px 14px; }
@@ -2352,7 +2319,6 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .cat-tab-btn[data-tab="sr"]::before { background: #ffffff; }
 /* 카드 아이콘 대신 해당 페이지 치수 도면 (assets/cards/pc_*.webp, 워터마크 없는 원본) */
 .img-cards .product-card[href="hah_sleeve.html"]::before,
-.img-cards .product-card[href="sleeve.html"]::before,
 .img-cards .product-card[href="lock_nut.html"]::before,
 .img-cards .product-card[href="locknut_clip.html"]::before,
 .img-cards .product-card[href="kzm.html"]::before,
@@ -2390,7 +2356,6 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="double_row_taper.html"]::before,
 .img-cards .product-card[href="double_row_cylindrical.html"]::before,
 .img-cards .product-card[href="machined_needle_onepiece.html"]::before,
-.img-cards .product-card[href="machined_needle_separate.html"]::before,
 .img-cards .product-card[href="naf_needle_bearing.html"]::before,
 .img-cards .product-card[href="thrust_combo_needle.html"]::before,
 .img-cards .product-card[href="angular_combo_needle.html"]::before,
@@ -2559,7 +2524,6 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="unit_case_sapfl.html"]::before,
 .img-cards .product-card[href="unit_case_sapf.html"]::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
 .img-cards .product-card[href="hah_sleeve.html"] .p-icon,
-.img-cards .product-card[href="sleeve.html"] .p-icon,
 .img-cards .product-card[href="lock_nut.html"] .p-icon,
 .img-cards .product-card[href="locknut_clip.html"] .p-icon,
 .img-cards .product-card[href="kzm.html"] .p-icon,
@@ -2597,7 +2561,6 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="double_row_taper.html"] .p-icon,
 .img-cards .product-card[href="double_row_cylindrical.html"] .p-icon,
 .img-cards .product-card[href="machined_needle_onepiece.html"] .p-icon,
-.img-cards .product-card[href="machined_needle_separate.html"] .p-icon,
 .img-cards .product-card[href="naf_needle_bearing.html"] .p-icon,
 .img-cards .product-card[href="thrust_combo_needle.html"] .p-icon,
 .img-cards .product-card[href="angular_combo_needle.html"] .p-icon,
@@ -2632,19 +2595,6 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="ball_screw_support.html"] .p-icon,
 .img-cards .product-card[href="clutch_bearing.html"] .p-icon,
 .img-cards .product-card[href="kojin_joint.html"] .p-icon,
-.img-cards .product-card[href="clutch_tss.html"] .p-icon,
-.img-cards .product-card[href="clutch_tfs.html"] .p-icon,
-.img-cards .product-card[href="clutch_bb.html"] .p-icon,
-.img-cards .product-card[href="clutch_ld.html"] .p-icon,
-.img-cards .product-card[href="clutch_fc.html"] .p-icon,
-.img-cards .product-card[href="clutch_hf.html"] .p-icon,
-.img-cards .product-card[href="clutch_rc.html"] .p-icon,
-.img-cards .product-card[href="clutch_rcb.html"] .p-icon,
-.img-cards .product-card[href="clutch_fcbn.html"] .p-icon,
-.img-cards .product-card[href="clutch_fcb.html"] .p-icon,
-.img-cards .product-card[href="clutch_x.html"] .p-icon,
-.img-cards .product-card[href="clutch_bwc.html"] .p-icon,
-.img-cards .product-card[href="clutch_bw.html"] .p-icon,
 .img-cards .product-card[href="hah_sleeve_h2.html"] .p-icon,
 .img-cards .product-card[href="hah_sleeve_h3.html"] .p-icon,
 .img-cards .product-card[href="hah_sleeve_h23.html"] .p-icon,
@@ -2766,7 +2716,6 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="unit_case_sapfl.html"] .p-icon,
 .img-cards .product-card[href="unit_case_sapf.html"] .p-icon { display: none; }
 .img-cards .product-card[href="hah_sleeve.html"]::before { background-image: url("assets/cards/pc_hah_sleeve.webp?v=2"); }
-.img-cards .product-card[href="sleeve.html"]::before { background-image: url("assets/cards/pc_sleeve.webp?v=2"); }
 .img-cards .product-card[href="lock_nut.html"]::before { background-image: url("assets/cards/pc_lock_nut.webp?v=2"); }
 .img-cards .product-card[href="locknut_clip.html"]::before { background-image: url("assets/cards/pc_locknut_clip.webp?v=2"); }
 .img-cards .product-card[href="kzm.html"]::before { background-image: url("assets/cards/pc_kzm.webp?v=2"); }
@@ -2804,7 +2753,6 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="double_row_taper.html"]::before { background-image: url("assets/cards/pc_double_row_taper.webp?v=2"); }
 .img-cards .product-card[href="double_row_cylindrical.html"]::before { background-image: url("assets/cards/pc_double_row_cylindrical.webp?v=2"); }
 .img-cards .product-card[href="machined_needle_onepiece.html"]::before { background-image: url("assets/cards/pc_machined_needle_onepiece.webp?v=2"); }
-.img-cards .product-card[href="machined_needle_separate.html"]::before { background-image: url("assets/cards/pc_machined_needle_separate.webp?v=2"); }
 .img-cards .product-card[href="naf_needle_bearing.html"]::before { background-image: url("assets/cards/pc_naf_needle_bearing.webp?v=2"); }
 .img-cards .product-card[href="thrust_combo_needle.html"]::before { background-image: url("assets/cards/pc_thrust_combo_needle.webp?v=2"); }
 .img-cards .product-card[href="angular_combo_needle.html"]::before { background-image: url("assets/cards/pc_angular_combo_needle.webp?v=2"); }
