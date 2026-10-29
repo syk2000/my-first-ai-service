@@ -77,7 +77,8 @@ const dedupe = (rows) => load().specDedupe(rows);
 
 // 양식에 넣을 품번 표기 — 기호(○ 등)는 빼고, 오일씰은 "오일씰 TC 25×52×10"처럼
 function cardName(r) {
-  const m = String(r.m).replace(/[○●△⬠★☆◎]/g, "").replace(/\s+/g, " ").trim();
+  // "FUN05SC · … (= FU05SC · …)"처럼 옛 표기를 함께 적은 형번은 카드 제목에서 뒤쪽을 떼고 설명에 따로 보여 줌
+  const m = String(r.m).replace(/[○●△⬠★☆◎]/g, "").replace(/\s*\(=.*\)\s*$/, "").replace(/\s+/g, " ").trim();
   return (r.c === "오일씰 형식 및 적용현황" && !/^오일씰/.test(m) ? "오일씰 " : "") + m;
 }
 
@@ -427,6 +428,22 @@ function faqAnswer(f, kind) {
   return { outputs: [{ textCard: card }], quick: [...more, QUICK[0]] };
 }
 
+// 직접 적은 질문의 키워드 → FAQ (위에서부터 먼저 맞는 것)
+const FREE_FAQ = [
+  [/주문\s*제작|제작\s*(되|가능|해)|샘플/, "buy", "주문 제작"],
+  [/반품|교환|환불/, "buy", "반품·교환"],
+  [/성적서|인증서|정품/, "buy", "성적서·정품 증명"],
+  [/결제|카드|계좌|입금|세금\s*계산서|현금\s*영수증/, "buy", "결제·세금계산서"],
+  [/배송|택배|배달|퀵|화물/, "buy", "배송 기간·배송비"],
+  [/방문|직접\s*(받|가지|가서|사러)|수령|픽업/, "buy", "방문 수령"],
+  [/할인|낱개|소량|(한|1)\s*개만/, "buy", "구매 수량·할인"],
+  [/영업\s*시간|운영\s*시간|몇\s*시|휴무|쉬는\s*날|주말|토요일|일요일|공휴일/, "faq", "영업시간"],
+  [/견적.*(언제|얼마나|오래)|(언제|얼마나).*견적/, "faq", "견적 회신 시간"],
+  [/카탈로그|카다록|카달로그/, "faq", "카탈로그"],
+  [/납기|재고|가격|단가/, "faq", "재고·납기·가격"],
+  [/브랜드|메이커|어떤\s*제품|취급/, "faq", "제품·브랜드"],
+];
+
 function answer(utterance, blockName) {
   const u = (utterance || "").trim();
   if (/웰컴|welcome/i.test(blockName || "")) return reply([text(WELCOME)]);
@@ -447,6 +464,15 @@ function answer(utterance, blockName) {
   const pg = u.match(/^제품\s*질문\s*[:：]\s*(.+)$/);
   if (pg && PRODUCT_GROUPS.includes(pg[1].trim())) return reply(productFaqList(pg[1].trim()));
   if (/^일반\s*질문$/.test(u)) return reply(faqList());
+  // 버튼이 아니라 직접 적은 질문("반품 되나요?", "영업시간이요")도 해당 FAQ 답변으로 — 숫자가 있으면 형번 검색이 우선
+  if (!/\d/.test(u)) {
+    const hit = FREE_FAQ.find(([re]) => re.test(u));
+    if (hit) {
+      const [, list, short] = hit;
+      const f = (list === "buy" ? BUY_FAQ : FAQ).find((x) => x.short === short);
+      if (f) return reply(faqAnswer(f, list === "buy" ? "buy" : "general"));
+    }
+  }
   // 채팅방 하단 메뉴 [규격&품번] 등 — 숫자 없이 "규격/품번/형번/검색"만 오면 입력 안내
   if (!/\d/.test(u) && /규격|품번|형번|검색/.test(u)) {
     return reply([text(
@@ -635,7 +661,7 @@ function showResults(rows, query, note, q, isApprox, typed, qty) {
       title: name.slice(0, 50),
       description: (r.seal
         ? `오일씰\nd ${fmt(r.d)} · D ${fmt(r.D)} · H ${fmt(r.h)} (mm)\n등록된 규격이 있어요.`
-        : `${r.c}\n${dimText(r)} (mm)` +
+        : `${r.c}\n${dimText(r)} (mm)` + (String(r.m).match(/\(=.*\)\s*$/) || [""]).map((a) => (a ? "\n" + a.trim() : ""))[0] +
           r.alts.map((a) => "\n" + a).join("")).slice(0, 230),
       // 카드에서 바로 견적·발주, 상세 보기는 홈페이지 규격 페이지
       buttons: [btn("견적"), btn("발주"), { action: "webLink", label: "상세 보기", webLinkUrl: SITE + r.p }],
