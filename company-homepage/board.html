@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261030b">
+<link rel="stylesheet" href="styles.css?v=20261030c">
 </head>
 <body>
 
@@ -197,11 +197,13 @@
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: 버튼 한 번으로 회사 메일(INQUIRY_EMAIL)에 '견적·발주 요청서' 표 양식 메일 자동 발송.
-    //   우리 서버(api/inquiry.js, 네이버 SMTP)가 먼저 보내고, 안 되면 FormSubmit(별칭 주소 → 같은 메일)으로 보냄
+    //   Web3Forms(무료, 회사 메일로 발급된 공개 접근 키)로 먼저 보내고, 안 되면 우리 서버(api/inquiry.js) → FormSubmit(별칭 주소 → 같은 메일) 순으로 보냄
     // · 카카오톡으로 문의하기: SWS 카카오톡 채널 1:1 상담. 카카오톡 채널은 외부 사이트가 채팅 입력칸에
     //   글을 넣거나 대신 보내는 것을 막아두었으므로, 내용을 복사하고 상담창을 열어 손님이 붙여넣기 → 전송
     const INQUIRY_EMAIL = "lsd00213@naver.com"; // 견적·발주 요청서를 받을 메일 주소
     // FormSubmit 활성화 메일에 적힌 별칭(메일 주소를 코드에 노출하지 않아 스팸 수집 방지). 실제 받는 곳은 INQUIRY_EMAIL
+    const WEB3FORMS_URL = "https://api.web3forms.com/submit";
+    const WEB3FORMS_KEY = "36bc78a9-76a4-422c-bf01-0f56262e05f6"; // 공개용 접근 키(받는 곳은 등록된 회사 메일로 고정)
     const INQUIRY_API = "/api/inquiry"; // 회사 메일 발송(Vercel 함수)
     const FORMSUBMIT_URL = "https://formsubmit.co/ajax/06c8bd050147ba661797f96176c179f7";
     const KAKAO_CHAT_URL = "https://pf.kakao.com/_YMbgn/chat";
@@ -318,15 +320,22 @@
       }
     }
 
-    // 1순위: 우리 서버(api/inquiry.js)가 회사 메일로 바로 발송 / 2순위: FormSubmit / 둘 다 안 되면 전화·카톡 안내(입력 내용은 남김)
+    // 1순위: Web3Forms / 2순위: 우리 서버(api/inquiry.js, SMTP 설정 시) / 3순위: FormSubmit / 모두 안 되면 전화·카톡 안내(입력 내용은 남김)
     async function sendEmail(d) {
       const buttons = inquiryForm.querySelectorAll("button[type=submit]");
       buttons.forEach((b) => (b.disabled = true));
       showMessage(tt("전송 중입니다…"));
       const hp = document.getElementById("cBotcheck").checked;
-      let ok = await postJSON(INQUIRY_API, {
-        name: d.name, contact: d.phone, contactKind: d.email ? "email" : "phone", type: d.type, message: d.message, hp: hp ? "1" : "",
-      });
+      const subject = "[SWS 홈페이지] 견적·발주 요청서 - " + d.name;
+      const w3 = { access_key: WEB3FORMS_KEY, subject, from_name: "SWS 홈페이지 문의", botcheck: hp };
+      if (d.email) w3.replyto = d.phone; // 받은 메일에서 '답장' → 손님 이메일로
+      requestForm(d).forEach(([k, v]) => (w3[k] = v));
+      let ok = await postJSON(WEB3FORMS_URL, w3);
+      if (!ok) {
+        ok = await postJSON(INQUIRY_API, {
+          name: d.name, contact: d.phone, contactKind: d.email ? "email" : "phone", type: d.type, message: d.message, hp: hp ? "1" : "",
+        });
+      }
       if (!ok) {
         const payload = {
           _subject: "[SWS 홈페이지] 견적·발주 요청서 - " + d.name,
