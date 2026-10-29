@@ -112,35 +112,39 @@
         <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
           <div style="flex: 0 1 auto; text-align: center; max-width: 100%;">
             <img loading="lazy" src="assets/dn_diagram.webp?v=wm5" alt="DN 도면" style="height: 240px; width: auto; max-width: 100%; object-fit: contain;" />
-            <p class="diagram-legend">↑ 단면도 — 셋트스크류·셋트핀 고정 · 정면도(6각 체결부)<br /><span style="color: var(--text-faint);">d=나사 안지름 · D=바깥지름 · M=대변 폭 · m=모따기</span></p>
+            <p class="diagram-legend">↑ 단면도 — 셋트스크류·셋트핀 고정 · 정면도(6각 체결부)<br /><span style="color: var(--text-faint);">M=나사 호칭(d&times;pitch) · D=바깥지름 · d=단차부 지름 · T=대변 폭 · t=셋트스크류 위치 · L=폭</span></p>
           </div>
         </div>
       </div>
 
       <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-        <table class="spec-table" style="min-width: 460px;">
-          <thead><tr><th>호칭번호</th><th>M</th><th>D</th><th>L</th></tr></thead>
+        <table class="spec-table" style="min-width: 620px;">
+          <thead><tr><th>호칭번호</th><th>M</th><th>D</th><th>d</th><th>T</th><th>t</th><th>L</th><th>셋트스크류</th></tr></thead>
           <tbody>
-            <tr><td class="type-cell">DN 4</td><td>M4&times;0.5</td><td>11.5</td><td>5</td></tr>
-            <tr><td class="type-cell">DN 5</td><td>M5&times;0.5</td><td>13.5</td><td>5</td></tr>
-            <tr><td class="type-cell">DN 6</td><td>M6&times;0.75</td><td>14.5</td><td>5</td></tr>
-            <tr><td class="type-cell">DN 8</td><td>M8&times;1 / M8&times;0.75</td><td>17</td><td>6.5</td></tr>
-            <tr><td class="type-cell">DN10</td><td>M10&times;1 / M10&times;0.75</td><td>20</td><td>8</td></tr>
-            <tr><td class="type-cell">DN10-S</td><td>M10&times;1</td><td>20</td><td>8</td></tr>
-            <tr><td class="type-cell">DN12</td><td>M12&times;1</td><td>22</td><td>8</td></tr>
-            <tr><td class="type-cell">DN12-S</td><td>M12&times;1</td><td>22</td><td>8</td></tr>
-            <tr><td class="type-cell">DN15</td><td>M15&times;1</td><td>25</td><td>8</td></tr>
-            <tr><td class="type-cell">DN17</td><td>M17&times;1</td><td>30</td><td>13</td></tr>
-            <tr><td class="type-cell">DN20</td><td>M20&times;1</td><td>35</td><td>11</td></tr>
-            <tr><td class="type-cell">DN25</td><td>M25&times;1.5</td><td>43</td><td>15</td></tr>
-            <tr><td class="type-cell">DN30</td><td>M30&times;1.5</td><td>48</td><td>20</td></tr>
-            <tr><td class="type-cell">DN35</td><td>M35&times;1.5</td><td>60</td><td>21</td></tr>
-            <tr><td class="type-cell">DN40</td><td>M40&times;1.5</td><td>63</td><td>25</td></tr>
+            <tr><td class="type-cell">DN 4</td><td>M4&times;0.5</td><td>11.5</td><td>8</td><td>10</td><td>2.8</td><td>5</td><td>M3</td></tr>
+            <tr><td class="type-cell">DN 5</td><td>M5&times;0.5</td><td>13.5</td><td>9</td><td>11</td><td>2.8</td><td>5</td><td>M3</td></tr>
+            <tr><td class="type-cell">DN 6</td><td>M6&times;0.75</td><td>14.5</td><td>10</td><td>12</td><td>3.1</td><td>5.5</td><td>M3</td></tr>
+            <tr><td class="type-cell">DN 8</td><td>M8&times;1</td><td>16</td><td>13</td><td>14</td><td>3.9</td><td>7.0</td><td>M3</td></tr>
+            <tr><td class="type-cell">DN 8</td><td>M8&times;0.75</td><td>16</td><td>13</td><td>14</td><td>3.9</td><td>7.0</td><td>M3</td></tr>
+            <tr><td class="type-cell">DN10</td><td>M10&times;1</td><td>20</td><td>16</td><td>17</td><td>4.5</td><td>8.0</td><td>M4</td></tr>
+            <tr><td class="type-cell">DN10</td><td>M10&times;0.75</td><td>20</td><td>16</td><td>17</td><td>4.5</td><td>8.0</td><td>M4</td></tr>
+            <tr><td class="type-cell">DN10-S</td><td>M10&times;1</td><td>20</td><td>16</td><td>17</td><td>4.5</td><td>8.0</td><td>2-M4</td></tr>
+            <tr><td class="type-cell">DN12</td><td>M12&times;1</td><td>22</td><td>18</td><td>19</td><td>4.5</td><td>8.0</td><td>M4</td></tr>
+            <tr><td class="type-cell">DN12-S</td><td>M12&times;1</td><td>22</td><td>18</td><td>19</td><td>4.5</td><td>8.0</td><td>2-M4</td></tr>
+            <tr><td class="type-cell">DN15</td><td>M15&times;1</td><td>25</td><td>21</td><td>22</td><td>4.5</td><td>8.0</td><td>2-M4</td></tr>
+            <tr><td class="type-cell">DN17</td><td>M17&times;1</td><td>28</td><td>23</td><td>24</td><td>5.4</td><td>10</td><td>2-M5</td></tr>
+            <tr><td class="type-cell">DN17-S</td><td>M17&times;1</td><td>30</td><td>25</td><td>24</td><td>9</td><td>13</td><td>2-M5</td></tr>
+            <tr><td class="type-cell">DN20</td><td>M20&times;1</td><td>32</td><td>27</td><td>28</td><td>5.4</td><td>10</td><td>2-M5</td></tr>
+            <tr><td class="type-cell">DN20-S</td><td>M20&times;1</td><td>35</td><td>26</td><td>29.3</td><td>7</td><td>11</td><td>2-M5</td></tr>
+            <tr><td class="type-cell">DN25</td><td>M25&times;1.5</td><td>38</td><td>33</td><td>34</td><td>6.5</td><td>12</td><td>2-M6</td></tr>
+            <tr><td class="type-cell">DN30</td><td>M30&times;1.5</td><td>45</td><td>40</td><td>41</td><td>6.5</td><td>12</td><td>2-M6</td></tr>
+            <tr><td class="type-cell">DN35</td><td>M35&times;1.5</td><td>52</td><td>47</td><td>48</td><td>6.5</td><td>12</td><td>2-M6</td></tr>
+            <tr><td class="type-cell">DN40</td><td>M40&times;1.5</td><td>58</td><td>52</td><td>53</td><td>8</td><td>14</td><td>2-M6</td></tr>
           </tbody>
         </table>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
-      <p style="font-size: 11px; color: var(--text-faint); margin-top: 4px;">※ DN 4 · DN 5 · DN10-S · DN12-S 행은 두리마이텍(DURI) 카탈로그 2025 기준으로 추가했습니다.</p>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 4px;">※ 위 표는 두리마이텍(DURI) 카탈로그 2025 기준입니다. DN 8·DN10은 피치 두 가지(M8&times;1·M8&times;0.75, M10&times;1·M10&times;0.75)가 있습니다.</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
         ※ 위 표는 당사 정식 규격표 원본을 기준으로 작성했습니다.
@@ -167,7 +171,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261028a"></script>
-<script src="i18n/pages/dn.dict.js?v=20261027a"></script>
+<script src="i18n/pages/dn.dict.js?v=20261029a"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 </body>

@@ -112,90 +112,28 @@
       </div>
 
       <div class="section-head" style="margin-top: 8px;">
-        <h3 style="font-size: 18px; margin: 0 0 8px;">기본 규격 조견표 (내경 &times; 외경)</h3>
+        <h3 style="font-size: 18px; margin: 0 0 8px;">형번 매트릭스 (d &times; D &times; L)</h3>
+        <p style="font-size: 13.5px;">DUF 형번은 &ldquo;DUF + 내경 2자리 + 길이 2자리 - 후렌지 바깥지름(FD)&rdquo;으로 구성됩니다(예: DUF 0606-12 = d6 &middot; L6 &middot; FD12). 코드가 <strong>SKF</strong>로 표기된 칸은 DUF와 동일 치수의 대체 브랜드 코드입니다.</p>
       </div>
       <div class="field" style="max-width: 260px; margin-bottom: 12px;">
-        <label for="dufFilter">d&times;D 검색</label>
-        <input id="dufFilter" type="text" placeholder="예: 20" autocomplete="off" />
+        <label for="dufFilter">안지름(d) / 바깥지름(D) / 형번 검색</label>
+        <input id="dufFilter" type="text" placeholder="예: 20 또는 2020-31" autocomplete="off" />
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="dufCount" style="margin: 0;"></p>
-        <button type="button" class="spec-toolbar-btn" id="dufToggleAll">전체 펼치기</button>
       </div>
-      <details class="series-group" id="dufGroup">
-      <summary>기본 규격 조견표<span class="series-count">23건</span></summary>
-      <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px;">
-        <div style="flex: 1 1 160px;">
-          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-            <table class="spec-table" style="min-width: 140px;">
-              <thead><tr><th>d&times;D</th></tr></thead>
-              <tbody>
-                <tr><td class="type-cell">6&times;8</td></tr>
-                <tr><td class="type-cell">7&times;9</td></tr>
-                <tr><td class="type-cell">8&times;10</td></tr>
-                <tr><td class="type-cell">10&times;12</td></tr>
-                <tr><td class="type-cell">12&times;14</td></tr>
-                <tr><td class="type-cell">14&times;16</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div style="flex: 1 1 160px;">
-          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-            <table class="spec-table" style="min-width: 140px;">
-              <thead><tr><th>d&times;D</th></tr></thead>
-              <tbody>
-                <tr><td class="type-cell">15&times;17</td></tr>
-                <tr><td class="type-cell">16&times;18</td></tr>
-                <tr><td class="type-cell">18&times;20</td></tr>
-                <tr><td class="type-cell">20&times;23</td></tr>
-                <tr><td class="type-cell">22&times;25</td></tr>
-                <tr><td class="type-cell">24&times;27</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div style="flex: 1 1 160px;">
-          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-            <table class="spec-table" style="min-width: 140px;">
-              <thead><tr><th>d&times;D</th></tr></thead>
-              <tbody>
-                <tr><td class="type-cell">25&times;28</td></tr>
-                <tr><td class="type-cell">28&times;32</td></tr>
-                <tr><td class="type-cell">30&times;34</td></tr>
-                <tr><td class="type-cell">32&times;36</td></tr>
-                <tr><td class="type-cell">35&times;39</td></tr>
-                <tr><td class="type-cell">38&times;42</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div style="flex: 1 1 160px;">
-          <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
-            <table class="spec-table" style="min-width: 140px;">
-              <thead><tr><th>d&times;D</th></tr></thead>
-              <tbody>
-                <tr><td class="type-cell">40&times;44</td></tr>
-                <tr><td class="type-cell">45&times;50</td></tr>
-                <tr><td class="type-cell">50&times;55</td></tr>
-                <tr><td class="type-cell">55&times;60</td></tr>
-                <tr><td class="type-cell">60&times;65</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
+<table class="spec-table osp-matrix" style="min-width: 1500px; white-space: nowrap;">
+  <thead>
+  <tr><th rowspan="2">d</th><th rowspan="2">D</th><th rowspan="2">축 지름 공차</th><th rowspan="2">하우징 지름 (H7)</th><th colspan="2">두께</th><th colspan="11">플랜지 타입 부시 길이 (L)</th></tr>
+  <tr><th>Bush T1</th><th>Bush T2</th><th>6</th><th>8</th><th>10</th><th>12</th><th>15</th><th>20</th><th>25</th><th>30</th><th>40</th><th>50</th><th>60</th></tr>
+  </thead>
+  <tbody id="dufBody">
+  <tr><td class="type-cell">6</td><td class="type-cell">8</td><td style="white-space: nowrap;">6 <small>−0.025 / −0.037</small></td><td style="white-space: nowrap;">8 <small>+0.015 / 0</small></td><td rowspan="9" style="white-space: nowrap;">1.0 <small>0 / −0.03</small></td><td rowspan="9" style="white-space: nowrap;">1.0 <small>0 / −0.02</small></td><td class="osp-cell" data-code="DUF 0606-12">DUF 0606-12</td><td class="osp-cell" data-code="DUF 0608-12">DUF 0608-12</td><td class="osp-cell" data-code="DUF 0610-12">DUF 0610-12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">7</td><td class="type-cell">9</td><td style="white-space: nowrap;">7 <small>−0.025 / −0.040</small></td><td style="white-space: nowrap;">9 <small>+0.015 / 0</small></td><td></td><td></td><td class="osp-cell" data-code="DUF 0710-13">DUF 0710-13</td><td class="osp-cell" data-code="DUF 0712-13">DUF 0712-13</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">8</td><td class="type-cell">10</td><td style="white-space: nowrap;">8 <small>−0.025 / −0.040</small></td><td style="white-space: nowrap;">10 <small>+0.015 / 0</small></td><td class="osp-cell" data-code="DUF 0806-15">DUF 0806-15</td><td class="osp-cell" data-code="DUF 0808-15">DUF 0808-15</td><td class="osp-cell" data-code="DUF 0810-15">DUF 0810-15</td><td class="osp-cell" data-code="DUF 0812-15">DUF 0812-15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">10</td><td class="type-cell">12</td><td style="white-space: nowrap;">10 <small>−0.025 / −0.040</small></td><td style="white-space: nowrap;">12 <small>+0.018 / 0</small></td><td class="osp-cell" data-code="DUF 1006-18">DUF 1006-18</td><td class="osp-cell" data-code="DUF 1008-18">DUF 1008-18</td><td class="osp-cell" data-code="DUF 1010-18">DUF 1010-18</td><td class="osp-cell" data-code="DUF 1012-18">DUF 1012-18</td><td class="osp-cell" data-code="DUF 1015-18">DUF 1015-18</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">12</td><td class="type-cell">14</td><td style="white-space: nowrap;">12 <small>−0.025 / −0.043</small></td><td style="white-space: nowrap;">14 <small>+0.018 / 0</small></td><td class="osp-cell" data-code="DUF 1206-20">DUF 1206-20</td><td class="osp-cell" data-code="DUF 1208-20">DUF 1208-20</td><td class="osp-cell" data-code="DUF 1210-20">DUF 1210-20</td><td class="osp-cell" data-code="DUF 1212-20">DUF 1212-20</td><td class="osp-cell" data-code="DUF 1215-20">DUF 1215-20</td><td class="osp-cell" data-code="DUF 1220-20">DUF 1220-20</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">14</td><td class="type-cell">16</td><td style="white-space: nowrap;">14 <small>−0.025 / −0.043</small></td><td style="white-space: nowrap;">16 <small>+0.018 / 0</small></td><td></td><td></td><td class="osp-cell" data-code="DUF 1410-22">DUF 1410-22</td><td class="osp-cell" data-code="DUF 1412-22">DUF 1412-22</td><td class="osp-cell" data-code="DUF 1415-22">DUF 1415-22</td><td class="osp-cell" data-code="DUF 1420-22">DUF 1420-22</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">15</td><td class="type-cell">17</td><td style="white-space: nowrap;">15 <small>−0.025 / −0.043</small></td><td style="white-space: nowrap;">17 <small>+0.018 / 0</small></td><td></td><td></td><td class="osp-cell" data-code="DUF 1510-23">DUF 1510-23</td><td class="osp-cell" data-code="DUF 1512-23">DUF 1512-23</td><td class="osp-cell" data-code="DUF 1515-23">DUF 1515-23</td><td class="osp-cell" data-code="DUF 1520-23">DUF 1520-23</td><td class="osp-cell" data-code="DUF 1525-23">DUF 1525-23</td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">16</td><td class="type-cell">18</td><td style="white-space: nowrap;">16 <small>−0.025 / −0.043</small></td><td style="white-space: nowrap;">18 <small>+0.018 / 0</small></td><td></td><td></td><td class="osp-cell" data-code="DUF 1610-24">DUF 1610-24</td><td class="osp-cell" data-code="DUF 1612-24">DUF 1612-24</td><td class="osp-cell" data-code="DUF 1615-24">DUF 1615-24</td><td class="osp-cell" data-code="DUF 1620-24">DUF 1620-24</td><td class="osp-cell" data-code="DUF 1625-24">DUF 1625-24</td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">18</td><td class="type-cell">20</td><td style="white-space: nowrap;">18 <small>−0.025 / −0.043</small></td><td style="white-space: nowrap;">20 <small>+0.021 / 0</small></td><td></td><td></td><td class="osp-cell" data-code="DUF 1810-26">DUF 1810-26</td><td class="osp-cell" data-code="DUF 1812-26">DUF 1812-26</td><td class="osp-cell" data-code="DUF 1815-26">DUF 1815-26</td><td class="osp-cell" data-code="DUF 1820-26">DUF 1820-26</td><td class="osp-cell" data-code="DUF 1825-26">DUF 1825-26</td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">20</td><td class="type-cell">23</td><td style="white-space: nowrap;">20 <small>−0.025 / −0.046</small></td><td style="white-space: nowrap;">23 <small>+0.021 / 0</small></td><td rowspan="4" style="white-space: nowrap;">1.5 <small>0 / −0.03</small></td><td rowspan="4" style="white-space: nowrap;">1.5 <small>0 / −0.02</small></td><td></td><td></td><td class="osp-cell" data-code="DUF 2010-31">DUF 2010-31</td><td class="osp-cell" data-code="DUF 2012-31">DUF 2012-31</td><td class="osp-cell" data-code="DUF 2015-31">DUF 2015-31</td><td class="osp-cell" data-code="DUF 2020-31">DUF 2020-31</td><td class="osp-cell" data-code="DUF 2025-31">DUF 2025-31</td><td class="osp-cell" data-code="DUF 2030-31">DUF 2030-31</td><td></td><td></td><td></td></tr><tr><td class="type-cell">22</td><td class="type-cell">25</td><td style="white-space: nowrap;">22 <small>−0.025 / −0.046</small></td><td style="white-space: nowrap;">25 <small>+0.021 / 0</small></td><td></td><td></td><td class="osp-cell" data-code="DUF 2210-33">DUF 2210-33</td><td class="osp-cell" data-code="DUF 2212-33">DUF 2212-33</td><td class="osp-cell" data-code="DUF 2215-33">DUF 2215-33</td><td class="osp-cell" data-code="DUF 2220-33">DUF 2220-33</td><td class="osp-cell" data-code="DUF 2225-33">DUF 2225-33</td><td></td><td></td><td></td><td></td></tr><tr><td class="type-cell">24</td><td class="type-cell">27</td><td style="white-space: nowrap;">24 <small>−0.025 / −0.046</small></td><td style="white-space: nowrap;">27 <small>+0.021 / 0</small></td><td></td><td></td><td></td><td></td><td class="osp-cell" data-code="SKF 2415-35">SKF 2415-35</td><td class="osp-cell" data-code="SKF 2415-35">SKF 2415-35<sup style="color: var(--accent);">※</sup></td><td class="osp-cell" data-code="SKF 2415-35">SKF 2415-35<sup style="color: var(--accent);">※</sup></td><td class="osp-cell" data-code="DUF 2430-35">DUF 2430-35<sup style="color: var(--accent);">※</sup></td><td></td><td></td><td></td></tr><tr><td class="type-cell">25</td><td class="type-cell">28</td><td style="white-space: nowrap;">25 <small>−0.025 / −0.046</small></td><td style="white-space: nowrap;">28 <small>+0.021 / 0</small></td><td></td><td></td><td class="osp-cell" data-code="DUF 2510-36">DUF 2510-36</td><td class="osp-cell" data-code="DUF 2512-36">DUF 2512-36</td><td class="osp-cell" data-code="DUF 2515-36">DUF 2515-36</td><td class="osp-cell" data-code="DUF 2520-36">DUF 2520-36</td><td class="osp-cell" data-code="DUF 2525-36">DUF 2525-36</td><td class="osp-cell" data-code="DUF 2430-36">DUF 2430-36<sup style="color: var(--accent);">※</sup></td><td></td><td></td><td></td></tr><tr><td class="type-cell">28</td><td class="type-cell">32</td><td style="white-space: nowrap;">28 <small>−0.025 / −0.046</small></td><td style="white-space: nowrap;">32 <small>+0.025 / 0</small></td><td rowspan="6" style="white-space: nowrap;">2.0 <small>0 / −0.03</small></td><td rowspan="6" style="white-space: nowrap;">2.0 <small>0 / −0.02</small></td><td></td><td></td><td></td><td></td><td></td><td class="osp-cell" data-code="SKF 2820-40">SKF 2820-40</td><td></td><td class="osp-cell" data-code="DUF 2830-40">DUF 2830-40</td><td></td><td></td><td></td></tr><tr><td class="type-cell">30</td><td class="type-cell">34</td><td style="white-space: nowrap;">30 <small>−0.025 / −0.046</small></td><td style="white-space: nowrap;">34 <small>+0.025 / 0</small></td><td></td><td></td><td></td><td class="osp-cell" data-code="DUF 3012-42">DUF 3012-42</td><td class="osp-cell" data-code="DUF 3015-42">DUF 3015-42</td><td class="osp-cell" data-code="DUF 3020-42">DUF 3020-42</td><td class="osp-cell" data-code="DUF 3025-42">DUF 3025-42</td><td class="osp-cell" data-code="DUF 3030-42">DUF 3030-42</td><td class="osp-cell" data-code="DUF 3040-42">DUF 3040-42</td><td></td><td></td></tr><tr><td class="type-cell">32</td><td class="type-cell">36</td><td style="white-space: nowrap;">32 <small>−0.025 / −0.050</small></td><td style="white-space: nowrap;">36 <small>+0.025 / 0</small></td><td></td><td></td><td></td><td></td><td></td><td class="osp-cell" data-code="SKF 3220-46">SKF 3220-46</td><td></td><td class="osp-cell" data-code="DUF 3230-46">DUF 3230-46</td><td></td><td></td><td></td></tr><tr><td class="type-cell">35</td><td class="type-cell">39</td><td style="white-space: nowrap;">35 <small>−0.025 / −0.050</small></td><td style="white-space: nowrap;">39 <small>+0.025 / 0</small></td><td></td><td></td><td></td><td class="osp-cell" data-code="DUF 3512-49">DUF 3512-49</td><td></td><td class="osp-cell" data-code="DUF 3520-49">DUF 3520-49</td><td class="osp-cell" data-code="DUF 3525-49">DUF 3525-49</td><td class="osp-cell" data-code="DUF 3530-49">DUF 3530-49</td><td class="osp-cell" data-code="DUF 3540-49">DUF 3540-49</td><td class="osp-cell" data-code="DUF 3550-49">DUF 3550-49</td><td></td></tr><tr><td class="type-cell">38</td><td class="type-cell">42</td><td style="white-space: nowrap;">38 <small>−0.025 / −0.050</small></td><td style="white-space: nowrap;">42 <small>+0.025 / 0</small></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="osp-cell" data-code="DUF 3830-52">DUF 3830-52</td><td class="osp-cell" data-code="DUF 3840-52">DUF 3840-52</td><td></td><td></td></tr><tr><td class="type-cell">40</td><td class="type-cell">44</td><td style="white-space: nowrap;">40 <small>−0.025 / −0.050</small></td><td style="white-space: nowrap;">44 <small>+0.025 / 0</small></td><td></td><td></td><td></td><td class="osp-cell" data-code="DUF 4012-54">DUF 4012-54</td><td></td><td class="osp-cell" data-code="DUF 4020-54">DUF 4020-54</td><td class="osp-cell" data-code="DUF 4025-54">DUF 4025-54</td><td class="osp-cell" data-code="DUF 4030-54">DUF 4030-54</td><td class="osp-cell" data-code="DUF 4040-54">DUF 4040-54</td><td class="osp-cell" data-code="DUF 4050-54">DUF 4050-54</td><td></td></tr><tr><td class="type-cell">45</td><td class="type-cell">50</td><td style="white-space: nowrap;">45 <small>−0.025 / −0.050</small></td><td style="white-space: nowrap;">50 <small>+0.025 / 0</small></td><td rowspan="4" style="white-space: nowrap;">2.5 <small>0 / −0.03</small></td><td rowspan="4" style="white-space: nowrap;">2.5 <small>0 / −0.03</small></td><td></td><td></td><td></td><td></td><td></td><td class="osp-cell" data-code="SKF 4520-60">SKF 4520-60</td><td class="osp-cell" data-code="SKF 4525-60">SKF 4525-60</td><td class="osp-cell" data-code="DUF 4530-60">DUF 4530-60</td><td class="osp-cell" data-code="DUF 4540-60">DUF 4540-60</td><td class="osp-cell" data-code="DUF 4550-60">DUF 4550-60</td><td></td></tr><tr><td class="type-cell">50</td><td class="type-cell">55</td><td style="white-space: nowrap;">50 <small>−0.025 / −0.050</small></td><td style="white-space: nowrap;">55 <small>+0.030 / 0</small></td><td></td><td></td><td></td><td></td><td></td><td class="osp-cell" data-code="SKF 5020-65">SKF 5020-65</td><td></td><td class="osp-cell" data-code="DUF 5030-65">DUF 5030-65</td><td class="osp-cell" data-code="DUF 5040-65">DUF 5040-65</td><td></td><td class="osp-cell" data-code="DUF 5060-65">DUF 5060-65</td></tr><tr><td class="type-cell">55</td><td class="type-cell">60</td><td style="white-space: nowrap;">55 <small>−0.025 / −0.055</small></td><td style="white-space: nowrap;">60 <small>+0.030 / 0</small></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="osp-cell" data-code="DUF 5530-70">DUF 5530-70</td><td class="osp-cell" data-code="DUF 5540-70">DUF 5540-70</td><td></td><td class="osp-cell" data-code="DUF 5560-70">DUF 5560-70</td></tr><tr><td class="type-cell">60</td><td class="type-cell">65</td><td style="white-space: nowrap;">60 <small>−0.025 / −0.055</small></td><td style="white-space: nowrap;">65 <small>+0.030 / 0</small></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="osp-cell" data-code="DUF 6030-75">DUF 6030-75</td><td class="osp-cell" data-code="DUF 6040-75">DUF 6040-75</td><td></td><td class="osp-cell" data-code="DUF 6060-75">DUF 6060-75</td></tr>
+  </tbody>
+</table>
       </div>
-      </details>
-      <p style="font-size: 11px; color: var(--text-faint); margin-top: -8px; margin-bottom: 20px;">단위: mm · 플랜지 타입 부쉬 길이(L)별 정확한 형번은 아래 원본 규격표를 확인해 주세요.</p>
-
-      <div class="section-head" style="margin-top: 8px;">
-        <h3 style="font-size: 18px; margin: 0 0 8px;">규격표</h3>
-        <p style="font-size: 13.5px;">아래 표는 원본 규격표를 그대로 스캔한 이미지입니다. 코드가 <strong>SKF</strong>로 표기된 셀은 DUF와 동일 치수의 대체 브랜드 코드입니다.</p>
-      </div>
-      <div style="background: #fff; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px; margin-bottom: 20px; overflow-x: auto;">
-        <img loading="lazy" src="assets/duf_table.webp?v=wm5" alt="DUF 드라이 베어링 규격표" style="width: 100%; max-width: 1100px; display: block; margin: 0 auto;" />
-      </div>
-      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 코드 표기 예) DUF 0606-12 = d6, L6, FD12.</p>
+      <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px; margin-bottom: 20px;">단위: mm · T1=합금(부시) 두께 · T2=후렌지 두께 · 원본의 &lsquo;〃(위와 같음)&rsquo; 표기는 해당 값으로 풀어 적었고, 두께는 원본처럼 같은 값을 쓰는 구간별로 묶었습니다. 원본 축 공차는 부호 없이 인쇄되어 있어 DU 규격표(같은 축 지름)와 같이 &minus;로 표기했습니다.<br />※ 표시 칸은 원본 카탈로그 값을 그대로 옮긴 것으로, 제조사 자료로 확인되지 않았습니다(d24 행의 &lsquo;SKF 2415-35&rsquo; 3회 중복 인쇄, d24 &middot; L30 &lsquo;DUF 2430-35&rsquo;, d25 &middot; L30 &lsquo;DUF 2430-36&rsquo;). 발주 전 문의해 주세요.</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
         ※ 위 도면과 표는 당사 정식 규격표 원본을 기준으로 작성했습니다.
@@ -221,44 +159,43 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261028a"></script>
-<script src="i18n/pages/duf.dict.js?v=20261017p"></script>
+<script src="i18n/pages/duf.dict.js?v=20261029a"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
   (function () {
     var input = document.getElementById('dufFilter');
-    var grp = document.getElementById('dufGroup');
-    var rows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+    var body = document.getElementById('dufBody');
+    var rows = Array.prototype.slice.call(body.querySelectorAll('tr'));
     var countEl = document.getElementById('dufCount');
-    var toggleBtn = document.getElementById('dufToggleAll');
-    var totalRows = 23;
+    var totalCodes = body.querySelectorAll('.osp-cell').length;
+    var totalRows = rows.length;
 
     function applyFilter() {
       var q = input.value.trim().toUpperCase();
-      var shown = 0;
+      var shownCodes = 0;
+      var shownRows = 0;
       rows.forEach(function (row) {
-        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
-        row.style.display = match ? '' : 'none';
-        if (match) shown++;
+        var dCells = Array.prototype.slice.call(row.querySelectorAll('.type-cell'));
+        var codeCells = Array.prototype.slice.call(row.querySelectorAll('.osp-cell'));
+        var rowMatch = q === '' || dCells.some(function (td) {
+          return td.textContent.toUpperCase() === q;
+        }) || codeCells.some(function (td) {
+          return td.textContent.toUpperCase().indexOf(q) !== -1;
+        });
+        row.style.display = rowMatch ? '' : 'none';
+        if (rowMatch) {
+          shownRows++;
+          codeCells.forEach(function (td) {
+            if (q === '' || td.textContent.toUpperCase().indexOf(q) !== -1) shownCodes++;
+          });
+        }
       });
-      if (q !== '') { grp.open = shown > 0; }
-      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중';
+      countEl.textContent = (q === '' ? totalCodes : shownCodes) + '건 (' + shownRows + '개 d·D 조합) 표시 중';
     }
 
-    var allOpen = false;
-    toggleBtn.addEventListener('click', function () {
-      allOpen = !allOpen;
-      if (allOpen) {
-        input.value = '';
-        rows.forEach(function (row) { row.style.display = ''; });
-        countEl.textContent = totalRows + '건';
-      }
-      grp.open = allOpen;
-      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
-    });
-
     input.addEventListener('input', applyFilter);
-    countEl.textContent = totalRows + '건';
+    countEl.textContent = totalCodes + '건 (' + totalRows + '개 d·D 조합)';
   })();
 </script>
 </body>
