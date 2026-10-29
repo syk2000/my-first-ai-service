@@ -191,18 +191,18 @@
     <div class="wrap f-copy">© SWS TECH. 본 홈페이지의 도면·규격표·사진 등 자료의 무단 복제·배포를 금합니다.</div>
   </footer>
 <script src="i18n/common.dict.js?v=20261028a"></script>
-<script src="i18n/pages/board.dict.js?v=20261030c"></script>
+<script src="i18n/pages/board.dict.js?v=20261030d"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
-    // · 이메일로 문의하기: FormSubmit(무료, 키 불필요)으로 INQUIRY_EMAIL에 '견적·발주 요청서' 표 양식 메일 자동 발송.
-    //   첫 접수 때 FormSubmit이 이 주소로 '활성화 확인' 메일을 보내며, 그 메일의 버튼을 한 번 눌러야 이후 접수가 도착함.
-    //   전송 실패(서비스 장애 등) 시에는 요청서가 채워진 새 메일을 손님 메일 앱으로 바로 열고, Gmail·네이버 메일 바로가기도 안내
+    // · 이메일로 문의하기: 버튼 한 번으로 회사 메일(INQUIRY_EMAIL)에 '견적·발주 요청서' 표 양식 메일 자동 발송.
+    //   우리 서버(api/inquiry.js, 네이버 SMTP)가 먼저 보내고, 안 되면 FormSubmit(별칭 주소 → 같은 메일)으로 보냄
     // · 카카오톡으로 문의하기: SWS 카카오톡 채널 1:1 상담. 카카오톡 채널은 외부 사이트가 채팅 입력칸에
     //   글을 넣거나 대신 보내는 것을 막아두었으므로, 내용을 복사하고 상담창을 열어 손님이 붙여넣기 → 전송
     const INQUIRY_EMAIL = "lsd00213@naver.com"; // 견적·발주 요청서를 받을 메일 주소
     // FormSubmit 활성화 메일에 적힌 별칭(메일 주소를 코드에 노출하지 않아 스팸 수집 방지). 실제 받는 곳은 INQUIRY_EMAIL
+    const INQUIRY_API = "/api/inquiry"; // 회사 메일 발송(Vercel 함수)
     const FORMSUBMIT_URL = "https://formsubmit.co/ajax/06c8bd050147ba661797f96176c179f7";
     const KAKAO_CHAT_URL = "https://pf.kakao.com/_YMbgn/chat";
     const TYPE_KO = ["견적·단가 문의", "견적·재고 문의", "발주 문의"]; // 담당자가 읽기 쉽게 항상 한국어로
@@ -303,91 +303,47 @@
       ];
     }
 
-    function mailDraftBody(d) {
-      const rows = requestForm(d);
-      return [
-        "━━━━━━━━━━━━━━━━━━━━",
-        "        견적·발주 요청서",
-        "━━━━━━━━━━━━━━━━━━━━",
-        ...rows.filter(([k]) => k !== "문서 구분" && k !== "요청 품목 및 수량").map(([k, v]) => "■ " + k + ": " + v),
-        "",
-        "■ 요청 품목 및 수량",
-        d.message,
-        "━━━━━━━━━━━━━━━━━━━━",
-      ].join("\n");
-    }
-
-    function mailDraftUrl(d, subject) {
-      return "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(mailDraftBody(d));
-    }
-
-    // 자동 접수(FormSubmit)가 안 될 때: 손님 메일 앱에 요청서가 채워진 새 메일을 바로 열어 손님이 '보내기'만 누르게 함.
-    // 메일 앱이 없는 PC를 위해 Gmail·네이버 메일 바로가기와 내용 복사(자동 복사됨)를 함께 안내. 입력 내용은 지우지 않음
-    function openMailGuide(d, subject) {
-      const body = mailDraftBody(d);
-      copyText("받는 사람: " + INQUIRY_EMAIL + "\n제목: " + subject + "\n\n" + body);
-      location.href = mailDraftUrl(d, subject);
-
-      const box = document.createElement("div");
-      box.className = "kakao-guide mail-guide";
-      const title = document.createElement("strong");
-      title.textContent = tt("메일 앱에 요청서가 채워진 새 메일이 열립니다. 내용을 확인하고 '보내기'를 눌러 주세요.");
-      const note = document.createElement("p");
-      note.textContent = tt("메일 앱이 열리지 않으면 아래에서 쓰시는 메일을 눌러 보내 주세요. 요청서 내용은 이미 복사되어 있어 붙여넣기만 하시면 됩니다.") + " (" + INQUIRY_EMAIL + ")";
-      const links = document.createElement("p");
-      const mk = (label, href) => {
-        const a = document.createElement("a");
-        a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer";
-        a.textContent = label; a.className = "kakao-chat-link"; a.style.marginRight = "14px";
-        return a;
-      };
-      links.append(
-        mk(tt("Gmail로 보내기 →"), "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(INQUIRY_EMAIL) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body)),
-        mk(tt("네이버 메일로 보내기 →"), "https://mail.naver.com/v2/new"),
-        mk(tt("메일 앱으로 다시 열기 →"), mailDraftUrl(d, subject))
-      );
-      links.lastChild.removeAttribute("target");
-      box.append(title, note, links);
-      formStatus.replaceChildren(box);
-    }
-
-    async function sendEmail(d) {
-      const subject = "[SWS 홈페이지] 견적·발주 요청서 - " + d.name;
-      // 로컬 파일로 열었을 때는 바로 메일 앱으로
-      if (!location.protocol.startsWith("http")) {
-        openMailGuide(d, subject);
-        return;
+    async function postJSON(url, data) {
+      try {
+        const r = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data),
+          signal: AbortSignal.timeout ? AbortSignal.timeout(15000) : undefined, // 서비스가 멈췄을 때 오래 기다리지 않게
+        });
+        const res = await r.json().catch(() => ({}));
+        return r.ok && (res.ok === true || String(res.success) === "true");
+      } catch (err) {
+        return false;
       }
+    }
+
+    // 1순위: 우리 서버(api/inquiry.js)가 회사 메일로 바로 발송 / 2순위: FormSubmit / 둘 다 안 되면 전화·카톡 안내(입력 내용은 남김)
+    async function sendEmail(d) {
       const buttons = inquiryForm.querySelectorAll("button[type=submit]");
       buttons.forEach((b) => (b.disabled = true));
       showMessage(tt("전송 중입니다…"));
-      const payload = {
-        _subject: subject,
-        _template: "table", // 항목·내용 표 형태 메일
-        _captcha: "false",
-        _honey: document.getElementById("cBotcheck").checked ? "bot" : "", // 봇이 채우면 FormSubmit이 버림
-      };
-      if (d.email) payload._replyto = d.phone; // 받은 메일에서 '답장' → 손님 이메일로
-      requestForm(d).forEach(([k, v]) => (payload[k] = v));
-      let ok = false;
-      try {
-        const r = await fetch(FORMSUBMIT_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify(payload),
-          signal: AbortSignal.timeout ? AbortSignal.timeout(10000) : undefined, // 서비스가 멈췄을 때 오래 기다리지 않게
-        });
-        const res = await r.json().catch(() => ({}));
-        ok = r.ok && String(res.success) === "true";
-      } catch (err) {
-        ok = false;
+      const hp = document.getElementById("cBotcheck").checked;
+      let ok = await postJSON(INQUIRY_API, {
+        name: d.name, contact: d.phone, contactKind: d.email ? "email" : "phone", type: d.type, message: d.message, hp: hp ? "1" : "",
+      });
+      if (!ok) {
+        const payload = {
+          _subject: "[SWS 홈페이지] 견적·발주 요청서 - " + d.name,
+          _template: "table", // 항목·내용 표 형태 메일
+          _captcha: "false",
+          _honey: hp ? "bot" : "", // 봇이 채우면 FormSubmit이 버림
+        };
+        if (d.email) payload._replyto = d.phone; // 받은 메일에서 '답장' → 손님 이메일로
+        requestForm(d).forEach(([k, v]) => (payload[k] = v));
+        ok = await postJSON(FORMSUBMIT_URL, payload);
       }
       buttons.forEach((b) => (b.disabled = false));
       if (ok) {
         showMessage(tt("문의가 접수되었습니다. 담당자가 확인 후 빠르게 연락드리겠습니다."));
         inquiryForm.reset();
       } else {
-        openMailGuide(d, subject);
+        showMessage(tt("지금은 접수가 되지 않습니다. 잠시 후 다시 눌러 주시거나 전화(02-2613-3040) 또는 카카오톡으로 문의해 주세요."));
       }
     }
 
