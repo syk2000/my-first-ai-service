@@ -2833,7 +2833,7 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="ball_bearing_unit.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit.webp?v=2"); }
 .img-cards .product-card[href="plummer_block.html"]::before { background-image: url("assets/cards/pc_plummer_block.webp?v=2"); }
 .img-cards .product-card[href="radial_insert.html"]::before { background-image: url("assets/cards/pc_radial_insert.webp?v=2"); }
-.img-cards .product-card[href="small_unit.html"]::before { background-image: url("assets/cards/pc_small_unit.webp?v=2"); }
+.img-cards .product-card[href="small_unit.html"]::before { background-image: url("assets/cards/pc_small_unit.webp?v=3"); }
 .img-cards .product-card[href="plastic_unit.html"]::before { background-image: url("assets/cards/pc_plastic_unit.webp?v=2"); }
 .img-cards .product-card[href="spindle_bearing.html"]::before { background-image: url("assets/cards/pc_spindle_bearing.webp?v=2"); }
 .img-cards .product-card[href="ball_screw_support.html"]::before { background-image: url("assets/cards/pc_ball_screw_support.webp?v=2"); }
@@ -2960,9 +2960,9 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="unit_case_fa.html"]::before { background-image: url("assets/cards/pc_unit_case_fa.webp?v=2"); }
 .img-cards .product-card[href="unit_case_fb.html"]::before { background-image: url("assets/cards/pc_unit_case_fb.webp?v=2"); }
 .img-cards .product-card[href="unit_case_fs.html"]::before { background-image: url("assets/cards/pc_unit_case_fs.webp?v=2"); }
-.img-cards .product-card[href="unit_case_fc.html"]::before { background-image: url("assets/cards/pc_unit_case_fc.webp?v=2"); }
+.img-cards .product-card[href="unit_case_fc.html"]::before { background-image: url("assets/cards/pc_unit_case_fc.webp?v=3"); }
 .img-cards .product-card[href="unit_case_fcx.html"]::before { background-image: url("assets/cards/pc_unit_case_fcx.webp?v=2"); }
-.img-cards .product-card[href="unit_case_c.html"]::before { background-image: url("assets/cards/pc_unit_case_c.webp?v=2"); }
+.img-cards .product-card[href="unit_case_c.html"]::before { background-image: url("assets/cards/pc_unit_case_c.webp?v=3"); }
 .img-cards .product-card[href="unit_case_t.html"]::before { background-image: url("assets/cards/pc_unit_case_t.webp?v=2"); }
 .img-cards .product-card[href="unit_case_hcp.html"]::before { background-image: url("assets/cards/pc_unit_case_hcp.webp?v=2"); }
 .img-cards .product-card[href="unit_case_salp.html"]::before { background-image: url("assets/cards/pc_unit_case_salp.webp?v=2"); }
@@ -3147,3 +3147,15 @@ a.seal-type-card:hover { border-color: var(--accent); }
 .img-cards .product-card[href="grinding_locknut.html"]::before { background-image: url("assets/cards/pc_grinding_locknut.webp?v=1"); }
 .img-cards .product-card[href="ultra_grinding_locknut.html"]::before { background-image: url("assets/cards/pc_ultra_grinding_locknut.webp?v=1"); }
 .img-cards .product-card[href="balancing_locknut.html"]::before { background-image: url("assets/cards/pc_balancing_locknut.webp?v=1"); }
+/* ---------- 제품 사진·도면 크기 통일 (도면 240px, 실물 사진 200px — 비율 유지, 늘이거나 찌그러뜨리지 않음) ---------- */
+.fig-draw, .fig-photo { display: block; margin: 0 auto; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast; }
+.fig-draw { height: 240px; }
+.fig-photo { height: 200px; }
+@media (max-width: 720px) {
+  .fig-draw { height: auto; max-height: 240px; }
+  .fig-photo { height: auto; max-height: 200px; }
+}
+/* 카드 미리보기 사진: 잘리지 않게 전체를 흰 바탕 가운데에 (다른 카드 그림과 동일) */
+.product-card .p-icon-photo { object-fit: contain; background: #fff; }
+/* 카드 그림(::before)이 이미 있는 카드에서는 겹쳐 나오던 두 번째 미리보기 사진을 숨김 (클러치 베어링 카드) */
+.img-cards .product-card .p-icon-photo { display: none; }
