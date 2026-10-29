@@ -191,14 +191,14 @@
     <div class="wrap f-copy">© SWS TECH. 본 홈페이지의 도면·규격표·사진 등 자료의 무단 복제·배포를 금합니다.</div>
   </footer>
 <script src="i18n/common.dict.js?v=20261028a"></script>
-<script src="i18n/pages/board.dict.js?v=20261017p"></script>
+<script src="i18n/pages/board.dict.js?v=20261030c"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: FormSubmit(무료, 키 불필요)으로 INQUIRY_EMAIL에 '견적·발주 요청서' 표 양식 메일 자동 발송.
     //   첫 접수 때 FormSubmit이 이 주소로 '활성화 확인' 메일을 보내며, 그 메일의 버튼을 한 번 눌러야 이후 접수가 도착함.
-    //   전송 실패 시에는 안내와 함께 '메일 앱으로 보내기'(mailto) 링크를 보여주고, 로컬 파일로 열었을 때만 바로 메일 앱을 엶
+    //   전송 실패(서비스 장애 등) 시에는 요청서가 채워진 새 메일을 손님 메일 앱으로 바로 열고, Gmail·네이버 메일 바로가기도 안내
     // · 카카오톡으로 문의하기: SWS 카카오톡 채널 1:1 상담. 카카오톡 채널은 외부 사이트가 채팅 입력칸에
     //   글을 넣거나 대신 보내는 것을 막아두었으므로, 내용을 복사하고 상담창을 열어 손님이 붙여넣기 → 전송
     const INQUIRY_EMAIL = "lsd00213@naver.com"; // 견적·발주 요청서를 받을 메일 주소
@@ -303,9 +303,9 @@
       ];
     }
 
-    function mailDraftUrl(d, subject) {
+    function mailDraftBody(d) {
       const rows = requestForm(d);
-      const body = [
+      return [
         "━━━━━━━━━━━━━━━━━━━━",
         "        견적·발주 요청서",
         "━━━━━━━━━━━━━━━━━━━━",
@@ -315,31 +315,47 @@
         d.message,
         "━━━━━━━━━━━━━━━━━━━━",
       ].join("\n");
-      return "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     }
 
-    function openMailDraft(d, subject) {
+    function mailDraftUrl(d, subject) {
+      return "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(mailDraftBody(d));
+    }
+
+    // 자동 접수(FormSubmit)가 안 될 때: 손님 메일 앱에 요청서가 채워진 새 메일을 바로 열어 손님이 '보내기'만 누르게 함.
+    // 메일 앱이 없는 PC를 위해 Gmail·네이버 메일 바로가기와 내용 복사(자동 복사됨)를 함께 안내. 입력 내용은 지우지 않음
+    function openMailGuide(d, subject) {
+      const body = mailDraftBody(d);
+      copyText("받는 사람: " + INQUIRY_EMAIL + "\n제목: " + subject + "\n\n" + body);
       location.href = mailDraftUrl(d, subject);
-      showMessage(tt("메일 프로그램이 열리면 내용을 확인하고 보내기를 눌러 주세요."));
-    }
 
-    // 자동 접수 실패 시: 메일 프로그램을 멋대로 열지 않고(설정 안 된 PC에선 Outlook 설정 창이 뜸)
-    // 안내 + 직접 고를 수 있는 '메일 앱으로 보내기' 링크만 보여줌. 입력 내용은 지우지 않음
-    function showMailFallback(d, subject) {
-      const p = document.createElement("span");
-      p.textContent = tt("지금은 자동 접수가 되지 않습니다. 카카오톡으로 문의하시거나, 사용하시는 메일 앱으로 보내 주세요.") + " ";
-      const a = document.createElement("a");
-      a.href = mailDraftUrl(d, subject);
-      a.textContent = tt("메일 앱으로 보내기") + " (" + INQUIRY_EMAIL + ")";
-      a.style.textDecoration = "underline";
-      formStatus.replaceChildren(p, a);
+      const box = document.createElement("div");
+      box.className = "kakao-guide mail-guide";
+      const title = document.createElement("strong");
+      title.textContent = tt("메일 앱에 요청서가 채워진 새 메일이 열립니다. 내용을 확인하고 '보내기'를 눌러 주세요.");
+      const note = document.createElement("p");
+      note.textContent = tt("메일 앱이 열리지 않으면 아래에서 쓰시는 메일을 눌러 보내 주세요. 요청서 내용은 이미 복사되어 있어 붙여넣기만 하시면 됩니다.") + " (" + INQUIRY_EMAIL + ")";
+      const links = document.createElement("p");
+      const mk = (label, href) => {
+        const a = document.createElement("a");
+        a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer";
+        a.textContent = label; a.className = "kakao-chat-link"; a.style.marginRight = "14px";
+        return a;
+      };
+      links.append(
+        mk(tt("Gmail로 보내기 →"), "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(INQUIRY_EMAIL) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body)),
+        mk(tt("네이버 메일로 보내기 →"), "https://mail.naver.com/v2/new"),
+        mk(tt("메일 앱으로 다시 열기 →"), mailDraftUrl(d, subject))
+      );
+      links.lastChild.removeAttribute("target");
+      box.append(title, note, links);
+      formStatus.replaceChildren(box);
     }
 
     async function sendEmail(d) {
       const subject = "[SWS 홈페이지] 견적·발주 요청서 - " + d.name;
-      // 로컬 파일로 열었을 때: 메일 프로그램을 양식이 채워진 상태로 열기
+      // 로컬 파일로 열었을 때는 바로 메일 앱으로
       if (!location.protocol.startsWith("http")) {
-        openMailDraft(d, subject);
+        openMailGuide(d, subject);
         return;
       }
       const buttons = inquiryForm.querySelectorAll("button[type=submit]");
@@ -359,6 +375,7 @@
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify(payload),
+          signal: AbortSignal.timeout ? AbortSignal.timeout(10000) : undefined, // 서비스가 멈췄을 때 오래 기다리지 않게
         });
         const res = await r.json().catch(() => ({}));
         ok = r.ok && String(res.success) === "true";
@@ -370,7 +387,7 @@
         showMessage(tt("문의가 접수되었습니다. 담당자가 확인 후 빠르게 연락드리겠습니다."));
         inquiryForm.reset();
       } else {
-        showMailFallback(d, subject);
+        openMailGuide(d, subject);
       }
     }
 
