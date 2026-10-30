@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261030f">
+<link rel="stylesheet" href="styles.css?v=20261030g">
 </head>
 <body>
 
@@ -114,20 +114,20 @@
         <p class="diagram-legend">외경(Outside Dia.) · 내경(Inside Dia.) · 자유장(Free length, L0)<br /><span style="color: var(--text-faint);">변형량(Deflection)=압축량 · 최대변형량(Maximum deflection) · 압착높이/밀착장(Solid height)=완전 압축 시 높이(사용 금지 영역)</span></p>
       </div>
 
-      <div class="cat-tabs" role="tablist">
-        <button type="button" class="cat-tab-btn active" data-tab="sf">SF (경소하중) · 황색</button>
-        <button type="button" class="cat-tab-btn" data-tab="ssf">SSF (특수경소하중) · 황색</button>
-        <button type="button" class="cat-tab-btn" data-tab="sl">SL (경하중) · 청색</button>
-        <button type="button" class="cat-tab-btn" data-tab="ssl">SSL (특수경하중) · 청색</button>
-        <button type="button" class="cat-tab-btn" data-tab="sm">SM (중하중) · 적색</button>
-        <button type="button" class="cat-tab-btn" data-tab="sh">SH (중하중) · 녹색</button>
-        <button type="button" class="cat-tab-btn" data-tab="sb">SB (극중하중) · 갈색</button>
-        <button type="button" class="cat-tab-btn" data-tab="sg">SG (초중하중) · 검정</button>
-        <button type="button" class="cat-tab-btn" data-tab="sy">SY (극초변형) · 연두색</button>
-        <button type="button" class="cat-tab-btn" data-tab="ssy">SSY (중변형) · 보라색</button>
-        <button type="button" class="cat-tab-btn" data-tab="su">SU (극초변형) · 하늘색</button>
-        <button type="button" class="cat-tab-btn" data-tab="sc">SC (극경소하중) · 연보라색</button>
-        <button type="button" class="cat-tab-btn" data-tab="sr">SR (고변형) · 흰색</button>
+      <div class="cat-tabs tab-cards" role="tablist" aria-label="제품 타입 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="sf" role="tab" aria-selected="true"><span class="tab-card-title">SF (경소하중)</span><span class="tab-card-desc">황색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="ssf" role="tab" aria-selected="false"><span class="tab-card-title">SSF (특수경소하중)</span><span class="tab-card-desc">황색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sl" role="tab" aria-selected="false"><span class="tab-card-title">SL (경하중)</span><span class="tab-card-desc">청색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="ssl" role="tab" aria-selected="false"><span class="tab-card-title">SSL (특수경하중)</span><span class="tab-card-desc">청색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sm" role="tab" aria-selected="false"><span class="tab-card-title">SM (중하중)</span><span class="tab-card-desc">적색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sh" role="tab" aria-selected="false"><span class="tab-card-title">SH (중하중)</span><span class="tab-card-desc">녹색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sb" role="tab" aria-selected="false"><span class="tab-card-title">SB (극중하중)</span><span class="tab-card-desc">갈색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sg" role="tab" aria-selected="false"><span class="tab-card-title">SG (초중하중)</span><span class="tab-card-desc">검정</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sy" role="tab" aria-selected="false"><span class="tab-card-title">SY (극초변형)</span><span class="tab-card-desc">연두색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="ssy" role="tab" aria-selected="false"><span class="tab-card-title">SSY (중변형)</span><span class="tab-card-desc">보라색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="su" role="tab" aria-selected="false"><span class="tab-card-title">SU (극초변형)</span><span class="tab-card-desc">하늘색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sc" role="tab" aria-selected="false"><span class="tab-card-title">SC (극경소하중)</span><span class="tab-card-desc">연보라색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sr" role="tab" aria-selected="false"><span class="tab-card-title">SR (고변형)</span><span class="tab-card-desc">흰색</span></button>
       </div>
 
       <div class="cat-tab-panel" data-panel="sf">
@@ -4528,7 +4528,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/mold_spring.dict.js?v=20261029a"></script>
+<script src="i18n/pages/mold_spring.dict.js?v=20261030card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -4538,7 +4538,7 @@
     var tabPanels = Array.prototype.slice.call(document.querySelectorAll('#mold-spring .cat-tab-panel'));
 
     function activateTab(target) {
-      tabBtns.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-tab') === target); });
+      tabBtns.forEach(function (b) { var on = b.getAttribute('data-tab') === target; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); });
       tabPanels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== target; });
     }
 

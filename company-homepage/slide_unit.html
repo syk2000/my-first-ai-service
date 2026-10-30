@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261030f">
+<link rel="stylesheet" href="styles.css?v=20261030g">
 </head>
 <body>
 
@@ -107,7 +107,14 @@
         <input id="pgFilter" type="text" placeholder="예: SK20 또는 FT5038" autocomplete="off" />
       </div>
       <p class="finder-tip" id="pgCount" style="margin-bottom: 10px;"></p>
-      <h3 style="font-size: 17px; margin: 32px 0 12px;">SK 샤프트 서포트 (수직형)</h3>
+      <div class="cat-tabs tab-cards cols-4" role="tablist" aria-label="제품 타입 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="sk" role="tab" aria-selected="true"><span class="tab-card-title">SK 샤프트 서포트</span><span class="tab-card-desc">수직형 · 조임볼트 고정</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sf" role="tab" aria-selected="false"><span class="tab-card-title">SF 샤프트 서포트</span><span class="tab-card-desc">플랜지형 · 볼트 2개 설치</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="ft" role="tab" aria-selected="false"><span class="tab-card-title">FT 플랫 롤러 케이지</span><span class="tab-card-desc">평면 직선 안내용</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="ftw" role="tab" aria-selected="false"><span class="tab-card-title">FTW 플랫 롤러 케이지</span><span class="tab-card-desc">L형 · 직각 두 면 안내</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="sk">
+      <h3 style="font-size: 17px; margin: 8px 0 12px;">SK 샤프트 서포트 (수직형)</h3>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: 8px 0 12px;">리니어 샤프트의 끝단을 받쳐 고정하는 수직형 서포트입니다. 형번의 숫자는 적용 축경(mm)입니다.</p>
       <div class="diagram-box-lg">
         <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
@@ -123,7 +130,9 @@
             </table>
           </div>
         </details>
-      <h3 style="font-size: 17px; margin: 32px 0 12px;">SF 샤프트 서포트 (플랜지형)</h3>
+      </div>
+      <div class="cat-tab-panel" data-panel="sf" hidden>
+      <h3 style="font-size: 17px; margin: 8px 0 12px;">SF 샤프트 서포트 (플랜지형)</h3>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: 8px 0 12px;">플랜지 양쪽의 볼트 구멍으로 설치면에 고정하는 샤프트 서포트입니다. 형번의 숫자는 적용 축경(mm)입니다.</p>
       <div class="diagram-box-lg">
         <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
@@ -139,7 +148,9 @@
             </table>
           </div>
         </details>
-      <h3 style="font-size: 17px; margin: 32px 0 12px;">FT형 플랫 롤러 케이지</h3>
+      </div>
+      <div class="cat-tab-panel" data-panel="ft" hidden>
+      <h3 style="font-size: 17px; margin: 8px 0 12px;">FT형 플랫 롤러 케이지</h3>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: 8px 0 12px;">평면 위에서 직선 운동을 안내하는 롤러 케이지입니다. 형번 끝의 숫자는 케이지 길이(ℓ)이며, V가 붙은 형번은 V형 홈용입니다.</p>
       <div class="diagram-box-lg">
         <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
@@ -156,7 +167,9 @@
           </div>
         </details>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: 8px 0 12px;">주문 예: FT5038 P1 -750L → 호칭번호(FT5038) · 정도표시 기호(P1) · 케이지 전장 치수(750mm)</p>
-      <h3 style="font-size: 17px; margin: 32px 0 12px;">FTW형 플랫 롤러 케이지 (L형)</h3>
+      </div>
+      <div class="cat-tab-panel" data-panel="ftw" hidden>
+      <h3 style="font-size: 17px; margin: 8px 0 12px;">FTW형 플랫 롤러 케이지 (L형)</h3>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: 8px 0 12px;">90° 꺾인 L형 케이지로, 직각으로 만나는 두 면을 함께 안내합니다.</p>
       <div class="diagram-box-lg">
         <p style="text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;">당사 정식 규격 도면</p>
@@ -173,6 +186,7 @@
           </div>
         </details>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: 8px 0 12px;">주문 예: FTW5050 P1 -750L → 호칭번호(FTW5050) · 정도표시 기호(P1) · 케이지 전장 치수(750mm)</p>
+      </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
         &#8251; 위 표는 당사 SWS 카탈로그(베어링 치수표, 189&sim;190p)를 기준으로 작성했습니다. 정밀 가공&middot;발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.
@@ -198,15 +212,24 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/slide_unit.dict.js?v=20261030img"></script>
+<script src="i18n/pages/slide_unit.dict.js?v=20261030card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
   (function () {
+    // 이미지 카드 탭: 평소엔 고른 탭 하나만 보이고, 검색어가 있으면 모든 탭에서 일치하는 행을 한꺼번에 보여 줌
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
     var input = document.getElementById('pgFilter');
     var countEl = document.getElementById('pgCount');
+    var btns = Array.prototype.slice.call(document.querySelectorAll('#slide-unit .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('#slide-unit .cat-tab-panel'));
     var groups = Array.prototype.slice.call(document.querySelectorAll('.series-group'));
     var total = document.querySelectorAll('.series-group tbody tr').length;
+    var current = btns[0].getAttribute('data-tab');
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== current; });
+    }
     function apply() {
       var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
       var shown = 0;
@@ -220,8 +243,33 @@
         shown += n;
         grp.open = q === '' ? true : n > 0;
       });
+      if (q === '') {
+        showTab();
+      } else {
+        // 검색 중: 일치하는 행이 있는 탭은 모두 펼쳐 보이고, 없는 탭 카드는 흐리게
+        panels.forEach(function (p) {
+          var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none'; });
+          p.hidden = !hit;
+          btns.forEach(function (b) {
+            if (b.getAttribute('data-tab') === p.getAttribute('data-panel')) {
+              b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false');
+            }
+          });
+        });
+      }
       countEl.textContent = shown + ' / ' + total + '건 표시 중';
     }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        if (input.value !== '') { input.value = ''; apply(); } else { showTab(); }
+      });
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && panels.some(function (p) { return p.getAttribute('data-panel') === saved; })) current = saved;
+    showTab();
     input.addEventListener('input', apply);
     countEl.textContent = total + ' / ' + total + '건 표시 중';
   })();

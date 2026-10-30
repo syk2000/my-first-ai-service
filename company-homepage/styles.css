@@ -2781,7 +2781,7 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="ball_bearing_unit.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit.webp?v=11"); }
 .img-cards .product-card[href="plummer_block.html"]::before { background-image: url("assets/cards/pc_plummer_block.webp?v=10"); }
 .img-cards .product-card[href="radial_insert.html"]::before { background-image: url("assets/cards/pc_radial_insert.webp?v=10"); }
-.img-cards .product-card[href="small_unit.html"]::before { background-image: url("assets/cards/pc_small_unit.webp?v=10"); }
+.img-cards .product-card[href="small_unit.html"]::before { background-image: url("assets/cards/pc_small_unit.webp?v=11"); }
 .img-cards .product-card[href="plastic_unit.html"]::before { background-image: url("assets/cards/pc_plastic_unit.webp?v=10"); }
 .img-cards .product-card[href="spindle_bearing.html"]::before { background-image: url("assets/cards/pc_spindle_bearing.webp?v=3"); }
 .img-cards .product-card[href="ball_screw_support.html"]::before { background-image: url("assets/cards/pc_ball_screw_support.webp?v=10"); }
@@ -2869,20 +2869,20 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="packing_pcs.html"]::before { background-image: url("assets/cards/pc_packing_pcs.webp?v=10"); }
 .img-cards .product-card[href="packing_dki.html"]::before { background-image: url("assets/cards/pc_packing_dki.webp?v=10"); }
 .img-cards .product-card[href="packing_scb.html"]::before { background-image: url("assets/cards/pc_packing_scb.webp?v=10"); }
-.img-cards .product-card[href="snapring_r.html"]::before { background-image: url("assets/cards/pc_snapring_r.webp?v=10"); }
-.img-cards .product-card[href="snapring_s.html"]::before { background-image: url("assets/cards/pc_snapring_s.webp?v=10"); }
-.img-cards .product-card[href="irtw.html"]::before { background-image: url("assets/cards/pc_irtw.webp?v=10"); }
-.img-cards .product-card[href="istw.html"]::before { background-image: url("assets/cards/pc_istw.webp?v=10"); }
-.img-cards .product-card[href="wr.html"]::before { background-image: url("assets/cards/pc_wr.webp?v=10"); }
-.img-cards .product-card[href="ws.html"]::before { background-image: url("assets/cards/pc_ws.webp?v=10"); }
-.img-cards .product-card[href="snapring_nr.html"]::before { background-image: url("assets/cards/pc_snapring_nr.webp?v=10"); }
-.img-cards .product-card[href="snapring_e.html"]::before { background-image: url("assets/cards/pc_snapring_e.webp?v=10"); }
-.img-cards .product-card[href="snapring_c.html"]::before { background-image: url("assets/cards/pc_snapring_c.webp?v=10"); }
-.img-cards .product-card[href="snapring_u.html"]::before { background-image: url("assets/cards/pc_snapring_u.webp?v=10"); }
-.img-cards .product-card[href="snapring_g.html"]::before { background-image: url("assets/cards/pc_snapring_g.webp?v=10"); }
-.img-cards .product-card[href="snapring_k.html"]::before { background-image: url("assets/cards/pc_snapring_k.webp?v=10"); }
-.img-cards .product-card[href="s_cs_stop.html"]::before { background-image: url("assets/cards/pc_s_cs_stop.webp?v=10"); }
-.img-cards .product-card[href="r_cr_stop.html"]::before { background-image: url("assets/cards/pc_r_cr_stop.webp?v=10"); }
+.img-cards .product-card[href="snapring_r.html"]::before { background-image: url("assets/cards/pc_snapring_r.webp?v=11"); }
+.img-cards .product-card[href="snapring_s.html"]::before { background-image: url("assets/cards/pc_snapring_s.webp?v=11"); }
+.img-cards .product-card[href="irtw.html"]::before { background-image: url("assets/cards/pc_irtw.webp?v=11"); }
+.img-cards .product-card[href="istw.html"]::before { background-image: url("assets/cards/pc_istw.webp?v=11"); }
+.img-cards .product-card[href="wr.html"]::before { background-image: url("assets/cards/pc_wr.webp?v=11"); }
+.img-cards .product-card[href="ws.html"]::before { background-image: url("assets/cards/pc_ws.webp?v=11"); }
+.img-cards .product-card[href="snapring_nr.html"]::before { background-image: url("assets/cards/pc_snapring_nr.webp?v=11"); }
+.img-cards .product-card[href="snapring_e.html"]::before { background-image: url("assets/cards/pc_snapring_e.webp?v=11"); }
+.img-cards .product-card[href="snapring_c.html"]::before { background-image: url("assets/cards/pc_snapring_c.webp?v=11"); }
+.img-cards .product-card[href="snapring_u.html"]::before { background-image: url("assets/cards/pc_snapring_u.webp?v=11"); }
+.img-cards .product-card[href="snapring_g.html"]::before { background-image: url("assets/cards/pc_snapring_g.webp?v=11"); }
+.img-cards .product-card[href="snapring_k.html"]::before { background-image: url("assets/cards/pc_snapring_k.webp?v=11"); }
+.img-cards .product-card[href="s_cs_stop.html"]::before { background-image: url("assets/cards/pc_s_cs_stop.webp?v=11"); }
+.img-cards .product-card[href="r_cr_stop.html"]::before { background-image: url("assets/cards/pc_r_cr_stop.webp?v=11"); }
 .img-cards .product-card[href="s_pushnut.html"]::before { background-image: url("assets/cards/pc_s_pushnut.webp?v=10"); }
 .img-cards .product-card[href="r_pushnut.html"]::before { background-image: url("assets/cards/pc_r_pushnut.webp?v=10"); }
 .img-cards .product-card[href="prat_push_nut.html"]::before { background-image: url("assets/cards/pc_prat_push_nut.webp?v=10"); }
@@ -3107,3 +3107,65 @@ table.spec-table th { color: #4b5873; }
 .product-card .p-icon-photo { object-fit: contain; background: #fff; }
 /* 카드 그림(::before)이 이미 있는 카드에서는 겹쳐 나오던 두 번째 미리보기 사진을 숨김 (클러치 베어링 카드) */
 .img-cards .product-card .p-icon-photo { display: none; }
+
+/* 이미지 카드형 탭 선택기(2026-10-30) — 스냅링 페이지 이미지 카드와 같은 모양으로 탭 전환
+   (linear_bushing · slide_unit · mold_spring). 버튼·data-tab·.active 는 기존 탭 스크립트 그대로 */
+.cat-tabs.tab-cards { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-bottom: 24px; }
+.cat-tabs.tab-cards.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tab-cards .cat-tab-btn { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; text-align: left; font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px; cursor: pointer; transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease; }
+.tab-cards .cat-tab-btn::before { content: ""; display: block; width: 56px; height: 56px; margin: 0; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; vertical-align: 0; }
+.tab-cards .cat-tab-btn:hover, .tab-cards .cat-tab-btn:focus-visible { border-color: var(--accent); color: var(--text); transform: translateY(-2px); }
+.tab-cards .cat-tab-btn.active { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft); color: var(--text); }
+.tab-cards .cat-tab-btn.no-match { opacity: 0.45; }
+.tab-cards .tab-card-title { display: block; font-size: 15px; font-weight: 700; line-height: 1.3; word-break: keep-all; overflow-wrap: anywhere; }
+.tab-cards .cat-tab-btn.active .tab-card-title { color: var(--accent); }
+.tab-cards .tab-card-desc { display: block; font-size: 12.5px; font-weight: 400; color: var(--text-sub); line-height: 1.4; word-break: keep-all; }
+@media (max-width: 960px) { .cat-tabs.tab-cards, .cat-tabs.tab-cards.cols-4 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 720px) {
+  .cat-tabs.tab-cards, .cat-tabs.tab-cards.cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tab-cards .cat-tab-btn { padding: 12px; gap: 6px; }
+  .tab-cards .cat-tab-btn::before { width: 48px; height: 48px; }
+  .tab-cards .tab-card-title { font-size: 14px; }
+  .tab-cards .tab-card-desc { font-size: 12px; }
+}
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="lm"]::before { background-image: url("assets/cards/lb_lm.webp?v=1"); }
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="lmf"]::before { background-image: url("assets/cards/lb_lmf.webp?v=1"); }
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="lmk"]::before { background-image: url("assets/cards/lb_lmk.webp?v=1"); }
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="lmh"]::before { background-image: url("assets/cards/lb_lmh.webp?v=1"); }
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="sc"]::before { background-image: url("assets/cards/lb_sc.webp?v=1"); }
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="st"]::before { background-image: url("assets/cards/lb_st.webp?v=1"); }
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="lme"]::before { background-image: url("assets/cards/lb_lme.webp?v=1"); }
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="lmb"]::before { background-image: url("assets/cards/lb_lmb.webp?v=1"); }
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="kh"]::before { background-image: url("assets/cards/lb_kh.webp?v=1"); }
+#linear-bushing .tab-cards .cat-tab-btn[data-tab="sdm"]::before { background-image: url("assets/cards/lb_sdm.webp?v=1"); }
+#slide-unit .tab-cards .cat-tab-btn[data-tab="sk"]::before { background-image: url("assets/cards/su_sk.webp?v=1"); }
+#slide-unit .tab-cards .cat-tab-btn[data-tab="sf"]::before { background-image: url("assets/cards/su_sf.webp?v=1"); }
+#slide-unit .tab-cards .cat-tab-btn[data-tab="ft"]::before { background-image: url("assets/cards/su_ft.webp?v=1"); }
+#slide-unit .tab-cards .cat-tab-btn[data-tab="ftw"]::before { background-image: url("assets/cards/su_ftw.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="sf"]::before { background-image: url("assets/cards/ms_sf.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="ssf"]::before { background-image: url("assets/cards/ms_ssf.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="sl"]::before { background-image: url("assets/cards/ms_sl.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="ssl"]::before { background-image: url("assets/cards/ms_ssl.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="sm"]::before { background-image: url("assets/cards/ms_sm.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="sh"]::before { background-image: url("assets/cards/ms_sh.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="sb"]::before { background-image: url("assets/cards/ms_sb.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="sg"]::before { background-image: url("assets/cards/ms_sg.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="sy"]::before { background-image: url("assets/cards/ms_sy.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="ssy"]::before { background-image: url("assets/cards/ms_ssy.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="su"]::before { background-image: url("assets/cards/ms_su.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="sc"]::before { background-image: url("assets/cards/ms_sc.webp?v=1"); }
+#mold-spring .tab-cards .cat-tab-btn[data-tab="sr"]::before { background-image: url("assets/cards/ms_sr.webp?v=1"); }
+.cat-tabs.tab-cards.cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+@media (max-width: 960px) { .cat-tabs.tab-cards.cols-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .cat-tabs.tab-cards.cols-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+#tm-screw .tab-cards .cat-tab-btn[data-tab="tmr"]::before { background-image: url("assets/cards/tm_tmr.webp?v=1"); }
+#tm-screw .tab-cards .cat-tab-btn[data-tab="stm"]::before { background-image: url("assets/cards/tm_stm.webp?v=1"); }
+#tm-screw .tab-cards .cat-tab-btn[data-tab="btm"]::before { background-image: url("assets/cards/tm_btm.webp?v=1"); }
+#tm-screw .tab-cards .cat-tab-btn[data-tab="ttm"]::before { background-image: url("assets/cards/tm_ttm.webp?v=1"); }
+#tm-screw .tab-cards .cat-tab-btn[data-tab="atm"]::before { background-image: url("assets/cards/tm_atm.webp?v=1"); }
+#tm-screw .tab-cards .cat-tab-btn[data-tab="ftm"]::before { background-image: url("assets/cards/tm_ftm.webp?v=1"); }
+#lm-guide .tab-cards .cat-tab-btn[data-tab="hsrc"]::before { background-image: url("assets/cards/lm_hsrc.webp?v=1"); }
+#lm-guide .tab-cards .cat-tab-btn[data-tab="hsrr"]::before { background-image: url("assets/cards/lm_hsrr.webp?v=1"); }
+#lm-guide .tab-cards .cat-tab-btn[data-tab="srv"]::before { background-image: url("assets/cards/lm_srv.webp?v=1"); }
+#lm-guide .tab-cards .cat-tab-btn[data-tab="srw"]::before { background-image: url("assets/cards/lm_srw.webp?v=1"); }
+#lm-guide .tab-cards .cat-tab-btn[data-tab="srtb"]::before { background-image: url("assets/cards/lm_srtb.webp?v=1"); }

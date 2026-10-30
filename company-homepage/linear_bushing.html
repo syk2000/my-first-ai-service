@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261030f">
+<link rel="stylesheet" href="styles.css?v=20261030g">
 </head>
 <body>
 
@@ -102,17 +102,17 @@
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
-      <div class="cat-tabs" role="tablist">
-        <button type="button" class="cat-tab-btn active" data-tab="lm">LM/LML (표준형)</button>
-        <button type="button" class="cat-tab-btn" data-tab="lmf">LMF/LMFL</button>
-        <button type="button" class="cat-tab-btn" data-tab="lmk">LMK/LMKL</button>
-        <button type="button" class="cat-tab-btn" data-tab="lmh">LMH/LMHL</button>
-        <button type="button" class="cat-tab-btn" data-tab="sc">SC/SCW/SCWNB</button>
-        <button type="button" class="cat-tab-btn" data-tab="st">ST (스트로크)</button>
-        <button type="button" class="cat-tab-btn" data-tab="lme">LME (유럽 규격)</button>
-        <button type="button" class="cat-tab-btn" data-tab="lmb">LMB/SDB (인치 규격)</button>
-        <button type="button" class="cat-tab-btn" data-tab="kh">KH..PP (드로운컵형)</button>
-        <button type="button" class="cat-tab-btn" data-tab="sdm">SDM</button>
+      <div class="cat-tabs tab-cards" role="tablist" aria-label="제품 타입 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="lm" role="tab" aria-selected="true"><span class="tab-card-title">LM/LML (표준형)</span><span class="tab-card-desc">플랜지 없는 기본 원통형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="lmf" role="tab" aria-selected="false"><span class="tab-card-title">LMF/LMFL</span><span class="tab-card-desc">원형 플랜지 부착형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="lmk" role="tab" aria-selected="false"><span class="tab-card-title">LMK/LMKL</span><span class="tab-card-desc">정사각 플랜지 부착형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="lmh" role="tab" aria-selected="false"><span class="tab-card-title">LMH/LMHL</span><span class="tab-card-desc">양면 컷 플랜지형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sc" role="tab" aria-selected="false"><span class="tab-card-title">SC/SCW/SCWNB</span><span class="tab-card-desc">알루미늄 케이스 압입형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="st" role="tab" aria-selected="false"><span class="tab-card-title">ST (스트로크)</span><span class="tab-card-desc">스트로크 볼 부시</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="lme" role="tab" aria-selected="false"><span class="tab-card-title">LME (유럽 규격)</span><span class="tab-card-desc">유럽 규격 치수 원통형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="lmb" role="tab" aria-selected="false"><span class="tab-card-title">LMB/SDB (인치 규격)</span><span class="tab-card-desc">인치 축용 원통형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="kh" role="tab" aria-selected="false"><span class="tab-card-title">KH..PP (드로운컵형)</span><span class="tab-card-desc">프레스 외륜·양측 실</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sdm" role="tab" aria-selected="false"><span class="tab-card-title">SDM</span><span class="tab-card-desc">LM과 같은 원통형</span></button>
       </div>
 
       <div class="cat-tab-panel" data-panel="lm">
@@ -460,7 +460,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/linear_bushing.dict.js?v=20261030img"></script>
+<script src="i18n/pages/linear_bushing.dict.js?v=20261030card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -469,7 +469,7 @@
     var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
     var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
     function activate(target) {
-      btns.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-tab') === target); });
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === target; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); });
       panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== target; });
     }
     btns.forEach(function (btn) {
