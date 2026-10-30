@@ -3169,3 +3169,16 @@ table.spec-table th { color: #4b5873; }
 #lm-guide .tab-cards .cat-tab-btn[data-tab="srv"]::before { background-image: url("assets/cards/lm_srv.webp?v=1"); }
 #lm-guide .tab-cards .cat-tab-btn[data-tab="srw"]::before { background-image: url("assets/cards/lm_srw.webp?v=1"); }
 #lm-guide .tab-cards .cat-tab-btn[data-tab="srtb"]::before { background-image: url("assets/cards/lm_srtb.webp?v=1"); }
+
+/* 이미지 카드 탭 추가분(소형 유닛·볼 스크류 서포트) */
+.cat-tabs.tab-cards.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 720px) { .cat-tabs.tab-cards.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+#small-unit .tab-cards .cat-tab-btn[data-tab="p"]::before { background-image: url("assets/cards/su2_pb.webp?v=1"); }
+#small-unit .tab-cards .cat-tab-btn[data-tab="fl"]::before { background-image: url("assets/cards/su2_fl.webp?v=1"); }
+#small-unit .tab-cards .cat-tab-btn[data-tab="compare"]::before { background-image: url("assets/cards/su2_insert.webp?v=1"); }
+#ball-screw-support .tab-cards .cat-tab-btn[data-tab="zklf"]::before { background-image: url("assets/cards/bss_zklf.webp?v=1"); }
+#ball-screw-support .tab-cards .cat-tab-btn[data-tab="zkln"]::before { background-image: url("assets/cards/bss_zkln.webp?v=1"); }
+#ball-screw-support .tab-cards .cat-tab-btn[data-tab="7602"]::before { background-image: url("assets/cards/bss_7602.webp?v=1"); }
+#ball-screw-support .tab-cards .cat-tab-btn[data-tab="7603"]::before { background-image: url("assets/cards/bss_7603.webp?v=1"); }
+#ball-screw-support .tab-cards .cat-tab-btn[data-tab="tac"]::before { background-image: url("assets/cards/bss_tac.webp?v=1"); }
+#ball-screw-support .tab-cards .cat-tab-btn[data-tab="bsb"]::before { background-image: url("assets/cards/bss_bsb.webp?v=1"); }
