@@ -3276,3 +3276,33 @@ table.spec-table th { color: #4b5873; }
 #balancing_locknut .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_balancing_locknut.webp?v=10"); }
 #ultra_grinding_locknut .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_ultra_grinding_locknut.webp?v=10"); }
 #grinding_locknut .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_grinding_locknut.webp?v=10"); }
+
+/* 시리즈 카드 탭 그림 (b4) */
+#unit-case-t .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_unit_case_t.webp?v=10"); }
+#unit-case-p .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_unit_case_p.webp?v=10"); }
+#unit-case-fl .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_unit_case_fl.webp?v=10"); }
+#unit-case-f .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_unit_case_f.webp?v=10"); }
+#unit-case-c .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_unit_case_c.webp?v=10"); }
+#hah-sleeve-h32 .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hah_sleeve_h32.webp?v=10"); }
+#hah-sleeve-h32 .tab-cards .cat-tab-btn[data-tab="g2"]::before { background-image: url("assets/cards/ah_sleeve.webp?v=1"); }
+#hah-sleeve-h31 .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hah_sleeve_h31.webp?v=10"); }
+#hah-sleeve-h31 .tab-cards .cat-tab-btn[data-tab="g2"]::before { background-image: url("assets/cards/ah_sleeve.webp?v=1"); }
+#hah-sleeve-h30 .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hah_sleeve_h30.webp?v=10"); }
+#hah-sleeve-h30 .tab-cards .cat-tab-btn[data-tab="g2"]::before { background-image: url("assets/cards/ah_sleeve.webp?v=1"); }
+#hah-sleeve-h3 .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hah_sleeve_h3.webp?v=10"); }
+#hah-sleeve-h3 .tab-cards .cat-tab-btn[data-tab="g2"]::before { background-image: url("assets/cards/ah_sleeve.webp?v=1"); }
+#hah-sleeve-h23 .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hah_sleeve_h23.webp?v=10"); }
+#hah-sleeve-h23 .tab-cards .cat-tab-btn[data-tab="g2"]::before { background-image: url("assets/cards/ah_sleeve.webp?v=1"); }
+#takeup-uctm .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_takeup_uctm.webp?v=10"); }
+#key-normal .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_key_normal.webp?v=10"); }
+#spring-plunger-2206 .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_spring_plunger_2206.webp?v=10"); }
+#spring-plunger-2206 .tab-cards .cat-tab-btn[data-tab="g3"]::before { background-image: url("assets/cards/spl_hex_plastic.webp?v=1"); }
+#spring-plunger-2206 .tab-cards .cat-tab-btn[data-tab="g4"]::before { background-image: url("assets/cards/spl_hex_sus.webp?v=1"); }
+#spring-plunger-2206 .tab-cards .cat-tab-btn[data-tab="g5"]::before { background-image: url("assets/cards/spl_hex_sus_plastic.webp?v=1"); }
+#spring-plunger-2206 .tab-cards .cat-tab-btn[data-tab="g6"]::before { background-image: url("assets/cards/spl_driver.webp?v=1"); }
+#spring-plunger-2205 .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_spring_plunger_2205.webp?v=10"); }
+#spring-plunger-2205 .tab-cards .cat-tab-btn[data-tab="g1"]::before { background-image: url("assets/cards/spl_ball_slot.webp?v=1"); }
+#spring-plunger-2205 .tab-cards .cat-tab-btn[data-tab="g2"]::before { background-image: url("assets/cards/spl_ball_slot.webp?v=1"); }
+#spring-plunger-2205 .tab-cards .cat-tab-btn[data-tab="g3"]::before { background-image: url("assets/cards/spl_pin_slot.webp?v=1"); }
+#spring-plunger-2205 .tab-cards .cat-tab-btn[data-tab="g4"]::before { background-image: url("assets/cards/spl_pin_slot.webp?v=1"); }
+#spring-plunger-2206 .tab-cards .cat-tab-btn[data-tab="g1"]::before, #spring-plunger-2206 .tab-cards .cat-tab-btn[data-tab="g2"]::before { background-image: url("assets/cards/spl_hex_ball.webp?v=1"); }

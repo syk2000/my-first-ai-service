@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031m">
+<link rel="stylesheet" href="styles.css?v=20261031n">
 </head>
 <body>
 
@@ -115,10 +115,15 @@
         </div>
         <div class="spec-toolbar">
           <p class="finder-tip" id="fluCount" style="margin: 0;"></p>
-          <button type="button" class="spec-toolbar-btn" id="fluToggleAll">전체 펼치기</button>
+          <button type="button" class="spec-toolbar-btn" id="fluToggleAll" style="display: none;">전체 펼치기</button>
         </div>
         <div id="fluGroups">
-          <details class="series-group">
+      <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">UCF2 시리즈 (소형)</span><span class="tab-card-desc">15건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">UCF3 시리즈 (중형)</span><span class="tab-card-desc">21건</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="g1">
+        <details class="series-group" open>
             <summary>UCF2 시리즈 (소형)<span class="series-count">15건</span></summary>
             <div class="finder-results" style="overflow-x: auto;">
               <table class="spec-table" style="min-width: 460px; max-width: 640px;">
@@ -127,7 +132,9 @@
               </table>
             </div>
           </details>
-          <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="g2" hidden>
+        <details class="series-group" open>
             <summary>UCF3 시리즈 (중형)<span class="series-count">21건</span></summary>
             <div class="finder-results" style="overflow-x: auto;">
               <table class="spec-table" style="min-width: 460px; max-width: 640px;">
@@ -136,6 +143,8 @@
               </table>
             </div>
           </details>
+      </div>
+
         </div>
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (축경 열의 inch계 서브 규격은 대표 mm값으로 병기)</p>
 
@@ -164,7 +173,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/unit_case_f.dict.js?v=20261030img"></script>
+<script src="i18n/pages/unit_case_f.dict.js?v=20261031card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -209,6 +218,57 @@
 
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+  })();
+</script>
+<script>
+  (function () {
+    // 이미지 카드 탭(시리즈별): 평소엔 고른 시리즈만 보이고, 검색어가 있으면 일치하는 행이 있는 시리즈를 모두 보여 줌
+    var root = document.getElementById('unit-case-f');
+    var input = document.getElementById('fluFilter');
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var btns = Array.prototype.slice.call(root.querySelectorAll('.tab-cards .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('.cat-tab-panel[data-panel^="g"]'));
+    var current = btns[0].getAttribute('data-tab');
+    function getInput() { return input || root.querySelector('input[id$="Filter"]'); }
+    function btnFor(p) { return btns.filter(function (b) { return b.getAttribute('data-tab') === p.getAttribute('data-panel'); })[0]; }
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== current;
+        Array.prototype.forEach.call(p.querySelectorAll('details.series-group'), function (d) { d.open = true; });
+      });
+    }
+    function sync() {
+      var inp = getInput();
+      var q = inp ? inp.value.trim() : '';
+      if (q === '') { showTab(); return; }
+      panels.forEach(function (p) {
+        var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none' && !r.hidden; });
+        p.hidden = !hit;
+        var b = btnFor(p);
+        if (b) { b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); }
+      });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        var inp = getInput();
+        if (inp && inp.value !== '') { inp.value = ''; inp.dispatchEvent(new Event('input', { bubbles: true })); } else { showTab(); }
+      });
+    });
+    // 자동 검색칸(common.js)이 카드 아래에 붙으면 카드 위로 옮김
+    function placeAuto() {
+      var box = root.querySelector('.auto-spec-search'); var cards = root.querySelector('.tab-cards');
+      if (box && cards && (cards.compareDocumentPosition(box) & 4)) cards.parentNode.insertBefore(box, cards);
+    }
+    placeAuto();
+    document.addEventListener('DOMContentLoaded', placeAuto);
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
+    root.addEventListener('input', function (e) { if (e.target.matches && e.target.matches('input[id$="Filter"]')) sync(); });
   })();
 </script>
 </body>

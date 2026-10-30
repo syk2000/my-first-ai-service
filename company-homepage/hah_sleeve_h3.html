@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031m">
+<link rel="stylesheet" href="styles.css?v=20261031n">
 </head>
 <body>
 
@@ -110,7 +110,13 @@
           <p class="diagram-legend">d1(축 지름)&middot;D2(어댑터 외경)&middot;a(나사부 길이)&middot;r(모떼기)&middot;e(절단부 폭)&middot;L(어댑터 길이, 계열별 상이) &middot; TAPER 1/12 내경, 45&deg; 모따기</p>
         </div>
 
-      <details class="series-group" open>
+      
+      <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">H.AH 3 계열 어댑터 슬리브 (H)</span><span class="tab-card-desc">H304 ~ H322</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">AH 3 계열 인발(철거용) 슬리브 (AH)</span><span class="tab-card-desc">AH308 ~ AHX320</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="g1">
+        <details class="series-group" open>
         <summary>H.AH 3 계열 어댑터 슬리브 (H)<span class="series-count">H304 ~ H322</span></summary>
       <div class="finder-results" style="margin-top: 10px; overflow-x: auto;">
         <table class="spec-table" style="min-width: 680px;">
@@ -139,8 +145,11 @@
           </tbody>
         </table>
       </div>
-      </details><p style="font-size: 12px; color: var(--text-faint); margin: 6px 0 0;">※ H321 사이즈는 NSK·NTN·SJA 세 출처 모두에 등재되어 있지 않아 표준 생산 사이즈가 아닌 것으로 판단됩니다.</p><p style="font-size: 12px; color: var(--text-faint); margin: 6px 0 0;">※ H322X(L=77)는 NTN·SJA 두 출처에서 확인되며(NSK 미등재), 별도로 동일 내경(d=110)에 H3122(L=81)가 NSK·NTN·SJA 모두에 등재되어 있습니다. 두 품번은 슬리브 길이가 달라 서로 대체 불가하므로 발주 전 반드시 어느 쪽인지 확인하시기 바랍니다. ※ H319X의 슬리브 길이(L)는 NSK·SWS 자료 68과 SJA 자료 59가 달라(<sup>&sect;</sup>), 발주 전 문의가 필요합니다.</p>
-      <details class="series-group" open>
+      </details>
+<p style="font-size: 12px; color: var(--text-faint); margin: 6px 0 0;">※ H321 사이즈는 NSK·NTN·SJA 세 출처 모두에 등재되어 있지 않아 표준 생산 사이즈가 아닌 것으로 판단됩니다.</p><p style="font-size: 12px; color: var(--text-faint); margin: 6px 0 0;">※ H322X(L=77)는 NTN·SJA 두 출처에서 확인되며(NSK 미등재), 별도로 동일 내경(d=110)에 H3122(L=81)가 NSK·NTN·SJA 모두에 등재되어 있습니다. 두 품번은 슬리브 길이가 달라 서로 대체 불가하므로 발주 전 반드시 어느 쪽인지 확인하시기 바랍니다. ※ H319X의 슬리브 길이(L)는 NSK·SWS 자료 68과 SJA 자료 59가 달라(<sup>&sect;</sup>), 발주 전 문의가 필요합니다.</p>
+      </div>
+      <div class="cat-tab-panel" data-panel="g2" hidden>
+        <details class="series-group" open>
         <summary>AH 3 계열 인발(철거용) 슬리브 (AH)<span class="series-count">AH308 ~ AHX320</span></summary>
       <div class="finder-results" style="margin-top: 10px; overflow-x: auto;">
         <table class="spec-table" style="min-width: 620px;">
@@ -165,6 +174,8 @@
         </table>
       </div>
       </details>
+      </div>
+
       <div class="section-head" style="margin-top: 28px;">
         <h4 style="font-size: 15px; margin: 0 0 2px;">슬리브 나사·기본치수 (당사 카탈로그, 계열 A3)</h4>
       </div>
@@ -239,9 +250,60 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/hah_sleeve_h3.dict.js?v=20261028b"></script>
+<script src="i18n/pages/hah_sleeve_h3.dict.js?v=20261031card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
+<script>
+  (function () {
+    // 이미지 카드 탭(시리즈별): 평소엔 고른 시리즈만 보이고, 검색어가 있으면 일치하는 행이 있는 시리즈를 모두 보여 줌
+    var root = document.getElementById('hah-sleeve-h3');
+    var input = null;
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var btns = Array.prototype.slice.call(root.querySelectorAll('.tab-cards .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('.cat-tab-panel[data-panel^="g"]'));
+    var current = btns[0].getAttribute('data-tab');
+    function getInput() { return input || root.querySelector('input[id$="Filter"]'); }
+    function btnFor(p) { return btns.filter(function (b) { return b.getAttribute('data-tab') === p.getAttribute('data-panel'); })[0]; }
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== current;
+        Array.prototype.forEach.call(p.querySelectorAll('details.series-group'), function (d) { d.open = true; });
+      });
+    }
+    function sync() {
+      var inp = getInput();
+      var q = inp ? inp.value.trim() : '';
+      if (q === '') { showTab(); return; }
+      panels.forEach(function (p) {
+        var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none' && !r.hidden; });
+        p.hidden = !hit;
+        var b = btnFor(p);
+        if (b) { b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); }
+      });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        var inp = getInput();
+        if (inp && inp.value !== '') { inp.value = ''; inp.dispatchEvent(new Event('input', { bubbles: true })); } else { showTab(); }
+      });
+    });
+    // 자동 검색칸(common.js)이 카드 아래에 붙으면 카드 위로 옮김
+    function placeAuto() {
+      var box = root.querySelector('.auto-spec-search'); var cards = root.querySelector('.tab-cards');
+      if (box && cards && (cards.compareDocumentPosition(box) & 4)) cards.parentNode.insertBefore(box, cards);
+    }
+    placeAuto();
+    document.addEventListener('DOMContentLoaded', placeAuto);
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
+    root.addEventListener('input', function (e) { if (e.target.matches && e.target.matches('input[id$="Filter"]')) sync(); });
+  })();
+</script>
 </body>
 </html>
 

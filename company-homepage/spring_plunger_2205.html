@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031m">
+<link rel="stylesheet" href="styles.css?v=20261031n">
 </head>
 <body>
 
@@ -115,10 +115,17 @@
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="spCount" style="margin: 0;"></p>
-        <button type="button" class="spec-toolbar-btn" id="spToggleAll">전체 접기</button>
+        <button type="button" class="spec-toolbar-btn" id="spToggleAll" style="display: none;">전체 접기</button>
       </div>
       <div id="spGroups">
-<details class="series-group" open>
+      <div class="cat-tabs tab-cards cols-4" role="tablist" aria-label="시리즈 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">볼타입 · 일반 하중 스프링</span><span class="tab-card-desc">10건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">볼타입 · 강화 하중 스프링</span><span class="tab-card-desc">8건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g3" role="tab" aria-selected="false"><span class="tab-card-title">라운드 핀타입 · 일반 하중 스프링</span><span class="tab-card-desc">9건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g4" role="tab" aria-selected="false"><span class="tab-card-title">라운드 핀타입 · 강화 하중 스프링</span><span class="tab-card-desc">7건</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="g1">
+        <details class="series-group" open>
   <summary>볼타입 · 일반 하중 스프링 (ball, standard spring load)<span class="series-count">10건</span></summary>
   <div class="finder-results" style="overflow-x: auto;">
     <table class="spec-table" style="min-width: 820px;">
@@ -138,7 +145,9 @@
     </table>
   </div>
 </details>
-<details class="series-group" open>
+      </div>
+      <div class="cat-tab-panel" data-panel="g2" hidden>
+        <details class="series-group" open>
   <summary>볼타입 · 강화 하중 스프링 (ball, increased spring load)<span class="series-count">8건</span></summary>
   <div class="finder-results" style="overflow-x: auto;">
     <table class="spec-table" style="min-width: 820px;">
@@ -156,7 +165,9 @@
     </table>
   </div>
 </details>
-<details class="series-group" open>
+      </div>
+      <div class="cat-tab-panel" data-panel="g3" hidden>
+        <details class="series-group" open>
   <summary>라운드 핀타입 · 일반 하중 스프링 (pin, standard spring load)<span class="series-count">9건</span></summary>
   <div class="finder-results" style="overflow-x: auto;">
     <table class="spec-table" style="min-width: 820px;">
@@ -175,7 +186,9 @@
     </table>
   </div>
 </details>
-<details class="series-group" open>
+      </div>
+      <div class="cat-tab-panel" data-panel="g4" hidden>
+        <details class="series-group" open>
   <summary>라운드 핀타입 · 강화 하중 스프링 (pin, increased spring load)<span class="series-count">7건</span></summary>
   <div class="finder-results" style="overflow-x: auto;">
     <table class="spec-table" style="min-width: 820px;">
@@ -192,6 +205,8 @@
     </table>
   </div>
 </details>
+      </div>
+
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (하중은 N, 통계상 평균치). 최대 250℃까지 사용할 수 있습니다. 강화 스프링 제품은 볼이 노란색, 강화 스프링 스테인리스 제품은 몸체 끝이 노란색입니다. 나사 잠금 처리는 별도 주문 사양입니다.</p>
 
@@ -219,7 +234,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/spring_plunger_2205.dict.js?v=20261030img"></script>
+<script src="i18n/pages/spring_plunger_2205.dict.js?v=20261031card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -254,6 +269,57 @@
     });
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + seriesCount + '개 시리즈';
+  })();
+</script>
+<script>
+  (function () {
+    // 이미지 카드 탭(시리즈별): 평소엔 고른 시리즈만 보이고, 검색어가 있으면 일치하는 행이 있는 시리즈를 모두 보여 줌
+    var root = document.getElementById('spring-plunger-2205');
+    var input = document.getElementById('spFilter');
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var btns = Array.prototype.slice.call(root.querySelectorAll('.tab-cards .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('.cat-tab-panel[data-panel^="g"]'));
+    var current = btns[0].getAttribute('data-tab');
+    function getInput() { return input || root.querySelector('input[id$="Filter"]'); }
+    function btnFor(p) { return btns.filter(function (b) { return b.getAttribute('data-tab') === p.getAttribute('data-panel'); })[0]; }
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== current;
+        Array.prototype.forEach.call(p.querySelectorAll('details.series-group'), function (d) { d.open = true; });
+      });
+    }
+    function sync() {
+      var inp = getInput();
+      var q = inp ? inp.value.trim() : '';
+      if (q === '') { showTab(); return; }
+      panels.forEach(function (p) {
+        var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none' && !r.hidden; });
+        p.hidden = !hit;
+        var b = btnFor(p);
+        if (b) { b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); }
+      });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        var inp = getInput();
+        if (inp && inp.value !== '') { inp.value = ''; inp.dispatchEvent(new Event('input', { bubbles: true })); } else { showTab(); }
+      });
+    });
+    // 자동 검색칸(common.js)이 카드 아래에 붙으면 카드 위로 옮김
+    function placeAuto() {
+      var box = root.querySelector('.auto-spec-search'); var cards = root.querySelector('.tab-cards');
+      if (box && cards && (cards.compareDocumentPosition(box) & 4)) cards.parentNode.insertBefore(box, cards);
+    }
+    placeAuto();
+    document.addEventListener('DOMContentLoaded', placeAuto);
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
+    root.addEventListener('input', function (e) { if (e.target.matches && e.target.matches('input[id$="Filter"]')) sync(); });
   })();
 </script>
 </body>
