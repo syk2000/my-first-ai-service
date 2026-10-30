@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261030i">
+<link rel="stylesheet" href="styles.css?v=20261030j">
 </head>
 <body>
 
@@ -104,22 +104,27 @@
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
-      <div class="diagram-box">
-        <p class="diagram-caption">당사 SWS 카탈로그 규격 도면</p>
-        <img class="fig-draw" src="img/spherical_plain.webp?v=wm5" alt="구조 단면도" loading="lazy">
-        <p class="diagram-legend">d(내경) · D(외경) · 공차(d/D) · B(폭) · C(외륜 폭) · K(구면 지름)</p>
-      </div>
-
       <div class="field" style="max-width: 360px; margin-bottom: 16px;">
         <label for="spbFilter">형번 / 규격 검색</label>
         <input id="spbFilter" type="text" placeholder="예: GE20ES 또는 20*35" autocomplete="off" />
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="spbCount" style="margin: 0;"></p>
-        <button type="button" class="spec-toolbar-btn" id="spbToggleAll">전체 펼치기</button>
+        <button type="button" class="spec-toolbar-btn" id="spbToggleAll">전체 접기</button>
       </div>
-      <div id="spbGroups">
-        <details class="series-group">
+      <div class="cat-tabs tab-cards cols-4" role="tablist" aria-label="제품 타입 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="sb" role="tab" aria-selected="true"><span class="tab-card-title">SB</span><span class="tab-card-desc">구면 외륜 · 기본형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="ge" role="tab" aria-selected="false"><span class="tab-card-title">GE</span><span class="tab-card-desc">외륜 분할형 · 급유 홈</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="pb" role="tab" aria-selected="false"><span class="tab-card-title">PB(JS)</span><span class="tab-card-desc">외륜 밴드형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sbb" role="tab" aria-selected="false"><span class="tab-card-title">SBB</span><span class="tab-card-desc">폭 넓은 대형</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="sb">
+      <div class="diagram-box">
+        <p class="diagram-caption">당사 SWS 카탈로그 규격 도면</p>
+        <img class="fig-draw" src="img/spherical_plain.webp?v=wm5" alt="구조 단면도" loading="lazy">
+        <p class="diagram-legend">d(내경) · D(외경) · 공차(d/D) · B(폭) · C(외륜 폭) · K(구면 지름)</p>
+      </div>
+        <details class="series-group" open>
           <summary>SB 시리즈<span class="series-count">25건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
@@ -150,7 +155,14 @@
             </div>
           </div>
         </details>
-        <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="ge" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">당사 SWS 카탈로그 규격 도면</p>
+        <img class="fig-draw" src="img/spherical_plain.webp?v=wm5" alt="구조 단면도" loading="lazy">
+        <p class="diagram-legend">d(내경) · D(외경) · 공차(d/D) · B(폭) · C(외륜 폭) · K(구면 지름)</p>
+      </div>
+        <details class="series-group" open>
           <summary>GE 시리즈<span class="series-count">59건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
@@ -181,7 +193,14 @@
             </div>
           </div>
         </details>
-        <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="pb" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">당사 SWS 카탈로그 규격 도면</p>
+        <img class="fig-draw" src="img/spherical_plain.webp?v=wm5" alt="구조 단면도" loading="lazy">
+        <p class="diagram-legend">d(내경) · D(외경) · 공차(d/D) · B(폭) · C(외륜 폭) · K(구면 지름)</p>
+      </div>
+        <details class="series-group" open>
           <summary>PB(JS) 시리즈<span class="series-count">13건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
@@ -212,7 +231,14 @@
             </div>
           </div>
         </details>
-        <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="sbb" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">당사 SWS 카탈로그 규격 도면</p>
+        <img class="fig-draw" src="img/spherical_plain.webp?v=wm5" alt="구조 단면도" loading="lazy">
+        <p class="diagram-legend">d(내경) · D(외경) · 공차(d/D) · B(폭) · C(외륜 폭) · K(구면 지름)</p>
+      </div>
+        <details class="series-group" open>
           <summary>SBB 시리즈<span class="series-count">23건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
@@ -270,18 +296,26 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/spherical_plain.dict.js?v=20261030img"></script>
+<script src="i18n/pages/spherical_plain.dict.js?v=20261030card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
   (function () {
+    // 이미지 카드 탭: 평소엔 고른 시리즈 하나만 보이고, 검색어가 있으면 모든 탭에서 일치하는 행을 한꺼번에 보여 줌
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
     var input = document.getElementById('spbFilter');
-    var groupsWrap = document.getElementById('spbGroups');
-    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var btns = Array.prototype.slice.call(document.querySelectorAll('#spherical-plain .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('#spherical-plain .cat-tab-panel'));
+    var groups = Array.prototype.slice.call(document.querySelectorAll('#spherical-plain .series-group'));
     var countEl = document.getElementById('spbCount');
     var toggleBtn = document.getElementById('spbToggleAll');
     var totalRows = 120;
-
+    var current = btns[0].getAttribute('data-tab');
+    var allOpen = true;
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== current; });
+    }
     function applyFilter() {
       var q = input.value.trim().toUpperCase();
       var shown = 0;
@@ -294,22 +328,40 @@
           if (match) grpShown++;
         });
         shown += grpShown;
-        if (q !== '') {
-          grp.open = grpShown > 0;
-        } else {
-          grp.open = false;
-        }
+        grp.open = q !== '' ? grpShown > 0 : allOpen;
       });
+      if (q === '') {
+        showTab();
+      } else {
+        // 검색 중: 일치하는 행이 있는 탭은 모두 펼쳐 보이고, 없는 탭 카드는 흐리게
+        panels.forEach(function (p) {
+          var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none'; });
+          p.hidden = !hit;
+          btns.forEach(function (b) {
+            if (b.getAttribute('data-tab') === p.getAttribute('data-panel')) {
+              b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false');
+            }
+          });
+        });
+      }
       countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 4 + '개 시리즈';
     }
-
-    var allOpen = false;
     toggleBtn.addEventListener('click', function () {
       allOpen = !allOpen;
       groups.forEach(function (grp) { grp.open = allOpen; });
       toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
     });
-
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        if (input.value !== '') { input.value = ''; applyFilter(); } else { showTab(); }
+      });
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 4 + '개 시리즈';
   })();

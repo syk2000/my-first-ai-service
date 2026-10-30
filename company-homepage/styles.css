@@ -3194,3 +3194,9 @@ table.spec-table th { color: #4b5873; }
 #rod-end .tab-cards .cat-tab-btn[data-tab="jft"]::before { background-image: url("assets/cards/re_jft.webp?v=1"); }
 #rod-end .tab-cards .cat-tab-btn[data-tab="jmts"]::before { background-image: url("assets/cards/re_jmts.webp?v=1"); }
 #rod-end .tab-cards .cat-tab-btn[data-tab="jfts"]::before { background-image: url("assets/cards/re_jfts.webp?v=1"); }
+
+/* 이미지 카드 탭 추가분(구면 플레인) */
+#spherical-plain .tab-cards .cat-tab-btn[data-tab="sb"]::before { background-image: url("assets/cards/sp_sb.webp?v=1"); }
+#spherical-plain .tab-cards .cat-tab-btn[data-tab="ge"]::before { background-image: url("assets/cards/sp_ge.webp?v=1"); }
+#spherical-plain .tab-cards .cat-tab-btn[data-tab="pb"]::before { background-image: url("assets/cards/sp_pb.webp?v=1"); }
+#spherical-plain .tab-cards .cat-tab-btn[data-tab="sbb"]::before { background-image: url("assets/cards/sp_sbb.webp?v=1"); }
