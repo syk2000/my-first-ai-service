@@ -3182,3 +3182,15 @@ table.spec-table th { color: #4b5873; }
 #ball-screw-support .tab-cards .cat-tab-btn[data-tab="7603"]::before { background-image: url("assets/cards/bss_7603.webp?v=1"); }
 #ball-screw-support .tab-cards .cat-tab-btn[data-tab="tac"]::before { background-image: url("assets/cards/bss_tac.webp?v=1"); }
 #ball-screw-support .tab-cards .cat-tab-btn[data-tab="bsb"]::before { background-image: url("assets/cards/bss_bsb.webp?v=1"); }
+
+/* 이미지 카드 탭 추가분(로드 엔드) */
+.cat-tabs.tab-cards.cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+@media (max-width: 960px) { .cat-tabs.tab-cards.cols-7 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .cat-tabs.tab-cards.cols-7 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+#rod-end .tab-cards .cat-tab-btn[data-tab="jf"]::before { background-image: url("assets/cards/re_jf.webp?v=1"); }
+#rod-end .tab-cards .cat-tab-btn[data-tab="jm"]::before { background-image: url("assets/cards/re_jm.webp?v=1"); }
+#rod-end .tab-cards .cat-tab-btn[data-tab="phsa"]::before { background-image: url("assets/cards/re_phsa.webp?v=1"); }
+#rod-end .tab-cards .cat-tab-btn[data-tab="jmt"]::before { background-image: url("assets/cards/re_jmt.webp?v=1"); }
+#rod-end .tab-cards .cat-tab-btn[data-tab="jft"]::before { background-image: url("assets/cards/re_jft.webp?v=1"); }
+#rod-end .tab-cards .cat-tab-btn[data-tab="jmts"]::before { background-image: url("assets/cards/re_jmts.webp?v=1"); }
+#rod-end .tab-cards .cat-tab-btn[data-tab="jfts"]::before { background-image: url("assets/cards/re_jfts.webp?v=1"); }
