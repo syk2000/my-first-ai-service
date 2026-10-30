@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031k">
+<link rel="stylesheet" href="styles.css?v=20261031l">
 </head>
 <body>
 
@@ -106,10 +106,19 @@
       <div style="margin: 8px 0 20px;"><h3 style="font-size: 15px; margin: 0 0 8px;">특징</h3><ul style="margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.75; color: var(--text-sub);"><li>백래시가 없고 응답성·감쇠성이 높아 진동을 빠르게 흡수합니다.</li><li>높은 게인 설정이 가능해 안정화 시간이 짧아지고 생산성·품질이 향상됩니다.</li><li>허브: 고강성 알루미늄 합금 · 방진 고무: HNBR · 체결 볼트: SCM435(흑색 산화피막) · 사용 온도 -20℃~80℃</li><li>사용 주변 온도에 따라 아래 보정계수를 상용·최대 토크에 곱해 선정하십시오.</li></ul></div>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 16px;">주문 예시: DHRA-39A-CBCB-10-10 (사이즈 39 · 싱글 타입 A · 허브 타입 CB/CB · 내경 D1 10 · 내경 D2 10)</p>
       <div class="field" style="max-width: 360px; margin-bottom: 16px;"><label for="cplFilter">형번 / 치수 검색</label><input id="cplFilter" type="text" placeholder="예: DHRA-24A-CBXCB 또는 25" autocomplete="off" /></div>
-      <div class="spec-toolbar"><p class="finder-tip" id="cplCount" style="margin: 0;"></p><button type="button" class="spec-toolbar-btn" id="cplToggleAll">전체 접기</button></div>
+      <div class="spec-toolbar"><p class="finder-tip" id="cplCount" style="margin: 0;"></p><button type="button" class="spec-toolbar-btn" id="cplToggleAll" style="display: none;">전체 접기</button></div>
       <div id="cplGroups">
+      <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">DHRA</span><span class="tab-card-desc">클램프 타입</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">DHRA 표준 내경</span><span class="tab-card-desc">8건</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="g1">
         <details class="series-group" open><summary>DHRA (클램프 타입)<span class="series-count">8건</span></summary><div class="finder-results" style="overflow-x: auto;"><table class="spec-table spec-main" style="min-width: 1020px; font-size: 12.5px;"><thead><tr><th rowspan="2">형번</th><th colspan="1">치수 (mm)</th><th colspan="2">내경 D1·D2 (mm)</th><th colspan="3">치수 (mm)</th><th colspan="2">체결 볼트</th><th rowspan="2">상용 토크<br>N·m</th><th rowspan="2">최대 토크<br>N·m</th><th rowspan="2">최대 회전수<br>min<sup>-1</sup></th><th rowspan="2">비틀림 강성<br>N·m/rad</th><th rowspan="2">허용 편각<br>°</th><th rowspan="2">허용 편심<br>mm</th><th rowspan="2">허용 엔드플레이<br>±mm</th></tr><tr><th>A</th><th>최소</th><th>최대</th><th>L</th><th>S</th><th>W</th><th>규격</th><th>토크<br>N·m</th></tr></thead><tbody><tr><td class="type-cell">DHRA-16A-CBXCB</td><td>16</td><td>3</td><td>6</td><td>7.75</td><td>7.5</td><td>23</td><td>M2</td><td>0.6</td><td>1</td><td>2</td><td>42,000</td><td>41</td><td>1.5</td><td>0.15</td><td>0.2</td></tr><tr><td class="type-cell">DHRA-19A-CBXCB</td><td>19</td><td>4</td><td>8</td><td>8.25</td><td>9.5</td><td>26</td><td>M2</td><td>0.6</td><td>1.9</td><td>3.8</td><td>33,000</td><td>84</td><td>1.5</td><td>0.15</td><td>0.2</td></tr><tr><td class="type-cell">DHRA-24A-CBXCB</td><td>24</td><td>5</td><td>12</td><td>10</td><td>12</td><td>32</td><td>M2.5</td><td>1</td><td>3.5</td><td>7</td><td>25,000</td><td>162</td><td>1.5</td><td>0.15</td><td>0.2</td></tr><tr><td class="type-cell">DHRA-29A-CBXCB</td><td>29</td><td>6</td><td>15</td><td>11.5</td><td>13</td><td>36</td><td>M3</td><td>1.8</td><td>5.7</td><td>11.4</td><td>21,000</td><td>209</td><td>1.5</td><td>0.2</td><td>0.3</td></tr><tr><td class="type-cell">DHRA-34A-CBXCB</td><td>34</td><td>8</td><td>16</td><td>12.5</td><td>13</td><td>38</td><td>M3</td><td>1.8</td><td>7</td><td>14</td><td>18,000</td><td>370</td><td>1.5</td><td>0.2</td><td>0.3</td></tr><tr><td class="type-cell">DHRA-39A-CBXCB</td><td>39</td><td>8</td><td>20</td><td>16</td><td>16</td><td>48</td><td>M4</td><td>3.7</td><td>12</td><td>24</td><td>16,000</td><td>479</td><td>1.5</td><td>0.2</td><td>0.3</td></tr><tr><td class="type-cell">DHRA-44A-CBXCB</td><td>44</td><td>10</td><td>22</td><td>15.5</td><td>17</td><td>48</td><td>M4</td><td>3.7</td><td>16</td><td>32</td><td>14,000</td><td>610</td><td>1.5</td><td>0.2</td><td>0.3</td></tr><tr><td class="type-cell">DHRA-56A-CBXCB</td><td>56</td><td>12</td><td>25</td><td>20</td><td>20</td><td>60</td><td>M5</td><td>8.5</td><td>31.5</td><td>63</td><td>11,000</td><td>1,430</td><td>1.5</td><td>0.2</td><td>0.3</td></tr></tbody></table></div><div class="finder-results" style="overflow-x: auto; margin-top: 14px;"><p style="font-size: 12.5px; font-weight: 600; margin: 0 0 6px;">사용 주변 온도에 따른 토크 보정계수</p><table class="spec-table" style="max-width: 360px; font-size: 12.5px;"><thead><tr><th>사용 온도</th><th>보정계수</th></tr></thead><tbody><tr><td>-20℃ ~ 30℃</td><td>1.00</td></tr><tr><td>30℃ ~ 40℃</td><td>0.80</td></tr><tr><td>40℃ ~ 60℃</td><td>0.70</td></tr><tr><td>60℃ ~ 80℃</td><td>0.55</td></tr></tbody></table></div><ul style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0; padding-left: 0; list-style: none; line-height: 1.6;"><li>* 최대 회전수는 동적 균형을 고려하지 않았습니다.</li><li>* 기타 치수 허용치에 관해서는 당사에 문의해 주십시오.</li><li>* DHRA-19의 체결볼트를 M2.5로 원하는 경우 당사로 문의하십시오.</li></ul><p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 규격 출처: 두리마이텍(DURI) 카탈로그 2025</p></details>
+      </div>
+      <div class="cat-tab-panel" data-panel="g2" hidden>
         <details class="series-group" open><summary>DHRA 표준 내경<span class="series-count">8건</span></summary><div class="finder-results" style="overflow-x: auto;"><table class="spec-table" style="min-width: 892px; font-size: 12px;"><thead><tr><th rowspan="2">형번</th><th colspan="23">표준 내경 D1·D2 (mm)</th></tr><tr><th>3</th><th>4</th><th>5</th><th>6</th><th>6.35</th><th>7</th><th>8</th><th>9</th><th>9.525</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th>20</th><th>22</th><th>24</th><th>25</th></tr></thead><tbody><tr><td class="type-cell">DHRA-16A-CBXCB</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DHRA-19A-CBXCB</td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DHRA-24A-CBXCB</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DHRA-29A-CBXCB</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DHRA-34A-CBXCB</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DHRA-39A-CBXCB</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DHRA-44A-CBXCB</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DHRA-56A-CBXCB</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td></tr></tbody></table></div><ul style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0; padding-left: 0; list-style: none; line-height: 1.6;"><li>* 상대 부착 축의 허용치는 h7을 권장합니다.</li><li>* 위의 표 이외의 비표준 내경에 대해서는 별도 대응이 가능합니다. 당사에 문의해 주십시오.</li><li>* 키 홈 가공해 드립니다.</li></ul></details>
+      </div>
+
       </div>
     </div>
   </section>
@@ -132,7 +141,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/coupling_dhra.dict.js?v=20261030img"></script>
+<script src="i18n/pages/coupling_dhra.dict.js?v=20261031card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -166,6 +175,47 @@
     });
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + seriesN + '개 시리즈';
+  })();
+</script>
+<script>
+  (function () {
+    // 이미지 카드 탭(시리즈별): 평소엔 고른 시리즈만 보이고, 검색어가 있으면 일치하는 행이 있는 시리즈를 모두 보여 줌
+    var root = document.getElementById('coupling_dhra');
+    var input = document.getElementById('cplFilter');
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var btns = Array.prototype.slice.call(root.querySelectorAll('.tab-cards .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('.cat-tab-panel[data-panel^="g"]'));
+    var current = btns[0].getAttribute('data-tab');
+    function btnFor(p) { return btns.filter(function (b) { return b.getAttribute('data-tab') === p.getAttribute('data-panel'); })[0]; }
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== current;
+        Array.prototype.forEach.call(p.querySelectorAll('details.series-group'), function (d) { d.open = true; });
+      });
+    }
+    function sync() {
+      var q = input ? input.value.trim() : '';
+      if (q === '') { showTab(); return; }
+      panels.forEach(function (p) {
+        var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none'; });
+        p.hidden = !hit;
+        var b = btnFor(p);
+        if (b) { b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); }
+      });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        if (input && input.value !== '') { input.value = ''; input.dispatchEvent(new Event('input')); } else { showTab(); }
+      });
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
+    if (input) input.addEventListener('input', sync);
   })();
 </script>
 </body>

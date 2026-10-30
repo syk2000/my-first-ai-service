@@ -38,7 +38,9 @@
    "* 상대 부착 축의 허용치는 h7을 권장합니다.": "* h7 is recommended for the mating shaft tolerance.",
    "* 위의 표 이외의 비표준 내경에 대해서는 별도 대응이 가능합니다. 당사에 문의해 주십시오.": "* Non-standard bores other than those above can be supplied separately. Please contact us.",
    "* 키 홈 가공해 드립니다.": "* Keyway machining is available.",
-   "러버(방진)형 커플링 DHRA 시리즈": "Rubber (Vibration-damping) Coupling DHRA Series"
+   "러버(방진)형 커플링 DHRA 시리즈": "Rubber (Vibration-damping) Coupling DHRA Series",
+   "<span class=\"tab-card-title\">DHRA</span><span class=\"tab-card-desc\">클램프 타입</span>": "<span class=\"tab-card-title\">DHRA</span><span class=\"tab-card-desc\">clamp type</span>",
+   "<span class=\"tab-card-title\">DHRA 표준 내경</span><span class=\"tab-card-desc\">8건</span>": "<span class=\"tab-card-title\">DHRA standard bores</span><span class=\"tab-card-desc\">8 items</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Coupling · DHRA High Gain Rubber</p> <h2>러버(방진)형 커플링 DHRA 시리즈</h2> <p>DURI (두리마이텍)의 High Gain 러버 방진 커플링입니다. 알루미늄 허브 사이에 방진 고무(HNBR)를 적용해 서보 모터의 게인을 높여도 헌팅·공진을 억제합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · DHRA High Gain Rubber</p> <h2>ラバー(防振)型カップリング DHRAシリーズ</h2> <p>DURI(ドゥリマイテック)のHigh Gainラバー防振カップリングです。アルミハブの間に防振ゴム(HNBR)を適用し、サーボモーターのゲインを上げてもハンチング・共振を抑制します。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -78,7 +80,9 @@
    "* 상대 부착 축의 허용치는 h7을 권장합니다.": "* 相手軸の許容差はh7を推奨します。",
    "* 위의 표 이외의 비표준 내경에 대해서는 별도 대응이 가능합니다. 당사에 문의해 주십시오.": "* 上表以外の非標準内径にも別途対応可能です。当社にお問い合わせください。",
    "* 키 홈 가공해 드립니다.": "* キー溝加工を承ります。",
-   "러버(방진)형 커플링 DHRA 시리즈": "ラバー(防振)型カップリング DHRAシリーズ"
+   "러버(방진)형 커플링 DHRA 시리즈": "ラバー(防振)型カップリング DHRAシリーズ",
+   "<span class=\"tab-card-title\">DHRA</span><span class=\"tab-card-desc\">클램프 타입</span>": "<span class=\"tab-card-title\">DHRA</span><span class=\"tab-card-desc\">クランプタイプ</span>",
+   "<span class=\"tab-card-title\">DHRA 표준 내경</span><span class=\"tab-card-desc\">8건</span>": "<span class=\"tab-card-title\">DHRA 標準内径</span><span class=\"tab-card-desc\">8件</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Coupling · DHRA High Gain Rubber</p> <h2>러버(방진)형 커플링 DHRA 시리즈</h2> <p>DURI (두리마이텍)의 High Gain 러버 방진 커플링입니다. 알루미늄 허브 사이에 방진 고무(HNBR)를 적용해 서보 모터의 게인을 높여도 헌팅·공진을 억제합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · DHRA High Gain Rubber</p> <h2>橡胶(减振)型联轴器 DHRA系列</h2> <p>DURI(斗利迈泰)的High Gain橡胶减振联轴器。在铝制轮毂之间采用减振橡胶(HNBR)，即使提高伺服电机增益也能抑制振荡和共振。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -118,21 +122,26 @@
    "* 상대 부착 축의 허용치는 h7을 권장합니다.": "* 配合轴公差推荐h7。",
    "* 위의 표 이외의 비표준 내경에 대해서는 별도 대응이 가능합니다. 당사에 문의해 주십시오.": "* 上表以外的非标准内径可另行对应，请咨询本公司。",
    "* 키 홈 가공해 드립니다.": "* 可提供键槽加工。",
-   "러버(방진)형 커플링 DHRA 시리즈": "橡胶(减振)型联轴器 DHRA系列"
+   "러버(방진)형 커플링 DHRA 시리즈": "橡胶(减振)型联轴器 DHRA系列",
+   "<span class=\"tab-card-title\">DHRA</span><span class=\"tab-card-desc\">클램프 타입</span>": "<span class=\"tab-card-title\">DHRA</span><span class=\"tab-card-desc\">夹紧型</span>",
+   "<span class=\"tab-card-title\">DHRA 표준 내경</span><span class=\"tab-card-desc\">8건</span>": "<span class=\"tab-card-title\">DHRA 标准内径</span><span class=\"tab-card-desc\">8个</span>"
   }
  },
  "attrs": {
   "en": {
    "DHRA 러버형 방진 커플링 규격 도면": "DHRA rubber damping coupling drawing",
-   "예: DHRA-24A-CBXCB 또는 25": "e.g. DHRA-24A-CBXCB or 25"
+   "예: DHRA-24A-CBXCB 또는 25": "e.g. DHRA-24A-CBXCB or 25",
+   "시리즈 선택": "Select series"
   },
   "ja": {
    "DHRA 러버형 방진 커플링 규격 도면": "DHRAラバー型防振カップリング規格図面",
-   "예: DHRA-24A-CBXCB 또는 25": "例: DHRA-24A-CBXCB または 25"
+   "예: DHRA-24A-CBXCB 또는 25": "例: DHRA-24A-CBXCB または 25",
+   "시리즈 선택": "シリーズを選択"
   },
   "zh": {
    "DHRA 러버형 방진 커플링 규격 도면": "DHRA橡胶减振联轴器规格图纸",
-   "예: DHRA-24A-CBXCB 또는 25": "例: DHRA-24A-CBXCB 或 25"
+   "예: DHRA-24A-CBXCB 또는 25": "例: DHRA-24A-CBXCB 或 25",
+   "시리즈 선택": "选择系列"
   }
  }
 }

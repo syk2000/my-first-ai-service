@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031k">
+<link rel="stylesheet" href="styles.css?v=20261031l">
 </head>
 <body>
 
@@ -106,10 +106,19 @@
       <div style="margin: 8px 0 20px;"><h3 style="font-size: 15px; margin: 0 0 8px;">특징</h3><ul style="margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.75; color: var(--text-sub);"><li>큰 편각·편심·엔드플레이 흡수 능력이 우수합니다.</li><li>충격과 진동을 흡수하며 관성모멘트가 낮습니다.</li><li>허브: S45C(니켈 도금) · 스페이서: 폴리우레탄 · 세트 스크류 타입</li></ul></div>
       <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 16px;">주문 예시: DRFC-38-8-8 (형번 DRFC-38 · 내경 D1 8 · 내경 D2 8)</p>
       <div class="field" style="max-width: 360px; margin-bottom: 16px;"><label for="cplFilter">형번 / 치수 검색</label><input id="cplFilter" type="text" placeholder="예: DRFC-48 또는 25" autocomplete="off" /></div>
-      <div class="spec-toolbar"><p class="finder-tip" id="cplCount" style="margin: 0;"></p><button type="button" class="spec-toolbar-btn" id="cplToggleAll">전체 접기</button></div>
+      <div class="spec-toolbar"><p class="finder-tip" id="cplCount" style="margin: 0;"></p><button type="button" class="spec-toolbar-btn" id="cplToggleAll" style="display: none;">전체 접기</button></div>
       <div id="cplGroups">
+      <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">DRFC</span><span class="tab-card-desc">세트 스크류 타입</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">DRFC 표준 내경</span><span class="tab-card-desc">4건</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="g1">
         <details class="series-group" open><summary>DRFC (세트 스크류 타입)<span class="series-count">4건</span></summary><div class="finder-results" style="overflow-x: auto;"><table class="spec-table spec-main" style="min-width: 772px; font-size: 12.5px;"><thead><tr><th rowspan="2">형번</th><th colspan="3">치수 (mm)</th><th colspan="2">체결 볼트</th><th rowspan="2">최대 회전수<br>min<sup>-1</sup></th><th rowspan="2">허용 토크<br>N·m</th><th rowspan="2">허용 편각<br>°</th><th rowspan="2">허용 편심<br>mm</th><th rowspan="2">허용 엔드플레이<br>mm</th><th rowspan="2">질량<br>g</th></tr><tr><th>A</th><th>W</th><th>C</th><th>규격</th><th>토크<br>N·m</th></tr></thead><tbody><tr><td class="type-cell">DRFC-29</td><td>25</td><td>28</td><td>18</td><td>M4</td><td>1.7</td><td>3,000</td><td>0.35</td><td>10</td><td>2</td><td>1.5</td><td>20</td></tr><tr><td class="type-cell">DRFC-38</td><td>32</td><td>35</td><td>22.5</td><td>M4</td><td>1.7</td><td>3,000</td><td>1.35</td><td>10</td><td>2.5</td><td>2</td><td>40</td></tr><tr><td class="type-cell">DRFC-48</td><td>43</td><td>50</td><td>26</td><td>M5</td><td>4</td><td>3,000</td><td>1.8</td><td>12</td><td>2.5</td><td>2</td><td>60</td></tr><tr><td class="type-cell">DRFC-54</td><td>50</td><td>59</td><td>29.5</td><td>M6</td><td>7</td><td>3,000</td><td>4.5</td><td>12</td><td>3</td><td>2</td><td>140</td></tr></tbody></table></div><ul style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0; padding-left: 0; list-style: none; line-height: 1.6;"><li>* 축 체결부분의 유지력에 따라 커플링의 토크가 제한되는 경우가 있으므로 ‘표준 내경’을 확인하십시오.</li><li>* 최대 회전수는 동적 균형을 고려하지 않았습니다.</li><li>* 질량은 최대 내경을 기준으로 산정되었습니다.</li><li>* 기타 치수 허용치에 관해서는 당사에 문의해 주십시오.</li></ul><p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · 규격 출처: 두리마이텍(DURI) 카탈로그 2025</p></details>
+      </div>
+      <div class="cat-tab-panel" data-panel="g2" hidden>
         <details class="series-group" open><summary>DRFC 표준 내경<span class="series-count">4건</span></summary><div class="finder-results" style="overflow-x: auto;"><table class="spec-table" style="min-width: 416px; font-size: 12px;"><thead><tr><th rowspan="2">형번</th><th colspan="9">표준 내경 D1·D2 (mm)</th></tr><tr><th>4</th><th>5</th><th>6</th><th>8</th><th>10</th><th>12</th><th>14</th><th>15</th><th>16</th></tr></thead><tbody><tr><td class="type-cell">DRFC-29</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DRFC-38</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DRFC-48</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;"></td><td style="text-align: center;"></td></tr><tr><td class="type-cell">DRFC-54</td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;"></td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td><td style="text-align: center;">●</td></tr></tbody></table></div><ul style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0; padding-left: 0; list-style: none; line-height: 1.6;"><li>* 상대 부착 축의 허용치는 h7을 권장합니다.</li><li>* ● 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.</li></ul></details>
+      </div>
+
       </div>
     </div>
   </section>
@@ -132,7 +141,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/coupling_drfc.dict.js?v=20261030img"></script>
+<script src="i18n/pages/coupling_drfc.dict.js?v=20261031card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -166,6 +175,47 @@
     });
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + seriesN + '개 시리즈';
+  })();
+</script>
+<script>
+  (function () {
+    // 이미지 카드 탭(시리즈별): 평소엔 고른 시리즈만 보이고, 검색어가 있으면 일치하는 행이 있는 시리즈를 모두 보여 줌
+    var root = document.getElementById('coupling_drfc');
+    var input = document.getElementById('cplFilter');
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var btns = Array.prototype.slice.call(root.querySelectorAll('.tab-cards .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('.cat-tab-panel[data-panel^="g"]'));
+    var current = btns[0].getAttribute('data-tab');
+    function btnFor(p) { return btns.filter(function (b) { return b.getAttribute('data-tab') === p.getAttribute('data-panel'); })[0]; }
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== current;
+        Array.prototype.forEach.call(p.querySelectorAll('details.series-group'), function (d) { d.open = true; });
+      });
+    }
+    function sync() {
+      var q = input ? input.value.trim() : '';
+      if (q === '') { showTab(); return; }
+      panels.forEach(function (p) {
+        var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none'; });
+        p.hidden = !hit;
+        var b = btnFor(p);
+        if (b) { b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); }
+      });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        if (input && input.value !== '') { input.value = ''; input.dispatchEvent(new Event('input')); } else { showTab(); }
+      });
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
+    if (input) input.addEventListener('input', sync);
   })();
 </script>
 </body>

@@ -43,7 +43,15 @@
    "DRB-SUS 표준 내경<span class=\"series-count\">10건</span>": "DRB-SUS standard bores<span class=\"series-count\">10 items</span>",
    "DRBS-SUS · DRBS-C-SUS (스테인리스 콤팩트 타입)<span class=\"series-count\">13건</span>": "DRBS-SUS · DRBS-C-SUS (stainless compact type)<span class=\"series-count\">13 items</span>",
    "DRBS-SUS 표준 내경<span class=\"series-count\">7건</span>": "DRBS-SUS standard bores<span class=\"series-count\">7 items</span>",
-   "슬릿형 커플링 DRB 시리즈": "Slit-type Coupling DRB Series"
+   "슬릿형 커플링 DRB 시리즈": "Slit-type Coupling DRB Series",
+   "<span class=\"tab-card-title\">DRB · DRB-C</span><span class=\"tab-card-desc\">일반 타입</span>": "<span class=\"tab-card-title\">DRB · DRB-C</span><span class=\"tab-card-desc\">standard type</span>",
+   "<span class=\"tab-card-title\">DRB 표준 내경</span><span class=\"tab-card-desc\">10건</span>": "<span class=\"tab-card-title\">DRB standard bores</span><span class=\"tab-card-desc\">10 items</span>",
+   "<span class=\"tab-card-title\">DRBS · DRBS-C</span><span class=\"tab-card-desc\">콤팩트 타입</span>": "<span class=\"tab-card-title\">DRBS · DRBS-C</span><span class=\"tab-card-desc\">compact type</span>",
+   "<span class=\"tab-card-title\">DRBS 표준 내경</span><span class=\"tab-card-desc\">7건</span>": "<span class=\"tab-card-title\">DRBS standard bores</span><span class=\"tab-card-desc\">7 items</span>",
+   "<span class=\"tab-card-title\">DRB-SUS · DRB-C-SUS</span><span class=\"tab-card-desc\">스테인리스 타입</span>": "<span class=\"tab-card-title\">DRB-SUS · DRB-C-SUS</span><span class=\"tab-card-desc\">stainless steel type</span>",
+   "<span class=\"tab-card-title\">DRB-SUS 표준 내경</span><span class=\"tab-card-desc\">10건</span>": "<span class=\"tab-card-title\">DRB-SUS standard bores</span><span class=\"tab-card-desc\">10 items</span>",
+   "<span class=\"tab-card-title\">DRBS-SUS · DRBS-C-SUS</span><span class=\"tab-card-desc\">스테인리스 콤팩트 타입</span>": "<span class=\"tab-card-title\">DRBS-SUS · DRBS-C-SUS</span><span class=\"tab-card-desc\">stainless compact type</span>",
+   "<span class=\"tab-card-title\">DRBS-SUS 표준 내경</span><span class=\"tab-card-desc\">7건</span>": "<span class=\"tab-card-title\">DRBS-SUS standard bores</span><span class=\"tab-card-desc\">7 items</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Coupling · DRB / DRBS / DRB-SUS / DRBS-SUS</p> <h2>슬릿형 커플링 DRB 시리즈</h2> <p>DURI (두리마이텍)의 슬릿형(일체형) 커플링입니다. 일반 타입 DRB, 콤팩트 타입 DRBS와 각각의 스테인리스 타입(SUS)이 있으며, 세트 스크류 타입과 클램프 타입(-C)으로 공급됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · DRB / DRBS / DRB-SUS / DRBS-SUS</p> <h2>スリット型カップリング DRBシリーズ</h2> <p>DURI(ドゥリマイテック)のスリット型(一体型)カップリングです。標準タイプDRB、コンパクトタイプDRBSと、それぞれのステンレスタイプ(SUS)があり、セットスクリュータイプとクランプタイプ(-C)で供給します。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -88,7 +96,15 @@
    "DRB-SUS 표준 내경<span class=\"series-count\">10건</span>": "DRB-SUS 標準内径<span class=\"series-count\">10件</span>",
    "DRBS-SUS · DRBS-C-SUS (스테인리스 콤팩트 타입)<span class=\"series-count\">13건</span>": "DRBS-SUS · DRBS-C-SUS (ステンレスコンパクトタイプ)<span class=\"series-count\">13件</span>",
    "DRBS-SUS 표준 내경<span class=\"series-count\">7건</span>": "DRBS-SUS 標準内径<span class=\"series-count\">7件</span>",
-   "슬릿형 커플링 DRB 시리즈": "スリット型カップリング DRBシリーズ"
+   "슬릿형 커플링 DRB 시리즈": "スリット型カップリング DRBシリーズ",
+   "<span class=\"tab-card-title\">DRB · DRB-C</span><span class=\"tab-card-desc\">일반 타입</span>": "<span class=\"tab-card-title\">DRB · DRB-C</span><span class=\"tab-card-desc\">標準タイプ</span>",
+   "<span class=\"tab-card-title\">DRB 표준 내경</span><span class=\"tab-card-desc\">10건</span>": "<span class=\"tab-card-title\">DRB 標準内径</span><span class=\"tab-card-desc\">10件</span>",
+   "<span class=\"tab-card-title\">DRBS · DRBS-C</span><span class=\"tab-card-desc\">콤팩트 타입</span>": "<span class=\"tab-card-title\">DRBS · DRBS-C</span><span class=\"tab-card-desc\">コンパクトタイプ</span>",
+   "<span class=\"tab-card-title\">DRBS 표준 내경</span><span class=\"tab-card-desc\">7건</span>": "<span class=\"tab-card-title\">DRBS 標準内径</span><span class=\"tab-card-desc\">7件</span>",
+   "<span class=\"tab-card-title\">DRB-SUS · DRB-C-SUS</span><span class=\"tab-card-desc\">스테인리스 타입</span>": "<span class=\"tab-card-title\">DRB-SUS · DRB-C-SUS</span><span class=\"tab-card-desc\">ステンレスタイプ</span>",
+   "<span class=\"tab-card-title\">DRB-SUS 표준 내경</span><span class=\"tab-card-desc\">10건</span>": "<span class=\"tab-card-title\">DRB-SUS 標準内径</span><span class=\"tab-card-desc\">10件</span>",
+   "<span class=\"tab-card-title\">DRBS-SUS · DRBS-C-SUS</span><span class=\"tab-card-desc\">스테인리스 콤팩트 타입</span>": "<span class=\"tab-card-title\">DRBS-SUS · DRBS-C-SUS</span><span class=\"tab-card-desc\">ステンレスコンパクトタイプ</span>",
+   "<span class=\"tab-card-title\">DRBS-SUS 표준 내경</span><span class=\"tab-card-desc\">7건</span>": "<span class=\"tab-card-title\">DRBS-SUS 標準内径</span><span class=\"tab-card-desc\">7件</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Coupling · DRB / DRBS / DRB-SUS / DRBS-SUS</p> <h2>슬릿형 커플링 DRB 시리즈</h2> <p>DURI (두리마이텍)의 슬릿형(일체형) 커플링입니다. 일반 타입 DRB, 콤팩트 타입 DRBS와 각각의 스테인리스 타입(SUS)이 있으며, 세트 스크류 타입과 클램프 타입(-C)으로 공급됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · DRB / DRBS / DRB-SUS / DRBS-SUS</p> <h2>开槽型联轴器 DRB系列</h2> <p>DURI(斗利迈泰)的开槽型(一体式)联轴器。有标准型DRB、紧凑型DRBS及各自的不锈钢型(SUS)，提供紧定螺钉型和夹紧型(-C)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -133,24 +149,35 @@
    "DRB-SUS 표준 내경<span class=\"series-count\">10건</span>": "DRB-SUS 标准内径<span class=\"series-count\">10个</span>",
    "DRBS-SUS · DRBS-C-SUS (스테인리스 콤팩트 타입)<span class=\"series-count\">13건</span>": "DRBS-SUS · DRBS-C-SUS (不锈钢紧凑型)<span class=\"series-count\">13个</span>",
    "DRBS-SUS 표준 내경<span class=\"series-count\">7건</span>": "DRBS-SUS 标准内径<span class=\"series-count\">7个</span>",
-   "슬릿형 커플링 DRB 시리즈": "开槽型联轴器 DRB系列"
+   "슬릿형 커플링 DRB 시리즈": "开槽型联轴器 DRB系列",
+   "<span class=\"tab-card-title\">DRB · DRB-C</span><span class=\"tab-card-desc\">일반 타입</span>": "<span class=\"tab-card-title\">DRB · DRB-C</span><span class=\"tab-card-desc\">标准型</span>",
+   "<span class=\"tab-card-title\">DRB 표준 내경</span><span class=\"tab-card-desc\">10건</span>": "<span class=\"tab-card-title\">DRB 标准内径</span><span class=\"tab-card-desc\">10个</span>",
+   "<span class=\"tab-card-title\">DRBS · DRBS-C</span><span class=\"tab-card-desc\">콤팩트 타입</span>": "<span class=\"tab-card-title\">DRBS · DRBS-C</span><span class=\"tab-card-desc\">紧凑型</span>",
+   "<span class=\"tab-card-title\">DRBS 표준 내경</span><span class=\"tab-card-desc\">7건</span>": "<span class=\"tab-card-title\">DRBS 标准内径</span><span class=\"tab-card-desc\">7个</span>",
+   "<span class=\"tab-card-title\">DRB-SUS · DRB-C-SUS</span><span class=\"tab-card-desc\">스테인리스 타입</span>": "<span class=\"tab-card-title\">DRB-SUS · DRB-C-SUS</span><span class=\"tab-card-desc\">不锈钢型</span>",
+   "<span class=\"tab-card-title\">DRB-SUS 표준 내경</span><span class=\"tab-card-desc\">10건</span>": "<span class=\"tab-card-title\">DRB-SUS 标准内径</span><span class=\"tab-card-desc\">10个</span>",
+   "<span class=\"tab-card-title\">DRBS-SUS · DRBS-C-SUS</span><span class=\"tab-card-desc\">스테인리스 콤팩트 타입</span>": "<span class=\"tab-card-title\">DRBS-SUS · DRBS-C-SUS</span><span class=\"tab-card-desc\">不锈钢紧凑型</span>",
+   "<span class=\"tab-card-title\">DRBS-SUS 표준 내경</span><span class=\"tab-card-desc\">7건</span>": "<span class=\"tab-card-title\">DRBS-SUS 标准内径</span><span class=\"tab-card-desc\">7个</span>"
   }
  },
  "attrs": {
   "en": {
    "DRB 슬릿형 커플링 규격 도면 — 세트 스크류 타입과 클램프 타입": "DRB slit coupling drawing — set screw and clamp types",
    "DRBS 콤팩트 슬릿형 커플링 규격 도면": "DRBS compact slit coupling drawing",
-   "예: DRB-16 또는 25": "e.g. DRB-16 or 25"
+   "예: DRB-16 또는 25": "e.g. DRB-16 or 25",
+   "시리즈 선택": "Select series"
   },
   "ja": {
    "DRB 슬릿형 커플링 규격 도면 — 세트 스크류 타입과 클램프 타입": "DRBスリット型カップリング規格図面 — セットスクリュータイプとクランプタイプ",
    "DRBS 콤팩트 슬릿형 커플링 규격 도면": "DRBSコンパクトスリット型カップリング規格図面",
-   "예: DRB-16 또는 25": "例: DRB-16 または 25"
+   "예: DRB-16 또는 25": "例: DRB-16 または 25",
+   "시리즈 선택": "シリーズを選択"
   },
   "zh": {
    "DRB 슬릿형 커플링 규격 도면 — 세트 스크류 타입과 클램프 타입": "DRB开槽型联轴器规格图纸 — 紧定螺钉型与夹紧型",
    "DRBS 콤팩트 슬릿형 커플링 규격 도면": "DRBS紧凑型开槽联轴器规格图纸",
-   "예: DRB-16 또는 25": "例: DRB-16 或 25"
+   "예: DRB-16 또는 25": "例: DRB-16 或 25",
+   "시리즈 선택": "选择系列"
   }
  }
 }

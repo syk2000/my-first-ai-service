@@ -52,7 +52,17 @@
    "클램프 타입 표준 내경 (외경 54~104.5)<span class=\"series-count\">5건</span>": "Clamp type standard bores (O.D. 54–104.5)<span class=\"series-count\">5 items</span>",
    "* ● 표시와 ○ 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.": "* Bores marked ● or ○ are available as standard bores.",
    "* 분리형으로 주문 가능합니다.": "* Can be ordered as a split type.",
-   "디스크형 커플링 DRS · DRW · DRA 시리즈": "Disc Coupling DRS · DRW · DRA Series"
+   "디스크형 커플링 DRS · DRW · DRA 시리즈": "Disc Coupling DRS · DRW · DRA Series",
+   "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">세트 스크류 타입, 외경 16~31</span>": "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">set screw type, O.D. 16–31</span>",
+   "<span class=\"tab-card-title\">세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">외경 16~31</span>": "<span class=\"tab-card-title\">Set screw type standard bores</span><span class=\"tab-card-desc\">O.D. 16–31</span>",
+   "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">클램프 타입, 외경 16~47</span>": "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">clamp type, O.D. 16–47</span>",
+   "<span class=\"tab-card-title\">클램프 타입 표준 내경</span><span class=\"tab-card-desc\">외경 16~47</span>": "<span class=\"tab-card-title\">Clamp type standard bores</span><span class=\"tab-card-desc\">O.D. 16–47</span>",
+   "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">세트 스크류 타입, 외경 42~64</span>": "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">set screw type, O.D. 42–64</span>",
+   "<span class=\"tab-card-title\">세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">외경 42~64</span>": "<span class=\"tab-card-title\">Set screw type standard bores</span><span class=\"tab-card-desc\">O.D. 42–64</span>",
+   "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">클램프 타입, 외경 34~64</span>": "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">clamp type, O.D. 34–64</span>",
+   "<span class=\"tab-card-title\">클램프 타입 표준 내경</span><span class=\"tab-card-desc\">외경 34~64</span>": "<span class=\"tab-card-title\">Clamp type standard bores</span><span class=\"tab-card-desc\">O.D. 34–64</span>",
+   "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">클램프 타입, 외경 54~104.5</span>": "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">clamp type, O.D. 54–104.5</span>",
+   "<span class=\"tab-card-title\">클램프 타입 표준 내경</span><span class=\"tab-card-desc\">외경 54~104.5</span>": "<span class=\"tab-card-title\">Clamp type standard bores</span><span class=\"tab-card-desc\">O.D. 54–104.5</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Coupling · Disk DRS / DRW / DRA</p> <h2>디스크형 커플링 DRS · DRW · DRA 시리즈</h2> <p>DURI (두리마이텍)의 디스크(판스프링)형 커플링입니다. 디스크 팩 1개의 싱글 타입 DRS, 플레이트를 사이에 둔 더블 타입 DRW, 플레이트가 긴 원거리 더블 타입 DRA가 있으며, 세트 스크류 타입과 클램프 타입(-C)으로 공급됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · Disk DRS / DRW / DRA</p> <h2>ディスク型カップリング DRS · DRW · DRAシリーズ</h2> <p>DURI(ドゥリマイテック)のディスク(板ばね)型カップリングです。ディスクパック1枚のシングルタイプDRS、プレートを挟んだダブルタイプDRW、プレートが長い遠距離ダブルタイプDRAがあり、セットスクリュータイプとクランプタイプ(-C)で供給します。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -106,7 +116,17 @@
    "클램프 타입 표준 내경 (외경 54~104.5)<span class=\"series-count\">5건</span>": "クランプタイプ 標準内径 (外径54〜104.5)<span class=\"series-count\">5件</span>",
    "* ● 표시와 ○ 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.": "* ●印および○印の内径は標準内径として対応します。",
    "* 분리형으로 주문 가능합니다.": "* 分割型でご注文いただけます。",
-   "디스크형 커플링 DRS · DRW · DRA 시리즈": "ディスク型カップリング DRS · DRW · DRAシリーズ"
+   "디스크형 커플링 DRS · DRW · DRA 시리즈": "ディスク型カップリング DRS · DRW · DRAシリーズ",
+   "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">세트 스크류 타입, 외경 16~31</span>": "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">セットスクリュータイプ、外径16〜31</span>",
+   "<span class=\"tab-card-title\">세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">외경 16~31</span>": "<span class=\"tab-card-title\">セットスクリュータイプ 標準内径</span><span class=\"tab-card-desc\">外径16〜31</span>",
+   "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">클램프 타입, 외경 16~47</span>": "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">クランプタイプ、外径16〜47</span>",
+   "<span class=\"tab-card-title\">클램프 타입 표준 내경</span><span class=\"tab-card-desc\">외경 16~47</span>": "<span class=\"tab-card-title\">クランプタイプ 標準内径</span><span class=\"tab-card-desc\">外径16〜47</span>",
+   "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">세트 스크류 타입, 외경 42~64</span>": "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">セットスクリュータイプ、外径42〜64</span>",
+   "<span class=\"tab-card-title\">세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">외경 42~64</span>": "<span class=\"tab-card-title\">セットスクリュータイプ 標準内径</span><span class=\"tab-card-desc\">外径42〜64</span>",
+   "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">클램프 타입, 외경 34~64</span>": "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">クランプタイプ、外径34〜64</span>",
+   "<span class=\"tab-card-title\">클램프 타입 표준 내경</span><span class=\"tab-card-desc\">외경 34~64</span>": "<span class=\"tab-card-title\">クランプタイプ 標準内径</span><span class=\"tab-card-desc\">外径34〜64</span>",
+   "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">클램프 타입, 외경 54~104.5</span>": "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">クランプタイプ、外径54〜104.5</span>",
+   "<span class=\"tab-card-title\">클램프 타입 표준 내경</span><span class=\"tab-card-desc\">외경 54~104.5</span>": "<span class=\"tab-card-title\">クランプタイプ 標準内径</span><span class=\"tab-card-desc\">外径54〜104.5</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Coupling · Disk DRS / DRW / DRA</p> <h2>디스크형 커플링 DRS · DRW · DRA 시리즈</h2> <p>DURI (두리마이텍)의 디스크(판스프링)형 커플링입니다. 디스크 팩 1개의 싱글 타입 DRS, 플레이트를 사이에 둔 더블 타입 DRW, 플레이트가 긴 원거리 더블 타입 DRA가 있으며, 세트 스크류 타입과 클램프 타입(-C)으로 공급됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · Disk DRS / DRW / DRA</p> <h2>膜片联轴器 DRS · DRW · DRA系列</h2> <p>DURI(斗利迈泰)的膜片(板簧)型联轴器。有单膜片组的单节型DRS、中间带板的双节型DRW以及中间板较长的远距离双节型DRA，提供紧定螺钉型和夹紧型(-C)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -160,7 +180,17 @@
    "클램프 타입 표준 내경 (외경 54~104.5)<span class=\"series-count\">5건</span>": "夹紧型 标准内径 (外径54~104.5)<span class=\"series-count\">5个</span>",
    "* ● 표시와 ○ 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.": "* 标有●或○的内径为标准内径。",
    "* 분리형으로 주문 가능합니다.": "* 可订购分离型。",
-   "디스크형 커플링 DRS · DRW · DRA 시리즈": "膜片联轴器 DRS · DRW · DRA系列"
+   "디스크형 커플링 DRS · DRW · DRA 시리즈": "膜片联轴器 DRS · DRW · DRA系列",
+   "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">세트 스크류 타입, 외경 16~31</span>": "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">紧定螺钉型，外径16~31</span>",
+   "<span class=\"tab-card-title\">세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">외경 16~31</span>": "<span class=\"tab-card-title\">紧定螺钉型 标准内径</span><span class=\"tab-card-desc\">外径16~31</span>",
+   "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">클램프 타입, 외경 16~47</span>": "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">夹紧型，外径16~47</span>",
+   "<span class=\"tab-card-title\">클램프 타입 표준 내경</span><span class=\"tab-card-desc\">외경 16~47</span>": "<span class=\"tab-card-title\">夹紧型 标准内径</span><span class=\"tab-card-desc\">外径16~47</span>",
+   "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">세트 스크류 타입, 외경 42~64</span>": "<span class=\"tab-card-title\">DRS · DRW · DRA</span><span class=\"tab-card-desc\">紧定螺钉型，外径42~64</span>",
+   "<span class=\"tab-card-title\">세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">외경 42~64</span>": "<span class=\"tab-card-title\">紧定螺钉型 标准内径</span><span class=\"tab-card-desc\">外径42~64</span>",
+   "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">클램프 타입, 외경 34~64</span>": "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">夹紧型，外径34~64</span>",
+   "<span class=\"tab-card-title\">클램프 타입 표준 내경</span><span class=\"tab-card-desc\">외경 34~64</span>": "<span class=\"tab-card-title\">夹紧型 标准内径</span><span class=\"tab-card-desc\">外径34~64</span>",
+   "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">클램프 타입, 외경 54~104.5</span>": "<span class=\"tab-card-title\">DRS-C · DRW-C · DRA-C</span><span class=\"tab-card-desc\">夹紧型，外径54~104.5</span>",
+   "<span class=\"tab-card-title\">클램프 타입 표준 내경</span><span class=\"tab-card-desc\">외경 54~104.5</span>": "<span class=\"tab-card-title\">夹紧型 标准内径</span><span class=\"tab-card-desc\">外径54~104.5</span>"
   }
  },
  "attrs": {
@@ -168,19 +198,22 @@
    "DRS·DRW·DRA 디스크 커플링 세트 스크류 타입 규격 도면": "DRS·DRW·DRA disc coupling set screw type drawing",
    "DRS·DRW·DRA 디스크 커플링 클램프 타입 규격 도면": "DRS·DRW·DRA disc coupling clamp type drawing",
    "DRS·DRW·DRA 디스크 커플링 대형 사이즈 규격 도면": "DRS·DRW·DRA disc coupling large size drawing",
-   "예: DRWL-16 또는 25": "e.g. DRWL-16 or 25"
+   "예: DRWL-16 또는 25": "e.g. DRWL-16 or 25",
+   "시리즈 선택": "Select series"
   },
   "ja": {
    "DRS·DRW·DRA 디스크 커플링 세트 스크류 타입 규격 도면": "DRS·DRW·DRAディスクカップリング セットスクリュータイプ規格図面",
    "DRS·DRW·DRA 디스크 커플링 클램프 타입 규격 도면": "DRS·DRW·DRAディスクカップリング クランプタイプ規格図面",
    "DRS·DRW·DRA 디스크 커플링 대형 사이즈 규격 도면": "DRS·DRW·DRAディスクカップリング 大型サイズ規格図面",
-   "예: DRWL-16 또는 25": "例: DRWL-16 または 25"
+   "예: DRWL-16 또는 25": "例: DRWL-16 または 25",
+   "시리즈 선택": "シリーズを選択"
   },
   "zh": {
    "DRS·DRW·DRA 디스크 커플링 세트 스크류 타입 규격 도면": "DRS·DRW·DRA膜片联轴器紧定螺钉型规格图纸",
    "DRS·DRW·DRA 디스크 커플링 클램프 타입 규격 도면": "DRS·DRW·DRA膜片联轴器夹紧型规格图纸",
    "DRS·DRW·DRA 디스크 커플링 대형 사이즈 규격 도면": "DRS·DRW·DRA膜片联轴器大尺寸规格图纸",
-   "예: DRWL-16 또는 25": "例: DRWL-16 或 25"
+   "예: DRWL-16 또는 25": "例: DRWL-16 或 25",
+   "시리즈 선택": "选择系列"
   }
  }
 }

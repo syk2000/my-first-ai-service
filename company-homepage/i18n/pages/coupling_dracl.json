@@ -41,7 +41,9 @@
    "* ● 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.": "* Bores marked ● are available as standard bores.",
    "* 위의 표 이외의 비표준 내경에 대해서는 별도 대응이 가능합니다. 당사에 문의해 주십시오.": "* Non-standard bores other than those above can be supplied separately. Please contact us.",
    "* 키 홈 가공해 드립니다.": "* Keyway machining is available.",
-   "커넥팅 샤프트 DRACL (디스크 타입)": "Connecting Shaft DRACL (Disc Type)"
+   "커넥팅 샤프트 DRACL (디스크 타입)": "Connecting Shaft DRACL (Disc Type)",
+   "<span class=\"tab-card-title\">DRACL-C</span><span class=\"tab-card-desc\">디스크 타입 커넥팅 샤프트</span>": "<span class=\"tab-card-title\">DRACL-C</span><span class=\"tab-card-desc\">disc-type connecting shaft</span>",
+   "<span class=\"tab-card-title\">DRACL 표준 내경</span><span class=\"tab-card-desc\">7건</span>": "<span class=\"tab-card-title\">DRACL standard bores</span><span class=\"tab-card-desc\">7 items</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Connecting Shaft · DRACL-C / DRACL-CW</p> <h2>커넥팅 샤프트 DRACL (디스크 타입)</h2> <p>DURI (두리마이텍)의 디스크 타입 커넥팅 샤프트(장축 연결축 커플링, 디자인 등록)입니다. 양 끝의 디스크 커플링과 알루미늄 장축으로 멀리 떨어진 축을 연결합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Connecting Shaft · DRACL-C / DRACL-CW</p> <h2>コネクティングシャフト DRACL(ディスクタイプ)</h2> <p>DURI(ドゥリマイテック)のディスクタイプ・コネクティングシャフト(長軸連結カップリング、意匠登録)です。両端のディスクカップリングとアルミ長軸で離れた軸を連結します。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -84,7 +86,9 @@
    "* ● 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.": "* ●印の内径は標準内径として対応します。",
    "* 위의 표 이외의 비표준 내경에 대해서는 별도 대응이 가능합니다. 당사에 문의해 주십시오.": "* 上表以外の非標準内径にも別途対応可能です。当社にお問い合わせください。",
    "* 키 홈 가공해 드립니다.": "* キー溝加工を承ります。",
-   "커넥팅 샤프트 DRACL (디스크 타입)": "コネクティングシャフト DRACL(ディスクタイプ)"
+   "커넥팅 샤프트 DRACL (디스크 타입)": "コネクティングシャフト DRACL(ディスクタイプ)",
+   "<span class=\"tab-card-title\">DRACL-C</span><span class=\"tab-card-desc\">디스크 타입 커넥팅 샤프트</span>": "<span class=\"tab-card-title\">DRACL-C</span><span class=\"tab-card-desc\">ディスクタイプ・コネクティングシャフト</span>",
+   "<span class=\"tab-card-title\">DRACL 표준 내경</span><span class=\"tab-card-desc\">7건</span>": "<span class=\"tab-card-title\">DRACL 標準内径</span><span class=\"tab-card-desc\">7件</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Connecting Shaft · DRACL-C / DRACL-CW</p> <h2>커넥팅 샤프트 DRACL (디스크 타입)</h2> <p>DURI (두리마이텍)의 디스크 타입 커넥팅 샤프트(장축 연결축 커플링, 디자인 등록)입니다. 양 끝의 디스크 커플링과 알루미늄 장축으로 멀리 떨어진 축을 연결합니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Connecting Shaft · DRACL-C / DRACL-CW</p> <h2>连接轴 DRACL(膜片型)</h2> <p>DURI(斗利迈泰)的膜片型连接轴(长轴连接联轴器，外观设计注册)。两端的膜片联轴器与铝制长轴连接相距较远的轴。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -127,21 +131,26 @@
    "* ● 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.": "* 标有●的内径为标准内径。",
    "* 위의 표 이외의 비표준 내경에 대해서는 별도 대응이 가능합니다. 당사에 문의해 주십시오.": "* 上表以外的非标准内径可另行对应，请咨询本公司。",
    "* 키 홈 가공해 드립니다.": "* 可提供键槽加工。",
-   "커넥팅 샤프트 DRACL (디스크 타입)": "连接轴 DRACL(膜片型)"
+   "커넥팅 샤프트 DRACL (디스크 타입)": "连接轴 DRACL(膜片型)",
+   "<span class=\"tab-card-title\">DRACL-C</span><span class=\"tab-card-desc\">디스크 타입 커넥팅 샤프트</span>": "<span class=\"tab-card-title\">DRACL-C</span><span class=\"tab-card-desc\">膜片型连接轴</span>",
+   "<span class=\"tab-card-title\">DRACL 표준 내경</span><span class=\"tab-card-desc\">7건</span>": "<span class=\"tab-card-title\">DRACL 标准内径</span><span class=\"tab-card-desc\">7个</span>"
   }
  },
  "attrs": {
   "en": {
    "DRACL 커넥팅 샤프트 규격 도면": "DRACL connecting shaft drawing",
-   "예: DRACL-54C□ 또는 25": "e.g. DRACL-54C□ or 25"
+   "예: DRACL-54C□ 또는 25": "e.g. DRACL-54C□ or 25",
+   "시리즈 선택": "Select series"
   },
   "ja": {
    "DRACL 커넥팅 샤프트 규격 도면": "DRACLコネクティングシャフト規格図面",
-   "예: DRACL-54C□ 또는 25": "例: DRACL-54C□ または 25"
+   "예: DRACL-54C□ 또는 25": "例: DRACL-54C□ または 25",
+   "시리즈 선택": "シリーズを選択"
   },
   "zh": {
    "DRACL 커넥팅 샤프트 규격 도면": "DRACL连接轴规格图纸",
-   "예: DRACL-54C□ 또는 25": "例: DRACL-54C□ 或 25"
+   "예: DRACL-54C□ 또는 25": "例: DRACL-54C□ 或 25",
+   "시리즈 선택": "选择系列"
   }
  }
 }

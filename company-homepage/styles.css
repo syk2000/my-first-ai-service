@@ -2957,7 +2957,7 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="parallel_pin.html"]::before { background-image: url("assets/cards/pc_parallel_pin.webp?v=10"); }
 .img-cards .product-card[href="oilgage_md_mc.html"]::before { background-image: url("assets/cards/pc_oilgage_md_mc.webp?v=11"); }
 .img-cards .product-card[href="oilgage_mh_mhs.html"]::before { background-image: url("assets/cards/pc_oilgage_mh_mhs.webp?v=11"); }
-.img-cards .product-card[href="oilgage_mhl.html"]::before { background-image: url("assets/cards/pc_oilgage_mhl.webp?v=10"); }
+.img-cards .product-card[href="oilgage_mhl.html"]::before { background-image: url("assets/cards/pc_oilgage_mhl.webp?v=11"); }
 .img-cards .product-card[href="oilseal_types.html"]::before { background-image: url("assets/cards/pc_oilseal_types.webp?v=10"); }
 .img-cards .product-card[href="oilseal_endcap.html"]::before { background-image: url("assets/cards/pc_oilseal_endcap.webp?v=10"); }
 
@@ -3225,3 +3225,20 @@ table.spec-table th { color: #4b5873; }
 #barrel-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_barrel_roller.webp?v=10"); }
 #angular-thrust-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_angular_thrust_ball.webp?v=10"); }
 #spindle-bearing .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_spindle_bearing.webp?v=3"); }
+
+/* 시리즈 카드 탭 그림 (b2) */
+#coupling_dhda .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_dhda.webp?v=10"); }
+#coupling_drs .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drs.webp?v=10"); }
+#coupling_drb .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drb.webp?v=10"); }
+#coupling_djc .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_djc.webp?v=10"); }
+#coupling-mt-jaw .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_mt_jaw.webp?v=10"); }
+#coupling_drg .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drg.webp?v=10"); }
+#coupling_doh .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_doh.webp?v=10"); }
+#coupling-mt-drda .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_mt_drda.webp?v=10"); }
+#coupling-mt-dpds .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_mt_dpds.webp?v=10"); }
+#coupling-mt-dhds .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_mt_dhds.webp?v=10"); }
+#coupling_drjcl .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drjcl.webp?v=10"); }
+#coupling_drfc .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drfc.webp?v=10"); }
+#coupling_dracl .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_dracl.webp?v=10"); }
+#coupling_dhra .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_dhra.webp?v=10"); }
+#coupling_collar .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_collar.webp?v=10"); }

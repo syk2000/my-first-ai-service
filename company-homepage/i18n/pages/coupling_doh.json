@@ -44,7 +44,11 @@
    "* 키 홈 가공해 드립니다.": "* Keyway machining is available.",
    "DOH-C · DOHS-C · DOH-SC (클램프 타입)<span class=\"series-count\">23건</span>": "DOH-C · DOHS-C · DOH-SC (clamp types)<span class=\"series-count\">23 items</span>",
    "DOH 클램프 타입 표준 내경<span class=\"series-count\">11건</span>": "DOH clamp type standard bores<span class=\"series-count\">11 items</span>",
-   "올덤형 커플링 DOH 시리즈": "Oldham Coupling DOH Series"
+   "올덤형 커플링 DOH 시리즈": "Oldham Coupling DOH Series",
+   "<span class=\"tab-card-title\">DOH · DOH-S · DOH-SS</span><span class=\"tab-card-desc\">세트 스크류 타입</span>": "<span class=\"tab-card-title\">DOH · DOH-S · DOH-SS</span><span class=\"tab-card-desc\">set screw types</span>",
+   "<span class=\"tab-card-title\">DOH 세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">8건</span>": "<span class=\"tab-card-title\">DOH set screw type standard bores</span><span class=\"tab-card-desc\">8 items</span>",
+   "<span class=\"tab-card-title\">DOH-C · DOHS-C · DOH-SC</span><span class=\"tab-card-desc\">클램프 타입</span>": "<span class=\"tab-card-title\">DOH-C · DOHS-C · DOH-SC</span><span class=\"tab-card-desc\">clamp types</span>",
+   "<span class=\"tab-card-title\">DOH 클램프 타입 표준 내경</span><span class=\"tab-card-desc\">11건</span>": "<span class=\"tab-card-title\">DOH clamp type standard bores</span><span class=\"tab-card-desc\">11 items</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Coupling · DOH / DOH-S / DOH-SS / DOH-C / DOHS-C / DOH-SC</p> <h2>올덤형 커플링 DOH 시리즈</h2> <p>DURI (두리마이텍)의 올덤형 커플링입니다. 두 허브 사이의 스페이서가 미끄러지며 편심·편각을 흡수합니다. 세트 스크류 타입(DOH·DOH-S·DOH-SS), 클램프 타입(DOH-C), 콤팩트 클램프(DOHS-C), 세트 스크류·클램프 조합형(DOH-SC)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · DOH / DOH-S / DOH-SS / DOH-C / DOHS-C / DOH-SC</p> <h2>オルダム型カップリング DOHシリーズ</h2> <p>DURI(ドゥリマイテック)のオルダム型カップリングです。2つのハブ間のスペーサーが滑って偏心・偏角を吸収します。セットスクリュータイプ(DOH · DOH-S · DOH-SS)、クランプタイプ(DOH-C)、コンパクトクランプ(DOHS-C)、セットスクリュー・クランプ組合せ型(DOH-SC)があります。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -90,7 +94,11 @@
    "* 키 홈 가공해 드립니다.": "* キー溝加工を承ります。",
    "DOH-C · DOHS-C · DOH-SC (클램프 타입)<span class=\"series-count\">23건</span>": "DOH-C · DOHS-C · DOH-SC (クランプタイプ)<span class=\"series-count\">23件</span>",
    "DOH 클램프 타입 표준 내경<span class=\"series-count\">11건</span>": "DOH クランプタイプ 標準内径<span class=\"series-count\">11件</span>",
-   "올덤형 커플링 DOH 시리즈": "オルダム型カップリング DOHシリーズ"
+   "올덤형 커플링 DOH 시리즈": "オルダム型カップリング DOHシリーズ",
+   "<span class=\"tab-card-title\">DOH · DOH-S · DOH-SS</span><span class=\"tab-card-desc\">세트 스크류 타입</span>": "<span class=\"tab-card-title\">DOH · DOH-S · DOH-SS</span><span class=\"tab-card-desc\">セットスクリュータイプ</span>",
+   "<span class=\"tab-card-title\">DOH 세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">8건</span>": "<span class=\"tab-card-title\">DOH セットスクリュータイプ 標準内径</span><span class=\"tab-card-desc\">8件</span>",
+   "<span class=\"tab-card-title\">DOH-C · DOHS-C · DOH-SC</span><span class=\"tab-card-desc\">클램프 타입</span>": "<span class=\"tab-card-title\">DOH-C · DOHS-C · DOH-SC</span><span class=\"tab-card-desc\">クランプタイプ</span>",
+   "<span class=\"tab-card-title\">DOH 클램프 타입 표준 내경</span><span class=\"tab-card-desc\">11건</span>": "<span class=\"tab-card-title\">DOH クランプタイプ 標準内径</span><span class=\"tab-card-desc\">11件</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Coupling · DOH / DOH-S / DOH-SS / DOH-C / DOHS-C / DOH-SC</p> <h2>올덤형 커플링 DOH 시리즈</h2> <p>DURI (두리마이텍)의 올덤형 커플링입니다. 두 허브 사이의 스페이서가 미끄러지며 편심·편각을 흡수합니다. 세트 스크류 타입(DOH·DOH-S·DOH-SS), 클램프 타입(DOH-C), 콤팩트 클램프(DOHS-C), 세트 스크류·클램프 조합형(DOH-SC)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · DOH / DOH-S / DOH-SS / DOH-C / DOHS-C / DOH-SC</p> <h2>十字滑块联轴器 DOH系列</h2> <p>DURI(斗利迈泰)的十字滑块联轴器。两个轮毂之间的垫块滑动以吸收偏心和偏角。有紧定螺钉型(DOH · DOH-S · DOH-SS)、夹紧型(DOH-C)、紧凑夹紧型(DOHS-C)以及紧定螺钉·夹紧组合型(DOH-SC)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -136,24 +144,31 @@
    "* 키 홈 가공해 드립니다.": "* 可提供键槽加工。",
    "DOH-C · DOHS-C · DOH-SC (클램프 타입)<span class=\"series-count\">23건</span>": "DOH-C · DOHS-C · DOH-SC (夹紧型)<span class=\"series-count\">23个</span>",
    "DOH 클램프 타입 표준 내경<span class=\"series-count\">11건</span>": "DOH 夹紧型 标准内径<span class=\"series-count\">11个</span>",
-   "올덤형 커플링 DOH 시리즈": "十字滑块联轴器 DOH系列"
+   "올덤형 커플링 DOH 시리즈": "十字滑块联轴器 DOH系列",
+   "<span class=\"tab-card-title\">DOH · DOH-S · DOH-SS</span><span class=\"tab-card-desc\">세트 스크류 타입</span>": "<span class=\"tab-card-title\">DOH · DOH-S · DOH-SS</span><span class=\"tab-card-desc\">紧定螺钉型</span>",
+   "<span class=\"tab-card-title\">DOH 세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">8건</span>": "<span class=\"tab-card-title\">DOH 紧定螺钉型 标准内径</span><span class=\"tab-card-desc\">8个</span>",
+   "<span class=\"tab-card-title\">DOH-C · DOHS-C · DOH-SC</span><span class=\"tab-card-desc\">클램프 타입</span>": "<span class=\"tab-card-title\">DOH-C · DOHS-C · DOH-SC</span><span class=\"tab-card-desc\">夹紧型</span>",
+   "<span class=\"tab-card-title\">DOH 클램프 타입 표준 내경</span><span class=\"tab-card-desc\">11건</span>": "<span class=\"tab-card-title\">DOH 夹紧型 标准内径</span><span class=\"tab-card-desc\">11个</span>"
   }
  },
  "attrs": {
   "en": {
    "DOH 올덤형 커플링 세트 스크류 타입 규격 도면": "DOH Oldham coupling set screw type drawing",
    "DOH 올덤형 커플링 클램프 타입 규격 도면": "DOH Oldham coupling clamp type drawing",
-   "예: DOH-25 또는 25": "e.g. DOH-25 or 25"
+   "예: DOH-25 또는 25": "e.g. DOH-25 or 25",
+   "시리즈 선택": "Select series"
   },
   "ja": {
    "DOH 올덤형 커플링 세트 스크류 타입 규격 도면": "DOHオルダム型カップリング セットスクリュータイプ規格図面",
    "DOH 올덤형 커플링 클램프 타입 규격 도면": "DOHオルダム型カップリング クランプタイプ規格図面",
-   "예: DOH-25 또는 25": "例: DOH-25 または 25"
+   "예: DOH-25 또는 25": "例: DOH-25 または 25",
+   "시리즈 선택": "シリーズを選択"
   },
   "zh": {
    "DOH 올덤형 커플링 세트 스크류 타입 규격 도면": "DOH十字滑块联轴器紧定螺钉型规格图纸",
    "DOH 올덤형 커플링 클램프 타입 규격 도면": "DOH十字滑块联轴器夹紧型规格图纸",
-   "예: DOH-25 또는 25": "例: DOH-25 或 25"
+   "예: DOH-25 또는 25": "例: DOH-25 或 25",
+   "시리즈 선택": "选择系列"
   }
  }
 }

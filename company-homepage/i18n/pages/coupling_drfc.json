@@ -30,7 +30,9 @@
    "표준 내경 D1·D2 (mm)": "Standard bore D1·D2 (mm)",
    "* 상대 부착 축의 허용치는 h7을 권장합니다.": "* h7 is recommended for the mating shaft tolerance.",
    "* ● 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.": "* Bores marked ● are available as standard bores.",
-   "플렉시블 커플링 DRFC": "Flexible Coupling DRFC"
+   "플렉시블 커플링 DRFC": "Flexible Coupling DRFC",
+   "<span class=\"tab-card-title\">DRFC</span><span class=\"tab-card-desc\">세트 스크류 타입</span>": "<span class=\"tab-card-title\">DRFC</span><span class=\"tab-card-desc\">set screw type</span>",
+   "<span class=\"tab-card-title\">DRFC 표준 내경</span><span class=\"tab-card-desc\">4건</span>": "<span class=\"tab-card-title\">DRFC standard bores</span><span class=\"tab-card-desc\">4 items</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Coupling · Flexible DRFC</p> <h2>플렉시블 커플링 DRFC</h2> <p>DURI (두리마이텍)의 일체형 플렉시블 커플링(특허 제품)입니다. 폴리우레탄 스페이서가 두 허브를 잇는 구조로, 스테핑 모터·일반 범용 모터에 사용됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · Flexible DRFC</p> <h2>フレキシブルカップリング DRFC</h2> <p>DURI(ドゥリマイテック)の一体型フレキシブルカップリング(特許製品)です。ポリウレタンスペーサーが2つのハブをつなぐ構造で、ステッピングモーター・汎用モーターに使用されます。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -62,7 +64,9 @@
    "표준 내경 D1·D2 (mm)": "標準内径 D1·D2 (mm)",
    "* 상대 부착 축의 허용치는 h7을 권장합니다.": "* 相手軸の許容差はh7を推奨します。",
    "* ● 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.": "* ●印の内径は標準内径として対応します。",
-   "플렉시블 커플링 DRFC": "フレキシブルカップリング DRFC"
+   "플렉시블 커플링 DRFC": "フレキシブルカップリング DRFC",
+   "<span class=\"tab-card-title\">DRFC</span><span class=\"tab-card-desc\">세트 스크류 타입</span>": "<span class=\"tab-card-title\">DRFC</span><span class=\"tab-card-desc\">セットスクリュータイプ</span>",
+   "<span class=\"tab-card-title\">DRFC 표준 내경</span><span class=\"tab-card-desc\">4건</span>": "<span class=\"tab-card-title\">DRFC 標準内径</span><span class=\"tab-card-desc\">4件</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Coupling · Flexible DRFC</p> <h2>플렉시블 커플링 DRFC</h2> <p>DURI (두리마이텍)의 일체형 플렉시블 커플링(특허 제품)입니다. 폴리우레탄 스페이서가 두 허브를 잇는 구조로, 스테핑 모터·일반 범용 모터에 사용됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · Flexible DRFC</p> <h2>挠性联轴器 DRFC</h2> <p>DURI(斗利迈泰)的一体式挠性联轴器(专利产品)。聚氨酯垫块连接两个轮毂，用于步进电机和通用电机。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -94,21 +98,26 @@
    "표준 내경 D1·D2 (mm)": "标准内径 D1·D2 (mm)",
    "* 상대 부착 축의 허용치는 h7을 권장합니다.": "* 配合轴公差推荐h7。",
    "* ● 표시가 있는 칸의 내경은 표준 내경으로 대응합니다.": "* 标有●的内径为标准内径。",
-   "플렉시블 커플링 DRFC": "挠性联轴器 DRFC"
+   "플렉시블 커플링 DRFC": "挠性联轴器 DRFC",
+   "<span class=\"tab-card-title\">DRFC</span><span class=\"tab-card-desc\">세트 스크류 타입</span>": "<span class=\"tab-card-title\">DRFC</span><span class=\"tab-card-desc\">紧定螺钉型</span>",
+   "<span class=\"tab-card-title\">DRFC 표준 내경</span><span class=\"tab-card-desc\">4건</span>": "<span class=\"tab-card-title\">DRFC 标准内径</span><span class=\"tab-card-desc\">4个</span>"
   }
  },
  "attrs": {
   "en": {
    "DRFC 플렉시블 커플링 규격 도면": "DRFC flexible coupling drawing",
-   "예: DRFC-48 또는 25": "e.g. DRFC-48 or 25"
+   "예: DRFC-48 또는 25": "e.g. DRFC-48 or 25",
+   "시리즈 선택": "Select series"
   },
   "ja": {
    "DRFC 플렉시블 커플링 규격 도면": "DRFCフレキシブルカップリング規格図面",
-   "예: DRFC-48 또는 25": "例: DRFC-48 または 25"
+   "예: DRFC-48 또는 25": "例: DRFC-48 または 25",
+   "시리즈 선택": "シリーズを選択"
   },
   "zh": {
    "DRFC 플렉시블 커플링 규격 도면": "DRFC挠性联轴器规格图纸",
-   "예: DRFC-48 또는 25": "例: DRFC-48 或 25"
+   "예: DRFC-48 또는 25": "例: DRFC-48 或 25",
+   "시리즈 선택": "选择系列"
   }
  }
 }

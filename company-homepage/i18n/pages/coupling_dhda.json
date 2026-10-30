@@ -47,7 +47,19 @@
    "DHDA-A-T 표준 내경<span class=\"series-count\">6건</span>": "DHDA-A-T standard bores<span class=\"series-count\">6 items</span>",
    "DHDA-B-T (테이퍼 · 더블)<span class=\"series-count\">6건</span>": "DHDA-B-T (taper · double)<span class=\"series-count\">6 items</span>",
    "DHDA-B-T 표준 내경<span class=\"series-count\">6건</span>": "DHDA-B-T standard bores<span class=\"series-count\">6 items</span>",
-   "고강성 디스크 커플링 DHDA 시리즈": "High-rigidity Disc Coupling DHDA Series"
+   "고강성 디스크 커플링 DHDA 시리즈": "High-rigidity Disc Coupling DHDA Series",
+   "<span class=\"tab-card-title\">DHDA-A-S</span><span class=\"tab-card-desc\">싱글 · 세트 스크류</span>": "<span class=\"tab-card-title\">DHDA-A-S</span><span class=\"tab-card-desc\">single · set screw</span>",
+   "<span class=\"tab-card-title\">DHDA-A-S 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-A-S standard bores</span><span class=\"tab-card-desc\">6 items</span>",
+   "<span class=\"tab-card-title\">DHDA-A-C</span><span class=\"tab-card-desc\">싱글 · 클램프</span>": "<span class=\"tab-card-title\">DHDA-A-C</span><span class=\"tab-card-desc\">single · clamp</span>",
+   "<span class=\"tab-card-title\">DHDA-A-C 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-A-C standard bores</span><span class=\"tab-card-desc\">6 items</span>",
+   "<span class=\"tab-card-title\">DHDA-B-S</span><span class=\"tab-card-desc\">더블 · 세트 스크류</span>": "<span class=\"tab-card-title\">DHDA-B-S</span><span class=\"tab-card-desc\">double · set screw</span>",
+   "<span class=\"tab-card-title\">DHDA-B-S 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-B-S standard bores</span><span class=\"tab-card-desc\">6 items</span>",
+   "<span class=\"tab-card-title\">DHDA-B-C</span><span class=\"tab-card-desc\">더블 · 클램프</span>": "<span class=\"tab-card-title\">DHDA-B-C</span><span class=\"tab-card-desc\">double · clamp</span>",
+   "<span class=\"tab-card-title\">DHDA-B-C 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-B-C standard bores</span><span class=\"tab-card-desc\">6 items</span>",
+   "<span class=\"tab-card-title\">DHDA-A-T</span><span class=\"tab-card-desc\">테이퍼 · 싱글</span>": "<span class=\"tab-card-title\">DHDA-A-T</span><span class=\"tab-card-desc\">taper · single</span>",
+   "<span class=\"tab-card-title\">DHDA-A-T 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-A-T standard bores</span><span class=\"tab-card-desc\">6 items</span>",
+   "<span class=\"tab-card-title\">DHDA-B-T</span><span class=\"tab-card-desc\">테이퍼 · 더블</span>": "<span class=\"tab-card-title\">DHDA-B-T</span><span class=\"tab-card-desc\">taper · double</span>",
+   "<span class=\"tab-card-title\">DHDA-B-T 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-B-T standard bores</span><span class=\"tab-card-desc\">6 items</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Coupling · DHDA-A / DHDA-B / DHDA-T</p> <h2>고강성 디스크 커플링 DHDA 시리즈</h2> <p>DURI (두리마이텍)의 육각 디스크팩 파워 커플링입니다. 플레이트 없는 싱글 타입(DHDA-A), 플레이트가 있는 더블 타입(DHDA-B), 테이퍼 체결 타입(DHDA-T)이 있으며 A·B는 세트 스크류(-S)·클램프(-C)로 공급됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · DHDA-A / DHDA-B / DHDA-T</p> <h2>高剛性ディスクカップリング DHDAシリーズ</h2> <p>DURI(ドゥリマイテック)の六角ディスクパック採用パワーカップリングです。プレートなしのシングルタイプ(DHDA-A)、プレート付きのダブルタイプ(DHDA-B)、テーパー締結タイプ(DHDA-T)があり、A・Bはセットスクリュー(-S)・クランプ(-C)で供給します。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -96,7 +108,19 @@
    "DHDA-A-T 표준 내경<span class=\"series-count\">6건</span>": "DHDA-A-T 標準内径<span class=\"series-count\">6件</span>",
    "DHDA-B-T (테이퍼 · 더블)<span class=\"series-count\">6건</span>": "DHDA-B-T (テーパー · ダブル)<span class=\"series-count\">6件</span>",
    "DHDA-B-T 표준 내경<span class=\"series-count\">6건</span>": "DHDA-B-T 標準内径<span class=\"series-count\">6件</span>",
-   "고강성 디스크 커플링 DHDA 시리즈": "高剛性ディスクカップリング DHDAシリーズ"
+   "고강성 디스크 커플링 DHDA 시리즈": "高剛性ディスクカップリング DHDAシリーズ",
+   "<span class=\"tab-card-title\">DHDA-A-S</span><span class=\"tab-card-desc\">싱글 · 세트 스크류</span>": "<span class=\"tab-card-title\">DHDA-A-S</span><span class=\"tab-card-desc\">シングル · セットスクリュー</span>",
+   "<span class=\"tab-card-title\">DHDA-A-S 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-A-S 標準内径</span><span class=\"tab-card-desc\">6件</span>",
+   "<span class=\"tab-card-title\">DHDA-A-C</span><span class=\"tab-card-desc\">싱글 · 클램프</span>": "<span class=\"tab-card-title\">DHDA-A-C</span><span class=\"tab-card-desc\">シングル · クランプ</span>",
+   "<span class=\"tab-card-title\">DHDA-A-C 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-A-C 標準内径</span><span class=\"tab-card-desc\">6件</span>",
+   "<span class=\"tab-card-title\">DHDA-B-S</span><span class=\"tab-card-desc\">더블 · 세트 스크류</span>": "<span class=\"tab-card-title\">DHDA-B-S</span><span class=\"tab-card-desc\">ダブル · セットスクリュー</span>",
+   "<span class=\"tab-card-title\">DHDA-B-S 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-B-S 標準内径</span><span class=\"tab-card-desc\">6件</span>",
+   "<span class=\"tab-card-title\">DHDA-B-C</span><span class=\"tab-card-desc\">더블 · 클램프</span>": "<span class=\"tab-card-title\">DHDA-B-C</span><span class=\"tab-card-desc\">ダブル · クランプ</span>",
+   "<span class=\"tab-card-title\">DHDA-B-C 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-B-C 標準内径</span><span class=\"tab-card-desc\">6件</span>",
+   "<span class=\"tab-card-title\">DHDA-A-T</span><span class=\"tab-card-desc\">테이퍼 · 싱글</span>": "<span class=\"tab-card-title\">DHDA-A-T</span><span class=\"tab-card-desc\">テーパー · シングル</span>",
+   "<span class=\"tab-card-title\">DHDA-A-T 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-A-T 標準内径</span><span class=\"tab-card-desc\">6件</span>",
+   "<span class=\"tab-card-title\">DHDA-B-T</span><span class=\"tab-card-desc\">테이퍼 · 더블</span>": "<span class=\"tab-card-title\">DHDA-B-T</span><span class=\"tab-card-desc\">テーパー · ダブル</span>",
+   "<span class=\"tab-card-title\">DHDA-B-T 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-B-T 標準内径</span><span class=\"tab-card-desc\">6件</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Coupling · DHDA-A / DHDA-B / DHDA-T</p> <h2>고강성 디스크 커플링 DHDA 시리즈</h2> <p>DURI (두리마이텍)의 육각 디스크팩 파워 커플링입니다. 플레이트 없는 싱글 타입(DHDA-A), 플레이트가 있는 더블 타입(DHDA-B), 테이퍼 체결 타입(DHDA-T)이 있으며 A·B는 세트 스크류(-S)·클램프(-C)로 공급됩니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · DHDA-A / DHDA-B / DHDA-T</p> <h2>高刚性膜片联轴器 DHDA系列</h2> <p>DURI(斗利迈泰)的六角膜片组动力联轴器。有无中间板的单节型(DHDA-A)、带中间板的双节型(DHDA-B)和锥套紧固型(DHDA-T)，A和B提供紧定螺钉(-S)和夹紧(-C)型。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -145,7 +169,19 @@
    "DHDA-A-T 표준 내경<span class=\"series-count\">6건</span>": "DHDA-A-T 标准内径<span class=\"series-count\">6个</span>",
    "DHDA-B-T (테이퍼 · 더블)<span class=\"series-count\">6건</span>": "DHDA-B-T (锥套 · 双节)<span class=\"series-count\">6个</span>",
    "DHDA-B-T 표준 내경<span class=\"series-count\">6건</span>": "DHDA-B-T 标准内径<span class=\"series-count\">6个</span>",
-   "고강성 디스크 커플링 DHDA 시리즈": "高刚性膜片联轴器 DHDA系列"
+   "고강성 디스크 커플링 DHDA 시리즈": "高刚性膜片联轴器 DHDA系列",
+   "<span class=\"tab-card-title\">DHDA-A-S</span><span class=\"tab-card-desc\">싱글 · 세트 스크류</span>": "<span class=\"tab-card-title\">DHDA-A-S</span><span class=\"tab-card-desc\">单节 · 紧定螺钉</span>",
+   "<span class=\"tab-card-title\">DHDA-A-S 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-A-S 标准内径</span><span class=\"tab-card-desc\">6个</span>",
+   "<span class=\"tab-card-title\">DHDA-A-C</span><span class=\"tab-card-desc\">싱글 · 클램프</span>": "<span class=\"tab-card-title\">DHDA-A-C</span><span class=\"tab-card-desc\">单节 · 夹紧</span>",
+   "<span class=\"tab-card-title\">DHDA-A-C 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-A-C 标准内径</span><span class=\"tab-card-desc\">6个</span>",
+   "<span class=\"tab-card-title\">DHDA-B-S</span><span class=\"tab-card-desc\">더블 · 세트 스크류</span>": "<span class=\"tab-card-title\">DHDA-B-S</span><span class=\"tab-card-desc\">双节 · 紧定螺钉</span>",
+   "<span class=\"tab-card-title\">DHDA-B-S 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-B-S 标准内径</span><span class=\"tab-card-desc\">6个</span>",
+   "<span class=\"tab-card-title\">DHDA-B-C</span><span class=\"tab-card-desc\">더블 · 클램프</span>": "<span class=\"tab-card-title\">DHDA-B-C</span><span class=\"tab-card-desc\">双节 · 夹紧</span>",
+   "<span class=\"tab-card-title\">DHDA-B-C 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-B-C 标准内径</span><span class=\"tab-card-desc\">6个</span>",
+   "<span class=\"tab-card-title\">DHDA-A-T</span><span class=\"tab-card-desc\">테이퍼 · 싱글</span>": "<span class=\"tab-card-title\">DHDA-A-T</span><span class=\"tab-card-desc\">锥套 · 单节</span>",
+   "<span class=\"tab-card-title\">DHDA-A-T 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-A-T 标准内径</span><span class=\"tab-card-desc\">6个</span>",
+   "<span class=\"tab-card-title\">DHDA-B-T</span><span class=\"tab-card-desc\">테이퍼 · 더블</span>": "<span class=\"tab-card-title\">DHDA-B-T</span><span class=\"tab-card-desc\">锥套 · 双节</span>",
+   "<span class=\"tab-card-title\">DHDA-B-T 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DHDA-B-T 标准内径</span><span class=\"tab-card-desc\">6个</span>"
   }
  },
  "attrs": {
@@ -153,19 +189,22 @@
    "DHDA-A 싱글 타입 디스크 커플링 규격 도면": "DHDA-A single type disc coupling drawing",
    "DHDA-B 더블 타입 디스크 커플링 규격 도면": "DHDA-B double type disc coupling drawing",
    "DHDA-T 테이퍼 타입 디스크 커플링 규격 도면": "DHDA-T taper type disc coupling drawing",
-   "예: DHDA-78A-S 또는 25": "e.g. DHDA-78A-S or 25"
+   "예: DHDA-78A-S 또는 25": "e.g. DHDA-78A-S or 25",
+   "시리즈 선택": "Select series"
   },
   "ja": {
    "DHDA-A 싱글 타입 디스크 커플링 규격 도면": "DHDA-Aシングルタイプディスクカップリング規格図面",
    "DHDA-B 더블 타입 디스크 커플링 규격 도면": "DHDA-Bダブルタイプディスクカップリング規格図面",
    "DHDA-T 테이퍼 타입 디스크 커플링 규격 도면": "DHDA-Tテーパータイプディスクカップリング規格図面",
-   "예: DHDA-78A-S 또는 25": "例: DHDA-78A-S または 25"
+   "예: DHDA-78A-S 또는 25": "例: DHDA-78A-S または 25",
+   "시리즈 선택": "シリーズを選択"
   },
   "zh": {
    "DHDA-A 싱글 타입 디스크 커플링 규격 도면": "DHDA-A单节型膜片联轴器规格图纸",
    "DHDA-B 더블 타입 디스크 커플링 규격 도면": "DHDA-B双节型膜片联轴器规格图纸",
    "DHDA-T 테이퍼 타입 디스크 커플링 규격 도면": "DHDA-T锥套型膜片联轴器规格图纸",
-   "예: DHDA-78A-S 또는 25": "例: DHDA-78A-S 或 25"
+   "예: DHDA-78A-S 또는 25": "例: DHDA-78A-S 或 25",
+   "시리즈 선택": "选择系列"
   }
  }
 }

@@ -35,7 +35,11 @@
    "* 키 홈 가공해 드립니다.": "* Keyway machining is available.",
    "DRGL-C · DRL-C · DRL-V (롱 타입)<span class=\"series-count\">14건</span>": "DRGL-C · DRL-C · DRL-V (long type)<span class=\"series-count\">14 items</span>",
    "DRGL · DRL 표준 내경<span class=\"series-count\">6건</span>": "DRGL · DRL standard bores<span class=\"series-count\">6 items</span>",
-   "리지드 커플링 DRG · DRGL · DRL 시리즈": "Rigid Coupling DRG · DRGL · DRL Series"
+   "리지드 커플링 DRG · DRGL · DRL 시리즈": "Rigid Coupling DRG · DRGL · DRL Series",
+   "<span class=\"tab-card-title\">DRG · DRG-C · DRG-W</span><span class=\"tab-card-desc\">일반 타입</span>": "<span class=\"tab-card-title\">DRG · DRG-C · DRG-W</span><span class=\"tab-card-desc\">standard type</span>",
+   "<span class=\"tab-card-title\">DRG 표준 내경</span><span class=\"tab-card-desc\">16건</span>": "<span class=\"tab-card-title\">DRG standard bores</span><span class=\"tab-card-desc\">16 items</span>",
+   "<span class=\"tab-card-title\">DRGL-C · DRL-C · DRL-V</span><span class=\"tab-card-desc\">롱 타입</span>": "<span class=\"tab-card-title\">DRGL-C · DRL-C · DRL-V</span><span class=\"tab-card-desc\">long type</span>",
+   "<span class=\"tab-card-title\">DRGL · DRL 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DRGL · DRL standard bores</span><span class=\"tab-card-desc\">6 items</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Coupling · Rigid DRG / DRG-C / DRG-W / DRGL-C / DRL-C / DRL-V</p> <h2>리지드 커플링 DRG · DRGL · DRL 시리즈</h2> <p>DURI (두리마이텍)의 알루미늄 리지드 커플링입니다. 일반 타입(DRG 세트 스크류·DRG-C 클램프·DRG-W 분리형)과 롱 타입(DRGL-C·DRL-C 클램프·DRL-V 반분리형)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · Rigid DRG / DRG-C / DRG-W / DRGL-C / DRL-C / DRL-V</p> <h2>リジッドカップリング DRG · DRGL · DRLシリーズ</h2> <p>DURI(ドゥリマイテック)のアルミ製リジッドカップリングです。標準タイプ(DRGセットスクリュー · DRG-Cクランプ · DRG-W分割型)とロングタイプ(DRGL-C · DRL-Cクランプ · DRL-V半分割型)があります。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -72,7 +76,11 @@
    "* 키 홈 가공해 드립니다.": "* キー溝加工を承ります。",
    "DRGL-C · DRL-C · DRL-V (롱 타입)<span class=\"series-count\">14건</span>": "DRGL-C · DRL-C · DRL-V (ロングタイプ)<span class=\"series-count\">14件</span>",
    "DRGL · DRL 표준 내경<span class=\"series-count\">6건</span>": "DRGL · DRL 標準内径<span class=\"series-count\">6件</span>",
-   "리지드 커플링 DRG · DRGL · DRL 시리즈": "リジッドカップリング DRG · DRGL · DRLシリーズ"
+   "리지드 커플링 DRG · DRGL · DRL 시리즈": "リジッドカップリング DRG · DRGL · DRLシリーズ",
+   "<span class=\"tab-card-title\">DRG · DRG-C · DRG-W</span><span class=\"tab-card-desc\">일반 타입</span>": "<span class=\"tab-card-title\">DRG · DRG-C · DRG-W</span><span class=\"tab-card-desc\">標準タイプ</span>",
+   "<span class=\"tab-card-title\">DRG 표준 내경</span><span class=\"tab-card-desc\">16건</span>": "<span class=\"tab-card-title\">DRG 標準内径</span><span class=\"tab-card-desc\">16件</span>",
+   "<span class=\"tab-card-title\">DRGL-C · DRL-C · DRL-V</span><span class=\"tab-card-desc\">롱 타입</span>": "<span class=\"tab-card-title\">DRGL-C · DRL-C · DRL-V</span><span class=\"tab-card-desc\">ロングタイプ</span>",
+   "<span class=\"tab-card-title\">DRGL · DRL 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DRGL · DRL 標準内径</span><span class=\"tab-card-desc\">6件</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Coupling · Rigid DRG / DRG-C / DRG-W / DRGL-C / DRL-C / DRL-V</p> <h2>리지드 커플링 DRG · DRGL · DRL 시리즈</h2> <p>DURI (두리마이텍)의 알루미늄 리지드 커플링입니다. 일반 타입(DRG 세트 스크류·DRG-C 클램프·DRG-W 분리형)과 롱 타입(DRGL-C·DRL-C 클램프·DRL-V 반분리형)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · Rigid DRG / DRG-C / DRG-W / DRGL-C / DRL-C / DRL-V</p> <h2>刚性联轴器 DRG · DRGL · DRL系列</h2> <p>DURI(斗利迈泰)的铝制刚性联轴器。有标准型(DRG紧定螺钉 · DRG-C夹紧 · DRG-W分离型)和加长型(DRGL-C · DRL-C夹紧 · DRL-V半分离型)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -109,24 +117,31 @@
    "* 키 홈 가공해 드립니다.": "* 可提供键槽加工。",
    "DRGL-C · DRL-C · DRL-V (롱 타입)<span class=\"series-count\">14건</span>": "DRGL-C · DRL-C · DRL-V (加长型)<span class=\"series-count\">14个</span>",
    "DRGL · DRL 표준 내경<span class=\"series-count\">6건</span>": "DRGL · DRL 标准内径<span class=\"series-count\">6个</span>",
-   "리지드 커플링 DRG · DRGL · DRL 시리즈": "刚性联轴器 DRG · DRGL · DRL系列"
+   "리지드 커플링 DRG · DRGL · DRL 시리즈": "刚性联轴器 DRG · DRGL · DRL系列",
+   "<span class=\"tab-card-title\">DRG · DRG-C · DRG-W</span><span class=\"tab-card-desc\">일반 타입</span>": "<span class=\"tab-card-title\">DRG · DRG-C · DRG-W</span><span class=\"tab-card-desc\">标准型</span>",
+   "<span class=\"tab-card-title\">DRG 표준 내경</span><span class=\"tab-card-desc\">16건</span>": "<span class=\"tab-card-title\">DRG 标准内径</span><span class=\"tab-card-desc\">16个</span>",
+   "<span class=\"tab-card-title\">DRGL-C · DRL-C · DRL-V</span><span class=\"tab-card-desc\">롱 타입</span>": "<span class=\"tab-card-title\">DRGL-C · DRL-C · DRL-V</span><span class=\"tab-card-desc\">加长型</span>",
+   "<span class=\"tab-card-title\">DRGL · DRL 표준 내경</span><span class=\"tab-card-desc\">6건</span>": "<span class=\"tab-card-title\">DRGL · DRL 标准内径</span><span class=\"tab-card-desc\">6个</span>"
   }
  },
  "attrs": {
   "en": {
    "DRG 리지드 커플링 규격 도면": "DRG rigid coupling drawing",
    "DRGL·DRL 롱 타입 리지드 커플링 규격 도면": "DRGL·DRL long rigid coupling drawing",
-   "예: DRG-20L 또는 25": "e.g. DRG-20L or 25"
+   "예: DRG-20L 또는 25": "e.g. DRG-20L or 25",
+   "시리즈 선택": "Select series"
   },
   "ja": {
    "DRG 리지드 커플링 규격 도면": "DRGリジッドカップリング規格図面",
    "DRGL·DRL 롱 타입 리지드 커플링 규격 도면": "DRGL·DRLロングタイプリジッドカップリング規格図面",
-   "예: DRG-20L 또는 25": "例: DRG-20L または 25"
+   "예: DRG-20L 또는 25": "例: DRG-20L または 25",
+   "시리즈 선택": "シリーズを選択"
   },
   "zh": {
    "DRG 리지드 커플링 규격 도면": "DRG刚性联轴器规格图纸",
    "DRGL·DRL 롱 타입 리지드 커플링 규격 도면": "DRGL·DRL加长型刚性联轴器规格图纸",
-   "예: DRG-20L 또는 25": "例: DRG-20L 或 25"
+   "예: DRG-20L 또는 25": "例: DRG-20L 或 25",
+   "시리즈 선택": "选择系列"
   }
  }
 }

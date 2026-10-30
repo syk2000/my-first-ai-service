@@ -26,7 +26,9 @@
    "흑색 알루마이트": "Black anodized",
    "흑착색": "Black oxide",
    "무전해 니켈 도금": "Electroless nickel plating",
-   "셋트 칼라 DRSS · DRSD": "Set Collar DRSS · DRSD"
+   "셋트 칼라 DRSS · DRSD": "Set Collar DRSS · DRSD",
+   "<span class=\"tab-card-title\">DRSS 슬릿형 셋트 칼라</span><span class=\"tab-card-desc\">17건</span>": "<span class=\"tab-card-title\">DRSS slit-type set collar</span><span class=\"tab-card-desc\">17 items</span>",
+   "<span class=\"tab-card-title\">DRSD 분리형 셋트 칼라</span><span class=\"tab-card-desc\">17건</span>": "<span class=\"tab-card-title\">DRSD split-type set collar</span><span class=\"tab-card-desc\">17 items</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Set Collars · DRSS / DRSD</p> <h2>셋트 칼라 DRSS · DRSD</h2> <p>DURI (두리마이텍)의 클램프식 셋트 칼라입니다. 축에 체결해 부품의 위치 결정이나 빠짐 방지에 사용하며, 슬릿형(DRSS)과 분리형(DRSD)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Set Collars · DRSS / DRSD</p> <h2>セットカラー DRSS · DRSD</h2> <p>DURI(ドゥリマイテック)のクランプ式セットカラーです。軸に締結して部品の位置決めや抜け止めに使用し、スリット型(DRSS)と分割型(DRSD)があります。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -54,7 +56,9 @@
    "흑색 알루마이트": "黒色アルマイト",
    "흑착색": "黒染め",
    "무전해 니켈 도금": "無電解ニッケルめっき",
-   "셋트 칼라 DRSS · DRSD": "セットカラー DRSS · DRSD"
+   "셋트 칼라 DRSS · DRSD": "セットカラー DRSS · DRSD",
+   "<span class=\"tab-card-title\">DRSS 슬릿형 셋트 칼라</span><span class=\"tab-card-desc\">17건</span>": "<span class=\"tab-card-title\">DRSS スリット型セットカラー</span><span class=\"tab-card-desc\">17件</span>",
+   "<span class=\"tab-card-title\">DRSD 분리형 셋트 칼라</span><span class=\"tab-card-desc\">17건</span>": "<span class=\"tab-card-title\">DRSD 分割型セットカラー</span><span class=\"tab-card-desc\">17件</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Set Collars · DRSS / DRSD</p> <h2>셋트 칼라 DRSS · DRSD</h2> <p>DURI (두리마이텍)의 클램프식 셋트 칼라입니다. 축에 체결해 부품의 위치 결정이나 빠짐 방지에 사용하며, 슬릿형(DRSS)과 분리형(DRSD)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Set Collars · DRSS / DRSD</p> <h2>定位环 DRSS · DRSD</h2> <p>DURI(斗利迈泰)的夹紧式定位环。紧固在轴上用于零件定位或防脱，有开口型(DRSS)和分离型(DRSD)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -82,24 +86,29 @@
    "흑색 알루마이트": "黑色阳极氧化",
    "흑착색": "发黑",
    "무전해 니켈 도금": "化学镀镍",
-   "셋트 칼라 DRSS · DRSD": "定位环 DRSS · DRSD"
+   "셋트 칼라 DRSS · DRSD": "定位环 DRSS · DRSD",
+   "<span class=\"tab-card-title\">DRSS 슬릿형 셋트 칼라</span><span class=\"tab-card-desc\">17건</span>": "<span class=\"tab-card-title\">DRSS 开口型定位环</span><span class=\"tab-card-desc\">17个</span>",
+   "<span class=\"tab-card-title\">DRSD 분리형 셋트 칼라</span><span class=\"tab-card-desc\">17건</span>": "<span class=\"tab-card-title\">DRSD 分离型定位环</span><span class=\"tab-card-desc\">17个</span>"
   }
  },
  "attrs": {
   "en": {
    "DRSS 슬릿형 셋트 칼라 규격 도면": "DRSS slit-type set collar drawing",
    "DRSD 분리형 셋트 칼라 규격 도면": "DRSD split-type set collar drawing",
-   "예: DRSS 6 또는 25": "e.g. DRSS 6 or 25"
+   "예: DRSS 6 또는 25": "e.g. DRSS 6 or 25",
+   "시리즈 선택": "Select series"
   },
   "ja": {
    "DRSS 슬릿형 셋트 칼라 규격 도면": "DRSSスリット型セットカラー規格図面",
    "DRSD 분리형 셋트 칼라 규격 도면": "DRSD分割型セットカラー規格図面",
-   "예: DRSS 6 또는 25": "例: DRSS 6 または 25"
+   "예: DRSS 6 또는 25": "例: DRSS 6 または 25",
+   "시리즈 선택": "シリーズを選択"
   },
   "zh": {
    "DRSS 슬릿형 셋트 칼라 규격 도면": "DRSS开口型定位环规格图纸",
    "DRSD 분리형 셋트 칼라 규격 도면": "DRSD分离型定位环规格图纸",
-   "예: DRSS 6 또는 25": "例: DRSS 6 或 25"
+   "예: DRSS 6 또는 25": "例: DRSS 6 或 25",
+   "시리즈 선택": "选择系列"
   }
  }
 }
