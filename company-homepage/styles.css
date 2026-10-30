@@ -3306,3 +3306,10 @@ table.spec-table th { color: #4b5873; }
 #spring-plunger-2205 .tab-cards .cat-tab-btn[data-tab="g3"]::before { background-image: url("assets/cards/spl_pin_slot.webp?v=1"); }
 #spring-plunger-2205 .tab-cards .cat-tab-btn[data-tab="g4"]::before { background-image: url("assets/cards/spl_pin_slot.webp?v=1"); }
 #spring-plunger-2206 .tab-cards .cat-tab-btn[data-tab="g1"]::before, #spring-plunger-2206 .tab-cards .cat-tab-btn[data-tab="g2"]::before { background-image: url("assets/cards/spl_hex_ball.webp?v=1"); }
+
+/* 시리즈 카드 탭 그림 (b5) */
+#needle-inner-ring .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_inner_ring.webp?v=10"); }
+#needle-cage .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_cage.webp?v=10"); }
+#hybrid-bearing .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hybrid_bearing.webp?v=10"); }
+#ball-plunger .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
+#needle-bearing-accessories .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_bearing_accessories.webp?v=10"); }

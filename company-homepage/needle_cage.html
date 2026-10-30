@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031n">
+<link rel="stylesheet" href="styles.css?v=20261031o">
 </head>
 <body>
 
@@ -109,9 +109,9 @@
         <p style="margin: 8px 0 0;">※ 같은 형식이라도 메이커마다 기호가 다릅니다. 다른 메이커 형번으로 문의하셔도 됩니다. (출처: SWS 카탈로그)</p>
       </div>
 
-      <div class="cat-tabs" role="tablist">
-        <button type="button" class="cat-tab-btn active" data-tab="general">범용 니들 케이지</button>
-        <button type="button" class="cat-tab-btn" data-tab="eg">커넥팅로드용 니들 케이지</button>
+      <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="general" role="tab" aria-selected="true"><span class="tab-card-title">범용 니들 케이지</span><span class="tab-card-desc">11개 시리즈</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="eg" role="tab" aria-selected="false"><span class="tab-card-title">커넥팅로드용 니들 케이지</span><span class="tab-card-desc">2개 시리즈</span></button>
       </div>
 
       <div class="cat-tab-panel" data-panel="general">
@@ -303,7 +303,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/needle_cage.dict.js?v=20261030img"></script>
+<script src="i18n/pages/needle_cage.dict.js?v=20261031card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -314,7 +314,7 @@
     var tabPanels = Array.prototype.slice.call(document.querySelectorAll('#needle-cage .cat-tab-panel'));
 
     function activateTab(target) {
-      tabBtns.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-tab') === target); });
+      tabBtns.forEach(function (b) { var on = b.getAttribute('data-tab') === target; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); });
       tabPanels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== target; });
     }
 
