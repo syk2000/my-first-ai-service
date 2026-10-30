@@ -2955,8 +2955,8 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="round_key.html"]::before { background-image: url("assets/cards/pc_round_key.webp?v=10"); }
 .img-cards .product-card[href="taper_pin.html"]::before { background-image: url("assets/cards/pc_taper_pin.webp?v=10"); }
 .img-cards .product-card[href="parallel_pin.html"]::before { background-image: url("assets/cards/pc_parallel_pin.webp?v=10"); }
-.img-cards .product-card[href="oilgage_md_mc.html"]::before { background-image: url("assets/cards/pc_oilgage_md_mc.webp?v=10"); }
-.img-cards .product-card[href="oilgage_mh_mhs.html"]::before { background-image: url("assets/cards/pc_oilgage_mh_mhs.webp?v=10"); }
+.img-cards .product-card[href="oilgage_md_mc.html"]::before { background-image: url("assets/cards/pc_oilgage_md_mc.webp?v=11"); }
+.img-cards .product-card[href="oilgage_mh_mhs.html"]::before { background-image: url("assets/cards/pc_oilgage_mh_mhs.webp?v=11"); }
 .img-cards .product-card[href="oilgage_mhl.html"]::before { background-image: url("assets/cards/pc_oilgage_mhl.webp?v=10"); }
 .img-cards .product-card[href="oilseal_types.html"]::before { background-image: url("assets/cards/pc_oilseal_types.webp?v=10"); }
 .img-cards .product-card[href="oilseal_endcap.html"]::before { background-image: url("assets/cards/pc_oilseal_endcap.webp?v=10"); }
@@ -3200,3 +3200,28 @@ table.spec-table th { color: #4b5873; }
 #spherical-plain .tab-cards .cat-tab-btn[data-tab="ge"]::before { background-image: url("assets/cards/sp_ge.webp?v=1"); }
 #spherical-plain .tab-cards .cat-tab-btn[data-tab="pb"]::before { background-image: url("assets/cards/sp_pb.webp?v=1"); }
 #spherical-plain .tab-cards .cat-tab-btn[data-tab="sbb"]::before { background-image: url("assets/cards/sp_sbb.webp?v=1"); }
+
+/* 시리즈 카드 탭(2026-10-31): 2개짜리는 4칸 격자의 반, 7개 이상은 작은 카드 */
+.cat-tabs.tab-cards.cols-2 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cat-tabs.tab-cards.compact { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.tab-cards.compact .cat-tab-btn { padding: 10px 12px; gap: 6px; }
+.tab-cards.compact .cat-tab-btn::before { width: 44px; height: 44px; }
+.tab-cards.compact .tab-card-title { font-size: 14px; }
+.tab-cards.compact .tab-card-desc { font-size: 12px; }
+@media (max-width: 720px) { .cat-tabs.tab-cards.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* 시리즈 카드 탭 그림 (b1) */
+#spherical-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_spherical_roller.webp?v=3"); }
+#taper-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_taper_roller.webp?v=3"); }
+#thrust-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_thrust_ball.webp?v=10"); }
+#deep-groove-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_deep_groove_ball.webp?v=3"); }
+#self-aligning-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_self_aligning_ball.webp?v=10"); }
+#cylindrical-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_cylindrical_roller.webp?v=3"); }
+#angular-contact-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_angular_contact_ball.webp?v=3"); }
+#double-row-angular-contact .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_double_row_angular_contact.webp?v=3"); }
+#double-direction-thrust-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_double_direction_thrust_ball.webp?v=10"); }
+#self-aligning-thrust-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_self_aligning_thrust_roller.webp?v=10"); }
+#double-row-cylindrical .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_double_row_cylindrical.webp?v=3"); }
+#barrel-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_barrel_roller.webp?v=10"); }
+#angular-thrust-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_angular_thrust_ball.webp?v=10"); }
+#spindle-bearing .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_spindle_bearing.webp?v=3"); }

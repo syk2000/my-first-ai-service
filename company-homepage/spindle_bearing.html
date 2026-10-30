@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261030j">
+<link rel="stylesheet" href="styles.css?v=20261031k">
 </head>
 <body>
 
@@ -147,10 +147,16 @@
       <p style="font-size: 12.5px; color: var(--text-faint); margin: 8px 0 16px;">&#8251; d&middot;D&middot;B 외형치수는 등급&middot;조합방식과 무관하게 동일합니다. 동하중&middot;허용회전수(rpm)는 조합/등급별로 당사 카탈로그에 실측값이 없어 &ldquo;문의&rdquo;로 표시됩니다 — 아래 수치는 P4S&middot;UL(자유조합) 기준 실측값입니다.</p>
       <div class="spec-toolbar">
         <p class="finder-tip" id="spdCount" style="margin: 0;"></p>
-        <button type="button" class="spec-toolbar-btn" id="spdToggleAll">전체 펼치기</button>
+        <button type="button" class="spec-toolbar-btn" id="spdToggleAll" style="display: none;">전체 펼치기</button>
       </div>
       <div id="spdGroups">
-        <details class="series-group">
+      <div class="cat-tabs tab-cards cols-3" role="tablist" aria-label="시리즈 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">70 시리즈</span><span class="tab-card-desc">35건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">72 시리즈</span><span class="tab-card-desc">31건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g3" role="tab" aria-selected="false"><span class="tab-card-title">719 시리즈</span><span class="tab-card-desc">32건</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="g1">
+        <details class="series-group" open>
           <summary>70 시리즈<span class="series-count">35건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
@@ -185,7 +191,9 @@
             </div>
           </div>
         </details>
-        <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="g2" hidden>
+        <details class="series-group" open>
           <summary>72 시리즈<span class="series-count">31건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
@@ -220,7 +228,9 @@
             </div>
           </div>
         </details>
-        <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="g3" hidden>
+        <details class="series-group" open>
           <summary>719 시리즈<span class="series-count">32건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
@@ -256,6 +266,8 @@
           </div>
         </details>
       </div>
+
+      </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
@@ -282,7 +294,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/spindle_bearing.dict.js?v=20261017p"></script>
+<script src="i18n/pages/spindle_bearing.dict.js?v=20261031card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -387,6 +399,47 @@
 
     wireToggle('spdPrecisionToggle', 'data-precision', function (v) { precisionMode = v; });
     wireToggle('spdComboToggle', 'data-combo', function (v) { comboMode = v; });
+  })();
+</script>
+<script>
+  (function () {
+    // 이미지 카드 탭(시리즈별): 평소엔 고른 시리즈만 보이고, 검색어가 있으면 일치하는 행이 있는 시리즈를 모두 보여 줌
+    var root = document.getElementById('spindle-bearing');
+    var input = document.getElementById('spdFilter');
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var btns = Array.prototype.slice.call(root.querySelectorAll('.tab-cards .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('.cat-tab-panel[data-panel^="g"]'));
+    var current = btns[0].getAttribute('data-tab');
+    function btnFor(p) { return btns.filter(function (b) { return b.getAttribute('data-tab') === p.getAttribute('data-panel'); })[0]; }
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== current;
+        Array.prototype.forEach.call(p.querySelectorAll('details.series-group'), function (d) { d.open = true; });
+      });
+    }
+    function sync() {
+      var q = input ? input.value.trim() : '';
+      if (q === '') { showTab(); return; }
+      panels.forEach(function (p) {
+        var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none'; });
+        p.hidden = !hit;
+        var b = btnFor(p);
+        if (b) { b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); }
+      });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        if (input && input.value !== '') { input.value = ''; input.dispatchEvent(new Event('input')); } else { showTab(); }
+      });
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
+    if (input) input.addEventListener('input', sync);
   })();
 </script>
 </body>
