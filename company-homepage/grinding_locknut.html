@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031l">
+<link rel="stylesheet" href="styles.css?v=20261031m">
 </head>
 <body>
 
@@ -108,10 +108,16 @@
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="grindiCount" style="margin: 0;"></p>
-        <button type="button" class="spec-toolbar-btn" id="grindiToggleAll">전체 접기</button>
+        <button type="button" class="spec-toolbar-btn" id="grindiToggleAll" style="display: none;">전체 접기</button>
       </div>
       <div id="grindiGroups">
-      <details class="series-group" open>
+      <div class="cat-tabs tab-cards cols-3" role="tablist" aria-label="시리즈 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">ZMG</span><span class="tab-card-desc">37건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">ZMVG</span><span class="tab-card-desc">32건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g3" role="tab" aria-selected="false"><span class="tab-card-title">ZMFG</span><span class="tab-card-desc">31건</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="g1">
+        <details class="series-group" open>
         <summary>ZMG<span class="series-count">37건</span></summary>
         <div class="diagram-box-lg" style="margin-bottom: 12px;"><p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 12px;">다른 너트에 비해 두께가 비교적 얇아, 공간 제약으로 다른 너트를 쓰기 어려운 곳에 적합합니다.</p> <img class="fig-draw" loading="lazy" src="assets/zmg_catalog.webp?v=wm5" alt="ZMG 도면"> <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 당사 정식 규격 도면<br><span style="color: var(--text-faint);">D=바깥지름 · d=나사 호칭지름 · d1=접촉면 지름 · H=너트 폭 · g=홈 폭 · t=홈 깊이 · n-m=세트 스크류 수-나사</span></p></div>
         <div class="finder-results" style="overflow-x: auto;">
@@ -160,7 +166,9 @@
         </div>
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (토크 N·m) · 규격 출처: 두리마이텍(DURI) 카탈로그 2025</p>
       </details>
-      <details class="series-group" open>
+      </div>
+      <div class="cat-tab-panel" data-panel="g2" hidden>
+        <details class="series-group" open>
         <summary>ZMVG<span class="series-count">32건</span></summary>
         <div class="diagram-box-lg" style="margin-bottom: 12px;"><p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 12px;">세트 스크류를 축 방향에서 체결하여, 측면 공간에 제약이 있는 곳에서도 체결할 수 있습니다.</p> <img class="fig-draw" loading="lazy" src="assets/zmvg_catalog.webp?v=wm5" alt="ZMVG 도면"> <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 당사 정식 규격 도면<br><span style="color: var(--text-faint);">D=바깥지름 · d=나사 호칭지름 · d1=접촉면 지름 · H=너트 폭 · g=홈 폭 · t=홈 깊이 · n-m=세트 스크류 수-나사</span></p></div>
         <div class="finder-results" style="overflow-x: auto;">
@@ -204,7 +212,9 @@
         </div>
         <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm (토크 N·m) · 규격 출처: 두리마이텍(DURI) 카탈로그 2025</p>
       </details>
-      <details class="series-group" open>
+      </div>
+      <div class="cat-tab-panel" data-panel="g3" hidden>
+        <details class="series-group" open>
         <summary>ZMFG<span class="series-count">31건</span></summary>
         <div class="diagram-box-lg" style="margin-bottom: 12px;"><p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 12px;">대각 측면에서 세트 스크류를 체결합니다. 축에 대해 60°로 설계된 세트 스크류가 풀림을 막아 안정된 록킹력을 얻을 수 있고, 동심 잡기도 쉽습니다.</p> <img class="fig-draw" loading="lazy" src="assets/zmfg_catalog.webp?v=wm5" alt="ZMFG 도면"> <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 당사 정식 규격 도면<br><span style="color: var(--text-faint);">D=바깥지름 · d=나사 호칭지름 · d1=접촉면 지름 · H=너트 폭 · n-g=홈 수-홈 폭 · t=홈 깊이 · b=구멍 지름 · c=구멍 피치원 지름 · m=세트 스크류(3개, 60°)</span></p></div>
         <div class="finder-results" style="overflow-x: auto;">
@@ -249,6 +259,8 @@
       </details>
       </div>
 
+      </div>
+
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 위 도면과 표는 두리마이텍(DURI) 카탈로그 2025를 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 최신 도면으로 최종 확인하시기 바랍니다.</p>
     </div>
   </section>
@@ -272,7 +284,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/grinding_locknut.dict.js?v=20261030img"></script>
+<script src="i18n/pages/grinding_locknut.dict.js?v=20261031card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -307,6 +319,47 @@
     });
     input.addEventListener('input', applyFilter);
     label(totalRows);
+  })();
+</script>
+<script>
+  (function () {
+    // 이미지 카드 탭(시리즈별): 평소엔 고른 시리즈만 보이고, 검색어가 있으면 일치하는 행이 있는 시리즈를 모두 보여 줌
+    var root = document.getElementById('grinding_locknut');
+    var input = document.getElementById('grindiFilter');
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var btns = Array.prototype.slice.call(root.querySelectorAll('.tab-cards .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('.cat-tab-panel[data-panel^="g"]'));
+    var current = btns[0].getAttribute('data-tab');
+    function btnFor(p) { return btns.filter(function (b) { return b.getAttribute('data-tab') === p.getAttribute('data-panel'); })[0]; }
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== current;
+        Array.prototype.forEach.call(p.querySelectorAll('details.series-group'), function (d) { d.open = true; });
+      });
+    }
+    function sync() {
+      var q = input ? input.value.trim() : '';
+      if (q === '') { showTab(); return; }
+      panels.forEach(function (p) {
+        var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none'; });
+        p.hidden = !hit;
+        var b = btnFor(p);
+        if (b) { b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); }
+      });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        if (input && input.value !== '') { input.value = ''; input.dispatchEvent(new Event('input')); } else { showTab(); }
+      });
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
+    if (input) input.addEventListener('input', sync);
   })();
 </script>
 </body>

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031l">
+<link rel="stylesheet" href="styles.css?v=20261031m">
 </head>
 <body>
 
@@ -115,10 +115,20 @@
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="mbCount" style="margin: 0;"></p>
-        <button type="button" class="spec-toolbar-btn" id="mbToggleAll">전체 펼치기</button>
+        <button type="button" class="spec-toolbar-btn" id="mbToggleAll" style="display: none;">전체 펼치기</button>
       </div>
       <div id="mbGroups">
-      <details class="series-group">
+      <div class="cat-tabs tab-cards compact" role="tablist" aria-label="시리즈 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">인치 규격 (IJK 계열) · 내경 1.016~38.1mm</span><span class="tab-card-desc">30건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">메트릭 표준형 · 내경 1~15mm</span><span class="tab-card-desc">101건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g3" role="tab" aria-selected="false"><span class="tab-card-title">인치 오픈형</span><span class="tab-card-desc">EE 시리즈</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g4" role="tab" aria-selected="false"><span class="tab-card-title">매그니토 볼 베어링 · 내경 4~20mm</span><span class="tab-card-desc">20건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g5" role="tab" aria-selected="false"><span class="tab-card-title">엷은 A형</span><span class="tab-card-desc">11건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g6" role="tab" aria-selected="false"><span class="tab-card-title">스러스트형</span><span class="tab-card-desc">미니어처</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g7" role="tab" aria-selected="false"><span class="tab-card-title">소형 복렬형</span><span class="tab-card-desc">8건</span></button>
+      </div>
+      <div class="cat-tab-panel" data-panel="g1">
+        <details class="series-group" open>
       <summary>인치 규격 (IJK 계열) &middot; 내경 1.016~38.1mm<span class="series-count">30건</span></summary>
       <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
         <div style="flex: 1 1 320px; min-width: 300px; overflow-x: auto;">
@@ -135,7 +145,9 @@
         </div>
       </div>
       </details>
-      <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="g2" hidden>
+        <details class="series-group" open>
       <summary>메트릭 표준형 &middot; 내경 1~15mm<span class="series-count">101건</span></summary>
       <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
         <div style="flex: 1 1 320px; min-width: 300px; overflow-x: auto;">
@@ -152,7 +164,9 @@
         </div>
       </div>
       </details>
-      <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="g3" hidden>
+        <details class="series-group" open>
       <summary>인치 오픈형 (EE 시리즈)<span class="series-count">10건</span></summary>
       <div class="finder-results" style="overflow-x: auto;">
         <table class="spec-table" style="min-width: 480px;" id="mbC">
@@ -161,7 +175,9 @@
         </table>
       </div>
       </details>
-      <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="g4" hidden>
+        <details class="series-group" open>
       <summary>매그니토 볼 베어링 &middot; 내경 4~20mm<span class="series-count">20건</span></summary>
       <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
         <div style="flex: 1 1 320px; min-width: 300px; overflow-x: auto;">
@@ -178,7 +194,9 @@
         </div>
       </div>
       </details>
-      <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="g5" hidden>
+        <details class="series-group" open>
       <summary>엷은 A형<span class="series-count">11건</span></summary>
       <div class="finder-results" style="overflow-x: auto;">
         <table class="spec-table" style="min-width: 480px;" id="mbE">
@@ -187,7 +205,9 @@
         </table>
       </div>
       </details>
-      <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="g6" hidden>
+        <details class="series-group" open>
       <summary>스러스트형 (미니어처)<span class="series-count">13건</span></summary>
       <div class="finder-results" style="overflow-x: auto;">
         <table class="spec-table" style="min-width: 480px;" id="mbF">
@@ -196,7 +216,9 @@
         </table>
       </div>
       </details>
-      <details class="series-group">
+      </div>
+      <div class="cat-tab-panel" data-panel="g7" hidden>
+        <details class="series-group" open>
       <summary>소형 복렬형<span class="series-count">8건</span></summary>
       <div class="finder-results" style="overflow-x: auto;">
         <table class="spec-table" style="min-width: 480px;" id="mbG">
@@ -205,6 +227,8 @@
         </table>
       </div>
       </details>
+      </div>
+
       </div>
 
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 14px;">단위: mm (인치 표기 항목은 별도 표시)</p>
@@ -235,7 +259,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/miniature_ball.dict.js?v=20261030img"></script>
+<script src="i18n/pages/miniature_ball.dict.js?v=20261031card"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -277,6 +301,47 @@
 
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 7 + '개 시리즈';
+  })();
+</script>
+<script>
+  (function () {
+    // 이미지 카드 탭(시리즈별): 평소엔 고른 시리즈만 보이고, 검색어가 있으면 일치하는 행이 있는 시리즈를 모두 보여 줌
+    var root = document.getElementById('miniature-ball');
+    var input = document.getElementById('mbFilter');
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var btns = Array.prototype.slice.call(root.querySelectorAll('.tab-cards .cat-tab-btn'));
+    var panels = Array.prototype.slice.call(root.querySelectorAll('.cat-tab-panel[data-panel^="g"]'));
+    var current = btns[0].getAttribute('data-tab');
+    function btnFor(p) { return btns.filter(function (b) { return b.getAttribute('data-tab') === p.getAttribute('data-panel'); })[0]; }
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== current;
+        Array.prototype.forEach.call(p.querySelectorAll('details.series-group'), function (d) { d.open = true; });
+      });
+    }
+    function sync() {
+      var q = input ? input.value.trim() : '';
+      if (q === '') { showTab(); return; }
+      panels.forEach(function (p) {
+        var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none'; });
+        p.hidden = !hit;
+        var b = btnFor(p);
+        if (b) { b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); }
+      });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        if (input && input.value !== '') { input.value = ''; input.dispatchEvent(new Event('input')); } else { showTab(); }
+      });
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
+    if (input) input.addEventListener('input', sync);
   })();
 </script>
 </body>
