@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031p">
+<link rel="stylesheet" href="styles.css?v=20261031r">
 </head>
 <body>
 
@@ -184,19 +184,55 @@
     var groups = Array.prototype.slice.call(document.querySelectorAll('#cplGroups .series-group'));
     var countEl = document.getElementById('cplCount');
     var toggleBtn = document.getElementById('cplToggleAll');
-    var mainRows = document.querySelectorAll('#cplGroups table.spec-main tbody tr');
-    var totalRows = mainRows.length;
+    // 건수는 주 규격표 + 표준 내경 표의 모든 행 기준
+    var totalRows = document.querySelectorAll('#cplGroups tbody tr').length;
     var seriesN = document.querySelectorAll('#cplGroups table.spec-main').length;
+    var HIT_BG = 'rgba(232, 119, 34, 0.22)';
+    // 표준 내경 표: 내경 값이 열 머리글(둘째 줄)에 있고 행에는 ●만 있으므로 열 머리글로 검색
+    var boreTables = Array.prototype.slice.call(document.querySelectorAll('#cplGroups table.spec-table:not(.spec-main)')).filter(function (t) {
+      return t.tHead && t.tHead.rows.length === 2;
+    }).map(function (t) {
+      var ths = Array.prototype.slice.call(t.tHead.rows[1].cells);
+      return { table: t, ths: ths, vals: ths.map(function (th) { return th.textContent.trim(); }) };
+    });
+    function boreOf(row) { for (var i = 0; i < boreTables.length; i++) { if (boreTables[i].table.contains(row)) return boreTables[i]; } return null; }
+    function modelMatch(model, q) {
+      // DR□-16 · DRG-16□ 의 □ 는 시리즈 문자 자리 → DRW-16, DRG-16C 등으로도 찾아짐
+      if (model.indexOf('□') === -1 || q === '') return false;
+      var pat = model.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/□/g, '[A-Z]*');
+      return new RegExp('^' + pat + '(?![0-9])').test(q);
+    }
     function applyFilter() {
-      var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
+      var raw = input.value.trim().toUpperCase();
+      var q = raw.replace(/\s+/g, '');
+      var qNum = /^\d+(\.\d+)?$/.test(q) ? parseFloat(q) : NaN;
       var shown = 0;
+      boreTables.forEach(function (b) { b.ths.forEach(function (th) { th.style.background = ''; }); });
+      Array.prototype.forEach.call(document.querySelectorAll('#cplGroups td.bore-hit'), function (td) { td.classList.remove('bore-hit'); td.style.background = ''; });
       groups.forEach(function (grp) {
         var grpShown = 0;
         Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || row.textContent.toUpperCase().indexOf(input.value.trim().toUpperCase()) !== -1;
+          var txt = row.textContent.toUpperCase();
+          var match = q === '' || txt.replace(/\s+/g, '').indexOf(q) !== -1 || txt.indexOf(raw) !== -1;
+          var b = boreOf(row);
+          if (b && q !== '') {
+            var model = row.cells[0] ? row.cells[0].textContent.trim().toUpperCase() : '';
+            if (!match && modelMatch(model, q)) match = true;
+            var col = isNaN(qNum) ? -1 : b.vals.map(parseFloat).indexOf(qNum);
+            if (!match && col !== -1) {
+              var cell = row.cells[col + 1];
+              if (cell && cell.textContent.trim() !== '') {
+                match = true;
+                cell.classList.add('bore-hit');
+                cell.style.background = HIT_BG;
+                b.ths[col].style.background = HIT_BG;
+              }
+            }
+          }
           row.style.display = match ? '' : 'none';
-          if (match) { grpShown++; if (row.closest('table.spec-main')) shown++; }
+          if (match) grpShown++;
         });
+        shown += grpShown;
         grp.open = q === '' ? true : grpShown > 0;
       });
       countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + seriesN + '개 시리즈';

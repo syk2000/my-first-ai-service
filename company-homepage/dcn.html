@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031p">
+<link rel="stylesheet" href="styles.css?v=20261031r">
 </head>
 <body>
 
@@ -216,10 +216,11 @@
 <script>
   (function () {
     var input = document.getElementById('dcnFilter');
-    var groups = Array.prototype.slice.call(document.getElementById('dcnGroups').querySelectorAll('.series-group'));
+    // 풀림토크 비교 표(g2 탭)도 검색·건수에 포함
+    var groups = Array.prototype.slice.call(document.getElementById('dcn').querySelectorAll('.series-group'));
     var countEl = document.getElementById('dcnCount');
     var toggleBtn = document.getElementById('dcnToggleAll');
-    var totalRows = 34;
+    var totalRows = groups.reduce(function (n, g) { return n + g.querySelectorAll('tbody tr').length; }, 0);
     var allOpen = true;
     function label(shown) { countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈'; }
     function applyFilter() {
