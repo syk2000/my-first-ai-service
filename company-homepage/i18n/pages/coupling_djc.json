@@ -59,11 +59,8 @@
    "고응답성, 고하중성, 내열성": "High response, high load capacity, heat resistance",
    "죠형 커플링 DJC · DJCS 시리즈": "Jaw Coupling DJC · DJCS Series",
    "<span class=\"tab-card-title\">DJC</span><span class=\"tab-card-desc\">세트 스크류 타입</span>": "<span class=\"tab-card-title\">DJC</span><span class=\"tab-card-desc\">set screw type</span>",
-   "<span class=\"tab-card-title\">DJC 세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">10건</span>": "<span class=\"tab-card-title\">DJC set screw type standard bores</span><span class=\"tab-card-desc\">10 items</span>",
    "<span class=\"tab-card-title\">DJC-C</span><span class=\"tab-card-desc\">클램프 타입</span>": "<span class=\"tab-card-title\">DJC-C</span><span class=\"tab-card-desc\">clamp type</span>",
-   "<span class=\"tab-card-title\">DJC-C 클램프 타입 표준 내경</span><span class=\"tab-card-desc\">11건</span>": "<span class=\"tab-card-title\">DJC-C clamp type standard bores</span><span class=\"tab-card-desc\">11 items</span>",
-   "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">콤팩트 클램프 타입</span>": "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">compact clamp type</span>",
-   "<span class=\"tab-card-title\">DJCS 표준 내경</span><span class=\"tab-card-desc\">5건</span>": "<span class=\"tab-card-title\">DJCS standard bores</span><span class=\"tab-card-desc\">5 items</span>"
+   "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">콤팩트 클램프 타입</span>": "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">compact clamp type</span>"
   },
   "ja": {
    "<p class=\"eyebrow\">DURI Coupling · JAW DJC / DJC-C / DJCS-C</p> <h2>죠형 커플링 DJC · DJCS 시리즈</h2> <p>DURI (두리마이텍)의 죠(JAW) 커플링입니다. 양쪽 허브의 발톱 사이에 우레탄 슬리브를 끼워 동력을 전달하며, 세트 스크류 타입(DJC), 클램프 타입(DJC-C), 콤팩트 클램프 타입(DJCS-C)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · JAW DJC / DJC-C / DJCS-C</p> <h2>ジョー型カップリング DJC · DJCSシリーズ</h2> <p>DURI(ドゥリマイテック)のジョー(JAW)カップリングです。両ハブの爪の間にウレタンスリーブを挟んで動力を伝達し、セットスクリュータイプ(DJC)、クランプタイプ(DJC-C)、コンパクトクランプタイプ(DJCS-C)があります。</p> <p class=\"section-head-tip\">型番や寸法の一部を入力するだけで検索できます。</p>",
@@ -124,11 +121,8 @@
    "고응답성, 고하중성, 내열성": "高応答性・高荷重性・耐熱性",
    "죠형 커플링 DJC · DJCS 시리즈": "ジョー型カップリング DJC · DJCSシリーズ",
    "<span class=\"tab-card-title\">DJC</span><span class=\"tab-card-desc\">세트 스크류 타입</span>": "<span class=\"tab-card-title\">DJC</span><span class=\"tab-card-desc\">セットスクリュータイプ</span>",
-   "<span class=\"tab-card-title\">DJC 세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">10건</span>": "<span class=\"tab-card-title\">DJC セットスクリュータイプ 標準内径</span><span class=\"tab-card-desc\">10件</span>",
    "<span class=\"tab-card-title\">DJC-C</span><span class=\"tab-card-desc\">클램프 타입</span>": "<span class=\"tab-card-title\">DJC-C</span><span class=\"tab-card-desc\">クランプタイプ</span>",
-   "<span class=\"tab-card-title\">DJC-C 클램프 타입 표준 내경</span><span class=\"tab-card-desc\">11건</span>": "<span class=\"tab-card-title\">DJC-C クランプタイプ 標準内径</span><span class=\"tab-card-desc\">11件</span>",
-   "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">콤팩트 클램프 타입</span>": "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">コンパクトクランプタイプ</span>",
-   "<span class=\"tab-card-title\">DJCS 표준 내경</span><span class=\"tab-card-desc\">5건</span>": "<span class=\"tab-card-title\">DJCS 標準内径</span><span class=\"tab-card-desc\">5件</span>"
+   "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">콤팩트 클램프 타입</span>": "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">コンパクトクランプタイプ</span>"
   },
   "zh": {
    "<p class=\"eyebrow\">DURI Coupling · JAW DJC / DJC-C / DJCS-C</p> <h2>죠형 커플링 DJC · DJCS 시리즈</h2> <p>DURI (두리마이텍)의 죠(JAW) 커플링입니다. 양쪽 허브의 발톱 사이에 우레탄 슬리브를 끼워 동력을 전달하며, 세트 스크류 타입(DJC), 클램프 타입(DJC-C), 콤팩트 클램프 타입(DJCS-C)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">DURI Coupling · JAW DJC / DJC-C / DJCS-C</p> <h2>梅花联轴器 DJC · DJCS系列</h2> <p>DURI(斗利迈泰)的梅花(JAW)联轴器。在两侧轮毂的爪之间嵌入聚氨酯套筒传递动力，有紧定螺钉型(DJC)、夹紧型(DJC-C)和紧凑夹紧型(DJCS-C)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -189,11 +183,8 @@
    "고응답성, 고하중성, 내열성": "高响应、高负载、耐热",
    "죠형 커플링 DJC · DJCS 시리즈": "梅花联轴器 DJC · DJCS系列",
    "<span class=\"tab-card-title\">DJC</span><span class=\"tab-card-desc\">세트 스크류 타입</span>": "<span class=\"tab-card-title\">DJC</span><span class=\"tab-card-desc\">紧定螺钉型</span>",
-   "<span class=\"tab-card-title\">DJC 세트 스크류 타입 표준 내경</span><span class=\"tab-card-desc\">10건</span>": "<span class=\"tab-card-title\">DJC 紧定螺钉型 标准内径</span><span class=\"tab-card-desc\">10个</span>",
    "<span class=\"tab-card-title\">DJC-C</span><span class=\"tab-card-desc\">클램프 타입</span>": "<span class=\"tab-card-title\">DJC-C</span><span class=\"tab-card-desc\">夹紧型</span>",
-   "<span class=\"tab-card-title\">DJC-C 클램프 타입 표준 내경</span><span class=\"tab-card-desc\">11건</span>": "<span class=\"tab-card-title\">DJC-C 夹紧型 标准内径</span><span class=\"tab-card-desc\">11个</span>",
-   "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">콤팩트 클램프 타입</span>": "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">紧凑夹紧型</span>",
-   "<span class=\"tab-card-title\">DJCS 표준 내경</span><span class=\"tab-card-desc\">5건</span>": "<span class=\"tab-card-title\">DJCS 标准内径</span><span class=\"tab-card-desc\">5个</span>"
+   "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">콤팩트 클램프 타입</span>": "<span class=\"tab-card-title\">DJCS-C</span><span class=\"tab-card-desc\">紧凑夹紧型</span>"
   }
  },
  "attrs": {
