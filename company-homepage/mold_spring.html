@@ -119,13 +119,13 @@
         <button type="button" class="cat-tab-btn" data-tab="ssf" role="tab" aria-selected="false"><span class="tab-card-title">SSF (특수경소하중)</span><span class="tab-card-desc">황색</span></button>
         <button type="button" class="cat-tab-btn" data-tab="sl" role="tab" aria-selected="false"><span class="tab-card-title">SL (경하중)</span><span class="tab-card-desc">청색</span></button>
         <button type="button" class="cat-tab-btn" data-tab="ssl" role="tab" aria-selected="false"><span class="tab-card-title">SSL (특수경하중)</span><span class="tab-card-desc">청색</span></button>
-        <button type="button" class="cat-tab-btn" data-tab="sm" role="tab" aria-selected="false"><span class="tab-card-title">SM (중하중)</span><span class="tab-card-desc">적색</span></button>
-        <button type="button" class="cat-tab-btn" data-tab="sh" role="tab" aria-selected="false"><span class="tab-card-title">SH (강하중)</span><span class="tab-card-desc">녹색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sm" role="tab" aria-selected="false"><span class="tab-card-title">SM (중하중·中荷重)</span><span class="tab-card-desc">적색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="sh" role="tab" aria-selected="false"><span class="tab-card-title">SH (중하중·重荷重)</span><span class="tab-card-desc">녹색</span></button>
         <button type="button" class="cat-tab-btn" data-tab="sb" role="tab" aria-selected="false"><span class="tab-card-title">SB (극중하중)</span><span class="tab-card-desc">갈색</span></button>
         <button type="button" class="cat-tab-btn" data-tab="sg" role="tab" aria-selected="false"><span class="tab-card-title">SG (초중하중)</span><span class="tab-card-desc">검정</span></button>
         <button type="button" class="cat-tab-btn" data-tab="sy" role="tab" aria-selected="false"><span class="tab-card-title">SY (극초변형)</span><span class="tab-card-desc">연두색</span></button>
         <button type="button" class="cat-tab-btn" data-tab="ssy" role="tab" aria-selected="false"><span class="tab-card-title">SSY (중변형)</span><span class="tab-card-desc">보라색</span></button>
-        <button type="button" class="cat-tab-btn" data-tab="su" role="tab" aria-selected="false"><span class="tab-card-title">SU (초고변형)</span><span class="tab-card-desc">하늘색</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="su" role="tab" aria-selected="false"><span class="tab-card-title">SU (극초변형)</span><span class="tab-card-desc">하늘색</span></button>
         <button type="button" class="cat-tab-btn" data-tab="sc" role="tab" aria-selected="false"><span class="tab-card-title">SC (극경소하중)</span><span class="tab-card-desc">연보라색</span></button>
         <button type="button" class="cat-tab-btn" data-tab="sr" role="tab" aria-selected="false"><span class="tab-card-title">SR (고변형)</span><span class="tab-card-desc">흰색</span></button>
       </div>
@@ -1338,7 +1338,7 @@
 
 
       <div class="cat-tab-panel" data-panel="sm" hidden>
-        <p class="cat-tab-panel-desc">중하중(Medium Load) 시리즈입니다. 카탈로그 색상 구분: 적색(Red). 사용 변형량은 자유장의 25.6~32% 범위(100만/50만/30만 회 압축 내구 기준)</p>
+        <p class="cat-tab-panel-desc">중하중(中荷重, Medium Load) 시리즈입니다. 카탈로그 색상 구분: 적색(Red). 사용 변형량은 자유장의 25.6~32% 범위(100만/50만/30만 회 압축 내구 기준)</p>
 
         <div class="field" style="max-width: 360px; margin-bottom: 16px;">
           <label for="smFilter">형번 / 규격 검색</label>
@@ -1802,7 +1802,7 @@
 
 
       <div class="cat-tab-panel" data-panel="sh" hidden>
-        <p class="cat-tab-panel-desc">강하중(Heavy Load) 시리즈입니다. 카탈로그 색상 구분: 녹색(Green). 사용 변형량은 자유장의 19.2~24% 범위(100만/50만/30만 회 압축 내구 기준)</p>
+        <p class="cat-tab-panel-desc">중하중(重荷重, Heavy Load) 시리즈입니다. 카탈로그 색상 구분: 녹색(Green). 사용 변형량은 자유장의 19.2~24% 범위(100만/50만/30만 회 압축 내구 기준)</p>
 
         <div class="field" style="max-width: 360px; margin-bottom: 16px;">
           <label for="shFilter">형번 / 규격 검색</label>
@@ -3639,7 +3639,7 @@
 
 
       <div class="cat-tab-panel" data-panel="su" hidden>
-        <p class="cat-tab-panel-desc">초고변형(Super High Deflection) 시리즈입니다. 카탈로그 색상 구분: 하늘색(Sky). 사용 변형량은 자유장의 50~60% 범위(100만/50만/30만 회 압축 내구 기준)</p>
+        <p class="cat-tab-panel-desc">극초변형(Super High Deflection) 시리즈입니다. 카탈로그 색상 구분: 하늘색(Sky). 사용 변형량은 자유장의 50~60% 범위(100만/50만/30만 회 압축 내구 기준)</p>
 
         <div class="field" style="max-width: 360px; margin-bottom: 16px;">
           <label for="suFilter">형번 / 규격 검색</label>
@@ -4528,7 +4528,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261031pr"></script>
-<script src="i18n/pages/mold_spring.dict.js?v=20261031ps"></script>
+<script src="i18n/pages/mold_spring.dict.js?v=20261031ms"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
