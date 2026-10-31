@@ -2987,6 +2987,8 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="slide_unit.html"]::before,
 .img-cards .product-card[href="tm_screw.html"]::before,
 .img-cards .product-card[href="spring_plunger_2205.html"]::before,
+.img-cards .product-card[href="ball_plunger_bp.html"]::before,
+.img-cards .product-card[href="ball_plunger_halder.html"]::before,
 .img-cards .product-card[href="spring_plunger_2206.html"]::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
 .img-cards .product-card[href="link_ball_zbs.html"] .p-icon,
 .img-cards .product-card[href="link_ball_tj.html"] .p-icon,
@@ -2994,6 +2996,8 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="slide_unit.html"] .p-icon,
 .img-cards .product-card[href="tm_screw.html"] .p-icon,
 .img-cards .product-card[href="spring_plunger_2205.html"] .p-icon,
+.img-cards .product-card[href="ball_plunger_bp.html"] .p-icon,
+.img-cards .product-card[href="ball_plunger_halder.html"] .p-icon,
 .img-cards .product-card[href="spring_plunger_2206.html"] .p-icon { display: none; }
 .img-cards .product-card[href="link_ball_zbs.html"]::before { background-image: url("assets/cards/pc_link_ball_zbs.webp?v=10"); }
 .img-cards .product-card[href="link_ball_tj.html"]::before { background-image: url("assets/cards/pc_link_ball_tj.webp?v=10"); }
@@ -3323,3 +3327,5 @@ table.spec-table th { color: #4b5873; }
 @media (max-width: 720px) { .tab-cards .tab-card-link { padding: 12px; gap: 6px; } .tab-cards .tab-card-link::before { width: 48px; height: 48px; } }
 .tab-cards .tab-card-link[href="spring_plunger_2205.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2205.webp?v=10"); }
 .tab-cards .tab-card-link[href="spring_plunger_2206.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2206.webp?v=10"); }
+.img-cards .product-card[href="ball_plunger_bp.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
+.img-cards .product-card[href="ball_plunger_halder.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
