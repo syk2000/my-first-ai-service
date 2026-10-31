@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031o">
+<link rel="stylesheet" href="styles.css?v=20261031p">
 </head>
 <body>
 
@@ -163,9 +163,9 @@
     </div>
     <div class="wrap f-copy">© SWS TECH. 본 홈페이지의 도면·규격표·사진 등 자료의 무단 복제·배포를 금합니다.</div>
   </footer>
-<script src="assets/spec-data.js?v=20261030b"></script>
-<script src="i18n/common.dict.js?v=20261030a"></script>
-<script src="i18n/pages/search-product.dict.js?v=20261028a"></script>
+<script src="assets/spec-data.js?v=20261031pr"></script>
+<script src="i18n/common.dict.js?v=20261031pr"></script>
+<script src="i18n/pages/search-product.dict.js?v=20261031pr"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261025h"></script>
 <script>
@@ -205,7 +205,7 @@
     const DEFAULT_LABELS = { d: "내경 d", D: "외경 D", h: "두께/길이 H" };
     const TYPE_FIELD_LABELS = {
       "베어링": { d: "내경 d", D: "외경 D", h: "폭 B" },
-      "아답타·로크너트·와셔": { d: "내경 d", D: "외경 D", h: "폭/두께 H" },
+      "어댑터·로크너트·와셔": { d: "내경 d", D: "외경 D", h: "폭/두께 H" },
       "키&핀": {
         d: "폭 b", D: "높이 h", h: "길이 L",
         note: "키(각키·반달키 등)는 폭 b·높이 h·길이 L 기준입니다. 핀·스프링류는 지름을 d에, 길이를 H(L)에 입력해주세요.",
@@ -262,7 +262,8 @@
     if (params.has("d")) fD.value = params.get("d");
     if (params.has("D")) fOD.value = params.get("D");
     if (params.has("h")) fH.value = params.get("h");
-    if (params.has("type") && GROUP_ORDER.includes(params.get("type"))) fType.value = params.get("type");
+    const typeParam = params.has("type") ? specAlias(params.get("type")) : "";
+    if (typeParam && GROUP_ORDER.includes(typeParam)) fType.value = typeParam;
     updateFieldLabels();
 
     function matchNum(value, input) {
@@ -273,7 +274,7 @@
 
     function renderResults() {
       const type = fType.value;
-      const name = fName.value.trim().toUpperCase();
+      const name = specAlias(fName.value.trim()).toUpperCase();
       const d = fD.value !== "" ? Number(fD.value) : null;
       const od = fOD.value !== "" ? Number(fOD.value) : null;
       const h = fH.value !== "" ? Number(fH.value) : null;

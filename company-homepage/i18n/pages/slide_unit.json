@@ -16,7 +16,6 @@
    "서울 구로구 경인로53길 32, 미래에코타워 B101·102호": "B101–102, Mirae Eco Tower, 32 Gyeongin-ro 53-gil, Guro-gu, Seoul",
    "형번 또는 치수 일부만 입력해도 검색됩니다.": "You can search by entering just part of the model number or dimensions.",
    "당사 정식 규격 도면": "Official Dimension Drawing",
-   "슬라이드 유니트": "Slide Units",
    "리니어 샤프트를 고정하는 샤프트 서포트(SK·SF)와 직선 운동을 안내하는 플랫 롤러 케이지(FT·FTW)입니다.": "Shaft supports (SK·SF) that hold linear shafts, and flat roller cages (FT·FTW) that guide linear motion.",
    "SK 샤프트 서포트 (수직형)": "SK Shaft Support (Vertical Type)",
    "리니어 샤프트의 끝단을 받쳐 고정하는 수직형 서포트입니다. 형번의 숫자는 적용 축경(mm)입니다.": "Vertical supports that hold the end of a linear shaft. The number in the model number is the applicable shaft diameter (mm).",
@@ -42,7 +41,6 @@
    "FTW 시리즈<span class=\"series-count\">8건</span>": "FTW Series<span class=\"series-count\">8 items</span>",
    "주문 예: FTW5050 P1 -750L → 호칭번호(FTW5050) · 정도표시 기호(P1) · 케이지 전장 치수(750mm)": "Order example: FTW5050 P1 -750L → Nominal number (FTW5050) · Accuracy symbol (P1) · Overall cage length (750 mm)",
    "※ 위 표는 당사 SWS 카탈로그(베어링 치수표, 189∼190p)를 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "※ The table above is based on our SWS catalog (bearing dimension tables, pp. 189–190). Before precision machining or ordering, be sure to confirm with our official original specification sheet.",
-   "<p class=\"eyebrow\">Slide Units</p> <h2>슬라이드 유니트</h2> <p>리니어 샤프트를 고정하는 샤프트 서포트(SK·SF)와 직선 운동을 안내하는 플랫 롤러 케이지(FT·FTW)입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Slide Units</p> <h2>Slide Units</h2> <p>Shaft supports (SK·SF) that hold linear shafts, and flat roller cages (FT·FTW) that guide linear motion.</p> <p class=\"section-head-tip\">You can search by entering just part of the model number or dimensions.</p>",
    "<label for=\"pgFilter\">형번 / 규격 검색</label> <input id=\"pgFilter\" type=\"text\" placeholder=\"예: SK20 또는 FT5038\" autocomplete=\"off\">": "<label for=\"pgFilter\">Model / Spec Search</label> <input id=\"pgFilter\" type=\"text\" placeholder=\"예: SK20 또는 FT5038\" autocomplete=\"off\">",
    "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">당사 정식 규격 도면</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sk_catalog.webp?v=wm5\" alt=\"SK 샤프트 서포트 카탈로그 도면\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SK 정면도(좌)·측면도(우)<br><span style=\"color: var(--text-faint);\">H: 전체 높이 · H<sub>1</sub>: 축 중심 높이 · H<sub>2</sub>: 베이스 두께 · W: 전체 폭 · B: 볼트 구멍 간격 · L: 상부 폭 · T: 두께 · 2-S: 설치 볼트 구멍 · M: 조임볼트</span></p>": "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">Official Dimension Drawing</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sk_catalog.webp?v=wm5\" alt=\"SK shaft support catalog drawing\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SK front view (left) · side view (right)<br><span style=\"color: var(--text-faint);\">H: Overall height · H<sub>1</sub>: Shaft center height · H<sub>2</sub>: Base thickness · W: Overall width · B: Bolt hole spacing · L: Upper width · T: Thickness · 2-S: Mounting bolt holes · M: Clamping bolt</span></p>",
    "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">당사 정식 규격 도면</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sf_catalog.webp?v=wm5\" alt=\"SF 샤프트 서포트 카탈로그 도면\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SF 정면도(좌)·측면도(우)<br><span style=\"color: var(--text-faint);\">W: 전체 폭 · B: 볼트 구멍 간격 · 2-S: 설치 볼트 구멍 · H · H<sub>1</sub>: 높이 · T: 전체 두께 · t: 플랜지 두께 · d: 축경 · M: 조임볼트</span></p>": "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">Official Dimension Drawing</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sf_catalog.webp?v=wm5\" alt=\"SF shaft support catalog drawing\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SF front view (left) · side view (right)<br><span style=\"color: var(--text-faint);\">W: Overall width · B: Bolt hole spacing · 2-S: Mounting bolt holes · H · H<sub>1</sub>: Height · T: Overall thickness · t: Flange thickness · d: Shaft diameter · M: Clamping bolt</span></p>",
@@ -55,7 +53,9 @@
    "<span class=\"tab-card-title\">FT 플랫 롤러 케이지</span><span class=\"tab-card-desc\">평면 직선 안내용</span>": "<span class=\"tab-card-title\">FT Flat Roller Cage</span><span class=\"tab-card-desc\">For flat linear guiding</span>",
    "평면 직선 안내용": "For flat linear guiding",
    "<span class=\"tab-card-title\">FTW 플랫 롤러 케이지</span><span class=\"tab-card-desc\">L형 · 직각 두 면 안내</span>": "<span class=\"tab-card-title\">FTW Flat Roller Cage</span><span class=\"tab-card-desc\">L-shaped · guides two right-angle faces</span>",
-   "L형 · 직각 두 면 안내": "L-shaped · guides two right-angle faces"
+   "L형 · 직각 두 면 안내": "L-shaped · guides two right-angle faces",
+   "<p class=\"eyebrow\">Slide Units</p> <h2>슬라이드 유닛</h2> <p>리니어 샤프트를 고정하는 샤프트 서포트(SK·SF)와 직선 운동을 안내하는 플랫 롤러 케이지(FT·FTW)입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Slide Units</p> <h2>Slide Units</h2> <p>Shaft supports (SK·SF) that hold linear shafts, and flat roller cages (FT·FTW) that guide linear motion.</p> <p class=\"section-head-tip\">You can search by entering just part of the model number or dimensions.</p>",
+   "슬라이드 유닛": "Slide Units"
   },
   "ja": {
    "회사소개": "会社紹介",
@@ -73,7 +73,6 @@
    "서울 구로구 경인로53길 32, 미래에코타워 B101·102호": "ソウル特別市九老区京仁路53ギル32 未来エコタワー B101・102号",
    "형번 또는 치수 일부만 입력해도 검색됩니다.": "形番または寸法の一部だけ入力しても検索できます。",
    "당사 정식 규격 도면": "当社正式規格図面",
-   "슬라이드 유니트": "スライドユニット",
    "리니어 샤프트를 고정하는 샤프트 서포트(SK·SF)와 직선 운동을 안내하는 플랫 롤러 케이지(FT·FTW)입니다.": "リニアシャフトを固定するシャフトサポート(SK·SF)と、直線運動を案内するフラットローラーケージ(FT·FTW)です。",
    "SK 샤프트 서포트 (수직형)": "SKシャフトサポート(垂直形)",
    "리니어 샤프트의 끝단을 받쳐 고정하는 수직형 서포트입니다. 형번의 숫자는 적용 축경(mm)입니다.": "リニアシャフトの端部を支えて固定する垂直形サポートです。形番の数字は適用軸径(mm)です。",
@@ -99,7 +98,6 @@
    "FTW 시리즈<span class=\"series-count\">8건</span>": "FTWシリーズ<span class=\"series-count\">8件</span>",
    "주문 예: FTW5050 P1 -750L → 호칭번호(FTW5050) · 정도표시 기호(P1) · 케이지 전장 치수(750mm)": "注文例: FTW5050 P1 -750L → 呼び番号(FTW5050) · 精度記号(P1) · ケージ全長寸法(750mm)",
    "※ 위 표는 당사 SWS 카탈로그(베어링 치수표, 189∼190p)를 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "※ 上記の表は当社SWSカタログ(ベアリング寸法表、189∼190p)に基づいて作成しています。精密加工·発注前には必ず当社正式規格表の原本で最終確認してください。",
-   "<p class=\"eyebrow\">Slide Units</p> <h2>슬라이드 유니트</h2> <p>리니어 샤프트를 고정하는 샤프트 서포트(SK·SF)와 직선 운동을 안내하는 플랫 롤러 케이지(FT·FTW)입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Slide Units</p> <h2>スライドユニット</h2> <p>リニアシャフトを固定するシャフトサポート(SK·SF)と、直線運動を案内するフラットローラーケージ(FT·FTW)です。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
    "<label for=\"pgFilter\">형번 / 규격 검색</label> <input id=\"pgFilter\" type=\"text\" placeholder=\"예: SK20 또는 FT5038\" autocomplete=\"off\">": "<label for=\"pgFilter\">形番 / 規格検索</label> <input id=\"pgFilter\" type=\"text\" placeholder=\"예: SK20 또는 FT5038\" autocomplete=\"off\">",
    "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">당사 정식 규격 도면</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sk_catalog.webp?v=wm5\" alt=\"SK 샤프트 서포트 카탈로그 도면\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SK 정면도(좌)·측면도(우)<br><span style=\"color: var(--text-faint);\">H: 전체 높이 · H<sub>1</sub>: 축 중심 높이 · H<sub>2</sub>: 베이스 두께 · W: 전체 폭 · B: 볼트 구멍 간격 · L: 상부 폭 · T: 두께 · 2-S: 설치 볼트 구멍 · M: 조임볼트</span></p>": "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">当社正式規格図面</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sk_catalog.webp?v=wm5\" alt=\"SKシャフトサポートのカタログ図面\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SK正面図(左)·側面図(右)<br><span style=\"color: var(--text-faint);\">H: 全高 · H<sub>1</sub>: 軸中心高さ · H<sub>2</sub>: ベース厚さ · W: 全幅 · B: ボルト穴間隔 · L: 上部幅 · T: 厚さ · 2-S: 取付ボルト穴 · M: 締付ボルト</span></p>",
    "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">당사 정식 규격 도면</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sf_catalog.webp?v=wm5\" alt=\"SF 샤프트 서포트 카탈로그 도면\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SF 정면도(좌)·측면도(우)<br><span style=\"color: var(--text-faint);\">W: 전체 폭 · B: 볼트 구멍 간격 · 2-S: 설치 볼트 구멍 · H · H<sub>1</sub>: 높이 · T: 전체 두께 · t: 플랜지 두께 · d: 축경 · M: 조임볼트</span></p>": "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">当社正式規格図面</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sf_catalog.webp?v=wm5\" alt=\"SFシャフトサポートのカタログ図面\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SF正面図(左)·側面図(右)<br><span style=\"color: var(--text-faint);\">W: 全幅 · B: ボルト穴間隔 · 2-S: 取付ボルト穴 · H · H<sub>1</sub>: 高さ · T: 全厚 · t: フランジ厚さ · d: 軸径 · M: 締付ボルト</span></p>",
@@ -112,7 +110,9 @@
    "<span class=\"tab-card-title\">FT 플랫 롤러 케이지</span><span class=\"tab-card-desc\">평면 직선 안내용</span>": "<span class=\"tab-card-title\">FTフラットローラーケージ</span><span class=\"tab-card-desc\">平面の直線案内用</span>",
    "평면 직선 안내용": "平面の直線案内用",
    "<span class=\"tab-card-title\">FTW 플랫 롤러 케이지</span><span class=\"tab-card-desc\">L형 · 직각 두 면 안내</span>": "<span class=\"tab-card-title\">FTWフラットローラーケージ</span><span class=\"tab-card-desc\">L形・直角の2面を案内</span>",
-   "L형 · 직각 두 면 안내": "L形・直角の2面を案内"
+   "L형 · 직각 두 면 안내": "L形・直角の2面を案内",
+   "<p class=\"eyebrow\">Slide Units</p> <h2>슬라이드 유닛</h2> <p>리니어 샤프트를 고정하는 샤프트 서포트(SK·SF)와 직선 운동을 안내하는 플랫 롤러 케이지(FT·FTW)입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Slide Units</p> <h2>スライドユニット</h2> <p>リニアシャフトを固定するシャフトサポート(SK·SF)と、直線運動を案内するフラットローラーケージ(FT·FTW)です。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
+   "슬라이드 유닛": "スライドユニット"
   },
   "zh": {
    "회사소개": "公司介绍",
@@ -130,7 +130,6 @@
    "서울 구로구 경인로53길 32, 미래에코타워 B101·102호": "首尔特别市九老区京仁路53街32 未来生态大厦 B101·102号",
    "형번 또는 치수 일부만 입력해도 검색됩니다.": "只需输入型号或尺寸的一部分即可搜索。",
    "당사 정식 규격 도면": "本公司正式规格图纸",
-   "슬라이드 유니트": "滑动单元",
    "리니어 샤프트를 고정하는 샤프트 서포트(SK·SF)와 직선 운동을 안내하는 플랫 롤러 케이지(FT·FTW)입니다.": "用于固定直线轴的轴支座(SK·SF)，以及引导直线运动的平面滚柱保持架(FT·FTW)。",
    "SK 샤프트 서포트 (수직형)": "SK轴支座（立式）",
    "리니어 샤프트의 끝단을 받쳐 고정하는 수직형 서포트입니다. 형번의 숫자는 적용 축경(mm)입니다.": "支撑并固定直线轴端部的立式支座。型号中的数字为适用轴径(mm)。",
@@ -156,7 +155,6 @@
    "FTW 시리즈<span class=\"series-count\">8건</span>": "FTW系列<span class=\"series-count\">8项</span>",
    "주문 예: FTW5050 P1 -750L → 호칭번호(FTW5050) · 정도표시 기호(P1) · 케이지 전장 치수(750mm)": "订货示例：FTW5050 P1 -750L → 公称编号(FTW5050) · 精度符号(P1) · 保持架全长尺寸(750mm)",
    "※ 위 표는 당사 SWS 카탈로그(베어링 치수표, 189∼190p)를 기준으로 작성했습니다. 정밀 가공·발주 전에는 반드시 당사 정식 규격표 원본으로 최종 확인하시기 바랍니다.": "※ 上表依据本公司SWS目录（轴承尺寸表，189∼190p）编制。精密加工·订货前请务必以本公司正式规格表原件进行最终确认。",
-   "<p class=\"eyebrow\">Slide Units</p> <h2>슬라이드 유니트</h2> <p>리니어 샤프트를 고정하는 샤프트 서포트(SK·SF)와 직선 운동을 안내하는 플랫 롤러 케이지(FT·FTW)입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Slide Units</p> <h2>滑动单元</h2> <p>用于固定直线轴的轴支座(SK·SF)，以及引导直线运动的平面滚柱保持架(FT·FTW)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
    "<label for=\"pgFilter\">형번 / 규격 검색</label> <input id=\"pgFilter\" type=\"text\" placeholder=\"예: SK20 또는 FT5038\" autocomplete=\"off\">": "<label for=\"pgFilter\">型号 / 规格搜索</label> <input id=\"pgFilter\" type=\"text\" placeholder=\"예: SK20 또는 FT5038\" autocomplete=\"off\">",
    "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">당사 정식 규격 도면</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sk_catalog.webp?v=wm5\" alt=\"SK 샤프트 서포트 카탈로그 도면\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SK 정면도(좌)·측면도(우)<br><span style=\"color: var(--text-faint);\">H: 전체 높이 · H<sub>1</sub>: 축 중심 높이 · H<sub>2</sub>: 베이스 두께 · W: 전체 폭 · B: 볼트 구멍 간격 · L: 상부 폭 · T: 두께 · 2-S: 설치 볼트 구멍 · M: 조임볼트</span></p>": "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">本公司正式规格图纸</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sk_catalog.webp?v=wm5\" alt=\"SK轴支座目录图纸\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SK主视图（左）·侧视图（右）<br><span style=\"color: var(--text-faint);\">H：总高 · H<sub>1</sub>：轴中心高 · H<sub>2</sub>：底座厚度 · W：总宽 · B：螺栓孔间距 · L：上部宽度 · T：厚度 · 2-S：安装螺栓孔 · M：紧固螺栓</span></p>",
    "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">당사 정식 규격 도면</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sf_catalog.webp?v=wm5\" alt=\"SF 샤프트 서포트 카탈로그 도면\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SF 정면도(좌)·측면도(우)<br><span style=\"color: var(--text-faint);\">W: 전체 폭 · B: 볼트 구멍 간격 · 2-S: 설치 볼트 구멍 · H · H<sub>1</sub>: 높이 · T: 전체 두께 · t: 플랜지 두께 · d: 축경 · M: 조임볼트</span></p>": "<p style=\"text-align: center; font-size: 11px; color: #999; margin: 0 0 16px;\">本公司正式规格图纸</p> <img class=\"fig-draw\" loading=\"lazy\" src=\"assets/slide_unit_sf_catalog.webp?v=wm5\" alt=\"SF轴支座目录图纸\"> <p style=\"font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;\">↑ SF主视图（左）·侧视图（右）<br><span style=\"color: var(--text-faint);\">W：总宽 · B：螺栓孔间距 · 2-S：安装螺栓孔 · H · H<sub>1</sub>：高度 · T：总厚度 · t：法兰厚度 · d：轴径 · M：紧固螺栓</span></p>",
@@ -169,7 +167,9 @@
    "<span class=\"tab-card-title\">FT 플랫 롤러 케이지</span><span class=\"tab-card-desc\">평면 직선 안내용</span>": "<span class=\"tab-card-title\">FT平面滚柱保持架</span><span class=\"tab-card-desc\">平面直线导向用</span>",
    "평면 직선 안내용": "平面直线导向用",
    "<span class=\"tab-card-title\">FTW 플랫 롤러 케이지</span><span class=\"tab-card-desc\">L형 · 직각 두 면 안내</span>": "<span class=\"tab-card-title\">FTW平面滚柱保持架</span><span class=\"tab-card-desc\">L形·引导直角两面</span>",
-   "L형 · 직각 두 면 안내": "L形·引导直角两面"
+   "L형 · 직각 두 면 안내": "L形·引导直角两面",
+   "<p class=\"eyebrow\">Slide Units</p> <h2>슬라이드 유닛</h2> <p>리니어 샤프트를 고정하는 샤프트 서포트(SK·SF)와 직선 운동을 안내하는 플랫 롤러 케이지(FT·FTW)입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Slide Units</p> <h2>滑动单元</h2> <p>用于固定直线轴的轴支座(SK·SF)，以及引导直线运动的平面滚柱保持架(FT·FTW)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
+   "슬라이드 유닛": "滑动单元"
   }
  },
  "attrs": {

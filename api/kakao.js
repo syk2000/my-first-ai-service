@@ -16,7 +16,7 @@ let DATA = null;
 function load() {
   if (DATA) return DATA;
   const src = fs.readFileSync(path.join(process.cwd(), "company-homepage/assets/spec-data.js"), "utf8");
-  DATA = new Function(src + ";return { SPEC_DATA, PAGE_GROUP, GROUP_ORDER, specDedupe };")();
+  DATA = new Function(src + ";return { SPEC_DATA, PAGE_GROUP, GROUP_ORDER, specDedupe, specAlias };")();
   return DATA;
 }
 
@@ -34,7 +34,7 @@ function parse(text) {
   return { kind: "model", q: text.trim() };
 }
 
-// 같은 조건이면 베어링 → 아답타 … 홈페이지 분류 순서로 보여줌
+// 같은 조건이면 베어링 → 어댑터 … 홈페이지 분류 순서로 보여줌
 function groupRank(r) {
   const { PAGE_GROUP, GROUP_ORDER } = load();
   const i = GROUP_ORDER.indexOf(PAGE_GROUP[r.p]);
@@ -101,7 +101,7 @@ const CATEGORY_WORDS = [
   [/오링|O\s*링|o-?ring/i, /오링/, "오링"],
   [/스프링\s*핀|핀/, /핀/, "핀"],
   [/로크\s*너트|록\s*너트|너트/, /너트/, "너트"],
-  [/와셔/, /와셔/, "와셔"],
+  [/와셔|와샤/, /와셔/, "와셔"],
   [/반달\s*키|사각\s*키|라운드\s*키|키\s*홈|(^|\s)키(?=\s|\d|$)/, /키/, "키"],
   [/금형\s*스프링|접시\s*스프링|스프링/, /스프링/, "스프링"],
   [/부쉬|부시|부싱/, /부쉬|부시|부싱/, "부시"],
@@ -315,7 +315,7 @@ function closedNote() {
   const day = now.getUTCDay();
   const h = now.getUTCHours();
   const holiday = HOLIDAYS[now.toISOString().slice(0, 10)];
-  if (holiday) return `\n\n오늘은 ${holiday}이라 쉬어요. 다음 영업일 오전부터 순서대로 답변드릴게요.`;
+  if (holiday) return `\n\n오늘은 휴무일(${holiday})이에요. 다음 영업일 오전부터 순서대로 답변드릴게요.`;
   if (day >= 1 && day <= 5 && h >= 9 && h < 18) return "";
   return "\n\n지금은 영업시간(평일 09:00~18:00)이 아니에요. 다음 영업일 오전부터 순서대로 답변드릴게요.";
 }
@@ -522,7 +522,8 @@ function answer(utterance, blockName) {
   // 붙은 말·수량·브랜드·단위는 떼고 검색 (수량은 견적·발주 양식에 채워 줌)
   // 품목 이름이 함께 오면("스냅링 20", "오링 P20", "E링 5") 그 분류 안에서 찾음
   const cat = CATEGORY_WORDS.find(([re]) => re.test(u));
-  let work = u.replace(/[^\p{L}\p{N}\s\-\/.*×"'()#+,~]/gu, " ").replace(/(\d)\s*(mm|㎜)/gi, "$1");
+  // 예전 카탈로그 표기(아답타·와샤·숫TP 등)를 지금 표기로 바꿔서 찾음
+  let work = load().specAlias(u).replace(/[^\p{L}\p{N}\s\-\/.*×"'()#+,~]/gu, " ").replace(/(\d)\s*(mm|㎜)/gi, "$1");
   let qty = null;
   const qm = work.match(/(\d+)\s*(개|ea|pcs|세트|set|박스|box|본|롤)(?![a-z])/i);
   if (qm) { qty = qm[1] + qm[2]; work = work.replace(qm[0], " "); }
