@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261031p">
+<link rel="stylesheet" href="styles.css?v=20261031r">
 </head>
 <body>
 
@@ -163,7 +163,7 @@
     </div>
     <div class="wrap f-copy">© SWS TECH. 본 홈페이지의 도면·규격표·사진 등 자료의 무단 복제·배포를 금합니다.</div>
   </footer>
-<script src="assets/spec-data.js?v=20261031bp"></script>
+<script src="assets/spec-data.js?v=20261031ser"></script>
 <script src="i18n/common.dict.js?v=20261031pr"></script>
 <script src="i18n/pages/search-product.dict.js?v=20261031pr"></script>
 <script src="i18n.js?v=20261025a"></script>
@@ -189,7 +189,13 @@
     // 다국어 — 검색기 입력칸·결과 영역은 i18n.js 자동 번역에서 제외되어 있어 여기서 직접 번역한다
     // (사전은 i18n/common.json, 한국어 모드이거나 사전에 없으면 원문 그대로)
     const tr = (ko) => (window.I18N && window.I18N.t ? window.I18N.t(ko) : ko);
-    const trModel = (m) => (m || "").replace(/[가-힣]+(?: [가-힣]+)*/g, (ko) => tr(ko));
+    // 테이퍼 핀 수TP/암TP — 수(수나사)·암(암나사) 접두어는 TP에 붙어 있어 사전 대신 여기서 번역
+    const SEX_TP = { ENG: { "수": "Male ", "암": "Female " }, JPN: { "수": "オス", "암": "メス" }, CHN: { "수": "外螺纹", "암": "内螺纹" } };
+    const trModel = (m) => {
+      const map = SEX_TP[window.I18N && window.I18N.getSaved ? window.I18N.getSaved() : "KOR"];
+      const s = map ? (m || "").replace(/^([수암])(?=TP)/, (k) => map[k]) : (m || "");
+      return s.replace(/[가-힣]+(?: [가-힣]+)*/g, (ko) => tr(ko));
+    };
     const trLabel = (s) => s.replace(/^(.*?)( \(mm\))?$/, (all, ko, mm) => tr(ko) + (mm || ""));
     const finderLabels = [...document.querySelectorAll(".finder-fields label")].map((el) => [el, el.textContent]);
     const finderPlaceholders = [...document.querySelectorAll(".finder-fields input[placeholder]")].map((el) => [el, el.getAttribute("placeholder")]);
