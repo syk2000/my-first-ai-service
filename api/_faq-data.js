@@ -425,7 +425,7 @@ const PRODUCT_FAQ = [
       "• V패킹: VF형 — 피스톤·로드 겸용, 외경×내경으로 규격 구분\n" +
       "• 로드씰·피스톤씰: PNY형은 로드용, PGY형은 피스톤용\n" +
       "• 더스트씰: SER·SFR·DKI·SCB형 등 — 바깥 이물질이 들어오지 않게 막음",
-    link: ["유압씰 보기", "seal.html"],
+    link: ["유압씰 보기", "hydraulic_seal.html"],
   },
   {
     short: "비규격 오링",
