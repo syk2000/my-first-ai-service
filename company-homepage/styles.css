@@ -3099,6 +3099,7 @@ table.spec-table th { color: #4b5873; }
 .fig-draw, .fig-photo { display: block; margin: 0 auto; width: auto; max-width: 100%; object-fit: contain; image-rendering: -webkit-optimize-contrast; }
 .fig-draw { height: 240px; }
 .fig-photo { height: 200px; }
+.fig-wide { display: block; margin: 0 auto; width: 100%; max-width: 900px; height: auto; image-rendering: -webkit-optimize-contrast; }
 @media (max-width: 720px) {
   .fig-draw { height: auto; max-height: 240px; }
   .fig-photo { height: auto; max-height: 200px; }
@@ -3313,3 +3314,12 @@ table.spec-table th { color: #4b5873; }
 #hybrid-bearing .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hybrid_bearing.webp?v=10"); }
 #ball-plunger .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
 #needle-bearing-accessories .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_bearing_accessories.webp?v=10"); }
+
+/* 탭 줄 안의 다른 페이지 링크 카드 */
+.tab-cards .tab-card-link { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; text-decoration: none; color: var(--text); background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius-md); padding: 16px; transition: border-color 0.15s ease, transform 0.15s ease; }
+.tab-cards .tab-card-link::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
+.tab-cards .tab-card-link:hover, .tab-cards .tab-card-link:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
+.tab-cards .tab-card-link .tab-card-desc { color: var(--accent); }
+@media (max-width: 720px) { .tab-cards .tab-card-link { padding: 12px; gap: 6px; } .tab-cards .tab-card-link::before { width: 48px; height: 48px; } }
+.tab-cards .tab-card-link[href="spring_plunger_2205.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2205.webp?v=10"); }
+.tab-cards .tab-card-link[href="spring_plunger_2206.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2206.webp?v=10"); }
