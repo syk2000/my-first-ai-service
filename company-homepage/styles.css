@@ -3006,7 +3006,7 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="spring_plunger_2206.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2206.webp?v=10"); }
 
 /* DURI 추가분(2026-10-28) 카드 그림 */
-:is(#bearing-group, #accessory-group) .product-card[href="coupling.html"]::before { background-image: url("assets/cards/coupling.webp?v=1"); }
+:is(#bearing-group, #accessory-group) .product-card[href="coupling.html"]::before { background-image: url("assets/cards/coupling.webp?v=rd1"); }
 .img-cards .product-card[href="coupling_drb.html"]::before,
 .img-cards .product-card[href="coupling_doh.html"]::before,
 .img-cards .product-card[href="coupling_dhra.html"]::before,
