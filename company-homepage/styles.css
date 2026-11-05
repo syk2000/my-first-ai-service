@@ -2742,13 +2742,13 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="ball_bearing_unit_ucx.html"]::before { background-image: url("assets/cards/pc_ball_bearing_unit_ucx.webp?v=10"); }
 .img-cards .product-card[href="deep_groove_ball.html"]::before { background-image: url("assets/cards/pc_deep_groove_ball.webp?v=3"); }
 .img-cards .product-card[href="angular_contact_ball.html"]::before { background-image: url("assets/cards/pc_angular_contact_ball.webp?v=3"); }
-.img-cards .product-card[href="self_aligning_ball.html"]::before { background-image: url("assets/cards/pc_self_aligning_ball.webp?v=10"); }
+.img-cards .product-card[href="self_aligning_ball.html"]::before { background-image: url("assets/cards/pc_self_aligning_ball.webp?v=11"); }
 .img-cards .product-card[href="self_aligning_deep_groove.html"]::before { background-image: url("assets/cards/pc_self_aligning_deep_groove.webp?v=3"); }
 .img-cards .product-card[href="double_row_angular_contact.html"]::before { background-image: url("assets/cards/pc_double_row_angular_contact.webp?v=3"); }
 .img-cards .product-card[href="miniature_ball.html"]::before { background-image: url("assets/cards/pc_miniature_ball.webp?v=4"); }
 .img-cards .product-card[href="cylindrical_roller.html"]::before { background-image: url("assets/cards/pc_cylindrical_roller.webp?v=3"); }
 .img-cards .product-card[href="taper_roller.html"]::before { background-image: url("assets/cards/pc_taper_roller.webp?v=3"); }
-.img-cards .product-card[href="barrel_roller.html"]::before { background-image: url("assets/cards/pc_barrel_roller.webp?v=10"); }
+.img-cards .product-card[href="barrel_roller.html"]::before { background-image: url("assets/cards/pc_barrel_roller.webp?v=11"); }
 .img-cards .product-card[href="spherical_roller.html"]::before { background-image: url("assets/cards/pc_spherical_roller.webp?v=3"); }
 .img-cards .product-card[href="double_row_taper.html"]::before { background-image: url("assets/cards/pc_double_row_taper.webp?v=3"); }
 .img-cards .product-card[href="double_row_cylindrical.html"]::before { background-image: url("assets/cards/pc_double_row_cylindrical.webp?v=3"); }
@@ -3218,14 +3218,14 @@ table.spec-table th { color: #4b5873; }
 #taper-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_taper_roller.webp?v=3"); }
 #thrust-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_thrust_ball.webp?v=10"); }
 #deep-groove-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_deep_groove_ball.webp?v=3"); }
-#self-aligning-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_self_aligning_ball.webp?v=10"); }
+#self-aligning-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_self_aligning_ball.webp?v=11"); }
 #cylindrical-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_cylindrical_roller.webp?v=3"); }
 #angular-contact-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_angular_contact_ball.webp?v=3"); }
 #double-row-angular-contact .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_double_row_angular_contact.webp?v=3"); }
 #double-direction-thrust-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_double_direction_thrust_ball.webp?v=10"); }
 #self-aligning-thrust-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_self_aligning_thrust_roller.webp?v=10"); }
 #double-row-cylindrical .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_double_row_cylindrical.webp?v=3"); }
-#barrel-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_barrel_roller.webp?v=10"); }
+#barrel-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_barrel_roller.webp?v=11"); }
 #angular-thrust-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_angular_thrust_ball.webp?v=10"); }
 #spindle-bearing .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_spindle_bearing.webp?v=3"); }
 
