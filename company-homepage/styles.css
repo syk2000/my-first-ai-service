@@ -2305,18 +2305,8 @@ table.spec-table th { color: #4b5873; }
 /* 금형 스프링 시리즈 탭: 카탈로그 색상 점 */
 .cat-tab-btn[data-tab]::before { content: ""; display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; border: 1px solid rgba(0,0,0,0.35); }
 .cat-tab-btn[data-tab="sf"]::before { background: #f5c400; }
-.cat-tab-btn[data-tab="ssf"]::before { background: #f5c400; }
-.cat-tab-btn[data-tab="sl"]::before { background: #2f6fd6; }
-.cat-tab-btn[data-tab="ssl"]::before { background: #2f6fd6; }
-.cat-tab-btn[data-tab="sm"]::before { background: #d93a3a; }
-.cat-tab-btn[data-tab="sh"]::before { background: #2e9e4f; }
 .cat-tab-btn[data-tab="sb"]::before { background: #8a5a2b; }
-.cat-tab-btn[data-tab="sg"]::before { background: #222222; }
-.cat-tab-btn[data-tab="sy"]::before { background: #9acd32; }
-.cat-tab-btn[data-tab="ssy"]::before { background: #7b3fbf; }
-.cat-tab-btn[data-tab="su"]::before { background: #5ec8f0; }
 .cat-tab-btn[data-tab="sc"]::before { background: #c8a8e8; }
-.cat-tab-btn[data-tab="sr"]::before { background: #ffffff; }
 /* 카드 아이콘 대신 해당 페이지 치수 도면 (assets/cards/pc_*.webp, 워터마크 없는 원본) */
 .img-cards .product-card[href="hah_sleeve.html"]::before,
 .img-cards .product-card[href="lock_nut.html"]::before,
@@ -2498,7 +2488,6 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="e_holder.html"]::before,
 .img-cards .product-card[href="e_stand.html"]::before,
 .img-cards .product-card[href="heli_coil.html"]::before,
-.img-cards .product-card[href="takeup_aluminum.html"]::before,
 .img-cards .product-card[href="takeup_steel.html"]::before,
 .img-cards .product-card[href="takeup_uctm.html"]::before,
 .img-cards .product-card[href="takeup_uctn.html"]::before,
@@ -2690,7 +2679,6 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="e_holder.html"] .p-icon,
 .img-cards .product-card[href="e_stand.html"] .p-icon,
 .img-cards .product-card[href="heli_coil.html"] .p-icon,
-.img-cards .product-card[href="takeup_aluminum.html"] .p-icon,
 .img-cards .product-card[href="takeup_steel.html"] .p-icon,
 .img-cards .product-card[href="takeup_uctm.html"] .p-icon,
 .img-cards .product-card[href="takeup_uctn.html"] .p-icon,
@@ -2895,7 +2883,6 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="e_holder.html"]::before { background-image: url("assets/cards/pc_e_holder.webp?v=10"); }
 .img-cards .product-card[href="e_stand.html"]::before { background-image: url("assets/cards/pc_e_stand.webp?v=10"); }
 .img-cards .product-card[href="heli_coil.html"]::before { background-image: url("assets/cards/pc_heli_coil.webp?v=10"); }
-.img-cards .product-card[href="takeup_aluminum.html"]::before { background-image: url("assets/cards/pc_takeup_aluminum.webp?v=10"); }
 .img-cards .product-card[href="takeup_steel.html"]::before { background-image: url("assets/cards/pc_takeup_steel.webp?v=10"); }
 .img-cards .product-card[href="takeup_uctm.html"]::before { background-image: url("assets/cards/pc_takeup_uctm.webp?v=10"); }
 .img-cards .product-card[href="takeup_uctn.html"]::before { background-image: url("assets/cards/pc_takeup_uctn.webp?v=10"); }
@@ -3143,21 +3130,6 @@ table.spec-table th { color: #4b5873; }
 #linear-bushing .tab-cards .cat-tab-btn[data-tab="sdm"]::before { background-image: url("assets/cards/lb_sdm.webp?v=1"); }
 #slide-unit .tab-cards .cat-tab-btn[data-tab="sk"]::before { background-image: url("assets/cards/su_sk.webp?v=1"); }
 #slide-unit .tab-cards .cat-tab-btn[data-tab="sf"]::before { background-image: url("assets/cards/su_sf.webp?v=1"); }
-#slide-unit .tab-cards .cat-tab-btn[data-tab="ft"]::before { background-image: url("assets/cards/su_ft.webp?v=1"); }
-#slide-unit .tab-cards .cat-tab-btn[data-tab="ftw"]::before { background-image: url("assets/cards/su_ftw.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="sf"]::before { background-image: url("assets/cards/ms_sf.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="ssf"]::before { background-image: url("assets/cards/ms_ssf.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="sl"]::before { background-image: url("assets/cards/ms_sl.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="ssl"]::before { background-image: url("assets/cards/ms_ssl.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="sm"]::before { background-image: url("assets/cards/ms_sm.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="sh"]::before { background-image: url("assets/cards/ms_sh.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="sb"]::before { background-image: url("assets/cards/ms_sb.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="sg"]::before { background-image: url("assets/cards/ms_sg.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="sy"]::before { background-image: url("assets/cards/ms_sy.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="ssy"]::before { background-image: url("assets/cards/ms_ssy.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="su"]::before { background-image: url("assets/cards/ms_su.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="sc"]::before { background-image: url("assets/cards/ms_sc.webp?v=1"); }
-#mold-spring .tab-cards .cat-tab-btn[data-tab="sr"]::before { background-image: url("assets/cards/ms_sr.webp?v=1"); }
 .cat-tabs.tab-cards.cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 @media (max-width: 960px) { .cat-tabs.tab-cards.cols-6 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 720px) { .cat-tabs.tab-cards.cols-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -3228,23 +3200,6 @@ table.spec-table th { color: #4b5873; }
 #barrel-roller .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_barrel_roller.webp?v=11"); }
 #angular-thrust-ball .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_angular_thrust_ball.webp?v=10"); }
 #spindle-bearing .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_spindle_bearing.webp?v=3"); }
-
-/* 시리즈 카드 탭 그림 (b2) */
-#coupling_dhda .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_dhda.webp?v=10"); }
-#coupling_drs .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drs.webp?v=10"); }
-#coupling_drb .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drb.webp?v=10"); }
-#coupling_djc .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_djc.webp?v=10"); }
-#coupling-mt-jaw .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_mt_jaw.webp?v=10"); }
-#coupling_drg .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drg.webp?v=10"); }
-#coupling_doh .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_doh.webp?v=10"); }
-#coupling-mt-drda .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_mt_drda.webp?v=10"); }
-#coupling-mt-dpds .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_mt_dpds.webp?v=10"); }
-#coupling-mt-dhds .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_mt_dhds.webp?v=10"); }
-#coupling_drjcl .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drjcl.webp?v=10"); }
-#coupling_drfc .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_drfc.webp?v=10"); }
-#coupling_dracl .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_dracl.webp?v=10"); }
-#coupling_dhra .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_dhra.webp?v=10"); }
-#coupling_collar .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_coupling_collar.webp?v=10"); }
 
 /* 시리즈 카드 탭 그림 (b3) */
 #full-complement-cylindrical .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_full_complement_cylindrical.webp?v=10"); }
@@ -3317,12 +3272,4 @@ table.spec-table th { color: #4b5873; }
 #ball-plunger .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
 #needle-bearing-accessories .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_bearing_accessories.webp?v=10"); }
 
-/* 탭 줄 안의 다른 페이지 링크 카드 */
-.tab-cards .tab-card-link { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; text-decoration: none; color: var(--text); background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius-md); padding: 16px; transition: border-color 0.15s ease, transform 0.15s ease; }
-.tab-cards .tab-card-link::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
-.tab-cards .tab-card-link:hover, .tab-cards .tab-card-link:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
-.tab-cards .tab-card-link .tab-card-desc { color: var(--accent); }
-@media (max-width: 720px) { .tab-cards .tab-card-link { padding: 12px; gap: 6px; } .tab-cards .tab-card-link::before { width: 48px; height: 48px; } }
-.tab-cards .tab-card-link[href="spring_plunger_2205.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2205.webp?v=10"); }
-.tab-cards .tab-card-link[href="spring_plunger_2206.html"]::before { background-image: url("assets/cards/pc_spring_plunger_2206.webp?v=10"); }
 .img-cards .product-card[href="ball_plunger_series.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }

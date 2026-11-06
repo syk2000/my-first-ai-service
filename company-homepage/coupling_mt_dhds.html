@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261107a">
+<link rel="stylesheet" href="styles.css?v=20261107c">
 <style id="hub-cards">
 #coupling-mt-dhds .img-cards .product-card::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
 #coupling-mt-dhds .img-cards .product-card[href="coupling_mt_dhds_dhds_a.html"]::before { background-image: url("assets/cards/pc_coupling_mt_dhds.webp?v=10"); }
@@ -136,21 +136,10 @@
     <div class="wrap f-copy">© SWS TECH. 본 홈페이지의 도면·규격표·사진 등 자료의 무단 복제·배포를 금합니다.</div>
   </footer>
 
-<script>
-  // 예전 탭 주소(#g2 · #sf 등)나 견적 목록의 품번 링크(#pick=형번)로 들어오면 해당 시리즈 페이지로 이동
-  (function () {
-    var tabs = {"g1":"coupling_mt_dhds_dhds_a.html","g2":"coupling_mt_dhds_dhds_b.html"};
-    var picks = {"DHDS-77 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-89 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-104 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-123 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-143 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-167 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-77 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-89 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-104 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-123 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-143 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-167 (B 허브)":"coupling_mt_dhds_dhds_b.html"};
-    function pageFor(model) { return picks[model] || null; }
-    var h = decodeURIComponent(location.hash.replace(/^#/, ''));
-    if (!h) return;
-    var to = h.indexOf('pick=') === 0 ? pageFor(h.slice(5)) : tabs[h];
-    if (to) location.replace(to + (h.indexOf('pick=') === 0 ? location.hash : ''));
-  })();
-</script>
 <script src="i18n/common.dict.js?v=20261031wr"></script>
 <script src="i18n/pages/coupling_mt_dhds.dict.js?v=20261106sp"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261106s"></script>
+<script src="common.js?v=20261107c"></script>
+<script>hubRedirect({"tabs":{"g1":"coupling_mt_dhds_dhds_a.html","g2":"coupling_mt_dhds_dhds_b.html"},"picks":{"DHDS-77 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-89 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-104 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-123 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-143 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-167 (A 허브)":"coupling_mt_dhds_dhds_a.html","DHDS-77 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-89 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-104 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-123 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-143 (B 허브)":"coupling_mt_dhds_dhds_b.html","DHDS-167 (B 허브)":"coupling_mt_dhds_dhds_b.html"}});</script>
 </body>
 </html>

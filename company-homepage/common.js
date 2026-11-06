@@ -311,3 +311,67 @@
         countEl.textContent = shown + " / " + rows.length + "건 표시 중";
       });
     })();
+
+// 탭 페이지를 허브 + 시리즈별 페이지로 나눈 뒤의 예전 주소 이동 — 허브(와 slide_unit) 페이지가 호출
+// cfg.tabs  = { 예전 탭 키: 시리즈 페이지 }  (#g2 · #sf 같은 주소)
+// cfg.picks = { 형번: 시리즈 페이지 }        (견적 목록의 #pick=형번 링크)
+// cfg.byPrefix = true 면 형번 앞 글자(SF 6×15 → sf, FT 5038-250 → ft)를 탭 키로 써서 찾음
+function hubRedirect(cfg) {
+  var h = decodeURIComponent(location.hash.replace(/^#/, ""));
+  if (!h) return;
+  var pick = h.indexOf("pick=") === 0;
+  var model = pick ? h.slice(5) : "";
+  var to = !pick ? cfg.tabs[h] : cfg.byPrefix ? cfg.tabs[model.split(" ")[0].toLowerCase()] : (cfg.picks || {})[model];
+  if (to) location.replace(to + (pick ? location.hash : ""));
+}
+
+// 이미지 카드 탭(시리즈별): 평소엔 고른 시리즈만 보이고, 검색어가 있으면 일치하는 행이 있는 시리즈를 모두 보여 줌
+// rootId = 탭과 패널을 품은 section id, inputId = 그 페이지 검색칸 id(없으면 null → 안쪽의 …Filter 입력칸, 자동 검색칸 포함)
+function seriesCardTabs(rootId, inputId) {
+  var root = document.getElementById(rootId);
+  var input = inputId ? document.getElementById(inputId) : null;
+  var STORAGE_KEY = 'activeTab:' + location.pathname;
+  var btns = Array.prototype.slice.call(root.querySelectorAll('.tab-cards .cat-tab-btn'));
+  var panels = Array.prototype.slice.call(root.querySelectorAll('.cat-tab-panel[data-panel^="g"]'));
+  var current = btns[0].getAttribute('data-tab');
+  function getInput() { return input || root.querySelector('input[id$="Filter"]'); }
+  function btnFor(p) { return btns.filter(function (b) { return b.getAttribute('data-tab') === p.getAttribute('data-panel'); })[0]; }
+  function showTab() {
+    btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+    panels.forEach(function (p) {
+      p.hidden = p.getAttribute('data-panel') !== current;
+      Array.prototype.forEach.call(p.querySelectorAll('details.series-group'), function (d) { d.open = true; });
+    });
+  }
+  function sync() {
+    var inp = getInput();
+    var q = inp ? inp.value.trim() : '';
+    if (q === '') { showTab(); return; }
+    panels.forEach(function (p) {
+      var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none' && !r.hidden; });
+      p.hidden = !hit;
+      var b = btnFor(p);
+      if (b) { b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); }
+    });
+  }
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      current = btn.getAttribute('data-tab');
+      try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+      var inp = getInput();
+      if (inp && inp.value !== '') { inp.value = ''; inp.dispatchEvent(new Event('input', { bubbles: true })); } else { showTab(); }
+    });
+  });
+  // 자동 검색칸(common.js)이 카드 아래에 붙으면 카드 위로 옮김
+  function placeAuto() {
+    var box = root.querySelector('.auto-spec-search'); var cards = root.querySelector('.tab-cards');
+    if (box && cards && (cards.compareDocumentPosition(box) & 4)) cards.parentNode.insertBefore(box, cards);
+  }
+  placeAuto();
+  document.addEventListener('DOMContentLoaded', placeAuto);
+  var saved = null;
+  try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+  if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+  showTab();
+  root.addEventListener('input', function (e) { if (e.target.matches && e.target.matches('input[id$="Filter"]')) sync(); });
+}
