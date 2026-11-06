@@ -2955,8 +2955,8 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="round_key.html"]::before { background-image: url("assets/cards/pc_round_key.webp?v=10"); }
 .img-cards .product-card[href="taper_pin.html"]::before { background-image: url("assets/cards/pc_taper_pin.webp?v=10"); }
 .img-cards .product-card[href="parallel_pin.html"]::before { background-image: url("assets/cards/pc_parallel_pin.webp?v=10"); }
-.img-cards .product-card[href="oilgage_md_mc.html"]::before { background-image: url("assets/cards/pc_oilgage_md_mc.webp?v=11"); }
-.img-cards .product-card[href="oilgage_mh_mhs.html"]::before { background-image: url("assets/cards/pc_oilgage_mh_mhs.webp?v=11"); }
+.img-cards .product-card[href="oilgage_md_mc.html"]::before { background-image: url("assets/cards/pc_oilgage_md_mc.webp?v=12"); }
+.img-cards .product-card[href="oilgage_mh_mhs.html"]::before { background-image: url("assets/cards/pc_oilgage_mh_mhs.webp?v=12"); }
 .img-cards .product-card[href="oilgage_mhl.html"]::before { background-image: url("assets/cards/pc_oilgage_mhl.webp?v=11"); }
 .img-cards .product-card[href="oilseal_types.html"]::before { background-image: url("assets/cards/pc_oilseal_types.webp?v=10"); }
 .img-cards .product-card[href="oilseal_endcap.html"]::before { background-image: url("assets/cards/pc_oilseal_endcap.webp?v=10"); }
