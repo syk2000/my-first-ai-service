@@ -2949,7 +2949,7 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="oilseal_endcap.html"] .p-icon { display: none; }
 .img-cards .product-card[href="steel_ball.html"]::before { background-image: url("assets/cards/pc_steel_ball.webp?v=10"); }
 .img-cards .product-card[href="double_direction_thrust_ball.html"]::before { background-image: url("assets/cards/pc_double_direction_thrust_ball.webp?v=10"); }
-.img-cards .product-card[href="hybrid_bearing.html"]::before { background-image: url("assets/cards/pc_hybrid_bearing.webp?v=10"); }
+.img-cards .product-card[href="hybrid_bearing.html"]::before { background-image: url("assets/cards/pc_hybrid_bearing.webp?v=11"); }
 .img-cards .product-card[href="key_normal.html"]::before { background-image: url("assets/cards/pc_key_normal.webp?v=10"); }
 .img-cards .product-card[href="half_key.html"]::before { background-image: url("assets/cards/pc_half_key.webp?v=10"); }
 .img-cards .product-card[href="round_key.html"]::before { background-image: url("assets/cards/pc_round_key.webp?v=10"); }
@@ -3313,7 +3313,7 @@ table.spec-table th { color: #4b5873; }
 /* 시리즈 카드 탭 그림 (b5) */
 #needle-inner-ring .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_inner_ring.webp?v=10"); }
 #needle-cage .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_cage.webp?v=10"); }
-#hybrid-bearing .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hybrid_bearing.webp?v=10"); }
+#hybrid-bearing .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hybrid_bearing.webp?v=11"); }
 #ball-plunger .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
 #needle-bearing-accessories .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_bearing_accessories.webp?v=10"); }
 
