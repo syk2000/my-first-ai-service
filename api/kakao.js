@@ -16,12 +16,13 @@ let DATA = null;
 function load() {
   if (DATA) return DATA;
   const src = fs.readFileSync(path.join(process.cwd(), "company-homepage/assets/spec-data.js"), "utf8");
-  DATA = new Function(src + ";return { SPEC_DATA, PAGE_GROUP, GROUP_ORDER, specDedupe, specAlias };")();
+  DATA = new Function(src + ";return { SPEC_DATA, PAGE_GROUP, GROUP_ORDER, specDedupe, specAlias, specNorm, specStripSuffix };")();
   return DATA;
 }
 
 const fmt = (v) => (v === null || v === undefined || v === "" ? "-" : String(v));
-const norm = (s) => String(s || "").toUpperCase().replace(/[\s\-_]/g, "");
+// 형번 정규화·실드 기호 떼기는 홈페이지와 같은 함수(company-homepage/assets/spec-data.js)
+const norm = (s) => load().specNorm(s);
 
 // 메시지를 형번 검색 또는 치수 검색으로 해석
 function parse(text) {
@@ -52,7 +53,9 @@ function search(query) {
   if (!q) return [];
   const hits = SPEC_DATA.filter((r) => norm(r.m).includes(q));
   // 정확히 같은 형번 → 앞부분 일치 → 나머지 순
-  const rank = (r) => (norm(r.m) === q ? 0 : norm(r.m).startsWith(q) ? 1 : 2);
+  // 띄어쓰기만 다른 똑같은 표기(R14ZZ)를 정규화로만 같은 표기(R1-4ZZ)보다 앞에
+  const lit = (s) => String(s || "").toUpperCase().replace(/\s+/g, "");
+  const rank = (r) => (lit(r.m) === lit(query.q) ? -1 : norm(r.m) === q ? 0 : norm(r.m).startsWith(q) ? 1 : 2);
   return hits.sort((a, b) => rank(a) - rank(b) || groupRank(a) - groupRank(b));
 }
 
@@ -110,18 +113,7 @@ const CATEGORY_WORDS = [
 
 // 형번 뒤에 붙는 실드·틈새 표기(6205ZZ, 6205-2RS, 6205 C3 …)를 떼어 기본 형번을 찾음
 // (리니어 부시: UU 양쪽 실, U 한쪽 실, OP 개방형, AJ 조정형 — LM20UU, LM20U, LM20UU-OP, LMF20LUU)
-const SUFFIX_RE = /[\s\-]*(2RSH|2RS1|2RS|DDU|DU|LLU|LU|LLB|LB|LLH|LH|VV|2NSE|NSE|2RU|RU|ZZ|2Z|DD|RS|Z|D|V|NR|ZNR|C3|C4|CM|OPEN|OP|UU|U|AJ)$/i;
-function stripSuffix(q) {
-  let base = q.trim();
-  const sfx = [];
-  for (let i = 0; i < 3; i++) {
-    const m = base.match(SUFFIX_RE);
-    if (!m || base.length - m[0].length < 2) break;
-    sfx.unshift(m[1].toUpperCase());
-    base = base.slice(0, base.length - m[0].length);
-  }
-  return sfx.length ? { base, sfx: sfx.join("") } : null;
-}
+const stripSuffix = (q) => load().specStripSuffix(q);
 
 // 정확히 맞는 규격이 없을 때 가까운 규격(치수는 차이가 작은 순, 형번은 앞부분이 많이 같은 순)
 function approx(query) {
@@ -662,7 +654,7 @@ function showResults(rows, query, note, q, isApprox, typed, qty) {
       title: name.slice(0, 50),
       description: (r.seal
         ? `오일씰\nd ${fmt(r.d)} · D ${fmt(r.D)} · H ${fmt(r.h)} (mm)\n등록된 규격이 있어요.`
-        : `${r.c}\n${dimText(r)} (mm)` + (String(r.m).match(/\(=.*\)\s*$/) || [""]).map((a) => (a ? "\n" + a.trim() : ""))[0] +
+        : `${r.c}\n${dimText(r)} (mm)` + (r.q ? " · 비표준 길이(재고 문의)" : "") + (String(r.m).match(/\(=.*\)\s*$/) || [""]).map((a) => (a ? "\n" + a.trim() : ""))[0] +
           r.alts.map((a) => "\n" + a).join("")).slice(0, 230),
       // 카드에서 바로 견적·발주, 상세 보기는 홈페이지 규격 페이지
       buttons: [btn("견적"), btn("발주"), { action: "webLink", label: "상세 보기", webLinkUrl: SITE + r.p }],

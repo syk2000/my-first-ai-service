@@ -147,7 +147,7 @@
       if (!btn) return;
       const tr = btn.closest("tr");
       // 규격 검색 결과 행은 [제품유형, 제품명, …] 순서이고 제품 페이지를 data-p로 갖고 있음
-      const entry = { m: tr.cells[1].textContent.trim(), u: tr.dataset.p, n: { KOR: tr.dataset.c } };
+      const entry = { m: (tr.dataset.m || tr.cells[1].textContent).trim(), u: tr.dataset.p, n: { KOR: tr.dataset.c } };
       if (!entry.m || entry.m === "-") return;
       writeRecent([entry, ...readRecent().filter((r) => !(r.m === entry.m && r.u === entry.u))].slice(0, RECENT_MAX));
       tr.classList.add("row-picked");
@@ -232,6 +232,46 @@
       box.addEventListener("mouseenter", () => clearInterval(timer));
       box.addEventListener("mouseleave", start);
       start();
+    })();
+
+    // 제품 페이지 검색칸이 0건이면 형번 표기 차이(띄어쓰기 SK20→SK 20, 실드 기호 6305ZZ→6305, 타사 표기 KM10→AN 10 등)를
+    // 바꿔 다시 찾아봄 — 규칙은 홈페이지 규격검색·챗봇과 같은 assets/spec-data.js(specQueryVariants). 입력한 글자는 그대로 둠
+    (function () {
+      let busy = false, loading = null;
+      const SEL = "section.page-section input[type=text], section.page-section input[type=search]";
+      // 페이지 스크립트가 거른 표 중에 보이는 행이 있으면 결과 있음(아예 거르지 않은 표는 판단에서 뺌)
+      const hasRows = (scope) => [...scope.querySelectorAll("table.spec-table")].some((t) => {
+        const rows = [...t.querySelectorAll("tbody tr")];
+        const off = (r) => r.hidden || r.style.display === "none" || !!r.closest("[hidden]");
+        const hidden = rows.filter(off).length;
+        return hidden > 0 && hidden < rows.length;
+      });
+      const need = () => (typeof specQueryVariants === "function" ? Promise.resolve() : loading || (loading = new Promise((res) => {
+        const s = document.createElement("script");
+        s.src = "assets/spec-data.js?v=20261106sx";
+        s.onload = res; s.onerror = res;
+        document.head.append(s);
+      })));
+      document.addEventListener("input", (e) => {
+        const inp = e.target;
+        if (busy || !inp.matches || !inp.matches(SEL) || inp.closest(".finder-fields")) return;
+        const scope = inp.closest("section.page-section");
+        const q = inp.value.trim();
+        if (!q || hasRows(scope)) return;
+        need().then(() => {
+          if (inp.value.trim() !== q || typeof specQueryVariants !== "function") return;
+          busy = true;
+          try {
+            let ok = false;
+            for (const v of specQueryVariants(q)) {
+              inp.value = v;
+              inp.dispatchEvent(new Event("input", { bubbles: true }));
+              if (hasRows(scope)) { ok = true; break; }
+            }
+            if (!ok) { inp.value = q; inp.dispatchEvent(new Event("input", { bubbles: true })); }
+          } finally { inp.value = q; busy = false; }
+        });
+      });
     })();
 
     // 규격표가 있는데 검색창이 없는 페이지에 '형번 / 규격 검색' 칸을 자동으로 붙임
