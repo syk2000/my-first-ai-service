@@ -1,0 +1,27 @@
+# 비밀값·로컬 설정 — 절대 커밋하지 않음 (Vercel은 대시보드 환경변수 사용)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Claude / 에디터 / 로컬 도구 설정
+CLAUDE.md
+.claude/
+claudee
+.vscode/
+.idea/
+
+# Vercel CLI 로컬 연결 정보
+.vercel/
+
+# 의존성·빌드 산출물·OS 잡파일
+node_modules/
+npm-debug.log*
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 로컬 테스트 사본
+page-test-deploy/
