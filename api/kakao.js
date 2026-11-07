@@ -99,6 +99,9 @@ function shieldItem(item) {
 
 // 손님 말에 들어 있는 품목 이름 → [찾을 때 뗄 말, 분류(r.c) 조건, 안내용 이름]
 const CATEGORY_WORDS = [
+  [/컴팩트\s*씰|콤팩트\s*씰|compact\s*seals?/i, /컴팩트 씰/, "컴팩트 씰"],
+  [/쿼드\s*링|X\s*-?\s*링|X-?rings?|quad\s*-?\s*rings?/i, /쿼드링/, "쿼드링(X링)"],
+  [/웨어\s*링|웨어\s*밴드|밴드\s*웨어링|wear\s*-?\s*rings?|가이드\s*링/i, /웨어링/, "웨어링"],
   [/E\s*링|이\s*링|E형\s*멈춤\s*링/i, /E형 멈춤링/, "E형 멈춤링"],
   [/C형\s*멈춤\s*링|스냅\s*링|멈춤\s*링|C\s*링|씨\s*링|스톱\s*링/i, /멈춤링|스냅링|스톱링/, "스냅링·멈춤링"],
   [/오링|O\s*링|o-?ring/i, /오링/, "오링"],
@@ -622,6 +625,9 @@ function answer(utterance, blockName) {
 // 카드에 보일 치수 — 키는 b(나비)·h(높이)·L(길이), 반달키는 d0(축 지름)·h, 베어링은 폭 B
 function dimText(r) {
   if (/사각키|라운드 키/.test(r.c)) return `b ${fmt(r.d)} · h ${fmt(r.D)} · L ${fmt(r.h)}`;
+  if (r.c === "컴팩트 씰") return `D ${fmt(r.d)} · d ${fmt(r.D)} · L ${fmt(r.h)}`;
+  if (r.c === "쿼드링 (X링)" || r.c === "웨어링") return `d ${fmt(r.d)} · D ${fmt(r.D)} · W ${fmt(r.h)}`;
+  if (r.c === "밴드 웨어링") return `t ${fmt(r.h)}`;
   if (r.c === "반달키") return `d0 ${fmt(r.d)} · h ${fmt(r.h)}`;
   if (r.c === "테이퍼 핀" || r.c === "평행 핀") return `d ${fmt(r.d)} · L ${fmt(r.h)}`;
   if (load().PAGE_GROUP[r.p] === "커플링") return `${r.d == null ? "" : `d ${fmt(r.d)} · `}A ${fmt(r.D)} · W ${fmt(r.h)}`;
