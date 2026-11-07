@@ -3279,51 +3279,15 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="chain_standard.html"]::before,
 .img-cards .product-card[href="chain_heavy.html"]::before,
 .img-cards .product-card[href="chain_stainless.html"]::before,
-.img-cards .product-card[href="chain_straight.html"]::before,
-.img-cards .product-card[href="chain_double_pitch.html"]::before,
-.img-cards .product-card[href="chain_double_plus.html"]::before,
-.img-cards .product-card[href="chain_hollow_pin.html"]::before,
-.img-cards .product-card[href="chain_leaf.html"]::before,
-.img-cards .product-card[href="chain_attachment.html"]::before,
-.img-cards .product-card[href="chain_top_roller.html"]::before,
-.img-cards .product-card[href="chain_side_roller.html"]::before,
-.img-cards .product-card[href="chain_curve.html"]::before,
-.img-cards .product-card[href="chain_center_roller.html"]::before,
-.img-cards .product-card[href="chain_pintle.html"]::before,
-.img-cards .product-card[href="chain_motorcycle.html"]::before,
-.img-cards .product-card[href="chain_agri.html"]::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
+.img-cards .product-card[href="chain_straight.html"]::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
 .img-cards .product-card[href="chain_standard.html"] .p-icon,
 .img-cards .product-card[href="chain_heavy.html"] .p-icon,
 .img-cards .product-card[href="chain_stainless.html"] .p-icon,
-.img-cards .product-card[href="chain_straight.html"] .p-icon,
-.img-cards .product-card[href="chain_double_pitch.html"] .p-icon,
-.img-cards .product-card[href="chain_double_plus.html"] .p-icon,
-.img-cards .product-card[href="chain_hollow_pin.html"] .p-icon,
-.img-cards .product-card[href="chain_leaf.html"] .p-icon,
-.img-cards .product-card[href="chain_attachment.html"] .p-icon,
-.img-cards .product-card[href="chain_top_roller.html"] .p-icon,
-.img-cards .product-card[href="chain_side_roller.html"] .p-icon,
-.img-cards .product-card[href="chain_curve.html"] .p-icon,
-.img-cards .product-card[href="chain_center_roller.html"] .p-icon,
-.img-cards .product-card[href="chain_pintle.html"] .p-icon,
-.img-cards .product-card[href="chain_motorcycle.html"] .p-icon,
-.img-cards .product-card[href="chain_agri.html"] .p-icon { display: none; }
+.img-cards .product-card[href="chain_straight.html"] .p-icon { display: none; }
 .img-cards .product-card[href="chain_standard.html"]::before { background-image: url("assets/cards/pc_chain_standard.webp?v=1"); }
 .img-cards .product-card[href="chain_heavy.html"]::before { background-image: url("assets/cards/pc_chain_heavy.webp?v=1"); }
 .img-cards .product-card[href="chain_stainless.html"]::before { background-image: url("assets/cards/pc_chain_stainless.webp?v=1"); }
 .img-cards .product-card[href="chain_straight.html"]::before { background-image: url("assets/cards/pc_chain_straight.webp?v=1"); }
-.img-cards .product-card[href="chain_double_pitch.html"]::before { background-image: url("assets/cards/pc_chain_double_pitch.webp?v=1"); }
-.img-cards .product-card[href="chain_double_plus.html"]::before { background-image: url("assets/cards/pc_chain_double_plus.webp?v=1"); }
-.img-cards .product-card[href="chain_hollow_pin.html"]::before { background-image: url("assets/cards/pc_chain_hollow_pin.webp?v=1"); }
-.img-cards .product-card[href="chain_leaf.html"]::before { background-image: url("assets/cards/pc_chain_leaf.webp?v=1"); }
-.img-cards .product-card[href="chain_attachment.html"]::before { background-image: url("assets/cards/pc_chain_attachment.webp?v=1"); }
-.img-cards .product-card[href="chain_top_roller.html"]::before { background-image: url("assets/cards/pc_chain_top_roller.webp?v=1"); }
-.img-cards .product-card[href="chain_side_roller.html"]::before { background-image: url("assets/cards/pc_chain_side_roller.webp?v=1"); }
-.img-cards .product-card[href="chain_curve.html"]::before { background-image: url("assets/cards/pc_chain_curve.webp?v=1"); }
-.img-cards .product-card[href="chain_center_roller.html"]::before { background-image: url("assets/cards/pc_chain_center_roller.webp?v=1"); }
-.img-cards .product-card[href="chain_pintle.html"]::before { background-image: url("assets/cards/pc_chain_pintle.webp?v=1"); }
-.img-cards .product-card[href="chain_motorcycle.html"]::before { background-image: url("assets/cards/pc_chain_motorcycle.webp?v=1"); }
-.img-cards .product-card[href="chain_agri.html"]::before { background-image: url("assets/cards/pc_chain_agri.webp?v=1"); }
 .term-list { border-top: 1px solid var(--border); font-size: 14px; }
 .term-row { display: grid; grid-template-columns: 250px 1fr; gap: 16px; padding: 10px 12px; border-bottom: 1px solid var(--border); line-height: 1.65; }
 .term-k { font-weight: 700; }

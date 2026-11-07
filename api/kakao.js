@@ -99,7 +99,6 @@ function shieldItem(item) {
 
 // 손님 말에 들어 있는 품목 이름 → [찾을 때 뗄 말, 분류(r.c) 조건, 안내용 이름]
 const CATEGORY_WORDS = [
-  [/리프\s*체인|leaf\s*chains?/i, /리프 체인/, "리프 체인"],
   [/스테인리스\s*(?:롤러\s*)?체인|스텐\s*체인/i, /스테인리스 롤러 체인/, "스테인리스 롤러 체인"],
   [/(?:롤러\s*)?체인|roller\s*chains?|chains?/i, /체인/, "체인"],
   [/컴팩트\s*씰|콤팩트\s*씰|compact\s*seals?/i, /컴팩트 씰/, "컴팩트 씰"],
