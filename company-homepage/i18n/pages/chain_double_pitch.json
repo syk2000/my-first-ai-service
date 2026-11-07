@@ -21,7 +21,8 @@
    "중량 R롤러 (kg/m)": "Weight R roller (kg/m)",
    "링크 수 /10ft": "Links /10ft",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 링크 수 /10ft = 10피트(3,048mm)에 들어가는 링크 수입니다.": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables · Links /10ft = number of links in 10 feet (3,048mm).",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product."
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "Terms such as number of strands (simplex/duplex), connecting link and offset link are explained in <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">Notice › Roller Chain Terminology Guide</a>."
   },
   "ja": {
    "<p class=\"eyebrow\">Double Pitch Roller Chain</p> <h2>더블 피치 체인</h2> <p>피치가 같은 번호 표준 롤러 체인의 <strong style=\"color: var(--accent);\">2배</strong>인 체인입니다(예: 2040 = RS40 피치 12.70mm의 2배인 25.40mm). 같은 길이에 링크 수가 적어 가벼우므로, 축 사이가 먼 저속 전동이나 컨베이어에 씁니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Double Pitch Roller Chain</p> <h2>ダブルピッチチェーン</h2> <p>ピッチが同じ番号の標準ローラチェーンの <strong style=\"color: var(--accent);\">2倍</strong>のチェーンです(例: 2040 = RS40のピッチ12.70mmの2倍の25.40mm)。同じ長さでリンク数が少なく軽いため、軸間距離が長い低速伝動やコンベヤに使います。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
@@ -44,7 +45,8 @@
    "중량 R롤러 (kg/m)": "質量 Rローラ (kg/m)",
    "링크 수 /10ft": "リンク数 /10ft",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 링크 수 /10ft = 10피트(3,048mm)에 들어가는 링크 수입니다.": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表 · リンク数 /10ft = 10フィート(3,048mm)に入るリンク数です。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "列数(1列・2列)・継手リンク・オフセットリンクなどの用語は <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">お知らせ › ローラチェーン用語ガイド</a>でご確認いただけます。"
   },
   "zh": {
    "<p class=\"eyebrow\">Double Pitch Roller Chain</p> <h2>더블 피치 체인</h2> <p>피치가 같은 번호 표준 롤러 체인의 <strong style=\"color: var(--accent);\">2배</strong>인 체인입니다(예: 2040 = RS40 피치 12.70mm의 2배인 25.40mm). 같은 길이에 링크 수가 적어 가벼우므로, 축 사이가 먼 저속 전동이나 컨베이어에 씁니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Double Pitch Roller Chain</p> <h2>双节距链</h2> <p>节距为同号标准滚子链 <strong style=\"color: var(--accent);\">2倍</strong>的链条(例: 2040 = RS40节距12.70mm的2倍，即25.40mm)。同样长度下链节数少、重量轻，用于轴距较长的低速传动或输送机。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -67,7 +69,8 @@
    "중량 R롤러 (kg/m)": "重量 R滚子 (kg/m)",
    "링크 수 /10ft": "链节数 /10ft",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 링크 수 /10ft = 10피트(3,048mm)에 들어가는 링크 수입니다.": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表 · 链节数 /10ft = 10英尺(3,048mm)内的链节数。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "排数(单排·双排)·连接链节·弯板链节等术语可在 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">公告 › 滚子链术语指南</a>中查看。"
   }
  },
  "attrs": {
@@ -89,7 +92,15 @@
    "예: 2060 또는 38.1": "e.g. 2060 or 38.1",
    "예: 2050 또는 31.75": "e.g. 2050 or 31.75",
    "예: 2050HP 또는 40HP": "e.g. 2050HP or 40HP",
-   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4"
+   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "Attachment types A-2, K-2, SA-1, SK-1, D-1 drawing",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "Top roller chain side view and end view drawing",
+   "사이드 롤러 체인 옆모습과 평면 도면": "Side roller chain side view and top-view drawing",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "Curve chain side view and sideways-bent top-view drawing",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "Center roller chain side view, top view and center cover type drawing",
+   "핀틀 체인 옆모습과 평면 도면": "Pintle chain side view and top-view drawing",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "Motorcycle chain side view and standard / O-ring type top-view drawing",
+   "농기계용 체인 옆모습과 평면 도면": "Agricultural chain side view and top-view drawing"
   },
   "ja": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "標準ローラチェーン側面図と2列チェーン平面図",
@@ -109,7 +120,15 @@
    "예: 2060 또는 38.1": "例: 2060 または 38.1",
    "예: 2050 또는 31.75": "例: 2050 または 31.75",
    "예: 2050HP 또는 40HP": "例: 2050HP または 40HP",
-   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "アタッチメントA-2・K-2・SA-1・SK-1・D-1形式図",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "トップローラチェーン側面図と端面図",
+   "사이드 롤러 체인 옆모습과 평면 도면": "サイドローラチェーン側面図と平面図",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "カーブチェーン側面図と横曲げ平面図",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "センターローラチェーン側面図・平面図・センターカバー付き形図",
+   "핀틀 체인 옆모습과 평면 도면": "ピントルチェーン側面図と平面図",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "オートバイチェーン側面図と一般形・Oリング形平面図",
+   "농기계용 체인 옆모습과 평면 도면": "農機用チェーン側面図と平面図"
   },
   "zh": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "标准滚子链侧视图与双排链俯视图",
@@ -129,7 +148,15 @@
    "예: 2060 또는 38.1": "例：2060 或 38.1",
    "예: 2050 또는 31.75": "例：2050 或 31.75",
    "예: 2050HP 또는 40HP": "例：2050HP 或 40HP",
-   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "附件A-2·K-2·SA-1·SK-1·D-1型式图",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "顶部滚子链侧视图与端视图",
+   "사이드 롤러 체인 옆모습과 평면 도면": "侧滚子链侧视图与俯视图",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "弯曲链侧视图与侧弯俯视图",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "中心滚子链侧视图、俯视图及带中心盖型图",
+   "핀틀 체인 옆모습과 평면 도면": "铸造销合链侧视图与俯视图",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "摩托车链侧视图与普通型·O形圈型俯视图",
+   "농기계용 체인 옆모습과 평면 도면": "农机用链条侧视图与俯视图"
   }
  }
 }

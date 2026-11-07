@@ -17,7 +17,8 @@
    "중량 (kg/m)": "Weight (kg/m)",
    "RS120FP ~ RS400FP<span class=\"series-count\">8건</span>": "RS120FP ~ RS400FP<span class=\"series-count\">8 items</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product."
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "Terms such as number of strands (simplex/duplex), connecting link and offset link are explained in <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">Notice › Roller Chain Terminology Guide</a>."
   },
   "ja": {
    "<p class=\"eyebrow\">Straight Side Plate Chain · FP</p> <h2>평판 체인 (FP)</h2> <p>링크 판의 위아래가 잘록하지 않고 <strong style=\"color: var(--accent);\">곧은 판</strong>으로 된 롤러 체인입니다. 판 윗면이 평평해 물건을 판 위에 올려 나르거나 레일·가이드 위를 미끄러지게 하는 컨베이어에 씁니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Straight Side Plate Chain · FP</p> <h2>平板チェーン (FP)</h2> <p>リンクプレートの上下がくびれておらず、 <strong style=\"color: var(--accent);\">まっすぐなプレート</strong>でできたローラチェーンです。プレートの上面が平らなので、物をプレートに載せて運んだり、レール・ガイドの上を滑らせるコンベヤに使います。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
@@ -36,7 +37,8 @@
    "중량 (kg/m)": "質量 (kg/m)",
    "RS120FP ~ RS400FP<span class=\"series-count\">8건</span>": "RS120FP ~ RS400FP<span class=\"series-count\">8件</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "列数(1列・2列)・継手リンク・オフセットリンクなどの用語は <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">お知らせ › ローラチェーン用語ガイド</a>でご確認いただけます。"
   },
   "zh": {
    "<p class=\"eyebrow\">Straight Side Plate Chain · FP</p> <h2>평판 체인 (FP)</h2> <p>링크 판의 위아래가 잘록하지 않고 <strong style=\"color: var(--accent);\">곧은 판</strong>으로 된 롤러 체인입니다. 판 윗면이 평평해 물건을 판 위에 올려 나르거나 레일·가이드 위를 미끄러지게 하는 컨베이어에 씁니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Straight Side Plate Chain · FP</p> <h2>直板链 (FP)</h2> <p>链板上下边不收腰，而是由 <strong style=\"color: var(--accent);\">直边链板</strong>构成的滚子链。链板上缘平整，可将物品直接放在链板上输送，或在导轨·导向件上滑动，用于输送机。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -55,7 +57,8 @@
    "중량 (kg/m)": "重量 (kg/m)",
    "RS120FP ~ RS400FP<span class=\"series-count\">8건</span>": "RS120FP ~ RS400FP<span class=\"series-count\">8项</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "排数(单排·双排)·连接链节·弯板链节等术语可在 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">公告 › 滚子链术语指南</a>中查看。"
   }
  },
  "attrs": {
@@ -77,7 +80,15 @@
    "예: 2060 또는 38.1": "e.g. 2060 or 38.1",
    "예: 2050 또는 31.75": "e.g. 2050 or 31.75",
    "예: 2050HP 또는 40HP": "e.g. 2050HP or 40HP",
-   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4"
+   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "Attachment types A-2, K-2, SA-1, SK-1, D-1 drawing",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "Top roller chain side view and end view drawing",
+   "사이드 롤러 체인 옆모습과 평면 도면": "Side roller chain side view and top-view drawing",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "Curve chain side view and sideways-bent top-view drawing",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "Center roller chain side view, top view and center cover type drawing",
+   "핀틀 체인 옆모습과 평면 도면": "Pintle chain side view and top-view drawing",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "Motorcycle chain side view and standard / O-ring type top-view drawing",
+   "농기계용 체인 옆모습과 평면 도면": "Agricultural chain side view and top-view drawing"
   },
   "ja": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "標準ローラチェーン側面図と2列チェーン平面図",
@@ -97,7 +108,15 @@
    "예: 2060 또는 38.1": "例: 2060 または 38.1",
    "예: 2050 또는 31.75": "例: 2050 または 31.75",
    "예: 2050HP 또는 40HP": "例: 2050HP または 40HP",
-   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "アタッチメントA-2・K-2・SA-1・SK-1・D-1形式図",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "トップローラチェーン側面図と端面図",
+   "사이드 롤러 체인 옆모습과 평면 도면": "サイドローラチェーン側面図と平面図",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "カーブチェーン側面図と横曲げ平面図",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "センターローラチェーン側面図・平面図・センターカバー付き形図",
+   "핀틀 체인 옆모습과 평면 도면": "ピントルチェーン側面図と平面図",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "オートバイチェーン側面図と一般形・Oリング形平面図",
+   "농기계용 체인 옆모습과 평면 도면": "農機用チェーン側面図と平面図"
   },
   "zh": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "标准滚子链侧视图与双排链俯视图",
@@ -117,7 +136,15 @@
    "예: 2060 또는 38.1": "例：2060 或 38.1",
    "예: 2050 또는 31.75": "例：2050 或 31.75",
    "예: 2050HP 또는 40HP": "例：2050HP 或 40HP",
-   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "附件A-2·K-2·SA-1·SK-1·D-1型式图",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "顶部滚子链侧视图与端视图",
+   "사이드 롤러 체인 옆모습과 평면 도면": "侧滚子链侧视图与俯视图",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "弯曲链侧视图与侧弯俯视图",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "中心滚子链侧视图、俯视图及带中心盖型图",
+   "핀틀 체인 옆모습과 평면 도면": "铸造销合链侧视图与俯视图",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "摩托车链侧视图与普通型·O形圈型俯视图",
+   "농기계용 체인 옆모습과 평면 도면": "农机用链条侧视图与俯视图"
   }
  }
 }

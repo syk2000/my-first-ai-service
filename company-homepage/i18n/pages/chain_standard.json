@@ -23,7 +23,10 @@
    "RS60 ~ RS100<span class=\"series-count\">12건</span>": "RS60 ~ RS100<span class=\"series-count\">12 items</span>",
    "RS120 ~ RS200<span class=\"series-count\">17건</span>": "RS120 ~ RS200<span class=\"series-count\">17 items</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표의 'DY 파단하중' 열은 제조사 파단하중으로 옮겼습니다. 4열은 원표에 치수가 없어 하중·중량만 실었습니다. RS200은 원표가 1열 행 중간에서 끊겨 있어 확인된 값만 실었습니다(최대 허용하중·중량·링크 수, 2열 이상과 RS240은 원표에 없음). RS180 피치는 원표의 57.14를 표준값 57.15로 바로잡았습니다. 링크 수 /10ft = 10피트(3,048mm)에 들어가는 링크 수입니다.": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables · The 'DY breaking load' column of the original table is shown as maker breaking load. For quadruplex chains the original table has no dimensions, so only loads and weights are given. For RS200 the original table breaks off in the middle of the simplex row, so only confirmed values are shown (max. allowable load, weight and link count, duplex and above, and RS240 are not in the original table). The RS180 pitch was corrected from 57.14 in the original table to the standard 57.15. Links /10ft = number of links in 10 feet (3,048mm).",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product."
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "Terms such as number of strands (simplex/duplex), connecting link and offset link are explained in <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">Notice › Roller Chain Terminology Guide</a>.",
+   "RS120 ~ RS240<span class=\"series-count\">21건</span>": "RS120 ~ RS240<span class=\"series-count\">21 items</span>",
+   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표의 'DY 파단하중' 열은 제조사 파단하중으로 옮겼습니다. 타 브랜드(츠바키·KANA·Kramp·Izumi 등) 규격 기준 보정: RS40 L1+L2 17.45 → 18.2, RS60 L1+L2 28.1 → 27.6, RS50-4 피치 15.88 → 15.875, RS180 피치 57.14 → 57.15, 4열의 내폭·롤러·핀·판 치수(1열과 같음), RS200 링크 수 48. 원표에 없던 RS200-2 · RS200-3 · RS240 · RS240-2는 ANSI 호칭 치수와 ISO 606 최소 인장강도로 보충했고, 브랜드마다 값이 달라 확인되지 않은 칸(핀 길이·허용하중·중량 등)은 비워 두었습니다. 링크 수 /10ft = 10피트(3,048mm)에 들어가는 링크 수입니다.": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables · The 'DY breaking load' column of the original table is shown as maker breaking load. Corrected based on other brands' specs (Tsubaki, KANA, Kramp, Izumi, etc.): RS40 L1+L2 17.45 → 18.2, RS60 L1+L2 28.1 → 27.6, RS50-4 pitch 15.88 → 15.875, RS180 pitch 57.14 → 57.15, quadruplex inner width, roller, pin and plate dimensions (same as simplex), RS200 links 48. RS200-2 · RS200-3 · RS240 · RS240-2, which are not in the original table, were added from ANSI nominal dimensions and ISO 606 minimum tensile strength; cells where brands disagree and values could not be confirmed (pin length, allowable load, weight, etc.) are left blank. Links /10ft = number of links in 10 feet (3,048mm)."
   },
   "ja": {
    "<p class=\"eyebrow\">Standard Roller Chain · RS</p> <h2>표준 롤러 체인 (RS)</h2> <p>동력 전달에 가장 널리 쓰는 <strong style=\"color: var(--accent);\">RS 규격 롤러 체인</strong>입니다. 1열(단열)부터 4열까지 있으며, 형번 뒤의 -2 · -3 · -4는 열수를 뜻합니다(예: RS60-2 = 60번 2열).</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Standard Roller Chain · RS</p> <h2>標準ローラチェーン (RS)</h2> <p>動力伝達に最も広く使われる <strong style=\"color: var(--accent);\">RS規格ローラチェーン</strong>です。1列(単列)から4列まであり、形番の後ろの-2・-3・-4は列数を表します(例: RS60-2 = 60番2列)。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
@@ -48,7 +51,10 @@
    "RS60 ~ RS100<span class=\"series-count\">12건</span>": "RS60 ~ RS100<span class=\"series-count\">12件</span>",
    "RS120 ~ RS200<span class=\"series-count\">17건</span>": "RS120 ~ RS200<span class=\"series-count\">17件</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표의 'DY 파단하중' 열은 제조사 파단하중으로 옮겼습니다. 4열은 원표에 치수가 없어 하중·중량만 실었습니다. RS200은 원표가 1열 행 중간에서 끊겨 있어 확인된 값만 실었습니다(최대 허용하중·중량·링크 수, 2열 이상과 RS240은 원표에 없음). RS180 피치는 원표의 57.14를 표준값 57.15로 바로잡았습니다. 링크 수 /10ft = 10피트(3,048mm)에 들어가는 링크 수입니다.": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表 · 原表の「DY破断荷重」列はメーカー破断荷重として載せました。4列は原表に寸法がないため荷重・質量のみ載せています。RS200は原表が1列の行の途中で切れているため、確認できた値のみ載せました(最大許容荷重・質量・リンク数、2列以上とRS240は原表になし)。RS180のピッチは原表の57.14を標準値57.15に訂正しました。リンク数 /10ft = 10フィート(3,048mm)に入るリンク数です。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "列数(1列・2列)・継手リンク・オフセットリンクなどの用語は <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">お知らせ › ローラチェーン用語ガイド</a>でご確認いただけます。",
+   "RS120 ~ RS240<span class=\"series-count\">21건</span>": "RS120 ~ RS240<span class=\"series-count\">21件</span>",
+   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표의 'DY 파단하중' 열은 제조사 파단하중으로 옮겼습니다. 타 브랜드(츠바키·KANA·Kramp·Izumi 등) 규격 기준 보정: RS40 L1+L2 17.45 → 18.2, RS60 L1+L2 28.1 → 27.6, RS50-4 피치 15.88 → 15.875, RS180 피치 57.14 → 57.15, 4열의 내폭·롤러·핀·판 치수(1열과 같음), RS200 링크 수 48. 원표에 없던 RS200-2 · RS200-3 · RS240 · RS240-2는 ANSI 호칭 치수와 ISO 606 최소 인장강도로 보충했고, 브랜드마다 값이 달라 확인되지 않은 칸(핀 길이·허용하중·중량 등)은 비워 두었습니다. 링크 수 /10ft = 10피트(3,048mm)에 들어가는 링크 수입니다.": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表 · 原表の「DY破断荷重」列はメーカー破断荷重として載せました。他ブランド(椿本チエイン・KANA・Kramp・Izumiなど)の規格に基づく補正: RS40 L1+L2 17.45 → 18.2、RS60 L1+L2 28.1 → 27.6、RS50-4 ピッチ 15.88 → 15.875、RS180 ピッチ 57.14 → 57.15、4列の内幅・ローラ・ピン・プレート寸法(1列と同じ)、RS200 リンク数 48。原表になかったRS200-2・RS200-3・RS240・RS240-2はANSI呼び寸法とISO 606最小引張強さで補い、ブランドによって値が異なり確認できなかった欄(ピン長さ・許容荷重・質量など)は空欄にしました。リンク数 /10ft = 10フィート(3,048mm)に入るリンク数です。"
   },
   "zh": {
    "<p class=\"eyebrow\">Standard Roller Chain · RS</p> <h2>표준 롤러 체인 (RS)</h2> <p>동력 전달에 가장 널리 쓰는 <strong style=\"color: var(--accent);\">RS 규격 롤러 체인</strong>입니다. 1열(단열)부터 4열까지 있으며, 형번 뒤의 -2 · -3 · -4는 열수를 뜻합니다(예: RS60-2 = 60번 2열).</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Standard Roller Chain · RS</p> <h2>标准滚子链 (RS)</h2> <p>动力传动中使用最广泛的 <strong style=\"color: var(--accent);\">RS规格滚子链</strong>。有单排到四排，型号后的-2·-3·-4表示排数(例: RS60-2 = 60号双排)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -73,7 +79,10 @@
    "RS60 ~ RS100<span class=\"series-count\">12건</span>": "RS60 ~ RS100<span class=\"series-count\">12项</span>",
    "RS120 ~ RS200<span class=\"series-count\">17건</span>": "RS120 ~ RS200<span class=\"series-count\">17项</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표의 'DY 파단하중' 열은 제조사 파단하중으로 옮겼습니다. 4열은 원표에 치수가 없어 하중·중량만 실었습니다. RS200은 원표가 1열 행 중간에서 끊겨 있어 확인된 값만 실었습니다(최대 허용하중·중량·링크 수, 2열 이상과 RS240은 원표에 없음). RS180 피치는 원표의 57.14를 표준값 57.15로 바로잡았습니다. 링크 수 /10ft = 10피트(3,048mm)에 들어가는 링크 수입니다.": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表 · 原表中的\"DY破断载荷\"列作为厂家破断载荷列出。四排链原表无尺寸，仅列载荷和重量。RS200原表在单排行中途断开，仅列出已确认的数值(最大许用载荷·重量·链节数、双排以上及RS240原表中没有)。RS180节距已将原表的57.14更正为标准值57.15。链节数 /10ft = 10英尺(3,048mm)内的链节数。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "排数(单排·双排)·连接链节·弯板链节等术语可在 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">公告 › 滚子链术语指南</a>中查看。",
+   "RS120 ~ RS240<span class=\"series-count\">21건</span>": "RS120 ~ RS240<span class=\"series-count\">21项</span>",
+   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표의 'DY 파단하중' 열은 제조사 파단하중으로 옮겼습니다. 타 브랜드(츠바키·KANA·Kramp·Izumi 등) 규격 기준 보정: RS40 L1+L2 17.45 → 18.2, RS60 L1+L2 28.1 → 27.6, RS50-4 피치 15.88 → 15.875, RS180 피치 57.14 → 57.15, 4열의 내폭·롤러·핀·판 치수(1열과 같음), RS200 링크 수 48. 원표에 없던 RS200-2 · RS200-3 · RS240 · RS240-2는 ANSI 호칭 치수와 ISO 606 최소 인장강도로 보충했고, 브랜드마다 값이 달라 확인되지 않은 칸(핀 길이·허용하중·중량 등)은 비워 두었습니다. 링크 수 /10ft = 10피트(3,048mm)에 들어가는 링크 수입니다.": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表 · 原表中的\"DY破断载荷\"列作为厂家破断载荷列出。根据其他品牌(椿本·KANA·Kramp·Izumi等)规格修正: RS40 L1+L2 17.45 → 18.2，RS60 L1+L2 28.1 → 27.6，RS50-4节距 15.88 → 15.875，RS180节距 57.14 → 57.15，四排的内宽·滚子·销轴·链板尺寸(与单排相同)，RS200链节数 48。原表中没有的RS200-2·RS200-3·RS240·RS240-2按ANSI公称尺寸和ISO 606最小抗拉强度补充；各品牌数值不同而无法确认的栏(销轴长度·许用载荷·重量等)留空。链节数 /10ft = 10英尺(3,048mm)内的链节数。"
   }
  },
  "attrs": {
@@ -95,7 +104,15 @@
    "예: 2060 또는 38.1": "e.g. 2060 or 38.1",
    "예: 2050 또는 31.75": "e.g. 2050 or 31.75",
    "예: 2050HP 또는 40HP": "e.g. 2050HP or 40HP",
-   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4"
+   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "Attachment types A-2, K-2, SA-1, SK-1, D-1 drawing",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "Top roller chain side view and end view drawing",
+   "사이드 롤러 체인 옆모습과 평면 도면": "Side roller chain side view and top-view drawing",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "Curve chain side view and sideways-bent top-view drawing",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "Center roller chain side view, top view and center cover type drawing",
+   "핀틀 체인 옆모습과 평면 도면": "Pintle chain side view and top-view drawing",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "Motorcycle chain side view and standard / O-ring type top-view drawing",
+   "농기계용 체인 옆모습과 평면 도면": "Agricultural chain side view and top-view drawing"
   },
   "ja": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "標準ローラチェーン側面図と2列チェーン平面図",
@@ -115,7 +132,15 @@
    "예: 2060 또는 38.1": "例: 2060 または 38.1",
    "예: 2050 또는 31.75": "例: 2050 または 31.75",
    "예: 2050HP 또는 40HP": "例: 2050HP または 40HP",
-   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "アタッチメントA-2・K-2・SA-1・SK-1・D-1形式図",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "トップローラチェーン側面図と端面図",
+   "사이드 롤러 체인 옆모습과 평면 도면": "サイドローラチェーン側面図と平面図",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "カーブチェーン側面図と横曲げ平面図",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "センターローラチェーン側面図・平面図・センターカバー付き形図",
+   "핀틀 체인 옆모습과 평면 도면": "ピントルチェーン側面図と平面図",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "オートバイチェーン側面図と一般形・Oリング形平面図",
+   "농기계용 체인 옆모습과 평면 도면": "農機用チェーン側面図と平面図"
   },
   "zh": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "标准滚子链侧视图与双排链俯视图",
@@ -135,7 +160,15 @@
    "예: 2060 또는 38.1": "例：2060 或 38.1",
    "예: 2050 또는 31.75": "例：2050 或 31.75",
    "예: 2050HP 또는 40HP": "例：2050HP 或 40HP",
-   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "附件A-2·K-2·SA-1·SK-1·D-1型式图",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "顶部滚子链侧视图与端视图",
+   "사이드 롤러 체인 옆모습과 평면 도면": "侧滚子链侧视图与俯视图",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "弯曲链侧视图与侧弯俯视图",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "中心滚子链侧视图、俯视图及带中心盖型图",
+   "핀틀 체인 옆모습과 평면 도면": "铸造销合链侧视图与俯视图",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "摩托车链侧视图与普通型·O形圈型俯视图",
+   "농기계용 체인 옆모습과 평면 도면": "农机用链条侧视图与俯视图"
   }
  }
 }

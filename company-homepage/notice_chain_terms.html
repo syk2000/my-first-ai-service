@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko" translate="no" class="notranslate">
+<head>
+<meta charset="UTF-8" />
+<meta name="google" content="notranslate" />
+<meta name="viewport" content="width=1280" />
+<meta name="robots" content="noindex, nofollow" />
+<title>롤러 체인 용어 가이드</title>
+<meta name="description" content="롤러 체인 형번 읽는 법, 1열·2열 열수, 피치와 코 길이 계산, 조인트 링크(한코·원코)·옵셋 링크(반코) 등 체인 용어를 정리한 안내입니다. — SWS TECH" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=20261107ci">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <img class="logo-mark" src="assets/sws-logo.webp" alt="" width="45" height="34" />
+        <span class="company-name">
+          SWS TECH
+          <span class="sub">CORPORATION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <button type="button" class="nav-caret" aria-label="하위 메뉴 펼치기" aria-expanded="false"><svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg></button>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <button type="button" class="nav-caret" aria-label="하위 메뉴 펼치기" aria-expanded="false"><svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg></button>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="faq.html">자주 하는 질문</a>
+            <a href="catalog.html">카탈로그</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-cta">
+          <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+        </div>
+
+        <div class="lang-select" id="langSelect">
+          <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="langSelectLabel">KOR</span>
+            <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+          </button>
+          <div class="lang-menu" id="langMenu" role="menu">
+            <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <section class="page-section" id="notice-chain-terms" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Notice</p>
+        <h2>롤러 체인 용어 가이드 — 열수·피치·코·조인트 링크</h2>
+        <p class="notice-date">2026-11-07</p>
+      </div>
+      <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
+
+      <div class="notice-body">
+        <p>롤러 체인을 주문하거나 문의할 때 자주 쓰는 용어를 설명서처럼 정리했습니다. 현장에서 쓰는 말(한코·반코 등)과 표준 용어를 함께 적었으니, 견적 문의 때 참고해 주세요.</p>
+      </div>
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">① 형번 읽는 법</h3>
+      <ul style="margin: 0 0 8px; padding-left: 20px; line-height: 1.8;"><li>RS 뒤 숫자의 앞자리 = 1/8인치 단위 피치입니다. RS40 → 4/8인치 = 12.70mm, RS60 → 6/8인치 = 19.05mm, RS80 → 8/8인치 = 25.40mm</li><li>숫자의 끝자리: 0 = 표준 롤러형, 1 = 경량형(RS41), 5 = 롤러 없는 부시형(RS25 · RS35)</li><li>뒤에 붙는 -2 · -3 · -4 = 열수입니다. RS60-2 = 60번 2열</li><li>뒤에 붙는 기호: H = 판이 두꺼운 중하중용(RS80H), SS = 스테인리스(RS40SS)</li></ul>
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">② 열수 — 1열 · 2열 · 3열 · 4열</h3>
+      <div class="diagram-box-lg">
+        <div style="text-align: center;">
+          <img class="fig-wide" loading="lazy" src="assets/chain_strand_diagram.webp?v=wm5" alt="1열 2열 3열 롤러 체인 평면 비교 도면" />
+          <p class="diagram-legend">↑ 같은 RS60 체인의 1열(RS60) · 2열(RS60-2) · 3열(RS60-3)<br /><span style="color: var(--text-faint);">C=횡피치(이웃한 열 중심 사이 거리)</span></p>
+        </div>
+      </div>
+        <div class="term-list">
+          <div class="term-row"><div class="term-k">1열 (단열)</div><div class="term-v">롤러가 한 줄인 체인입니다. 형번 뒤에 아무것도 붙이지 않거나 -1을 붙입니다(RS60 = RS60-1).</div></div>
+          <div class="term-row"><div class="term-k">2열 (복열)</div><div class="term-v">같은 체인 두 줄을 긴 핀으로 하나로 묶은 체인입니다. 형번 뒤에 -2를 붙입니다(RS60-2 = 60번 2열). 같은 피치로 더 큰 동력을 전할 때 씁니다.</div></div>
+          <div class="term-row"><div class="term-k">3열 · 4열</div><div class="term-v">세 줄 · 네 줄을 묶은 체인으로 형번 뒤에 -3 · -4를 붙입니다(RS60-3, RS60-4). 스프로킷도 같은 열수용을 써야 합니다.</div></div>
+          <div class="term-row"><div class="term-k">횡피치 (C)</div><div class="term-v">2열 이상 체인에서 이웃한 열의 중심 사이 거리입니다. 다열 스프로킷의 톱니 줄 간격과 같습니다.</div></div>
+        </div>
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">③ 피치와 코 — 길이 계산</h3>
+        <div class="term-list">
+          <div class="term-row"><div class="term-k">피치 (P)</div><div class="term-v">이웃한 두 핀 중심 사이 거리입니다. RS 번호의 앞자리가 1/8인치 단위 피치입니다(RS40 = 12.70mm, RS60 = 19.05mm, RS80 = 25.40mm).</div></div>
+          <div class="term-row"><div class="term-k">코 (링크 수)</div><div class="term-v">체인 길이를 셀 때 링크(피치) 하나를 1코라고 부릅니다.</div></div>
+          <div class="term-row"><div class="term-k">길이 계산</div><div class="term-v">길이(mm) = 코 수 × 피치입니다. 예: RS60 100코 = 100 × 19.05mm = 1,905mm.</div></div>
+          <div class="term-row"><div class="term-k">10피트 단위</div><div class="term-v">체인은 보통 10피트(3,048mm) 단위로 나옵니다. RS40 = 240코, RS60 = 160코, RS80 = 120코입니다.</div></div>
+        </div>
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">④ 링크 종류</h3>
+      <div class="diagram-box-lg">
+        <div style="text-align: center;">
+          <img class="fig-wide" loading="lazy" src="assets/chain_link_diagram.webp?v=wm5" alt="롤러 링크 핀 링크 조인트 링크 옵셋 링크 평면 도면" />
+          <p class="diagram-legend">↑ 위에서 본 모습<br /><span style="color: var(--text-faint);">① 롤러 링크 ② 핀 링크 ③ 조인트 링크(클립형) ④ 조인트 링크(코터형) ⑤ 옵셋 링크 ⑥ 2피치 옵셋 링크</span></p>
+        </div>
+      </div>
+        <div class="term-list">
+          <div class="term-row"><div class="term-k">① 롤러 링크 (이너 링크)</div><div class="term-v">안쪽 판 2장에 부시 2개를 끼우고 그 위에 롤러를 끼운 링크입니다.</div></div>
+          <div class="term-row"><div class="term-k">② 핀 링크 (아우터 링크)</div><div class="term-v">바깥 판 2장에 핀 2개를 박아 고정한 링크입니다. 롤러 링크와 번갈아 이어집니다.</div></div>
+          <div class="term-row"><div class="term-k">③ 조인트 링크 (연결 링크 · C/L) — 클립형</div><div class="term-v">체인 양 끝을 이어 고리로 만드는 핀 링크입니다. 한쪽 판을 끼운 뒤 핀 끝 홈에 스프링 클립을 끼워 고정합니다. 현장에서는 한코 · 온코(원코), 연결코라고도 부릅니다.</div></div>
+          <div class="term-row"><div class="term-k">④ 조인트 링크 — 코터형</div><div class="term-v">클립 대신 핀 끝 구멍에 분할 핀(코터 핀)을 꽂아 고정하는 형식입니다.</div></div>
+          <div class="term-row"><div class="term-k">⑤ 옵셋 링크 (O/L · 반코)</div><div class="term-v">한쪽 끝은 롤러 링크처럼 좁고 다른 쪽 끝은 핀 링크처럼 넓게 굽힌 판으로 된 링크입니다. 링크 수가 홀수일 때 체인을 고리로 잇거나 길이를 1피치 줄일 때 씁니다. 기본 체인보다 강도가 낮습니다.</div></div>
+          <div class="term-row"><div class="term-k">⑥ 2피치 옵셋 링크 (2P O/L)</div><div class="term-v">롤러 링크 1개와 옵셋 링크를 리벳 핀으로 미리 묶어 둔 2피치짜리 연결 부품입니다.</div></div>
+          <div class="term-row"><div class="term-k">짝수 · 홀수 링크</div><div class="term-v">전체 링크 수가 짝수면 조인트 링크(원코)로, 홀수면 옵셋 링크(반코)로 체인을 고리로 잇습니다. 가능하면 짝수 링크로 맞추는 것이 좋습니다.</div></div>
+        </div>
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">⑤ 현장 용어 ↔ 표준 용어</h3>
+        <div class="term-list">
+          <div class="term-row term-head"><div class="term-k">현장 용어</div><div class="term-v">표준 용어</div></div>
+          <div class="term-row"><div class="term-k">한코 · 온코(원코) · 왕코 · 연결코</div><div class="term-v">조인트 링크 (C/L, 연결 링크)</div></div>
+          <div class="term-row"><div class="term-k">반코</div><div class="term-v">옵셋 링크 (O/L)</div></div>
+          <div class="term-row"><div class="term-k">2피치 옵셋</div><div class="term-v">2피치 옵셋 링크 (2P O/L)</div></div>
+          <div class="term-row"><div class="term-k">단열 · 복열</div><div class="term-v">1열 · 2열 (형번 뒤 -1 · -2)</div></div>
+          <div class="term-row"><div class="term-k">코</div><div class="term-v">링크(피치) 수</div></div>
+        </div>
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">⑥ 주문할 때 알려주실 것</h3>
+      <ul style="margin: 0 0 8px; padding-left: 20px; line-height: 1.8;"><li>체인 번호: 예) RS60, RS80H, RS40SS</li><li>열수: 1열 · 2열 · 3열 · 4열</li><li>코 수 또는 길이: 예) 100코, 10피트 · 고리로 이은 것인지 끊은 것인지</li><li>연결 방식: 조인트 링크(클립형 · 코터형), 홀수 링크면 옵셋 링크</li><li>재질: 일반강 · 스테인리스 등, 그리고 수량</li></ul>
+      <p style="margin-top: 24px;"><a class="btn btn-outline btn-sm" href="chain.html">관련 제품: 체인 규격 보기 →</a> <a class="btn btn-outline btn-sm" href="notice.html">목록으로</a></p>
+    </div>
+  </section>
+
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-meta">
+          TEL 02-2613-3040 · FAX 02-2613-3042<br />
+          서울 구로구 경인로53길 32, 미래에코타워 B101·102호
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+    <div class="wrap f-copy">© SWS TECH. 본 홈페이지의 도면·규격표·사진 등 자료의 무단 복제·배포를 금합니다.</div>
+  </footer>
+
+<script src="i18n/common.dict.js?v=20261031wr"></script>
+<script src="i18n/pages/notice_chain_terms.dict.js?v=20261107cj"></script>
+<script src="i18n.js?v=20261025a"></script>
+<script src="common.js?v=20261107ci"></script>
+</body>
+</html>

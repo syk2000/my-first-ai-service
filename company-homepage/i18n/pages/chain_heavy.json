@@ -23,7 +23,9 @@
    "중량 (kg/m)": "Weight (kg/m)",
    "RS120H ~ RS200H<span class=\"series-count\">16건</span>": "RS120H ~ RS200H<span class=\"series-count\">16 items</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1 26.852는 원표 값 그대로입니다.": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables · The 'width C' (link plate) heading of the original table is shown as plate height H. The max. allowable load of RS60H-3 was corrected from 245.1(2500) in the original table to 24.5(2500) to match the kgf value in the same cell. RS120H simplex L1 26.852 is as given in the original table.",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product."
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "Terms such as number of strands (simplex/duplex), connecting link and offset link are explained in <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">Notice › Roller Chain Terminology Guide</a>.",
+   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1은 원표의 26.852를 타 브랜드(츠바키·Kramp) 규격 기준 26.95로 보정했습니다.": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables · The 'width C' (link plate) heading of the original table is shown as plate height H. The max. allowable load of RS60H-3 was corrected from 245.1(2500) to 24.5(2500) to match the kgf value in the same cell. RS120H simplex L1 was corrected from 26.852 in the original table to 26.95 based on other brands' specs (Tsubaki · Kramp)."
   },
   "ja": {
    "<p class=\"eyebrow\">Heavy Series Roller Chain · H</p> <h2>중하중용 롤러 체인 (H)</h2> <p>표준 롤러 체인과 피치·롤러는 같고 <strong style=\"color: var(--accent);\">링크 판을 두껍게</strong> 만든 체인입니다. 형번 뒤에 H를 붙여 표기하며(예: RS80H, RS80H-2), 충격·하중이 큰 곳에 씁니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Heavy Series Roller Chain · H</p> <h2>重荷重用ローラチェーン (H)</h2> <p>標準ローラチェーンとピッチ・ローラは同じで、 <strong style=\"color: var(--accent);\">リンクプレートを厚く</strong> したチェーンです。形番の後ろにHを付けて表し(例: RS80H、RS80H-2)、衝撃・荷重が大きい場所に使います。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
@@ -48,7 +50,9 @@
    "중량 (kg/m)": "質量 (kg/m)",
    "RS120H ~ RS200H<span class=\"series-count\">16건</span>": "RS120H ~ RS200H<span class=\"series-count\">16件</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1 26.852는 원표 값 그대로입니다.": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表 · 原表見出しの「幅C」(リンクプレート)はプレート高さHとして載せました。RS60H-3の最大許容荷重は原表の245.1(2500)を同じ欄のkgf値に合わせて24.5(2500)に訂正しました。RS120H 1列のL1 26.852は原表の値のままです。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "列数(1列・2列)・継手リンク・オフセットリンクなどの用語は <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">お知らせ › ローラチェーン用語ガイド</a>でご確認いただけます。",
+   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1은 원표의 26.852를 타 브랜드(츠바키·Kramp) 규격 기준 26.95로 보정했습니다.": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表 · 原表見出しの「幅C」(リンクプレート)はプレート高さHとして載せました。RS60H-3の最大許容荷重は原表の245.1(2500)を同じ欄のkgf値に合わせて24.5(2500)に訂正しました。RS120H 1列のL1は原表の26.852を他ブランド(椿本チエイン・Kramp)の規格に基づき26.95に補正しました。"
   },
   "zh": {
    "<p class=\"eyebrow\">Heavy Series Roller Chain · H</p> <h2>중하중용 롤러 체인 (H)</h2> <p>표준 롤러 체인과 피치·롤러는 같고 <strong style=\"color: var(--accent);\">링크 판을 두껍게</strong> 만든 체인입니다. 형번 뒤에 H를 붙여 표기하며(예: RS80H, RS80H-2), 충격·하중이 큰 곳에 씁니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Heavy Series Roller Chain · H</p> <h2>重载型滚子链 (H)</h2> <p>节距和滚子与标准滚子链相同，但 <strong style=\"color: var(--accent);\">链板加厚</strong> 的链条。型号后加H表示(例: RS80H，RS80H-2)，用于冲击·载荷较大的场合。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -73,7 +77,9 @@
    "중량 (kg/m)": "重量 (kg/m)",
    "RS120H ~ RS200H<span class=\"series-count\">16건</span>": "RS120H ~ RS200H<span class=\"series-count\">16项</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1 26.852는 원표 값 그대로입니다.": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表 · 原表表头中的\"宽C\"(链板)作为链板高度H列出。RS60H-3的最大许用载荷已按同一格的kgf值将原表的245.1(2500)更正为24.5(2500)。RS120H单排L1 26.852为原表数值。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。",
+   "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "排数(单排·双排)·连接链节·弯板链节等术语可在 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">公告 › 滚子链术语指南</a>中查看。",
+   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1은 원표의 26.852를 타 브랜드(츠바키·Kramp) 규격 기준 26.95로 보정했습니다.": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表 · 原表表头中的\"宽C\"(链板)作为链板高度H列出。RS60H-3的最大许用载荷已按同一格的kgf值将245.1(2500)更正为24.5(2500)。RS120H单排L1已根据其他品牌规格(椿本·Kramp)将原表的26.852修正为26.95。"
   }
  },
  "attrs": {
@@ -95,7 +101,15 @@
    "예: 2060 또는 38.1": "e.g. 2060 or 38.1",
    "예: 2050 또는 31.75": "e.g. 2050 or 31.75",
    "예: 2050HP 또는 40HP": "e.g. 2050HP or 40HP",
-   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4"
+   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "Attachment types A-2, K-2, SA-1, SK-1, D-1 drawing",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "Top roller chain side view and end view drawing",
+   "사이드 롤러 체인 옆모습과 평면 도면": "Side roller chain side view and top-view drawing",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "Curve chain side view and sideways-bent top-view drawing",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "Center roller chain side view, top view and center cover type drawing",
+   "핀틀 체인 옆모습과 평면 도면": "Pintle chain side view and top-view drawing",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "Motorcycle chain side view and standard / O-ring type top-view drawing",
+   "농기계용 체인 옆모습과 평면 도면": "Agricultural chain side view and top-view drawing"
   },
   "ja": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "標準ローラチェーン側面図と2列チェーン平面図",
@@ -115,7 +129,15 @@
    "예: 2060 또는 38.1": "例: 2060 または 38.1",
    "예: 2050 또는 31.75": "例: 2050 または 31.75",
    "예: 2050HP 또는 40HP": "例: 2050HP または 40HP",
-   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "アタッチメントA-2・K-2・SA-1・SK-1・D-1形式図",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "トップローラチェーン側面図と端面図",
+   "사이드 롤러 체인 옆모습과 평면 도면": "サイドローラチェーン側面図と平面図",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "カーブチェーン側面図と横曲げ平面図",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "センターローラチェーン側面図・平面図・センターカバー付き形図",
+   "핀틀 체인 옆모습과 평면 도면": "ピントルチェーン側面図と平面図",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "オートバイチェーン側面図と一般形・Oリング形平面図",
+   "농기계용 체인 옆모습과 평면 도면": "農機用チェーン側面図と平面図"
   },
   "zh": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "标准滚子链侧视图与双排链俯视图",
@@ -135,7 +157,15 @@
    "예: 2060 또는 38.1": "例：2060 或 38.1",
    "예: 2050 또는 31.75": "例：2050 或 31.75",
    "예: 2050HP 또는 40HP": "例：2050HP 或 40HP",
-   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "附件A-2·K-2·SA-1·SK-1·D-1型式图",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "顶部滚子链侧视图与端视图",
+   "사이드 롤러 체인 옆모습과 평면 도면": "侧滚子链侧视图与俯视图",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "弯曲链侧视图与侧弯俯视图",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "中心滚子链侧视图、俯视图及带中心盖型图",
+   "핀틀 체인 옆모습과 평면 도면": "铸造销合链侧视图与俯视图",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "摩托车链侧视图与普通型·O形圈型俯视图",
+   "농기계용 체인 옆모습과 평면 도면": "农机用链条侧视图与俯视图"
   }
  }
 }

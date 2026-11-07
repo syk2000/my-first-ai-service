@@ -20,7 +20,10 @@
    "BL 시리즈 (중하중) BL-422 ~ BL-866<span class=\"series-count\">24건</span>": "BL series (heavy duty) BL-422 – BL-866<span class=\"series-count\">24 items</span>",
    "BL 시리즈 (중하중) BL-1022 ~ BL-2066<span class=\"series-count\">30건</span>": "BL series (heavy duty) BL-1022 – BL-2066<span class=\"series-count\">30 items</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product."
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
+   "파단하중은 원표에 실린 두 값(제조사 기준 · ANSI 기준)을 함께 실었습니다. S는 링크 판의 핀 구멍 지름입니다(츠바키 표기 S - Hole Diameter).": "Both breaking loads given in the original table (maker value · ANSI value) are shown. S is the pin-hole diameter of the link plate (Tsubaki notation: S - Hole Diameter).",
+   "S (판 구멍 지름)": "S (plate hole dia.)",
+   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · BL-1044 제조사 파단하중은 원표의 28,000을 타 브랜드(츠바키 BL1044 63,400lb · USA Roller Chain) 규격 기준 28,800으로 보정했습니다(BL-1046과 같음).": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables · The BL-1044 maker breaking load was corrected from 28,000 in the original table to 28,800 based on other brands' specs (Tsubaki BL1044 63,400lb · USA Roller Chain), the same as BL-1046."
   },
   "ja": {
    "<p class=\"eyebrow\">Leaf Chain · AL · BL</p> <h2>리프 체인 (AL · BL)</h2> <p>롤러 없이 <strong style=\"color: var(--accent);\">링크 판과 핀만</strong> 여러 겹으로 엮은 체인입니다. 스프로킷으로 동력을 전하지 않고, 지게차 마스트·호이스트처럼 시브(도르래)에 걸어 무거운 것을 들어 올리는 데 씁니다. AL은 경하중용, BL은 판이 두꺼운 중하중용입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Leaf Chain · AL · BL</p> <h2>リーフチェーン (AL · BL)</h2> <p>ローラがなく、 <strong style=\"color: var(--accent);\">リンクプレートとピンだけ</strong> を何層にも組んだチェーンです。スプロケットで動力を伝えるのではなく、フォークリフトのマスト・ホイストのようにシーブ(滑車)に掛けて重い物を吊り上げるのに使います。ALは軽荷重用、BLはプレートが厚い重荷重用です。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
@@ -42,7 +45,10 @@
    "BL 시리즈 (중하중) BL-422 ~ BL-866<span class=\"series-count\">24건</span>": "BLシリーズ (重荷重) BL-422 ~ BL-866<span class=\"series-count\">24件</span>",
    "BL 시리즈 (중하중) BL-1022 ~ BL-2066<span class=\"series-count\">30건</span>": "BLシリーズ (重荷重) BL-1022 ~ BL-2066<span class=\"series-count\">30件</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
+   "파단하중은 원표에 실린 두 값(제조사 기준 · ANSI 기준)을 함께 실었습니다. S는 링크 판의 핀 구멍 지름입니다(츠바키 표기 S - Hole Diameter).": "破断荷重は原表に載っている2つの値(メーカー基準・ANSI基準)を併記しました。Sはリンクプレートのピン穴径です(椿本チエインの表記 S - Hole Diameter)。",
+   "S (판 구멍 지름)": "S (プレート穴径)",
+   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · BL-1044 제조사 파단하중은 원표의 28,000을 타 브랜드(츠바키 BL1044 63,400lb · USA Roller Chain) 규격 기준 28,800으로 보정했습니다(BL-1046과 같음).": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表 · BL-1044のメーカー破断荷重は、原表の28,000を他ブランド(椿本チエイン BL1044 63,400lb・USA Roller Chain)の規格に基づき28,800に補正しました(BL-1046と同じ)。"
   },
   "zh": {
    "<p class=\"eyebrow\">Leaf Chain · AL · BL</p> <h2>리프 체인 (AL · BL)</h2> <p>롤러 없이 <strong style=\"color: var(--accent);\">링크 판과 핀만</strong> 여러 겹으로 엮은 체인입니다. 스프로킷으로 동력을 전하지 않고, 지게차 마스트·호이스트처럼 시브(도르래)에 걸어 무거운 것을 들어 올리는 데 씁니다. AL은 경하중용, BL은 판이 두꺼운 중하중용입니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Leaf Chain · AL · BL</p> <h2>板式链 (AL · BL)</h2> <p>没有滚子，仅由 <strong style=\"color: var(--accent);\">链板和销轴</strong> 多层交错编成的链条。不通过链轮传递动力，而是像叉车门架·起重葫芦那样挂在滑轮上提升重物。AL为轻载型，BL为链板较厚的重载型。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -64,7 +70,10 @@
    "BL 시리즈 (중하중) BL-422 ~ BL-866<span class=\"series-count\">24건</span>": "BL系列 (重载) BL-422 ~ BL-866<span class=\"series-count\">24项</span>",
    "BL 시리즈 (중하중) BL-1022 ~ BL-2066<span class=\"series-count\">30건</span>": "BL系列 (重载) BL-1022 ~ BL-2066<span class=\"series-count\">30项</span>",
    "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。"
+   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。",
+   "파단하중은 원표에 실린 두 값(제조사 기준 · ANSI 기준)을 함께 실었습니다. S는 링크 판의 핀 구멍 지름입니다(츠바키 표기 S - Hole Diameter).": "破断载荷同时列出原表中的两个值(厂家标准·ANSI标准)。S为链板的销孔直径(椿本标注 S - Hole Diameter)。",
+   "S (판 구멍 지름)": "S (链板孔径)",
+   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · BL-1044 제조사 파단하중은 원표의 28,000을 타 브랜드(츠바키 BL1044 63,400lb · USA Roller Chain) 규격 기준 28,800으로 보정했습니다(BL-1046과 같음).": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表 · BL-1044厂家破断载荷已根据其他品牌规格(椿本 BL1044 63,400lb · USA Roller Chain)将原表的28,000修正为28,800(与BL-1046相同)。"
   }
  },
  "attrs": {
@@ -86,7 +95,15 @@
    "예: 2060 또는 38.1": "e.g. 2060 or 38.1",
    "예: 2050 또는 31.75": "e.g. 2050 or 31.75",
    "예: 2050HP 또는 40HP": "e.g. 2050HP or 40HP",
-   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4"
+   "예: BL-634 또는 AL 4×4": "e.g. BL-634 or AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "Attachment types A-2, K-2, SA-1, SK-1, D-1 drawing",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "Top roller chain side view and end view drawing",
+   "사이드 롤러 체인 옆모습과 평면 도면": "Side roller chain side view and top-view drawing",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "Curve chain side view and sideways-bent top-view drawing",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "Center roller chain side view, top view and center cover type drawing",
+   "핀틀 체인 옆모습과 평면 도면": "Pintle chain side view and top-view drawing",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "Motorcycle chain side view and standard / O-ring type top-view drawing",
+   "농기계용 체인 옆모습과 평면 도면": "Agricultural chain side view and top-view drawing"
   },
   "ja": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "標準ローラチェーン側面図と2列チェーン平面図",
@@ -106,7 +123,15 @@
    "예: 2060 또는 38.1": "例: 2060 または 38.1",
    "예: 2050 또는 31.75": "例: 2050 または 31.75",
    "예: 2050HP 또는 40HP": "例: 2050HP または 40HP",
-   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例: BL-634 または AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "アタッチメントA-2・K-2・SA-1・SK-1・D-1形式図",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "トップローラチェーン側面図と端面図",
+   "사이드 롤러 체인 옆모습과 평면 도면": "サイドローラチェーン側面図と平面図",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "カーブチェーン側面図と横曲げ平面図",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "センターローラチェーン側面図・平面図・センターカバー付き形図",
+   "핀틀 체인 옆모습과 평면 도면": "ピントルチェーン側面図と平面図",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "オートバイチェーン側面図と一般形・Oリング形平面図",
+   "농기계용 체인 옆모습과 평면 도면": "農機用チェーン側面図と平面図"
   },
   "zh": {
    "표준 롤러 체인 옆모습과 2열 체인 평면 도면": "标准滚子链侧视图与双排链俯视图",
@@ -126,7 +151,15 @@
    "예: 2060 또는 38.1": "例：2060 或 38.1",
    "예: 2050 또는 31.75": "例：2050 或 31.75",
    "예: 2050HP 또는 40HP": "例：2050HP 或 40HP",
-   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4"
+   "예: BL-634 또는 AL 4×4": "例：BL-634 或 AL 4×4",
+   "어태치먼트 A-2 K-2 SA-1 SK-1 D-1 형식 도면": "附件A-2·K-2·SA-1·SK-1·D-1型式图",
+   "탑 롤러 체인 옆모습과 끝에서 본 도면": "顶部滚子链侧视图与端视图",
+   "사이드 롤러 체인 옆모습과 평면 도면": "侧滚子链侧视图与俯视图",
+   "커브 체인 옆모습과 옆으로 휜 평면 도면": "弯曲链侧视图与侧弯俯视图",
+   "센터 롤러 체인 옆모습, 평면, 센터 커버 부착형 도면": "中心滚子链侧视图、俯视图及带中心盖型图",
+   "핀틀 체인 옆모습과 평면 도면": "铸造销合链侧视图与俯视图",
+   "오토바이 체인 옆모습과 일반형 오링형 평면 도면": "摩托车链侧视图与普通型·O形圈型俯视图",
+   "농기계용 체인 옆모습과 평면 도면": "农机用链条侧视图与俯视图"
   }
  }
 }
