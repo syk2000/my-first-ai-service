@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261107c">
+<link rel="stylesheet" href="styles.css?v=20261107ch">
 </head>
 <body>
 
@@ -163,11 +163,11 @@
     </div>
     <div class="wrap f-copy">© SWS TECH. 본 홈페이지의 도면·규격표·사진 등 자료의 무단 복제·배포를 금합니다.</div>
   </footer>
-<script src="assets/spec-data.js?v=20261107cs"></script>
+<script src="assets/spec-data.js?v=20261107ch"></script>
 <script src="i18n/common.dict.js?v=20261031wr"></script>
-<script src="i18n/pages/search-product.dict.js?v=20261106sx"></script>
+<script src="i18n/pages/search-product.dict.js?v=20261107ch"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261107cs"></script>
+<script src="common.js?v=20261107ch"></script>
 <script>
     const MAX_RESULTS = 200;
     const TOLERANCE = 0.51; // mm — absorbs typing an integer against an x.5 nominal value
@@ -233,6 +233,10 @@
       "커플링": {
         d: "축경 d", D: "외경 A", h: "전장 W",
         note: "커플링은 내경을 주문 시 선택하는 형식이 많아 외경 A·전장 W로 검색하는 걸 권장합니다.",
+      },
+      "체인": {
+        d: "핀 지름 d", D: "롤러 외경 Dr", h: "피치 P",
+        note: "체인은 피치 P(예: RS60 → 19.05)와 롤러 외경 Dr로 찾는 걸 권장합니다. 형번은 RS60, RS60-2(2열)처럼 입력하세요.",
       },
       "오일레스/DU": { d: "내경 d", D: "외경 D", h: "길이 H" },
       "접시 스프링": { d: "내경 d", D: "외경 D", h: "두께 t" },

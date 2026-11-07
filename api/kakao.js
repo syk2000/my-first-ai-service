@@ -99,6 +99,9 @@ function shieldItem(item) {
 
 // 손님 말에 들어 있는 품목 이름 → [찾을 때 뗄 말, 분류(r.c) 조건, 안내용 이름]
 const CATEGORY_WORDS = [
+  [/리프\s*체인|leaf\s*chains?/i, /리프 체인/, "리프 체인"],
+  [/스테인리스\s*(?:롤러\s*)?체인|스텐\s*체인/i, /스테인리스 롤러 체인/, "스테인리스 롤러 체인"],
+  [/(?:롤러\s*)?체인|roller\s*chains?|chains?/i, /체인/, "체인"],
   [/컴팩트\s*씰|콤팩트\s*씰|compact\s*seals?/i, /컴팩트 씰/, "컴팩트 씰"],
   [/쿼드\s*링|X\s*-?\s*링|X-?rings?|quad\s*-?\s*rings?/i, /쿼드링/, "쿼드링(X링)"],
   [/웨어\s*링|웨어\s*밴드|밴드\s*웨어링|wear\s*-?\s*rings?|가이드\s*링/i, /웨어링/, "웨어링"],
@@ -628,6 +631,7 @@ function dimText(r) {
   if (r.c === "컴팩트 씰") return `D ${fmt(r.d)} · d ${fmt(r.D)} · L ${fmt(r.h)}`;
   if (r.c === "쿼드링 (X링)" || r.c === "웨어링") return `d ${fmt(r.d)} · D ${fmt(r.D)} · W ${fmt(r.h)}`;
   if (r.c === "밴드 웨어링") return `t ${fmt(r.h)}`;
+  if (load().PAGE_GROUP[r.p] === "체인") return `P ${fmt(r.h)}${r.D == null ? "" : ` · Dr ${fmt(r.D)}`} · d ${fmt(r.d)}`;
   if (r.c === "반달키") return `d0 ${fmt(r.d)} · h ${fmt(r.h)}`;
   if (r.c === "테이퍼 핀" || r.c === "평행 핀") return `d ${fmt(r.d)} · L ${fmt(r.h)}`;
   if (load().PAGE_GROUP[r.p] === "커플링") return `${r.d == null ? "" : `d ${fmt(r.d)} · `}A ${fmt(r.D)} · W ${fmt(r.h)}`;

@@ -3273,3 +3273,33 @@ table.spec-table th { color: #4b5873; }
 #needle-bearing-accessories .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_bearing_accessories.webp?v=10"); }
 
 .img-cards .product-card[href="ball_plunger_series.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
+
+/* 체인(2026-11-07) 카드 그림 */
+:is(#bearing-group, #accessory-group) .product-card[href="chain.html"]::before { background-image: url("assets/cards/chain.webp?v=1"); }
+.img-cards .product-card[href="chain_standard.html"]::before,
+.img-cards .product-card[href="chain_heavy.html"]::before,
+.img-cards .product-card[href="chain_stainless.html"]::before,
+.img-cards .product-card[href="chain_straight.html"]::before,
+.img-cards .product-card[href="chain_double_pitch.html"]::before,
+.img-cards .product-card[href="chain_double_plus.html"]::before,
+.img-cards .product-card[href="chain_hollow_pin.html"]::before,
+.img-cards .product-card[href="chain_leaf.html"]::before { content: ""; display: block; width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--border); background: #fff center / contain no-repeat; }
+.img-cards .product-card[href="chain_standard.html"] .p-icon,
+.img-cards .product-card[href="chain_heavy.html"] .p-icon,
+.img-cards .product-card[href="chain_stainless.html"] .p-icon,
+.img-cards .product-card[href="chain_straight.html"] .p-icon,
+.img-cards .product-card[href="chain_double_pitch.html"] .p-icon,
+.img-cards .product-card[href="chain_double_plus.html"] .p-icon,
+.img-cards .product-card[href="chain_hollow_pin.html"] .p-icon,
+.img-cards .product-card[href="chain_leaf.html"] .p-icon { display: none; }
+.img-cards .product-card[href="chain_standard.html"]::before { background-image: url("assets/cards/pc_chain_standard.webp?v=1"); }
+.img-cards .product-card[href="chain_heavy.html"]::before { background-image: url("assets/cards/pc_chain_heavy.webp?v=1"); }
+.img-cards .product-card[href="chain_stainless.html"]::before { background-image: url("assets/cards/pc_chain_stainless.webp?v=1"); }
+.img-cards .product-card[href="chain_straight.html"]::before { background-image: url("assets/cards/pc_chain_straight.webp?v=1"); }
+.img-cards .product-card[href="chain_double_pitch.html"]::before { background-image: url("assets/cards/pc_chain_double_pitch.webp?v=1"); }
+.img-cards .product-card[href="chain_double_plus.html"]::before { background-image: url("assets/cards/pc_chain_double_plus.webp?v=1"); }
+.img-cards .product-card[href="chain_hollow_pin.html"]::before { background-image: url("assets/cards/pc_chain_hollow_pin.webp?v=1"); }
+.img-cards .product-card[href="chain_leaf.html"]::before { background-image: url("assets/cards/pc_chain_leaf.webp?v=1"); }
+.term-list { border-top: 1px solid var(--border); font-size: 14px; }
+.term-row { display: grid; grid-template-columns: 250px 1fr; gap: 16px; padding: 10px 12px; border-bottom: 1px solid var(--border); line-height: 1.65; }
+.term-k { font-weight: 700; }
