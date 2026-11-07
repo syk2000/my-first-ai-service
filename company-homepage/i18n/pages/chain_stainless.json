@@ -21,8 +21,8 @@
    "중량 (kg/m)": "Weight (kg/m)",
    "2열 (RS25SS-2 ~ RS240SS-2)<span class=\"series-count\">14건</span>": "Duplex (RS25SS-2 – RS240SS-2)<span class=\"series-count\">14 items</span>",
    "C (횡피치)": "C (transverse pitch)",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 기호 p · d1 · b1 · d2 · L · Lc · h2 · T · Pt를 이 페이지 기호 P · Dr · W · d · L · Lc · H · T · C로 옮겼습니다. 치수는 원표의 최대(max) · 최소(min) 기준값이며, 파단하중은 최소값(Q min)입니다.": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables · The original symbols p · d1 · b1 · d2 · L · Lc · h2 · T · Pt are shown as P · Dr · W · d · L · Lc · H · T · C on this page. Dimensions are the max/min reference values of the original table, and the breaking load is the minimum value (Q min).",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
+   "단위: mm · 파단하중은 최소값(Q min)입니다.": "Unit: mm · The breaking load is the minimum value (Q min).",
+   "※ 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
    "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "Terms such as number of strands (simplex/duplex), connecting link and offset link are explained in <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">Notice › Roller Chain Terminology Guide</a>."
   },
   "ja": {
@@ -46,8 +46,8 @@
    "중량 (kg/m)": "質量 (kg/m)",
    "2열 (RS25SS-2 ~ RS240SS-2)<span class=\"series-count\">14건</span>": "2列 (RS25SS-2 ~ RS240SS-2)<span class=\"series-count\">14件</span>",
    "C (횡피치)": "C (横ピッチ)",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 기호 p · d1 · b1 · d2 · L · Lc · h2 · T · Pt를 이 페이지 기호 P · Dr · W · d · L · Lc · H · T · C로 옮겼습니다. 치수는 원표의 최대(max) · 최소(min) 기준값이며, 파단하중은 최소값(Q min)입니다.": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表 · 原表の記号 p · d1 · b1 · d2 · L · Lc · h2 · T · Pt を、このページの記号 P · Dr · W · d · L · Lc · H · T · C に置き換えました。寸法は原表の最大(max)・最小(min)基準値で、破断荷重は最小値(Q min)です。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
+   "단위: mm · 파단하중은 최소값(Q min)입니다.": "単位: mm · 破断荷重は最小値(Q min)です。",
+   "※ 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
    "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "列数(1列・2列)・継手リンク・オフセットリンクなどの用語は <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">お知らせ › ローラチェーン用語ガイド</a>でご確認いただけます。"
   },
   "zh": {
@@ -71,8 +71,8 @@
    "중량 (kg/m)": "重量 (kg/m)",
    "2열 (RS25SS-2 ~ RS240SS-2)<span class=\"series-count\">14건</span>": "双排 (RS25SS-2 ~ RS240SS-2)<span class=\"series-count\">14项</span>",
    "C (횡피치)": "C (排距)",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 기호 p · d1 · b1 · d2 · L · Lc · h2 · T · Pt를 이 페이지 기호 P · Dr · W · d · L · Lc · H · T · C로 옮겼습니다. 치수는 원표의 최대(max) · 최소(min) 기준값이며, 파단하중은 최소값(Q min)입니다.": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表 · 原表符号 p · d1 · b1 · d2 · L · Lc · h2 · T · Pt 在本页改为 P · Dr · W · d · L · Lc · H · T · C。尺寸为原表的最大(max)·最小(min)基准值，破断载荷为最小值(Q min)。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。",
+   "단위: mm · 파단하중은 최소값(Q min)입니다.": "单位: mm · 破断载荷为最小值(Q min)。",
+   "※ 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 订货前请以实物最终确认是否与链轮及安装设备匹配。",
    "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "排数(单排·双排)·连接链节·弯板链节等术语可在 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">公告 › 滚子链术语指南</a>中查看。"
   }
  },

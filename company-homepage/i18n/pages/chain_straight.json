@@ -16,8 +16,8 @@
    "평균 파단강도 kN (kgf)": "Avg. tensile strength kN (kgf)",
    "중량 (kg/m)": "Weight (kg/m)",
    "RS120FP ~ RS400FP<span class=\"series-count\">8건</span>": "RS120FP ~ RS400FP<span class=\"series-count\">8 items</span>",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
+   "단위: mm": "Unit: mm",
+   "※ 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
    "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "Terms such as number of strands (simplex/duplex), connecting link and offset link are explained in <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">Notice › Roller Chain Terminology Guide</a>."
   },
   "ja": {
@@ -36,8 +36,8 @@
    "평균 파단강도 kN (kgf)": "平均破断強さ kN (kgf)",
    "중량 (kg/m)": "質量 (kg/m)",
    "RS120FP ~ RS400FP<span class=\"series-count\">8건</span>": "RS120FP ~ RS400FP<span class=\"series-count\">8件</span>",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
+   "단위: mm": "単位: mm",
+   "※ 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
    "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "列数(1列・2列)・継手リンク・オフセットリンクなどの用語は <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">お知らせ › ローラチェーン用語ガイド</a>でご確認いただけます。"
   },
   "zh": {
@@ -56,8 +56,8 @@
    "평균 파단강도 kN (kgf)": "平均抗拉强度 kN (kgf)",
    "중량 (kg/m)": "重量 (kg/m)",
    "RS120FP ~ RS400FP<span class=\"series-count\">8건</span>": "RS120FP ~ RS400FP<span class=\"series-count\">8项</span>",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。",
+   "단위: mm": "单位: mm",
+   "※ 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 订货前请以实物最终确认是否与链轮及安装设备匹配。",
    "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "排数(单排·双排)·连接链节·弯板链节等术语可在 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">公告 › 滚子链术语指南</a>中查看。"
   }
  },

@@ -22,10 +22,9 @@
    "최대 허용하중 kN (kgf)": "Max. allowable load kN (kgf)",
    "중량 (kg/m)": "Weight (kg/m)",
    "RS120H ~ RS200H<span class=\"series-count\">16건</span>": "RS120H ~ RS200H<span class=\"series-count\">16 items</span>",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1 26.852는 원표 값 그대로입니다.": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables · The 'width C' (link plate) heading of the original table is shown as plate height H. The max. allowable load of RS60H-3 was corrected from 245.1(2500) in the original table to 24.5(2500) to match the kgf value in the same cell. RS120H simplex L1 26.852 is as given in the original table.",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by Musso Power System. Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
+   "※ 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ Before ordering, please confirm fit with your sprockets and equipment using the actual product.",
    "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "Terms such as number of strands (simplex/duplex), connecting link and offset link are explained in <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">Notice › Roller Chain Terminology Guide</a>.",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1은 원표의 26.852를 타 브랜드(츠바키·Kramp) 규격 기준 26.95로 보정했습니다.": "Unit: mm · Source: Musso Power System (mspower.co.kr) spec tables · The 'width C' (link plate) heading of the original table is shown as plate height H. The max. allowable load of RS60H-3 was corrected from 245.1(2500) to 24.5(2500) to match the kgf value in the same cell. RS120H simplex L1 was corrected from 26.852 in the original table to 26.95 based on other brands' specs (Tsubaki · Kramp)."
+   "단위: mm": "Unit: mm"
   },
   "ja": {
    "<p class=\"eyebrow\">Heavy Series Roller Chain · H</p> <h2>중하중용 롤러 체인 (H)</h2> <p>표준 롤러 체인과 피치·롤러는 같고 <strong style=\"color: var(--accent);\">링크 판을 두껍게</strong> 만든 체인입니다. 형번 뒤에 H를 붙여 표기하며(예: RS80H, RS80H-2), 충격·하중이 큰 곳에 씁니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Heavy Series Roller Chain · H</p> <h2>重荷重用ローラチェーン (H)</h2> <p>標準ローラチェーンとピッチ・ローラは同じで、 <strong style=\"color: var(--accent);\">リンクプレートを厚く</strong> したチェーンです。形番の後ろにHを付けて表し(例: RS80H、RS80H-2)、衝撃・荷重が大きい場所に使います。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
@@ -49,10 +48,9 @@
    "최대 허용하중 kN (kgf)": "最大許容荷重 kN (kgf)",
    "중량 (kg/m)": "質量 (kg/m)",
    "RS120H ~ RS200H<span class=\"series-count\">16건</span>": "RS120H ~ RS200H<span class=\"series-count\">16件</span>",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1 26.852는 원표 값 그대로입니다.": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表 · 原表見出しの「幅C」(リンクプレート)はプレート高さHとして載せました。RS60H-3の最大許容荷重は原表の245.1(2500)を同じ欄のkgf値に合わせて24.5(2500)に訂正しました。RS120H 1列のL1 26.852は原表の値のままです。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上の表はムッソパワーシステムが公開している規格表をもとに整理したものです。発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
+   "※ 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 発注前には、スプロケット・取付設備に合うか実際の製品で最終確認してください。",
    "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "列数(1列・2列)・継手リンク・オフセットリンクなどの用語は <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">お知らせ › ローラチェーン用語ガイド</a>でご確認いただけます。",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1은 원표의 26.852를 타 브랜드(츠바키·Kramp) 규격 기준 26.95로 보정했습니다.": "単位: mm · 規格出典: ムッソパワーシステム(mspower.co.kr)規格表 · 原表見出しの「幅C」(リンクプレート)はプレート高さHとして載せました。RS60H-3の最大許容荷重は原表の245.1(2500)を同じ欄のkgf値に合わせて24.5(2500)に訂正しました。RS120H 1列のL1は原表の26.852を他ブランド(椿本チエイン・Kramp)の規格に基づき26.95に補正しました。"
+   "단위: mm": "単位: mm"
   },
   "zh": {
    "<p class=\"eyebrow\">Heavy Series Roller Chain · H</p> <h2>중하중용 롤러 체인 (H)</h2> <p>표준 롤러 체인과 피치·롤러는 같고 <strong style=\"color: var(--accent);\">링크 판을 두껍게</strong> 만든 체인입니다. 형번 뒤에 H를 붙여 표기하며(예: RS80H, RS80H-2), 충격·하중이 큰 곳에 씁니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Heavy Series Roller Chain · H</p> <h2>重载型滚子链 (H)</h2> <p>节距和滚子与标准滚子链相同，但 <strong style=\"color: var(--accent);\">链板加厚</strong> 的链条。型号后加H表示(例: RS80H，RS80H-2)，用于冲击·载荷较大的场合。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -76,10 +74,9 @@
    "최대 허용하중 kN (kgf)": "最大许用载荷 kN (kgf)",
    "중량 (kg/m)": "重量 (kg/m)",
    "RS120H ~ RS200H<span class=\"series-count\">16건</span>": "RS120H ~ RS200H<span class=\"series-count\">16项</span>",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1 26.852는 원표 값 그대로입니다.": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表 · 原表表头中的\"宽C\"(链板)作为链板高度H列出。RS60H-3的最大许用载荷已按同一格的kgf值将原表的245.1(2500)更正为24.5(2500)。RS120H单排L1 26.852为原表数值。",
-   "※ 위 표는 무쏘파워시스템이 공개한 규격표를 기준으로 정리했습니다. 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 上表根据Musso Power System公开的规格表整理。订货前请以实物最终确认是否与链轮及安装设备匹配。",
+   "※ 발주 전에는 스프로킷·부착 설비와 맞는지 실제 제품으로 최종 확인하시기 바랍니다.": "※ 订货前请以实物最终确认是否与链轮及安装设备匹配。",
    "열수(1열·2열)·조인트 링크·옵셋 링크 같은 용어는 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">공지사항 › 롤러 체인 용어 가이드</a>에서 확인하실 수 있습니다.": "排数(单排·双排)·连接链节·弯板链节等术语可在 <a href=\"notice_chain_terms.html\" style=\"color: var(--accent);\">公告 › 滚子链术语指南</a>中查看。",
-   "단위: mm · 규격 출처: 무쏘파워시스템(mspower.co.kr) 규격표 기준 · 원표 머리글의 '폭 C'(링크 판)는 판 높이 H로 옮겼습니다. RS60H-3 최대 허용하중은 원표의 245.1(2500)을 같은 칸 kgf 값에 맞춰 24.5(2500)로 바로잡았습니다. RS120H 1열 L1은 원표의 26.852를 타 브랜드(츠바키·Kramp) 규격 기준 26.95로 보정했습니다.": "单位: mm · 规格来源: Musso Power System(mspower.co.kr)规格表 · 原表表头中的\"宽C\"(链板)作为链板高度H列出。RS60H-3的最大许用载荷已按同一格的kgf值将245.1(2500)更正为24.5(2500)。RS120H单排L1已根据其他品牌规格(椿本·Kramp)将原表的26.852修正为26.95。"
+   "단위: mm": "单位: mm"
   }
  },
  "attrs": {

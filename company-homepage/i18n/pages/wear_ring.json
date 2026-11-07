@@ -16,8 +16,8 @@
    "웨어링 KRW · 내경 300 초과<span class=\"series-count\">55건</span>": "Wear ring KRW · ID over 300<span class=\"series-count\">55 items</span>",
    "밴드 웨어링 KRT (띠)<span class=\"series-count\">88건</span>": "Wear band KRT (strip)<span class=\"series-count\">88 items</span>",
    "t (두께)": "t (thickness)",
-   "단위: mm · 규격 출처: 에스제이패킹(sjpacking.co.kr) 규격표 기준 · 원표에서 내경·외경이 뒤바뀐 8개 행은 작은 값을 내경으로 정리했고, 그 결과 겹치는 3개 행은 하나로 합쳤습니다. 밴드 웨어링은 원표의 첫 열을 폭, 둘째 열을 두께로 보았습니다.": "Unit: mm · Source: SJ Packing (sjpacking.co.kr) spec tables · Eight rows where ID and OD were swapped in the original table have been arranged with the smaller value as the ID, and the 3 rows this made identical to existing sizes were merged. For the wear band, the first column of the original table is taken as width and the second as thickness.",
-   "※ 위 표는 에스제이패킹이 공개한 규격표를 기준으로 정리했습니다. 정밀 가공·발주 전에는 반드시 실제 제품과 장착 홈 치수로 최종 확인하시기 바랍니다.": "※ The tables above are compiled from the spec tables published by SJ Packing. Before precision machining or ordering, always confirm against the actual product and the mounting groove dimensions."
+   "단위: mm": "Unit: mm",
+   "※ 정밀 가공·발주 전에는 반드시 실제 제품과 장착 홈 치수로 최종 확인하시기 바랍니다.": "※ Before precision machining or ordering, always confirm against the actual product and the mounting groove dimensions."
   },
   "ja": {
    "<p class=\"eyebrow\">Wear Ring · Guide Ring</p> <h2>웨어링 (가이드링)</h2> <p>유압 실린더의 <strong style=\"color: var(--accent);\">피스톤·로드를 안내</strong>하고 옆 하중을 받아 금속끼리 닿지 않게 하는 링입니다. 정해진 지름으로 만든 링(KRW)과, 필요한 길이로 잘라 쓰는 띠 모양의 밴드 웨어링(KRT)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Wear Ring · Guide Ring</p> <h2>ウェアリング(ガイドリング)</h2> <p>油圧シリンダーの<strong style=\"color: var(--accent);\">ピストン・ロッドを案内</strong>し、横荷重を受けて金属同士が接触しないようにするリングです。決まった径で作られたリング(KRW)と、必要な長さに切って使う帯状のバンドウェアリング(KRT)があります。</p> <p class=\"section-head-tip\">形番または寸法の一部だけ入力しても検索できます。</p>",
@@ -35,8 +35,8 @@
    "웨어링 KRW · 내경 300 초과<span class=\"series-count\">55건</span>": "ウェアリング KRW · 内径300超<span class=\"series-count\">55件</span>",
    "밴드 웨어링 KRT (띠)<span class=\"series-count\">88건</span>": "バンドウェアリング KRT(帯)<span class=\"series-count\">88件</span>",
    "t (두께)": "t (厚さ)",
-   "단위: mm · 규격 출처: 에스제이패킹(sjpacking.co.kr) 규격표 기준 · 원표에서 내경·외경이 뒤바뀐 8개 행은 작은 값을 내경으로 정리했고, 그 결과 겹치는 3개 행은 하나로 합쳤습니다. 밴드 웨어링은 원표의 첫 열을 폭, 둘째 열을 두께로 보았습니다.": "単位: mm · 規格出典: エスジェイパッキン(sjpacking.co.kr)規格表 · 原表で内径・外径が入れ替わっていた8行は小さい値を内径として整理し、その結果重複した3行は1行にまとめました。バンドウェアリングは原表の1列目を幅、2列目を厚さとみなしました。",
-   "※ 위 표는 에스제이패킹이 공개한 규격표를 기준으로 정리했습니다. 정밀 가공·발주 전에는 반드시 실제 제품과 장착 홈 치수로 최종 확인하시기 바랍니다.": "※ 上の表はエスジェイパッキンが公開している規格表をもとに整理したものです。精密加工・発注の前には、必ず実際の製品と装着溝の寸法で最終確認してください。"
+   "단위: mm": "単位: mm",
+   "※ 정밀 가공·발주 전에는 반드시 실제 제품과 장착 홈 치수로 최종 확인하시기 바랍니다.": "※ 精密加工・発注の前には、必ず実際の製品と装着溝の寸法で最終確認してください。"
   },
   "zh": {
    "<p class=\"eyebrow\">Wear Ring · Guide Ring</p> <h2>웨어링 (가이드링)</h2> <p>유압 실린더의 <strong style=\"color: var(--accent);\">피스톤·로드를 안내</strong>하고 옆 하중을 받아 금속끼리 닿지 않게 하는 링입니다. 정해진 지름으로 만든 링(KRW)과, 필요한 길이로 잘라 쓰는 띠 모양의 밴드 웨어링(KRT)이 있습니다.</p> <p class=\"section-head-tip\">형번 또는 치수 일부만 입력해도 검색됩니다.</p>": "<p class=\"eyebrow\">Wear Ring · Guide Ring</p> <h2>耐磨环(导向环)</h2> <p>用于<strong style=\"color: var(--accent);\">引导液压缸活塞和活塞杆</strong>并承受侧向载荷、防止金属直接接触的环。有按固定直径制作的环(KRW)，以及按需长度裁切使用的带状耐磨带(KRT)。</p> <p class=\"section-head-tip\">只需输入型号或尺寸的一部分即可搜索。</p>",
@@ -54,8 +54,8 @@
    "웨어링 KRW · 내경 300 초과<span class=\"series-count\">55건</span>": "耐磨环 KRW · 内径300以上<span class=\"series-count\">55项</span>",
    "밴드 웨어링 KRT (띠)<span class=\"series-count\">88건</span>": "耐磨带 KRT(带状)<span class=\"series-count\">88项</span>",
    "t (두께)": "t (厚度)",
-   "단위: mm · 규격 출처: 에스제이패킹(sjpacking.co.kr) 규격표 기준 · 원표에서 내경·외경이 뒤바뀐 8개 행은 작은 값을 내경으로 정리했고, 그 결과 겹치는 3개 행은 하나로 합쳤습니다. 밴드 웨어링은 원표의 첫 열을 폭, 둘째 열을 두께로 보았습니다.": "单位: mm · 规格来源: SJ Packing(sjpacking.co.kr)规格表 · 原表中内径·外径颠倒的8行已按较小值为内径整理，因此重复的3行已合并。耐磨带将原表第一列视为宽度，第二列视为厚度。",
-   "※ 위 표는 에스제이패킹이 공개한 규격표를 기준으로 정리했습니다. 정밀 가공·발주 전에는 반드시 실제 제품과 장착 홈 치수로 최종 확인하시기 바랍니다.": "※ 上表根据SJ Packing公开的规格表整理。精密加工或订货前，请务必以实物及安装槽尺寸进行最终确认。"
+   "단위: mm": "单位: mm",
+   "※ 정밀 가공·발주 전에는 반드시 실제 제품과 장착 홈 치수로 최종 확인하시기 바랍니다.": "※ 精密加工或订货前，请务必以实物及安装槽尺寸进行最终确认。"
   }
  },
  "attrs": {
