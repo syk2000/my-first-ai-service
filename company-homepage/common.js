@@ -277,7 +277,7 @@
     // 규격표가 있는데 검색창이 없는 페이지에 '형번 / 규격 검색' 칸을 자동으로 붙임
     // (문구는 i18n/common.json 사전으로 번역 — 이 코드는 번역 대상 수집보다 먼저 실행됨)
     (function () {
-      const tables = [...document.querySelectorAll("table.spec-table")].filter((t) => t.tBodies.length && !t.closest("#finderResults"));
+      const tables = [...document.querySelectorAll("table.spec-table")].filter((t) => t.tBodies.length && !t.closest("#finderResults, .no-auto-search"));
       if (!tables.length) return;
       const content = document.querySelector("section.page-section, main");
       if (!content || content.querySelector("input:not([type=hidden])")) return;
