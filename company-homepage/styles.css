@@ -2293,7 +2293,7 @@ table.spec-table th { color: #4b5873; }
 :is(#bearing-group, #accessory-group) .product-card[href="oiless.html"]::before { background-image: url("assets/cards/oiless.webp?v=5"); }
 :is(#bearing-group, #accessory-group) .product-card[href="dish_spring.html"]::before { background-image: url("assets/cards/dish_spring.webp?v=5"); }
 :is(#bearing-group, #accessory-group) .product-card[href="mold_spring.html"]::before { background-image: url("assets/cards/mold_spring.webp?v=5"); }
-:is(#bearing-group, #accessory-group) .product-card[href="ball_plunger.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
+:is(#bearing-group, #accessory-group) .product-card[href="ball_plunger.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=rd3"); }
 /* 오일씰 형식별 단면 카드 */
 .seal-type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 4px; }
 .seal-type-card { display: flex; flex-direction: column; background: var(--surface); border: 1.5px solid #2b3550; border-radius: var(--radius-md); overflow: hidden; color: var(--text); text-decoration: none; }
@@ -3269,10 +3269,10 @@ table.spec-table th { color: #4b5873; }
 #needle-inner-ring .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_inner_ring.webp?v=10"); }
 #needle-cage .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_cage.webp?v=10"); }
 #hybrid-bearing .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_hybrid_bearing.webp?v=11"); }
-#ball-plunger .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
+#ball-plunger .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/ball_plunger.webp?v=rd3"); }
 #needle-bearing-accessories .tab-cards .cat-tab-btn::before { background-image: url("assets/cards/pc_needle_bearing_accessories.webp?v=10"); }
 
-.img-cards .product-card[href="ball_plunger_series.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=5"); }
+.img-cards .product-card[href="ball_plunger_series.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=rd3"); }
 
 /* 체인(2026-11-07) 카드 그림 */
 :is(#bearing-group, #accessory-group) .product-card[href="chain.html"]::before { background-image: url("assets/cards/chain.webp?v=1"); }
