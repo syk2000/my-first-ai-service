@@ -388,10 +388,15 @@ function questionList(intro, items, more) {
 // 자주 하는 질문 첫 화면: 일반 질문 / 구매·배송 / 제품 질문 고르기
 function faqMenu() {
   return {
-    outputs: [text("자주 하는 질문이에요. 어떤 질문이 궁금하세요?\n\n" +
-      "■ 일반 질문: 취급 제품·브랜드, 형번 입력 방법, 견적·발주, 견적 회신 시간, 재고·납기·가격, 카탈로그, 영업시간, 위치\n\n" +
-      "■ 구매·배송: 구매 수량·할인, 결제·세금계산서, 배송 기간·배송비, 방문 수령, 반품·교환, 성적서·정품 증명, 주문 제작\n\n" +
-      "■ 제품 질문: 베어링·베어링 유닛·오일씰·오링·스냅링·너트·키·핀·파워록·스프링·오일레스·오일게이지·LM 등 품목별 질문")],
+    outputs: [{
+      textCard: {
+        title: "자주 하는 질문",
+        description: "홈페이지에서 자주 하는 질문 전체를 보실 수 있어요. 아래 버튼을 눌러 주세요.\n\n" +
+          "여기서 바로 보시려면 아래에서 분류를 골라 주세요.\n" +
+          "■ 일반 질문 ■ 구매·배송 ■ 제품 질문",
+        buttons: [{ action: "webLink", label: "홈페이지 자주 하는 질문", webLinkUrl: SITE + "faq.html" }],
+      },
+    }],
     quick: [GO_GENERAL, GO_BUY, GO_PRODUCT, QUICK[0]],
   };
 }
