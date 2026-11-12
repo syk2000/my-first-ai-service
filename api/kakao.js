@@ -97,13 +97,14 @@ function shieldItem(item) {
   return load().SPEC_DATA.some((r) => norm(r.m) === n && needsShield(r));
 }
 
-// 손님 말에 들어 있는 품목 이름 → [찾을 때 뗄 말, 분류(r.c) 조건, 안내용 이름]
+// 손님 말에 들어 있는 품목 이름 → [찾을 때 뗄 말, 분류(r.c) 조건, 안내용 이름, (품목 이름만 왔을 때 찾을 말)]
 const CATEGORY_WORDS = [
   [/스테인리스\s*(?:롤러\s*)?체인|스텐\s*체인/i, /스테인리스 롤러 체인/, "스테인리스 롤러 체인"],
   [/(?:롤러\s*)?체인|roller\s*chains?|chains?/i, /체인/, "체인"],
   [/컴팩트\s*씰|콤팩트\s*씰|compact\s*seals?/i, /컴팩트 씰/, "컴팩트 씰"],
   [/쿼드\s*링|X\s*-?\s*링|X-?rings?|quad\s*-?\s*rings?/i, /쿼드링/, "쿼드링(X링)"],
   [/웨어\s*링|웨어\s*밴드|밴드\s*웨어링|wear\s*-?\s*rings?|가이드\s*링/i, /웨어링/, "웨어링"],
+  [/그랜드\s*패킹|글랜드\s*패킹|gland\s*-?\s*packings?|편조\s*패킹|braided\s*packings?/i, /그랜드 패킹/, "그랜드 패킹", "그랜드 패킹"],
   [/E\s*링|이\s*링|E형\s*멈춤\s*링/i, /E형 멈춤링/, "E형 멈춤링"],
   [/C형\s*멈춤\s*링|스냅\s*링|멈춤\s*링|C\s*링|씨\s*링|스톱\s*링/i, /멈춤링|스냅링|스톱링/, "스냅링·멈춤링"],
   [/오링|O\s*링|o-?ring/i, /오링/, "오링"],
@@ -534,9 +535,12 @@ function answer(utterance, blockName) {
   // 분류 이름(스냅링·멈춤링·E링·키·핀 …)도 검색어에서는 뗌 — 위에서 분류로 따로 걸러 줌
   if (cat) work = work.replace(cat[0], " ");
   work = work.replace(/\s+/g, " ").trim();
+  // 품목 이름만 보낸 경우(분류어를 떼면 빈 검색어) — 분류에 네 번째 값이 있으면 그 품목 전체를 찾음
+  const catAll = !work && cat && cat[3];
+  if (catAll) work = cat[3];
   // "25-52-15"처럼 숫자만 '-'로 이은 것은 치수
   if (/^\d+(\.\d+)?(\s*-\s*\d+(\.\d+)?){1,2}$/.test(work)) work = work.replace(/\s*-\s*/g, " ");
-  if (!work || !/[0-9a-z]/i.test(work) || work.replace(/\s+/g, "").length < 2 && !/^\d$/.test(work)) {
+  if (!catAll && (!work || !/[0-9a-z]/i.test(work) || work.replace(/\s+/g, "").length < 2 && !/^\d$/.test(work))) {
     return reply([text("찾으시는 형번이나 치수를 보내 주시면 바로 찾아드려요.\n예) 6205, UC205, 25 52 15\n\n담당자와 대화하시려면 채팅 입력창 아래 '상담 연결'을 눌러 주세요." + closedNote())]);
   }
   // "TC 25*52*7"처럼 오일씰 형식 + 치수 — 홈페이지 오일씰 표는 형식 구분이 없으므로 형식은 떼고 오일씰 안에서 치수로 찾고,
@@ -635,6 +639,7 @@ function dimText(r) {
   if (r.c === "컴팩트 씰") return `D ${fmt(r.d)} · d ${fmt(r.D)} · L ${fmt(r.h)}`;
   if (r.c === "쿼드링 (X링)" || r.c === "웨어링") return `d ${fmt(r.d)} · D ${fmt(r.D)} · W ${fmt(r.h)}`;
   if (r.c === "밴드 웨어링") return `t ${fmt(r.h)}`;
+  if (r.c === "그랜드 패킹") return `S ${fmt(r.h)}`;
   if (load().PAGE_GROUP[r.p] === "체인") return `P ${fmt(r.h)}${r.D == null ? "" : ` · Dr ${fmt(r.D)}`} · d ${fmt(r.d)}`;
   if (r.c === "반달키") return `d0 ${fmt(r.d)} · h ${fmt(r.h)}`;
   if (r.c === "테이퍼 핀" || r.c === "평행 핀") return `d ${fmt(r.d)} · L ${fmt(r.h)}`;
