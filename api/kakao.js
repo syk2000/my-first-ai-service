@@ -424,7 +424,7 @@ function productFaqList(group, page) {
 // 답변 카드 — kind: "general" | "buy" | "product" (아래 바로가기 버튼이 다름)
 function faqAnswer(f, kind) {
   const card = { title: ("Q. " + f.q).slice(0, 50), description: f.a.slice(0, 400) };
-  const links = (f.links || (f.link ? [f.link] : [])).slice(0, 2);
+  const links = (f.links || (f.link ? [f.link] : [])).filter(([, p]) => !(f.faq && /^faq\.html/.test(p))).slice(0, 2);
   // 홈페이지 자주 묻는 질문의 같은 질문(faq.html#qNN)으로 가는 버튼 — 펼쳐진 채로 열림
   if (f.faq) links.push(["홈페이지에서 자세히 보기", "faq.html#" + f.faq]);
   if (links.length) card.buttons = links.map(([label, path]) => ({ action: "webLink", label, webLinkUrl: SITE + path }));
