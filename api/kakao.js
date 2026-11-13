@@ -382,7 +382,8 @@ const GO_PRODUCT = go("제품 질문");
 function questionList(intro, items, more) {
   return {
     outputs: [text(intro + "\n\n" + items.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
-    quick: [...items.map((f) => go(f.short, f.q)), ...more, QUICK[0]],
+    // 카카오 바로가기 버튼은 최대 10개 — 넘치면 '처음으로'를 뺌
+    quick: [...items.map((f) => go(f.short, f.q)), ...more, QUICK[0]].filter((q, i, a) => a.length <= 10 || q !== QUICK[0]),
   };
 }
 
