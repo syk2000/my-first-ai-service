@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko" translate="no" class="notranslate">
+<head>
+<meta charset="UTF-8" />
+<meta name="google" content="notranslate" />
+<meta name="viewport" content="width=1280" />
+<meta name="robots" content="noindex, nofollow" />
+<title>베어링 끼워맞춤 공차</title>
+<meta name="description" content="베어링을 축과 하우징에 끼울 때 쓰는 공차 등급(js5 · k5 · m5 · H7 · K7 · N7 등)을 하중 조건과 축 지름별로 정리한 안내입니다. — SWS TECH" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=20261113sh">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo-slot" href="index.html" style="text-decoration: none;">
+        <img class="logo-mark" src="assets/sws-logo.webp" alt="" width="45" height="34" />
+        <span class="company-name">
+          SWS TECH
+          <span class="sub">CORPORATION</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <div class="nav-item">
+          <a href="introduce.html">회사소개</a>
+          <button type="button" class="nav-caret" aria-label="하위 메뉴 펼치기" aria-expanded="false"><svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg></button>
+          <div class="nav-dropdown">
+            <a href="introduce.html#greeting">인사말</a>
+            <a href="introduce.html#history">연혁</a>
+            <a href="introduce.html#directions">찾아오시는 길</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="about-product.html">취급제품</a>
+          <button type="button" class="nav-caret" aria-label="하위 메뉴 펼치기" aria-expanded="false"><svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg></button>
+          <div class="nav-dropdown">
+            <a href="about-product.html#bearing-group">베어링</a>
+            <a href="about-product.html#accessory-group">부속 부품</a>
+            <a href="brands.html">취급 브랜드</a>
+          </div>
+        </div>
+        <a href="search-product.html">규격검색</a>
+        <div class="nav-item">
+          <a href="board.html">고객센터</a>
+          <div class="nav-dropdown">
+            <a href="notice.html">공지사항</a>
+            <a href="faq.html">자주 하는 질문</a>
+            <a href="catalog.html">카탈로그</a>
+          </div>
+        </div>
+
+        <div class="mobile-lang-row">
+          <span class="mobile-lang-caption">Language</span>
+          <div class="mobile-lang-options" id="mobileLangOptions">
+            <button type="button" class="mobile-lang-btn" data-lang="KOR" aria-pressed="true">KOR</button>
+            <button type="button" class="mobile-lang-btn" data-lang="ENG" aria-pressed="false">ENG</button>
+            <button type="button" class="mobile-lang-btn" data-lang="CHN" aria-pressed="false">CHN</button>
+            <button type="button" class="mobile-lang-btn" data-lang="JPN" aria-pressed="false">JPN</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-cta">
+          <a href="board.html" class="btn btn-accent btn-sm">견적 문의하기</a>
+        </div>
+
+        <div class="lang-select" id="langSelect">
+          <button type="button" class="lang-select-btn" id="langSelectBtn" aria-haspopup="true" aria-expanded="false">
+            <span id="langSelectLabel">KOR</span>
+            <svg viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1.5L6 6.5L11 1.5" /></svg>
+          </button>
+          <div class="lang-menu" id="langMenu" role="menu">
+            <button type="button" role="menuitemradio" aria-checked="true" data-lang="KOR">한국어 <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="ENG">English <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="CHN">中文 <span class="check">✓</span></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-lang="JPN">日本語 <span class="check">✓</span></button>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="17" x2="20" y2="17" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <section class="page-section" id="notice-bearing-fits" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Notice</p>
+        <h2>베어링 끼워맞춤 공차 — 축 · 하우징</h2>
+        <p class="notice-date">2026-11-14</p>
+      </div>
+      <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
+
+      <div class="notice-body">
+        <p>베어링을 축과 하우징에 끼울 때 고르는 공차 등급(k5 · m5 · H7 등)을 정리했습니다. 보통 등급(0급) 레이디얼 베어링, 속이 찬 강철 축, 주철 · 강 하우징에 해당합니다.</p>
+      </div>
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">① 어느 쪽을 단단하게 끼우나</h3>
+      <div class="finder-results no-auto-search" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 720px;">
+          <thead><tr><th>회전 조건</th><th>하중 구분</th><th>내륜 · 축</th><th>외륜 · 하우징</th><th>예</th></tr></thead>
+          <tbody>
+            <tr><td class="type-cell">내륜이 돌고 하중 방향은 일정</td><td>내륜 회전 하중</td><td>억지 끼워맞춤 (k · m · n · p · r)</td><td>헐거운 끼워맞춤 가능 (F · G · H · JS)</td><td>기어 박스, 모터</td></tr>
+            <tr><td class="type-cell">외륜이 돌고 하중 방향은 일정</td><td>외륜 회전 하중</td><td>헐거운 끼워맞춤 가능 (f · g · h · js)</td><td>억지 끼워맞춤 (K · M · N · P)</td><td>고정 축에 도는 바퀴 · 풀리</td></tr>
+            <tr><td class="type-cell">하중 방향이 일정하지 않음</td><td>방향 부정 하중</td><td>억지 끼워맞춤</td><td>억지 끼워맞춤</td><td>크랭크</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul style="margin: 8px 0 8px; padding-left: 20px; line-height: 1.8; font-size: 14px;"><li>억지 끼워맞춤 = 축이 구멍보다 커서 눌러 끼움(죔새), 헐거운 끼워맞춤 = 틈새가 있음, 중간 끼워맞춤 = 그 사이입니다.</li><li>하중을 받으며 도는 링을 헐겁게 끼우면 링이 축 · 하우징 위에서 미끄러져 돌아(크리프) 발열 · 마모가 생깁니다.</li><li>불평형 하중처럼 하중이 링과 함께 돌면 반대로 봅니다. 예: 내륜이 돌고 하중도 함께 돌면 = 외륜 회전 하중</li><li>소문자(k5 등) = 축 공차, 대문자(H7 등) = 하우징 구멍 공차입니다.</li></ul>
+
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">② 축 공차 — 레이디얼 베어링 (원통 구멍)</h3>
+      <div class="finder-results no-auto-search" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 720px;">
+          <thead><tr><th>하중 조건</th><th>볼 베어링</th><th>원통 · 테이퍼 롤러</th><th>자동조심 롤러</th><th>축 공차</th></tr></thead>
+          <tbody>
+            <tr><td class="type-cell">외륜 회전 하중 (내륜이 축 위에서 쉽게 움직여야 함)</td><td colspan="3">모든 축 지름</td><td>g6</td></tr>
+            <tr><td class="type-cell">외륜 회전 하중 (내륜이 움직일 필요 없음)</td><td colspan="3">모든 축 지름</td><td>h6</td></tr>
+            <tr><td class="type-cell" rowspan="4">내륜 회전 하중 · 방향 부정 — 가벼운 하중</td><td>~18</td><td>&ndash;</td><td>&ndash;</td><td>h5 · js5</td></tr>
+            <tr><td>18~100</td><td>~40</td><td>&ndash;</td><td>js6</td></tr>
+            <tr><td>100~200</td><td>40~140</td><td>&ndash;</td><td>k6</td></tr>
+            <tr><td>&ndash;</td><td>140~200</td><td>&ndash;</td><td>m6</td></tr>
+            <tr><td class="type-cell" rowspan="7">내륜 회전 하중 · 방향 부정 — 보통 하중</td><td>~18</td><td>&ndash;</td><td>&ndash;</td><td>js5</td></tr>
+            <tr><td>18~100</td><td>~40</td><td>~40</td><td>k5</td></tr>
+            <tr><td>100~140</td><td>40~100</td><td>40~65</td><td>m5</td></tr>
+            <tr><td>140~200</td><td>100~140</td><td>65~100</td><td>m6</td></tr>
+            <tr><td>200~280</td><td>140~200</td><td>100~140</td><td>n6</td></tr>
+            <tr><td>&ndash;</td><td>200~400</td><td>140~280</td><td>p6</td></tr>
+            <tr><td>&ndash;</td><td>&ndash;</td><td>280~500</td><td>r6</td></tr>
+            <tr><td class="type-cell" rowspan="3">내륜 회전 하중 · 방향 부정 — 무거운 하중 · 충격</td><td>&ndash;</td><td>50~140</td><td>50~100</td><td>n6</td></tr>
+            <tr><td>&ndash;</td><td>140~200</td><td>100~140</td><td>p6</td></tr>
+            <tr><td>&ndash;</td><td>200~</td><td>140~200</td><td>r6</td></tr>
+            <tr><td class="type-cell">축 방향 하중만</td><td colspan="3">모든 축 지름</td><td>js6</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 12px; color: var(--text-faint); margin-top: 6px;">축 지름 단위 mm. 18~100 = 18 초과 100 이하, ~18 = 18 이하, 200~ = 200 초과</p>
+      <ul style="margin: 8px 0 8px; padding-left: 20px; line-height: 1.8; font-size: 14px;"><li>하중 구분(P = 동등가 레이디얼 하중, Cr = 기본 동정격하중): 가벼운 = P ≤ 0.05Cr, 보통 = 0.05~0.10Cr, 무거운 = 0.10Cr 초과. 메이커에 따라 경계가 조금 다릅니다.</li><li>단열 테이퍼 롤러 · 단열 앵귤러 볼 베어링은 k5 · m5 대신 k6 · m6을 써도 됩니다.</li><li>무거운 하중에는 내부 틈새가 CN보다 큰 베어링(C3 등)을 씁니다.</li><li>속이 빈 축 · 얇은 하우징 · 진동이 큰 곳은 표보다 더 단단하게 끼웁니다.</li></ul>
+
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">③ 하우징 공차 — 레이디얼 베어링</h3>
+      <div class="finder-results no-auto-search" style="margin-top: 0; overflow-x: auto;">
+        <table class="spec-table" style="min-width: 720px;">
+          <thead><tr><th>하중 구분</th><th>조건</th><th>하우징 공차</th><th>외륜 축 방향 이동</th><th>예</th></tr></thead>
+          <tbody>
+            <tr><td class="type-cell" rowspan="3">외륜 정지 (내륜 회전 하중)</td><td>모든 하중</td><td>H7</td><td>쉽게 가능</td><td>일반 베어링, 철도 차축</td></tr>
+            <tr><td>가벼운 · 보통 하중</td><td>H8</td><td>쉽게 가능</td><td>플러머 블록</td></tr>
+            <tr><td>축 · 내륜 온도가 높음</td><td>G7</td><td>쉽게 가능</td><td>제지 건조 롤</td></tr>
+            <tr><td class="type-cell" rowspan="3">방향 부정 하중</td><td>가벼운 · 보통 하중</td><td>JS7</td><td>가능</td><td>모터, 펌프</td></tr>
+            <tr><td>보통 · 무거운 하중</td><td>K7</td><td>원칙적으로 불가</td><td>모터, 펌프, 크랭크축</td></tr>
+            <tr><td>큰 충격 하중</td><td>M7</td><td>불가</td><td>견인 모터</td></tr>
+            <tr><td class="type-cell" rowspan="3">외륜 회전 하중</td><td>가벼운 · 변동 하중</td><td>M7</td><td>불가</td><td>컨베이어 롤러, 텐션 풀리</td></tr>
+            <tr><td>보통 · 무거운 하중</td><td>N7</td><td>불가</td><td>휠 허브 (볼 베어링)</td></tr>
+            <tr><td>얇은 하우징 + 무거운 하중 · 큰 충격</td><td>P7</td><td>불가</td><td>휠 허브 (롤러 베어링)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul style="margin: 8px 0 8px; padding-left: 20px; line-height: 1.8; font-size: 14px;"><li>외륜을 단단하게 끼우는 경우(K7 · M7 · N7 · P7)는 분할 하우징보다 일체형 하우징을 씁니다.</li><li>알루미늄 등 경합금 하우징은 표보다 더 단단하게 끼웁니다.</li><li>정밀 회전이 필요하면 JS6 · K6, 소음을 줄여야 하면 H6을 씁니다.</li></ul>
+
+      <h3 style="margin: 30px 0 12px; font-size: 19px;">④ 슬리브 · 스러스트 베어링</h3>
+      <ul style="margin: 0 0 8px; padding-left: 20px; line-height: 1.8;"><li>어댑터 · 분리 슬리브(테이퍼 구멍 베어링): 축 h9 (진원도 · 원통도 IT5), 전동축 등은 h10 (IT7)</li><li>스러스트 베어링 축: 축 방향 하중만 → h6 · js6</li><li>자동조심 스러스트 롤러 베어링 축: 내륜 정지 → js6 / 내륜 회전 · 방향 부정 → 200 이하 k6, 200~400 m6, 400 초과 n6</li><li>스러스트 베어링 하우징: 축 방향 하중만 → 외륜과 하우징 사이에 지름 방향 틈새를 둡니다. 정밀도가 필요한 스러스트 볼 베어링은 H8</li><li>자동조심 스러스트 롤러 베어링 하우징: 외륜 정지 → H7 / 외륜 회전 · 방향 부정 → K7, 지름 방향 하중이 크면 M7</li></ul>
+      <p style="margin-top: 24px;"><a class="btn btn-outline btn-sm" href="bearing_page.html">관련 제품: 베어링 보기 →</a> <a class="btn btn-outline btn-sm" href="notice.html">목록으로</a></p>
+    </div>
+  </section>
+
+
+<footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>
+        <div class="f-meta">
+          TEL 02-2613-3040 · FAX 02-2613-3042<br />
+          서울 구로구 경인로53길 32, 미래에코타워 B101·102호
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="introduce.html">회사소개</a>
+        <a href="about-product.html">취급제품</a>
+        <a href="board.html">문의</a>
+      </nav>
+    </div>
+    <div class="wrap f-copy">© SWS TECH. 본 홈페이지의 도면·규격표·사진 등 자료의 무단 복제·배포를 금합니다.</div>
+  </footer>
+
+<script src="i18n/common.dict.js?v=20261107nt"></script>
+<script src="i18n/pages/notice_bearing_fits.dict.js?v=20261114nt"></script>
+<script src="i18n.js?v=20261025a"></script>
+<script src="common.js?v=20261113dp"></script>
+</body>
+</html>
