@@ -107,6 +107,7 @@ const CATEGORY_WORDS = [
   [/그랜드\s*패킹|글랜드\s*패킹|gland\s*-?\s*packings?|편조\s*패킹|braided\s*packings?/i, /그랜드 패킹/, "그랜드 패킹", "그랜드 패킹"],
   [/E\s*링|이\s*링|E형\s*멈춤\s*링/i, /E형 멈춤링/, "E형 멈춤링"],
   [/C형\s*멈춤\s*링|스냅\s*링|멈춤\s*링|C\s*링|씨\s*링|스톱\s*링/i, /멈춤링|스냅링|스톱링/, "스냅링·멈춤링"],
+  [/줄\s*오링|줄\s*O\s*링|오링\s*코드|o-?ring\s*cords?/i, /줄오링/, "줄오링", "줄오링"],
   [/오링|O\s*링|o-?ring/i, /오링/, "오링"],
   [/스프링\s*핀|핀/, /핀/, "핀"],
   [/로크\s*너트|록\s*너트|너트/, /너트/, "너트"],
@@ -530,6 +531,8 @@ function answer(utterance, blockName) {
   const cat = CATEGORY_WORDS.find(([re]) => re.test(u));
   // 예전 카탈로그 표기(아답타·와샤·숫TP 등)를 지금 표기로 바꿔서 찾음
   let work = load().specAlias(u).replace(/[^\p{L}\p{N}\s\-\/.*×"'()#+,~]/gu, " ").replace(/(\d)\s*(mm|㎜)/gi, "$1");
+  // "줄오링 3"은 아래에서 '오링'만 떼면 '줄 3'이 되므로 분류어를 먼저 뗌
+  if (cat && cat[2] === "줄오링") work = work.replace(cat[0], " ");
   let qty = null;
   const qm = work.match(/(\d+)\s*(개|ea|pcs|세트|set|박스|box|본|롤)(?![a-z])/i);
   if (qm) { qty = qm[1] + qm[2]; work = work.replace(qm[0], " "); }
@@ -643,6 +646,7 @@ function dimText(r) {
   if (r.c === "쿼드링 (X링)" || r.c === "웨어링") return `d ${fmt(r.d)} · D ${fmt(r.D)} · W ${fmt(r.h)}`;
   if (r.c === "밴드 웨어링") return `t ${fmt(r.h)}`;
   if (r.c === "그랜드 패킹") return `S ${fmt(r.h)}`;
+  if (r.c === "줄오링") return `Ø ${fmt(r.h)}`;
   if (load().PAGE_GROUP[r.p] === "체인") return `P ${fmt(r.h)}${r.D == null ? "" : ` · Dr ${fmt(r.D)}`} · d ${fmt(r.d)}`;
   if (r.c === "반달키") return `d0 ${fmt(r.d)} · h ${fmt(r.h)}`;
   if (r.c === "테이퍼 핀" || r.c === "평행 핀") return `d ${fmt(r.d)} · L ${fmt(r.h)}`;
