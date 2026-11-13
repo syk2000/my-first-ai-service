@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css?v=20261113sh">
+<style id="pill-tabs">#yoke-track-roller .tab-cards.pill { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 20px; } #yoke-track-roller .tab-cards.pill .cat-tab-btn { flex-direction: row; align-items: center; gap: 0; padding: 11px 22px; border-radius: 999px; transform: none; } #yoke-track-roller .tab-cards.pill .cat-tab-btn::before { display: none; } #yoke-track-roller .tab-cards.pill .tab-card-title { font-size: 15px; font-weight: 600; color: var(--text-sub); } #yoke-track-roller .tab-cards.pill .cat-tab-btn.active .tab-card-title { color: var(--accent); } #yoke-track-roller .tab-cards.pill .tab-card-desc { display: none; }</style>
 </head>
 <body>
 
@@ -103,11 +104,6 @@
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
-      <div id="maker-codes" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; margin: 4px 0 18px; font-size: 12.5px; color: var(--text-sub); line-height: 1.6;">
-        <p style="margin: 0 0 8px; font-weight: 700; color: var(--text);">메이커별 형식 기호</p>
-        <div class="finder-results" style="overflow-x: auto; margin: 0;"><table class="spec-table" style="font-size: 12.5px; min-width: 560px;"><thead><tr><th style="padding: 5px 10px;">INA</th><th style="padding: 5px 10px;">NTN</th><th style="padding: 5px 10px;">IKO</th><th style="padding: 5px 10px;">KOYO</th><th style="padding: 5px 10px;">NSK</th><th style="padding: 5px 10px;">SKF</th></tr></thead><tbody><tr><td style="padding: 4px 10px;">NATR</td><td style="padding: 4px 10px;">NATR</td><td style="padding: 4px 10px;">NART</td><td style="padding: 4px 10px;">NATR</td><td style="padding: 4px 10px;">FYCJ</td><td style="padding: 4px 10px;">NATR</td></tr><tr><td style="padding: 4px 10px;">NUTR</td><td style="padding: 4px 10px;">NUTR</td><td style="padding: 4px 10px;">NURT</td><td style="padding: 4px 10px;">NUTR</td><td style="padding: 4px 10px;">&ndash;</td><td style="padding: 4px 10px;">NUTR</td></tr></tbody></table></div>
-        <p style="margin: 8px 0 0;">※ 같은 형식이라도 메이커마다 기호가 다릅니다. 다른 메이커 형번으로 문의하셔도 됩니다.</p>
-      </div>
       <div class="diagram-box">
         <img class="fig-draw" src="img/yoke_track_roller.webp?v=wm5" alt="구조 단면도" loading="lazy">
         <p class="diagram-legend">d(내경) · D(외경) · 공차(d/D) · B(폭) · B1(내륜 폭, NUTR·NART) · a·r(NART)</p>
@@ -122,10 +118,11 @@
         <button type="button" class="spec-toolbar-btn" id="ytrToggleAll" style="display: none;">전체 펼치기</button>
       </div>
       <div id="ytrGroups">
-      <div class="cat-tabs tab-cards cols-3" role="tablist" aria-label="시리즈 선택">
+      <div class="cat-tabs tab-cards pill" role="tablist" aria-label="시리즈 선택">
         <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">NUTR 시리즈</span><span class="tab-card-desc">29건</span></button>
         <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">NART 시리즈 (= NATR)</span><span class="tab-card-desc">14건</span></button>
         <button type="button" class="cat-tab-btn" data-tab="g3" role="tab" aria-selected="false"><span class="tab-card-title">LR 시리즈</span><span class="tab-card-desc">36건</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g4" role="tab" aria-selected="false"><span class="tab-card-title">형식 기호</span><span class="tab-card-desc">메이커별 기호</span></button>
       </div>
       <div class="cat-tab-panel" data-panel="g1">
         <details class="series-group" open>
@@ -227,6 +224,14 @@
         </details>
       </div>
 
+      <div class="cat-tab-panel" data-panel="g4" hidden>
+      <div id="maker-codes" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; margin: 0 0 18px; font-size: 12.5px; color: var(--text-sub); line-height: 1.6;">
+        <p style="margin: 0 0 8px; font-weight: 700; color: var(--text);">메이커별 형식 기호</p>
+        <div class="finder-results" style="overflow-x: auto; margin: 0;"><table class="spec-table" style="font-size: 12.5px; min-width: 560px;"><thead><tr><th style="padding: 5px 10px;">INA</th><th style="padding: 5px 10px;">NTN</th><th style="padding: 5px 10px;">IKO</th><th style="padding: 5px 10px;">KOYO</th><th style="padding: 5px 10px;">NSK</th><th style="padding: 5px 10px;">SKF</th></tr></thead><tbody><tr><td style="padding: 4px 10px;">NATR</td><td style="padding: 4px 10px;">NATR</td><td style="padding: 4px 10px;">NART</td><td style="padding: 4px 10px;">NATR</td><td style="padding: 4px 10px;">FYCJ</td><td style="padding: 4px 10px;">NATR</td></tr><tr><td style="padding: 4px 10px;">NUTR</td><td style="padding: 4px 10px;">NUTR</td><td style="padding: 4px 10px;">NURT</td><td style="padding: 4px 10px;">NUTR</td><td style="padding: 4px 10px;">&ndash;</td><td style="padding: 4px 10px;">NUTR</td></tr></tbody></table></div>
+        <p style="margin: 8px 0 0;">※ 같은 형식이라도 메이커마다 기호가 다릅니다. 다른 메이커 형번으로 문의하셔도 됩니다.</p>
+      </div>
+      </div>
+
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
@@ -254,7 +259,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261107nt"></script>
-<script src="i18n/pages/yoke_track_roller.dict.js?v=20261113nx"></script>
+<script src="i18n/pages/yoke_track_roller.dict.js?v=20261113pl"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261113dp"></script>
 <script>
