@@ -406,19 +406,27 @@ function faqMenu() {
 const faqList = () => questionList("일반적으로 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.", FAQ, [GO_BUY]);
 const buyFaqList = () => questionList("구매·배송 관련 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.", BUY_FAQ, [GO_GENERAL, GO_PRODUCT]);
 
-// 제품 질문은 품목별로: 먼저 품목을 고르고 → 그 품목 질문 목록 (품목이 많아 두 페이지)
-const PRODUCT_PAGES = [PRODUCT_GROUPS.slice(0, 8), PRODUCT_GROUPS.slice(8)];
+// 제품 질문은 품목별로: 먼저 품목을 고르고 → 그 품목 질문 목록
+// 품목이 많아 한 쪽에 7개씩 (품목 7 + 이전·다음 + 처음으로 = 바로가기 10개 한도)
+const PER_PAGE = 7;
+const PRODUCT_PAGES = [];
+for (let i = 0; i < PRODUCT_GROUPS.length; i += PER_PAGE) PRODUCT_PAGES.push(PRODUCT_GROUPS.slice(i, i + PER_PAGE));
+const pageCmd = (i) => (i === 0 ? "제품 질문" : "제품 질문 " + (i + 1));
 function productFaqList(group, page) {
   if (group) {
+    const gi = PRODUCT_PAGES.findIndex((pg) => pg.includes(group));
     return questionList(`${group} 관련 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.`, PRODUCT_FAQ.filter((f) => f.g === group),
-      [go("다른 품목", PRODUCT_PAGES[1].includes(group) ? "제품 질문 2" : "제품 질문")]);
+      [go("다른 품목", pageCmd(gi))]);
   }
-  const p = page === 2 ? 1 : 0;
+  const p = Math.min(Math.max((page || 1) - 1, 0), PRODUCT_PAGES.length - 1);
   const groups = PRODUCT_PAGES[p];
+  const nav = [];
+  if (p > 0) nav.push(go("이전 품목", pageCmd(p - 1)));
+  if (p < PRODUCT_PAGES.length - 1) nav.push(go("다음 품목", pageCmd(p + 1)));
   return {
-    outputs: [text("제품 문의 때 자주 하는 질문이에요. 품목을 골라 주세요." + (p ? " (2/2)" : " (1/2)") + "\n\n" +
+    outputs: [text("제품 문의 때 자주 하는 질문이에요. 품목을 골라 주세요." + ` (${p + 1}/${PRODUCT_PAGES.length})` + "\n\n" +
       groups.map((g) => `■ ${g}: ` + PRODUCT_FAQ.filter((f) => f.g === g).map((f) => f.short).join(", ")).join("\n"))],
-    quick: [...groups.map((g) => go(g, "제품 질문: " + g)), p ? go("이전 품목", "제품 질문") : go("다음 품목", "제품 질문 2"), QUICK[0]],
+    quick: [...groups.map((g) => go(g, "제품 질문: " + g)), ...nav, QUICK[0]],
   };
 }
 
@@ -467,7 +475,8 @@ function answer(utterance, blockName) {
   const pfaq = PRODUCT_FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
   if (pfaq) return reply(faqAnswer(pfaq, "product"));
   if (/^(제품\s*(질문|FAQ|문의\s*FAQ)|제품\s*관련\s*질문)$/i.test(u)) return reply(productFaqList());
-  if (/^제품\s*질문\s*2$/.test(u)) return reply(productFaqList(null, 2));
+  const pgn = u.match(/^제품\s*질문\s*(\d)$/);
+  if (pgn) return reply(productFaqList(null, +pgn[1]));
   const pg = u.match(/^제품\s*질문\s*[:：]\s*(.+)$/);
   if (pg && PRODUCT_GROUPS.includes(pg[1].trim())) return reply(productFaqList(pg[1].trim()));
   if (/^일반\s*질문$/.test(u)) return reply(faqList());
