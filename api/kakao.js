@@ -633,7 +633,7 @@ function answer(utterance, blockName) {
   return showResults(rows, query, note, cleaned, false, typed, qty);
 }
 
-// 카드에 보일 치수 — 키는 b(나비)·h(높이)·L(길이), 반달키는 d0(축 지름)·h, 베어링은 폭 B
+// 카드에 보일 치수 — 키는 b(너비)·h(높이)·L(길이), 반달키는 d0(축 지름)·h, 베어링은 폭 B
 function dimText(r) {
   if (/사각키|라운드 키/.test(r.c)) return `b ${fmt(r.d)} · h ${fmt(r.D)} · L ${fmt(r.h)}`;
   if (r.c === "컴팩트 씰") return `D ${fmt(r.d)} · d ${fmt(r.D)} · L ${fmt(r.h)}`;
