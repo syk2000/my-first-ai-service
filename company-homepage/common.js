@@ -248,7 +248,7 @@
       });
       const need = () => (typeof specQueryVariants === "function" ? Promise.resolve() : loading || (loading = new Promise((res) => {
         const s = document.createElement("script");
-        s.src = "assets/spec-data.js?v=20261113gk";
+        s.src = "assets/spec-data.js?v=20261113np";
         s.onload = res; s.onerror = res;
         document.head.append(s);
       })));

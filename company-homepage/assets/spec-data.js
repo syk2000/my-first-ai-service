@@ -63,6 +63,7 @@ var SPEC_ALIAS_RULES = [
   [/^\s*(?:웨어\s*링|가이드\s*링|WEAR\s*-?\s*RINGS?|GUIDE\s*-?\s*RINGS?)\s*(\d+(?:\.\d+)?)?\s*$/gi, "KRW $1"],
   [/^\s*(?:컴팩트\s*씰|콤팩트\s*씰|COMPACT\s*SEALS?)\s*(\d+(?:\.\d+)?)?\s*$/gi, "KDAS $1"],
   // NATR(INA 등) = NART(IKO) 같은 요크형 트랙 롤러 — NART 행으로
+  [/^\s*NATR\s*-?\s*(\d+)\s*-?\s*(?:PPA|PPX|PP|X)?\s*$/gi, "NART $1"],
   [/^\s*NATR\s*-?\s*/gi, "NART "],
   // 그랜드 패킹 인치 규격(3/8 · 1/2인치 · 1") → mm 규격 행
   [/^\s*(?:그랜드\s*패킹|글랜드\s*패킹|GLAND\s*-?\s*PACKINGS?|편조\s*패킹|BRAIDED\s*PACKINGS?)\s*1\/8\s*(?:"|″|인치|INCH)?\s*$/gi, "그랜드 패킹 3.2"],
