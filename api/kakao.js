@@ -546,7 +546,7 @@ function answer(utterance, blockName) {
   // "TC 25*52*7"처럼 오일씰 형식 + 치수 — 홈페이지 오일씰 표는 형식 구분이 없으므로 형식은 떼고 오일씰 안에서 치수로 찾고,
   // 견적·발주 양식에는 손님이 적은 형식을 그대로 넣음
   let sealType = null;
-  const sm = work.match(/^(TCV|TCN|TCS|TC|SC|TB|SB|VC|VB|TA|SA|MG|SM|DM|DA|PCS|SCB|S|D|V)\s*(?=\d)/i);
+  const sm = work.match(/^(TCV|TCN|TCS|TC|SC|TB|SB|VC|VB|TA|SA|MG(?!1(?:[\s\-\/]|$))|SM|DM|DA|PCS|SCB|S(?!2(?:[\s\-\/]|$))|D|V)\s*(?=\d)/i);  // MG1 25·S2 25 = 메카니컬 씰 MG1·S2
   if (sm && /^\d+(\.\d+)?([\s×xX*]+\d+(\.\d+)?){1,2}$/.test(work.slice(sm[0].length).trim())) {
     sealType = sm[1].toUpperCase();
     work = work.slice(sm[0].length).trim();

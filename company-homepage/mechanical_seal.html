@@ -100,20 +100,34 @@
         <h2>메카니컬 씰</h2>
         <p>펌프·교반기 등에서 회전축이 하우징을 관통하는 부분의 누설을 막는 축 밀봉 부품입니다. 축과 함께 도는 회전 링과 하우징에 고정된 시트(고정 링)가 맞닿아 미끄러지며 밀봉합니다.</p>
         <p>널리 쓰이는 고무 벨로즈형 표준 제품인 EagleBurgmann MG1(EN 12756, 미터계)과 John Crane Type 21(인치계)의 주요 치수를 정리했습니다.</p>
+        <p>일반 펌프용 씰(F1·F2, G10·G1S, B2·S2, HK2·KH2, WP·WPA, JP2, FNF·FN, MG1 일반형, CP2)의 치수와 사용 범위도 함께 정리했습니다.</p>
         <p class="section-head-tip">형번 또는 축경 일부만 입력해도 검색됩니다.</p>
       </div>
       <p class="copy-notice">※ 도면은 SWS TECH가 치수 설명용으로 작성한 개략도입니다. 무단 복제·배포를 금합니다.</p>
       <div class="field" style="max-width: 360px; margin-bottom: 16px;">
         <label for="msFilter">형번 / 축경 검색</label>
-        <input id="msFilter" type="text" placeholder="예: MG1/25 또는 1.250" autocomplete="off" />
+        <input id="msFilter" type="text" placeholder="예: MG1/25, F1-25 또는 1.250" autocomplete="off" />
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="msCount" style="margin: 0;"></p>
         <button type="button" class="spec-toolbar-btn" id="msToggleAll">전체 접기</button>
       </div>
+      <p class="ms-group-label" style="font-size: 13px; font-weight: 700; color: var(--text-sub); margin: 8px 0 8px;">표준형 (EN 12756 · 인치계)</p>
       <div class="cat-tabs tab-cards" role="tablist" aria-label="제품 타입 선택">
         <button type="button" class="cat-tab-btn active" data-tab="mg1" role="tab" aria-selected="true"><span class="tab-card-title">MG1</span><span class="tab-card-desc">고무 벨로즈형 · 미터계(EN 12756)</span></button>
         <button type="button" class="cat-tab-btn" data-tab="t21" role="tab" aria-selected="false"><span class="tab-card-title">Type 21</span><span class="tab-card-desc">고무 벨로즈형 · 인치계</span></button>
+      </div>
+      <p class="ms-group-label" style="font-size: 13px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">일반 펌프용</p>
+      <div class="cat-tabs tab-cards" role="tablist" aria-label="일반 펌프용 씰 선택">
+        <button type="button" class="cat-tab-btn" data-tab="f1f2" role="tab" aria-selected="false"><span class="tab-card-title">F1 · F2</span><span class="tab-card-desc">고무 벨로즈 · 스토퍼형/칼라형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="g10" role="tab" aria-selected="false"><span class="tab-card-title">G10 · G1S</span><span class="tab-card-desc">스프링형 · 칼라형/스토퍼형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="b2s2" role="tab" aria-selected="false"><span class="tab-card-title">B2 · S2</span><span class="tab-card-desc">고무 벨로즈 · 스프링 드라이브</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="hk2" role="tab" aria-selected="false"><span class="tab-card-title">HK2 · KH2</span><span class="tab-card-desc">더블 씰 · 수중펌프용</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="wp" role="tab" aria-selected="false"><span class="tab-card-title">WP · WPA</span><span class="tab-card-desc">자동차·양수기용</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="jp2" role="tab" aria-selected="false"><span class="tab-card-title">JP2</span><span class="tab-card-desc">벨로즈 · 싱글 스프링</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="fnf" role="tab" aria-selected="false"><span class="tab-card-title">FNF · FN</span><span class="tab-card-desc">테이퍼 스프링 · O링</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="mg1g" role="tab" aria-selected="false"><span class="tab-card-title">MG1 (일반형)</span><span class="tab-card-desc">고무 벨로즈 · 회전 방향 무관</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="cp2" role="tab" aria-selected="false"><span class="tab-card-title">CP2</span><span class="tab-card-desc">고무 벨로즈</span></button>
       </div>
       <div class="cat-tab-panel" data-panel="mg1">
       <div class="diagram-box">
@@ -175,6 +189,235 @@
       <p class="spec-note">단위: inch (D<sub>1</sub>(mm)는 1 inch = 25.4 mm로 환산한 값)</p>
       </div>
 
+      <div class="cat-tab-panel" data-panel="f1f2" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">치수 기호 설명용 개략도</p>
+        <img class="fig-draw" src="assets/mechanical_seal_f1f2.webp?v=gs1" alt="F1 · F2 메카니컬 씰 설치 단면 개략도" loading="lazy">
+        <p class="diagram-legend">d: 축경 · 그 밖의 치수 기호는 그림의 위치를 참고하세요. 위쪽 F1(스토퍼), 아래쪽 F2(스프링 칼라)</p>
+      </div>
+      <div class="info-box" style="margin: 0 0 18px;">
+        <strong>F1 · F2 사용 범위</strong><br />
+        최대 압력 5 kgf/cm² · 온도 F1 90 °C, F1-V(바이톤) 150 °C · 최대 속도 10 m/s · 최대 점도 500 cP · 슬러리 1.0% 이하<br />
+        특징: 회전 방지(Anti-rotating) 설계 · 유체(청수·해수·산·알칼리 등)에 따라 재질 선택 · H1·H2는 회전 면 SiC 사양(H2는 칼라형)<br />
+        용도: 청수·온수·해수용 펌프, 농·공업용 펌프, 진공 펌프, 오일 이송 펌프 · F1은 워터펌프·양수기 등 물 펌프용 양산품이며 세라믹 시트가 표준입니다.
+      </div>
+        <details class="series-group" open>
+          <summary>F1 · F2 시리즈<span class="series-count">19건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 520px;">
+              <thead><tr><th>SIZE</th><th>d</th><th>D1</th><th>D</th><th>L</th><th>L1</th><th>L2(F2)</th></tr></thead>
+              <tbody><tr><td class="type-cell">010</td><td>10</td><td>24</td><td>24</td><td>23</td><td>5.5</td><td>8</td></tr><tr><td class="type-cell">012</td><td>12</td><td>26</td><td>26</td><td>23</td><td>5.5</td><td>8</td></tr><tr><td class="type-cell">014</td><td>14</td><td>27</td><td>28</td><td>23</td><td>6</td><td>10</td></tr><tr><td class="type-cell">015</td><td>15</td><td>27</td><td>28</td><td>23</td><td>6</td><td>10</td></tr><tr><td class="type-cell">016</td><td>16</td><td>28</td><td>32</td><td>28</td><td>8</td><td>10</td></tr><tr><td class="type-cell">018</td><td>18</td><td>32</td><td>35</td><td>28</td><td>8</td><td>10</td></tr><tr><td class="type-cell">019</td><td>19</td><td>35</td><td>35</td><td>28</td><td>8</td><td>10</td></tr><tr><td class="type-cell">020</td><td>20</td><td>35</td><td>38</td><td>28</td><td>8</td><td>10</td></tr><tr><td class="type-cell">022</td><td>22</td><td>36</td><td>40</td><td>28</td><td>8.5</td><td>10</td></tr><tr><td class="type-cell">024</td><td>24</td><td>38</td><td>44</td><td>29</td><td>8.5</td><td>10</td></tr><tr><td class="type-cell">025</td><td>25</td><td>39</td><td>44</td><td>29</td><td>8.5</td><td>10</td></tr><tr><td class="type-cell">028</td><td>28</td><td>43</td><td>46</td><td>30</td><td>8.5</td><td>10</td></tr><tr><td class="type-cell">030</td><td>30</td><td>46</td><td>50</td><td>32</td><td>9</td><td>10</td></tr><tr><td class="type-cell">032</td><td>32</td><td>48</td><td>54</td><td>32</td><td>9</td><td>10</td></tr><tr><td class="type-cell">035</td><td>35</td><td>57</td><td>58</td><td>36</td><td>10</td><td>10</td></tr><tr><td class="type-cell">038</td><td>38</td><td>56</td><td>60</td><td>38</td><td>10</td><td>10</td></tr><tr><td class="type-cell">040</td><td>40</td><td>57</td><td>64</td><td>38</td><td>11</td><td>12</td></tr><tr><td class="type-cell">045</td><td>45</td><td>64</td><td>66</td><td>39</td><td>11</td><td>12</td></tr><tr><td class="type-cell">050</td><td>50</td><td>69</td><td>72</td><td>42</td><td>11</td><td>12</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+      <p class="spec-note">단위: mm · F2의 D는 F1의 D와 같습니다. L·L1은 F1 치수입니다.</p>
+      </div>
+      <div class="cat-tab-panel" data-panel="g10" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">치수 기호 설명용 개략도</p>
+        <img class="fig-draw" src="assets/mechanical_seal_g10.webp?v=gs1" alt="G10 · G1S 메카니컬 씰 설치 단면 개략도" loading="lazy">
+        <p class="diagram-legend">d: 축경 · 그 밖의 치수 기호는 그림의 위치를 참고하세요. 위쪽 G10(칼라), 아래쪽 G1S(스토퍼)</p>
+      </div>
+      <div class="info-box" style="margin: 0 0 18px;">
+        <strong>G10 · G1S 사용 범위</strong><br />
+        압력 7 kgf/cm²<br />
+        용도: 청수·온수, 진공 펌프, 오일 이송 펌프, 라인 펌프 등<br />
+        축경 52~75 mm는 고정 시트가 스텔라이트 또는 초경(TC)입니다.
+      </div>
+        <details class="series-group" open>
+          <summary>G10 · G1S 시리즈<span class="series-count">25건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 380px; min-width: 300px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 560px;">
+              <thead><tr><th>SIZE</th><th>d</th><th>D</th><th>L</th><th>D1</th><th>L1</th><th>A</th><th>L2(G10)</th></tr></thead>
+              <tbody><tr><td class="type-cell">016</td><td>16</td><td>29</td><td>28</td><td>32</td><td>8</td><td>30</td><td>10</td></tr><tr><td class="type-cell">018</td><td>18</td><td>32</td><td>28</td><td>35</td><td>8</td><td>35</td><td>10</td></tr><tr><td class="type-cell">019</td><td>19</td><td>33</td><td>28</td><td>35</td><td>8</td><td>35</td><td>10</td></tr><tr><td class="type-cell">020</td><td>20</td><td>34</td><td>28</td><td>38</td><td>8</td><td>38</td><td>10</td></tr><tr><td class="type-cell">022</td><td>22</td><td>36</td><td>28</td><td>40</td><td>8.5</td><td>38</td><td>10</td></tr><tr><td class="type-cell">025</td><td>25</td><td>39</td><td>29</td><td>44</td><td>8.5</td><td>41.5</td><td>10</td></tr><tr><td class="type-cell">028</td><td>28</td><td>44</td><td>30</td><td>46</td><td>8.5</td><td>44</td><td>10</td></tr><tr><td class="type-cell">030</td><td>30</td><td>46</td><td>32</td><td>50</td><td>9</td><td>48</td><td>10</td></tr><tr><td class="type-cell">032</td><td>32</td><td>48</td><td>32</td><td>54</td><td>9</td><td>48</td><td>10</td></tr><tr><td class="type-cell">035</td><td>35</td><td>52</td><td>36</td><td>58</td><td>10</td><td>54</td><td>10</td></tr><tr><td class="type-cell">038</td><td>38</td><td>55</td><td>38</td><td>60</td><td>10</td><td>54.5</td><td>10</td></tr><tr><td class="type-cell">040</td><td>40</td><td>57</td><td>38</td><td>64</td><td>10</td><td>64</td><td>12</td></tr><tr><td class="type-cell">042</td><td>42</td><td>62</td><td>40</td><td>64</td><td>11</td><td>64</td><td>12</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 380px; min-width: 300px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 560px;">
+              <thead><tr><th>SIZE</th><th>d</th><th>D</th><th>L</th><th>D1</th><th>L1</th><th>A</th><th>L2(G10)</th></tr></thead>
+              <tbody><tr><td class="type-cell">045</td><td>45</td><td>63</td><td>40</td><td>66</td><td>11</td><td>64</td><td>12</td></tr><tr><td class="type-cell">048</td><td>48</td><td>67</td><td>43</td><td>66</td><td>12</td><td>66.7</td><td>12</td></tr><tr><td class="type-cell">050</td><td>50</td><td>69</td><td>43</td><td>72</td><td>11</td><td>70</td><td>12</td></tr><tr><td class="type-cell">052</td><td>52</td><td>75</td><td>43</td><td>75</td><td>14</td><td>73</td><td>12</td></tr><tr><td class="type-cell">055</td><td>55</td><td>75</td><td>43</td><td>75</td><td>14</td><td>80</td><td>12</td></tr><tr><td class="type-cell">058</td><td>58</td><td>79</td><td>52</td><td>80</td><td>14</td><td>82.5</td><td>12</td></tr><tr><td class="type-cell">060</td><td>60</td><td>79</td><td>52</td><td>80</td><td>14</td><td>82.5</td><td>12</td></tr><tr><td class="type-cell">063.5</td><td>63.5</td><td>85</td><td>53</td><td>85</td><td>15</td><td>85.7</td><td>13</td></tr><tr><td class="type-cell">065</td><td>65</td><td>85</td><td>53</td><td>85</td><td>15</td><td>85.7</td><td>13</td></tr><tr><td class="type-cell">068</td><td>68</td><td>90</td><td>60</td><td>88</td><td>16</td><td>95</td><td>14</td></tr><tr><td class="type-cell">070</td><td>70</td><td>90</td><td>60</td><td>92</td><td>16</td><td>95</td><td>14</td></tr><tr><td class="type-cell">075</td><td>75</td><td>95</td><td>65</td><td>97</td><td>16</td><td>102</td><td>14</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
+      <p class="spec-note">단위: mm</p>
+      </div>
+      <div class="cat-tab-panel" data-panel="b2s2" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">치수 기호 설명용 개략도</p>
+        <img class="fig-draw" src="assets/mechanical_seal_b2s2.webp?v=gs1" alt="B2 · S2 메카니컬 씰 설치 단면 개략도" loading="lazy">
+        <p class="diagram-legend">d: 축경 · 그 밖의 치수 기호는 그림의 위치를 참고하세요.</p>
+      </div>
+      <div class="info-box" style="margin: 0 0 18px;">
+        <strong>B2 · S2 사용 범위</strong><br />
+        압력 3 kgf/cm² 이하 · 속도 5 m/s<br />
+        특징: 스프링 드라이브 방식, 자동 펌프용 양산품 · S2는 청동(Bronze) 사양<br />
+        용도: 청수용 · 순환 펌프용
+      </div>
+        <details class="series-group" open>
+          <summary>B2 · S2 시리즈<span class="series-count">20건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 380px; min-width: 300px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 440px;">
+              <thead><tr><th>SIZE</th><th>d</th><th>D</th><th>L</th><th>L1</th><th>D1</th></tr></thead>
+              <tbody><tr><td class="type-cell">008</td><td>8</td><td>21</td><td>18</td><td>5.5</td><td>10</td></tr><tr><td class="type-cell">010</td><td>10</td><td>22</td><td>23</td><td>5.5</td><td>12</td></tr><tr><td class="type-cell">012</td><td>12</td><td>26</td><td>24</td><td>6.5</td><td>14</td></tr><tr><td class="type-cell">013</td><td>13</td><td>26</td><td>24</td><td>6.5</td><td>14</td></tr><tr><td class="type-cell">014</td><td>14</td><td>30</td><td>25</td><td>6.5</td><td>16</td></tr><tr><td class="type-cell">015</td><td>15</td><td>28</td><td>25</td><td>6.0</td><td>16.5</td></tr><tr><td class="type-cell">016</td><td>16</td><td>33</td><td>27</td><td>8.0</td><td>17.5</td></tr><tr><td class="type-cell">018</td><td>18</td><td>35</td><td>29</td><td>8.0</td><td>21.5</td></tr><tr><td class="type-cell">019</td><td>19</td><td>35</td><td>29</td><td>8.0</td><td>21.5</td></tr><tr><td class="type-cell">020</td><td>20</td><td>38</td><td>32</td><td>8.0</td><td>21.5</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 380px; min-width: 300px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 440px;">
+              <thead><tr><th>SIZE</th><th>d</th><th>D</th><th>L</th><th>L1</th><th>D1</th></tr></thead>
+              <tbody><tr><td class="type-cell">022</td><td>22</td><td>40</td><td>33</td><td>8.5</td><td>23.5</td></tr><tr><td class="type-cell">025</td><td>25</td><td>44</td><td>34</td><td>8.5</td><td>26.5</td></tr><tr><td class="type-cell">028</td><td>28</td><td>46</td><td>34</td><td>8.5</td><td>29.5</td></tr><tr><td class="type-cell">030</td><td>30</td><td>50</td><td>36</td><td>9.0</td><td>31.5</td></tr><tr><td class="type-cell">032</td><td>32</td><td>54</td><td>38</td><td>9.0</td><td>33.5</td></tr><tr><td class="type-cell">035</td><td>35</td><td>58</td><td>42</td><td>10.0</td><td>36.5</td></tr><tr><td class="type-cell">038</td><td>38</td><td>60</td><td>44</td><td>10.0</td><td>39.5</td></tr><tr><td class="type-cell">040</td><td>40</td><td>64</td><td>45</td><td>11.0</td><td>41.5</td></tr><tr><td class="type-cell">045</td><td>45</td><td>66</td><td>47</td><td>11.0</td><td>46.5</td></tr><tr><td class="type-cell">050</td><td>50</td><td>72</td><td>49</td><td>11.0</td><td>51.5</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
+      <p class="spec-note">단위: mm</p>
+      </div>
+      <div class="cat-tab-panel" data-panel="hk2" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">치수 기호 설명용 개략도</p>
+        <img class="fig-draw" src="assets/mechanical_seal_hk2.webp?v=gs1" alt="HK2 · KH2 메카니컬 씰 설치 단면 개략도" loading="lazy">
+        <p class="diagram-legend">d: 축경 · 그 밖의 치수 기호는 그림의 위치를 참고하세요.</p>
+      </div>
+      <div class="info-box" style="margin: 0 0 18px;">
+        <strong>HK2 · KH2 사용 범위</strong><br />
+        최대 압력 5 kgf/cm² · 온도 -20~90 °C · 최대 속도 10 m/s<br />
+        특징: 고무 벨로즈 더블(양면) 씰 · KH2는 SiC 사용으로 내구성·안정성을 높였습니다.<br />
+        용도: 수중 펌프, 오수·폐수 펌프, 지하수 펌프
+      </div>
+        <details class="series-group" open>
+          <summary>HK2 · KH2 시리즈<span class="series-count">14건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 700px;">
+              <thead><tr><th>MODEL</th><th>d</th><th>D</th><th>D1</th><th>D2</th><th>D3(BCD)</th><th>L</th><th>L1</th><th>L2</th><th>T</th></tr></thead>
+              <tbody><tr><td class="type-cell">HK014A</td><td>14</td><td>20</td><td>30</td><td>30</td><td>–</td><td>43</td><td>5</td><td>5</td><td>1</td></tr><tr><td class="type-cell">HK014B</td><td>14</td><td>20</td><td>32</td><td>32</td><td>–</td><td>43</td><td>5</td><td>5</td><td>1</td></tr><tr><td class="type-cell">HK015</td><td>15</td><td>20</td><td>30</td><td>30</td><td>–</td><td>43</td><td>5</td><td>5</td><td>1</td></tr><tr><td class="type-cell">HK020</td><td>20</td><td>23</td><td>38</td><td>44</td><td>60</td><td>50</td><td>7</td><td>7</td><td>1</td></tr><tr><td class="type-cell">HK025</td><td>25</td><td>28</td><td>44</td><td>50</td><td>60</td><td>50</td><td>7</td><td>7</td><td>1</td></tr><tr><td class="type-cell">HK030</td><td>30</td><td>33</td><td>44</td><td>57</td><td>70</td><td>60</td><td>9</td><td>8</td><td>1</td></tr><tr><td class="type-cell">HK035</td><td>35</td><td>38</td><td>54</td><td>57</td><td>70</td><td>60</td><td>9</td><td>9</td><td>1</td></tr><tr><td class="type-cell">HK040</td><td>40</td><td>43</td><td>68</td><td>70</td><td>85</td><td>65</td><td>10</td><td>9</td><td>1</td></tr><tr><td class="type-cell">HK045</td><td>45</td><td>48</td><td>68</td><td>70</td><td>90</td><td>65</td><td>10</td><td>9</td><td>1</td></tr><tr><td class="type-cell">HK050</td><td>50</td><td>53</td><td>75</td><td>80</td><td>95</td><td>75</td><td>10</td><td>9</td><td>1</td></tr><tr><td class="type-cell">KH055</td><td>55</td><td>58</td><td>80</td><td>85</td><td>100</td><td>75</td><td>12</td><td>12</td><td>1</td></tr><tr><td class="type-cell">KH060</td><td>60</td><td>63</td><td>85</td><td>95</td><td>105</td><td>85</td><td>13</td><td>15</td><td>1</td></tr><tr><td class="type-cell">KH065</td><td>65</td><td>68</td><td>90</td><td>100</td><td>110</td><td>85</td><td>13</td><td>15</td><td>1</td></tr><tr><td class="type-cell">KH070</td><td>70</td><td>73</td><td>95</td><td>105</td><td>115</td><td>85</td><td>13</td><td>15</td><td>1</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+      <p class="spec-note">단위: mm · HK0xx = HK2, KH0xx = KH2</p>
+      </div>
+      <div class="cat-tab-panel" data-panel="wp" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">치수 기호 설명용 개략도</p>
+        <img class="fig-draw" src="assets/mechanical_seal_wp.webp?v=gs1" alt="WP · WPA 메카니컬 씰 설치 단면 개략도" loading="lazy">
+        <p class="diagram-legend">D: 축경(이하) · 그 밖의 치수 기호는 그림의 위치를 참고하세요.</p>
+      </div>
+      <div class="info-box" style="margin: 0 0 18px;">
+        <strong>WP · WPA 사용 범위</strong><br />
+        압력 5 kgf/cm² · 속도 10 m/s<br />
+        용도: 자동차용, 양수기용 등
+      </div>
+        <details class="series-group" open>
+          <summary>WP · WPA 시리즈<span class="series-count">12건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 600px;">
+              <thead><tr><th>MODEL(D3)</th><th>D</th><th>D1</th><th>D2</th><th>D4</th><th>L1</th><th>L2</th><th>L</th></tr></thead>
+              <tbody><tr><td class="type-cell">WP 28.5</td><td>~13</td><td>25</td><td>14.2</td><td>31.7</td><td>5.0</td><td>8.0</td><td>18</td></tr><tr><td class="type-cell">WP 30.0</td><td>~13</td><td>25</td><td>14.2</td><td>35.0</td><td>5.0</td><td>7.8</td><td>18</td></tr><tr><td class="type-cell">WP 36.5</td><td>~17</td><td>31</td><td>18.2</td><td>41.5</td><td>5.0</td><td>8.0</td><td>18</td></tr><tr><td class="type-cell">WP 38.0</td><td>~20</td><td>35</td><td>21.4</td><td>43.8</td><td>5.0</td><td>9.5</td><td>20.5</td></tr><tr><td class="type-cell">WP 40.0</td><td>~20</td><td>35</td><td>21.4</td><td>43.8</td><td>5.0</td><td>9.5</td><td>20.5</td></tr><tr><td class="type-cell">WP 46.0</td><td>~25</td><td>44</td><td>26.4</td><td>51</td><td>7.0</td><td>10</td><td>25</td></tr><tr><td class="type-cell">WP 52.0</td><td>~30</td><td>48</td><td>31.0</td><td>57</td><td>8.0</td><td>11</td><td>27</td></tr><tr><td class="type-cell">WPA 32</td><td>~13</td><td>25</td><td>14.2</td><td>31.7</td><td>5.0</td><td>8.5</td><td>19</td></tr><tr><td class="type-cell">WPA 41</td><td>~17</td><td>31</td><td>18.2</td><td>41.5</td><td>5.0</td><td>9.5</td><td>22</td></tr><tr><td class="type-cell">WPA 45</td><td>~20</td><td>35</td><td>21.4</td><td>43.8</td><td>5.0</td><td>11.0</td><td>22</td></tr><tr><td class="type-cell">WPA 52</td><td>~25</td><td>44</td><td>26.4</td><td>51</td><td>7.0</td><td>11.5</td><td>27</td></tr><tr><td class="type-cell">WPA 58</td><td>~30</td><td>48</td><td>31.0</td><td>57</td><td>8.0</td><td>12.5</td><td>29</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+      <p class="spec-note">단위: mm · D의 "~13"은 축경 13 mm 이하용입니다.</p>
+      </div>
+      <div class="cat-tab-panel" data-panel="jp2" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">치수 기호 설명용 개략도</p>
+        <img class="fig-draw" src="assets/mechanical_seal_jp2.webp?v=gs1" alt="JP2 메카니컬 씰 설치 단면 개략도" loading="lazy">
+        <p class="diagram-legend">d: 축경 · 그 밖의 치수 기호는 그림의 위치를 참고하세요.</p>
+      </div>
+      <div class="info-box" style="margin: 0 0 18px;">
+        <strong>JP2 사용 범위</strong><br />
+        벨로즈 씰, 언밸런스(Unbalanced), 싱글 스프링<br />
+        용도: 진공 펌프용, 청수용, 순환 펌프용<br />
+        압력·온도·속도 한계: 문의
+      </div>
+        <details class="series-group" open>
+          <summary>JP2 시리즈<span class="series-count">18건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 620px;">
+              <thead><tr><th>SIZE</th><th>d</th><th>D1</th><th>L</th><th>D2</th><th>L1</th><th>L2</th><th>SS D2</th><th>SS L1</th></tr></thead>
+              <tbody><tr><td class="type-cell">008</td><td>8</td><td>24</td><td>11.0</td><td>26</td><td>8</td><td>6</td><td>21</td><td>7</td></tr><tr><td class="type-cell">010</td><td>10</td><td>24</td><td>11.0</td><td>26</td><td>8</td><td>6</td><td>24</td><td>7</td></tr><tr><td class="type-cell">011</td><td>11</td><td>24</td><td>11.0</td><td>26</td><td>8</td><td>6</td><td>24</td><td>7</td></tr><tr><td class="type-cell">012</td><td>12</td><td>24</td><td>11.0</td><td>26</td><td>8</td><td>6</td><td>26</td><td>7</td></tr><tr><td class="type-cell">014</td><td>14</td><td>32</td><td>12.8</td><td>29.5</td><td>8</td><td>6</td><td>28</td><td>7</td></tr><tr><td class="type-cell">015</td><td>15</td><td>32</td><td>12.8</td><td>29.5</td><td>8</td><td>6</td><td>30</td><td>7</td></tr><tr><td class="type-cell">016</td><td>16</td><td>39</td><td>12.8</td><td>29.5</td><td>8</td><td>6</td><td>32</td><td>8</td></tr><tr><td class="type-cell">018</td><td>18</td><td>39</td><td>12.8</td><td>42</td><td>8</td><td>6</td><td>35</td><td>8</td></tr><tr><td class="type-cell">019</td><td>19</td><td>39</td><td>12.8</td><td>42</td><td>8</td><td>6</td><td>35</td><td>8</td></tr><tr><td class="type-cell">020</td><td>20</td><td>42</td><td>12.8</td><td>42</td><td>8</td><td>6</td><td>38</td><td>8</td></tr><tr><td class="type-cell">022</td><td>22</td><td>42</td><td>12.8</td><td>45</td><td>10</td><td>8</td><td>40</td><td>8</td></tr><tr><td class="type-cell">025</td><td>25</td><td>42</td><td>13.5</td><td>50</td><td>10</td><td>8</td><td>39.5</td><td>8</td></tr><tr><td class="type-cell">030</td><td>30</td><td>54</td><td>15.0</td><td>57</td><td>10</td><td>8</td><td>50</td><td>9</td></tr><tr><td class="type-cell">032</td><td>32</td><td>54</td><td>15.0</td><td>57</td><td>10</td><td>8</td><td>54</td><td>9</td></tr><tr><td class="type-cell">035</td><td>35</td><td>60</td><td>16.0</td><td>63</td><td>10</td><td>8</td><td>58</td><td>10</td></tr><tr><td class="type-cell">038</td><td>38</td><td>65</td><td>18.0</td><td>68</td><td>12</td><td>9</td><td>60</td><td>10</td></tr><tr><td class="type-cell">040</td><td>40</td><td>65</td><td>18.0</td><td>68</td><td>12</td><td>9</td><td>64</td><td>10</td></tr><tr><td class="type-cell">045</td><td>45</td><td>70</td><td>20.0</td><td>73</td><td>12</td><td>9</td><td>66</td><td>10</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+      <p class="spec-note">단위: mm · SS D2·SS L1: SS형 시트를 쓸 때의 치수</p>
+      </div>
+      <div class="cat-tab-panel" data-panel="fnf" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">치수 기호 설명용 개략도</p>
+        <img class="fig-draw" src="assets/mechanical_seal_fnf.webp?v=gs1" alt="FNF · FN 메카니컬 씰 설치 단면 개략도" loading="lazy">
+        <p class="diagram-legend">d: 축경 · 그 밖의 치수 기호는 그림의 위치를 참고하세요. 위쪽 FNF, 아래쪽 FN</p>
+      </div>
+      <div class="info-box" style="margin: 0 0 18px;">
+        <strong>FNF · FN 사용 범위</strong><br />
+        테이퍼 스프링, O링 · FN형: 회전 면 세라믹, 고정 면 카본<br />
+        압력·온도·속도 한계: 문의
+      </div>
+        <details class="series-group" open>
+          <summary>FNF · FN 시리즈<span class="series-count">16건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 620px;">
+              <thead><tr><th>SIZE</th><th>d</th><th>D</th><th>D1</th><th>D2</th><th>L</th><th>L1</th><th>D3</th><th>L2</th></tr></thead>
+              <tbody><tr><td class="type-cell">008</td><td>8</td><td>16</td><td>17.1</td><td>13</td><td>20.5</td><td>–</td><td>21</td><td>5.5</td></tr><tr><td class="type-cell">010</td><td>10</td><td>19.5</td><td>18.1</td><td>14</td><td>20.5</td><td>5.5</td><td>22</td><td>5.5</td></tr><tr><td class="type-cell">012</td><td>12</td><td>22.5</td><td>20.6</td><td>16.5</td><td>23.5</td><td>5.5</td><td>26</td><td>6.5</td></tr><tr><td class="type-cell">014</td><td>14</td><td>24.5</td><td>23.1</td><td>19</td><td>28</td><td>6</td><td>28</td><td>6.5</td></tr><tr><td class="type-cell">015</td><td>15</td><td>29</td><td>26.9</td><td>21</td><td>29</td><td>7</td><td>28</td><td>6.5</td></tr><tr><td class="type-cell">016</td><td>16</td><td>29</td><td>26.9</td><td>21</td><td>30</td><td>7</td><td>32</td><td>8</td></tr><tr><td class="type-cell">018</td><td>18</td><td>32.5</td><td>30.9</td><td>25</td><td>32</td><td>8</td><td>35</td><td>8</td></tr><tr><td class="type-cell">019</td><td>19</td><td>32.5</td><td>30.9</td><td>25</td><td>33</td><td>8</td><td>35</td><td>8</td></tr><tr><td class="type-cell">020</td><td>20</td><td>32.5</td><td>30.9</td><td>25</td><td>33</td><td>8</td><td>38</td><td>8</td></tr><tr><td class="type-cell">022</td><td>22</td><td>38</td><td>35.4</td><td>30</td><td>33</td><td>8</td><td>40</td><td>8.5</td></tr><tr><td class="type-cell">024</td><td>24</td><td>38</td><td>35.4</td><td>30</td><td>35</td><td>8</td><td>44</td><td>8.5</td></tr><tr><td class="type-cell">025</td><td>25</td><td>40</td><td>38.2</td><td>33</td><td>35.5</td><td>8.5</td><td>44</td><td>8.5</td></tr><tr><td class="type-cell">028</td><td>28</td><td>46</td><td>43.3</td><td>38</td><td>38</td><td>9</td><td>46</td><td>8.5</td></tr><tr><td class="type-cell">030</td><td>30</td><td>46</td><td>43.3</td><td>38</td><td>39</td><td>9</td><td>50</td><td>9</td></tr><tr><td class="type-cell">032</td><td>32</td><td>46</td><td>43.3</td><td>38</td><td>39</td><td>9</td><td>54</td><td>10</td></tr><tr><td class="type-cell">035</td><td>35</td><td>50</td><td>53.5</td><td>45</td><td>50.5</td><td>11.5</td><td>58</td><td>10</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+      <p class="spec-note">단위: mm · "–": 해당 치수 없음</p>
+      </div>
+      <div class="cat-tab-panel" data-panel="mg1g" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">치수 기호 설명용 개략도</p>
+        <img class="fig-draw" src="assets/mechanical_seal_mg1g.webp?v=gs1" alt="MG1 (일반형) 메카니컬 씰 설치 단면 개략도" loading="lazy">
+        <p class="diagram-legend">d: 축경 · 그 밖의 치수 기호는 그림의 위치를 참고하세요.</p>
+      </div>
+      <div class="info-box" style="margin: 0 0 18px;">
+        <strong>MG1 (일반형) 사용 범위</strong><br />
+        최대 압력 10 kgf/cm² · 온도 -20~200 °C · 최대 속도 10 m/s · 최대 점도 1000 cP · 슬러리 5.0% 이하<br />
+        특징: 설치 치수가 짧고, 고형물 찌꺼기가 씰 안으로 들어가지 않으며, 고압에서 쓸 수 있습니다. 펌프 회전 방향과 관계없는 고무 벨로즈 형식입니다.<br />
+        용도: 진공 펌프, 오수·폐수 펌프, 약산·알칼리 등 화학성 유체, 고형물이 섞인 유체(폐수·하수 처리 시설 등)
+      </div>
+        <details class="series-group" open>
+          <summary>MG1 (일반형) 시리즈<span class="series-count">28건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 380px; min-width: 300px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 440px;">
+              <thead><tr><th>SIZE(d)</th><th>D</th><th>L</th><th>D1</th><th>D2</th><th>L1</th></tr></thead>
+              <tbody><tr><td class="type-cell">010</td><td>22.5</td><td>14.5</td><td>20.5</td><td>21</td><td>6.6</td></tr><tr><td class="type-cell">012</td><td>25</td><td>15</td><td>22.5</td><td>23</td><td>6.6</td></tr><tr><td class="type-cell">014</td><td>28.5</td><td>17</td><td>26.5</td><td>25</td><td>6.6</td></tr><tr><td class="type-cell">015</td><td>28.5</td><td>17</td><td>26.5</td><td>–</td><td>6.6</td></tr><tr><td class="type-cell">016</td><td>28.5</td><td>17</td><td>26.5</td><td>27</td><td>6.6</td></tr><tr><td class="type-cell">018</td><td>32</td><td>19.5</td><td>29.0</td><td>33</td><td>7.5</td></tr><tr><td class="type-cell">019</td><td>37</td><td>19.5</td><td>33.0</td><td>–</td><td>7.5</td></tr><tr><td class="type-cell">020</td><td>37</td><td>21.5</td><td>33.0</td><td>35</td><td>7.5</td></tr><tr><td class="type-cell">022</td><td>37</td><td>21.5</td><td>33.0</td><td>37</td><td>7.5</td></tr><tr><td class="type-cell">025</td><td>42.5</td><td>23</td><td>38.0</td><td>40</td><td>7.5</td></tr><tr><td class="type-cell">028</td><td>49</td><td>26.5</td><td>44.0</td><td>43</td><td>7.5</td></tr><tr><td class="type-cell">030</td><td>49</td><td>26.5</td><td>44.0</td><td>45</td><td>7.5</td></tr><tr><td class="type-cell">032</td><td>53.5</td><td>27.5</td><td>46.0</td><td>48</td><td>7.5</td></tr><tr><td class="type-cell">035</td><td>57</td><td>28.5</td><td>50.0</td><td>50</td><td>7.5</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 380px; min-width: 300px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 440px;">
+              <thead><tr><th>SIZE(d)</th><th>D</th><th>L</th><th>D1</th><th>D2</th><th>L1</th></tr></thead>
+              <tbody><tr><td class="type-cell">038</td><td>59</td><td>30</td><td>53.0</td><td>56</td><td>9.0</td></tr><tr><td class="type-cell">040</td><td>62</td><td>30</td><td>55.0</td><td>58</td><td>9.0</td></tr><tr><td class="type-cell">043</td><td>65.5</td><td>30</td><td>58.0</td><td>–</td><td>9.0</td></tr><tr><td class="type-cell">045</td><td>68</td><td>30</td><td>60.0</td><td>63</td><td>9.0</td></tr><tr><td class="type-cell">048</td><td>70.5</td><td>30.5</td><td>63.0</td><td>66</td><td>9.5</td></tr><tr><td class="type-cell">050</td><td>74</td><td>30.5</td><td>65.0</td><td>70</td><td>11.0</td></tr><tr><td class="type-cell">053</td><td>78.5</td><td>33</td><td>70.0</td><td>73</td><td>11.0</td></tr><tr><td class="type-cell">055</td><td>81</td><td>35</td><td>72.0</td><td>75</td><td>11.0</td></tr><tr><td class="type-cell">058</td><td>86</td><td>37</td><td>75.0</td><td>78</td><td>11.0</td></tr><tr><td class="type-cell">060</td><td>88.5</td><td>38</td><td>79.0</td><td>80</td><td>11.0</td></tr><tr><td class="type-cell">065</td><td>93.5</td><td>40</td><td>84.0</td><td>85</td><td>11.0</td></tr><tr><td class="type-cell">068</td><td>96.5</td><td>40</td><td>88.0</td><td>90</td><td>11.3</td></tr><tr><td class="type-cell">070</td><td>99.5</td><td>40</td><td>90.0</td><td>92</td><td>11.3</td></tr><tr><td class="type-cell">075</td><td>107.5</td><td>40</td><td>95.0</td><td>97</td><td>11.3</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
+      <p class="spec-note">단위: mm · "–": 해당 시트 치수 없음</p>
+      </div>
+      <div class="cat-tab-panel" data-panel="cp2" hidden>
+      <div class="diagram-box">
+        <p class="diagram-caption">치수 기호 설명용 개략도</p>
+        <img class="fig-draw" src="assets/mechanical_seal_cp2.webp?v=gs1" alt="CP2 메카니컬 씰 설치 단면 개략도" loading="lazy">
+        <p class="diagram-legend">d: 축경 · 그 밖의 치수 기호는 그림의 위치를 참고하세요.</p>
+      </div>
+      <div class="info-box" style="margin: 0 0 18px;">
+        <strong>CP2 사용 범위</strong><br />
+        압력 5 kgf/cm² · 속도 5 m/s<br />
+        용도: 진공 펌프용, 오수·폐수용, 청수용, 순환 펌프용
+      </div>
+        <details class="series-group" open>
+          <summary>CP2 시리즈<span class="series-count">4건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 440px;">
+              <thead><tr><th>SIZE</th><th>d</th><th>D</th><th>D1</th><th>L1</th><th>L</th></tr></thead>
+              <tbody><tr><td class="type-cell">016</td><td>16</td><td>30</td><td>32</td><td>10.3</td><td>18.5</td></tr><tr><td class="type-cell">019</td><td>19</td><td>30</td><td>35</td><td>10.3</td><td>18.5</td></tr><tr><td class="type-cell">025</td><td>25</td><td>39.5</td><td>41.5</td><td>11.0</td><td>21.3</td></tr><tr><td class="type-cell">CP-025</td><td>25</td><td>43.5</td><td>41.5</td><td>11.0</td><td>21.3</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+      <p class="spec-note">단위: mm · CP-025: 회전부 외경(D)이 큰 사양</p>
+      </div>
+
       <div class="info-box">
         <strong>구성 및 선정 시 확인 사항</strong><br />
         구성: 실링 면(회전 링) · 시트(고정 링) · 고무 벨로즈 · 스프링 · 스프링 받침(L링)<br />
@@ -206,9 +449,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261107nt"></script>
-<script src="i18n/pages/mechanical_seal.dict.js?v=20261107ns"></script>
+<script src="i18n/pages/mechanical_seal.dict.js?v=20261113gs"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261112gp"></script>
+<script src="common.js?v=20261113gs"></script>
 <script>
   (function () {
     // 이미지 카드 탭: 평소엔 고른 시리즈 하나만 보이고, 검색어가 있으면 모든 탭에서 일치하는 행을 한꺼번에 보여 줌
@@ -219,7 +462,7 @@
     var groups = Array.prototype.slice.call(document.querySelectorAll('#mechanical-seal .series-group'));
     var countEl = document.getElementById('msCount');
     var toggleBtn = document.getElementById('msToggleAll');
-    var totalRows = 67;
+    var totalRows = document.querySelectorAll('#mechanical-seal .series-group tbody tr').length;
     var current = btns[0].getAttribute('data-tab');
     var allOpen = true;
     function showTab() {
@@ -254,7 +497,7 @@
           });
         });
       }
-      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + groups.length + '개 시리즈';
     }
     toggleBtn.addEventListener('click', function () {
       allOpen = !allOpen;
@@ -273,7 +516,7 @@
     if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
     showTab();
     input.addEventListener('input', applyFilter);
-    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + groups.length + '개 시리즈';
   })();
 </script>
 </body>
