@@ -102,6 +102,12 @@
         <p>당사의 새로운 소식과 안내사항을 확인하세요.</p>
       </div>
 
+      <div class="field faq-search">
+        <label for="noticeFilter">공지 검색</label>
+        <input id="noticeFilter" type="search" placeholder="예: 오링 온도, 끼워맞춤, 니들, 파도 와셔" autocomplete="off" />
+      </div>
+      <p class="faq-empty" id="noticeEmpty" hidden>찾는 공지가 없습니다. 다른 단어로 검색하거나 견적문의 · 카카오톡으로 문의해 주세요.</p>
+
       <ul class="notice-items">
         <li class="notice-item">
           <a class="notice-title" href="notice_spec_search.html">등록된 규격 검색 사용 방법</a>
@@ -202,8 +208,32 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261107nt"></script>
-<script src="i18n/pages/notice.dict.js?v=20261114sg"></script>
+<script src="i18n/pages/notice.dict.js?v=20261114ns"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261113dp"></script>
+<script src="assets/notice-index.js?v=20261114ns"></script>
+<script>
+  // 공지 검색: 제목(현재 언어로 보이는 글자)과 본문(한국어 색인)에 검색어가 모두 들어 있는 공지만 보여줌 — 띄어쓰기 무시
+  (function () {
+    var input = document.getElementById('noticeFilter');
+    var emptyEl = document.getElementById('noticeEmpty');
+    var items = Array.prototype.slice.call(document.querySelectorAll('.notice-items .notice-item'));
+    var idx = window.NOTICE_INDEX || {};
+    var squash = function (s) { return (s || '').toLowerCase().replace(/[\s·・\-_/()（）=,.]/g, ''); };
+    function apply() {
+      var words = input.value.trim().split(/\s+/).filter(Boolean).map(squash);
+      var shown = 0;
+      items.forEach(function (it) {
+        var a = it.querySelector('.notice-title');
+        var text = squash(it.textContent + ' ' + (idx[a.getAttribute('href')] || ''));
+        var hit = words.every(function (w) { return text.indexOf(w) !== -1; });
+        it.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      });
+      emptyEl.hidden = shown !== 0;
+    }
+    input.addEventListener('input', apply);
+  })();
+</script>
 </body>
 </html>
