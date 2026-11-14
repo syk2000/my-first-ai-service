@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css?v=20261113sh">
+<style id="faq-top-style">.faq-top{display:flex;gap:8px;margin:6px 0 12px}.faq-top-btn{flex:1;max-width:240px;padding:12px 16px;border:1px solid var(--border);border-radius:10px;background:var(--surface);color:var(--text);font:700 15px var(--font-body);cursor:pointer}.faq-top-btn:hover{border-color:var(--accent);color:var(--accent)}.faq-top-btn.is-active{background:var(--accent);border-color:var(--accent);color:#fff}#faqTabs .ost-tab[hidden]{display:none}</style>
 </head>
 <body>
 
@@ -106,54 +107,46 @@
         <label for="faqFilter">질문 검색</label>
         <input id="faqFilter" type="search" placeholder="예: 실드, C3, 오링 온도, 파워록" autocomplete="off" />
       </div>
+      <div class="faq-top" id="faqTop" role="tablist">
+        <button type="button" class="faq-top-btn is-active" data-top="common">자주 하는 문의</button>
+        <button type="button" class="faq-top-btn" data-top="product">제품 문의</button>
+      </div>
       <div class="ost-tabs faq-tabs" id="faqTabs">
-        <button type="button" class="ost-tab is-active" data-cat="">전체</button>
-        <button type="button" class="ost-tab" data-cat="일반 질문">일반 질문</button>
-        <button type="button" class="ost-tab" data-cat="구매·배송">구매·배송</button>
-        <button type="button" class="ost-tab" data-cat="베어링">베어링</button>
-        <button type="button" class="ost-tab" data-cat="베어링 형번">베어링 형번</button>
-        <button type="button" class="ost-tab" data-cat="베어링 사용·관리">베어링 사용·관리</button>
-        <button type="button" class="ost-tab" data-cat="베어링 유닛">베어링 유닛</button>
-        <button type="button" class="ost-tab" data-cat="오일씰">오일씰</button>
-        <button type="button" class="ost-tab" data-cat="오링·유압씰">오링·유압씰</button>
-        <button type="button" class="ost-tab" data-cat="메카니컬 씰">메카니컬 씰</button>
-        <button type="button" class="ost-tab" data-cat="그랜드 패킹">그랜드 패킹</button>
-        <button type="button" class="ost-tab" data-cat="스냅링">스냅링</button>
-        <button type="button" class="ost-tab" data-cat="와셔·푸시너트">와셔·푸시너트</button>
-        <button type="button" class="ost-tab" data-cat="너트·슬리브">너트·슬리브</button>
-        <button type="button" class="ost-tab" data-cat="키·핀">키·핀</button>
-        <button type="button" class="ost-tab" data-cat="파워록">파워록</button>
-        <button type="button" class="ost-tab" data-cat="커플링">커플링</button>
-        <button type="button" class="ost-tab" data-cat="스프링·플런저">스프링·플런저</button>
-        <button type="button" class="ost-tab" data-cat="오일레스·DU">오일레스·DU</button>
-        <button type="button" class="ost-tab" data-cat="오일게이지">오일게이지</button>
-        <button type="button" class="ost-tab" data-cat="리니어·LM">리니어·LM</button>
-        <button type="button" class="ost-tab" data-cat="기타">기타</button>
+        <button type="button" class="ost-tab is-active" data-top="common" data-cat="">전체</button>
+        <button type="button" class="ost-tab" data-top="common" data-cat="회사 안내">회사 안내</button>
+        <button type="button" class="ost-tab" data-top="common" data-cat="견적·주문">견적·주문</button>
+        <button type="button" class="ost-tab" data-top="common" data-cat="결제·배송">결제·배송</button>
+        <button type="button" class="ost-tab" data-top="common" data-cat="반품·서류">반품·서류</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="">전체</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="베어링">베어링</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="베어링 형번">베어링 형번</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="베어링 사용·관리">베어링 사용·관리</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="베어링 유닛">베어링 유닛</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="오일씰">오일씰</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="오링·유압씰">오링·유압씰</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="메카니컬 씰">메카니컬 씰</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="그랜드 패킹">그랜드 패킹</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="스냅링">스냅링</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="와셔·푸시너트">와셔·푸시너트</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="너트·슬리브">너트·슬리브</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="키·핀">키·핀</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="파워록">파워록</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="커플링">커플링</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="스프링·플런저">스프링·플런저</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="오일레스·DU">오일레스·DU</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="오일게이지">오일게이지</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="리니어·LM">리니어·LM</button>
+        <button type="button" class="ost-tab" data-top="product" data-cat="기타">기타</button>
       </div>
       <p class="finder-tip" id="faqCount"></p>
       <p class="faq-empty" id="faqEmpty" hidden>찾는 질문이 없습니다. 견적문의나 카카오톡으로 문의해 주세요.</p>
 
-      <h3 class="faq-group-title">일반 질문</h3>
-      <div class="faq-list" data-cat="일반 질문">
+      <h3 class="faq-group-title" data-top="common">자주 하는 문의</h3>
+      <h4 class="faq-sub-title">회사 안내</h4>
+      <div class="faq-list" data-top="common" data-cat="회사 안내">
         <details class="faq-item" id="q01">
           <summary>어떤 제품과 브랜드가 있나요?</summary>
           <div class="faq-answer"><p>베어링·베어링 유닛을 중심으로 어댑터·로크너트·와셔, 키&amp;핀, 파워록, 강구·볼 리테이너, 테이크업 유닛, 스냅링, 오일씰·오링·유압씰, 오일게이지, 오일레스 부시, 접시·금형 스프링, 볼 플런저, 유닛 하우징, LM가이드 블록을 취급합니다.</p><p>NACHI·IBC·JIB·WBC·JMC·ILJIN·TYB 제품은 공식 대리점 자격으로 직접 공급하며, 그 밖의 국내외 브랜드도 취급합니다.</p><p class="faq-links"><a href="about-product.html">취급 제품 보기 →</a><a href="brands.html">취급 브랜드 보기 →</a></p></div>
-        </details>
-        <details class="faq-item" id="q02">
-          <summary>형번 및 규격을 입력하는 방법</summary>
-          <div class="faq-answer"><p>규격검색 페이지나 카카오톡 채널에 형번 또는 치수를 입력하면 등록된 규격을 찾을 수 있습니다.</p><p><strong>형번으로 찾기</strong> — 예) 6205, UC205, NK8/12 (일부만 입력해도 됩니다)</p><p><strong>치수로 찾기</strong> — 형번을 모를 때는 내경·외경·두께를 입력하세요. 예) 25 52 15 또는 25*52</p><p class="faq-links"><a href="search-product.html">규격검색 바로가기 →</a><a href="notice_spec_search.html">사진으로 보는 사용 방법 →</a></p></div>
-        </details>
-        <details class="faq-item" id="q03">
-          <summary>견적/발주하는 법</summary>
-          <div class="faq-answer"><p><strong>견적</strong> — 견적문의 페이지에 규격과 수량을 적어 보내 주시거나, 카카오톡 채널 하단 메뉴의 '견적문의'를 눌러 양식을 보내 주시면 담당자가 확인 후 회신드립니다.</p><p><strong>발주</strong> — 카카오톡 채널 하단 메뉴의 '발주문의'를 눌러 회사명·연락처·품번·수량을 적어 보내 주시면 접수됩니다. 전화·이메일로도 발주하실 수 있습니다.</p><p class="faq-links"><a href="board.html">견적문의 바로가기 →</a><a href="https://pf.kakao.com/_YMbgn/chat" target="_blank" rel="noopener noreferrer">카카오톡 문의 →</a></p></div>
-        </details>
-        <details class="faq-item" id="q04">
-          <summary>견적은 언제 받을 수 있나요?</summary>
-          <div class="faq-answer"><p>영업시간(평일 09:00~18:00) 안에 문의 주시면 늦어도 당일 안에 견적을 보내 드립니다.</p><p>영업시간 이후나 주말·공휴일에 남겨 주신 문의는 다음 영업일에 확인해서 바로 보내 드리겠습니다.</p></div>
-        </details>
-        <details class="faq-item" id="q05">
-          <summary>재고·납기·가격은 어떻게 알 수 있나요?</summary>
-          <div class="faq-answer"><p>품목과 수량에 따라 달라서, 견적 문의를 남겨 주시면 담당자가 재고·납기·단가를 확인해 안내드립니다.</p><p><a href="board.html">견적문의 바로가기 →</a></p></div>
         </details>
         <details class="faq-item" id="q06">
           <summary>카탈로그를 볼 수 있나요?</summary>
@@ -167,18 +160,42 @@
           <summary>회사 위치와 연락처는?</summary>
           <div class="faq-answer"><p>TEL 02-2613-3040 · FAX 02-2613-3042 · 이메일 lsd00213@naver.com</p><p>서울 구로구 경인로53길 32, 미래에코타워 B101·102호</p><p class="faq-links"><a href="introduce.html#directions">찾아오시는 길 →</a></p></div>
         </details>
+      </div>
+
+      <h4 class="faq-sub-title">견적·주문</h4>
+      <div class="faq-list" data-top="common" data-cat="견적·주문">
+        <details class="faq-item" id="q02">
+          <summary>형번 및 규격을 입력하는 방법</summary>
+          <div class="faq-answer"><p>규격검색 페이지나 카카오톡 채널에 형번 또는 치수를 입력하면 등록된 규격을 찾을 수 있습니다.</p><p><strong>형번으로 찾기</strong> — 예) 6205, UC205, NK8/12 (일부만 입력해도 됩니다)</p><p><strong>치수로 찾기</strong> — 형번을 모를 때는 내경·외경·두께를 입력하세요. 예) 25 52 15 또는 25*52</p><p class="faq-links"><a href="search-product.html">규격검색 바로가기 →</a><a href="notice_spec_search.html">사진으로 보는 사용 방법 →</a></p></div>
+        </details>
+        <details class="faq-item" id="q03">
+          <summary>견적/발주하는 법</summary>
+          <div class="faq-answer"><p><strong>견적</strong> — 견적문의 페이지에 규격과 수량을 적어 보내 주시거나, 카카오톡 채널 하단 메뉴의 '견적문의'를 눌러 양식을 보내 주시면 담당자가 확인 후 회신드립니다.</p><p><strong>발주</strong> — 카카오톡 채널 하단 메뉴의 '발주문의'를 눌러 회사명·연락처·품번·수량을 적어 보내 주시면 접수됩니다. 전화·이메일로도 발주하실 수 있습니다.</p><p class="faq-links"><a href="board.html">견적문의 바로가기 →</a><a href="https://pf.kakao.com/_YMbgn/chat" target="_blank" rel="noopener noreferrer">카카오톡 문의 →</a></p></div>
+        </details>
         <details class="faq-item" id="q09">
           <summary>홈페이지에서 여러 품번을 한 번에 견적 요청할 수 있나요?</summary>
           <div class="faq-answer"><p>네. <a href="search-product.html">규격 검색</a> 결과에서 품번마다 <strong>[담기]</strong>를 누르면 견적 목록에 모입니다.</p><p><a href="board.html">견적문의</a> 페이지의 견적 목록에서 품번을 누르면 문의 내용에 추가되니, 수량을 함께 적어 한 번에 보내 주세요.</p><p>견적 목록은 최대 20개까지 담기며, 홈페이지 창(탭)을 닫으면 자동으로 비워집니다.</p></div>
         </details>
-      </div>
-
-      <h3 class="faq-group-title">구매·배송</h3>
-      <div class="faq-list" data-cat="구매·배송">
+        <details class="faq-item" id="q04">
+          <summary>견적은 언제 받을 수 있나요?</summary>
+          <div class="faq-answer"><p>영업시간(평일 09:00~18:00) 안에 문의 주시면 늦어도 당일 안에 견적을 보내 드립니다.</p><p>영업시간 이후나 주말·공휴일에 남겨 주신 문의는 다음 영업일에 확인해서 바로 보내 드리겠습니다.</p></div>
+        </details>
+        <details class="faq-item" id="q05">
+          <summary>재고·납기·가격은 어떻게 알 수 있나요?</summary>
+          <div class="faq-answer"><p>품목과 수량에 따라 달라서, 견적 문의를 남겨 주시면 담당자가 재고·납기·단가를 확인해 안내드립니다.</p><p><a href="board.html">견적문의 바로가기 →</a></p></div>
+        </details>
         <details class="faq-item" id="q10">
           <summary>1개만 사도 되나요? 많이 사면 할인되나요?</summary>
           <div class="faq-answer"><p>네, 1개도 편하게 구매하실 수 있습니다. 많이 구매하시면 할인도 가능합니다.</p><p>필요한 수량을 적어 견적 문의를 남겨 주시면 담당자가 단가를 확인해서 안내해 드리겠습니다.</p><p>(따로 제작하는 주문 제작품은 대량 주문일 때 진행할 수 있습니다.)</p></div>
         </details>
+        <details class="faq-item" id="q16">
+          <summary>도면이나 샘플로 주문 제작도 되나요?</summary>
+          <div class="faq-answer"><p>네, 공장에 의뢰해서 제작해 드릴 수 있습니다.</p><p><strong>수량</strong> — 공장에서 따로 생산하는 만큼 낱개 제작은 어렵고, 대량 주문일 때 진행할 수 있습니다.</p><p><strong>납기</strong> — 공장 사정에 따라 달라서, 의뢰한 뒤 확인해서 바로 안내해 드리겠습니다.</p><p>필요한 치수(도면)와 수량을 견적 문의로 편하게 남겨 주세요.</p></div>
+        </details>
+      </div>
+
+      <h4 class="faq-sub-title">결제·배송</h4>
+      <div class="faq-list" data-top="common" data-cat="결제·배송">
         <details class="faq-item" id="q11">
           <summary>결제 방법과 세금계산서 발행은 어떻게 되나요?</summary>
           <div class="faq-answer"><p>계좌 이체로 결제하실 수 있고, 매장에 오시면 카드 결제도 가능합니다. 세금계산서도 발행해 드립니다.</p><p><strong>카드 결제 시 수수료 10%가 추가됩니다.</strong></p><p>주문하실 때 계좌 이체와 카드 중 어느 것으로 결제하실지 꼭 알려 주세요.</p><p>발주서 비고에 '세금계산서 발행'이라고 적어 주시면 담당자가 확인해서 챙겨 드리겠습니다.</p></div>
@@ -191,6 +208,10 @@
           <summary>매장에 와서 직접 받아 갈 수 있나요?</summary>
           <div class="faq-answer"><p>네, 매장에 오셔서 직접 받아 가실 수 있습니다. 방문하시면 카드 결제도 가능합니다. (카드 결제 시 수수료 10% 추가)</p><p>헛걸음하지 않으시도록 방문 전에 전화(02-2613-3040)나 <a href="https://pf.kakao.com/_YMbgn/chat" target="_blank" rel="noopener noreferrer">카카오톡</a>으로 품번과 수량을 알려 주시면 재고를 미리 확인해 두겠습니다.</p><p>위치는 <a href="introduce.html#directions">찾아오시는 길</a>에서 보실 수 있습니다. (평일 09:00~18:00)</p></div>
         </details>
+      </div>
+
+      <h4 class="faq-sub-title">반품·서류</h4>
+      <div class="faq-list" data-top="common" data-cat="반품·서류">
         <details class="faq-item" id="q14">
           <summary>반품이나 교환이 되나요?</summary>
           <div class="faq-answer"><p><strong>접수 기간</strong> — 반품·교환은 제품을 받으신 뒤 <strong>7일(일주일) 안에</strong> 접수해 주세요.</p><p><strong>반품·교환이 어려운 경우</strong></p><ul><li>받으신 지 7일이 지난 제품</li><li>포장(박스·비닐·방청지)을 뜯었거나 사용·장착한 흔적이 있는 제품 — 베어링 등 정밀 부품은 개봉하면 다시 판매할 수 없습니다.</li><li>녹·흠집·변형·오염 등 받으신 뒤 손상된 제품</li><li>주문 제작품, 추가 가공(키홈·보링·절단 등)한 제품, 길이·수량을 나눠 판매한 제품</li><li>따로 수입 주문한 제품(수입 오일씰 등)</li><li>포장·라벨·구성품이 빠진 제품</li></ul><p>반품·교환이 필요하시면 전화(02-2613-3040)나 <a href="https://pf.kakao.com/_YMbgn/chat" target="_blank" rel="noopener noreferrer">카카오톡</a>으로 회사명(성함)·품목·수량을 알려 주세요. 빠르게 도와드리겠습니다.</p></div>
@@ -199,15 +220,11 @@
           <summary>성적서나 정품 인증서를 받을 수 있나요?</summary>
           <div class="faq-answer"><p><strong>국산 브랜드</strong> — 성적서나 정품 인증서를 받아 보실 수 있습니다.</p><p><strong>수입 브랜드(일본 등)</strong> — 성적서 대신 수입신고필증 같은 수입 서류로 정품임을 확인해 드립니다.</p><p>필요한 서류를 견적·발주 때 비고에 적어 주시면 함께 챙겨 드리겠습니다.</p></div>
         </details>
-        <details class="faq-item" id="q16">
-          <summary>도면이나 샘플로 주문 제작도 되나요?</summary>
-          <div class="faq-answer"><p>네, 공장에 의뢰해서 제작해 드릴 수 있습니다.</p><p><strong>수량</strong> — 공장에서 따로 생산하는 만큼 낱개 제작은 어렵고, 대량 주문일 때 진행할 수 있습니다.</p><p><strong>납기</strong> — 공장 사정에 따라 달라서, 의뢰한 뒤 확인해서 바로 안내해 드리겠습니다.</p><p>필요한 치수(도면)와 수량을 견적 문의로 편하게 남겨 주세요.</p></div>
-        </details>
       </div>
 
-      <h3 class="faq-group-title">제품 질문</h3>
+      <h3 class="faq-group-title" data-top="product">제품 문의</h3>
       <h4 class="faq-sub-title">베어링</h4>
-      <div class="faq-list" data-cat="베어링">
+      <div class="faq-list" data-top="product" data-cat="베어링">
         <details class="faq-item" id="q17">
           <summary>볼 베어링 실드 형식(OPEN·ZZ·DD)은 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>OPEN(개방형)</strong> — 실드가 없습니다. 윤활유를 직접 관리하는 곳에 씁니다.</p><p><strong>Z/ZZ(철판 실드)</strong> — 한쪽/양쪽에 철판 덮개. 회전이 가볍고 고속에 유리하지만 물·미세먼지 차단은 약합니다.</p><p><strong>D/DD(고무 실)</strong> — 한쪽/양쪽에 고무 실. 먼지·물 차단이 좋고 회전 저항은 조금 큽니다.</p><p>기존 제품에 적힌 표기를 그대로 알려 주시면 같은 형식으로 안내드립니다.</p></div>
@@ -246,7 +263,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">베어링 형번</h4>
-      <div class="faq-list" data-cat="베어링 형번">
+      <div class="faq-list" data-top="product" data-cat="베어링 형번">
         <details class="faq-item" id="q28">
           <summary>베어링 형번(6205 등)은 어떻게 읽나요?</summary>
           <div class="faq-answer"><p>6205를 예로 들면 이렇게 읽습니다.</p><p><strong>6</strong> — 형식 — 깊은 홈 볼 베어링 (7은 앵귤러, N은 원통 롤러 등)</p><p><strong>2</strong> — 크기 계열 — 같은 내경에서 68·69·60·62·63 순으로 외경·폭이 커짐</p><p><strong>05</strong> — 내경 번호 — 00=10, 01=12, 02=15, 03=17mm, 04부터는 ×5 (05=25mm, 10=50mm)</p><p>뒤에 붙는 ZZ·DD는 실드 형식, C3는 내부틈새입니다.</p></div>
@@ -286,7 +303,7 @@
       </div>
 
       <h4 class="faq-sub-title">베어링 사용·관리</h4>
-      <div class="faq-list" data-cat="베어링 사용·관리">
+      <div class="faq-list" data-top="product" data-cat="베어링 사용·관리">
         <details class="faq-item" id="q25">
           <summary>베어링은 몇 도까지 쓸 수 있나요?</summary>
           <div class="faq-answer"><p><strong>일반 베어링</strong> — 약 120℃까지는 치수가 변하지 않습니다. 그보다 뜨거우면 치수가 조금씩 변할 수 있습니다.</p><p><strong>실드·실 베어링(ZZ·DD 등)</strong> — 안에 든 표준 그리스 기준 -25~120℃</p><p><strong>베어링 유닛(JIB 일반품)</strong> — -20~100℃</p><p><strong>고온 안정화 처리품</strong> — S26은 150℃, S28은 200℃까지 치수 변화를 막아 줍니다.</p><p>150℃를 넘으면 수명이 줄어듭니다(175℃ 0.95배, 200℃ 0.90배).</p><p><strong>고열 그리스 작업</strong> — 일반 베어링에 고열 그리스를 넣어 작업하는 경우도 있습니다. 이런 작업은 별도로 문의해 주세요.</p><p>쓰시던 베어링의 사진이나 베어링(커버)에 적힌 글자, 또는 내경·외경·두께 치수를 알려 주시면 같은 제품을 찾아 단가를 안내드립니다.</p></div>
@@ -313,7 +330,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">베어링 유닛</h4>
-      <div class="faq-list" data-cat="베어링 유닛">
+      <div class="faq-list" data-top="product" data-cat="베어링 유닛">
         <details class="faq-item" id="q38">
           <summary>베어링 유닛 인서트 UC·UK·SA·SB는 어떻게 다른가요?</summary>
           <div class="faq-answer"><p>축에 고정하는 방식이 다릅니다.</p><p><strong>UC</strong> — 내경 표준, 세트스크류(고정나사)로 고정</p><p><strong>UK</strong> — 테이퍼 내경, 어댑터 슬리브로 고정 (슬리브는 별도 부품)</p><p><strong>SA(CSA)·HC</strong> — 편심고정링(칼라)으로 고정</p><p><strong>SB(CSB)</strong> — 세트스크류로 고정. C가 붙으면 원통 외륜(CSB·CSA)</p><p><strong>UCX</strong> — UC보다 폭이 넓은 중하중용</p><p><a href="ball_bearing_unit.html">베어링 유닛 보기 →</a></p></div>
@@ -336,7 +353,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">오일씰</h4>
-      <div class="faq-list" data-cat="오일씰">
+      <div class="faq-list" data-top="product" data-cat="오일씰">
         <details class="faq-item" id="q43">
           <summary>오일씰 형식(TC·SC·VC 등)은 어떻게 고르나요?</summary>
           <div class="faq-answer"><p>기존 제품에 적힌 형식을 그대로 쓰시는 것이 가장 확실합니다. 형식은 구조에 따라 나뉩니다.</p><p><strong>TC</strong> — 외주고무 + 먼지막이 립 + 스프링</p><p><strong>SC</strong> — 외주고무 + 단일 립 + 스프링</p><p><strong>TB·SB</strong> — TC·SC와 같은 구조에 외주가 금속</p><p><strong>VC·VB</strong> — 스프링 없음. 압력이 걸리는 곳에는 쓸 수 없습니다.</p><p>형식을 모르시면 치수(내경·외경·두께)와 사진을 보내 주세요. 담당자가 확인해 안내드립니다.</p><p>형식별 구조와 쓰임은 <a href="notice_oilseal_types.html">공지사항</a>에 정리해 두었습니다.</p></div>
@@ -367,7 +384,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">오링·유압씰</h4>
-      <div class="faq-list" data-cat="오링·유압씰">
+      <div class="faq-list" data-top="product" data-cat="오링·유압씰">
         <details class="faq-item" id="q50">
           <summary>오링 P·G·S·V·AN 계열은 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>P계열</strong> — 운동용. 유압·공압 실린더의 피스톤·로드처럼 움직이는 곳</p><p><strong>G계열</strong> — 고정용. 플랜지·커버처럼 움직이지 않는 곳</p><p><strong>S계열</strong> — 단면이 가는 소형 치수 계열</p><p><strong>V계열</strong> — 진공 플랜지용. 단면이 굵은 대형</p><p><strong>AN계열</strong> — 미국 AS568 표준. 미국·유럽 장비에 많이 씁니다.</p><p>기존 오링의 계열과 번호(예: P20)를 알려 주시면 같은 규격으로 안내드립니다.</p></div>
@@ -391,7 +408,7 @@
       </div>
 
       <h4 class="faq-sub-title">메카니컬 씰</h4>
-      <div class="faq-list" data-cat="메카니컬 씰">
+      <div class="faq-list" data-top="product" data-cat="메카니컬 씰">
         <details class="faq-item" id="q91">
           <summary>기존 씰 형번을 모르는데 어떻게 맞추나요?</summary>
           <div class="faq-answer"><p><strong>재야 할 치수</strong> — 축경, 회전부 외경, 설치 길이(작동 길이), 시트(고정 링)의 모양·외경·두께를 재 주세요. 축경이 mm(미터계)인지 inch(인치계)인지도 꼭 확인해 주세요.</p><p><strong>함께 알려 주실 정보</strong> — 펌프 메이커·모델을 알려 주시면 같은 제품을 찾는 데 도움이 됩니다. 유체·온도에 맞는 재질은 일일이 안내드리기 어려우니, 씰 재질 안내를 확인하신 뒤 문의해 주세요.</p><p>고무 부분은 눌린 상태라 실측값이 조금 다를 수 있습니다. 빼낸 씰과 시트의 사진을 함께 보내 주시면 더 정확하게 찾아 드립니다.</p><p class="faq-links"><a href="mechanical_seal.html">메카니컬 씰 규격 보기 →</a></p></div>
@@ -419,7 +436,7 @@
       </div>
 
       <h4 class="faq-sub-title">그랜드 패킹</h4>
-      <div class="faq-list" data-cat="그랜드 패킹">
+      <div class="faq-list" data-top="product" data-cat="그랜드 패킹">
         <details class="faq-item" id="q97">
           <summary>그랜드 패킹 사이즈는 어떻게 정하나요?</summary>
           <div class="faq-answer"><p><strong>단면 크기(S)</strong> — 패킹 사이즈는 단면 크기로 정합니다. S = (스터핑박스 내경 − 축경) ÷ 2 입니다.</p><p><strong>예시</strong> — 스터핑박스 내경 75mm, 축경 50mm이면 (75 − 50) ÷ 2 = 12.5mm로, 1/2"(= 12.7mm) 규격에 해당합니다.</p><p><strong>측정</strong> — 축에 슬리브가 끼워져 있으면 슬리브 바깥지름을 잽니다.</p><p>취급 규격은 1/8~1인치(= 3.2~25.4mm)입니다. 잰 치수를 알려 주시면 맞는 규격을 안내드립니다.</p><p class="faq-links"><a href="gland_packing.html">그랜드 패킹 보기 →</a></p></div>
@@ -442,7 +459,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">스냅링</h4>
-      <div class="faq-list" data-cat="스냅링">
+      <div class="faq-list" data-top="product" data-cat="스냅링">
         <details class="faq-item" id="q54">
           <summary>멈춤링 S형·R형·E형·C형은 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>S형(축용 C형)</strong> — 축 바깥 홈에 끼워 부품이 축 방향으로 빠지지 않게 잡습니다.</p><p><strong>R형(구멍용 C형)</strong> — 구멍 안쪽 홈에 끼워 하우징 속 베어링 등을 잡습니다. S·R형은 전용 플라이어로 벌리거나 오므려서 끼웁니다.</p><p><strong>E형(E링)</strong> — 축 홈에 옆에서 눌러 끼웁니다. 공구 없이도 끼울 수 있어 소형 부품에 많이 씁니다.</p><p><strong>C형(크레센트)</strong> — E형처럼 옆에서 끼우지만 몸체가 넓어 더 큰 힘을 견딥니다.</p></div>
@@ -473,7 +490,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">와셔·푸시너트</h4>
-      <div class="faq-list" data-cat="와셔·푸시너트">
+      <div class="faq-list" data-top="product" data-cat="와셔·푸시너트">
         <details class="faq-item" id="q61">
           <summary>풀림 방지 와셔는 어떤 종류가 있나요?</summary>
           <div class="faq-answer"><p><strong>E와셔(톱니 와셔)</strong> — 안쪽·바깥쪽 톱니가 체결면을 파고들어 풀림 방지</p><p><strong>스핀 와셔</strong> — 회오리 모양 톱니로, 일반 스프링 와셔보다 진동 풀림에 강함</p><p><strong>노드 록</strong> — 두 장이 한 쌍으로 조립된 상태로 공급, 노란 크로메이트 도금이 표준</p><p><strong>웨이브 와셔</strong> — 풀림 방지보다는 예압을 주거나 축 방향 유격을 흡수 (베어링용 BWW)</p></div>
@@ -488,7 +505,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">너트·슬리브</h4>
-      <div class="faq-list" data-cat="너트·슬리브">
+      <div class="faq-list" data-top="product" data-cat="너트·슬리브">
         <details class="faq-item" id="q63">
           <summary>어댑터 슬리브(H)와 인발 슬리브(AH)는 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>어댑터 슬리브(H)</strong> — 테이퍼 내경 베어링을 원통 축에 고정. 바깥이 1/12 테이퍼라 로크너트로 밀면 축에 단단히 조여짐</p><p><strong>인발 슬리브(AH)</strong> — 베어링을 쉽게 빼낼(철거) 수 있도록 쓰는 슬리브</p><p><strong>계열 선택</strong> — 베어링 형번에 맞춰 H2·H3·H23·H30·H31·H32 중 선택. 예) UK205 → H2305X</p><p><a href="hah_sleeve.html">어댑터 슬리브 보기 →</a></p><p>하우징 · 슬리브 · 베어링 · ZF 씰 조합표는 <a href="notice_sn_adapter_zf.html">공지사항</a>에 정리해 두었습니다.</p></div>
@@ -503,7 +520,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">키·핀</h4>
-      <div class="faq-list" data-cat="키·핀">
+      <div class="faq-list" data-top="product" data-cat="키·핀">
         <details class="faq-item" id="q66">
           <summary>사각키·반달키·라운드키는 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>사각키</strong> — 축과 보스를 회전 방향으로 고정하는 기본 키. 일반강(SM45C)과 스테인리스(STS304, 300mm 봉재로 공급해 잘라 사용)</p><p><strong>반달키</strong> — 반달 모양으로 홈 안에서 기울어져 가공 오차를 흡수. 소형 축·테이퍼 축용</p><p><strong>라운드키(1R·2R)</strong> — 끝을 반원으로 가공해 둥근 키홈에 그대로 맞음. 1R은 한쪽, 2R은 양쪽</p><p><strong>키는 꼭 견적 문의를 하신 뒤 주문해 주세요.</strong></p><p><a href="key_pin.html">키·핀 보기 →</a></p></div>
@@ -514,7 +531,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">파워록</h4>
-      <div class="faq-list" data-cat="파워록">
+      <div class="faq-list" data-top="product" data-cat="파워록">
         <details class="faq-item" id="q68">
           <summary>파워록은 무엇이고 언제 쓰나요?</summary>
           <div class="faq-answer"><p>볼트를 조이면 링이 축과 보스(허브) 사이를 조여, 키 없이 기어·풀리·스프라켓 등을 축에 고정하는 체결 부품입니다.</p><p><strong>장점</strong> — 위치를 자유롭게 정할 수 있고, 붙이고 떼기 쉬움. 센터링 기능이 있는 형식이 많음</p><p>쓰시던 파워록 형번이나 사진, 축·보스 치수를 알려 주시면 같은 제품을 찾아 단가를 안내드립니다.</p><p><a href="power_lock.html">파워록 보기 →</a></p></div>
@@ -526,7 +543,7 @@
       </div>
 
       <h4 class="faq-sub-title">커플링</h4>
-      <div class="faq-list" data-cat="커플링">
+      <div class="faq-list" data-top="product" data-cat="커플링">
         <details class="faq-item" id="q102">
           <summary>커플링 종류는 어떻게 고르나요?</summary>
           <div class="faq-answer"><p><strong>디스크형 (DRS·DRW·DRA, DHDA)</strong> — 백래시가 없고 비틀림 강성이 높아 정밀한 위치 결정에 적합합니다. 싱글 타입은 강성이 더 높고, 더블 타입은 축 어긋남을 더 크게 허용합니다.</p><p><strong>슬릿형 (DRB)</strong> — 일체형 구조로 백래시가 없고 구조가 단순합니다.</p><p><strong>러버형 (DHRA)</strong> — 방진 고무가 서보 모터의 공진을 억제해 게인을 높일 수 있습니다.</p><p><strong>죠형 (DJC·DJCS)</strong> — 우레탄 스파이더(고무)가 진동과 충격을 흡수하며, 일반 동력 전달에 많이 쓰입니다.</p><p><strong>올덤형 (DOH)</strong> — 스페이서가 미끄러지며 큰 어긋남을 흡수하고, 축·베어링에 걸리는 반력이 작습니다.</p><p><strong>리지드 (DRG·DRL·DRN)</strong> — 어긋남을 허용하지 않으므로 두 축의 중심을 정확히 맞출 수 있을 때 사용합니다.</p><p>형식이 정해지면 형식별 규격표에서 허용 토크·허용 어긋남·내경을 확인해 크기를 고르시면 됩니다.</p></div>
@@ -553,7 +570,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">스프링·플런저</h4>
-      <div class="faq-list" data-cat="스프링·플런저">
+      <div class="faq-list" data-top="product" data-cat="스프링·플런저">
         <details class="faq-item" id="q70">
           <summary>금형 스프링은 시리즈(색상)를 어떻게 고르나요?</summary>
           <div class="faq-answer"><p>금형의 녹아웃·이젝터·캠·슬라이드 등에 쓰는 사각 단면 코일 스프링입니다.</p><p><strong>시리즈</strong> — 하중(부하 용량)과 압축 가능 범위에 따라 SF·SSF·SL·SM·SH 등 13개 시리즈, 색상으로도 구분</p><p><strong>예) SF</strong> — 경소하중, 황색. 사용 변형량은 자유장의 40~50%</p><p><strong>주의</strong> — 완전히 눌린 밀착 높이까지는 사용하면 안 됨</p><p>하중에 맞는 시리즈는 일일이 안내드리기 어려우니, 규격표를 확인하신 뒤 문의해 주세요.</p><p><a href="mold_spring.html">금형 스프링 보기 →</a></p></div>
@@ -568,7 +585,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">오일레스·DU</h4>
-      <div class="faq-list" data-cat="오일레스·DU">
+      <div class="faq-list" data-top="product" data-cat="오일레스·DU">
         <details class="faq-item" id="q73">
           <summary>DU 드라이 베어링과 오일레스 부시는 어떻게 다른가요?</summary>
           <div class="faq-answer"><p>둘 다 따로 기름을 넣지 않고 쓰는 부시입니다.</p><p><strong>DU</strong> — 강 배면에 PTFE 합금층을 붙인 얇은 드라이 메탈. 형번은 DU+내경 2자리+길이 2자리 (DU1006 = 내경 10·길이 6). 하우징 H7, 축 f7</p><p><strong>오일레스 부시(#500SP)</strong> — 고력황동에 고체 윤활제를 박아 넣은 자체 윤활 부시. 회전·왕복 운동 모두 사용</p><p><a href="oiless.html">오일레스 보기 →</a></p></div>
@@ -583,7 +600,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">오일게이지</h4>
-      <div class="faq-list" data-cat="오일게이지">
+      <div class="faq-list" data-top="product" data-cat="오일게이지">
         <details class="faq-item" id="q75">
           <summary>오일게이지 MH·MHS·MHL은 어떻게 다른가요?</summary>
           <div class="faq-answer"><p><strong>MH</strong> — 특수 강화 수지 본체, 잘 보이고 압력·약품에 강함 (모든 약품에 쓸 수 있는 것은 아님)</p><p><strong>MHS</strong> — 파손·누유 걱정을 줄인 형식, 압력과 고열에 강함. O링이 있어 끝까지 돌려 끼우면 됨</p><p><strong>MHL</strong> — 충격에 강하고, 빨간 눈금과 흰 반사판으로 기름 양을 확인하기 쉬움</p><p>설치할 때는 나사산에 그리스를 바르고, 공구로 세게 두드리지 마세요.</p><p><a href="oil_gage.html">오일게이지 보기 →</a></p></div>
@@ -594,7 +611,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">리니어·LM</h4>
-      <div class="faq-list" data-cat="리니어·LM">
+      <div class="faq-list" data-top="product" data-cat="리니어·LM">
         <details class="faq-item" id="q77">
           <summary>리니어 부시 UU·OP·AJ는 무슨 뜻인가요?</summary>
           <div class="faq-answer"><p><strong>표기 없음</strong> — 실 없음 / <strong>U</strong> — 한쪽 고무 실 / <strong>UU</strong> — 양쪽 고무 실</p><p><strong>OP</strong> — 개방형. 몸체 한쪽이 트여 있어 받침대가 있는 축에 씁니다.</p><p><strong>AJ</strong> — 조정형. 슬릿이 있어 틈새를 조절할 수 있습니다.</p><p><strong>L</strong> — 몸체가 긴 롱 타입 (예: LM20L)</p><p>예) LM20UU = 내경 20mm 표준형, 양쪽 고무 실</p></div>
@@ -613,7 +630,7 @@
         </details>
       </div>
       <h4 class="faq-sub-title">기타</h4>
-      <div class="faq-list" data-cat="기타">
+      <div class="faq-list" data-top="product" data-cat="기타">
         <details class="faq-item" id="q80">
           <summary>제품의 형번이 지워져서 안 보이면 어떻게 하나요?</summary>
           <div class="faq-answer"><p>내경·외경·두께(폭)를 재서 규격검색 페이지나 카카오톡 채널에 입력하시면 맞는 규격을 찾을 수 있습니다. 예) 25 52 15</p><p>제품 사진은 카카오톡 채널의 '상담 연결'로 담당자에게 보내 주세요.</p><p><a href="search-product.html">규격검색 바로가기 →</a></p></div>
@@ -655,25 +672,30 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261107nt"></script>
-<script src="i18n/pages/faq.dict.js?v=20261114kw"></script>
+<script src="i18n/pages/faq.dict.js?v=20261115tp"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261113dp"></script>
 <script>
-  // 질문 검색 + 분류 선택: 고른 분류 안에서, 질문·답변 글자(띄어쓰기 무시)에 검색어가 모두 들어 있는 항목만 보여줌
+  // 큰 탭(자주 하는 문의 / 제품 문의) → 작은 분류 → 검색어 순으로 거름. 주소 끝 #common · #product · #q01로 바로 열 수 있음
   (function () {
     var input = document.getElementById('faqFilter');
     var countEl = document.getElementById('faqCount');
     var emptyEl = document.getElementById('faqEmpty');
+    var tops = Array.prototype.slice.call(document.querySelectorAll('#faqTop .faq-top-btn'));
     var tabs = Array.prototype.slice.call(document.querySelectorAll('#faqTabs .ost-tab'));
     var lists = Array.prototype.slice.call(document.querySelectorAll('.faq-list[data-cat]'));
-    var items = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
-    var current = '';
+    var top = 'common', current = '';
     var squash = function (s) { return s.toLowerCase().replace(/[\s·・\-_/()（）]/g, ''); };
     function apply() {
       var words = input.value.trim().split(/\s+/).filter(Boolean).map(squash);
       var shown = 0, total = 0;
+      tops.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-top') === top); });
+      tabs.forEach(function (t) {
+        t.hidden = t.getAttribute('data-top') !== top;
+        t.classList.toggle('is-active', !t.hidden && t.getAttribute('data-cat') === current);
+      });
       lists.forEach(function (list) {
-        var inCat = current === '' || list.getAttribute('data-cat') === current;
+        var inCat = list.getAttribute('data-top') === top && (current === '' || list.getAttribute('data-cat') === current);
         var any = false;
         Array.prototype.forEach.call(list.querySelectorAll('.faq-item'), function (it) {
           if (inCat) total++;
@@ -681,13 +703,12 @@
           var hit = inCat && words.every(function (w) { return text.indexOf(w) !== -1; });
           it.hidden = !hit;
           if (hit) { shown++; any = true; }
-          it.open = hit && words.length > 0;
+          if (words.length) it.open = hit;
         });
         list.hidden = !any;
         var head = list.previousElementSibling;
         if (head && head.classList.contains('faq-sub-title')) head.hidden = !any;
       });
-      // 큰 제목(일반 질문·구매·배송·제품 질문): 아래 목록이 하나라도 보이면 표시
       Array.prototype.forEach.call(document.querySelectorAll('.faq-group-title'), function (hd) {
         var el = hd.nextElementSibling, any = false;
         while (el && !el.classList.contains('faq-group-title') && !el.classList.contains('faq-more')) {
@@ -699,16 +720,32 @@
       countEl.textContent = (words.length || current) ? shown + ' / ' + total + '건 표시 중' : '';
       emptyEl.hidden = shown !== 0;
     }
-    tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        current = tab.getAttribute('data-cat');
-        tabs.forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+    tops.forEach(function (b) {
+      b.addEventListener('click', function () {
+        top = b.getAttribute('data-top'); current = '';
+        if (history.replaceState) history.replaceState(null, '', '#' + top);
         apply();
       });
     });
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () { current = tab.getAttribute('data-cat'); apply(); });
+    });
     input.addEventListener('input', apply);
+    function fromHash() {
+      var id = location.hash.slice(1);
+      if (id === 'common' || id === 'product') { top = id; current = ''; apply(); return; }
+      if (!/^q\d+$/.test(id)) { apply(); return; }
+      var el = document.getElementById(id); if (!el) { apply(); return; }
+      var list = el.closest('.faq-list');
+      if (list) { top = list.getAttribute('data-top'); current = ''; }
+      input.value = ''; apply();
+      el.hidden = false; el.open = true;
+      var to = function () { window.scrollTo(0, el.getBoundingClientRect().top + window.pageYOffset - 110); };
+      [80, 400, 900].forEach(function (ms) { setTimeout(to, ms); });
+    }
+    window.addEventListener('hashchange', fromHash);
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fromHash); else fromHash();
   })();
 </script>
-<script id="faqHash">(function () { var go = function () { var id = location.hash.slice(1); if (!/^q\d+$/.test(id)) return; var el = document.getElementById(id); if (!el) return; el.open = true; var to = function () { window.scrollTo(0, el.getBoundingClientRect().top + window.pageYOffset - 110); }; [80, 400, 900].forEach(function (ms) { setTimeout(to, ms); }); }; window.addEventListener("hashchange", go); if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", go); else go(); })();</script>
 </body>
 </html>

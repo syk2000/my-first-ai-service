@@ -388,19 +388,23 @@ function questionList(intro, items, more) {
   };
 }
 
-// 자주 하는 질문 첫 화면: 일반 질문 / 구매·배송 / 제품 질문 고르기
+// 자주 하는 질문: 챗봇에서는 답하지 않고 홈페이지 FAQ의 두 탭으로 바로 보냄
+// (챗봇은 견적·발주·규격 찾기만 맡음)
 function faqMenu() {
   return {
     outputs: [{
       textCard: {
         title: "자주 하는 질문",
-        description: "홈페이지에서 자주 하는 질문 전체를 보실 수 있어요. 아래 버튼을 눌러 주세요.\n\n" +
-          "여기서 바로 보시려면 아래에서 분류를 골라 주세요.\n" +
-          "■ 일반 질문 ■ 구매·배송 ■ 제품 질문",
-        buttons: [{ action: "webLink", label: "홈페이지 자주 하는 질문", webLinkUrl: SITE + "faq.html" }],
+        description: "자주 하는 질문은 홈페이지에서 보실 수 있어요.\n\n" +
+          "■ 자주 하는 문의 — 회사 안내·견적·주문·결제·배송·반품\n" +
+          "■ 제품 문의 — 품목별 질문",
+        buttons: [
+          { action: "webLink", label: "자주 하는 문의", webLinkUrl: SITE + "faq.html#common" },
+          { action: "webLink", label: "제품 문의", webLinkUrl: SITE + "faq.html#product" },
+        ],
       },
     }],
-    quick: [GO_GENERAL, GO_BUY, GO_PRODUCT, QUICK[0]],
+    quick: [QUICK[0], QUICK[1]],
   };
 }
 const faqList = () => questionList("일반적으로 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.", FAQ, [GO_BUY]);
@@ -465,30 +469,12 @@ function answer(utterance, blockName) {
   // 인사·메뉴 요청은 첫인사와 같은 안내로(이미 대화한 적 있는 손님은 웰컴 블록이 다시 나오지 않음)
   if (!u || /^(안녕|하이|시작|처음|메뉴|hi|hello)/i.test(u)) return reply([text(WELCOME)]);
   if (/^(도움말|사용법|규격 ?검색 ?방법)/.test(u)) return reply([text(HELP)]);
-  // FAQ 질문 버튼 — "형번 및 규격…", "견적/발주…"가 아래 키워드 안내에 걸리지 않도록 먼저 확인
+  // 예전 FAQ 버튼·분류 이름이나 직접 적은 질문("반품 되나요?", "영업시간")도 홈페이지 FAQ로 안내
+  // — 숫자가 있으면 형번 검색이 우선
   const qkey = u.replace(/\s+/g, "").replace(/^Q\.?/, "");
-  const faq = FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
-  if (faq) return reply(faqAnswer(faq, "general"));
-  const bfaq = BUY_FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
-  if (bfaq) return reply(faqAnswer(bfaq, "buy"));
-  if (/^구매\s*·?\s*배송(\s*질문)?$/.test(u)) return reply(buyFaqList());
-  const pfaq = PRODUCT_FAQ.find((f) => f.q.replace(/\s+/g, "") === qkey);
-  if (pfaq) return reply(faqAnswer(pfaq, "product"));
-  if (/^(제품\s*(질문|FAQ|문의\s*FAQ)|제품\s*관련\s*질문)$/i.test(u)) return reply(productFaqList());
-  const pgn = u.match(/^제품\s*질문\s*(\d)$/);
-  if (pgn) return reply(productFaqList(null, +pgn[1]));
-  const pg = u.match(/^제품\s*질문\s*[:：]\s*(.+)$/);
-  if (pg && PRODUCT_GROUPS.includes(pg[1].trim())) return reply(productFaqList(pg[1].trim()));
-  if (/^일반\s*질문$/.test(u)) return reply(faqList());
-  // 버튼이 아니라 직접 적은 질문("반품 되나요?", "영업시간이요")도 해당 FAQ 답변으로 — 숫자가 있으면 형번 검색이 우선
-  if (!/\d/.test(u)) {
-    const hit = FREE_FAQ.find(([re]) => re.test(u));
-    if (hit) {
-      const [, list, short] = hit;
-      const f = (list === "buy" ? BUY_FAQ : FAQ).find((x) => x.short === short);
-      if (f) return reply(faqAnswer(f, list === "buy" ? "buy" : "general"));
-    }
-  }
+  const isFaqQ = [...FAQ, ...BUY_FAQ, ...PRODUCT_FAQ].some((f) => f.q.replace(/\s+/g, "") === qkey);
+  if (isFaqQ || /^(일반\s*질문|구매\s*·?\s*배송(\s*질문)?|제품\s*(질문|FAQ|문의|관련\s*질문)(\s*\d|\s*[:：].*)?|자주\s*하는\s*문의)$/i.test(u)) return reply(faqMenu());
+  if (!/\d/.test(u) && FREE_FAQ.some(([re]) => re.test(u))) return reply(faqMenu());
   // 채팅방 하단 메뉴 [규격&품번] 등 — 숫자 없이 "규격/품번/형번/검색"만 오면 입력 안내
   if (!/\d/.test(u) && /규격|품번|형번|검색/.test(u)) {
     return reply([text(
