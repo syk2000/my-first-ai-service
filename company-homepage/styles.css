@@ -2424,7 +2424,6 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="oiless_naams.html"]::before,
 .img-cards .product-card[href="indent_bearing.html"]::before,
 .img-cards .product-card[href="metal_bush.html"]::before,
-.img-cards .product-card[href="bearing_tape.html"]::before,
 .img-cards .product-card[href="plastic_unit_p.html"]::before,
 .img-cards .product-card[href="plastic_unit_fl.html"]::before,
 .img-cards .product-card[href="plastic_unit_f.html"]::before,
@@ -2624,7 +2623,6 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="oiless_naams.html"] .p-icon,
 .img-cards .product-card[href="indent_bearing.html"] .p-icon,
 .img-cards .product-card[href="metal_bush.html"] .p-icon,
-.img-cards .product-card[href="bearing_tape.html"] .p-icon,
 .img-cards .product-card[href="plastic_unit_p.html"] .p-icon,
 .img-cards .product-card[href="plastic_unit_fl.html"] .p-icon,
 .img-cards .product-card[href="plastic_unit_f.html"] .p-icon,
@@ -2837,7 +2835,6 @@ table.spec-table th { color: #4b5873; }
 .img-cards .product-card[href="oiless_naams.html"]::before { background-image: url("assets/cards/pc_oiless_naams.webp?v=1"); }
 .img-cards .product-card[href="indent_bearing.html"]::before { background-image: url("assets/cards/pc_indent_bearing.webp?v=1"); }
 .img-cards .product-card[href="metal_bush.html"]::before { background-image: url("assets/cards/pc_metal_bush.webp?v=1"); }
-.img-cards .product-card[href="bearing_tape.html"]::before { background-image: url("assets/cards/pc_bearing_tape.webp?v=1"); }
 .img-cards .product-card[href="plastic_unit_p.html"]::before { background-image: url("assets/cards/pc_plastic_unit_p.webp?v=10"); }
 .img-cards .product-card[href="plastic_unit_fl.html"]::before { background-image: url("assets/cards/pc_plastic_unit_fl.webp?v=10"); }
 .img-cards .product-card[href="plastic_unit_f.html"]::before { background-image: url("assets/cards/pc_plastic_unit_f.webp?v=10"); }
