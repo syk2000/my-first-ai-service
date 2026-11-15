@@ -636,6 +636,9 @@ function answer(utterance, blockName) {
 
 // 카드에 보일 치수 — 키는 b(너비)·h(높이)·L(길이), 반달키는 d0(축 지름)·h, 베어링은 폭 B
 function dimText(r) {
+  // 치수가 일부만 등록된 품목(오일레스 UC = 축 지름만, 슬라이딩 라이너·웨어 플레이트 = 형번만)은 있는 값만
+  if (r.d == null && r.D == null && r.h == null) return "";
+  if (r.D == null && r.h == null) return `d ${fmt(r.d)}`;
   if (/사각키|라운드 키/.test(r.c)) return `b ${fmt(r.d)} · h ${fmt(r.D)} · L ${fmt(r.h)}`;
   if (r.c === "컴팩트 씰") return `D ${fmt(r.d)} · d ${fmt(r.D)} · L ${fmt(r.h)}`;
   if (r.c === "쿼드링 (X링)" || r.c === "웨어링") return `d ${fmt(r.d)} · D ${fmt(r.D)} · W ${fmt(r.h)}`;
@@ -675,7 +678,7 @@ function showResults(rows, query, note, q, isApprox, typed, qty) {
       title: name.slice(0, 50),
       description: (r.seal
         ? `오일씰\nd ${fmt(r.d)} · D ${fmt(r.D)} · H ${fmt(r.h)} (mm)\n등록된 규격이 있어요.`
-        : `${r.c}\n${dimText(r)} (mm)` + (r.q ? " · 비표준 길이(재고 문의)" : "") + (String(r.m).match(/\(=.*\)\s*$/) || [""]).map((a) => (a ? "\n" + a.trim() : ""))[0] +
+        : `${r.c}${dimText(r) ? "\n" + dimText(r) + " (mm)" : ""}` + (r.q ? " · 비표준 길이(재고 문의)" : "") + (String(r.m).match(/\(=.*\)\s*$/) || [""]).map((a) => (a ? "\n" + a.trim() : ""))[0] +
           r.alts.map((a) => "\n" + a).join("")).slice(0, 230),
       // 카드에서 바로 견적·발주, 상세 보기는 홈페이지 규격 페이지
       buttons: [btn("견적"), btn("발주"), { action: "webLink", label: "상세 보기", webLinkUrl: SITE + r.p }],
