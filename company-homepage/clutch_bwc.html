@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261115uc">
+<link rel="stylesheet" href="styles.css?v=20261116cd">
 </head>
 <body>
 
@@ -104,9 +104,17 @@
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
       <div class="diagram-box">
-          <img class="fig-photo" src="img/clutch_bw_illust.webp?v=rd3" alt="BW 시리즈 외형(BWC와 동일 구조) — 외륜·내륜 없이 롤러·스프래그 케이지로 구성" style="border-radius: 6px;" loading="lazy">
-          <p class="diagram-legend">BW 시리즈와 같은 구조(외륜·내륜 없는 롤러·스프래그 케이지)입니다.</p>
+        <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; justify-content: center;">
+          <div style="flex: 1 1 300px; text-align: center;">
+            <img class="fig-photo" src="img/clutch_bw_illust.webp?v=rd3" alt="BW 시리즈 외형(BWC와 동일 구조) — 외륜·내륜 없이 롤러·스프래그 케이지로 구성" style="border-radius: 6px;" loading="lazy">
+            <p class="diagram-legend">BW 시리즈와 같은 구조(외륜·내륜 없는 롤러·스프래그 케이지)입니다.</p>
+          </div>
+          <div style="flex: 1 1 300px; text-align: center;">
+            <img class="fig-draw" src="assets/clutch_cage_draw.webp?v=wm5" alt="치수 단면도 — d 축 지름, D 하우징 구멍 지름, B 폭" loading="lazy">
+            <p class="diagram-legend">↑ 치수 기호 (단면·정면)<br><span style="color: var(--text-faint);">d=축(안쪽 궤도면) 지름 · D=하우징 구멍(바깥쪽 궤도면) 지름 · B=케이지 폭</span></p>
+          </div>
         </div>
+      </div>
         
       <div class="field" style="max-width: 360px; margin: 16px 0;">
         <label for="bwcFilter">형번 / 규격 검색</label>
@@ -153,7 +161,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/clutch_bwc.dict.js?v=20261108fx"></script>
+<script src="i18n/pages/clutch_bwc.dict.js?v=20261116nd"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261115ms"></script>
 <script>
