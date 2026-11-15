@@ -3293,3 +3293,23 @@ table.spec-table th { color: #4b5873; }
 .term-k { font-weight: 700; }
 .term-head { background: var(--surface-raised); }
 .term-head .term-k, .term-head .term-v { font-size: 13px; font-weight: 700; color: var(--text-faint); }
+
+/* 상단 [견적/발주 문의하기] 버튼 — 카카오톡 느낌(노란 바탕 + 말풍선) */
+.header-cta .btn.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #FEE500;
+  border-color: #FEE500;
+  color: #191919;
+}
+.header-cta .btn.btn-accent::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3C6.48 3 2 6.54 2 10.9c0 2.82 1.87 5.29 4.69 6.69l-.96 3.5c-.08.3.26.54.52.37l4.18-2.77c.51.07 1.03.11 1.57.11 5.52 0 10-3.54 10-7.9S17.52 3 12 3z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3C6.48 3 2 6.54 2 10.9c0 2.82 1.87 5.29 4.69 6.69l-.96 3.5c-.08.3.26.54.52.37l4.18-2.77c.51.07 1.03.11 1.57.11 5.52 0 10-3.54 10-7.9S17.52 3 12 3z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.header-cta .btn.btn-accent:hover { background: #f5d800; border-color: #f5d800; color: #191919; }
