@@ -15,6 +15,7 @@
 <style id="ad-photo-style">.ad-ph{background:#fff;justify-content:flex-start;padding:26px 52px 0;gap:4px}.ad-ph .ad-photo{position:absolute;left:0;right:0;bottom:0;top:150px;width:100%;height:calc(100% - 150px);object-fit:cover;object-position:center;pointer-events:none;z-index:0}.ad-ph::after{display:none}.ad-ph .ad-logo{top:22px}.ad-ph .ad-eyebrow,.ad-ph .ad-title,.ad-ph .ad-desc{color:#14204a;max-width:80%;opacity:1}.ad-ph .ad-eyebrow{color:#c4561d}.ad-ph .ad-title{font-size:clamp(24px,2.4vw,32px);line-height:1.15}.ad-ph .ad-desc{font-size:14px;line-height:1.45;color:#4a5578}.ad-ph .ad-cta{position:absolute;top:96px;right:30px;margin:0;background:#14204a;color:#fff}.ad-ph:hover .ad-cta{background:#22337a}.ad-ph .ad-desc{max-width:calc(100% - 150px)}.ad-dots{flex-wrap:wrap;max-width:62%;z-index:4}.ad-dot{box-shadow:0 0 0 1px rgba(0,0,0,.28)}.ad-page{text-shadow:0 1px 4px rgba(0,0,0,.7)}@media (max-width:520px){.ad-ph{padding:20px 20px 0}.ad-ph .ad-photo{top:170px;height:calc(100% - 170px)}.ad-ph .ad-cta{top:auto;bottom:auto;position:relative;right:auto;align-self:flex-start;margin-top:4px}.ad-ph .ad-desc{max-width:100%}}</style>
 <style id="kakao-btn-style">.btn-kakao{display:inline-flex;align-items:center;gap:8px;background:#FEE500;color:#191919;border:1px solid #FEE500;font-weight:700}.btn-kakao:hover{background:#f5d800;border-color:#f5d800;color:#191919}.btn-kakao .kakao-ico{width:20px;height:20px;flex:0 0 20px}</style>
 <style id="ad-ctas-style">.ad-ctas{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;position:relative;z-index:2}.ad-ctas .ad-cta{margin-top:0;text-decoration:none}.ad-cta-ghost{background:transparent!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.85);box-shadow:none!important}.ad-cta-ghost:hover{background:rgba(255,255,255,.14)!important}</style>
+<style id="ftype-style">.ftype-box{position:relative}.ftype-box #fTypeShow{min-height:41px;padding:10px 34px 10px 12px;border:1px solid #9aa8c2;border-radius:var(--radius-sm);background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%278%27 fill=%27none%27 stroke=%27%23333%27 stroke-width=%271.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M1 1.5L6 6.5L11 1.5%27/%3E%3C/svg%3E") no-repeat right 12px center;color:var(--text);font-size:14px;font-family:var(--font-mono);line-height:1.4;white-space:normal;word-break:keep-all;overflow-wrap:anywhere}.ftype-box #fType{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}.ftype-box:focus-within #fTypeShow{outline:2px solid var(--steel);outline-offset:1px}</style>
 </head>
 <body>
 
@@ -332,9 +333,12 @@
           <div class="finder-fields">
             <div class="field">
               <label for="fType">제품 유형</label>
-              <select id="fType">
-                <option value="">전체</option>
-              </select>
+              <div class="ftype-box">
+                <div id="fTypeShow" aria-hidden="true">전체</div>
+                <select id="fType">
+                  <option value="">전체</option>
+                </select>
+              </div>
             </div>
             <div class="field">
               <label for="fName">제품명 / 형번</label>
@@ -559,7 +563,7 @@
 
 <script src="assets/spec-data.js?v=20261119sp"></script>
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/main.dict.js?v=20261119sp"></script>
+<script src="i18n/pages/main.dict.js?v=20261119sq"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
 <script>
@@ -605,7 +609,10 @@
     const DEFAULT_LABELS = GROUP_FIELDS_DEFAULT;
     const TYPE_FIELD_LABELS = GROUP_FIELDS;
 
+    // 고른 제품 유형 이름을 상자에 줄바꿈해 전부 보여줌(긴 이름이 잘리지 않도록 — 실제 선택은 투명한 select가 받음)
+    const fTypeShow = document.getElementById("fTypeShow");
     function updateFieldLabels() {
+      fTypeShow.textContent = fType.options[fType.selectedIndex] ? fType.options[fType.selectedIndex].textContent : "";
       const labels = TYPE_FIELD_LABELS[fType.value] || DEFAULT_LABELS;
       fDLabel.textContent = `${tr(labels.d)} (mm)`;
       fODLabel.textContent = `${tr(labels.D)} (mm)`;
