@@ -98,17 +98,18 @@
       <div class="section-head">
         <p class="eyebrow">Ball / Retainer / Caster</p>
         <h2>볼 리테이너(DS)</h2>
-        <p>
-          강구를 원형 궤도에 박아 넣은 리테이너(케이지)로, 왕복&middot;회전 운동부의 마찰을 줄이는 데 사용합니다.
-          재질은 <strong style="color: var(--accent);">BS(황동)&middot;AL(알루미늄)&middot;POM(폴리아세틸수지)</strong> 세 가지로 공급됩니다.
-          (&ldquo;강구 캐리지&rdquo;로도 불리는 제품이 이 표준형 볼 리테이너와 같은 제품입니다.)
-        </p>
+        <p>강구를 원형 궤도에 박아 넣은 리테이너(케이지)입니다.<br />(&ldquo;강구 캐리지&rdquo;로도 불리는 제품이 이 표준형 볼 리테이너와 같은 제품입니다.)</p>
+        <p class="tpl-use" style="margin: 8px 0 0;"><strong style="color: var(--text);">용도</strong> · 왕복&middot;회전 운동부의 마찰 감소</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
       <div class="diagram-box-mb20">
         <img class="fig-draw" loading="lazy" src="img/ball_retainer.webp?v=pd1" alt="볼 리테이너(DS) 단면도 — d 강구 지름, PD 가이드 포스트 지름, D1 리테이너 내경, D 리테이너 외경, L 기장" />
         <p class="diagram-legend-tight">d=강구 지름 · PD=가이드 포스트 지름 · D1=리테이너 안지름(강구 안쪽 끝 기준) · D=리테이너 바깥지름(강구 바깥쪽 끝 기준) · L=리테이너 전체 길이</p>
       </div>
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질</strong><br />BS(황동) &middot; AL(알루미늄) &middot; POM(폴리아세탈수지)<br />PD 60mm 이상은 BS(황동) 재질이 없습니다.</div>
+      </div>
+      <p class="tpl-order-note" style="margin: 0 0 16px; font-size: 13.5px; font-weight: 700; color: var(--accent);">※ 주문 전 반드시 견적 문의를 먼저 해 주세요.</p>
       <div class="finder-results" style="overflow-x: auto;">
         <table class="spec-table" style="min-width: 700px;">
           <thead><tr><th>PD(포스트 지름)</th><th>D1(내경)</th><th>D(외경)</th><th>강구 지름</th><th>재질</th><th>기장(L) 옵션(mm)</th></tr></thead>
@@ -165,8 +166,12 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/ball_retainer.dict.js?v=20261116l3"></script>
+<script src="i18n/pages/ball_retainer.dict.js?v=20261120pl"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
+<script>
+  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
+  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
+</script>
 </body>
 </html>
