@@ -98,11 +98,8 @@
       <div class="section-head">
         <p class="eyebrow">R-Type Snap Pin</p>
         <h2>R형 스냅핀 (R핀)</h2>
-        <p>
-          철사를 R자 모양으로 구부려 만든 고정핀으로, 축이나 클레비스 핀의 구멍에 끼워
-          <strong style="color: var(--accent);">빠짐 방지용 코터 핀 대용</strong>으로 사용합니다. 별도 공구 없이 손으로 끼우고 뺄 수 있어
-          탈부착이 잦은 위치에 적합합니다.
-        </p>
+        <p>철사를 R자 모양으로 구부려 만든 고정핀입니다.<br />별도 공구 없이 손으로 끼우고 뺄 수 있어 탈부착이 잦은 위치에 적합합니다.</p>
+        <p class="tpl-use" style="margin: 8px 0 0;"><strong style="color: var(--text);">용도</strong> · 축 · 클레비스 핀 구멍에 끼우는 <strong style="color: var(--accent);">빠짐 방지용 코터 핀 대용</strong> · 축 고정</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
@@ -119,6 +116,9 @@
         </div>
       </div>
 
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질</strong><br />SWRH57A~62B</div>
+      </div>
       <div class="finder-results" style="margin-top: 0;">
         <table class="spec-table">
           <thead>
@@ -144,13 +144,9 @@
         </table>
       </div>
 
-      <div class="info-box">
-        <strong>용도 · 재질</strong><br />
-        용도: 축 고정용 &nbsp;·&nbsp; 재질: SWRH57A~62B
-      </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        ※ Size No.는 적용하는 축(핀) 지름 기준이며, d2·L은 공정상 차이가 생길 수 있는 대략적인 치수(약 치수)입니다. 정밀 가공·발주 전에는 반드시 문의해 주세요.
+        ※ Size No.는 적용하는 축(핀) 지름 기준이며, d2·L은 공정상 차이가 생길 수 있는 대략적인 치수(약 치수)입니다.<br />정밀 가공·발주 전에는 반드시 문의해 주세요.
       </p>
     </div>
   </section>
@@ -173,8 +169,12 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/pin_r.dict.js?v=20261116l3"></script>
+<script src="i18n/pages/pin_r.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
+<script>
+  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
+  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
+</script>
 </body>
 </html>

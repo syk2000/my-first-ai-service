@@ -98,12 +98,7 @@
       <div class="section-head">
         <p class="eyebrow">Tooth Lock Washer</p>
         <h2>이붙이 와셔</h2>
-        <p>
-          안쪽(내치형) 또는 바깥쪽(외치형)에 다수의 톱니가 배치된 와셔로, 볼트·너트 체결 시
-          <strong style="color: var(--accent);">톱니 끝이 체결면을 파고들어 풀림을 방지</strong>합니다.
-          특수 잇발 형상(내치형)과
-          이중으로 겹친 형태(내·외치 겸용)도 함께 취급합니다.
-        </p>
+        <p>안쪽(내치형) 또는 바깥쪽(외치형)에 다수의 톱니가 배치된 와셔로, 볼트·너트 체결 시 <strong style="color: var(--accent);">톱니 끝이 체결면을 파고들어 풀림을 방지</strong>합니다.<br />특수 잇발 형상(내치형)과 이중으로 겹친 형태(내·외치 겸용)도 함께 취급합니다.</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
@@ -120,6 +115,9 @@
         </div>
       </div>
 
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질 · 사양</strong><br />일반형: 재질 스프링강 또는 SPCC · 경도 HRC 40~50 · 표면처리 아연 천연색도금/아연 백색도금, 인산염피막(A.C.P)<br />겹친 이붙이 와셔: 재질 스프링강 · 경도 HRC 40~50 · 표면처리 인산염피막(A.C.P)</div>
+      </div>
       <h3 style="font-size: 16px; margin: 28px 0 10px;">이붙이 와셔 (AW 2 ~ 3/8")</h3>
       <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
         <table class="spec-table" style="min-width: 640px;">
@@ -210,14 +208,9 @@
         </table>
       </div>
 
-      <div class="info-box">
-        <strong>재질 · 경도 · 표면처리</strong><br />
-        일반형: 재질 스프링강 또는 SPCC · 경도 HRC 40~50 · 표면처리 아연 천연색도금/아연 백색도금, 인산염피막(A.C.P)<br />
-        겹친 이붙이 와셔: 재질 스프링강 · 경도 HRC 40~50 · 표면처리 인산염피막(A.C.P)
-      </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        ※ t는 소재 두께이며, 잇발 수는 표준을 표시한 것이므로 잇발 수에 증감이 있을 수 있습니다.
+        ※ t는 소재 두께이며, 잇발 수는 표준을 표시한 것이므로 잇발 수에 증감이 있을 수 있습니다.<br />
         정밀 가공·발주 전에는 반드시 문의해 주세요.
       </p>
     </div>
@@ -241,8 +234,12 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261116l4"></script>
-<script src="i18n/pages/e_washer.dict.js?v=20261116l4"></script>
+<script src="i18n/pages/e_washer.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
+<script>
+  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
+  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
+</script>
 </body>
 </html>

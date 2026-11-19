@@ -99,6 +99,7 @@
         <h2>MH형 오일 게이지</h2>
         <p>MH형 오일게이지는 특수강화 수지 본체로 선명도와 내압성이 우수하고 내약품성도 있으나, 모든 약품에 만능은 아니므로 주의 바랍니다.</p>
       </div>
+      <p style="margin: 0 0 14px;"><a class="btn btn-accent btn-sm" href="notice_oilgage_install.html">설치 방법 보기 &rarr;</a></p>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
       <div class="diagram-box">
@@ -107,6 +108,9 @@
         <p class="diagram-legend">A = 나사 호칭(MH: PS 관용나사 · MHS: PF 관용 평행나사) · B = 전체 길이(C + D) · C = 나사부 길이 · D = 육각 헤드 높이 · E = 육각 맞변 거리(스패너 치수) · F = 육각 대각 거리</p>
       </div>
 
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질 · 사양</strong><br />MH형: 특수강화 수지 본체 &nbsp;·&nbsp; 나사 PS 관용나사<br />MHS형: 알루미늄 육각 본체 &nbsp;·&nbsp; 나사 PF 관용 평행나사 &nbsp;·&nbsp; 오링 밀봉</div>
+      </div>
       <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
         <table class="spec-table" style="min-width: 340px; max-width: 480px;">
           <thead><tr><th>제품No.</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr></thead>
@@ -130,7 +134,7 @@
       <div class="section-head">
         <p class="eyebrow">MHS Type Oil Gage</p>
         <h2>MHS형 오일 게이지</h2>
-        <p>MHS형 오일 게이지는 파손·누유 문제를 해결했으며 내압이 높고 고열에도 문제가 없습니다. 치수표에 따라 나사구멍을 가공한 후 O-Ring이 있으므로 끝까지 돌려 설치하면 되며, 큰 힘으로 단단히 조이지 않아도 누유 염려가 없습니다.</p>
+        <p>MHS형 오일 게이지는 파손·누유 문제를 해결했으며 내압이 높고 고열에도 문제가 없습니다.</p>
       </div>
 
       <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
@@ -169,8 +173,12 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/oilgage_mh_mhs.dict.js?v=20261107im"></script>
+<script src="i18n/pages/oilgage_mh_mhs.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
+<script>
+  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
+  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
+</script>
 </body>
 </html>

@@ -99,18 +99,23 @@
       <div class="section-head">
         <p class="eyebrow">Cam Followers</p>
         <h2>캠 플로워 베어링</h2>
-        <p>샤프트 역할을 하는 스터드(Stud)의 머리 부분에 니들 롤러 베어링이 결합되어 있는 형태로, 자동화 기계, 각종 운반 장치, 머시닝 센터의 공구 교환 장치 등 다양한 용도로 사용됩니다. CF(미터 나사)·CR(인치 나사) 계열로 공급됩니다.</p>
+        <p>샤프트 역할을 하는 스터드(Stud)의 머리 부분에 니들 롤러 베어링이 결합되어 있는 형태입니다.</p>
+        <p class="tpl-use" style="margin: 8px 0 0;"><strong style="color: var(--text);">용도</strong> · 자동화 기계 · 각종 운반 장치 · 머시닝 센터의 공구 교환 장치</p>
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
+      <p style="margin: 0 0 14px;"><a class="btn btn-accent btn-sm" href="notice_cam_follower_codes.html">형번 읽는 법 보기 &rarr;</a></p>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
       <div class="diagram-box">
         <img class="fig-draw" src="img/cam_follower.webp?v=fx2" alt="구조 단면도" loading="lazy">
         <p class="diagram-legend">D(외륜 바깥지름) · C(외륜 폭) · B(머리 쪽 끝면~스터드 플랜지 면 길이) · B1(전체 길이) · B2(플랜지 면~스터드 끝 길이) · C1(외륜 측면~플랜지 면 간격) · r(외륜 모서리 모따기, 최소)<br>G(나사 호칭, 표의 ‘나사’) · G1(나사부 길이) · d1(스터드 지름) · B3(플랜지 면~옆 급유 구멍 중심) · g1(끝면 급유 구멍 지름) · g2(옆 급유 구멍 지름) · R=500(R형 외륜 바깥면 곡률 반지름)</p>
       </div>
 
-      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
-        <label for="cfwFilter">형번 / 규격 검색</label>
-        <input id="cfwFilter" type="text" placeholder="예: CF10 또는 M10X1.25" autocomplete="off" />
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="field" style="flex: 0 1 360px; margin: 0;">
+          <label for="cfwFilter">형번 / 규격 검색</label>
+          <input id="cfwFilter" type="text" placeholder="예: CF10 또는 M10X1.25" autocomplete="off" />
+        </div>
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">사양</strong><br />나사: CF(미터 나사) · CR(인치 나사)</div>
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="cfwCount" style="margin: 0;"></p>
@@ -196,10 +201,10 @@
       <div id="maker-codes" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; margin: 0 0 18px; font-size: 12.5px; color: var(--text-sub); line-height: 1.6;">
         <p style="margin: 0 0 8px; font-weight: 700; color: var(--text);">메이커별 형식 기호</p>
         <div class="finder-results" style="overflow-x: auto; margin: 0;"><table class="spec-table" style="font-size: 12.5px; min-width: 560px;"><thead><tr><th style="padding: 5px 10px;">INA</th><th style="padding: 5px 10px;">NTN</th><th style="padding: 5px 10px;">IKO</th><th style="padding: 5px 10px;">KOYO</th><th style="padding: 5px 10px;">NSK</th><th style="padding: 5px 10px;">SKF</th></tr></thead><tbody><tr><td style="padding: 4px 10px;">KR</td><td style="padding: 4px 10px;">KR</td><td style="padding: 4px 10px;">CF</td><td style="padding: 4px 10px;">KR</td><td style="padding: 4px 10px;">FCJ</td><td style="padding: 4px 10px;">KR</td></tr><tr><td style="padding: 4px 10px;">&ndash;</td><td style="padding: 4px 10px;">CR</td><td style="padding: 4px 10px;">CR</td><td style="padding: 4px 10px;">CR</td><td style="padding: 4px 10px;">CR</td><td style="padding: 4px 10px;">&ndash;</td></tr></tbody></table></div>
-        <p style="margin: 8px 0 0;">※ 같은 형식이라도 메이커마다 기호가 다릅니다. 다른 메이커 형번으로 문의하셔도 됩니다.</p>
+        <p style="margin: 8px 0 0;">※ 같은 형식이라도 메이커마다 기호가 다릅니다.<br />다른 메이커 형번으로 문의하셔도 됩니다.</p>
       </div>
       <h3 style="font-size: 16px; margin: 24px 0 4px;">형식 기호 구성표</h3>
-      <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 4px;">“..” 자리에 치수 기호(예: 10)를 넣어 호칭번호를 구성합니다. M = 스테인리스강, V = 풀 롤러(총롤러)형입니다.</p>
+      <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 4px;">“..” 자리에 치수 기호(예: 10)를 넣어 호칭번호를 구성합니다.<br />M = 스테인리스강, V = 풀 롤러(총롤러)형입니다.</p>
       <p style="font-weight: 700; color: var(--text); margin: 20px 0 8px; font-size: 14px;">캠 플로워</p>
       <div class="finder-results" style="overflow-x: auto;"><table class="spec-table" style="min-width: 640px;"><thead><tr><th>외륜 형상</th><th>밀봉</th><th>표준</th><th>편심(일체형)</th><th>급유 탭</th><th>편심 + 급유 탭</th><th>인치 치수</th></tr></thead><tbody><tr><td class="type-cell" rowspan="6">원통형 외륜</td><td rowspan="3">실 없음</td><td>CF..A</td><td>CFH..A</td><td>CFT..A</td><td>CFHT..A</td><td>CR..A</td></tr><tr><td>CF..B</td><td>CFH..B</td><td>CFT..B</td><td>CFHT..B</td><td>CR..B</td></tr><tr><td>CF</td><td>CFH</td><td>CFT</td><td>CFHT</td><td>CR</td></tr><tr><td rowspan="3">실 부착</td><td>CF..UUA</td><td>CFH..UUA</td><td>CFT..UUA</td><td>CFHT..UUA</td><td>CR..UUA</td></tr><tr><td>CF..UUB</td><td>CFH..UUB</td><td>CFT..UUB</td><td>CFHT..UUB</td><td>CR..UUB</td></tr><tr><td>CF..UU</td><td>CFH..UU</td><td>CFT..UU</td><td>CFHT..UU</td><td>CR..UU</td></tr><tr><td class="type-cell" rowspan="6">구면(크라운) 외륜</td><td rowspan="3">실 없음</td><td>CF..RA</td><td>CFH..RA</td><td>CFT..RA</td><td>CFHT..RA</td><td>CR..RA</td></tr><tr><td>CF..RB</td><td>CFH..RB</td><td>CFT..RB</td><td>CFHT..RB</td><td>CR..RB</td></tr><tr><td>CF..R</td><td>CFH..R</td><td>CFT..R</td><td>CFHT..R</td><td>CR..R</td></tr><tr><td rowspan="3">실 부착</td><td>CF..UURA</td><td>CFH..UURA</td><td>CFT..UURA</td><td>CFHT..UURA</td><td>CR..UURA</td></tr><tr><td>CF..UURB</td><td>CFH..UURB</td><td>CFT..UURB</td><td>CFHT..UURB</td><td>CR..UURB</td></tr><tr><td>CF..UUR</td><td>CFH..UUR</td><td>CFT..UUR</td><td>CFHT..UUR</td><td>CR..UUR</td></tr></tbody></table></div>
       <p style="font-weight: 700; color: var(--text); margin: 20px 0 8px; font-size: 14px;">캠 플로워 스테인리스 스틸</p>
@@ -214,7 +219,7 @@
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        &#8251; 정밀 가공·발주 전에는 반드시 문의해 주세요.<br> 이 제품군의 공차는 제조사 자체 규격을 따릅니다. 정확한 공차는 발주 전 문의 바랍니다.
+        &#8251; 정밀 가공·발주 전에는 반드시 문의해 주세요.<br> 이 제품군의 공차는 제조사 자체 규격을 따릅니다.<br />정확한 공차는 발주 전 문의 바랍니다.
       </p>
     </div>
   </section>
@@ -237,7 +242,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/cam_follower.dict.js?v=20261116l1"></script>
+<script src="i18n/pages/cam_follower.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
 <script>

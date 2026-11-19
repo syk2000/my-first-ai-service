@@ -97,8 +97,9 @@
       <div class="section-head">
         <p class="eyebrow">MD / MC Type Oil Gage</p>
         <h2>MD, MC형 오일 게이지</h2>
-        <p>투명도가 높아 산업용 기름의 유무를 멀리서도 확인할 수 있으며, 내부 반사판이 게이지 내부를 밝혀 우아한 디자인으로 설치된 기계를 더욱 돋보이게 합니다.</p>
+        <p>투명도가 높아 산업용 기름의 유무를 멀리서도 확인할 수 있습니다.<br />내부 반사판이 게이지 내부를 밝혀 우아한 디자인으로 설치된 기계를 더욱 돋보이게 합니다.</p>
       </div>
+      <p style="margin: 0 0 14px;"><a class="btn btn-accent btn-sm" href="notice_oilgage_install.html">설치 방법 보기 &rarr;</a></p>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
       <div class="diagram-box">
@@ -107,9 +108,8 @@
         <p class="diagram-legend">A = 호칭 지름(M40 등) · B = 설치 구멍 가공 기준 지름 · C = 투시창(유리) 지름 · D = 플랜지 외경 · E = 전체 높이 · F = 압입부 길이</p>
       </div>
 
-      <div class="info-box-mb">
-        <strong>구성</strong><br />
-        MD형 · MC형 2종 &middot; 사이즈 M25 / M30 / M35 / M40
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질 · 사양</strong><br />본체: 특수 합성수지(내유성 · 내열성 · 내충격성) &nbsp;·&nbsp; 내압: 2kg/cm² 이내<br />설치 구멍: B 치수 +0~0.1mm(게이지 외경에 0.2~0.3mm 죔새)<br />구성: MD형 · MC형 2종 &nbsp;·&nbsp; 사이즈 M25 / M30 / M35 / M40</div>
       </div>
 
       <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
@@ -124,16 +124,6 @@
         </table>
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm &middot; A=호칭 지름 · B=설치 구멍 지름 · C=투시창 지름 · D=플랜지 외경 · E=전체 높이 · F=압입부 길이</p>
-
-      <div class="info-box-sm">
-        <strong style="color: var(--accent);">설치 방법</strong>
-        <ol style="margin: 8px 0 0; padding-left: 18px; line-height: 1.6;">
-          <li>설치 구멍은 H7·H8 같은 엄밀한 공차가 필요하지 않습니다. 게이지 외경에 이미 0.2~0.3mm의 죔새가 있어 일반 기계 가공 정밀도로 충분합니다. 본체에는 내유성·내열성·내충격성이 우수한 특수 합성수지를 사용해 2kg/cm² 이내의 압력에 견딥니다.</li>
-          <li>설치 구멍은 치수표의 B 치수에 +0~0.1mm로 가공하고, 구멍 모서리를 0.3~0.5R로 다듬은 뒤 삽입하십시오. 내압이 높은 곳에는 나사식인 MH형 오일 게이지를 사용하십시오.</li>
-          <li>삽입할 때는 고무 둘레에 그리스나 오일을 바르고 손으로 밀어 넣은 뒤, 나무망치나 덧댄 판 위를 수평으로 고르게 두드려 넣으십시오.</li>
-          <li>쇠망치로 직접 세게 두드리면 표면에 흠이 생길 수 있으니 나무망치 사용을 권장합니다.</li>
-        </ol>
-      </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
         ※ 정밀 가공·발주 전에는 반드시 문의해 주세요.
@@ -158,8 +148,12 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/oilgage_md_mc.dict.js?v=20261107im"></script>
+<script src="i18n/pages/oilgage_md_mc.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
+<script>
+  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
+  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
+</script>
 </body>
 </html>

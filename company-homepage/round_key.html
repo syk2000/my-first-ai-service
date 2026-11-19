@@ -98,11 +98,8 @@
       <div class="section-head">
         <p class="eyebrow">Round Key</p>
         <h2>라운드 키 (1R, 2R) <span style="font-size: 15px; color: var(--text-sub); font-weight: 500;">Round Key</span></h2>
-        <p>
-          양 끝을 반원형으로 가공한 사각키로, 축의 <strong style="color: var(--accent);">둥근 홈(라운드 홈)</strong>에 그대로 맞물려 별도의
-          모따기 없이 안정적으로 고정됩니다. 한쪽 끝만 둥글게 가공한 <strong style="color: var(--accent);">1R</strong>과
-          양쪽 끝을 모두 둥글게 가공한 <strong style="color: var(--accent);">2R</strong> 두 가지로 구분합니다.
-        </p>
+        <p>양 끝을 반원형으로 가공한 사각키입니다.<br />축의 <strong style="color: var(--accent);">둥근 홈(라운드 홈)</strong>에 그대로 맞물려 별도의 모따기 없이 안정적으로 고정됩니다.<br />한쪽 끝만 둥글게 가공한 <strong style="color: var(--accent);">1R</strong>과 양쪽 끝을 모두 둥글게 가공한 <strong style="color: var(--accent);">2R</strong> 두 가지로 구분합니다.</p>
+        <p class="tpl-use" style="margin: 8px 0 0;"><strong style="color: var(--text);">용도</strong> · 축 테이퍼 부분 고정</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
       <p style="margin: 6px 0 0; font-weight: 700; color: #c0392b;">※ 키는 꼭 견적 문의를 하신 뒤 주문해 주세요.</p>
@@ -114,6 +111,9 @@
         </div>
       </div>
 
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질 · 사양</strong><br />재질: SM45C, STS304 &nbsp;·&nbsp; 주문 제작 가능</div>
+      </div>
       <div style="display: flex; gap: 24px; flex-wrap: wrap;">
         <div style="flex: 1 1 380px;">
           <p style="font-size: 14px; font-weight: 700; color: var(--text-sub); margin: 0 0 8px;">1R</p>
@@ -171,7 +171,7 @@
 
       <div class="section-head" style="margin-top: 32px;">
         <h3 style="font-size: 18px; margin: 0 0 8px;">라운드키 생산 치수표</h3>
-        <p style="font-size: 13.5px;">당사 정식 규격표의 생산 치수표입니다. 가로는 길이(L), 세로는 규격(b&times;h)이며, 칸에 적힌 형번이 생산하는 규격입니다. 1R(편환키)·2R(양환키) 모두 같은 길이로 생산합니다.</p>
+        <p style="font-size: 13.5px;">가로는 길이(L), 세로는 규격(b&times;h)이며, 칸에 적힌 형번이 생산하는 규격입니다.<br />1R(편환키)·2R(양환키) 모두 같은 길이로 생산합니다.</p>
       </div>
       <div class="cat-tabs" role="tablist" style="margin-bottom: 12px;">
         <button type="button" class="cat-tab-btn active" data-rk="1R">1R (편환키) · 522건</button>
@@ -259,10 +259,6 @@
       </div>
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm · b=너비 · h=높이 · 표 위쪽은 길이(L)이며, 칸의 형번은 &lsquo;종류-b&times;h&times;L&rsquo;입니다. (2×2~5×5, 6×6~12×10 묶음은 규격별로 나눠 적었습니다.)</p>
 
-      <div class="info-box">
-        <strong>재질 · 용도</strong><br />
-        용도: 축 테이퍼 부분 고정 &nbsp;·&nbsp; 재질: SM45C, STS304 &nbsp;·&nbsp; 주문 제작 가능
-      </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
         ※ 사이즈별 실제 생산·재고 보유 길이는 규격 사이즈마다 달라
@@ -290,9 +286,13 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/round_key.dict.js?v=20261116l3"></script>
+<script src="i18n/pages/round_key.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
+<script>
+  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
+  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
+</script>
 <script>
   // 라운드키 생산 치수표 1R·2R 탭
   (function () {

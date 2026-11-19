@@ -99,7 +99,6 @@
         <p class="eyebrow">Double Direction Thrust Ball Bearings</p>
         <h2>복렬 스러스트 볼 베어링</h2>
         <p>중앙의 축 궤도반 양쪽에 케이지에 조립된 볼과 하우징 궤도반을 한 조씩 배치한 구조로, 양방향의 축방향 하중을 받을 수 있으나 레이디얼 하중은 받을 수 없으며 고속회전에는 부적당합니다.</p>
-        <p>평면자리형(52200/52300/52400)과 조심자리형(54200/54300/54400), 조심자리와셔형(54200U/54300U/54400U)이 공급됩니다. 표의 d2는 중앙 축 궤도반의 내경(축경)이며, T는 평면자리형 T1 · 조심자리형 T5 · 조심자리와셔형 T7 높이입니다.</p>
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
@@ -109,9 +108,12 @@
         <p class="diagram-legend">d2(가운데 축 궤도반 안지름: 축이 끼워지는 구멍) · d(위·아래 하우징 궤도반 쪽 호칭 안지름) · D(하우징 궤도반 바깥지름) · 공차(d2/D 허용 오차) · T(전체 높이: 522·523·524=T1 · 542·543·544=T5(구면 자리 궤도반) · 542U·543U·544U=T7(조심 와셔 포함))</p>
       </div>
 
-      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
-        <label for="dtbFilter">형번 / 규격 검색</label>
-        <input id="dtbFilter" type="text" placeholder="예: 52205 또는 20*47" autocomplete="off" />
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="field" style="flex: 0 1 360px; margin: 0;">
+          <label for="dtbFilter">형번 / 규격 검색</label>
+          <input id="dtbFilter" type="text" placeholder="예: 52205 또는 20*47" autocomplete="off" />
+        </div>
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">사양</strong><br />형식: 평면자리형(52200/52300/52400) · 조심자리형(54200/54300/54400) · 조심자리와셔형(54200U/54300U/54400U)<br />표의 d2: 중앙 축 궤도반의 내경(축경) · T: 평면자리형 T1 · 조심자리형 T5 · 조심자리와셔형 T7</div>
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="dtbCount" style="margin: 0;"></p>
@@ -341,7 +343,7 @@
       <p style="font-size: 11px; color: var(--text-faint); margin-top: 6px;">단위: mm</p>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
-        ※ 정밀 가공·발주 전에는 반드시 문의해 주세요.<br> 표의 "공차(d2/D)" 열은 스러스트 베어링 일반급(ISO 199, 0급)의 내경(d2)·외경(D) 허용 편차(상한 0, 하한 표시값, 단위 mm)입니다. 정밀등급(P6/P5/P4 등) 지정 시 별도 공차가 적용되므로 발주 전 확인하시기 바랍니다.
+        ※ 정밀 가공·발주 전에는 반드시 문의해 주세요.<br> 표의 "공차(d2/D)" 열은 스러스트 베어링 일반급(ISO 199, 0급)의 내경(d2)·외경(D) 허용 편차(상한 0, 하한 표시값, 단위 mm)입니다.<br />정밀등급(P6/P5/P4 등) 지정 시 별도 공차가 적용되므로 발주 전 확인하시기 바랍니다.
       </p>
     </div>
   </section>
@@ -364,7 +366,7 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/double_direction_thrust_ball.dict.js?v=20261116l1"></script>
+<script src="i18n/pages/double_direction_thrust_ball.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
 <script>

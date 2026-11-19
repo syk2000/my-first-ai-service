@@ -98,10 +98,8 @@
       <div class="section-head">
         <p class="eyebrow">Retaining Ring · Symbol R</p>
         <h2>구멍형 C형 멈춤링 (R형)</h2>
-        <p>
-          구멍(홀) 내부에 장착되는 C형 멈춤링으로, 규격 기호는 <strong style="color: var(--accent);">R</strong>로 표기합니다.
-          하우징이나 구멍 내부에서 베어링·부품의 축 방향 이탈을 막는 데 사용됩니다.
-        </p>
+        <p>구멍(홀) 내부에 장착되는 C형 멈춤링입니다.<br />규격 기호는 <strong style="color: var(--accent);">R</strong>로 표기합니다.</p>
+        <p class="tpl-use" style="margin: 8px 0 0;"><strong style="color: var(--text);">용도</strong> · 하우징 · 구멍 내부에서 베어링 · 부품의 축 방향 이탈 방지</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
@@ -122,6 +120,9 @@
         </div>
       </div>
 
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질 · 사양</strong><br />재질: 스프링강(기본) &nbsp;·&nbsp; 스프링용 스테인리스강(주문 생산)<br />경도: HRC 44~52 &nbsp;·&nbsp; 표면처리: 인산피막처리(A.C.P) 표준, 요청 시 Zn 도금 가능</div>
+      </div>
       <div class="finder-results" style="margin-top: 0;">
         <table class="spec-table">
           <thead>
@@ -231,12 +232,7 @@
           </tbody>
         </table>
       </div>
-      <div style="margin-top: 20px; padding: 16px 18px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md);">
-        <p style="font-size: 12.5px; color: var(--text-sub); margin: 0 0 6px; font-weight: 700;">재질 · 경도 · 표면처리</p>
-        <p style="font-size: 12.5px; color: var(--text-faint); margin: 0;">재질은 스프링강이 기본이며, 스프링용 스테인리스강은 주문 생산으로 대응합니다. 경도는 HRC 44~52, 표면처리는 인산피막처리(A.C.P)가 표준이며 요청 시 Zn 도금도 가능합니다.</p>
-      </div>
-
-      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 사진 속 "<strong style="color: var(--text-sub);">R팩</strong>"은 치수가 아니라 <strong style="color: var(--text-sub);">링을 여러 개 정렬해 테이프·밴드로 묶는 포장 방식</strong>입니다. 홈지름(d2) 값이 없는 Size No.39 행은 "—"로 표기했습니다. Size No. 앞 <strong style="color: var(--text-sub);">*(6~18, 39, 46, 130 이상)</strong>은 <strong style="color: var(--text-sub);">당사 자체 규격</strong>, <strong style="color: var(--text-sub);">○(40, 42, 45, 47, 48)</strong>은 <strong style="color: var(--text-sub);">구(舊) JIS 규격</strong>입니다. 정밀 가공·발주 전에는 반드시 문의해 주세요.</p>
+      <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">※ 사진 속 "<strong style="color: var(--text-sub);">R팩</strong>"은 치수가 아니라 <strong style="color: var(--text-sub);">링을 여러 개 정렬해 테이프·밴드로 묶는 포장 방식</strong>입니다.<br /> 홈지름(d2) 값이 없는 Size No.39 행은 "—"로 표기했습니다.<br />Size No. 앞 <strong style="color: var(--text-sub);">*(6~18, 39, 46, 130 이상)</strong>은 <strong style="color: var(--text-sub);">당사 자체 규격</strong>, <strong style="color: var(--text-sub);">○(40, 42, 45, 47, 48)</strong>은 <strong style="color: var(--text-sub);">구(舊) JIS 규격</strong>입니다.<br />정밀 가공·발주 전에는 반드시 문의해 주세요.</p>
     </div>
   </section>
 
@@ -258,8 +254,12 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261116l4"></script>
-<script src="i18n/pages/snapring_r.dict.js?v=20261116l4"></script>
+<script src="i18n/pages/snapring_r.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
+<script>
+  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
+  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
+</script>
 </body>
 </html>

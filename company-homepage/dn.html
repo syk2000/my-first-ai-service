@@ -101,11 +101,6 @@
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
-      <div class="info-box-mb">
-        <strong>사양</strong><br />
-        재질: S45C (JIS·KS) = C45 (DIN·EN) 동등 강종 &nbsp;·&nbsp; 경도: HRC 22~28 &nbsp;·&nbsp; 표면처리: 흑착색<br />
-        나사 등급: 4H &nbsp;·&nbsp; 나사 직각도: 0.002~0.007 mm
-      </div>
 
       <div class="diagram-box-lg">
         <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center;">
@@ -116,6 +111,9 @@
         </div>
       </div>
 
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질 · 사양</strong><br />재질: S45C (JIS·KS) = C45 (DIN·EN) 동등 강종 &nbsp;·&nbsp; 경도: HRC 22~28 &nbsp;·&nbsp; 표면처리: 흑착색<br />나사 등급: 4H &nbsp;·&nbsp; 나사 직각도: 0.002~0.007 mm</div>
+      </div>
       <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
         <table class="spec-table" style="min-width: 620px;">
           <thead><tr><th>호칭번호</th><th>M</th><th>D</th><th>d</th><th>T</th><th>t</th><th>L</th><th>세트스크류</th></tr></thead>
@@ -169,8 +167,12 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/dn.dict.js?v=20261116l3"></script>
+<script src="i18n/pages/dn.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
+<script>
+  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
+  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
+</script>
 </body>
 </html>

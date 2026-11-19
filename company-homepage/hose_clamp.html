@@ -98,11 +98,8 @@
       <div class="section-head">
         <p class="eyebrow">Hose Clamp</p>
         <h2>호스 클램프 (Hose Clamp)</h2>
-        <p>
-          스프링강 띠(밴드)를 원형으로 말아 만든 클램프로, 집게(플라이어)로 벌려 끼운 뒤 놓으면 자체 탄성으로 오므라들며
-          <strong style="color: var(--accent);">호스를 니플·파이프에 고정</strong>합니다. 끝단 형태에 따라 A Type · B Type,
-          크기에 따라 A·B·C 세 계열로 구분됩니다.
-        </p>
+        <p>스프링강 띠(밴드)를 원형으로 말아 만든 클램프입니다.<br />집게(플라이어)로 벌려 끼운 뒤 놓으면 자체 탄성으로 오므라들며 <strong style="color: var(--accent);">호스를 니플·파이프에 고정</strong>합니다.<br />끝단 형태에 따라 A Type · B Type, 크기에 따라 A·B·C 세 계열로 구분됩니다.</p>
+        <p class="tpl-use" style="margin: 8px 0 0;"><strong style="color: var(--text);">용도</strong> · 호스를 니플 · 파이프에 고정</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
@@ -113,6 +110,9 @@
         </div>
       </div>
 
+      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
+        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질</strong><br />스프링강</div>
+      </div>
       <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
         <table class="spec-table" style="min-width: 1100px;">
           <thead>
@@ -165,14 +165,10 @@
         </table>
       </div>
 
-      <div class="info-box">
-        <strong>재질</strong><br />
-        스프링강
-      </div>
 
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
         ※ D는 클램프 지름, T는 소재(와이어) 두께, 적용호스(약)는 참고용 권장 호스 외경 범위이며,
-        상기 이외의 치수는 주문 제작이 가능합니다. 정밀 발주 전에는 반드시 문의해 주세요.
+        상기 이외의 치수는 주문 제작이 가능합니다.<br /> 정밀 발주 전에는 반드시 문의해 주세요.
       </p>
     </div>
   </section>
@@ -195,8 +191,12 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261116l4"></script>
-<script src="i18n/pages/hose_clamp.dict.js?v=20261116l4"></script>
+<script src="i18n/pages/hose_clamp.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261119sp"></script>
+<script>
+  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
+  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
+</script>
 </body>
 </html>
