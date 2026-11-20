@@ -107,7 +107,7 @@
       <div class="tpl-search-row">
         <div class="field">
           <label for="cplFilter">형번 / 치수 검색</label>
-          <input id="cplFilter" type="text" placeholder="예: DRB-16 또는 25" autocomplete="off" />
+          <input id="cplFilter" type="text" placeholder="예: DRBS-12C 또는 25" autocomplete="off" />
         </div>
         <div class="tpl-spec"><strong>재질 · 사양</strong><br />본체: 고강성 알루미늄 합금(알루마이트) · 볼트: SCM435<br />SUS 타입: 본체·세트 스크류·볼트 모두 스테인리스<br />주문 예시: DRB-25C-8-10 (형번 DRB-25C · 내경 D1 8 · 내경 D2 10), DRBS-25C-SUS-8-10</div>
       </div>
@@ -144,9 +144,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/coupling_drb_drbs_c.dict.js?v=20261120cc"></script>
+<script src="i18n/pages/coupling_drb_drbs_c.dict.js?v=20261121ph"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120an"></script>
+<script src="common.js?v=20261121ns"></script>
 <script>
   (function () {
     var input = document.getElementById('cplFilter');
@@ -162,7 +162,7 @@
       groups.forEach(function (grp) {
         var grpShown = 0;
         Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || row.textContent.toUpperCase().indexOf(input.value.trim().toUpperCase()) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || row.textContent.toUpperCase().indexOf(input.value.trim().toUpperCase()) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) { grpShown++; if (row.closest('table.spec-main')) shown++; }
         });

@@ -101,6 +101,7 @@
         <p>실린더 로드와 피구동 부품 사이에 끼워, 축심의 편심(G)과 각도 오차(&plusmn;5&deg;)를 흡수하는 조인트입니다.<br />설치 오차로 인한 실린더&middot;가이드의 편마모와 작동 불량을 줄여 줍니다.</p>
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
+      <p class="tpl-notice-btn"><a class="btn btn-accent btn-sm" href="notice_thread_direction.html">우나사·좌나사 안내 보기 &rarr;</a></p>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
       <div class="diagram-box-lg">
@@ -181,9 +182,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/link_ball_tj.dict.js?v=20261120hr"></script>
+<script src="i18n/pages/link_ball_tj.dict.js?v=20261121ns"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120an"></script>
+<script src="common.js?v=20261121ns"></script>
 <script>
   (function () {
     var input = document.getElementById('lbFilter');
@@ -198,7 +199,7 @@
       var q = input.value.trim().toUpperCase();
       var shown = 0;
       rows.forEach(function (row) {
-        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
         row.style.display = match ? '' : 'none';
         if (match) shown++;
       });

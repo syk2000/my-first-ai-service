@@ -1,3 +1,37 @@
+// 형번 검색 공통 비교 — 띄어쓰기·하이픈·밑줄 차이와 ×/x/* 차이를 무시함(KT304517 = KT 304517, UCP-205 = UCP 205, 6x15 = 6×15)
+// 각 페이지 검색 스크립트가 원래 비교 뒤에 `|| (window.SWS_has && SWS_has(row, q[, 1]))` 로 부름 — 원래 찾던 결과는 그대로 두고 더 찾기만 함
+window.SWS_norm = function (s) {
+  return String(s == null ? "" : s).toUpperCase().replace(/[×✕*＊]/g, "X").replace(/[\s\u00a0\-‐‑–_]/g, "");
+};
+// row = 표의 <tr>(칸마다 따로 비교 — 옆 칸 글자가 붙어 엉뚱하게 맞는 것을 막음) 또는 문자열
+// dims가 참이면(치수 검색이 따로 없는 페이지) 숫자만 ×·*·x·띄어쓰기로 나눈 치수 검색(20*47, 30x62)도 숫자마다 그 줄 어느 칸의 값과 같으면 맞음
+window.SWS_has = function (row, q, dims) {
+  var raw = String(q == null ? "" : q).trim();
+  var isDim = /^\d+(\.\d+)?([\s×✕*＊xX,]+\d+(\.\d+)?)+$/.test(raw);
+  var k = window.SWS_norm(isDim ? raw.replace(/[\s,]+/g, "X") : raw);  // 숫자끼리 띄어 쓴 것(30 35)은 붙이지 않고 치수로 봄
+  if (!k) return true;
+  var cells = row && row.cells ? Array.prototype.map.call(row.cells, function (c) { return c.textContent; })
+    : [row && row.textContent != null ? row.textContent : String(row == null ? "" : row)];
+  if (cells.some(function (c) { return window.SWS_norm(c).indexOf(k) !== -1; })) return true;
+  // 표 어딘가에 그 표기 그대로(20×47) 적힌 줄이 있으면 그것만 보여 줌 — 나사 규격(M20×1.5) 같은 표에서 엉뚱한 줄이 섞이지 않게
+  dims = dims && isDim;
+  if (dims && window.SWS_has._q !== k) {
+    window.SWS_has._q = k;
+    window.SWS_has._lit = Array.prototype.some.call(document.querySelectorAll("table tbody td"), function (c) { return window.SWS_norm(c.textContent).indexOf(k) !== -1; });
+  }
+  if (dims && !window.SWS_has._lit) {
+    // 숫자는 적은 차례대로 왼쪽 칸부터(20*47 = 앞 칸 20, 그 뒤 칸 47)
+    var nums = cells.map(function (c) { return c.split(/[^\d.]+/).filter(Boolean).map(parseFloat); });
+    var at = -1;
+    return raw.split(/[\s×✕*＊xX,]+/).every(function (w) {
+      var n = parseFloat(w);
+      for (var i = at + 1; i < nums.length; i++) if (nums[i].indexOf(n) !== -1) { at = i; return true; }
+      return false;
+    });
+  }
+  return false;
+};
+
 // 모바일 내비게이션 토글
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
@@ -246,9 +280,26 @@
         const hidden = rows.filter(off).length;
         return hidden > 0 && hidden < rows.length;
       });
+      // 표에 실제로 적힌 표기를 찾아 그대로 다시 넣어 봄 — KT303517 → 'KT 303517', LM 20 UU → 'LM20UU' (띄어쓰기·하이픈·×/x 차이)
+      const fromTable = (scope, q) => {
+        const k = SWS_norm(q), out = [];
+        if (k.length < 2 || /^[\d.\s×*xX,]+$/.test(q)) return out;  // 숫자·치수만 적은 건 그대로 둠
+        for (const td of scope.querySelectorAll("table.spec-table tbody td")) {
+          if (out.length >= 3) break;
+          const t = td.textContent;
+          let c = "";
+          const map = [];
+          for (let i = 0; i < t.length; i++) { const n = SWS_norm(t[i]); if (n.length === 1) { c += n; map.push(i); } }
+          const at = c.indexOf(k);
+          if (at < 0) continue;
+          const v = t.slice(map[at], map[at + k.length - 1] + 1);
+          if (v !== q && !out.includes(v)) out.push(v);
+        }
+        return out;
+      };
       const need = () => (typeof specQueryVariants === "function" ? Promise.resolve() : loading || (loading = new Promise((res) => {
         const s = document.createElement("script");
-        s.src = "assets/spec-data.js?v=20261120an";
+        s.src = "assets/spec-data.js?v=20261121gm";
         s.onload = res; s.onerror = res;
         document.head.append(s);
       })));
@@ -263,7 +314,7 @@
           busy = true;
           try {
             let ok = false;
-            for (const v of specQueryVariants(q)) {
+            for (const v of fromTable(scope, q).concat(specQueryVariants(q))) {
               inp.value = v;
               inp.dispatchEvent(new Event("input", { bubbles: true }));
               if (hasRows(scope)) { ok = true; break; }
@@ -296,14 +347,17 @@
       const input = box.querySelector("input");
       const countEl = box.querySelector("#autoSpecCount");
       const rows = tables.flatMap((t) => [...t.tBodies].flatMap((b) => [...b.rows]));
-      const norm = (s) => s.toUpperCase().replace(/[\s\-_]/g, "");
+      const norm = SWS_norm;
       const cells = rows.map((r) => [...r.cells].map((c) => c.textContent.trim()));
       input.addEventListener("input", () => {
         // 띄어쓰기·*·x로 나눈 낱말이 모두 그 줄에 있어야 보임 — 숫자는 칸 값과 같아야, 글자는 들어 있기만 하면 됨
         const words = input.value.trim().split(/[\s*×xX,]+/).filter(Boolean);
+        const whole = SWS_norm(input.value);  // 띄어 쓴 형번을 붙여 쓰거나(KT304517) 반대로 써도 찾음
+        const byWhole = (i) => whole.length > 1 && !/^[\d.X]+$/.test(whole) && cells[i].some((c) => SWS_norm(c).includes(whole));
+        const anyWhole = rows.some((r, i) => byWhole(i));  // 형번 그대로 맞는 줄이 있으면 그 줄만(AN 05 → AN 02 등 섞이지 않게)
         let shown = 0;
         rows.forEach((r, i) => {
-          const hit = words.every((w) => /^\d+(\.\d+)?$/.test(w)
+          const hit = anyWhole ? byWhole(i) : words.every((w) => /^\d+(\.\d+)?$/.test(w)
             ? cells[i].some((c) => c.split(/[^\d.]+/).some((n) => n !== "" && parseFloat(n) === parseFloat(w)))
             : cells[i].some((c) => norm(c).includes(norm(w))));
           r.hidden = !hit;

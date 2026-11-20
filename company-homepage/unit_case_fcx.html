@@ -107,9 +107,9 @@
           <p class="diagram-caption">외형(UCFCX 조립품) · 구조 단면도</p>
           <div class="diagram-row top-align">
             <img class="fig-photo" src="img/fcx_housing.webp?v=rd3" alt="FCX형 유닛 외형" loading="lazy">
-            <img class="fig-draw" src="img/fcx_diagram.webp?v=fx1" alt="FCX형 유닛 구조 단면도" loading="lazy">
+            <img class="fig-draw" src="img/fcx_diagram.webp?v=jb1" alt="FCX형 유닛 구조 단면도" loading="lazy">
           </div>
-          <p class="diagram-legend">φH3=플랜지 바깥지름 · φL=본체(인로부) 바깥지름 · P=볼트 구멍 중심 간 거리(정사각 배치) · 4-S=볼트 구멍 4개(S=구멍 지름) · d=축 지름<br />Bi=내륜 폭 · N=내륜 왼쪽 끝~볼 중심 · M=볼 중심~내륜 오른쪽 끝 · Z=플랜지 장착면~내륜 오른쪽 끝 · I=플랜지 장착면~볼 중심 · J=본체(인로부) 왼쪽 면~플랜지 장착면 · K=플랜지 두께 · G=플랜지 장착면~본체 오른쪽 면</p>
+          <p class="diagram-legend">φL=플랜지 바깥지름 · φH3=본체(인로부) 바깥지름 · P=볼트 구멍 중심 간 거리(정사각 배치) · 4-S=볼트 구멍 4개(S=구멍 지름) · d=축 지름<br />Bi=내륜 폭 · N=내륜 왼쪽 끝~볼 중심 · M=볼 중심~내륜 오른쪽 끝 · Z=플랜지 장착면~내륜 오른쪽 끝 · I=플랜지 장착면~볼 중심 · J=본체(인로부) 왼쪽 면~플랜지 장착면 · K=플랜지 두께 · G=플랜지 장착면~본체 오른쪽 면</p>
         </div>
 
         <div class="field" style="max-width: 360px; margin-bottom: 16px;">
@@ -118,7 +118,7 @@
         </div>
         <div class="finder-results" style="overflow-x: auto;">
           <table class="spec-table" style="min-width: 460px; max-width: 640px;">
-            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>φL(본체 외경)</th><th>&phi;H3(플랜지 외경)</th><th>중량(kg)</th></tr></thead>
+            <thead><tr><th>형번</th><th>적용 축경(mm)</th><th>&phi;H3(본체 외경)</th><th>φL(플랜지 외경)</th><th>중량(kg)</th></tr></thead>
             <tbody id="fcxBody">
               <tr><td class="type-cell">FCX05</td><td>20.6~25.4</td><td>76.2</td><td>111</td><td>1.18</td></tr>
               <tr><td class="type-cell">FCX06</td><td>27~31.75</td><td>85</td><td>127</td><td>1.50</td></tr>
@@ -162,9 +162,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/unit_case_fcx.dict.js?v=20261120ro"></script>
+<script src="i18n/pages/unit_case_fcx.dict.js?v=20261121jb"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120an"></script>
+<script src="common.js?v=20261121ns"></script>
 <script>
   (function () {
     var input = document.getElementById('fcxFilter');
@@ -172,7 +172,7 @@
     input.addEventListener('input', function () {
       var q = input.value.trim().toUpperCase();
       rows.forEach(function (row) {
-        row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1) ? '' : 'none';
+        row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1))) ? '' : 'none';
       });
     });
   })();

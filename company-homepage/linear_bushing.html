@@ -491,7 +491,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/linear_bushing.dict.js?v=20261120lb"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120an"></script>
+<script src="common.js?v=20261121ns"></script>
 <script>
   (function () {
     var STORAGE_KEY = 'activeTab:' + location.pathname;
@@ -532,7 +532,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -566,7 +566,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -600,7 +600,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -634,7 +634,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -668,7 +668,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -702,7 +702,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -736,7 +736,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -770,7 +770,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -804,7 +804,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -838,7 +838,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
@@ -872,7 +872,7 @@
         var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
         var grpShown = 0;
         grpRows.forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1;
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
           row.style.display = match ? '' : 'none';
           if (match) grpShown++;
         });
