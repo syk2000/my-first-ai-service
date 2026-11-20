@@ -3323,3 +3323,11 @@ p.tpl-notice-btn { margin: 0 0 14px; }
 p.tpl-order-note { margin: 0 0 16px; font-size: 13.5px; font-weight: 700; color: var(--accent); }
 /* 공지 본문의 시리즈별 제목(목차 링크로 이동할 때 고정 헤더에 가리지 않게) */
 h3.notice-anchor-h { margin: 30px 0 12px; font-size: 19px; scroll-margin-top: 130px; }
+/* 검색칸 + 시리즈 카드 한 줄 배치(카드가 검색칸 오른쪽, 좁은 화면에선 아래로) */
+.search-tabs-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 24px; margin: 0 0 16px; }
+.search-tabs-row > .field { flex: 0 1 360px; margin: 0; }
+.search-tabs-row > .cat-tabs.tab-cards { flex: 1 1 400px; margin: 0; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+@media (max-width: 720px) {
+  .search-tabs-row > .field, .search-tabs-row > .cat-tabs.tab-cards { flex-basis: 100%; }
+  .search-tabs-row > .cat-tabs.tab-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

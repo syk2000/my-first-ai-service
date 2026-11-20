@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261120cc">
+<link rel="stylesheet" href="styles.css?v=20261120sr">
 </head>
 <body>
 
@@ -108,20 +108,22 @@
         <p class="diagram-legend">d=축 궤도반 안지름(축 구멍) · D=하우징 궤도반 바깥지름 · T=조립 높이(두 궤도반 바깥면 사이) · 공차(d/D)=안지름 d·바깥지름 D의 치수 허용차 하한(mm, 상한 0)<br /><span style="color: var(--text-faint);">d1=축 궤도반 바깥지름 · D1=하우징 궤도반 안지름 · B=축 궤도반 높이 · C=하우징 궤도반 높이 · A=축 궤도반 바깥면~조심(구면) 중심 거리 · r=모서리 모따기 치수(최소)</span></p>
       </div>
 
-      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
-        <label for="satrFilter">형번 / 규격 검색</label>
-        <input id="satrFilter" type="text" placeholder="예: 29412E 또는 60*130" autocomplete="off" />
+      <div class="search-tabs-row">
+        <div class="field">
+          <label for="satrFilter">형번 / 규격 검색</label>
+          <input id="satrFilter" type="text" placeholder="예: 29412E 또는 60*130" autocomplete="off" />
+        </div>
+        <div class="cat-tabs tab-cards cols-3" role="tablist" aria-label="시리즈 선택">
+          <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">294 시리즈</span><span class="tab-card-desc">33건</span></button>
+          <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">293 시리즈</span><span class="tab-card-desc">28건</span></button>
+          <button type="button" class="cat-tab-btn" data-tab="g3" role="tab" aria-selected="false"><span class="tab-card-title">292 시리즈</span><span class="tab-card-desc">16건</span></button>
+        </div>
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="satrCount" style="margin: 0;"></p>
         <button type="button" class="spec-toolbar-btn" id="satrToggleAll" style="display: none;">전체 펼치기</button>
       </div>
       <div id="satrGroups">
-      <div class="cat-tabs tab-cards cols-3" role="tablist" aria-label="시리즈 선택">
-        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">294 시리즈</span><span class="tab-card-desc">33건</span></button>
-        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">293 시리즈</span><span class="tab-card-desc">28건</span></button>
-        <button type="button" class="cat-tab-btn" data-tab="g3" role="tab" aria-selected="false"><span class="tab-card-title">292 시리즈</span><span class="tab-card-desc">16건</span></button>
-      </div>
       <div class="cat-tab-panel" data-panel="g1">
         <details class="series-group" open>
           <summary>294 시리즈<span class="series-count">33건</span></summary>
@@ -251,7 +253,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/self_aligning_thrust_roller.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120bw"></script>
+<script src="common.js?v=20261120sr"></script>
 <script>
   (function () {
     var input = document.getElementById('satrFilter');

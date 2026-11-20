@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261120cc">
+<link rel="stylesheet" href="styles.css?v=20261120sr">
 </head>
 <body>
 
@@ -108,19 +108,21 @@
         <p class="diagram-legend">dw(축 궤도륜 안지름: 축이 끼워지는 구멍) · Dw(축 궤도륜 바깥지름) · Dg(가운데 하우징 궤도륜 바깥지름) · H(전체 높이) · Hw(위·아래 축 궤도륜 1개의 높이) · Hg(하우징 궤도륜 높이)<br>ns(하우징 궤도륜의 급유 홈·구멍 폭) · rs·r1s(모서리 모따기 치수, 최소) · C0a(kN): 축방향 기본 정정격하중 · rpm: 오일 윤활 시 한계 회전수</p>
       </div>
 
-      <div class="field" style="max-width: 360px; margin-bottom: 16px;">
-        <label for="actFilter">형번 / 규격 검색</label>
-        <input id="actFilter" type="text" placeholder="예: 234410M 또는 50*80" autocomplete="off" />
+      <div class="search-tabs-row">
+        <div class="field">
+          <label for="actFilter">형번 / 규격 검색</label>
+          <input id="actFilter" type="text" placeholder="예: 234410M 또는 50*80" autocomplete="off" />
+        </div>
+        <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
+          <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">2344 시리즈</span><span class="tab-card-desc">36건</span></button>
+          <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">2347 시리즈</span><span class="tab-card-desc">36건</span></button>
+        </div>
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="actCount" style="margin: 0;"></p>
         <button type="button" class="spec-toolbar-btn" id="actToggleAll" style="display: none;">전체 펼치기</button>
       </div>
       <div id="actGroups">
-      <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
-        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">2344 시리즈</span><span class="tab-card-desc">36건</span></button>
-        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">2347 시리즈</span><span class="tab-card-desc">36건</span></button>
-      </div>
       <div class="cat-tab-panel" data-panel="g1">
         <details class="series-group" open>
           <summary>2344 시리즈<span class="series-count">36건</span></summary>
@@ -233,7 +235,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/angular_thrust_ball.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120bw"></script>
+<script src="common.js?v=20261120sr"></script>
 <script>
   (function () {
     var input = document.getElementById('actFilter');

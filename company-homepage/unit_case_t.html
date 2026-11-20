@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261120cc">
+<link rel="stylesheet" href="styles.css?v=20261120sr">
 </head>
 <body>
 
@@ -108,19 +108,21 @@
           <p class="diagram-legend">↑ UCT 테이크업 하우징 단면도<br />H=하우징 전체 높이 · H1=위아래 가이드 홈 바닥 사이 거리 · H2=볼트 부착부 높이 · L=전장(볼트 부착부 끝~하우징 끝) · L1=볼트 부착부 끝면~축 중심 거리 · L2=볼트 부착부 끝면~장공 시작 거리 · L3=가이드 홈 길이 · F1=볼트 장공 길이 · F2=볼트 장공 높이 · φF=조정 볼트 구멍 지름<br />A=하우징 폭 · A1=가이드 홈 폭 · A2=가이드 홈이 있는 위·아래 부분의 폭 · φd=축 지름(내륜 안지름) · B=내륜 폭 · n=내륜 끝면~볼 중심 거리 · LS·L3=씰 형식(LS: 고무 씰+금속 슬링거, L3: 3중 립 씰)</p>
         </div>
 
-        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
-          <label for="tuFilter">형번 / 축경 검색</label>
-          <input id="tuFilter" type="text" placeholder="예: UCT201 또는 30" autocomplete="off" />
+        <div class="search-tabs-row">
+          <div class="field">
+            <label for="tuFilter">형번 / 축경 검색</label>
+            <input id="tuFilter" type="text" placeholder="예: UCT201 또는 30" autocomplete="off" />
+          </div>
+          <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
+            <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">UCT2 시리즈 (소형)</span><span class="tab-card-desc">15건</span></button>
+            <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">UCT3 시리즈 (중형)</span><span class="tab-card-desc">21건</span></button>
+          </div>
         </div>
         <div class="spec-toolbar">
           <p class="finder-tip" id="tuCount" style="margin: 0;"></p>
           <button type="button" class="spec-toolbar-btn" id="tuToggleAll" style="display: none;">전체 펼치기</button>
         </div>
         <div id="tuGroups">
-      <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
-        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">UCT2 시리즈 (소형)</span><span class="tab-card-desc">15건</span></button>
-        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">UCT3 시리즈 (중형)</span><span class="tab-card-desc">21건</span></button>
-      </div>
       <div class="cat-tab-panel" data-panel="g1">
         <details class="series-group" open>
             <summary>UCT2 시리즈 (소형)<span class="series-count">15건</span></summary>
@@ -174,7 +176,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/unit_case_t.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120bw"></script>
+<script src="common.js?v=20261120sr"></script>
 <script>
   (function () {
     var input = document.getElementById('tuFilter');

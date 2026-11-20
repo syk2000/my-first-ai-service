@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261120cc">
+<link rel="stylesheet" href="styles.css?v=20261120sr">
 </head>
 <body>
 
@@ -108,19 +108,21 @@
           <p class="diagram-legend">↑ UCC 카트리지 하우징 단면도<br />φH=하우징 바깥지름 · A=하우징 폭(축 방향 길이) · r=하우징 바깥 모서리 모따기<br />φd=축 지름(내륜 안지름) · B=내륜 폭 · n=내륜 끝면~볼 중심 거리 · LS·L3=씰 형식(LS: 고무 씰+금속 슬링거, L3: 3중 립 씰)</p>
         </div>
 
-        <div class="field" style="max-width: 360px; margin-bottom: 16px;">
-          <label for="cFilter">형번 / 축경 검색</label>
-          <input id="cFilter" type="text" placeholder="예: UCC206 또는 30" autocomplete="off" />
+        <div class="search-tabs-row">
+          <div class="field">
+            <label for="cFilter">형번 / 축경 검색</label>
+            <input id="cFilter" type="text" placeholder="예: UCC206 또는 30" autocomplete="off" />
+          </div>
+          <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
+            <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">UCC2 시리즈 (소형)</span><span class="tab-card-desc">10건</span></button>
+            <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">UCC3 시리즈 (중형)</span><span class="tab-card-desc">21건</span></button>
+          </div>
         </div>
         <div class="spec-toolbar">
           <p class="finder-tip" id="cCount" style="margin: 0;"></p>
           <button type="button" class="spec-toolbar-btn" id="cToggleAll" style="display: none;">전체 펼치기</button>
         </div>
         <div id="cGroups">
-      <div class="cat-tabs tab-cards cols-2" role="tablist" aria-label="시리즈 선택">
-        <button type="button" class="cat-tab-btn active" data-tab="g1" role="tab" aria-selected="true"><span class="tab-card-title">UCC2 시리즈 (소형)</span><span class="tab-card-desc">10건</span></button>
-        <button type="button" class="cat-tab-btn" data-tab="g2" role="tab" aria-selected="false"><span class="tab-card-title">UCC3 시리즈 (중형)</span><span class="tab-card-desc">21건</span></button>
-      </div>
       <div class="cat-tab-panel" data-panel="g1">
         <details class="series-group" open>
             <summary>UCC2 시리즈 (소형)<span class="series-count">10건</span></summary>
@@ -174,7 +176,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/unit_case_c.dict.js?v=20261120ro"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120bw"></script>
+<script src="common.js?v=20261120sr"></script>
 <script>
   (function () {
     var input = document.getElementById('cFilter');

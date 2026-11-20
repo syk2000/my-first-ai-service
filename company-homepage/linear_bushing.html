@@ -10,7 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261120cc">
+<link rel="stylesheet" href="styles.css?v=20261120sr">
+<style>#linear-bushing .tab-cards .cat-tab-btn[data-tab="lmajop"]::before { background-image: url("assets/cards/lb_lmajop.webp?v=1"); }</style>
 </head>
 <body>
 
@@ -104,6 +105,7 @@
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
       <div class="cat-tabs tab-cards" role="tablist" aria-label="제품 타입 선택">
         <button type="button" class="cat-tab-btn active" data-tab="lm" role="tab" aria-selected="true"><span class="tab-card-title">LM/LML (표준형)</span><span class="tab-card-desc">플랜지 없는 기본 원통형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="lmajop" role="tab" aria-selected="false"><span class="tab-card-title">LM‥AJ/OP</span><span class="tab-card-desc">슬릿 조정형·개방형</span></button>
         <button type="button" class="cat-tab-btn" data-tab="lmf" role="tab" aria-selected="false"><span class="tab-card-title">LMF/LMFL</span><span class="tab-card-desc">원형 플랜지 부착형</span></button>
         <button type="button" class="cat-tab-btn" data-tab="lmk" role="tab" aria-selected="false"><span class="tab-card-title">LMK/LMKL</span><span class="tab-card-desc">정사각 플랜지 부착형</span></button>
         <button type="button" class="cat-tab-btn" data-tab="lmh" role="tab" aria-selected="false"><span class="tab-card-title">LMH/LMHL</span><span class="tab-card-desc">양면 컷 플랜지형</span></button>
@@ -150,6 +152,41 @@
           </div>
         </details>
         </div>
+      </div><div class="cat-tab-panel" data-panel="lmajop" hidden>
+        <p class="cat-tab-panel-desc">LM‥AJ(조정형)·LM‥OP(개방형) 리니어 부시입니다.<br />LM 표준형 몸체에 축 방향으로 슬릿을 낸 것이 AJ, 볼 1열 폭만큼 잘라 연 것이 OP입니다.<br />AJ는 하우징으로 조여 축과의 틈새를 조정하고, OP는 중간에 지지대가 있는 축에 사용합니다.</p>
+        <div class="diagram-box-lg">
+        <img class="fig-draw" loading="lazy" src="assets/linear_bushing_lm_catalog.webp?v=fx2" alt="원통형 리니어 부시 카탈로그 단면도" />
+        <p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ 원통형 리니어 부시 단면 (LM · LM‥AJ · LM‥OP 공용)<br /><span style="color: var(--text-faint);">dr: 내경(축 지름) · D: 외경 · D<sub>1</sub>: 스냅링 홈 바닥 지름 · L: 전장 · B: 양쪽 스냅링 홈 바깥쪽 끝 사이 거리 · W: 스냅링 홈 폭 · h: LM‥AJ 슬릿(틈) 폭 · h<sub>1</sub>: LM‥OP 개구부 폭 · θ: LM‥OP 개구부 각도</span></p>
+      </div>
+        <div class="field" style="max-width: 320px; margin-bottom: 16px;">
+          <label for="lmajopFilter">형번 / 규격 검색</label>
+          <input id="lmajopFilter" type="text" placeholder="예: LM20OP" autocomplete="off" />
+        </div>
+        <div class="spec-toolbar">
+          <p class="finder-tip" id="lmajopCount" style="margin: 0;"></p>
+          <button type="button" class="spec-toolbar-btn" id="lmajopToggleAll">전체 펼치기</button>
+        </div>
+        <div id="lmajopGroups">
+        <details class="series-group">
+          <summary>LM‥AJ 시리즈 (조정형, 슬릿 구조)<span class="series-count">14건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 460px; max-width: 640px;">
+              <thead><tr><th>형번</th><th>dr(내경)</th><th>D(외경)</th><th>L(전장)</th><th>h(슬릿 폭)</th></tr></thead>
+              <tbody><tr><td class="type-cell">LM6AJ</td><td>6</td><td>12</td><td>19</td><td>1</td></tr><tr><td class="type-cell">LM8SAJ</td><td>8</td><td>15</td><td>17</td><td>1</td></tr><tr><td class="type-cell">LM8AJ</td><td>8</td><td>15</td><td>24</td><td>1</td></tr><tr><td class="type-cell">LM10AJ</td><td>10</td><td>19</td><td>29</td><td>1</td></tr><tr><td class="type-cell">LM12AJ</td><td>12</td><td>21</td><td>30</td><td>1.5</td></tr><tr><td class="type-cell">LM13AJ</td><td>13</td><td>23</td><td>32</td><td>1.5</td></tr><tr><td class="type-cell">LM16AJ</td><td>16</td><td>28</td><td>37</td><td>1.5</td></tr><tr><td class="type-cell">LM20AJ</td><td>20</td><td>32</td><td>42</td><td>1.5</td></tr><tr><td class="type-cell">LM25AJ</td><td>25</td><td>40</td><td>59</td><td>2</td></tr><tr><td class="type-cell">LM30AJ</td><td>30</td><td>45</td><td>64</td><td>2.5</td></tr><tr><td class="type-cell">LM35AJ</td><td>35</td><td>52</td><td>70</td><td>2.5</td></tr><tr><td class="type-cell">LM40AJ</td><td>40</td><td>60</td><td>80</td><td>3</td></tr><tr><td class="type-cell">LM50AJ</td><td>50</td><td>80</td><td>100</td><td>3</td></tr><tr><td class="type-cell">LM60AJ</td><td>60</td><td>90</td><td>110</td><td>3</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+        <details class="series-group">
+          <summary>LM‥OP 시리즈 (개방형)<span class="series-count">9건</span></summary>
+          <div class="finder-results" style="overflow-x: auto;">
+            <table class="spec-table" style="min-width: 520px; max-width: 700px;">
+              <thead><tr><th>형번</th><th>dr(내경)</th><th>D(외경)</th><th>L(전장)</th><th>h<sub>1</sub>(개구부 폭)</th><th>θ(개구부 각도, °)</th></tr></thead>
+              <tbody><tr><td class="type-cell">LM13OP</td><td>13</td><td>23</td><td>32</td><td>9</td><td>80</td></tr><tr><td class="type-cell">LM16OP</td><td>16</td><td>28</td><td>37</td><td>11</td><td>60</td></tr><tr><td class="type-cell">LM20OP</td><td>20</td><td>32</td><td>42</td><td>11</td><td>60</td></tr><tr><td class="type-cell">LM25OP</td><td>25</td><td>40</td><td>59</td><td>12</td><td>50</td></tr><tr><td class="type-cell">LM30OP</td><td>30</td><td>45</td><td>64</td><td>15</td><td>50</td></tr><tr><td class="type-cell">LM35OP</td><td>35</td><td>52</td><td>70</td><td>17</td><td>50</td></tr><tr><td class="type-cell">LM40OP</td><td>40</td><td>60</td><td>80</td><td>20</td><td>50</td></tr><tr><td class="type-cell">LM50OP</td><td>50</td><td>80</td><td>100</td><td>25</td><td>50</td></tr><tr><td class="type-cell">LM60OP</td><td>60</td><td>90</td><td>110</td><td>30</td><td>50</td></tr></tbody>
+            </table>
+          </div>
+        </details>
+        </div>
+        <p style="font-size: 11.5px; color: var(--text-faint); margin: 10px 0 0;">dr·D·L은 LM 표준형과 같습니다.</p>
       </div><div class="cat-tab-panel" data-panel="lmf" hidden>
         <p class="cat-tab-panel-desc">LMF(원형 플랜지)·LMFL(원형 플랜지 롱 타입) 리니어 부시입니다.<br />플랜지에 볼트 구멍이 있어 설치면에 직접 고정합니다.</p>
         <div class="diagram-box">
@@ -452,9 +489,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/linear_bushing.dict.js?v=20261119t1"></script>
+<script src="i18n/pages/linear_bushing.dict.js?v=20261120lb"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120bw"></script>
+<script src="common.js?v=20261120sr"></script>
 <script>
   (function () {
     var STORAGE_KEY = 'activeTab:' + location.pathname;
@@ -487,6 +524,40 @@
     var countEl = document.getElementById('lmCount');
     var toggleBtn = document.getElementById('lmToggleAll');
     var totalRows = 34;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        grp.open = q !== '' ? grpShown > 0 : false;
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+    }
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+  })();
+
+  (function () {
+    var input = document.getElementById('lmajopFilter');
+    var groupsWrap = document.getElementById('lmajopGroups');
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById('lmajopCount');
+    var toggleBtn = document.getElementById('lmajopToggleAll');
+    var totalRows = 23;
 
     function applyFilter() {
       var q = input.value.trim().toUpperCase();

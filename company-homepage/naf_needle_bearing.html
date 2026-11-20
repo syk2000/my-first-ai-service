@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261120cc">
+<link rel="stylesheet" href="styles.css?v=20261120sr">
 </head>
 <body>
 
@@ -120,6 +120,7 @@
       <div class="cat-tabs" role="tablist">
         <button type="button" class="cat-tab-btn active" data-tab="rnaf">내륜 없음 (RNAF · RNAFW)</button>
         <button type="button" class="cat-tab-btn" data-tab="naf">내륜 부착 (NAF · NAFW)</button>
+        <button type="button" class="cat-tab-btn" data-tab="codes">형식 기호</button>
       </div>
 
       <div class="cat-tab-panel" data-panel="rnaf">
@@ -154,10 +155,12 @@
         <p class="spec-note">단위: mm(질량은 g) · NAF는 오일 주입구가 없으며 NAFW는 외륜에 오일 홈과 오일 주입구가 1개 있습니다 · d/D/C/F<sub>w</sub>=주요 치수, d<sub>b</sub>/D<sub>a</sub>(최대)/d<sub>a</sub>(최소·최대)/D<sub>b</sub>=설치 관계 치수(축·하우징 설계 시 참고) · &ldquo;조립 내륜&rdquo;은 해당 NAF·NAFW 외륜+케이지 조립체와 짝을 이루는 IKO LRT 시리즈 내륜 참고번호입니다(별도 발주 필요)</p>
       </div>
 
-      <div id="maker-codes" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; margin: 24px 0 0; font-size: 12.5px; color: var(--text-sub); line-height: 1.6;">
+      <div class="cat-tab-panel" data-panel="codes" hidden>
+      <div id="maker-codes" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; margin: 0 0 18px; font-size: 12.5px; color: var(--text-sub); line-height: 1.6;">
         <p style="margin: 0 0 8px; font-weight: 700; color: var(--text);">메이커별 형식 기호</p>
         <div class="finder-results" style="overflow-x: auto; margin: 0;"><table class="spec-table" style="font-size: 12.5px; min-width: 560px;"><thead><tr><th style="padding: 5px 10px;">INA</th><th style="padding: 5px 10px;">NTN</th><th style="padding: 5px 10px;">IKO</th><th style="padding: 5px 10px;">KOYO</th><th style="padding: 5px 10px;">NSK</th><th style="padding: 5px 10px;">SKF</th></tr></thead><tbody><tr><td style="padding: 4px 10px;">RNAO</td><td style="padding: 4px 10px;">RNAO</td><td style="padding: 4px 10px;">RNAF</td><td style="padding: 4px 10px;">RNAO</td><td style="padding: 4px 10px;">RNAF</td><td style="padding: 4px 10px;">RNAO</td></tr><tr><td style="padding: 4px 10px;">NAO</td><td style="padding: 4px 10px;">NAO</td><td style="padding: 4px 10px;">NAF</td><td style="padding: 4px 10px;">NAO</td><td style="padding: 4px 10px;">NAF</td><td style="padding: 4px 10px;">NAO</td></tr></tbody></table></div>
         <p style="margin: 8px 0 0;">※ 같은 형식이라도 메이커마다 기호가 다릅니다.<br />다른 메이커 형번으로 문의하셔도 됩니다.</p>
+      </div>
       </div>
       <p style="font-size: 12.5px; color: var(--text-faint); margin-top: 16px;">
         &#8251; 정밀 가공·발주 전에는 반드시 문의해 주세요.
@@ -183,9 +186,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/naf_needle_bearing.dict.js?v=20261120cc"></script>
+<script src="i18n/pages/naf_needle_bearing.dict.js?v=20261120mk"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261120bw"></script>
+<script src="common.js?v=20261120sr"></script>
 <script>
   (function () {
     var STORAGE_KEY = 'activeTab:' + location.pathname;

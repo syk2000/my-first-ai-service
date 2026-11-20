@@ -248,7 +248,7 @@
       });
       const need = () => (typeof specQueryVariants === "function" ? Promise.resolve() : loading || (loading = new Promise((res) => {
         const s = document.createElement("script");
-        s.src = "assets/spec-data.js?v=20261120bw";
+        s.src = "assets/spec-data.js?v=20261120lb";
         s.onload = res; s.onerror = res;
         document.head.append(s);
       })));
@@ -369,6 +369,14 @@ function seriesCardTabs(rootId, inputId) {
   function placeAuto() {
     var box = root.querySelector('.auto-spec-search'); var cards = root.querySelector('.tab-cards');
     if (box && cards && (cards.compareDocumentPosition(box) & 4)) cards.parentNode.insertBefore(box, cards);
+    // 카드가 2~4장이면 검색칸 오른쪽에 같은 줄로 놓음(.search-tabs-row, 배치는 styles.css — 좁은 화면에선 아래로)
+    var n = cards ? cards.querySelectorAll('.cat-tab-btn').length : 0;
+    if (box && box.nextElementSibling === cards && n >= 2 && n <= 4 && !box.parentNode.closest('.tpl-search-row, .search-tabs-row')) {
+      var row = document.createElement('div');
+      row.className = 'search-tabs-row';
+      box.parentNode.insertBefore(row, box);
+      row.appendChild(box); row.appendChild(cards);
+    }
   }
   placeAuto();
   document.addEventListener('DOMContentLoaded', placeAuto);
