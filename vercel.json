@@ -6,6 +6,15 @@
   },
   "headers": [
     {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
       "source": "/company-homepage/(.*)\\.(webp|png|jpg|jpeg|gif|svg|ico|pdf)",
       "headers": [
         {
