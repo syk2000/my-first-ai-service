@@ -212,3 +212,6 @@ function specQueryVariants(q) {
   if (st) { add(st.base); add(sp(st.base)); }
   return out;
 }
+
+// 서버(카카오 챗봇)에서 불러 쓸 때만 — 브라우저에서는 실행되지 않음
+if (typeof module !== "undefined" && module.exports) module.exports = { SPEC_DATA, PAGE_GROUP, GROUP_ORDER, specDedupe, specAlias, specNorm, specStripSuffix };

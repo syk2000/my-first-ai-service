@@ -2,11 +2,10 @@
 // 홈페이지 규격 데이터(company-homepage/assets/spec-data.js)에서 찾아 카카오 응답 형식(v2.0)으로 돌려줍니다.
 //   형번 검색: "6205", "UC205", "NK8/12"
 //   치수 검색: "25 52", "25*52*15", "25x52" (내경 외경 두께 순, 일부만 입력 가능)
-const fs = require("fs");
-const path = require("path");
 const { PHONE, FAX, ADDRESS, FAQ, BUY_FAQ, PRODUCT_FAQ, PRODUCT_GROUPS } = require("./_faq-data");
 
-const SITE = "https://my-first-ai-service-pi.vercel.app/company-homepage/";
+// 카드의 홈페이지 링크 — 요청이 들어온 주소 기준(Cloudflare는 handle()에서 바꿈)
+let SITE = "https://my-first-ai-service-pi.vercel.app/company-homepage/";
 // 견적·발주 접수 메일 — 홈페이지 견적문의와 같은 FormSubmit 받는 주소
 const FORMSUBMIT_URL = "https://formsubmit.co/ajax/06c8bd050147ba661797f96176c179f7";
 const TOLERANCE = 0.51; // 홈페이지 규격 검색과 같은 허용오차(정수 입력으로 x.5 치수도 찾기)
@@ -15,8 +14,7 @@ const MAX_CARDS = 10; // 카카오 캐러셀 최대 카드 수
 let DATA = null;
 function load() {
   if (DATA) return DATA;
-  const src = fs.readFileSync(path.join(process.cwd(), "company-homepage/assets/spec-data.js"), "utf8");
-  DATA = new Function(src + ";return { SPEC_DATA, PAGE_GROUP, GROUP_ORDER, specDedupe, specAlias, specNorm, specStripSuffix };")();
+  DATA = require("../company-homepage/assets/spec-data.js");
   return DATA;
 }
 
@@ -701,6 +699,25 @@ function showResults(rows, query, note, q, isApprox, typed, qty) {
   return reply(outputs);
 }
 
+// 카카오 요청 본문 → 응답 JSON (Vercel·Cloudflare 공통)
+async function handle(body, site) {
+  if (site) SITE = site;
+  body = body || {};
+  const utterance = body.userRequest ? body.userRequest.utterance : "";
+  const userId = body.userRequest && body.userRequest.user ? body.userRequest.user.id : "";
+  const blockName = (body.userRequest && body.userRequest.block && body.userRequest.block.name) ||
+    (body.intent && body.intent.name) || "";
+  try {
+    const u = (utterance || "").trim();
+    const parsed = parseForm(u);
+    if (parsed) return await submitForm(parsed, userId);
+    if (isImage(u)) return reply([text("사진·파일은 챗봇이 받을 수 없어요. 채팅 입력창 아래 '상담 연결'을 누른 뒤 담당자에게 보내 주세요.")]);
+    return answer(utterance, blockName);
+  } catch (e) {
+    return reply([text(`일시적인 오류로 답변하지 못했어요. 잠시 후 다시 시도하거나 ${PHONE}으로 연락 주세요.`)]);
+  }
+}
+
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
     res.status(200).json({ ok: true, info: "SWS TECH kakao skill — POST only" });
@@ -710,18 +727,7 @@ module.exports = async (req, res) => {
   if (typeof body === "string") {
     try { body = JSON.parse(body); } catch (e) { body = {}; }
   }
-  const utterance = body && body.userRequest ? body.userRequest.utterance : "";
-  const userId = body && body.userRequest && body.userRequest.user ? body.userRequest.user.id : "";
-  const blockName = (body && body.userRequest && body.userRequest.block && body.userRequest.block.name) ||
-    (body && body.intent && body.intent.name) || "";
-  try {
-    const u = (utterance || "").trim();
-    const parsed = parseForm(u);
-    if (parsed) res.status(200).json(await submitForm(parsed, userId));
-    else if (isImage(u)) res.status(200).json(reply([text("사진·파일은 챗봇이 받을 수 없어요. 채팅 입력창 아래 '상담 연결'을 누른 뒤 담당자에게 보내 주세요.")]));
-    else res.status(200).json(answer(utterance, blockName));
-  } catch (e) {
-    res.status(200).json(reply([text(`일시적인 오류로 답변하지 못했어요. 잠시 후 다시 시도하거나 ${PHONE}으로 연락 주세요.`)]));
-  }
+  res.status(200).json(await handle(body));
 };
 module.exports.answer = answer;
+module.exports.handle = handle;
