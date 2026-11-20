@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261116cd">
+<link rel="stylesheet" href="styles.css?v=20261120cc">
 </head>
 <body>
 
@@ -101,7 +101,7 @@
         <p>공작기계 주축(Spindle)용 베어링입니다.</p>
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
-      <p style="margin: 0 0 14px;"><a class="btn btn-accent btn-sm" href="notice_spindle_bearing_arrangement.html">조합 방식 · 정밀등급 보기 &rarr;</a></p>
+      <p class="tpl-notice-btn"><a class="btn btn-accent btn-sm" href="notice_spindle_bearing_arrangement.html">조합 방식 · 정밀등급 보기 &rarr;</a></p>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
       <div class="diagram-box">
         <p class="diagram-caption">단면도 · 조합(배열) 방식 개념도</p>
@@ -117,12 +117,12 @@
         <p class="diagram-legend">d=안지름(축 구멍) · D=바깥지름 · B=폭(내·외륜 축 방향 길이) · r=모서리 모따기 치수(최소) · r1=외륜 정면(얇은 쪽) 모서리 모따기 치수(최소) · a=베어링 측면~유효 하중중심(접촉선 연장이 축과 만나는 점) 거리. 조합방식 그림의 적색 점이 이 유효 하중중심으로, 두 점 사이 거리가 넓을수록 전도모멘트에 유리합니다. 조합방식 그림은 이해를 돕기 위한 개념도이며 실제 접촉각(15°/25°)과는 축척이 다릅니다.</p>
       </div>
 
-      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
-        <div class="field" style="flex: 0 1 360px; margin: 0;">
+      <div class="tpl-search-row">
+        <div class="field">
           <label for="spdFilter">형번 / 규격 검색</label>
           <input id="spdFilter" type="text" placeholder="예: B7010 또는 50*80" autocomplete="off" />
         </div>
-        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">사양</strong><br />접촉각: 15° · 25°<br />형식: 개방형 · 씰형 · 초고속(HS · HSS) · 세라믹볼(HC · HCS) · 크로니더(XC · XCS)<br />시리즈: 70(표준폭) · 72(광폭 · 고하중) · 719(초박형)<br />치수표: 접촉각 15° · P4S급 · 자유조합형(UL) · 예압등급 L(경예압) 기준</div>
+        <div class="tpl-spec"><strong>사양</strong><br />접촉각: 15° · 25°<br />형식: 개방형 · 씰형 · 초고속(HS · HSS) · 세라믹볼(HC · HCS) · 크로니더(XC · XCS)<br />시리즈: 70(표준폭) · 72(광폭 · 고하중) · 719(초박형)<br />치수표: 접촉각 15° · P4S급 · 자유조합형(UL) · 예압등급 L(경예압) 기준</div>
       </div>
       <div class="spec-toolbar" style="flex-wrap: wrap; gap: 20px; align-items: flex-start;">
         <div>
@@ -291,9 +291,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/spindle_bearing.dict.js?v=20261120ro"></script>
+<script src="i18n/pages/spindle_bearing.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261119sp"></script>
+<script src="common.js?v=20261120cc"></script>
 <script>
   (function () {
     var input = document.getElementById('spdFilter');

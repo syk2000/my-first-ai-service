@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261116cd">
+<link rel="stylesheet" href="styles.css?v=20261120cc">
 <style id="pill-tabs">#cam-follower .tab-cards.pill { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 20px; } #cam-follower .tab-cards.pill .cat-tab-btn { flex-direction: row; align-items: center; gap: 0; padding: 11px 22px; border-radius: 999px; transform: none; } #cam-follower .tab-cards.pill .cat-tab-btn::before { display: none; } #cam-follower .tab-cards.pill .tab-card-title { font-size: 15px; font-weight: 600; color: var(--text-sub); } #cam-follower .tab-cards.pill .cat-tab-btn.active .tab-card-title { color: var(--accent); } #cam-follower .tab-cards.pill .tab-card-desc { display: none; }</style>
 </head>
 <body>
@@ -100,22 +100,22 @@
         <p class="eyebrow">Cam Followers</p>
         <h2>캠 플로워 베어링</h2>
         <p>샤프트 역할을 하는 스터드(Stud)의 머리 부분에 니들 롤러 베어링이 결합되어 있는 형태입니다.</p>
-        <p class="tpl-use" style="margin: 8px 0 0;"><strong style="color: var(--text);">용도</strong> · 자동화 기계 · 각종 운반 장치 · 머시닝 센터의 공구 교환 장치</p>
+        <p class="tpl-use"><strong>용도</strong> · 자동화 기계 · 각종 운반 장치 · 머시닝 센터의 공구 교환 장치</p>
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
-      <p style="margin: 0 0 14px;"><a class="btn btn-accent btn-sm" href="notice_cam_follower_codes.html">형번 읽는 법 보기 &rarr;</a></p>
+      <p class="tpl-notice-btn"><a class="btn btn-accent btn-sm" href="notice_cam_follower_codes.html">형번 읽는 법 보기 &rarr;</a></p>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
       <div class="diagram-box">
         <img class="fig-draw" src="img/cam_follower.webp?v=fx2" alt="구조 단면도" loading="lazy">
         <p class="diagram-legend">D(외륜 바깥지름) · C(외륜 폭) · B(머리 쪽 끝면~스터드 플랜지 면 길이) · B1(전체 길이) · B2(플랜지 면~스터드 끝 길이) · C1(외륜 측면~플랜지 면 간격) · r(외륜 모서리 모따기, 최소)<br>G(나사 호칭, 표의 ‘나사’) · G1(나사부 길이) · d1(스터드 지름) · B3(플랜지 면~옆 급유 구멍 중심) · g1(끝면 급유 구멍 지름) · g2(옆 급유 구멍 지름) · R=500(R형 외륜 바깥면 곡률 반지름)</p>
       </div>
 
-      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
-        <div class="field" style="flex: 0 1 360px; margin: 0;">
+      <div class="tpl-search-row">
+        <div class="field">
           <label for="cfwFilter">형번 / 규격 검색</label>
           <input id="cfwFilter" type="text" placeholder="예: CF10 또는 M10X1.25" autocomplete="off" />
         </div>
-        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">사양</strong><br />나사: CF(미터 나사) · CR(인치 나사)</div>
+        <div class="tpl-spec"><strong>사양</strong><br />나사: CF(미터 나사) · CR(인치 나사)</div>
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="cfwCount" style="margin: 0;"></p>
@@ -242,9 +242,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/cam_follower.dict.js?v=20261120ro"></script>
+<script src="i18n/pages/cam_follower.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261119sp"></script>
+<script src="common.js?v=20261120cc"></script>
 <script>
   (function () {
     var input = document.getElementById('cfwFilter');

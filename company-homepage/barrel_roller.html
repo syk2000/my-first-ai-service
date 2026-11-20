@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261116cd">
+<link rel="stylesheet" href="styles.css?v=20261120cc">
 </head>
 <body>
 
@@ -107,12 +107,12 @@
         <p class="diagram-legend">d(내경: 내륜 구멍 지름) · D(외경: 외륜 바깥지름) · 공차(d/D 허용 오차) · B(폭: 내·외륜의 축 방향 길이) · D1(외륜 측면 안지름: 외륜 턱 지름) · r(모서리 모따기 치수, 최소) · 오른쪽 그림은 테이퍼 구멍형(K, 테이퍼 1:12)</p>
       </div>
 
-      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
-        <div class="field" style="flex: 0 1 360px; margin: 0;">
+      <div class="tpl-search-row">
+        <div class="field">
           <label for="barFilter">형번 / 규격 검색</label>
           <input id="barFilter" type="text" placeholder="예: 20206 또는 30*62" autocomplete="off" />
         </div>
-        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">사양</strong><br />형식: 원통 구멍형(TVP) · 테이퍼 구멍형(MB, 테이퍼 1:12)</div>
+        <div class="tpl-spec"><strong>사양</strong><br />형식: 원통 구멍형(TVP) · 테이퍼 구멍형(MB, 테이퍼 1:12)</div>
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="barCount" style="margin: 0;"></p>
@@ -217,9 +217,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/barrel_roller.dict.js?v=20261120ro"></script>
+<script src="i18n/pages/barrel_roller.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261119sp"></script>
+<script src="common.js?v=20261120cc"></script>
 <script>
   (function () {
     var input = document.getElementById('barFilter');

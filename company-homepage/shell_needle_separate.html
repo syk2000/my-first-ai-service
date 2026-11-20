@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261116cd">
+<link rel="stylesheet" href="styles.css?v=20261120cc">
 </head>
 <body>
 
@@ -107,12 +107,12 @@
         <p class="diagram-legend">d=안지름(내륜 포함형은 내륜 안지름, 내륜 없는 형은 롤러 내접원 지름 = 도면의 Fw) · Fw=니들 롤러 내접원 지름(축이 직접 궤도면이 되는 지름) · D=외륜 바깥지름 · B=폭(= 도면의 C, 외륜 축 방향 길이) · r=모서리 모따기 치수(최소)<br />공차(d/D)=안지름 d·바깥지름 D의 치수 허용차 하한(mm, 상한 0)</p>
       </div>
 
-      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
-        <div class="field" style="flex: 0 1 360px; margin: 0;">
+      <div class="tpl-search-row">
+        <div class="field">
           <label for="snsFilter">형번 / 규격 검색</label>
           <input id="snsFilter" type="text" placeholder="예: NA4906 또는 30*45" autocomplete="off" />
         </div>
-        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">사양</strong><br />형식: NK · NA49 · NA69(내륜 포함) · RNA(내륜 없음)</div>
+        <div class="tpl-spec"><strong>사양</strong><br />형식: NK · NA49 · NA69(내륜 포함) · RNA(내륜 없음)</div>
       </div>
       <div class="spec-toolbar">
         <p class="finder-tip" id="snsCount" style="margin: 0;"></p>
@@ -256,9 +256,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/shell_needle_separate.dict.js?v=20261120ro"></script>
+<script src="i18n/pages/shell_needle_separate.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261119sp"></script>
+<script src="common.js?v=20261120cc"></script>
 <script>
   (function () {
     var input = document.getElementById('snsFilter');

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261116cd">
+<link rel="stylesheet" href="styles.css?v=20261120cc">
 </head>
 <body>
 
@@ -100,7 +100,7 @@
         <h2>노드 록 (Nord-Lock)</h2>
         <p>마찰력 대신 <strong style="color: var(--accent);">볼트 자체의 장력</strong>을 이용해 풀림을 막는 볼트 풀림 방지 와셔 시스템입니다.</p>
       </div>
-      <p style="margin: 0 0 14px;"><a class="btn btn-accent btn-sm" href="notice_nord_lock.html">구조·장점 보기 &rarr;</a></p>
+      <p class="tpl-notice-btn"><a class="btn btn-accent btn-sm" href="notice_nord_lock.html">구조·장점 보기 &rarr;</a></p>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
 
       <div class="diagram-box-lg">
@@ -117,8 +117,8 @@
       </div>
 
 
-      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
-        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질 · 사양</strong><br />스틸: M3 ~ M130 &nbsp;·&nbsp; 스테인리스 스틸: M3 ~ M80<br />표면처리: 노란색 아연 크롬도금(chromate) 처리(표준) &nbsp;·&nbsp; 다크로메이트(dacromate) 코팅<br />스테인리스(SS2343) &nbsp;·&nbsp; 외경 사이즈 다양</div>
+      <div class="tpl-search-row">
+        <div class="tpl-spec"><strong>재질 · 사양</strong><br />스틸: M3 ~ M130 &nbsp;·&nbsp; 스테인리스 스틸: M3 ~ M80<br />표면처리: 노란색 아연 크롬도금(chromate) 처리(표준) &nbsp;·&nbsp; 다크로메이트(dacromate) 코팅<br />스테인리스(SS2343) &nbsp;·&nbsp; 외경 사이즈 다양</div>
       </div>
       <h3 style="font-size: 16px; margin: 28px 0 10px;">노드 록 치수 (합금강, mm)</h3>
       <div class="finder-results" style="margin-top: 0; overflow-x: auto;">
@@ -226,12 +226,8 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/nod_lock.dict.js?v=20261120ro"></script>
+<script src="i18n/pages/nod_lock.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261119sp"></script>
-<script>
-  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
-  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
-</script>
+<script src="common.js?v=20261120cc"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261116cd">
+<link rel="stylesheet" href="styles.css?v=20261120cc">
 </head>
 <body>
 
@@ -99,7 +99,7 @@
         <p class="eyebrow">Sunk Keys &amp; Their Keyways</p>
         <h2>사각키 및 키홈 <span style="font-size: 15px; color: var(--text-sub); font-weight: 500;">Sunk Keys and Their Corresponding Keyways</span></h2>
         <p>축과 보스를 회전 방향으로 고정하는 가장 기본적인 사각형 키입니다.<br />일반 탄소강(SM45C) 소재가 기본이며, <strong style="color: var(--accent);">STS304 스테인리스 사각키</strong>도 함께 취급합니다.</p>
-        <p class="tpl-use" style="margin: 8px 0 0;"><strong style="color: var(--text);">용도</strong> · 축과 보스의 회전 방향 고정 · 부식 환경 · 식품·화학 설비(STS304)</p>
+        <p class="tpl-use"><strong>용도</strong> · 축과 보스의 회전 방향 고정 · 부식 환경 · 식품·화학 설비(STS304)</p>
       </div>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
       <p style="margin: 6px 0 0; font-weight: 700; color: #c0392b;">※ 키는 꼭 견적 문의를 하신 뒤 주문해 주세요.</p>
@@ -111,8 +111,8 @@
         </div>
       </div>
 
-      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
-        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질</strong><br />일반 사각키: SM45C &nbsp;·&nbsp; SUS 사각키: STS304</div>
+      <div class="tpl-search-row">
+        <div class="tpl-spec"><strong>재질</strong><br />일반 사각키: SM45C &nbsp;·&nbsp; SUS 사각키: STS304</div>
       </div>
       <div class="cat-tabs kind-tabs" id="keyKindTabs" role="tablist" aria-label="사각키 종류 선택" style="margin: 8px 0 20px;">
         <button type="button" class="cat-tab-btn active" data-kind="std" role="tab" aria-selected="true" style="font-size: 15px; padding: 11px 22px;">일반 사각키 (SM45C)</button>
@@ -580,13 +580,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/key_normal.dict.js?v=20261120ro"></script>
+<script src="i18n/pages/key_normal.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261119sp"></script>
-<script>
-  // 자동 검색칸(common.js가 만듦)을 재질·사양 상자 왼쪽(.tpl-search-row)으로 옮김
-  (function () { var r = document.querySelector(".tpl-search-row"), b = document.querySelector(".auto-spec-search"); if (r && b) { b.style.flex = "0 1 360px"; b.style.margin = "0"; r.insertBefore(b, r.firstChild); } })();
-</script>
+<script src="common.js?v=20261120cc"></script>
 <script>seriesCardTabs("key-normal", null);
 // 사각키 종류 탭(일반 · SUS · 규격외): 평소엔 고른 종류만, 검색어가 있으면 일치하는 줄이 있는 종류를 모두 보여 줌
 (function () {
@@ -596,7 +592,7 @@
   var KEY = "keyKind:" + location.pathname, cur = "std";
   try { var s = sessionStorage.getItem(KEY); if (s && btns.some(function (b) { return b.dataset.kind === s; })) cur = s; } catch (e) {}
   var box = document.querySelector(".auto-spec-search");
-  if (box) bar.parentNode.insertBefore(box, bar);
+  if (box) { bar.parentNode.insertBefore(box, bar); box.style.margin = "0"; }
   var inp = document.getElementById("autoSpecFilter");
   function hasRows(p) { return [].some.call(p.querySelectorAll("tbody tr"), function (r) { return !r.hidden && r.style.display !== "none"; }); }
   function render() {

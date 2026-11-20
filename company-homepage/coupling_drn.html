@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261116cd">
+<link rel="stylesheet" href="styles.css?v=20261120cc">
 </head>
 <body>
 
@@ -101,15 +101,15 @@
         <p>너트 체결식 리지드 커플링입니다.<br />양쪽 너트를 조이면 테이퍼 슬리브가 축을 마찰 체결합니다.</p>
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
-      <p style="margin: 0 0 14px;"><a class="btn btn-accent btn-sm" href="notice_coupling_series.html#drn">특징 보기 &rarr;</a></p>
+      <p class="tpl-notice-btn"><a class="btn btn-accent btn-sm" href="notice_coupling_series.html#drn">특징 보기 &rarr;</a></p>
       <p class="copy-notice">※ 본 페이지의 도면·규격표는 SWS TECH의 자료입니다. 무단 복제·배포를 금합니다.</p>
       <div class="diagram-box-lg" style="margin-bottom: 16px;"><img class="fig-draw" loading="lazy" src="assets/coupling_drn_catalog.webp?v=rd2" alt="DRN 너트 체결 리지드 커플링 규격 도면" /><p style="font-size: 11.5px; color: var(--text-sub); margin: 8px 0 0;">↑ DRN (흑색 · 도금 제품)<br /><span style="color: var(--text-faint);">d=내경(축 지름, 형번 숫자) · S=육각 맞변 거리 · D=육각 대각 거리(모서리 사이) · L1=본체 가운데 육각부 폭 · L2=양쪽 너트 폭 · L=본체 길이(너트 안쪽 본체 양 끝 사이) · W=전장(너트 포함)</span></p></div>
-      <div class="tpl-search-row" style="display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px;">
-        <div class="field" style="flex: 0 1 360px; margin: 0;">
+      <div class="tpl-search-row">
+        <div class="field">
           <label for="cplFilter">형번 / 치수 검색</label>
           <input id="cplFilter" type="text" placeholder="예: DRN-8 또는 25" autocomplete="off" />
         </div>
-        <div class="tpl-spec" style="flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7;"><strong style="color: var(--text);">재질 · 사양</strong><br />재질: S45C, SUS304(특주) · 표면처리: 인산망간피막, 무전해 니켈 도금(특주)<br />주문 예시: DRN-10 (형번 DRN · 내경 d 10)</div>
+        <div class="tpl-spec"><strong>재질 · 사양</strong><br />재질: S45C, SUS304(특주) · 표면처리: 인산망간피막, 무전해 니켈 도금(특주)<br />주문 예시: DRN-10 (형번 DRN · 내경 d 10)</div>
       </div>
       <div class="spec-toolbar"><p class="finder-tip" id="cplCount" style="margin: 0;"></p><button type="button" class="spec-toolbar-btn" id="cplToggleAll">전체 접기</button></div>
       <div id="cplGroups">
@@ -136,9 +136,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/coupling_drn.dict.js?v=20261120ro"></script>
+<script src="i18n/pages/coupling_drn.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261119sp"></script>
+<script src="common.js?v=20261120cc"></script>
 <script>
   (function () {
     var input = document.getElementById('cplFilter');

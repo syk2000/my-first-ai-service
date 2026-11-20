@@ -1173,16 +1173,6 @@
     color: var(--text-sub);
   }
 
-  .info-box-sm {
-    background: #f4f4f2;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 16px 18px;
-    margin-top: 20px;
-    font-size: 12.5px;
-    color: var(--text-sub);
-  }
-
   .diagram-caption {
     text-align: center;
     font-size: 11px;
@@ -2293,7 +2283,6 @@ table.spec-table th { color: #4b5873; }
 :is(#bearing-group, #accessory-group) .product-card[href="oiless.html"]::before { background-image: url("assets/cards/oiless.webp?v=5"); }
 :is(#bearing-group, #accessory-group) .product-card[href="dish_spring.html"]::before { background-image: url("assets/cards/dish_spring.webp?v=fx3"); }
 :is(#bearing-group, #accessory-group) .product-card[href="mold_spring.html"]::before { background-image: url("assets/cards/mold_spring.webp?v=5"); }
-:is(#bearing-group, #accessory-group) .product-card[href="ball_plunger.html"]::before { background-image: url("assets/cards/ball_plunger.webp?v=rd3"); }
 /* 오일씰 형식별 단면 카드 */
 .seal-type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 4px; }
 .seal-type-card { display: flex; flex-direction: column; background: var(--surface); border: 1.5px solid #2b3550; border-radius: var(--radius-md); overflow: hidden; color: var(--text); text-decoration: none; }
@@ -3323,3 +3312,14 @@ table.spec-table th { color: #4b5873; }
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3C6.48 3 2 6.54 2 10.9c0 2.82 1.87 5.29 4.69 6.69l-.96 3.5c-.08.3.26.54.52.37l4.18-2.77c.51.07 1.03.11 1.57.11 5.52 0 10-3.54 10-7.9S17.52 3 12 3z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 .header-cta .btn.btn-accent:hover { background: #f5d800; border-color: #f5d800; color: #191919; }
+
+/* 제품 페이지 공통 틀 — 용도 줄 · 공지 버튼 · 검색칸 + 재질·사양 상자 · 견적 안내 (예전엔 페이지마다 인라인 스타일) */
+p.tpl-use, .section-head p.tpl-use { margin: 8px 0 0; }
+.tpl-use strong, .tpl-spec strong { color: var(--text); }
+p.tpl-notice-btn { margin: 0 0 14px; }
+.tpl-search-row { display: flex; gap: 16px 24px; flex-wrap: wrap; align-items: flex-start; margin: 0 0 16px; }
+.tpl-search-row > .field { flex: 0 1 360px; margin: 0; }
+.tpl-spec { flex: 1 1 260px; max-width: 560px; background: #f4f4f2; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 16px; font-size: 12.5px; color: var(--text-sub); line-height: 1.7; }
+p.tpl-order-note { margin: 0 0 16px; font-size: 13.5px; font-weight: 700; color: var(--accent); }
+/* 공지 본문의 시리즈별 제목(목차 링크로 이동할 때 고정 헤더에 가리지 않게) */
+h3.notice-anchor-h { margin: 30px 0 12px; font-size: 19px; scroll-margin-top: 130px; }

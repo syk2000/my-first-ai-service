@@ -248,7 +248,7 @@
       });
       const need = () => (typeof specQueryVariants === "function" ? Promise.resolve() : loading || (loading = new Promise((res) => {
         const s = document.createElement("script");
-        s.src = "assets/spec-data.js?v=20261119sp";
+        s.src = "assets/spec-data.js?v=20261120sc";
         s.onload = res; s.onerror = res;
         document.head.append(s);
       })));
@@ -289,7 +289,10 @@
       box.innerHTML = '<label for="autoSpecFilter">형번 / 규격 검색</label>' +
         '<input id="autoSpecFilter" type="search" placeholder="예: 형번 또는 치수 (20, 30*62)" autocomplete="off">' +
         '<p class="finder-tip" id="autoSpecCount" hidden></p>';
-      anchor.parentElement.insertBefore(box, anchor);
+      // 제품 틀의 검색 줄(.tpl-search-row)에 검색칸이 없으면 재질·사양 상자 왼쪽에 넣음(배치는 styles.css)
+      const row = document.querySelector(".tpl-search-row");
+      if (row && !row.querySelector(".field")) row.insertBefore(box, row.firstChild);
+      else anchor.parentElement.insertBefore(box, anchor);
       const input = box.querySelector("input");
       const countEl = box.querySelector("#autoSpecCount");
       const rows = tables.flatMap((t) => [...t.tBodies].flatMap((b) => [...b.rows]));
