@@ -5,7 +5,7 @@
 const { PHONE, FAX, ADDRESS, FAQ, BUY_FAQ, PRODUCT_FAQ, PRODUCT_GROUPS } = require("./_faq-data");
 
 // 카드의 홈페이지 링크 — 요청이 들어온 주소 기준(Cloudflare는 handle()에서 바꿈)
-let SITE = "https://my-first-ai-service-pi.vercel.app/company-homepage/";
+let SITE = "https://sws-bearing.com/";
 // 견적·발주 접수 메일 — 홈페이지 견적문의와 같은 FormSubmit 받는 주소
 const FORMSUBMIT_URL = "https://formsubmit.co/ajax/06c8bd050147ba661797f96176c179f7";
 const TOLERANCE = 0.51; // 홈페이지 규격 검색과 같은 허용오차(정수 입력으로 x.5 치수도 찾기)
