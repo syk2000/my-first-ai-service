@@ -1,3 +1,7 @@
 # Cloudflare 기본 주소(swstech.pages.dev)는 검색에서 빼고, 정식 주소(sws-bearing.com)만 검색되게
 https://swstech.pages.dev/*
   X-Robots-Tag: noindex
+
+/stats/*
+  X-Robots-Tag: noindex
+  Cache-Control: no-store

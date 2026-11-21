@@ -731,3 +731,26 @@ module.exports = async (req, res) => {
 };
 module.exports.answer = answer;
 module.exports.handle = handle;
+
+// 통계용 분류(익명) — 견적·발주 양식 내용은 남기지 않고 종류만
+//   kform: 양식 접수 / kpick: 카드의 [견적 문의]·[발주 문의] 버튼(품번) / ksearch: 형번·치수 검색(찾은 건수) / kmenu: 메뉴·질문
+function classify(body, out) {
+  const u = String((body && body.userRequest && body.userRequest.utterance) || "").trim();
+  if (!u) return null;
+  const form = parseForm(u);
+  if (form) return { t: "kform", k: form.form.name };
+  if (isImage(u)) return null;
+  const pick = u.match(/^(견적|발주)\s*문의\s*[:：]\s*(.+)$/);
+  if (pick) return { t: "kpick", k: pick[2].split(/\s*\|\s*수량\s*/)[0].trim(), n: pick[1] === "발주" ? 1 : 0 };
+  const outs = (out && out.template && out.template.outputs) || [];
+  const cards = outs.reduce((a, o) => a + (o.carousel && o.carousel.items ? o.carousel.items.length : 0), 0);
+  const first = outs[0] && outs[0].simpleText ? outs[0].simpleText.text : "";
+  const found = first.match(/^(\d+)건을 찾았어요/);
+  if (cards || /\d/.test(u)) {
+    const q = parse(u);
+    const k = q.kind === "dim" ? [q.d, q.D, q.h].filter((v) => v != null).join("×") : u.toUpperCase();
+    return { t: "ksearch", k, n: found ? Number(found[1]) : cards };
+  }
+  return { t: "kmenu", k: u.slice(0, 30) };
+}
+module.exports.classify = classify;

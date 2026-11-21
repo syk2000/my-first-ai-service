@@ -440,3 +440,69 @@ function seriesCardTabs(rootId, inputId) {
   showTab();
   root.addEventListener('input', function (e) { if (e.target.matches && e.target.matches('input[id$="Filter"]')) sync(); });
 }
+
+// 이용 통계(익명) — 정식 주소(sws-bearing.com)에서만 기록. 쿠키·개인정보 없이 "무엇을 보고 찾았는지"만 /api/log로 보냄
+(function () {
+  if (location.hostname !== "sws-bearing.com" || !navigator.sendBeacon) return;
+  var page = location.pathname.replace(/^\//, "").replace(/\.html$/, "").replace(/\/$/, "") || "index";
+  function send(o) {
+    try {
+      o.p = o.p || page;
+      navigator.sendBeacon("/api/log", new Blob([JSON.stringify(o)], { type: "text/plain" }));
+    } catch (e) {}
+  }
+  var ref = "";
+  try { if (document.referrer) { var h = new URL(document.referrer).hostname; if (h !== location.hostname) ref = h.replace(/^www\./, ""); } } catch (e) {}
+  send({ t: "view", c: document.title, r: ref });
+
+  // 검색어 — 입력을 멈추고 1.5초 뒤 한 번(글자마다 보내지 않음), 찾은 줄 수도 함께
+  var timer = null, last = "";
+  function val(id) { var el = document.getElementById(id); return el ? String(el.value || "").trim() : ""; }
+  function finderQuery() {
+    var dims = [val("fD"), val("fOD"), val("fH")];
+    var dimText = dims.some(Boolean) ? dims.map(function (v) { return v || "-"; }).join("×") : "";
+    return [val("fName"), dimText].filter(Boolean).join(" ");
+  }
+  function countRows(scope) {
+    var rows = (scope || document).querySelectorAll("table.spec-table tbody tr");
+    return Array.prototype.filter.call(rows, function (r) { return !r.hidden && r.style.display !== "none"; }).length;
+  }
+  function flush(k, scope) {
+    if (!k || k === last) return;
+    last = k;
+    send({ t: "search", k: k, n: countRows(scope) });
+  }
+  document.addEventListener("input", function (e) {
+    var el = e.target;
+    if (!el || !el.id) return;
+    var finder = /^(fName|fD|fOD|fH)$/.test(el.id);
+    if (!finder && !/Filter$/.test(el.id)) return;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      flush(finder ? finderQuery() : String(el.value || "").trim(), finder ? document.getElementById("finderResults") : null);
+    }, 1500);
+  });
+  // 다른 화면에서 검색값을 달고 넘어온 경우(search-product.html?name=…)
+  if (document.getElementById("finderResults") && /[?&](name|d|D|h)=/.test(location.search)) {
+    setTimeout(function () { flush(finderQuery(), document.getElementById("finderResults")); }, 1200);
+  }
+
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    var add = t.closest && t.closest("tr[data-p] .quote-add");
+    if (add) {
+      var tr = add.closest("tr");
+      send({ t: "add", k: tr.getAttribute("data-m"), c: tr.getAttribute("data-c"), p: String(tr.getAttribute("data-p") || "").replace(/\.html$/, "") });
+      return;
+    }
+    var a = t.closest && t.closest("a[href]");
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+    if (/\.pdf(\?|#|$)/i.test(href)) send({ t: "dl", k: href.split("/").pop().split(/[?#]/)[0] });
+    else if (/pf\.kakao\.com/i.test(href)) send({ t: "kakao" });
+    else if (/^tel:/i.test(href)) send({ t: "tel" });
+  });
+  document.addEventListener("submit", function (e) {
+    if (e.target && e.target.id === "inquiryForm") send({ t: "inq" });
+  });
+})();

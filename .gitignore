@@ -25,3 +25,6 @@ desktop.ini
 
 # 로컬 테스트 사본
 page-test-deploy/
+
+# Cloudflare 로컬 시험 데이터
+.wrangler/
