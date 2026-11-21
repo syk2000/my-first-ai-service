@@ -45,22 +45,22 @@ export async function onRequestGet({ request, env }) {
   const db = DBX;
   const q = (sql, ...args) => db.prepare(sql).bind(since, ...args);
   const top = (src, t, n, col = "k") =>
-    q(`SELECT ${col} AS k, MAX(c) AS c, COUNT(*) AS cnt, ROUND(AVG(n), 1) AS hits FROM ev WHERE ts >= ? AND src = ? AND t = ? AND ${col} IS NOT NULL AND ${col} != '' GROUP BY ${col} ORDER BY cnt DESC LIMIT ?`, src, t, n);
+    q(`SELECT ${col} AS k, MAX(c) AS c, COUNT(*) AS cnt, ROUND(AVG(n), 1) AS hits FROM ev WHERE ts >= ? AND substr(COALESCE(p, ''), 1, 1) != '_' AND src = ? AND t = ? AND ${col} IS NOT NULL AND ${col} != '' GROUP BY ${col} ORDER BY cnt DESC LIMIT ?`, src, t, n);
 
   try {
     const res = await db.batch([
-      q(`SELECT src, t, COUNT(*) AS cnt FROM ev WHERE ts >= ? GROUP BY src, t`),
-      q(`SELECT date(ts / 1000, 'unixepoch', ${KST}) AS day, src, COUNT(*) AS cnt FROM ev WHERE ts >= ? AND ((src = 'web' AND t = 'view') OR src = 'kakao') GROUP BY day, src ORDER BY day`),
+      q(`SELECT src, t, COUNT(*) AS cnt FROM ev WHERE ts >= ? AND substr(COALESCE(p, ''), 1, 1) != '_' GROUP BY src, t`),
+      q(`SELECT date(ts / 1000, 'unixepoch', ${KST}) AS day, src, COUNT(*) AS cnt FROM ev WHERE ts >= ? AND substr(COALESCE(p, ''), 1, 1) != '_' AND ((src = 'web' AND t = 'view') OR src = 'kakao') GROUP BY day, src ORDER BY day`),
       top("web", "view", 30, "p"),
       top("web", "search", 30),
       top("web", "add", 30),
       top("web", "dl", 20),
-      q(`SELECT COALESCE(NULLIF(r, ''), '(직접 입력·즐겨찾기)') AS k, COUNT(*) AS cnt FROM ev WHERE ts >= ? AND src = 'web' AND t = 'view' GROUP BY 1 ORDER BY cnt DESC LIMIT 15`),
+      q(`SELECT COALESCE(NULLIF(r, ''), '(직접 입력·즐겨찾기)') AS k, COUNT(*) AS cnt FROM ev WHERE ts >= ? AND substr(COALESCE(p, ''), 1, 1) != '_' AND src = 'web' AND t = 'view' GROUP BY 1 ORDER BY cnt DESC LIMIT 15`),
       top("kakao", "ksearch", 30),
       top("kakao", "kpick", 20),
       top("kakao", "kmenu", 20),
-      q(`SELECT k, COUNT(*) AS cnt FROM ev WHERE ts >= ? AND src = 'web' AND t = 'search' AND n = 0 AND k != '' GROUP BY k ORDER BY cnt DESC LIMIT 20`),
-      q(`SELECT k, COUNT(*) AS cnt FROM ev WHERE ts >= ? AND src = 'kakao' AND t = 'ksearch' AND n = 0 GROUP BY k ORDER BY cnt DESC LIMIT 20`),
+      q(`SELECT k, COUNT(*) AS cnt FROM ev WHERE ts >= ? AND substr(COALESCE(p, ''), 1, 1) != '_' AND src = 'web' AND t = 'search' AND n = 0 AND k != '' GROUP BY k ORDER BY cnt DESC LIMIT 20`),
+      q(`SELECT k, COUNT(*) AS cnt FROM ev WHERE ts >= ? AND substr(COALESCE(p, ''), 1, 1) != '_' AND src = 'kakao' AND t = 'ksearch' AND n = 0 GROUP BY k ORDER BY cnt DESC LIMIT 20`),
     ]);
     const r = res.map((x) => x.results || []);
     return Response.json({

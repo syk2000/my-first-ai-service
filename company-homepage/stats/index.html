@@ -89,18 +89,23 @@
       list.push({ day: d, web: (map[d] || {}).web || 0, kakao: (map[d] || {}).kakao || 0 });
     }
     var max = list.reduce(function (m, r) { return Math.max(m, r.web, r.kakao); }, 0) || 1;
-    var W = Math.max(640, list.length * 14), H = 200, pad = 28, bw = (W - pad) / list.length;
+    var step = Math.max(1, Math.ceil(max / 4));
+    max = step * Math.ceil(max / step);
+    var W = Math.max(600, (out.clientWidth || 1100) - 36), H = 200, pad = 34, bw = (W - pad) / list.length;
+    var every = Math.max(1, Math.ceil(list.length / Math.floor(W / 46)));
     var bars = list.map(function (r, i) {
       var x = pad + i * bw, w = Math.max(1, bw / 2 - 1);
       var hw = r.web / max * (H - 40), hk = r.kakao / max * (H - 40);
       var tip = r.day + " · 홈페이지 " + r.web + " · 카톡 " + r.kakao;
-      var lab = (list.length <= 31 || i % Math.ceil(list.length / 16) === 0) ? "<text x='" + (x + bw / 2) + "' y='" + (H - 6) + "' font-size='10' text-anchor='middle' fill='#667085'>" + r.day.slice(5).replace("-", "/") + "</text>" : "";
+      var lab = ((list.length - 1 - i) % every === 0) ? "<text x='" + (x + bw / 2) + "' y='" + (H - 6) + "' font-size='10' text-anchor='middle' fill='#667085'>" + r.day.slice(5).replace("-", "/") + "</text>" : "";
       return "<g><title>" + tip + "</title><rect x='" + x + "' y='" + (H - 22 - hw) + "' width='" + w + "' height='" + hw + "' fill='#e8892b' rx='1'/>" +
         "<rect x='" + (x + w + 1) + "' y='" + (H - 22 - hk) + "' width='" + w + "' height='" + hk + "' fill='#1f3a68' rx='1'/></g>" + lab;
     }).join("");
-    var grid = [0, 0.5, 1].map(function (f) {
-      var y = H - 22 - f * (H - 40);
-      return "<line x1='" + pad + "' x2='" + W + "' y1='" + y + "' y2='" + y + "' stroke='#e3e8f0'/><text x='" + (pad - 4) + "' y='" + (y + 3) + "' font-size='10' text-anchor='end' fill='#667085'>" + Math.round(max * f) + "</text>";
+    var ticks = [];
+    for (var v = 0; v <= max; v += step) ticks.push(v);
+    var grid = ticks.map(function (v) {
+      var y = H - 22 - v / max * (H - 40);
+      return "<line x1='" + pad + "' x2='" + W + "' y1='" + y + "' y2='" + y + "' stroke='#e3e8f0'/><text x='" + (pad - 6) + "' y='" + (y + 3) + "' font-size='10' text-anchor='end' fill='#667085'>" + v + "</text>";
     }).join("");
     return "<section class='card wide'><h2>날짜별 이용</h2><p class='desc'>홈페이지 페이지 열람 수와 카카오톡 챗봇 질문 수 (막대에 마우스를 올리면 숫자 표시)</p>" +
       "<div class='legend'><span><i style='background:#e8892b'></i>홈페이지 열람</span><span><i style='background:#1f3a68'></i>카톡 질문</span></div>" +
