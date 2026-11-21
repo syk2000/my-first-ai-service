@@ -276,7 +276,7 @@ async function postMail(payload) {
   try {
     const r = await fetch(FORMSUBMIT_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json", Referer: SITE + "board.html", Origin: "https://my-first-ai-service-pi.vercel.app" },
+      headers: { "Content-Type": "application/json", Accept: "application/json", Referer: SITE + "board.html", Origin: new URL(SITE).origin },
       body: JSON.stringify(payload),
       signal: ctrl.signal,
     });
