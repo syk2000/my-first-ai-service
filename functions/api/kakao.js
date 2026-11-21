@@ -9,7 +9,8 @@ export async function onRequestPost({ request, env, waitUntil }) {
   const site = new URL(request.url).origin + "/";
   const out = await kakao.handle(body, site);
   const ev = kakao.classify(body, out);
-  if (ev && env.DB) waitUntil(record(env.DB, { src: "kakao", t: ev.t, k: mask(ev.k, 60), n: ev.n }));
+  const db = env.DB || env["swshomepage-stats"];
+  if (ev && db) waitUntil(record(db, { src: "kakao", t: ev.t, k: mask(ev.k, 60), n: ev.n }));
   return Response.json(out);
 }
 

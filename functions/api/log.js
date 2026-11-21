@@ -14,7 +14,7 @@ export async function onRequestPost({ request, env, waitUntil }) {
   let b = {};
   try { b = JSON.parse((await request.text()).slice(0, 2000)); } catch (e) { return ok; }
   if (!TYPES.has(b.t)) return ok;
-  waitUntil(record(env.DB, {
+  waitUntil(record(env.DB || env["swshomepage-stats"], {
     src: "web",
     t: b.t,
     k: mask(b.k, 60),

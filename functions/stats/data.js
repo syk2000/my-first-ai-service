@@ -37,11 +37,12 @@ const KST = "'+9 hours'";
 export async function onRequestGet({ request, env }) {
   const headers = { "Cache-Control": "no-store", "X-Robots-Tag": "noindex" };
   if (!(await allowed(request, env))) return Response.json({ ok: false, reason: "locked" }, { status: 403, headers });
-  if (!env.DB) return Response.json({ ok: false, reason: "no_db" }, { status: 503, headers });
+  const DBX = env.DB || env["swshomepage-stats"];
+  if (!DBX) return Response.json({ ok: false, reason: "no_db" }, { status: 503, headers });
 
   const days = Math.max(1, Math.min(366, Number(new URL(request.url).searchParams.get("days")) || 30));
   const since = Date.now() - days * 86400 * 1000;
-  const db = env.DB;
+  const db = DBX;
   const q = (sql, ...args) => db.prepare(sql).bind(since, ...args);
   const top = (src, t, n, col = "k") =>
     q(`SELECT ${col} AS k, MAX(c) AS c, COUNT(*) AS cnt, ROUND(AVG(n), 1) AS hits FROM ev WHERE ts >= ? AND src = ? AND t = ? AND ${col} IS NOT NULL AND ${col} != '' GROUP BY ${col} ORDER BY cnt DESC LIMIT ?`, src, t, n);
