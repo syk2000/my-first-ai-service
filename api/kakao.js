@@ -80,7 +80,7 @@ const dedupe = (rows) => load().specDedupe(rows);
 function cardName(r) {
   // "FUN05SC · … (= FU05SC · …)"처럼 옛 표기를 함께 적은 형번은 카드 제목에서 뒤쪽을 떼고 설명에 따로 보여 줌
   const m = String(r.m).replace(/[○●△⬠★☆◎]/g, "").replace(/\s*\(=.*\)\s*$/, "").replace(/\s+/g, " ").trim();
-  return (r.c === "오일씰 형식 및 적용현황" && !/^오일씰/.test(m) ? "오일씰 " : "") + m;
+  return (r.c === "오일씰" && !/^오일씰/.test(m) ? "오일씰 " : "") + m;
 }
 
 // 볼 베어링은 같은 형번이라도 실드 형식(개방·ZZ·DD)이 달라서, 견적·발주 양식 안내에 형식을 적도록 알려 줌
@@ -661,7 +661,7 @@ function showResults(rows, query, note, q, isApprox, typed, qty) {
   // 오일씰은 형식(TC·SC·D …)을 알리지 않고 "그 치수 규격이 있다"는 것만 — 같은 치수는 카드 하나로
   const seen = {};
   rows = rows.flatMap((r) => {
-    if (r.c !== "오일씰 형식 및 적용현황") return [r];
+    if (r.c !== "오일씰") return [r];
     const key = [r.d, r.D, r.h].join("|");
     if (seen[key]) return [];
     seen[key] = 1;
