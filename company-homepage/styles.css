@@ -3342,3 +3342,13 @@ h3.notice-anchor-h { margin: 30px 0 12px; font-size: 19px; scroll-margin-top: 13
 .kmode-btn + .kmode-btn { border-left: 1px solid var(--border); }
 .kmode-btn.active { background: var(--accent); color: #fff; font-weight: 700; }
 @media (max-width: 700px) { .kmode-bar { position: static; margin-bottom: 8px; } }
+
+/* mm / 인치 전환 버튼 (오일씰 전체 규격 — 동작은 common.js unitTabs). 검색 중에는 두 표 모두 보임 */
+.search-unit-row { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; }
+.search-unit-row > .auto-spec-search { flex: 0 1 360px; }
+.unit-bar { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--surface); margin-bottom: 16px; }
+.unit-btn { font: inherit; font-size: 13.5px; padding: 7px 18px; border: 0; background: transparent; color: var(--text-faint); cursor: pointer; }
+.unit-btn + .unit-btn { border-left: 1px solid var(--border); }
+.unit-btn.active { background: var(--accent); color: #fff; font-weight: 700; }
+.unit-inch-on .unit-mm, :not(.unit-inch-on) > .unit-inch { display: none; }
+.unit-searching .unit-mm, .unit-searching .unit-inch { display: block !important; }

@@ -299,7 +299,7 @@ window.SWS_has = function (row, q, dims) {
       };
       const need = () => (typeof specQueryVariants === "function" ? Promise.resolve() : loading || (loading = new Promise((res) => {
         const s = document.createElement("script");
-        s.src = "assets/spec-data.js?v=20261124k5";
+        s.src = "assets/spec-data.js?v=20261124in";
         s.onload = res; s.onerror = res;
         document.head.append(s);
       })));
@@ -1020,4 +1020,25 @@ function filterSmallTables() {
     if (saved && panels.some(function (p) { return p.getAttribute('data-panel') === saved; })) {
       activate(saved);
     }
+}
+
+// mm / 인치 전환 버튼(.unit-bar) — 버튼을 자동 검색칸 오른쪽으로 옮기고, 검색 중에는 두 표를 모두 보여 줌(모양은 styles.css)
+function unitTabs(id) {
+  var root = document.getElementById(id); if (!root) return;
+  var bar = root.querySelector('.unit-bar'); if (!bar) return;
+  var sec = root.closest('section') || document;
+  var box = sec.querySelector('.auto-spec-search');
+  if (box) {
+    var row = document.createElement('div');
+    row.className = 'search-unit-row';
+    box.parentNode.insertBefore(row, box);
+    row.appendChild(box); row.appendChild(bar);
+    var inp = box.querySelector('input');
+    if (inp) inp.addEventListener('input', function () { root.classList.toggle('unit-searching', inp.value.trim() !== ''); });
+  }
+  bar.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.unit-btn'); if (!b) return;
+    root.classList.toggle('unit-inch-on', b.getAttribute('data-unit') === 'inch');
+    Array.prototype.forEach.call(bar.querySelectorAll('.unit-btn'), function (x) { x.classList.toggle('active', x === b); });
+  });
 }
