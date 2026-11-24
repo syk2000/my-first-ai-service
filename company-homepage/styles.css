@@ -3331,3 +3331,14 @@ h3.notice-anchor-h { margin: 30px 0 12px; font-size: 19px; scroll-margin-top: 13
   .search-tabs-row > .field, .search-tabs-row > .cat-tabs.tab-cards { flex-basis: 100%; }
   .search-tabs-row > .cat-tabs.tab-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* 일반 / K형 전환 버튼 (자동조심 볼·롤러 베어링 — 동작은 common.js seriesCardTabs) */
+.cat-tab-panel.has-k { position: relative; }
+.has-k:not(.k-on) .k-group, .has-k.k-on .series-group:not(.k-group) { display: none; }
+.k-searching .has-k .series-group { display: block !important; }
+.k-searching .kmode-bar { display: none; }
+.kmode-bar { position: absolute; top: 8px; right: 84px; z-index: 1; display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--surface); }
+.kmode-btn { font: inherit; font-size: 13px; padding: 5px 14px; border: 0; background: transparent; color: var(--text-faint); cursor: pointer; }
+.kmode-btn + .kmode-btn { border-left: 1px solid var(--border); }
+.kmode-btn.active { background: var(--accent); color: #fff; font-weight: 700; }
+@media (max-width: 700px) { .kmode-bar { position: static; margin-bottom: 8px; } }

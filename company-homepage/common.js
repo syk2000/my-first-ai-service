@@ -403,6 +403,7 @@ function seriesCardTabs(rootId, inputId) {
   function sync() {
     var inp = getInput();
     var q = inp ? inp.value.trim() : '';
+    root.classList.toggle('k-searching', q !== '');
     if (q === '') { showTab(); return; }
     panels.forEach(function (p) {
       var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none' && !r.hidden; });
@@ -439,6 +440,13 @@ function seriesCardTabs(rootId, inputId) {
   if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
   showTab();
   root.addEventListener('input', function (e) { if (e.target.matches && e.target.matches('input[id$="Filter"]')) sync(); });
+  // 일반 / K형 전환 버튼(.kmode-bar) — 검색 중(k-searching)에는 두 표를 모두 보여 줌. 배치는 styles.css
+  root.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.kmode-btn'); if (!b) return;
+    var p = b.closest('.cat-tab-panel');
+    p.classList.toggle('k-on', b.getAttribute('data-kmode') === 'k');
+    Array.prototype.forEach.call(p.querySelectorAll('.kmode-btn'), function (x) { x.classList.toggle('active', x === b); });
+  });
 }
 
 // 이용 통계(익명) — 정식 주소(sws-bearing.com)에서만 기록. 쿠키·개인정보 없이 "무엇을 보고 찾았는지"만 /api/log로 보냄

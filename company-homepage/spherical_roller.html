@@ -9,18 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261120sr">
-<style>
-  .cat-tab-panel.has-k { position: relative; }
-  .has-k:not(.k-on) .k-group, .has-k.k-on .series-group:not(.k-group) { display: none; }
-  .k-searching .has-k .series-group { display: block !important; }
-  .k-searching .kmode-bar { display: none; }
-  .kmode-bar { position: absolute; top: 8px; right: 84px; z-index: 1; display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--surface); }
-  .kmode-btn { font: inherit; font-size: 13px; padding: 5px 14px; border: 0; background: transparent; color: var(--text-faint); cursor: pointer; }
-  .kmode-btn + .kmode-btn { border-left: 1px solid var(--border); }
-  .kmode-btn.active { background: var(--accent); color: #fff; font-weight: 700; }
-  @media (max-width: 700px) { .kmode-bar { position: static; margin-bottom: 8px; } }
-</style>
+<link rel="stylesheet" href="styles.css?v=20261124kc">
 </head>
 <body>
 
@@ -1264,7 +1253,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/spherical_roller.dict.js?v=20261124k4"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261124k3"></script>
+<script src="common.js?v=20261124kc"></script>
 <script>
   (function () {
     var input = document.getElementById('sprFilter');
@@ -1304,20 +1293,6 @@
 
     input.addEventListener('input', applyFilter);
     countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 18 + '개 시리즈';
-  })();
-</script>
-<script>
-  (function () {
-    var input = document.getElementById('sprFilter');
-    var root = input.closest('section');
-    root.addEventListener('click', function (e) {
-      var b = e.target.closest('.kmode-btn'); if (!b) return;
-      var p = b.closest('.cat-tab-panel');
-      p.classList.toggle('k-on', b.getAttribute('data-kmode') === 'k');
-      Array.prototype.forEach.call(p.querySelectorAll('.kmode-btn'), function (x) { x.classList.toggle('active', x === b); });
-    });
-    function sync() { root.classList.toggle('k-searching', input.value.trim() !== ''); }
-    input.addEventListener('input', sync); sync();
   })();
 </script>
 <script>seriesCardTabs("spherical-roller", "sprFilter");</script>

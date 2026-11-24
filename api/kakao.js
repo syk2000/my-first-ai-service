@@ -2,7 +2,7 @@
 // 홈페이지 규격 데이터(company-homepage/assets/spec-data.js)에서 찾아 카카오 응답 형식(v2.0)으로 돌려줍니다.
 //   형번 검색: "6205", "UC205", "NK8/12"
 //   치수 검색: "25 52", "25*52*15", "25x52" (내경 외경 두께 순, 일부만 입력 가능)
-const { PHONE, FAX, ADDRESS, FAQ, BUY_FAQ, PRODUCT_FAQ, PRODUCT_GROUPS } = require("./_faq-data");
+const { PHONE, FAX, ADDRESS, FAQ, BUY_FAQ, PRODUCT_FAQ } = require("./_faq-data");
 
 // 카드의 홈페이지 링크 — 요청이 들어온 주소 기준(Cloudflare는 handle()에서 바꿈)
 let SITE = "https://sws-bearing.com/";
@@ -376,20 +376,6 @@ function consult() {
 }
 
 // ── 자주 하는 질문 (질문·답변 내용은 _faq-data.js)
-const go = (label, messageText = label) => ({ label, action: "message", messageText });
-const GO_GENERAL = go("일반 질문");
-const GO_BUY = go("구매·배송", "구매·배송 질문");
-const GO_PRODUCT = go("제품 질문");
-
-// 질문 목록 화면: 번호 붙인 질문 + 질문 버튼 + 다른 분류로 가는 버튼
-function questionList(intro, items, more) {
-  return {
-    outputs: [text(intro + "\n\n" + items.map((f, i) => `${i + 1}. ${f.q}`).join("\n"))],
-    // 카카오 바로가기 버튼은 최대 10개 — 넘치면 '처음으로'를 뺌
-    quick: [...items.map((f) => go(f.short, f.q)), ...more, QUICK[0]].filter((q, i, a) => a.length <= 10 || q !== QUICK[0]),
-  };
-}
-
 // 자주 하는 질문: 챗봇에서는 답하지 않고 홈페이지 FAQ의 두 탭으로 바로 보냄
 // (챗봇은 견적·발주·규격 찾기만 맡음)
 function faqMenu() {
@@ -409,60 +395,21 @@ function faqMenu() {
     quick: [QUICK[0], QUICK[1]],
   };
 }
-const faqList = () => questionList("일반적으로 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.", FAQ, [GO_BUY]);
-const buyFaqList = () => questionList("구매·배송 관련 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.", BUY_FAQ, [GO_GENERAL, GO_PRODUCT]);
 
-// 제품 질문은 품목별로: 먼저 품목을 고르고 → 그 품목 질문 목록
-// 품목이 많아 한 쪽에 7개씩 (품목 7 + 이전·다음 + 처음으로 = 바로가기 10개 한도)
-const PER_PAGE = 7;
-const PRODUCT_PAGES = [];
-for (let i = 0; i < PRODUCT_GROUPS.length; i += PER_PAGE) PRODUCT_PAGES.push(PRODUCT_GROUPS.slice(i, i + PER_PAGE));
-const pageCmd = (i) => (i === 0 ? "제품 질문" : "제품 질문 " + (i + 1));
-function productFaqList(group, page) {
-  if (group) {
-    const gi = PRODUCT_PAGES.findIndex((pg) => pg.includes(group));
-    return questionList(`${group} 관련 자주 하는 질문이에요. 아래에서 궁금한 질문을 눌러 주세요.`, PRODUCT_FAQ.filter((f) => f.g === group),
-      [go("다른 품목", pageCmd(gi))]);
-  }
-  const p = Math.min(Math.max((page || 1) - 1, 0), PRODUCT_PAGES.length - 1);
-  const groups = PRODUCT_PAGES[p];
-  const nav = [];
-  if (p > 0) nav.push(go("이전 품목", pageCmd(p - 1)));
-  if (p < PRODUCT_PAGES.length - 1) nav.push(go("다음 품목", pageCmd(p + 1)));
-  return {
-    outputs: [text("제품 문의 때 자주 하는 질문이에요. 품목을 골라 주세요." + ` (${p + 1}/${PRODUCT_PAGES.length})` + "\n\n" +
-      groups.map((g) => `■ ${g}: ` + PRODUCT_FAQ.filter((f) => f.g === g).map((f) => f.short).join(", ")).join("\n"))],
-    quick: [...groups.map((g) => go(g, "제품 질문: " + g)), ...nav, QUICK[0]],
-  };
-}
-
-// 답변 카드 — kind: "general" | "buy" | "product" (아래 바로가기 버튼이 다름)
-function faqAnswer(f, kind) {
-  const card = { title: ("Q. " + f.q).slice(0, 50), description: f.a.slice(0, 400) };
-  const links = (f.links || (f.link ? [f.link] : [])).filter(([, p]) => !(f.faq && /^faq\.html/.test(p))).slice(0, 2);
-  // 홈페이지 자주 묻는 질문의 같은 질문(faq.html#qNN)으로 가는 버튼 — 펼쳐진 채로 열림
-  if (f.faq) links.push(["홈페이지에서 자세히 보기", "faq.html#" + f.faq]);
-  if (links.length) card.buttons = links.map(([label, path]) => ({ action: "webLink", label, webLinkUrl: SITE + path }));
-  const more = kind === "buy" ? [GO_BUY, GO_GENERAL]
-    : kind === "product" ? [go(f.g + " 질문", "제품 질문: " + f.g), go("다른 품목", "제품 질문")]
-    : [GO_GENERAL, GO_PRODUCT];
-  return { outputs: [{ textCard: card }], quick: [...more, QUICK[0]] };
-}
-
-// 직접 적은 질문의 키워드 → FAQ (위에서부터 먼저 맞는 것)
+// 직접 적은 질문("반품 되나요?", "영업시간" 등)이면 홈페이지 FAQ로 안내
 const FREE_FAQ = [
-  [/주문\s*제작|제작\s*(되|가능|해)|샘플/, "buy", "주문 제작"],
-  [/반품|교환|환불/, "buy", "반품·교환"],
-  [/성적서|인증서|정품/, "buy", "성적서·정품 증명"],
-  [/결제|카드|계좌|입금|세금\s*계산서|현금\s*영수증/, "buy", "결제·세금계산서"],
-  [/배송|택배|배달|퀵|화물/, "buy", "배송 기간·배송비"],
-  [/방문|직접\s*(받|가지|가서|사러)|수령|픽업/, "buy", "방문 수령"],
-  [/할인|낱개|소량|(한|1)\s*개만/, "buy", "구매 수량·할인"],
-  [/영업\s*시간|운영\s*시간|몇\s*시|휴무|쉬는\s*날|주말|토요일|일요일|공휴일/, "faq", "영업시간"],
-  [/견적.*(언제|얼마나|오래)|(언제|얼마나).*견적/, "faq", "견적 회신 시간"],
-  [/카탈로그|카다록|카달로그/, "faq", "카탈로그"],
-  [/납기|재고|가격|단가/, "faq", "재고·납기·가격"],
-  [/브랜드|메이커|어떤\s*제품|취급/, "faq", "제품·브랜드"],
+  /주문\s*제작|제작\s*(되|가능|해)|샘플/,
+  /반품|교환|환불/,
+  /성적서|인증서|정품/,
+  /결제|카드|계좌|입금|세금\s*계산서|현금\s*영수증/,
+  /배송|택배|배달|퀵|화물/,
+  /방문|직접\s*(받|가지|가서|사러)|수령|픽업/,
+  /할인|낱개|소량|(한|1)\s*개만/,
+  /영업\s*시간|운영\s*시간|몇\s*시|휴무|쉬는\s*날|주말|토요일|일요일|공휴일/,
+  /견적.*(언제|얼마나|오래)|(언제|얼마나).*견적/,
+  /카탈로그|카다록|카달로그/,
+  /납기|재고|가격|단가/,
+  /브랜드|메이커|어떤\s*제품|취급/,
 ];
 
 function answer(utterance, blockName) {
@@ -476,7 +423,7 @@ function answer(utterance, blockName) {
   const qkey = u.replace(/\s+/g, "").replace(/^Q\.?/, "");
   const isFaqQ = [...FAQ, ...BUY_FAQ, ...PRODUCT_FAQ].some((f) => f.q.replace(/\s+/g, "") === qkey);
   if (isFaqQ || /^(일반\s*질문|구매\s*·?\s*배송(\s*질문)?|제품\s*(질문|FAQ|문의|관련\s*질문)(\s*\d|\s*[:：].*)?|자주\s*하는\s*문의)$/i.test(u)) return reply(faqMenu());
-  if (!/\d/.test(u) && FREE_FAQ.some(([re]) => re.test(u))) return reply(faqMenu());
+  if (!/\d/.test(u) && FREE_FAQ.some((re) => re.test(u))) return reply(faqMenu());
   // 채팅방 하단 메뉴 [규격&품번] 등 — 숫자 없이 "규격/품번/형번/검색"만 오면 입력 안내
   if (!/\d/.test(u) && /규격|품번|형번|검색/.test(u)) {
     return reply([text(
