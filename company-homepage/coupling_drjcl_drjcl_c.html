@@ -142,39 +142,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/coupling_drjcl_drjcl_c.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261124kc"></script>
-<script>
-  (function () {
-    var input = document.getElementById('cplFilter');
-    var groups = Array.prototype.slice.call(document.querySelectorAll('#cplGroups .series-group'));
-    var countEl = document.getElementById('cplCount');
-    var toggleBtn = document.getElementById('cplToggleAll');
-    var mainRows = document.querySelectorAll('#cplGroups table.spec-main tbody tr');
-    var totalRows = mainRows.length;
-    var seriesN = 1;
-    function applyFilter() {
-      var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
-      var shown = 0;
-      groups.forEach(function (grp) {
-        var grpShown = 0;
-        Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || row.textContent.toUpperCase().indexOf(input.value.trim().toUpperCase()) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
-          row.style.display = match ? '' : 'none';
-          if (match) { grpShown++; if (row.closest('table.spec-main')) shown++; }
-        });
-        grp.open = q === '' ? true : grpShown > 0;
-      });
-      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + seriesN + '개 시리즈';
-    }
-    var allOpen = true;
-    toggleBtn.addEventListener('click', function () {
-      allOpen = !allOpen;
-      groups.forEach(function (grp) { grp.open = allOpen; });
-      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
-    });
-    input.addEventListener('input', applyFilter);
-    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + seriesN + '개 시리즈';
-  })();
-</script>
+<script src="common.js?v=20261124kd"></script>
+<script>filterCouplingMain('#cplGroups table.spec-main tbody tr', 'table.spec-main');</script>
 </body>
 </html>

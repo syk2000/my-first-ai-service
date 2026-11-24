@@ -294,41 +294,8 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/grinding_locknut.dict.js?v=20261121ns"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261124kc"></script>
-<script>
-  (function () {
-    var input = document.getElementById('grindiFilter');
-    var groups = Array.prototype.slice.call(document.getElementById('grindiGroups').querySelectorAll('.series-group'));
-    var countEl = document.getElementById('grindiCount');
-    var toggleBtn = document.getElementById('grindiToggleAll');
-    var totalRows = 100;
-    var allOpen = true;
-    function label(shown) { countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 3 + '개 시리즈'; }
-    function applyFilter() {
-      var q = input.value.trim().toUpperCase().replace(/\*/g, '×');
-      var shown = 0;
-      groups.forEach(function (grp) {
-        var grpShown = 0;
-        grp.querySelectorAll('tbody tr').forEach(function (row) {
-          var txt = row.textContent.toUpperCase();
-          var match = q === '' || txt.indexOf(q) !== -1 || txt.replace(/\s+/g, '').indexOf(q.replace(/\s+/g, '')) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
-          row.style.display = match ? '' : 'none';
-          if (match) grpShown++;
-        });
-        shown += grpShown;
-        grp.open = q === '' ? allOpen : grpShown > 0;
-      });
-      label(shown);
-    }
-    toggleBtn.addEventListener('click', function () {
-      allOpen = !allOpen;
-      groups.forEach(function (grp) { grp.open = allOpen; });
-      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
-    });
-    input.addEventListener('input', applyFilter);
-    label(totalRows);
-  })();
-</script>
+<script src="common.js?v=20261124kd"></script>
+<script>filterSeriesOpen('grindiFilter', 'grindiGroups', 'grindiCount', 'grindiToggleAll', 100, 3);</script>
 <script>seriesCardTabs("grinding_locknut", "grindiFilter");</script>
 </body>
 </html>

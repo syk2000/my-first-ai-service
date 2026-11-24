@@ -1,4 +1,4 @@
-# 비밀값·로컬 설정 — 절대 커밋하지 않음 (Vercel은 대시보드 환경변수 사용)
+# 비밀값·로컬 설정 — 절대 커밋하지 않음 (비밀값은 Cloudflare 대시보드 환경변수 사용)
 .env
 .env.*
 !.env.example
@@ -12,9 +12,6 @@ CLAUDE.md
 claudee
 .vscode/
 .idea/
-
-# Vercel CLI 로컬 연결 정보
-.vercel/
 
 # 의존성·빌드 산출물·OS 잡파일
 node_modules/

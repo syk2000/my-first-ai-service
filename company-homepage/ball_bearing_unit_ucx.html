@@ -153,18 +153,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/ball_bearing_unit_ucx.dict.js?v=20261119t1"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261124kc"></script>
-<script>
-  (function () {
-    var input = document.getElementById('ucxFilter');
-    var rows = Array.prototype.slice.call(document.querySelectorAll('#ucxBody tr'));
-    input.addEventListener('input', function () {
-      var q = input.value.trim().toUpperCase();
-      rows.forEach(function (row) {
-        row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1))) ? '' : 'none';
-      });
-    });
-  })();
-</script>
+<script src="common.js?v=20261124kd"></script>
+<script>filterRows('ucxFilter', '#ucxBody tr');</script>
 </body>
 </html>

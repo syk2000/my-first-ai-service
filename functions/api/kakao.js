@@ -1,5 +1,5 @@
 // Cloudflare Pages 함수 — 카카오톡 챗봇 스킬 주소(/api/kakao)
-// 답변 로직은 api/kakao.js(Vercel과 공통)를 그대로 씀. 질문 종류·검색어만 익명으로 통계에 남김
+// 답변 로직은 api/kakao.js를 그대로 씀. 질문 종류·검색어만 익명으로 통계에 남김
 import kakao from "../../api/kakao.js";
 import { mask, record } from "../../functions-lib/stats.js";
 

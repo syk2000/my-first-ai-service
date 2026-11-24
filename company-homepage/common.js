@@ -514,3 +514,510 @@ function seriesCardTabs(rootId, inputId) {
     if (e.target && e.target.id === "inquiryForm") send({ t: "inq" });
   });
 })();
+
+// ── 규격표 검색칸 동작 (각 페이지에 복사돼 있던 같은 코드를 모음 — 페이지에서 id·건수만 넘겨 호출)
+function filterSeries(_p0, _p1, _p2, _p3, _p4, _p5, _p6) {
+    var input = document.getElementById(_p0);
+    var groupsWrap = document.getElementById(_p1);
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById(_p2);
+    var toggleBtn = document.getElementById(_p3);
+    var totalRows = _p4;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        if (q !== '') {
+          grp.open = grpShown > 0;
+        } else {
+          grp.open = false;
+        }
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + _p5 + '개 시리즈';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + _p6 + '개 시리즈';
+}
+
+function filterRows(_p0, _p1) {
+    var input = document.getElementById(_p0);
+    var rows = Array.prototype.slice.call(document.querySelectorAll(_p1));
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toUpperCase();
+      rows.forEach(function (row) {
+        row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1))) ? '' : 'none';
+      });
+    });
+}
+
+function filterCouplingMain(_p0, _p1) {
+    var input = document.getElementById('cplFilter');
+    var groups = Array.prototype.slice.call(document.querySelectorAll('#cplGroups .series-group'));
+    var countEl = document.getElementById('cplCount');
+    var toggleBtn = document.getElementById('cplToggleAll');
+    var mainRows = document.querySelectorAll(_p0);
+    var totalRows = mainRows.length;
+    var seriesN = 1;
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpShown = 0;
+        Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || row.textContent.toUpperCase().indexOf(input.value.trim().toUpperCase()) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+          row.style.display = match ? '' : 'none';
+          if (match) { grpShown++; if (row.closest(_p1)) shown++; }
+        });
+        grp.open = q === '' ? true : grpShown > 0;
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + seriesN + '개 시리즈';
+    }
+    var allOpen = true;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + seriesN + '개 시리즈';
+}
+
+function filterCouplingDoh() {
+    var input = document.getElementById('cplFilter');
+    var groups = Array.prototype.slice.call(document.querySelectorAll('#cplGroups .series-group'));
+    var countEl = document.getElementById('cplCount');
+    var toggleBtn = document.getElementById('cplToggleAll');
+    // 건수는 주 규격표 + 표준 내경 표의 모든 행 기준
+    var totalRows = document.querySelectorAll('#cplGroups .series-group:not([data-dup]) tbody tr').length;
+    var seriesN = 1;
+    var HIT_BG = 'rgba(232, 119, 34, 0.22)';
+    // 표준 내경 표: 내경 값이 열 머리글(둘째 줄)에 있고 행에는 ●만 있으므로 열 머리글로 검색
+    var boreTables = Array.prototype.slice.call(document.querySelectorAll('#cplGroups table.spec-table:not(.spec-main)')).filter(function (t) {
+      return t.tHead && t.tHead.rows.length === 2;
+    }).map(function (t) {
+      var ths = Array.prototype.slice.call(t.tHead.rows[1].cells);
+      return { table: t, ths: ths, vals: ths.map(function (th) { return th.textContent.trim(); }) };
+    });
+    function boreOf(row) { for (var i = 0; i < boreTables.length; i++) { if (boreTables[i].table.contains(row)) return boreTables[i]; } return null; }
+    function modelMatch(model, q) {
+      // DR□-16 · DRG-16□ 의 □ 는 시리즈 문자 자리 → DRW-16, DRG-16C 등으로도 찾아짐
+      if (model.indexOf('□') === -1 || q === '') return false;
+      var pat = model.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/□/g, '[A-Z]*');
+      return new RegExp('^' + pat + '(?![0-9])').test(q);
+    }
+    function applyFilter() {
+      var raw = input.value.trim().toUpperCase();
+      var q = raw.replace(/\s+/g, '');
+      var qNum = /^\d+(\.\d+)?$/.test(q) ? parseFloat(q) : NaN;
+      var shown = 0;
+      boreTables.forEach(function (b) { b.ths.forEach(function (th) { th.style.background = ''; }); });
+      Array.prototype.forEach.call(document.querySelectorAll('#cplGroups td.bore-hit'), function (td) { td.classList.remove('bore-hit'); td.style.background = ''; });
+      groups.forEach(function (grp) {
+        var grpShown = 0;
+        Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) {
+          var txt = row.textContent.toUpperCase();
+          var match = q === '' || txt.replace(/\s+/g, '').indexOf(q) !== -1 || txt.indexOf(raw) !== -1 || (window.SWS_has && SWS_has(row, raw));
+          var b = boreOf(row);
+          if (b && q !== '') {
+            var model = row.cells[0] ? row.cells[0].textContent.trim().toUpperCase() : '';
+            if (!match && modelMatch(model, q)) match = true;
+            var col = isNaN(qNum) ? -1 : b.vals.map(parseFloat).indexOf(qNum);
+            if (!match && col !== -1) {
+              var cell = row.cells[col + 1];
+              if (cell && cell.textContent.trim() !== '') {
+                match = true;
+                cell.classList.add('bore-hit');
+                cell.style.background = HIT_BG;
+                b.ths[col].style.background = HIT_BG;
+              }
+            }
+          }
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        if (!grp.hasAttribute('data-dup')) shown += grpShown;
+        grp.open = q === '' ? true : grpShown > 0;
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + seriesN + '개 시리즈';
+    }
+    var allOpen = true;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + seriesN + '개 시리즈';
+}
+
+function filterGroupToggle(_p0, _p1, _p2, _p3, _p4) {
+    var input = document.getElementById(_p0);
+    var grp = document.getElementById(_p1);
+    var rows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+    var countEl = document.getElementById(_p2);
+    var toggleBtn = document.getElementById(_p3);
+    var totalRows = _p4;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      if (q !== '') { grp.open = shown > 0; }
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      grp.open = allOpen;
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + '건';
+}
+
+function filterBodyCount(_p0, _p1, _p2) {
+    var input = document.getElementById(_p0);
+    var wrap = document.getElementById(_p1);
+    var rows = Array.prototype.slice.call(wrap.querySelectorAll('tbody tr'));
+    var countEl = document.getElementById(_p2);
+    var totalRows = rows.length;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      countEl.textContent = (q === '' ? totalRows : shown) + ' / ' + totalRows + '건 표시 중';
+    }
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + '건';
+}
+
+function filterCouplingMt() {
+    var input = document.getElementById('mtFilter');
+    var groups = Array.prototype.slice.call(document.querySelectorAll('#mtGroups .series-group'));
+    var countEl = document.getElementById('mtCount');
+    var totalRows = document.querySelectorAll('#mtGroups tbody.cnt tr').length;
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpShown = 0;
+        Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+          row.style.display = match ? '' : 'none';
+          if (match && row.parentNode.classList.contains('cnt')) grpShown++;
+        });
+        shown += grpShown;
+        grp.open = q === '' || grpShown > 0;
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
+    }
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
+}
+
+function filterRowsCount(_p0, _p1, _p2) {
+    var input = document.getElementById(_p0);
+    var rows = Array.prototype.slice.call(document.querySelectorAll(_p1));
+    var countEl = document.getElementById(_p2);
+
+    function updateCount(shown) {
+      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
+    }
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      updateCount(shown);
+    }
+
+    input.addEventListener('input', applyFilter);
+    updateCount(rows.length);
+}
+
+function filterSeriesOpen(_p0, _p1, _p2, _p3, _p4, _p5) {
+    var input = document.getElementById(_p0);
+    var groups = Array.prototype.slice.call(document.getElementById(_p1).querySelectorAll('.series-group'));
+    var countEl = document.getElementById(_p2);
+    var toggleBtn = document.getElementById(_p3);
+    var totalRows = _p4;
+    var allOpen = true;
+    function label(shown) { countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + _p5 + '개 시리즈'; }
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase().replace(/\*/g, '×');
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpShown = 0;
+        grp.querySelectorAll('tbody tr').forEach(function (row) {
+          var txt = row.textContent.toUpperCase();
+          var match = q === '' || txt.indexOf(q) !== -1 || txt.replace(/\s+/g, '').indexOf(q.replace(/\s+/g, '')) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        grp.open = q === '' ? allOpen : grpShown > 0;
+      });
+      label(shown);
+    }
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    input.addEventListener('input', applyFilter);
+    label(totalRows);
+}
+
+function filterRowsCountDr(_p0, _p1, _p2) {
+    var input = document.getElementById(_p0);
+    var rows = Array.prototype.slice.call(document.querySelectorAll(_p1));
+    var countEl = document.getElementById(_p2);
+    function norm(s) { return s.toUpperCase().replace(/\s+/g, '').replace(/[X*]/g, '\u00d7'); }
+    function updateCount(shown) { countEl.textContent = shown + ' / ' + rows.length + '건 표시 중'; }
+    function applyFilter() {
+      var q = norm(input.value.trim());
+      var shown = 0;
+      rows.forEach(function (row) {
+        var match = q === '' || norm(row.cells[0].textContent).indexOf(q) === 0;
+        row.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      updateCount(shown);
+    }
+    input.addEventListener('input', applyFilter);
+    updateCount(rows.length);
+}
+
+function filterChain() {
+    // 형번·치수 검색 — 띄어쓰기로 나눈 낱말이 모두 그 줄에 있어야 보임(숫자는 칸 값과 같아야, 글자는 들어 있기만 하면 됨)
+    // 일치하는 행이 있는 묶음만 펼침(처음 접혀 있던 묶음은 검색어를 지우면 다시 접힘). "60 2열" → RS60-2
+    var input = document.getElementById('pgFilter');
+    var countEl = document.getElementById('pgCount');
+    var groups = Array.prototype.slice.call(document.querySelectorAll('.series-group'));
+    var total = document.querySelectorAll('.series-group tbody tr').length;
+    var norm = function (s) { return s.toUpperCase().replace(/[\s\-_]/g, ''); };
+    function apply() {
+      var q = input.value.trim().replace(/(\d+)\s*([HhSs]{0,2})\s*([1-4])\s*열/, function (a, n, s, k) { return 'RS' + n + s.toUpperCase() + (k === '1' ? '' : '-' + k); });
+      var words = q.split(/[\s*×xX,]+/).filter(Boolean);
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var n = 0;
+        Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) {
+          var cells = Array.prototype.slice.call(row.cells).map(function (c) { return c.textContent.trim(); });
+          var m = words.every(function (w) {
+            return /^\d+(\.\d+)?$/.test(w)
+              ? cells.some(function (c) { return c.split(/[^\d.]+/).some(function (x) { return x !== '' && parseFloat(x) === parseFloat(w); }); })
+              : cells.some(function (c) { return norm(c).indexOf(norm(w)) !== -1; });
+          });
+          row.style.display = m ? '' : 'none';
+          if (m) n++;
+        });
+        shown += n;
+        grp.open = q === '' ? grp.hasAttribute('data-open') : n > 0;
+      });
+      countEl.textContent = shown + ' / ' + total + '건 표시 중';
+    }
+    input.addEventListener('input', apply);
+    countEl.textContent = total + ' / ' + total + '건 표시 중';
+}
+
+function filterWrapRows(_p0, _p1) {
+    var input = document.getElementById(_p0);
+    var rows = Array.prototype.slice.call(document.querySelectorAll(_p1));
+    if (!input) return;
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toUpperCase();
+      rows.forEach(function (row) {
+        row.style.display = (q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1))) ? '' : 'none';
+      });
+    });
+}
+
+function filterUnitCase(_p0, _p1, _p2, _p3, _p4) {
+    var input = document.getElementById(_p0);
+    var groupsWrap = document.getElementById(_p1);
+    var groups = Array.prototype.slice.call(groupsWrap.querySelectorAll('.series-group'));
+    var countEl = document.getElementById(_p2);
+    var toggleBtn = document.getElementById(_p3);
+    var totalRows = _p4;
+
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        if (q !== '') { grp.open = grpShown > 0; } else { grp.open = false; }
+      });
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+    }
+
+    var allOpen = false;
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      if (allOpen) {
+        input.value = '';
+        groups.forEach(function (grp) {
+          Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) { row.style.display = ''; });
+        });
+        countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+      }
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 2 + '개 시리즈';
+}
+
+function filterTabSeries(_p0, _p1, _p2, _p3, _p4, _p5, _p6, _p7, _p8) {
+    // 이미지 카드 탭: 평소엔 고른 시리즈 하나만 보이고, 검색어가 있으면 모든 탭에서 일치하는 행을 한꺼번에 보여 줌
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var input = document.getElementById(_p0);
+    var btns = Array.prototype.slice.call(document.querySelectorAll(_p1));
+    var panels = Array.prototype.slice.call(document.querySelectorAll(_p2));
+    var groups = Array.prototype.slice.call(document.querySelectorAll(_p3));
+    var countEl = document.getElementById(_p4);
+    var toggleBtn = document.getElementById(_p5);
+    var totalRows = _p6;
+    var current = btns[0].getAttribute('data-tab');
+    var allOpen = true;
+    function showTab() {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === current; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); b.classList.remove('no-match'); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== current; });
+    }
+    function applyFilter() {
+      var q = input.value.trim().toUpperCase();
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var grpRows = Array.prototype.slice.call(grp.querySelectorAll('tbody tr'));
+        var grpShown = 0;
+        grpRows.forEach(function (row) {
+          var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+          row.style.display = match ? '' : 'none';
+          if (match) grpShown++;
+        });
+        shown += grpShown;
+        grp.open = q !== '' ? grpShown > 0 : allOpen;
+      });
+      if (q === '') {
+        showTab();
+      } else {
+        // 검색 중: 일치하는 행이 있는 탭은 모두 펼쳐 보이고, 없는 탭 카드는 흐리게
+        panels.forEach(function (p) {
+          var hit = Array.prototype.some.call(p.querySelectorAll('tbody tr'), function (r) { return r.style.display !== 'none'; });
+          p.hidden = !hit;
+          btns.forEach(function (b) {
+            if (b.getAttribute('data-tab') === p.getAttribute('data-panel')) {
+              b.classList.toggle('no-match', !hit); b.classList.remove('active'); b.setAttribute('aria-selected', 'false');
+            }
+          });
+        });
+      }
+      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + _p7 + '개 시리즈';
+    }
+    toggleBtn.addEventListener('click', function () {
+      allOpen = !allOpen;
+      groups.forEach(function (grp) { grp.open = allOpen; });
+      toggleBtn.textContent = allOpen ? '전체 접기' : '전체 펼치기';
+    });
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = btn.getAttribute('data-tab');
+        try { sessionStorage.setItem(STORAGE_KEY, current); } catch (e) {}
+        if (input.value !== '') { input.value = ''; applyFilter(); } else { showTab(); }
+      });
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && btns.some(function (b) { return b.getAttribute('data-tab') === saved; })) current = saved;
+    showTab();
+    input.addEventListener('input', applyFilter);
+    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + _p8 + '개 시리즈';
+}
+
+function filterSealGroups() {
+    // 형번·치수 검색 — 일치하는 행만 보이고, 그 행이 있는 묶음만 펼침(처음 접혀 있던 묶음은 검색어를 지우면 다시 접힘)
+    var input = document.getElementById('pgFilter');
+    var countEl = document.getElementById('pgCount');
+    var groups = Array.prototype.slice.call(document.querySelectorAll('.series-group'));
+    var total = document.querySelectorAll('.series-group tbody tr').length;
+    function apply() {
+      var q = input.value.trim().toUpperCase().replace(/\s+/g, '').replace(/[X*]/g, '×');
+      var shown = 0;
+      groups.forEach(function (grp) {
+        var n = 0;
+        Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) {
+          var m = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').replace(/[X*]/g, '×').indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
+          row.style.display = m ? '' : 'none';
+          if (m) n++;
+        });
+        shown += n;
+        grp.open = q === '' ? grp.hasAttribute('data-open') : n > 0;
+      });
+      countEl.textContent = shown + ' / ' + total + '건 표시 중';
+    }
+    input.addEventListener('input', apply);
+    countEl.textContent = total + ' / ' + total + '건 표시 중';
+}
+
+function filterSmallTables() {
+    var STORAGE_KEY = 'activeTab:' + location.pathname;
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-btn'));
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.cat-tab-panel'));
+    function activate(target) {
+      btns.forEach(function (b) { var on = b.getAttribute('data-tab') === target; b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false'); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== target; });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        activate(target);
+        try { sessionStorage.setItem(STORAGE_KEY, target); } catch (e) {}
+      });
+    });
+    var saved = null;
+    try { saved = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (saved && panels.some(function (p) { return p.getAttribute('data-panel') === saved; })) {
+      activate(saved);
+    }
+}

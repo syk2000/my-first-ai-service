@@ -213,31 +213,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/coupling_mt_drda_drda_bsp.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261124kc"></script>
-<script>
-  (function () {
-    var input = document.getElementById('mtFilter');
-    var groups = Array.prototype.slice.call(document.querySelectorAll('#mtGroups .series-group'));
-    var countEl = document.getElementById('mtCount');
-    var totalRows = document.querySelectorAll('#mtGroups tbody.cnt tr').length;
-    function applyFilter() {
-      var q = input.value.trim().toUpperCase().replace(/\s+/g, '');
-      var shown = 0;
-      groups.forEach(function (grp) {
-        var grpShown = 0;
-        Array.prototype.slice.call(grp.querySelectorAll('tbody tr')).forEach(function (row) {
-          var match = q === '' || row.textContent.toUpperCase().replace(/\s+/g, '').indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
-          row.style.display = match ? '' : 'none';
-          if (match && row.parentNode.classList.contains('cnt')) grpShown++;
-        });
-        shown += grpShown;
-        grp.open = q === '' || grpShown > 0;
-      });
-      countEl.textContent = shown + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
-    }
-    input.addEventListener('input', applyFilter);
-    countEl.textContent = totalRows + ' / ' + totalRows + '건 표시 중 · ' + 1 + '개 시리즈';
-  })();
-</script>
+<script src="common.js?v=20261124kd"></script>
+<script>filterCouplingMt();</script>
 </body>
 </html>

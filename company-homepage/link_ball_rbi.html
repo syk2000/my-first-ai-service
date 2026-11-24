@@ -169,31 +169,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/link_ball_rbi.dict.js?v=20261120lh"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261124kc"></script>
-<script>
-  (function () {
-    var input = document.getElementById('lbFilter');
-    var rows = Array.prototype.slice.call(document.querySelectorAll('#lbBody tr'));
-    var countEl = document.getElementById('lbCount');
-
-    function updateCount(shown) {
-      countEl.textContent = shown + ' / ' + rows.length + '건 표시 중';
-    }
-
-    function applyFilter() {
-      var q = input.value.trim().toUpperCase();
-      var shown = 0;
-      rows.forEach(function (row) {
-        var match = q === '' || row.textContent.toUpperCase().indexOf(q) !== -1 || (window.SWS_has && SWS_has(row, q, 1));
-        row.style.display = match ? '' : 'none';
-        if (match) shown++;
-      });
-      updateCount(shown);
-    }
-
-    input.addEventListener('input', applyFilter);
-    updateCount(rows.length);
-  })();
-</script>
+<script src="common.js?v=20261124kd"></script>
+<script>filterRowsCount('lbFilter', '#lbBody tr', 'lbCount');</script>
 </body>
 </html>

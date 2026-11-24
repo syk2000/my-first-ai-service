@@ -2,7 +2,7 @@
 // 홈페이지 규격 데이터(company-homepage/assets/spec-data.js)에서 찾아 카카오 응답 형식(v2.0)으로 돌려줍니다.
 //   형번 검색: "6205", "UC205", "NK8/12"
 //   치수 검색: "25 52", "25*52*15", "25x52" (내경 외경 두께 순, 일부만 입력 가능)
-const { PHONE, FAX, ADDRESS, FAQ, BUY_FAQ, PRODUCT_FAQ } = require("./_faq-data");
+const { PHONE, FAX, ADDRESS, OLD_FAQ_QUESTIONS } = require("./_faq-data");
 
 // 카드의 홈페이지 링크 — 요청이 들어온 주소 기준(Cloudflare는 handle()에서 바꿈)
 let SITE = "https://sws-bearing.com/";
@@ -421,7 +421,7 @@ function answer(utterance, blockName) {
   // 예전 FAQ 버튼·분류 이름이나 직접 적은 질문("반품 되나요?", "영업시간")도 홈페이지 FAQ로 안내
   // — 숫자가 있으면 형번 검색이 우선
   const qkey = u.replace(/\s+/g, "").replace(/^Q\.?/, "");
-  const isFaqQ = [...FAQ, ...BUY_FAQ, ...PRODUCT_FAQ].some((f) => f.q.replace(/\s+/g, "") === qkey);
+  const isFaqQ = OLD_FAQ_QUESTIONS.some((q) => q.replace(/\s+/g, "") === qkey);
   if (isFaqQ || /^(일반\s*질문|구매\s*·?\s*배송(\s*질문)?|제품\s*(질문|FAQ|문의|관련\s*질문)(\s*\d|\s*[:：].*)?|자주\s*하는\s*문의)$/i.test(u)) return reply(faqMenu());
   if (!/\d/.test(u) && FREE_FAQ.some((re) => re.test(u))) return reply(faqMenu());
   // 채팅방 하단 메뉴 [규격&품번] 등 — 숫자 없이 "규격/품번/형번/검색"만 오면 입력 안내
@@ -650,7 +650,7 @@ function showResults(rows, query, note, q, isApprox, typed, qty) {
   return reply(outputs);
 }
 
-// 카카오 요청 본문 → 응답 JSON (Vercel·Cloudflare 공통)
+// 카카오 요청 본문 → 응답 JSON (Cloudflare 함수 functions/api/kakao.js가 호출)
 async function handle(body, site) {
   if (site) SITE = site;
   body = body || {};
@@ -668,20 +668,6 @@ async function handle(body, site) {
     return reply([text(`일시적인 오류로 답변하지 못했어요. 잠시 후 다시 시도하거나 ${PHONE}으로 연락 주세요.`)]);
   }
 }
-
-module.exports = async (req, res) => {
-  if (req.method !== "POST") {
-    res.status(200).json({ ok: true, info: "SWS TECH kakao skill — POST only" });
-    return;
-  }
-  let body = req.body;
-  if (typeof body === "string") {
-    try { body = JSON.parse(body); } catch (e) { body = {}; }
-  }
-  res.status(200).json(await handle(body));
-};
-module.exports.answer = answer;
-module.exports.handle = handle;
 
 // 통계용 분류(익명) — 견적·발주 양식 내용은 남기지 않고 종류만
 //   kform: 양식 접수 / kpick: 카드의 [견적 문의]·[발주 문의] 버튼(품번) / ksearch: 형번·치수 검색(찾은 건수) / kmenu: 메뉴·질문
@@ -704,4 +690,4 @@ function classify(body, out) {
   }
   return { t: "kmenu", k: u.slice(0, 30) };
 }
-module.exports.classify = classify;
+module.exports = { answer, handle, classify };

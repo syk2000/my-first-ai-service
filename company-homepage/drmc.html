@@ -173,27 +173,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/drmc.dict.js?v=20261120cc"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261124kc"></script>
-<script>
-  (function () {
-    var input = document.getElementById('drmcFilter');
-    var rows = Array.prototype.slice.call(document.querySelectorAll('#drmcBody tr'));
-    var countEl = document.getElementById('drmcCount');
-    function norm(s) { return s.toUpperCase().replace(/\s+/g, '').replace(/[X*]/g, '\u00d7'); }
-    function updateCount(shown) { countEl.textContent = shown + ' / ' + rows.length + '건 표시 중'; }
-    function applyFilter() {
-      var q = norm(input.value.trim());
-      var shown = 0;
-      rows.forEach(function (row) {
-        var match = q === '' || norm(row.cells[0].textContent).indexOf(q) === 0;
-        row.style.display = match ? '' : 'none';
-        if (match) shown++;
-      });
-      updateCount(shown);
-    }
-    input.addEventListener('input', applyFilter);
-    updateCount(rows.length);
-  })();
-</script>
+<script src="common.js?v=20261124kd"></script>
+<script>filterRowsCountDr('drmcFilter', '#drmcBody tr', 'drmcCount');</script>
 </body>
 </html>

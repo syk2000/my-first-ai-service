@@ -192,7 +192,7 @@
 <script src="i18n/common.dict.js?v=20261115dx"></script>
 <script src="i18n/pages/board.dict.js?v=20261106fr"></script>
 <script src="i18n.js?v=20261025a"></script>
-<script src="common.js?v=20261124kc"></script>
+<script src="common.js?v=20261124kd"></script>
 <script>
     // 문의 폼 — 버튼 두 개(무료)
     // · 이메일로 문의하기: 버튼 한 번으로 회사 메일(INQUIRY_EMAIL)에 '견적·발주 요청서' 표 양식 메일 자동 발송.
@@ -203,7 +203,7 @@
     // FormSubmit 활성화 메일에 적힌 별칭(메일 주소를 코드에 노출하지 않아 스팸 수집 방지). 실제 받는 곳은 INQUIRY_EMAIL
     const WEB3FORMS_URL = "https://api.web3forms.com/submit";
     const WEB3FORMS_KEY = "36bc78a9-76a4-422c-bf01-0f56262e05f6"; // 공개용 접근 키(받는 곳은 등록된 회사 메일로 고정)
-    const INQUIRY_API = "/api/inquiry"; // 회사 메일 발송(Vercel 함수)
+    const INQUIRY_API = "/api/inquiry"; // 회사 메일 발송(Cloudflare 함수 functions/api/inquiry.js)
     const FORMSUBMIT_URL = "https://formsubmit.co/ajax/06c8bd050147ba661797f96176c179f7";
     const KAKAO_CHAT_URL = "https://pf.kakao.com/_YMbgn/chat";
     const TYPE_KO = ["견적·단가 문의", "견적·재고 문의", "발주 문의"]; // 담당자가 읽기 쉽게 항상 한국어로
