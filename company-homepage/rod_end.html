@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=20261124in">
+<link rel="stylesheet" href="styles.css?v=20261125re">
 </head>
 <body>
 
@@ -97,7 +97,7 @@
       <div class="section-head">
         <p class="eyebrow">Rod Ends</p>
         <h2>로드 엔드 베어링</h2>
-        <p>볼 역할을 하는 내륜과 나사홈이 있는 목(Thread)을 부착한 하우징으로 구성된 자동조심형 미끄럼 베어링입니다.<br />PHS/PHSB(암나사)와 POS/POSB(수나사) 계열, 급유식 다이캐스트형인 PHSA 계열, 그리고 오일리스(무급유)형인 JMT/JFT/JMTS/JFTS 계열로 공급됩니다.</p>
+        <p>볼 역할을 하는 내륜과 나사홈이 있는 목(Thread)을 부착한 하우징으로 구성된 자동조심형 미끄럼 베어링입니다.<br />국산 KS 규격 JF(암나사) · JM(수나사), PHS/PHSB(암나사)와 POS/POSB(수나사) 계열, 급유식 다이캐스트형인 PHSA 계열, 그리고 오일리스(무급유)형인 JMT/JFT/JMTS/JFTS 계열로 공급됩니다.</p>
         <p class="tpl-use"><strong>용도</strong> · 자동차 · 중장비 · 농기계 등 다양한 기계류의 링크 장치</p>
         <p class="section-head-tip">형번 또는 치수 일부만 입력해도 검색됩니다.</p>
       </div>
@@ -111,25 +111,25 @@
         <p class="finder-tip" id="rdeCount" style="margin: 0;"></p>
         <button type="button" class="spec-toolbar-btn" id="rdeToggleAll">전체 접기</button>
       </div>
-      <div class="cat-tabs tab-cards cols-7" role="tablist" aria-label="제품 타입 선택">
-        <button type="button" class="cat-tab-btn active" data-tab="jf" role="tab" aria-selected="true"><span class="tab-card-title">JF (PHS)</span><span class="tab-card-desc">암나사형</span></button>
-        <button type="button" class="cat-tab-btn" data-tab="jm" role="tab" aria-selected="false"><span class="tab-card-title">JM (POS)</span><span class="tab-card-desc">수나사형</span></button>
+      <div class="cat-tabs tab-cards cols-9" role="tablist" aria-label="제품 타입 선택">
+        <button type="button" class="cat-tab-btn active" data-tab="jf" role="tab" aria-selected="true"><span class="tab-card-title">JF</span><span class="tab-card-desc">암나사형 · 국산 KS</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="jm" role="tab" aria-selected="false"><span class="tab-card-title">JM</span><span class="tab-card-desc">수나사형 · 국산 KS</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="phs" role="tab" aria-selected="false"><span class="tab-card-title">PHS</span><span class="tab-card-desc">암나사형</span></button>
+        <button type="button" class="cat-tab-btn" data-tab="pos" role="tab" aria-selected="false"><span class="tab-card-title">POS</span><span class="tab-card-desc">수나사형</span></button>
         <button type="button" class="cat-tab-btn" data-tab="phsa" role="tab" aria-selected="false"><span class="tab-card-title">PHSA</span><span class="tab-card-desc">급유식 다이캐스트 · 암나사</span></button>
         <button type="button" class="cat-tab-btn" data-tab="jmt" role="tab" aria-selected="false"><span class="tab-card-title">JMT</span><span class="tab-card-desc">오일리스 · 수나사</span></button>
         <button type="button" class="cat-tab-btn" data-tab="jft" role="tab" aria-selected="false"><span class="tab-card-title">JFT</span><span class="tab-card-desc">오일리스 · 암나사</span></button>
         <button type="button" class="cat-tab-btn" data-tab="jmts" role="tab" aria-selected="false"><span class="tab-card-title">JMTS</span><span class="tab-card-desc">오일리스 스테인리스 · 수나사</span></button>
         <button type="button" class="cat-tab-btn" data-tab="jfts" role="tab" aria-selected="false"><span class="tab-card-title">JFTS</span><span class="tab-card-desc">오일리스 스테인리스 · 암나사</span></button>
       </div>
+      <p class="finder-tip" style="margin: 4px 0 14px;">JF · JM(국산 KS 규격)과 PHS · POS는 같은 호칭이라도 머리부 지름(D) · 폭(B) · 길이가 서로 다릅니다. 교체하실 때는 기존 제품의 형번을 확인해 주세요.</p>
       <div class="cat-tab-panel" data-panel="jf">
-      <div class="diagram-box">
-        <img class="fig-draw" src="img/rod_end.webp?v=fx2" alt="구조 단면도" loading="lazy">
-        <p class="diagram-legend">d=볼(내륜) 구멍 지름 · 나사(S)=나사 호칭(PHS 암나사·POS 수나사) · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · B1=볼(내륜) 폭 · L1=볼 중심~나사부 끝 거리<br /><span style="color: var(--text-faint);">L=머리부 바깥 끝~나사부 끝 전체 길이 · L2=나사 길이(PHS는 암나사 깊이) · d1=볼(내륜) 어깨 지름 · D1=목(생크) 지름 · D2=끝단부 바깥지름 · ℓ=끝단부 두께 · W=끝단부 스패너 2면 폭 · r=모서리 모따기 치수(최소)</span></p>
-      </div>
+        <p class="diagram-legend">표의 기호(도면은 PHS · POS 탭 참고): d=볼(내륜) 구멍 지름 · 나사(S)=나사 호칭(KS 2급) · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · B1=볼(내륜) 폭 · L=머리부 바깥 끝~나사부 끝 전체 길이(최대) · L1=볼 중심~나사부 끝 거리(최대)<br /><span style="color: var(--text-faint);">* 표시는 특수 피치입니다. 주문하실 때 나사 피치를 꼭 함께 알려 주세요. 같은 호칭에 피치가 여러 개면 줄을 나눠 적었습니다.</span></p>
         <details class="series-group" open>
-          <summary>JF 시리즈<span class="series-count">26건</span></summary>
+          <summary>JF 시리즈 (암나사, mm)<span class="series-count">28건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 480px; max-width: 680px;">
+            <div style="flex: 1 1 420px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 520px; max-width: 720px;">
               <thead>
             <tr>
               <th>형번</th>
@@ -137,14 +137,16 @@
               <th>나사(S)</th>
               <th>D</th>
               <th>B</th>
+              <th>B1</th>
+              <th>L</th>
               <th>L1</th>
             </tr>
           </thead>
-              <tbody><tr><td class="type-cell">JF, PHS 3</td><td>3</td><td>M3X0.5</td><td>12</td><td>4.5</td><td>21</td></tr><tr><td class="type-cell">JF, PHS 4</td><td>4</td><td>M4X0.7</td><td>14</td><td>5.3</td><td>24</td></tr><tr><td class="type-cell">JF, PHS 5</td><td>5</td><td>M5X0.8</td><td>16</td><td>6</td><td>27</td></tr><tr><td class="type-cell">JF, PHS 6</td><td>6</td><td>M6X1.0</td><td>18</td><td>6.75</td><td>30</td></tr><tr><td class="type-cell">JF, PHS 8</td><td>8</td><td>M8X1.25</td><td>22</td><td>9</td><td>36</td></tr><tr><td class="type-cell">JF, PHS 10</td><td>10</td><td>M10X1.5</td><td>26</td><td>10.5</td><td>43</td></tr><tr><td class="type-cell">JF, PHS 12</td><td>12</td><td>M12X1.75</td><td>30</td><td>12</td><td>50</td></tr><tr><td class="type-cell">JF, PHS 14</td><td>14</td><td>M14X2.0</td><td>34</td><td>13.5</td><td>57</td></tr><tr><td class="type-cell">JF, PHS 16</td><td>16</td><td>M16X2.0</td><td>38</td><td>15</td><td>64</td></tr><tr><td class="type-cell">JF, PHS 18</td><td>18</td><td>M18X1.5</td><td>42</td><td>16.5</td><td>71</td></tr><tr><td class="type-cell">JF, PHS 20</td><td>20</td><td>M20X1.5</td><td>46</td><td>18</td><td>77</td></tr><tr><td class="type-cell">JF, PHS 22</td><td>22</td><td>M22X1.5</td><td>50</td><td>20</td><td>84</td></tr><tr><td class="type-cell">JF, PHS 25</td><td>25</td><td>M24X2.0</td><td>60</td><td>22</td><td>94</td></tr></tbody>
+              <tbody><tr><td class="type-cell">JF 5</td><td>5</td><td>M5×0.8</td><td>16</td><td>6</td><td>8</td><td>35</td><td>27</td></tr><tr><td class="type-cell">JF 6</td><td>6</td><td>M6×1.0</td><td>18.5</td><td>6.75</td><td>9</td><td>39.25</td><td>30</td></tr><tr><td class="type-cell">JF 8</td><td>8</td><td>M8×1.25</td><td>23</td><td>9</td><td>12</td><td>48.5</td><td>37</td></tr><tr><td class="type-cell">JF 10</td><td>10</td><td>*M10×1.25</td><td>27.5</td><td>10.5</td><td>14</td><td>58.25</td><td>44.5</td></tr><tr><td class="type-cell">JF 10</td><td>10</td><td>M10×1.5</td><td>27.5</td><td>10.5</td><td>14</td><td>58.25</td><td>44.5</td></tr><tr><td class="type-cell">JF 12</td><td>12</td><td>*M12×1.25</td><td>30.5</td><td>12</td><td>16</td><td>66.75</td><td>51.5</td></tr><tr><td class="type-cell">JF 12</td><td>12</td><td>M12×1.75</td><td>30.5</td><td>12</td><td>16</td><td>66.75</td><td>51.5</td></tr><tr><td class="type-cell">JF 14</td><td>14</td><td>*M14×1.5</td><td>34</td><td>13.5</td><td>19</td><td>75</td><td>58</td></tr><tr><td class="type-cell">JF 14</td><td>14</td><td>M14×2.0</td><td>34</td><td>13.5</td><td>19</td><td>75</td><td>58</td></tr><tr><td class="type-cell">JF 16</td><td>16</td><td>*M16×1.5</td><td>38</td><td>15</td><td>21</td><td>84.5</td><td>65.5</td></tr><tr><td class="type-cell">JF 16</td><td>16</td><td>M16×2.0</td><td>38</td><td>15</td><td>21</td><td>84.5</td><td>65.5</td></tr><tr><td class="type-cell">JF 18</td><td>18</td><td>M18×1.5</td><td>43</td><td>16.5</td><td>23</td><td>92.5</td><td>71</td></tr><tr><td class="type-cell">JF 20</td><td>20</td><td>M20×1.5</td><td>50</td><td>16</td><td>24</td><td>103</td><td>78</td></tr><tr><td class="type-cell">JF 22</td><td>22</td><td>M22×1.5</td><td>54</td><td>17</td><td>25</td><td>111</td><td>84</td></tr></tbody>
             </table>
             </div>
-            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
-              <table class="spec-table" style="min-width: 480px; max-width: 680px;">
+            <div style="flex: 1 1 420px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 520px; max-width: 720px;">
               <thead>
             <tr>
               <th>형번</th>
@@ -152,22 +154,144 @@
               <th>나사(S)</th>
               <th>D</th>
               <th>B</th>
+              <th>B1</th>
+              <th>L</th>
               <th>L1</th>
             </tr>
           </thead>
-              <tbody><tr><td class="type-cell">JF, PHS 28</td><td>28</td><td>M27X2.0</td><td>66</td><td>25</td><td>103</td></tr><tr><td class="type-cell">JF, PHS 30</td><td>30</td><td>M30X2.0</td><td>70</td><td>25</td><td>110</td></tr><tr><td class="type-cell">JF, PHSB 2</td><td>3.2</td><td>0.138-32</td><td>11.9</td><td>4.7</td><td>20.6</td></tr><tr><td class="type-cell">JF, PHSB 2.5</td><td>3.9</td><td>0.164-32</td><td>14.3</td><td>5.6</td><td>22.2</td></tr><tr><td class="type-cell">JF, PHSB 3</td><td>4.8</td><td>3/16-32</td><td>15.9</td><td>6.4</td><td>26.9</td></tr><tr><td class="type-cell">JF, PHSB 4</td><td>6.4</td><td>1/4-28</td><td>19.05</td><td>7.1</td><td>33.3</td></tr><tr><td class="type-cell">JF, PHSB 5</td><td>7.9</td><td>5/16-24</td><td>22.2</td><td>8.7</td><td>34.9</td></tr><tr><td class="type-cell">JF, PHSB 6</td><td>9.5</td><td>3/8-24</td><td>25.4</td><td>10.3</td><td>41.2</td></tr><tr><td class="type-cell">JF, PHSB 7</td><td>11.1</td><td>7/16-20</td><td>28.6</td><td>11.1</td><td>46.0</td></tr><tr><td class="type-cell">JF, PHSB 8</td><td>12.7</td><td>1/2-20</td><td>33.3</td><td>12.7</td><td>53.9</td></tr><tr><td class="type-cell">JF, PHSB 10</td><td>15.8</td><td>5/8-18</td><td>38.1</td><td>14.3</td><td>63.5</td></tr><tr><td class="type-cell">JF, PHSB 12</td><td>19.05</td><td>3/4-16</td><td>44.4</td><td>17.5</td><td>73.0</td></tr><tr><td class="type-cell">JF, PHSB 16</td><td>25.4</td><td>1.25-12</td><td>69.8</td><td>25.4</td><td>104.8</td></tr></tbody>
+              <tbody><tr><td class="type-cell">JF 24</td><td>25</td><td>*M24×1.5</td><td>64</td><td>19</td><td>28</td><td>126</td><td>94</td></tr><tr><td class="type-cell">JF 24</td><td>25</td><td>*M24×2.0</td><td>64</td><td>19</td><td>28</td><td>126</td><td>94</td></tr><tr><td class="type-cell">JF 25</td><td>25</td><td>M25×1.5</td><td>64</td><td>19</td><td>28</td><td>126</td><td>94</td></tr><tr><td class="type-cell">JF 25</td><td>25</td><td>*M26×1.5</td><td>64</td><td>19</td><td>28</td><td>126</td><td>94</td></tr><tr><td class="type-cell">JF 30</td><td>30</td><td>*M30×1.5</td><td>73</td><td>21</td><td>32</td><td>145</td><td>108.5</td></tr><tr><td class="type-cell">JF 30</td><td>30</td><td>M30×2.0</td><td>73</td><td>21</td><td>32</td><td>145</td><td>108.5</td></tr><tr><td class="type-cell">JF 35</td><td>35</td><td>*M36×1.5</td><td>82</td><td>23</td><td>35</td><td>173</td><td>132</td></tr><tr><td class="type-cell">JF 35</td><td>35</td><td>M36×2.0</td><td>82</td><td>23</td><td>35</td><td>173</td><td>132</td></tr><tr><td class="type-cell">JF 40</td><td>40</td><td>M39×3.0</td><td>92</td><td>23</td><td>28</td><td>188</td><td>142</td></tr><tr><td class="type-cell">JF 45</td><td>45</td><td>M42×3.0</td><td>102</td><td>27</td><td>32</td><td>196</td><td>145</td></tr><tr><td class="type-cell">JF 50</td><td>50</td><td>M45×3.0</td><td>112</td><td>30</td><td>35</td><td>216</td><td>160</td></tr><tr><td class="type-cell">JF 60</td><td>60</td><td>M52×3.0</td><td>135</td><td>38</td><td>44</td><td>242.5</td><td>175</td></tr><tr><td class="type-cell">JF 70</td><td>70</td><td>M56×4.0</td><td>160</td><td>42</td><td>49</td><td>280</td><td>200</td></tr><tr><td class="type-cell">JF 80</td><td>80</td><td>M64×4.0</td><td>180</td><td>47</td><td>55</td><td>320</td><td>230</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
+        <details class="series-group" open>
+          <summary>JF 시리즈 (암나사, 인치)<span class="series-count">10건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 420px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 520px; max-width: 720px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d</th>
+              <th>나사(S)</th>
+              <th>D</th>
+              <th>B</th>
+              <th>B1</th>
+              <th>L</th>
+              <th>L1</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">JF 3/16</td><td>3/16</td><td>No.10-32</td><td>16</td><td>6</td><td>8</td><td>35</td><td>27</td></tr><tr><td class="type-cell">JF 1/4</td><td>1/4</td><td>1/4×28</td><td>18.5</td><td>6.75</td><td>9</td><td>39.25</td><td>30</td></tr><tr><td class="type-cell">JF 5/16</td><td>5/16</td><td>5/16×24</td><td>23</td><td>9</td><td>12</td><td>48.5</td><td>37</td></tr><tr><td class="type-cell">JF 3/8</td><td>3/8</td><td>3/8×24</td><td>27.5</td><td>10.5</td><td>14</td><td>58.25</td><td>44.5</td></tr><tr><td class="type-cell">JF 7/16</td><td>7/16</td><td>7/16×20</td><td>30.5</td><td>11.8</td><td>16</td><td>66.75</td><td>51.5</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 420px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 520px; max-width: 720px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d</th>
+              <th>나사(S)</th>
+              <th>D</th>
+              <th>B</th>
+              <th>B1</th>
+              <th>L</th>
+              <th>L1</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">JF 1/2</td><td>1/2</td><td>1/2×20</td><td>30.5</td><td>11.8</td><td>16</td><td>66.75</td><td>51.5</td></tr><tr><td class="type-cell">JF 5/8</td><td>5/8</td><td>5/8×18</td><td>38</td><td>15</td><td>21</td><td>84.5</td><td>65.5</td></tr><tr><td class="type-cell">JF 3/4</td><td>3/4</td><td>3/4×16</td><td>50</td><td>16</td><td>25</td><td>103</td><td>78</td></tr><tr><td class="type-cell">JF 7/8</td><td>7/8</td><td>7/8×14</td><td>54</td><td>20</td><td>28</td><td>111</td><td>84</td></tr><tr><td class="type-cell">JF 1"</td><td>1"</td><td>1"×12</td><td>64</td><td>22</td><td>31</td><td>126</td><td>94</td></tr></tbody>
             </table>
             </div>
           </div>
         </details>
       </div>
       <div class="cat-tab-panel" data-panel="jm" hidden>
+        <p class="diagram-legend">표의 기호(도면은 PHS · POS 탭 참고): d=볼(내륜) 구멍 지름 · 나사(S)=나사 호칭(KS 2급) · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · B1=볼(내륜) 폭 · L=머리부 바깥 끝~나사부 끝 전체 길이(최대) · L1=볼 중심~나사부 끝 거리(최대)<br /><span style="color: var(--text-faint);">* 표시는 특수 피치입니다. 주문하실 때 나사 피치를 꼭 함께 알려 주세요. 같은 호칭에 피치가 여러 개면 줄을 나눠 적었습니다.</span></p>
+        <details class="series-group" open>
+          <summary>JM 시리즈 (수나사, mm)<span class="series-count">21건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 420px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 520px; max-width: 720px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d</th>
+              <th>나사(S)</th>
+              <th>D</th>
+              <th>B</th>
+              <th>B1</th>
+              <th>L</th>
+              <th>L1</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">JM 5</td><td>5</td><td>M5×0.8</td><td>17</td><td>6</td><td>8</td><td>42</td><td>33.5</td></tr><tr><td class="type-cell">JM 6</td><td>6</td><td>M6×1.0</td><td>18.5</td><td>6.8</td><td>9</td><td>47</td><td>37.75</td></tr><tr><td class="type-cell">JM 8</td><td>8</td><td>M8×1.25</td><td>23</td><td>9</td><td>12</td><td>54</td><td>42.5</td></tr><tr><td class="type-cell">JM 10</td><td>10</td><td>M10×1.5</td><td>27</td><td>10.5</td><td>14</td><td>62</td><td>48.5</td></tr><tr><td class="type-cell">JM 12</td><td>12</td><td>*M12×1.25</td><td>30.5</td><td>12.2</td><td>16</td><td>72.25</td><td>57</td></tr><tr><td class="type-cell">JM 12</td><td>12</td><td>M12×1.75</td><td>30.5</td><td>12.2</td><td>16</td><td>72.25</td><td>57</td></tr><tr><td class="type-cell">JM 14</td><td>14</td><td>M14×2.0</td><td>34</td><td>13.5</td><td>19</td><td>80</td><td>63</td></tr><tr><td class="type-cell">JM 16</td><td>16</td><td>M16×2.0</td><td>38</td><td>15</td><td>21</td><td>86.5</td><td>67.5</td></tr><tr><td class="type-cell">JM 18</td><td>18</td><td>M18×1.5</td><td>43</td><td>16.5</td><td>23</td><td>94.5</td><td>73</td></tr><tr><td class="type-cell">JM 20</td><td>20</td><td>M20×1.5</td><td>46</td><td>18</td><td>24</td><td>103</td><td>80</td></tr><tr><td class="type-cell">JM 22</td><td>22</td><td>M22×1.5</td><td>54</td><td>20</td><td>25</td><td>113</td><td>86</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 420px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 520px; max-width: 720px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d</th>
+              <th>나사(S)</th>
+              <th>D</th>
+              <th>B</th>
+              <th>B1</th>
+              <th>L</th>
+              <th>L1</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">JM 24</td><td>25</td><td>M24×2.0</td><td>64</td><td>19</td><td>28</td><td>128</td><td>96</td></tr><tr><td class="type-cell">JM 25</td><td>25</td><td>M25×1.5</td><td>64</td><td>19</td><td>28</td><td>128</td><td>96</td></tr><tr><td class="type-cell">JM 30</td><td>30</td><td>M30×2.0</td><td>73</td><td>21</td><td>32</td><td>147</td><td>110.5</td></tr><tr><td class="type-cell">JM 35</td><td>35</td><td>M36×2.0</td><td>82</td><td>23</td><td>35</td><td>175</td><td>134</td></tr><tr><td class="type-cell">JM 40</td><td>40</td><td>M39×3.0</td><td>92</td><td>23</td><td>28</td><td>196</td><td>150</td></tr><tr><td class="type-cell">JM 45</td><td>45</td><td>M42×3.0</td><td>102</td><td>27</td><td>32</td><td>214</td><td>163</td></tr><tr><td class="type-cell">JM 50</td><td>50</td><td>M45×3.0</td><td>112</td><td>30</td><td>35</td><td>241</td><td>185</td></tr><tr><td class="type-cell">JM 60</td><td>60</td><td>M52×3.0</td><td>135</td><td>38</td><td>44</td><td>277.5</td><td>210</td></tr><tr><td class="type-cell">JM 70</td><td>70</td><td>M56×4.0</td><td>160</td><td>42</td><td>49</td><td>315</td><td>235</td></tr><tr><td class="type-cell">JM 80</td><td>80</td><td>M64×4.0</td><td>180</td><td>47</td><td>55</td><td>360</td><td>270</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
+        <details class="series-group" open>
+          <summary>JM 시리즈 (수나사, 인치)<span class="series-count">10건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 420px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 520px; max-width: 720px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d</th>
+              <th>나사(S)</th>
+              <th>D</th>
+              <th>B</th>
+              <th>B1</th>
+              <th>L</th>
+              <th>L1</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">JM 3/16</td><td>3/16</td><td>No.10-32</td><td>17</td><td>6</td><td>8</td><td>42</td><td>33.5</td></tr><tr><td class="type-cell">JM 1/4</td><td>1/4</td><td>1/4×28</td><td>18.5</td><td>6.8</td><td>9</td><td>47</td><td>37.75</td></tr><tr><td class="type-cell">JM 5/16</td><td>5/16</td><td>5/16×24</td><td>23</td><td>9</td><td>12</td><td>54</td><td>42.5</td></tr><tr><td class="type-cell">JM 3/8</td><td>3/8</td><td>3/8×24</td><td>27</td><td>10.5</td><td>14</td><td>62</td><td>48.5</td></tr><tr><td class="type-cell">JM 7/16</td><td>7/16</td><td>7/16×20</td><td>32</td><td>12.1</td><td>16</td><td>73</td><td>57</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 420px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 520px; max-width: 720px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d</th>
+              <th>나사(S)</th>
+              <th>D</th>
+              <th>B</th>
+              <th>B1</th>
+              <th>L</th>
+              <th>L1</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">JM 1/2</td><td>1/2</td><td>1/2×20</td><td>32</td><td>12.1</td><td>16</td><td>73</td><td>57</td></tr><tr><td class="type-cell">JM 5/8</td><td>5/8</td><td>5/8×18</td><td>38</td><td>15</td><td>21</td><td>86.5</td><td>67.5</td></tr><tr><td class="type-cell">JM 3/4</td><td>3/4</td><td>3/4×16</td><td>50</td><td>18</td><td>25</td><td>109.5</td><td>84.5</td></tr><tr><td class="type-cell">JM 7/8</td><td>7/8</td><td>7/8×14</td><td>54</td><td>20</td><td>28</td><td>113</td><td>86</td></tr><tr><td class="type-cell">JM 1"</td><td>1"</td><td>1"×12</td><td>64</td><td>22</td><td>31</td><td>128</td><td>96</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
+      </div>
+      <div class="cat-tab-panel" data-panel="phs" hidden>
       <div class="diagram-box">
         <img class="fig-draw" src="img/rod_end.webp?v=fx2" alt="구조 단면도" loading="lazy">
         <p class="diagram-legend">d=볼(내륜) 구멍 지름 · 나사(S)=나사 호칭(PHS 암나사·POS 수나사) · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · B1=볼(내륜) 폭 · L1=볼 중심~나사부 끝 거리<br /><span style="color: var(--text-faint);">L=머리부 바깥 끝~나사부 끝 전체 길이 · L2=나사 길이(PHS는 암나사 깊이) · d1=볼(내륜) 어깨 지름 · D1=목(생크) 지름 · D2=끝단부 바깥지름 · ℓ=끝단부 두께 · W=끝단부 스패너 2면 폭 · r=모서리 모따기 치수(최소)</span></p>
       </div>
         <details class="series-group" open>
-          <summary>JM 시리즈<span class="series-count">26건</span></summary>
+          <summary>PHS · PHSB 시리즈<span class="series-count">26건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
               <table class="spec-table" style="min-width: 480px; max-width: 680px;">
@@ -181,7 +305,7 @@
               <th>L1</th>
             </tr>
           </thead>
-              <tbody><tr><td class="type-cell">JM, POS 3</td><td>3</td><td>M3X0.5</td><td>12</td><td>4.5</td><td>27</td></tr><tr><td class="type-cell">JM, POS 4</td><td>4</td><td>M4X0.7</td><td>14</td><td>5.3</td><td>30</td></tr><tr><td class="type-cell">JM, POS 5</td><td>5</td><td>M5X0.8</td><td>16</td><td>6</td><td>33</td></tr><tr><td class="type-cell">JM, POS 6</td><td>6</td><td>M6X1.0</td><td>18</td><td>6.75</td><td>36</td></tr><tr><td class="type-cell">JM, POS 8</td><td>8</td><td>M8X1.25</td><td>22</td><td>9</td><td>42</td></tr><tr><td class="type-cell">JM, POS 10</td><td>10</td><td>M10X1.5</td><td>26</td><td>10.5</td><td>48</td></tr><tr><td class="type-cell">JM, POS 12</td><td>12</td><td>M12X1.75</td><td>30</td><td>12</td><td>54</td></tr><tr><td class="type-cell">JM, POS 14</td><td>14</td><td>M14X2.0</td><td>34</td><td>13.5</td><td>60</td></tr><tr><td class="type-cell">JM, POS 16</td><td>16</td><td>M16X2.0</td><td>38</td><td>15</td><td>66</td></tr><tr><td class="type-cell">JM, POS 18</td><td>18</td><td>M18X1.5</td><td>42</td><td>16.5</td><td>72</td></tr><tr><td class="type-cell">JM, POS 20</td><td>20</td><td>M20X1.5</td><td>46</td><td>18</td><td>78</td></tr><tr><td class="type-cell">JM, POS 22</td><td>22</td><td>M22X1.5</td><td>50</td><td>20</td><td>84</td></tr><tr><td class="type-cell">JM, POS 25</td><td>25</td><td>M24X2.0</td><td>60</td><td>22</td><td>94</td></tr></tbody>
+              <tbody><tr><td class="type-cell">PHS 3</td><td>3</td><td>M3X0.5</td><td>12</td><td>4.5</td><td>21</td></tr><tr><td class="type-cell">PHS 4</td><td>4</td><td>M4X0.7</td><td>14</td><td>5.3</td><td>24</td></tr><tr><td class="type-cell">PHS 5</td><td>5</td><td>M5X0.8</td><td>16</td><td>6</td><td>27</td></tr><tr><td class="type-cell">PHS 6</td><td>6</td><td>M6X1.0</td><td>18</td><td>6.75</td><td>30</td></tr><tr><td class="type-cell">PHS 8</td><td>8</td><td>M8X1.25</td><td>22</td><td>9</td><td>36</td></tr><tr><td class="type-cell">PHS 10</td><td>10</td><td>M10X1.5</td><td>26</td><td>10.5</td><td>43</td></tr><tr><td class="type-cell">PHS 12</td><td>12</td><td>M12X1.75</td><td>30</td><td>12</td><td>50</td></tr><tr><td class="type-cell">PHS 14</td><td>14</td><td>M14X2.0</td><td>34</td><td>13.5</td><td>57</td></tr><tr><td class="type-cell">PHS 16</td><td>16</td><td>M16X2.0</td><td>38</td><td>15</td><td>64</td></tr><tr><td class="type-cell">PHS 18</td><td>18</td><td>M18X1.5</td><td>42</td><td>16.5</td><td>71</td></tr><tr><td class="type-cell">PHS 20</td><td>20</td><td>M20X1.5</td><td>46</td><td>18</td><td>77</td></tr><tr><td class="type-cell">PHS 22</td><td>22</td><td>M22X1.5</td><td>50</td><td>20</td><td>84</td></tr><tr><td class="type-cell">PHS 25</td><td>25</td><td>M24X2.0</td><td>60</td><td>22</td><td>94</td></tr></tbody>
             </table>
             </div>
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
@@ -196,7 +320,48 @@
               <th>L1</th>
             </tr>
           </thead>
-              <tbody><tr><td class="type-cell">JM, POS 28</td><td>28</td><td>M27X2.0</td><td>66</td><td>25</td><td>103</td></tr><tr><td class="type-cell">JM, POS 30</td><td>30</td><td>M30X2.0</td><td>70</td><td>25</td><td>110</td></tr><tr><td class="type-cell">JM, POSB 2</td><td>3.2</td><td>0.138-32</td><td>11.9</td><td>4.7</td><td>23.8</td></tr><tr><td class="type-cell">JM, POSB 2.5</td><td>3.9</td><td>0.164-32</td><td>14.3</td><td>5.6</td><td>28.6</td></tr><tr><td class="type-cell">JM, POSB 3</td><td>4.8</td><td>3/16-32</td><td>15.9</td><td>6.4</td><td>31.7</td></tr><tr><td class="type-cell">JM, POSB 4</td><td>6.4</td><td>1/4-28</td><td>19.05</td><td>7.1</td><td>39.7</td></tr><tr><td class="type-cell">JM, POSB 5</td><td>7.9</td><td>5/16-24</td><td>22.2</td><td>8.7</td><td>47.6</td></tr><tr><td class="type-cell">JM, POSB 6</td><td>9.5</td><td>3/8-24</td><td>25.4</td><td>10.3</td><td>49.2</td></tr><tr><td class="type-cell">JM, POSB 7</td><td>11.1</td><td>7/16-20</td><td>28.6</td><td>11.1</td><td>53.9</td></tr><tr><td class="type-cell">JM, POSB 8</td><td>12.7</td><td>1/2-20</td><td>33.3</td><td>12.7</td><td>61.9</td></tr><tr><td class="type-cell">JM, POSB 10</td><td>15.8</td><td>5/8-18</td><td>38.1</td><td>14.3</td><td>66.6</td></tr><tr><td class="type-cell">JM, POSB 12</td><td>19.05</td><td>3/4-16</td><td>44.4</td><td>17.5</td><td>73.0</td></tr><tr><td class="type-cell">JM, POSB 16</td><td>25.4</td><td>1.25-12</td><td>69.8</td><td>25.4</td><td>104.8</td></tr></tbody>
+              <tbody><tr><td class="type-cell">PHS 28</td><td>28</td><td>M27X2.0</td><td>66</td><td>25</td><td>103</td></tr><tr><td class="type-cell">PHS 30</td><td>30</td><td>M30X2.0</td><td>70</td><td>25</td><td>110</td></tr><tr><td class="type-cell">PHSB 2</td><td>3.2</td><td>0.138-32</td><td>11.9</td><td>4.7</td><td>20.6</td></tr><tr><td class="type-cell">PHSB 2.5</td><td>3.9</td><td>0.164-32</td><td>14.3</td><td>5.6</td><td>22.2</td></tr><tr><td class="type-cell">PHSB 3</td><td>4.8</td><td>3/16-32</td><td>15.9</td><td>6.4</td><td>26.9</td></tr><tr><td class="type-cell">PHSB 4</td><td>6.4</td><td>1/4-28</td><td>19.05</td><td>7.1</td><td>33.3</td></tr><tr><td class="type-cell">PHSB 5</td><td>7.9</td><td>5/16-24</td><td>22.2</td><td>8.7</td><td>34.9</td></tr><tr><td class="type-cell">PHSB 6</td><td>9.5</td><td>3/8-24</td><td>25.4</td><td>10.3</td><td>41.2</td></tr><tr><td class="type-cell">PHSB 7</td><td>11.1</td><td>7/16-20</td><td>28.6</td><td>11.1</td><td>46.0</td></tr><tr><td class="type-cell">PHSB 8</td><td>12.7</td><td>1/2-20</td><td>33.3</td><td>12.7</td><td>53.9</td></tr><tr><td class="type-cell">PHSB 10</td><td>15.8</td><td>5/8-18</td><td>38.1</td><td>14.3</td><td>63.5</td></tr><tr><td class="type-cell">PHSB 12</td><td>19.05</td><td>3/4-16</td><td>44.4</td><td>17.5</td><td>73.0</td></tr><tr><td class="type-cell">PHSB 16</td><td>25.4</td><td>1.25-12</td><td>69.8</td><td>25.4</td><td>104.8</td></tr></tbody>
+            </table>
+            </div>
+          </div>
+        </details>
+      </div>
+      <div class="cat-tab-panel" data-panel="pos" hidden>
+      <div class="diagram-box">
+        <img class="fig-draw" src="img/rod_end.webp?v=fx2" alt="구조 단면도" loading="lazy">
+        <p class="diagram-legend">d=볼(내륜) 구멍 지름 · 나사(S)=나사 호칭(PHS 암나사·POS 수나사) · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · B1=볼(내륜) 폭 · L1=볼 중심~나사부 끝 거리<br /><span style="color: var(--text-faint);">L=머리부 바깥 끝~나사부 끝 전체 길이 · L2=나사 길이(PHS는 암나사 깊이) · d1=볼(내륜) 어깨 지름 · D1=목(생크) 지름 · D2=끝단부 바깥지름 · ℓ=끝단부 두께 · W=끝단부 스패너 2면 폭 · r=모서리 모따기 치수(최소)</span></p>
+      </div>
+        <details class="series-group" open>
+          <summary>POS · POSB 시리즈<span class="series-count">26건</span></summary>
+          <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 480px; max-width: 680px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d</th>
+              <th>나사(S)</th>
+              <th>D</th>
+              <th>B</th>
+              <th>L1</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">POS 3</td><td>3</td><td>M3X0.5</td><td>12</td><td>4.5</td><td>27</td></tr><tr><td class="type-cell">POS 4</td><td>4</td><td>M4X0.7</td><td>14</td><td>5.3</td><td>30</td></tr><tr><td class="type-cell">POS 5</td><td>5</td><td>M5X0.8</td><td>16</td><td>6</td><td>33</td></tr><tr><td class="type-cell">POS 6</td><td>6</td><td>M6X1.0</td><td>18</td><td>6.75</td><td>36</td></tr><tr><td class="type-cell">POS 8</td><td>8</td><td>M8X1.25</td><td>22</td><td>9</td><td>42</td></tr><tr><td class="type-cell">POS 10</td><td>10</td><td>M10X1.5</td><td>26</td><td>10.5</td><td>48</td></tr><tr><td class="type-cell">POS 12</td><td>12</td><td>M12X1.75</td><td>30</td><td>12</td><td>54</td></tr><tr><td class="type-cell">POS 14</td><td>14</td><td>M14X2.0</td><td>34</td><td>13.5</td><td>60</td></tr><tr><td class="type-cell">POS 16</td><td>16</td><td>M16X2.0</td><td>38</td><td>15</td><td>66</td></tr><tr><td class="type-cell">POS 18</td><td>18</td><td>M18X1.5</td><td>42</td><td>16.5</td><td>72</td></tr><tr><td class="type-cell">POS 20</td><td>20</td><td>M20X1.5</td><td>46</td><td>18</td><td>78</td></tr><tr><td class="type-cell">POS 22</td><td>22</td><td>M22X1.5</td><td>50</td><td>20</td><td>84</td></tr><tr><td class="type-cell">POS 25</td><td>25</td><td>M24X2.0</td><td>60</td><td>22</td><td>94</td></tr></tbody>
+            </table>
+            </div>
+            <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
+              <table class="spec-table" style="min-width: 480px; max-width: 680px;">
+              <thead>
+            <tr>
+              <th>형번</th>
+              <th>d</th>
+              <th>나사(S)</th>
+              <th>D</th>
+              <th>B</th>
+              <th>L1</th>
+            </tr>
+          </thead>
+              <tbody><tr><td class="type-cell">POS 28</td><td>28</td><td>M27X2.0</td><td>66</td><td>25</td><td>103</td></tr><tr><td class="type-cell">POS 30</td><td>30</td><td>M30X2.0</td><td>70</td><td>25</td><td>110</td></tr><tr><td class="type-cell">POSB 2</td><td>3.2</td><td>0.138-32</td><td>11.9</td><td>4.7</td><td>23.8</td></tr><tr><td class="type-cell">POSB 2.5</td><td>3.9</td><td>0.164-32</td><td>14.3</td><td>5.6</td><td>28.6</td></tr><tr><td class="type-cell">POSB 3</td><td>4.8</td><td>3/16-32</td><td>15.9</td><td>6.4</td><td>31.7</td></tr><tr><td class="type-cell">POSB 4</td><td>6.4</td><td>1/4-28</td><td>19.05</td><td>7.1</td><td>39.7</td></tr><tr><td class="type-cell">POSB 5</td><td>7.9</td><td>5/16-24</td><td>22.2</td><td>8.7</td><td>47.6</td></tr><tr><td class="type-cell">POSB 6</td><td>9.5</td><td>3/8-24</td><td>25.4</td><td>10.3</td><td>49.2</td></tr><tr><td class="type-cell">POSB 7</td><td>11.1</td><td>7/16-20</td><td>28.6</td><td>11.1</td><td>53.9</td></tr><tr><td class="type-cell">POSB 8</td><td>12.7</td><td>1/2-20</td><td>33.3</td><td>12.7</td><td>61.9</td></tr><tr><td class="type-cell">POSB 10</td><td>15.8</td><td>5/8-18</td><td>38.1</td><td>14.3</td><td>66.6</td></tr><tr><td class="type-cell">POSB 12</td><td>19.05</td><td>3/4-16</td><td>44.4</td><td>17.5</td><td>73.0</td></tr><tr><td class="type-cell">POSB 16</td><td>25.4</td><td>1.25-12</td><td>69.8</td><td>25.4</td><td>104.8</td></tr></tbody>
             </table>
             </div>
           </div>
@@ -231,7 +396,7 @@
         </details>
       </div>
       <div class="cat-tab-panel" data-panel="jmt" hidden>
-        <p class="diagram-legend">표의 기호(도면은 JM 탭 참고): d=볼(내륜) 구멍 지름 · 나사(S)=수나사 호칭 · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · L1=볼 중심~나사부 끝 거리</p>
+        <p class="diagram-legend">표의 기호(도면은 POS 탭 참고): d=볼(내륜) 구멍 지름 · 나사(S)=수나사 호칭 · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · L1=볼 중심~나사부 끝 거리</p>
         <details class="series-group" open>
           <summary>JMT 시리즈 (오일리스, 수나사)<span class="series-count">14건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
@@ -255,31 +420,31 @@
         </details>
       </div>
       <div class="cat-tab-panel" data-panel="jft" hidden>
-        <p class="diagram-legend">표의 기호(도면은 JF 탭 참고): d=볼(내륜) 구멍 지름 · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · L=머리부 바깥 끝~나사부 끝 전체 길이</p>
+        <p class="diagram-legend">표의 기호(도면은 PHS 탭 참고): d=볼(내륜) 구멍 지름 · 나사(S)=암나사 호칭(* 특수 피치 — 주문 시 피치를 알려 주세요) · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · L=머리부 바깥 끝~나사부 끝 전체 길이</p>
         <details class="series-group" open>
-          <summary>JFT 시리즈 (오일리스, 암나사)<span class="series-count">14건</span></summary>
+          <summary>JFT 시리즈 (오일리스, 암나사)<span class="series-count">17건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
               <table class="spec-table" style="min-width: 480px; max-width: 680px;">
               <thead>
-                <tr><th>형번</th><th>d</th><th>D</th><th>B</th><th>L</th></tr>
+                <tr><th>형번</th><th>d</th><th>나사(S)</th><th>D</th><th>B</th><th>L</th></tr>
               </thead>
-              <tbody><tr><td class="type-cell">JFT 3</td><td>3</td><td>12</td><td>4.5</td><td>27</td></tr><tr><td class="type-cell">JFT 4</td><td>4</td><td>14</td><td>5</td><td>31</td></tr><tr><td class="type-cell">JFT 5</td><td>5</td><td>16</td><td>6</td><td>35</td></tr><tr><td class="type-cell">JFT 6</td><td>6</td><td>18</td><td>6.75</td><td>39</td></tr><tr><td class="type-cell">JFT 8</td><td>8</td><td>22</td><td>9</td><td>47</td></tr><tr><td class="type-cell">JFT 10</td><td>10</td><td>27</td><td>10</td><td>56</td></tr><tr><td class="type-cell">JFT 12</td><td>12</td><td>31</td><td>12</td><td>66.5</td></tr></tbody>
+              <tbody><tr><td class="type-cell">JFT 3</td><td>3</td><td>M3×0.5</td><td>12</td><td>4.5</td><td>27</td></tr><tr><td class="type-cell">JFT 4</td><td>4</td><td>M4×0.7</td><td>14</td><td>5</td><td>31</td></tr><tr><td class="type-cell">JFT 5</td><td>5</td><td>M5×0.8</td><td>16</td><td>6</td><td>35</td></tr><tr><td class="type-cell">JFT 6</td><td>6</td><td>M6×1.0</td><td>18</td><td>6.75</td><td>39</td></tr><tr><td class="type-cell">JFT 8</td><td>8</td><td>M8×1.25</td><td>22</td><td>9</td><td>47</td></tr><tr><td class="type-cell">JFT 10</td><td>10</td><td>*M10×1.25</td><td>27</td><td>10</td><td>56</td></tr><tr><td class="type-cell">JFT 10</td><td>10</td><td>M10×1.5</td><td>27</td><td>10</td><td>56</td></tr><tr><td class="type-cell">JFT 12</td><td>12</td><td>M12×1.75</td><td>31</td><td>12</td><td>66.5</td></tr></tbody>
               </table>
             </div>
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
               <table class="spec-table" style="min-width: 480px; max-width: 680px;">
               <thead>
-                <tr><th>형번</th><th>d</th><th>D</th><th>B</th><th>L</th></tr>
+                <tr><th>형번</th><th>d</th><th>나사(S)</th><th>D</th><th>B</th><th>L</th></tr>
               </thead>
-              <tbody><tr><td class="type-cell">JFT 14</td><td>14</td><td>35</td><td>13.5</td><td>75</td></tr><tr><td class="type-cell">JFT 16</td><td>16</td><td>39</td><td>15</td><td>83</td></tr><tr><td class="type-cell">JFT 18</td><td>18</td><td>43</td><td>16.5</td><td>92.5</td></tr><tr><td class="type-cell">JFT 20</td><td>20</td><td>46</td><td>18</td><td>101</td></tr><tr><td class="type-cell">JFT 22</td><td>22</td><td>54</td><td>20</td><td>111</td></tr><tr><td class="type-cell">JFT 25</td><td>25</td><td>64</td><td>22</td><td>126</td></tr><tr><td class="type-cell">JFT 30</td><td>30</td><td>73</td><td>26</td><td>145</td></tr></tbody>
+              <tbody><tr><td class="type-cell">JFT 14</td><td>14</td><td>*M14×1.5</td><td>35</td><td>13.5</td><td>75</td></tr><tr><td class="type-cell">JFT 14</td><td>14</td><td>M14×2.0</td><td>35</td><td>13.5</td><td>75</td></tr><tr><td class="type-cell">JFT 16</td><td>16</td><td>*M16×1.5</td><td>39</td><td>15</td><td>83</td></tr><tr><td class="type-cell">JFT 16</td><td>16</td><td>M16×2.0</td><td>39</td><td>15</td><td>83</td></tr><tr><td class="type-cell">JFT 18</td><td>18</td><td>M18×1.5</td><td>43</td><td>16.5</td><td>92.5</td></tr><tr><td class="type-cell">JFT 20</td><td>20</td><td>M20×1.5</td><td>46</td><td>18</td><td>101</td></tr><tr><td class="type-cell">JFT 22</td><td>22</td><td>M22×1.5</td><td>54</td><td>20</td><td>111</td></tr><tr><td class="type-cell">JFT 25</td><td>25</td><td>M24×2.0</td><td>64</td><td>22</td><td>126</td></tr><tr><td class="type-cell">JFT 30</td><td>30</td><td>M30×2.0</td><td>73</td><td>26</td><td>145</td></tr></tbody>
               </table>
             </div>
           </div>
         </details>
       </div>
       <div class="cat-tab-panel" data-panel="jmts" hidden>
-        <p class="diagram-legend">표의 기호(도면은 JM 탭 참고): d=볼(내륜) 구멍 지름 · 나사(S)=수나사 호칭 · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · L1=볼 중심~나사부 끝 거리</p>
+        <p class="diagram-legend">표의 기호(도면은 POS 탭 참고): d=볼(내륜) 구멍 지름 · 나사(S)=수나사 호칭 · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · L1=볼 중심~나사부 끝 거리</p>
         <details class="series-group" open>
           <summary>JMTS 시리즈 (오일리스, 스테인리스, 수나사)<span class="series-count">14건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
@@ -303,24 +468,24 @@
         </details>
       </div>
       <div class="cat-tab-panel" data-panel="jfts" hidden>
-        <p class="diagram-legend">표의 기호(도면은 JF 탭 참고): d=볼(내륜) 구멍 지름 · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · L=머리부 바깥 끝~나사부 끝 전체 길이</p>
+        <p class="diagram-legend">표의 기호(도면은 PHS 탭 참고): d=볼(내륜) 구멍 지름 · 나사(S)=암나사 호칭(* 특수 피치 — 주문 시 피치를 알려 주세요) · D=머리부(하우징) 바깥지름 · B=머리부(하우징) 폭 · L=머리부 바깥 끝~나사부 끝 전체 길이</p>
         <details class="series-group" open>
-          <summary>JFTS 시리즈 (오일리스, 스테인리스, 암나사)<span class="series-count">14건</span></summary>
+          <summary>JFTS 시리즈 (오일리스, 스테인리스, 암나사)<span class="series-count">15건</span></summary>
           <div class="finder-results two-col" style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
               <table class="spec-table" style="min-width: 480px; max-width: 680px;">
               <thead>
-                <tr><th>형번</th><th>d</th><th>D</th><th>B</th><th>L</th></tr>
+                <tr><th>형번</th><th>d</th><th>나사(S)</th><th>D</th><th>B</th><th>L</th></tr>
               </thead>
-              <tbody><tr><td class="type-cell">JFTS 3</td><td>3</td><td>12</td><td>4.5</td><td>27</td></tr><tr><td class="type-cell">JFTS 4</td><td>4</td><td>14</td><td>5</td><td>31</td></tr><tr><td class="type-cell">JFTS 5</td><td>5</td><td>16</td><td>6</td><td>35</td></tr><tr><td class="type-cell">JFTS 6</td><td>6</td><td>18</td><td>7</td><td>39</td></tr><tr><td class="type-cell">JFTS 8</td><td>8</td><td>22</td><td>9</td><td>47</td></tr><tr><td class="type-cell">JFTS 10</td><td>10</td><td>26</td><td>10.5</td><td>56</td></tr><tr><td class="type-cell">JFTS 12</td><td>12</td><td>31</td><td>12</td><td>65.5</td></tr></tbody>
+              <tbody><tr><td class="type-cell">JFTS 3</td><td>3</td><td>M3×0.5</td><td>12</td><td>4.5</td><td>27</td></tr><tr><td class="type-cell">JFTS 4</td><td>4</td><td>M4×0.7</td><td>14</td><td>5</td><td>31</td></tr><tr><td class="type-cell">JFTS 5</td><td>5</td><td>M5×0.8</td><td>16</td><td>6</td><td>35</td></tr><tr><td class="type-cell">JFTS 6</td><td>6</td><td>M6×1.0</td><td>18</td><td>7</td><td>39</td></tr><tr><td class="type-cell">JFTS 8</td><td>8</td><td>M8×1.25</td><td>22</td><td>9</td><td>47</td></tr><tr><td class="type-cell">JFTS 10</td><td>10</td><td>*M10×1.25</td><td>26</td><td>10.5</td><td>56</td></tr><tr><td class="type-cell">JFTS 10</td><td>10</td><td>M10×1.5</td><td>26</td><td>10.5</td><td>56</td></tr><tr><td class="type-cell">JFTS 12</td><td>12</td><td>M12×1.75</td><td>31</td><td>12</td><td>65.5</td></tr></tbody>
               </table>
             </div>
             <div style="flex: 1 1 320px; min-width: 280px; overflow-x: auto;">
               <table class="spec-table" style="min-width: 480px; max-width: 680px;">
               <thead>
-                <tr><th>형번</th><th>d</th><th>D</th><th>B</th><th>L</th></tr>
+                <tr><th>형번</th><th>d</th><th>나사(S)</th><th>D</th><th>B</th><th>L</th></tr>
               </thead>
-              <tbody><tr><td class="type-cell">JFTS 14</td><td>14</td><td>37</td><td>13.5</td><td>76</td></tr><tr><td class="type-cell">JFTS 16</td><td>16</td><td>39</td><td>15</td><td>83</td></tr><tr><td class="type-cell">JFTS 18</td><td>18</td><td>43</td><td>16.5</td><td>92</td></tr><tr><td class="type-cell">JFTS 20</td><td>20</td><td>48</td><td>18</td><td>102</td></tr><tr><td class="type-cell">JFTS 22</td><td>22</td><td>54</td><td>21</td><td>111</td></tr><tr><td class="type-cell">JFTS 25</td><td>25</td><td>64</td><td>22</td><td>126</td></tr><tr><td class="type-cell">JFTS 30</td><td>30</td><td>73</td><td>25</td><td>145</td></tr></tbody>
+              <tbody><tr><td class="type-cell">JFTS 14</td><td>14</td><td>M14×2.0</td><td>37</td><td>13.5</td><td>76</td></tr><tr><td class="type-cell">JFTS 16</td><td>16</td><td>M16×2.0</td><td>39</td><td>15</td><td>83</td></tr><tr><td class="type-cell">JFTS 18</td><td>18</td><td>M18×1.5</td><td>43</td><td>16.5</td><td>92</td></tr><tr><td class="type-cell">JFTS 20</td><td>20</td><td>M20×1.5</td><td>48</td><td>18</td><td>102</td></tr><tr><td class="type-cell">JFTS 22</td><td>22</td><td>M22×1.5</td><td>54</td><td>21</td><td>111</td></tr><tr><td class="type-cell">JFTS 25</td><td>25</td><td>M24×2.0</td><td>64</td><td>22</td><td>126</td></tr><tr><td class="type-cell">JFTS 30</td><td>30</td><td>M30×2.0</td><td>73</td><td>25</td><td>145</td></tr></tbody>
               </table>
             </div>
           </div>
@@ -353,9 +518,9 @@
   </footer>
 
 <script src="i18n/common.dict.js?v=20261115dx"></script>
-<script src="i18n/pages/rod_end.dict.js?v=20261120lh"></script>
+<script src="i18n/pages/rod_end.dict.js?v=20261125rd"></script>
 <script src="i18n.js?v=20261025a"></script>
 <script src="common.js?v=20261125r2"></script>
-<script>filterTabSeries('rdeFilter', '#rod-end .cat-tab-btn', '#rod-end .cat-tab-panel', '#rod-end .series-group', 'rdeCount', 'rdeToggleAll', 118, 7, 7);</script>
+<script>filterTabSeries('rdeFilter', '#rod-end .cat-tab-btn', '#rod-end .cat-tab-panel', '#rod-end .series-group', 'rdeCount', 'rdeToggleAll', 191, 11, 11);</script>
 </body>
 </html>
