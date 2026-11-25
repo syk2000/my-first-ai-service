@@ -566,6 +566,14 @@ function answer(utterance, blockName) {
     typed = { base: `오일씰 ${dims}`, full: `오일씰 ${sealType} ${dims}` };
     note = `오일씰 ${dims} 규격이 있어요. 견적·발주 양식에는 ${sealType} 형식으로 들어가요.\n`;
   }
+  // 형번 + 치수를 같이 쓴 것(SDR 60-68-6.5)·오일씰 치수를 붙여 쓴 것(리데나 40588)은 치수로 다시 찾음 — 홈페이지 규격 찾기와 같은 규칙
+  if (!rows.length) {
+    for (const s of [cleaned, u]) {
+      const found = dedupe(load().specPackedSeal(load().SPEC_DATA, s));
+      if (found.length) { rows = found; note = `'${u}'에 맞는 형번이 없어서 치수로 찾았어요.
+`; break; }
+    }
+  }
   if (!rows.length) {
     // 정확한 규격이 없으면 가까운 규격을 보여줄지 묻고, 바로 견적 문의도 할 수 있게
     const hasNear = approx(query).length > 0;
