@@ -198,8 +198,9 @@ function specFindModel(rows, q, alt) {
     if (rk === 0) { exact = true; if (lit(r.m) === la) rk = -0.5; }  // 띄어쓰기만 다른 똑같은 표기(R14ZZ)가 정규화로만 같은 표기(R1-4ZZ)보다 앞
     if (rk > -1) scored.push([rk, i, r]);
   });
+  var st0 = null;
   if (!exact) {
-    var st = specStripSuffix(a);
+    var st = st0 = specStripSuffix(a);
     if (st) {
       var b = specNorm(st.base);
       rows.forEach(function (r, i) {
@@ -207,9 +208,34 @@ function specFindModel(rows, q, alt) {
       });
     }
   }
+  // 676ZZ → 676이 표에 없으면 NSK 표기 676A처럼 끝에 A·X가 붙은 형번으로 (681ZZ처럼 681이 따로 있으면 그대로)
+  if (!exact && st0 && !scored.some(function (s) { return s[0] === 1; })) {
+    var b0 = specNorm(st0.base);
+    rows.forEach(function (r, i) {
+      var k = keys(r);
+      if ((k.indexOf(b0 + "A") >= 0 || k.indexOf(b0 + "X") >= 0) && !scored.some(function (s) { return s[2] === r; })) scored.push([1, i, r]);
+    });
+  }
   scored.sort(function (x, y) { return x[0] - y[0] || x[1] - y[1]; });
   if (!scored.length) return specPackedSeal(rows, a);
-  return scored.map(function (s) { return s[2]; });
+  return specSameSize(rows, scored.map(function (s) { return s[2]; }));
+}
+
+// 메이커별 형번을 한 줄에 나란히 적은 표(미니어처 볼 베어링)는 같은 줄의 다른 메이커 형번도 함께 보여 줌
+//  예: 676ZZ → 676A(NSK) · MR106 · L-1060(NMB) · ML6010 — 부르는 이름만 다른 같은 베어링
+var SPEC_XREF_PAGES = { "miniature_ball.html": 1 };
+function specSameSize(rows, found) {
+  if (!found.some(function (r) { return SPEC_XREF_PAGES[r.p]; })) return found;
+  var out = found.slice(), have = {};
+  found.forEach(function (r) { have[r.p + "|" + r.m + "|" + r.d + "|" + r.D + "|" + r.h] = 1; });
+  found.forEach(function (f) {
+    if (!SPEC_XREF_PAGES[f.p]) return;
+    rows.forEach(function (r) {
+      var k = r.p + "|" + r.m + "|" + r.d + "|" + r.D + "|" + r.h;
+      if (r.p === f.p && r.d === f.d && r.D === f.D && r.h === f.h && !have[k]) { have[k] = 1; out.push(r); }
+    });
+  });
+  return out;
 }
 
 // 형번으로 못 찾았을 때만 쓰는 치수 검색
@@ -250,4 +276,4 @@ function specQueryVariants(q) {
 }
 
 // 서버(카카오 챗봇)에서 불러 쓸 때만 — 브라우저에서는 실행되지 않음
-if (typeof module !== "undefined" && module.exports) module.exports = { SPEC_DATA, PAGE_GROUP, GROUP_ORDER, specDedupe, specAlias, specNorm, specStripSuffix, specPackedSeal };
+if (typeof module !== "undefined" && module.exports) module.exports = { SPEC_DATA, PAGE_GROUP, GROUP_ORDER, specDedupe, specAlias, specNorm, specStripSuffix, specPackedSeal, specSameSize };

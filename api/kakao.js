@@ -554,7 +554,9 @@ function answer(utterance, blockName) {
   if (query.kind === "model" && !rows.some((r) => norm(r.m) === norm(cleaned))) {
     const st = stripSuffix(cleaned);
     if (st) {
-      const baseRows = dedupe(search({ kind: "model", q: st.base })).filter((r) => norm(r.m) === norm(st.base));
+      let baseRows = dedupe(search({ kind: "model", q: st.base })).filter((r) => norm(r.m) === norm(st.base));
+      // 676ZZ → 676이 없으면 표의 NSK 표기 676A·681X처럼 끝에 A·X가 붙은 형번 (홈페이지 규격 찾기와 같은 규칙)
+      if (!baseRows.length) baseRows = dedupe(search({ kind: "model", q: st.base })).filter((r) => [norm(st.base) + "A", norm(st.base) + "X"].includes(norm(r.m)));
       if (baseRows.length) {
         rows = baseRows;
         typed = { base: st.base, full: cleaned.trim() };
@@ -562,6 +564,8 @@ function answer(utterance, blockName) {
       }
     }
   }
+  // 미니어처 볼 베어링처럼 메이커별 형번을 한 줄에 적은 표는 같은 줄의 다른 메이커 형번도 함께 (676A = MR106 = L-1060)
+  if (query.kind === "model" && rows.length) rows = dedupe(load().specSameSize(load().SPEC_DATA, rows));
   if (sealType && rows.length) {
     const r = rows[0], dims = `${r.d}×${r.D}×${r.h}`;
     typed = { base: `오일씰 ${dims}`, full: `오일씰 ${sealType} ${dims}` };
