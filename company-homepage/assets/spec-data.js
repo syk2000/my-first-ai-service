@@ -91,6 +91,7 @@ function specAlias(q) {
 
 // 다른 회사·관용 표기를 당사 형번 표기로 (홈페이지 규격검색·제품 페이지 검색칸·카카오 챗봇 공통)
 //  · 60 2열 / RS60 2열 / 60-2 → RS60-2   · X링 110 / 쿼드링 4110 → Q4110   · KM10(SKF 로크너트) → AN 10   · 금형 스프링 SF20-50 → SF 20×50   · E링 5 / E-ring 5 / E 5 → ETW-5
+var SPEC_NTN_AXK = {"00": "AXK1024", "01": "AXK1226", "02": "AXK1528", "03": "AXK1730", "04": "AXK2035", "05": "AXK2542", "06": "AXK3047", "07": "AXK3552", "08": "AXK4060", "09": "AXK4565", "10": "AXK5070", "11": "AXK5578", "12": "AXK6085", "13": "AXK6590", "14": "AXK7095", "15": "AXK75100", "16": "AXK80105", "17": "AXK85110", "18": "AXK90120", "20": "AXK100135", "22": "AXK110145", "24": "AXK120155", "26": "AXK130170", "28": "AXK140180", "30": "AXK150190", "32": "AXK160200"};
 var SPEC_ALIAS_RULES = [
   // 치수로 이름 붙인 품목: "oil seal 30*52*7" · "오일 씰 30x52x7" · "리데나 30 52 7" → "오일씰 30×52×7", "강구 1.5875" · "steel ball 3" → "강구 Ø1.5875"
   [/^\s*(?:오일\s*씰|OIL\s*-?\s*SEALS?|리데나)\s*(?=\d)/gi, "오일씰 "],
@@ -101,6 +102,11 @@ var SPEC_ALIAS_RULES = [
   [/^\s*(?:스러스트|THRUST)(?:\s*볼|\s*BALL)?(?:\s*베어링|\s*BEARINGS?)?\s*(\d(?:-\d+\/\d+)?|\d+\/\d+)\s*(?:"|인치|INCH(?:ES)?)?\s*$/i, '$1"'],
   // "스러스트 51105" · "thrust bearing 51105" → 형번만
   [/^\s*(?:스러스트|THRUST)(?:\s*볼|\s*BALL)?(?:\s*베어링|\s*BEARINGS?)?\s+(?=[A-Z]*\d{3})/i, ""],
+  // 스러스트 니들: 메이커마다 이름만 다른 같은 규격 — IKO NTB1024 · NSK FNTA-1024 → AXK1024, NSK FTRA-1024 → AS1024 (번호 같음)
+  [/^\s*(?:NTB|FNTA)\s*-?\s*(\d{4,6})\s*$/i, "AXK$1"],
+  [/^\s*FTRA\s*-?\s*(\d{4,6})\s*$/i, "AS$1"],
+  // NTN은 AXK11 + 내경 번호(AXK1100 = AXK1024, AS1104 = AS2035)
+  [/^\s*(AXK|AS)\s*11(\d\d)\s*$/i, function (all, p, c) { var x = SPEC_NTN_AXK[c]; return x ? (p.toUpperCase() === "AS" ? x.replace("AXK", "AS") : x) : all; }],
   // 로드 엔드: 붙여 쓰거나 나사 방향(R·L·RH·LH)을 붙인 형번 — JF8R · JF 8 L → "JF 8 (", PHS8L → "PHS 8 (" (좌·우나사 치수 같음)
   //  "(" 까지 붙여야 표의 "JF 8 (M8×1.25)"만 찾고 JF 80은 빠짐
   [/^\s*(JF|JM|JFTS|JMTS|JFT|JMT|PHSB|POSB|PHSA|PHS|POS)\s*-?\s*(\d+(?:\/\d+)?)\s*(?:RH|LH|R|L)?\s*$/i, "$1 $2 ("],
