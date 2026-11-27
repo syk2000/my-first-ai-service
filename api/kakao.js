@@ -564,6 +564,12 @@ function answer(utterance, blockName) {
       }
     }
   }
+  // 인발 슬리브: AH240/600 ↔ AHX240/600 처럼 X 유무만 다르게 적은 경우 (홈페이지 규격 찾기와 같은 규칙)
+  if (query.kind === "model" && /^\s*AHX?\s*\d/i.test(cleaned) && !rows.some((r) => norm(r.m) === norm(cleaned))) {
+    const sw = cleaned.replace(/^(\s*AH)(X?)/i, (m0, p, x) => p + (x ? "" : "X"));
+    const swRows = dedupe(search({ kind: "model", q: sw })).filter((r) => norm(r.m) === norm(sw));
+    if (swRows.length) { rows = swRows; query = { kind: "model", q: sw }; }
+  }
   // 미니어처 볼 베어링처럼 메이커별 형번을 한 줄에 적은 표는 같은 줄의 다른 메이커 형번도 함께 (676A = MR106 = L-1060)
   if (query.kind === "model" && rows.length) rows = dedupe(load().specSameSize(load().SPEC_DATA, rows));
   if (sealType && rows.length) {
